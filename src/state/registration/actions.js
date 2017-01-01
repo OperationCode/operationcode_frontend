@@ -1,7 +1,9 @@
+// actions
 export const ADD_EMAIL = 'ADD_EMAIL';
 export const ADD_PASSWORD = 'ADD_PASSWORD';
 export const ADD_ZIP = 'ADD_ZIP';
 
+// action creators
 export function addEmail(email) {
   return { type: ADD_EMAIL, email };
 }
