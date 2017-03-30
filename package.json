@@ -1,0 +1,18 @@
+{
+  "name": "operationcode_frontend",
+  "version": "1.0.0",
+  "description": "Frontend development for OperationCode's website.",
+  "main": "index.js",
+  "repository": "https://github.com/OperationCode/operationcode_frontend.git",
+  "author": "Kyle Holmberg <kylemh.email@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^15.4.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "webpack": "^2.3.2",
+    "webpack-dev-server": "^2.4.2"
+  }
+}
