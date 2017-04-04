@@ -200,18 +200,18 @@ coverage
 build/Release
 
 # Dependency directory
-node_modules
+/node_modules
 
 # Optional npm cache directory
 .npm
 
 # Optional REPL history
 .node_repl_history
-build
+/build
 assets.json
 public/assets
 .nyc_output
-coverage
+/coverage
 
 # Gulp .gitignore
 gulp.1
@@ -219,3 +219,9 @@ gulp.1
 components
 coverage
 *.orig
+
+# Create-React-App .gitignore
+.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
