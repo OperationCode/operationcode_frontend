@@ -1,6 +1,6 @@
 # OperationCode Frontend
 
-This is OperationCode.org's repository for their new front-end implementation using React.js
+Repository for Operation Code's new front-end implementation using React.js
 
 
 ## Table of Contents
