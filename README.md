@@ -1,6 +1,6 @@
 # OperationCode Frontend
 
-Repository for Operation Code's new front-end implementation using React.js
+This is OperationCode.org's repository for their new front-end implementation using React.js
 
 
 ## Table of Contents
@@ -73,9 +73,9 @@ Repository for Operation Code's new front-end implementation using React.js
 
 ## Contribute
 
-I don't have any plans to continue this project as it was exploratory in nature.
+[Operation Code Contribution Guide](https://github.com/OperationCode/START_HERE)
 
 
 ## License
 
-[MIT](LICENSE) © Kyle Holmberg
+[MIT](LICENSE) © OperationCode
