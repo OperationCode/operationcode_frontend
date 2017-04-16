@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import styles from './footer-styles';
+import styles from './footer.css';
 
 class Footer extends Component {
   render() {
     return (
-      <footer style={styles.footer}  >
+      <footer className={styles.footer}  >
         <div>
           <p>test</p>
           </div>

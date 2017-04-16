@@ -1,0 +1,20 @@
+
+.quotes {
+  color: #445366;
+  margin: 630px 96px 0 96px;
+}
+.quoteBody {
+  text-align: center;
+  color: #445366;
+  font-size: 36px;
+}
+.quoteAuthor {
+  text-align: right;
+  color: #445366;
+  font-size: 36px;
+}
+.quoteIcon {
+  font-size: 8px;
+  vertical-align: top;
+  padding: 2px;
+}
