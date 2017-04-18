@@ -216,7 +216,6 @@ public/assets
 # Gulp .gitignore
 gulp.1
 *.node
-components
 coverage
 *.orig
 
