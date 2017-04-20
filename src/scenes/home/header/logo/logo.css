@@ -1,0 +1,20 @@
+.logo {
+  height:80px;
+  flex: 0 40%;
+  margin-left:80px;
+  align-items: center;
+  display:flex;
+}
+
+.logo img {
+  height: 50px;
+}
+
+@media screen and (max-width: 979px) /* Tablet */ {
+  .logo {
+    margin-left:40px;
+  }
+  .logo img {
+    height: 40px;
+  }
+}
