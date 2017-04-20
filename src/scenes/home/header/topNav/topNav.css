@@ -3,7 +3,7 @@
   justify-content: space-between;
   flex: 1 60%;
   margin-right:80px;
-  font-size:18px;
+  font-size:20px;
 }
 
 @media screen and (max-width: 979px) /* Tablet */ {
@@ -12,6 +12,6 @@
     justify-content: space-between;
     flex: 1 60%;
     margin-right:40px;
-    font-size:12px;
+    font-size:16px;
   }
 }
