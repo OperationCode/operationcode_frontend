@@ -1,0 +1,17 @@
+.topNav {
+  display: flex;
+  justify-content: space-between;
+  flex: 1 60%;
+  margin-right:80px;
+  font-size:18px;
+}
+
+@media screen and (max-width: 979px) /* Tablet */ {
+  .topNav {
+    display: flex;
+    justify-content: space-between;
+    flex: 1 60%;
+    margin-right:40px;
+    font-size:12px;
+  }
+}

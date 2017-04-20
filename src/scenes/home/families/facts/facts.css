@@ -1,0 +1,26 @@
+
+.facts {
+  display: 'flex';
+  background-color: '#E2E2E2';
+  align-items: 'center';
+  padding: '96px';
+}
+.factsHeading {
+  font-size: '50px';
+  text-align: 'center';
+}
+.factsList {
+  color: '#445366';
+  font-size: '24px';
+  padding: '0 32px';
+}
+.factsRight {
+  padding: '0 32px'
+}
+.factsImage {
+  width: '30vw';
+  border-radius: '40px';
+}
+.factItem {
+  padding-bottom: '24px';
+}

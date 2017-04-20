@@ -6,6 +6,19 @@ html, body
 
     margin: 0;
     padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+}
+
+body { font-size: 1rem; } /*16px*/
+h1 { font-size: 2.5rem; } /*40px*/
+
+@media only screen and (min-device-width: 768px) {
+html { font-size: 75%; } /*body=12px and h1=30px*/
+}
+
+@media only screen and (max-device-width: 480px) {
+html { font-size: 62.5%; } /*body=10px and h1=25px*/
 }
 
 #root {
