@@ -36,7 +36,7 @@ This is OperationCode.org's repository for their new front-end implementation us
 ## Install
 
 ### Development Build
-- `npm install -g yarn` Install Yarn Globally
+- `npm install -g yarn` - Install Yarn Globally
 
 - `yarn install` - Install Package dependencies
 
@@ -51,7 +51,7 @@ This is OperationCode.org's repository for their new front-end implementation us
 
 ### Production Build with Docker Compose
 
-- `docker-compose up -d --build` Builds and starts the Docker Container listening port 80.
+- `docker-compose up -d --build` - Builds and starts the Docker Container listening port 80.
 
 ## Contents
 
