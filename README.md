@@ -21,7 +21,7 @@ This is OperationCode.org's repository for their new front-end implementation us
 - [Babel](https://babeljs.io/) - JavaScript compiler to unify all the different versions of JS that may have been used or will be used in the future.
 - [Yarn](https://yarnpkg.com/) - Facebook's open source JavaScript package manager. There are a few differences between Yarn and Node Package Mangaer (npm), but the main differentiation is that Yarn locks dependencies so your project doesn't break when external resources change their code.
 - [npm](https://www.npmjs.com/) - While Yarn is handling our projects dependencies, we still use npm to run scripts as you'll see further below.
-- [Sass](http://sass-lang.com) - CSS Preprocessors make stylesheets faster to develop and easier to maintain.
+- [CSS Modules](https://css-tricks.com/css-modules-part-1-need/) - What are CSS Modules and why do we need them?
 
 
 ## Resources Used
@@ -35,41 +35,27 @@ This is OperationCode.org's repository for their new front-end implementation us
 
 ## Install
 
-- `npm start` - This begins the development server.
+### Development Build
+- `npm install -g yarn` - Install Yarn Globally
 
-- `npm run build` - This bundles the application into static files for production (minimization, post-processing, etc.)
+- `yarn install` - Install Package dependencies
 
-- `npm test` - This starts the test runner.
+- `yarn start` - Start the development server
 
+### Production build
+- `yarn run build` - This bundles the application into static files for production (minimization, post-processing, etc.)
+
+- `yarn test` - This starts the test runner.
+
+- `yarn start:server` - Runs express js serving production static files.
+
+### Production Build with Docker Compose
+
+- `docker-compose up -d --build` - Builds and starts the Docker Container listening port 80.
 
 ## Contents
-```
-├── README.md
-├── LICENSE
-├── index.html
-├── package.json
-├── public
-│   ├── favicon.ico
-│   └── index.html
-├── src
-│   ├── App.css
-│   ├── App.js
-│   ├── App.test.js
-│   ├── images
-│   │   └── logos
-│   ├── index.css
-│   ├── index.js
-│   ├── logo.svg
-│   ├── scripts
-│   │   └── src
-│   └── styles
-│       ├── css
-│       ├── ie8.css
-│       ├── ie9.css
-│       └── scss
-└── yarn.lock
-```  
 
+TODO: explain file structure and where to add resources / components.
 
 ## Contribute
 
