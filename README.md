@@ -34,15 +34,19 @@ This is OperationCode.org's repository for their new front-end implementation us
 
 
 ## Install
-- `npm install` - Install NPM Dependencies
 
-- `npm start` - This begins the development server.
+- `npm install -g yarn` Install Yarn Globally
 
-- `npm run build` - This bundles the application into static files for production (minimization, post-processing, etc.)
+- `yarn install` - Install Package dependencies
 
-- `npm test` - This starts the test runner.
+- `yarn start` - Start the development server
 
-- `npm start:server` - Runs express js serving production static files.
+- `yarn run build` - This bundles the application into static files for production (minimization, post-processing, etc.)
+
+- `yarn test` - This starts the test runner.
+
+- `yarn start:server` - Runs express js serving production static files.
+
 ## Contents
 
 TODO: explain file structure and where to add resources / components.
