@@ -35,17 +35,23 @@ This is OperationCode.org's repository for their new front-end implementation us
 
 ## Install
 
+### Development Build
 - `npm install -g yarn` Install Yarn Globally
 
 - `yarn install` - Install Package dependencies
 
 - `yarn start` - Start the development server
 
+### Production build
 - `yarn run build` - This bundles the application into static files for production (minimization, post-processing, etc.)
 
 - `yarn test` - This starts the test runner.
 
 - `yarn start:server` - Runs express js serving production static files.
+
+### Production Build with Docker Compose
+
+- `docker-compose up -d --build` Builds and starts the Docker Container listening port 80.
 
 ## Contents
 
