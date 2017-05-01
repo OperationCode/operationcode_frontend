@@ -6,7 +6,7 @@ import Logo from './logo/logo';
 class Header extends Component {
   render() {
     return (
-      <div className={ styles.header } >
+      <div className={styles.header} >
         <Logo />
         <TopNav />
       </div>

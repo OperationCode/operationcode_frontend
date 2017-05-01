@@ -1,21 +1,21 @@
-import React, { Component } from 'react';
-import styles from './navItem.css';
+import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import styles from './navItem.css';
 
-class NavItem extends Component {
-
+class NavItem extends PureComponent {
   render() {
     return (
-      <Link className={styles.navItem} to={this.props.to}>{this.props.text}
+      <Link className={styles.navItem} to={this.props.to}>
+        {this.props.text}
       </Link>
     );
   }
 }
 
 NavItem.propTypes = {
-  to: PropTypes.string,
-  text: PropTypes.string
-}
+  to: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired
+};
 
 export default NavItem;

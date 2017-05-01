@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import styles from './topNav.css';
 import Nav from 'shared/components/nav/nav';
 import NavItem from 'shared/components/nav/navItem/navItem';
+import styles from './topNav.css';
 
 class TopNav extends Component {
   render() {
