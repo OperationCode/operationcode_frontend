@@ -7,6 +7,7 @@
     "express": "^4.15.2",
     "font-awesome": "^4.7.0",
     "history": "^4.6.1",
+    "prop-types": "^15.5.8",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-fontawesome": "^1.5.0",
@@ -29,22 +30,27 @@
     "css-loader": "0.26.1",
     "detect-port": "1.1.0",
     "dotenv": "2.0.0",
-    "eslint": "3.16.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
     "eslint-config-react-app": "^0.6.2",
+    "eslint-import-resolver-webpack": "^0.8.1",
     "eslint-loader": "1.6.0",
-    "eslint-plugin-flowtype": "2.21.0",
-    "eslint-plugin-import": "2.0.1",
-    "eslint-plugin-jsx-a11y": "4.0.0",
-    "eslint-plugin-react": "6.4.1",
+    "eslint-plugin-flowtype": "^2.32.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3",
     "extract-text-webpack-plugin": "1.0.1",
     "file-loader": "0.10.0",
     "fs-extra": "0.30.0",
     "html-webpack-plugin": "2.24.0",
     "http-proxy-middleware": "0.17.3",
+    "i": "^0.3.5",
     "jest": "18.1.0",
     "json-loader": "0.5.4",
+    "npm": "^4.5.0",
     "object-assign": "4.1.1",
     "postcss-loader": "1.2.2",
+    "prettier-eslint": "^6.1.2",
     "promise": "7.1.1",
     "react-dev-utils": "^0.5.2",
     "style-loader": "0.13.1",
@@ -88,8 +94,5 @@
     "presets": [
       "react-app"
     ]
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   }
 }

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import styles from './footer.css';
 import centerLogo from 'images/Medal.svg';
 import fbImage from 'images/Facebook.svg';
 import ghImage from 'images/GitHub.svg';
 import twtImage from 'images/Icon-Twitter.svg';
 import liImage from 'images/LinkedIn.svg';
 import { Link } from 'react-router-dom';
+import styles from './footer.css';
 
 class Footer extends Component {
   render() {

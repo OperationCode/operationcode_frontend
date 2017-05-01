@@ -5,7 +5,7 @@ class Landing extends Component {
   render() {
     return (
       <div className={styles.landing}>
-
+        <p>Landing Placeholder</p>
       </div>
     );
   }
