@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "title": "Employment Services",
+      "body": "Our placement services work to bring developer job oppertunities to the community, can help you shine up that resume, or even prep for the big interview!",
+      "buttonText": "Our Partners",
+      "linkTo": "/partners"
+    },
+    {
+      "title": "Mentor Program",
+      "body": "Our mentor program pairs members with seasoned developers to help make sure you progress and achieve your goals.",
+      "buttonText": "Success Stories",
+      "linkTo": "/success"
+    },
+    {
+      "title": "Conference Scholorships",
+      "body": "Operation Code partners with software development conferences around the world and offers scholorship tickets to events throughout the year.",
+      "buttonText": "View Past Events",
+      "linkTo": "/pastEvents"
+    }
+  ]
+}
