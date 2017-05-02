@@ -8,8 +8,6 @@ var ManifestPlugin = require('webpack-manifest-plugin');
 var InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
 var paths = require('./paths');
 var getClientEnvironment = require('./env');
-var path = require('path');
-
 
 
 
@@ -87,7 +85,7 @@ module.exports = {
       'react-native': 'react-native-web'
     },
     root: [
-      path.resolve('./src')
+      paths.appSrc
     ]
   },
 
