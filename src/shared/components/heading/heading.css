@@ -1,0 +1,28 @@
+.heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  line-height: 12px;
+  color: rgb(55, 74, 98);
+ }
+
+
+
+.heading:before,
+.heading:after {
+  flex-grow: 1;
+  height: 3px;
+  content: '\a0';
+  background-color: rgb(65, 164, 192);
+  vertical-align: text-bottom;
+  align-self: flex-end;
+}
+
+.heading:before {
+  margin-right:10px;
+}
+
+.heading:after {
+  margin-left:10px;
+}

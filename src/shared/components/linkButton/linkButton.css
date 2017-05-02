@@ -1,0 +1,9 @@
+.linkButton {
+  width:200px;
+  background-color: red;
+  text-align: center;
+  color: #ddd;
+  height: 25px;
+  vertical-align: center;
+  align-self: center;
+}
