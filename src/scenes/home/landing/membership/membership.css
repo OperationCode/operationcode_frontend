@@ -1,0 +1,19 @@
+.list {
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  width:80%;
+}
+
+.heading {
+  font-size:18px;
+  font-family: 'Noto Serif'
+}
+
+.list li {
+  width:205px;
+  list-style: none;
+  margin: 0;
+  font-size:18px;
+  text-align: center;
+}
