@@ -1,82 +1,95 @@
-
 .footer {
   background-color: #4A4A4A;
   height: 150px;
+  padding: 0 32px;
+}
+
+.content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: 100%;
 }
 
-.left {
-  display: flex;
-  flex-direction: row;
-  flex: 0 0 40%;
-  justify-content: center;
-  text-align: center;
-}
-.contact {
-  flex-direction: row;
-  justify-content: center;
-}
-.left a {
-  color: #F7F7F7;
-  text-align: center;
-  text-decoration: none;
-}
-.smContactFooterContainer {
+.block {
+  flex: 1 0 40%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  padding: 32px 0;
+  justify-content: space-around;
   align-items: center;
-  flex: 0 0 80%;
+  overflow: hidden;
 }
 
-.center {
-  display: flex;
-  flex: 0 0 20%;
-  justify-content: center;
-}
-
-.right {
-  display: flex;
-  flex: 0 0 40%;
-  align-items: center;
-
-}
-
-.nav {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
+.email {
+  flex-direction: row;
   justify-content: center;
 }
 
-.nav a {
-  text-decoration: none;
-  padding: 10px 40px;
+.email a {
   color: #F7F7F7;
+  text-align: center;
+  text-decoration: none;
+}
+
+.logo {
+  display: flex;
+  flex: 1 0 20%;
+  justify-content: center;
+}
+
+.logo img {
+  height: 150px; 
+}
+
+.blockGroup {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 55%;
+}
+
+.blockGroup a {
+  text-decoration: none;
+  color: #F7F7F7;
+  padding: 0 20px;
 }
 
 @media screen and (max-width: 979px) {
-  .center {
+
+  .logo {
     display:none;
   }
-  .left {
-    flex: 0 0 50%;
+
+}
+
+@media screen and (max-width: 768px) {
+  .pageLinks {
+    flex-direction: row;
   }
-  .right {
-    flex: 0 0 50%;
+
+  .blockGroup {
+    flex-direction: column;
+    height: 100%;
   }
 }
 
 @media screen and (max-width: 595px) {
-  .center {
+  .content {
+    flex-direction: column;
+  }
+
+  .logo {
     display:none;
   }
-  .left {
+  .contactLinks {
     flex: 0 0 100%;
   }
-  .right {
+  .pageLinks {
     display:none
+  }
+
+  .blockRow a {
+    padding: 10px 10px;
   }
 }
