@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import centerLogo from 'images/Medal.svg';
-import fbImage from 'images/Facebook.svg';
-import ghImage from 'images/GitHub.svg';
-import twtImage from 'images/Icon-Twitter.svg';
-import liImage from 'images/LinkedIn.svg';
 import { Link } from 'react-router-dom';
+import SocialMedia from 'shared/components/socialMedia/socialMedia';
 import styles from './footer.css';
 
 class Footer extends Component {
@@ -12,22 +9,11 @@ class Footer extends Component {
     return (
       <div className={styles.footer}>
         <div className={styles.left}>
-          <div className={styles.contact} >
-            <a href="mailto:contact@operationcode.org">contact@operationcode.org</a>
-          </div>
-          <div className={styles.smContainer}>
-            <div className={styles.sm}>
-              <img src={twtImage} alt="" />
+          <div className={styles.smContactFooterContainer}>
+            <div className={styles.contact} >
+              <a href="mailto:contact@operationcode.org">contact@operationcode.org</a>
             </div>
-            <div className={styles.sm}>
-              <img src={ghImage} alt="" />
-            </div>
-            <div className={styles.sm}>
-              <img src={fbImage} alt="" />
-            </div>
-            <div className={styles.sm}>
-              <img src={liImage} alt="" />
-            </div>
+            <SocialMedia />
           </div>
         </div>
         <div className={styles.center}>

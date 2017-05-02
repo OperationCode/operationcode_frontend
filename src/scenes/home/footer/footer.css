@@ -9,7 +9,7 @@
 
 .left {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex: 0 0 40%;
   justify-content: center;
   text-align: center;
@@ -23,16 +23,14 @@
   text-align: center;
   text-decoration: none;
 }
-.smContainer {
+.smContactFooterContainer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 40px;
+  flex: 0 0 80%;
 }
-.sm {
-  padding: 0 10px;
-}
+
 .center {
   display: flex;
   flex: 0 0 20%;
@@ -57,4 +55,28 @@
   text-decoration: none;
   padding: 10px 40px;
   color: #F7F7F7;
+}
+
+@media screen and (max-width: 979px) {
+  .center {
+    display:none;
+  }
+  .left {
+    flex: 0 0 50%;
+  }
+  .right {
+    flex: 0 0 50%;
+  }
+}
+
+@media screen and (max-width: 595px) {
+  .center {
+    display:none;
+  }
+  .left {
+    flex: 0 0 100%;
+  }
+  .right {
+    display:none
+  }
 }
