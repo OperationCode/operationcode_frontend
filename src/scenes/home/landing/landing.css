@@ -9,10 +9,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top:300px;
-  margin-bottom:100px;
+  margin-top:250px;
+  text-align: center;
+  padding-bottom:20px;
 }
 
 .pageHeading h1 {
   width: 80%;
+  color: #fff;
 }

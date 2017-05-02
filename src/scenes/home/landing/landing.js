@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import LinkButton from 'shared/components/linkButton/linkButton';
 import WhatWeDo from './whatWeDo/whatWeDo';
+import Membership from './membership/membership';
 import styles from './landing.css';
 
 class Landing extends Component {
@@ -10,9 +11,10 @@ class Landing extends Component {
         <div className={styles.pageHeading}>
           <h1>The largest community dedicated to helping military veterans and
             families launch their software development careers.</h1>
-          <LinkButton text="Join" />
+          <LinkButton text="Join" theme="red" />
         </div>
         <WhatWeDo />
+        <Membership />
       </div>
     );
   }
