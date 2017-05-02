@@ -1,6 +1,14 @@
 .section {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 100%;
   align-items: center;
+}
+
+.gray {
+  background-color:#F0F2F2
+}
+
+.white {
+  background-color:#FFF;
 }

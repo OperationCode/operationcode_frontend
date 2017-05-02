@@ -1,9 +1,28 @@
 .linkButton {
-  width:200px;
-  background-color: red;
   text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
   color: #ddd;
-  height: 25px;
-  vertical-align: center;
-  align-self: center;
+  padding: 10px;
+    font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  width: 200px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.red {
+  background-color: #D1665A;
+  border-color: #D1665A;
+  color: #FFF;
+}
+
+.blue {
+  background-color: #249CBC;
+  border-color:#249CBC;
+  color: #fff;
 }

@@ -7,10 +7,12 @@ const Section = (props) => {
   const {
     title,
     children,
+    className,
+    theme,
     ...otherProps
   } = props;
   return (
-    <div className={styles.section} {...otherProps}>
+    <div className={`${styles.section} ${styles[theme]} ${className}`} {...otherProps}>
       <Heading text={title} />
       {children}
     </div>
@@ -19,7 +21,14 @@ const Section = (props) => {
 
 Section.propTypes = {
   title: PropTypes.string.isRequired,
-  children: PropTypes.arrayOf(PropTypes.element).isRequired
+  children: PropTypes.arrayOf(PropTypes.element).isRequired,
+  className: PropTypes.string,
+  theme: PropTypes.string
+};
+
+Section.defaultProps = {
+  className: null,
+  theme: 'gray'
 };
 
 export default Section;
