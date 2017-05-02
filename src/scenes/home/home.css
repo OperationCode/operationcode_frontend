@@ -5,6 +5,8 @@
     background: url("images/Family-2.png");
     background-size: 100%;
     background-repeat: no-repeat;
+
+    overflow: hidden;
 }
 
 .main {
