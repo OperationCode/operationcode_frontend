@@ -1,21 +1,44 @@
-# Automatically normalize line endings for all text-based files
-# http://git-scm.com/docs/gitattributes#_end_of_line_conversion
+# Handle line endings automatically for files detected as text
+# and leave all files detected as binary untouched.
 * text=auto
 
-# For the following file types, normalize line endings to LF on
-# checkin and prevent conversion to CRLF when they are checked out
-# (this is required in order to prevent newline related issues like,
-# for example, after the build script is run)
-.*      text eol=lf
-*.html  text eol=lf
-*.css   text eol=lf
-*.less  text eol=lf
-*.scss  text eol=lf
-*.sss   text eol=lf
-*.js    text eol=lf
-*.jsx   text eol=lf
-*.json  text eol=lf
-*.md    text eol=lf
-*.sh    text eol=lf
-*.txt   text eol=lf
-*.xml   text eol=lf
+# source code
+*.css text
+*.js text
+*.json text
+*.html text
+*.svg text
+
+# git config
+.gitattributes text
+.gitignore text
+.gitconfig text
+
+
+# code analysis config
+.eslintrc text
+
+
+# misc config
+*.yml text
+.editorconfig text
+yarn.lock text
+.env
+*.xml text
+
+
+# Documentation
+*.md text
+LICENSE text
+
+
+# Binary Files
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.ttf binary
+*.eot binary
+*.woff binary
