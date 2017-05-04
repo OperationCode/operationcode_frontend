@@ -7,9 +7,13 @@
     background-repeat: no-repeat;
 }
 
+@media screen and ( max-width: 900px; ) {
+  .home {
+    background: url("images/Family-2-mobile.png");
+  }
+}
+
 .main {
     display: flex;
     flex: 1;
 }
-
-
