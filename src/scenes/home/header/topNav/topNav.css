@@ -6,12 +6,8 @@
   font-size:20px;
 }
 
-@media screen and (max-width: 979px) /* Tablet */ {
+@media screen and (max-width: 950px) /* Tablet */ {
   .topNav {
-    display: flex;
-    justify-content: space-between;
-    flex: 1 60%;
-    margin-right:40px;
-    font-size:16px;
+    display: none;
   }
 }

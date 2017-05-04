@@ -1,7 +1,7 @@
 .logo {
-  height:80px;
+  height: 60px;
   flex: 0 40%;
-  margin-left:80px;
+  margin-left: 80px;
   align-items: center;
   display:flex;
 }
@@ -10,11 +10,20 @@
   height: 50px;
 }
 
-@media screen and (max-width: 979px) /* Tablet */ {
+@media screen and (max-width: 900px) {
+  .logo {
+    margin: 10px;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+}
+/*@media screen and (max-width: 979px) {
   .logo {
     margin-left:40px;
   }
   .logo img {
     height: 40px;
   }
-}
+}*/
