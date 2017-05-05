@@ -25,7 +25,11 @@ class Nav extends Component {
 
 Nav.propTypes = {
   children: PropTypes.arrayOf(PropTypes.element).isRequired,
-  className: PropTypes.string.isRequired
+  className: PropTypes.string
+};
+
+Nav.defaultProps = {
+  className: ''
 };
 
 export default Nav;

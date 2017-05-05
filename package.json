@@ -67,6 +67,7 @@
     "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {
+    "moduleDirectories": ["node_modules", "src"],
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}"
     ],
