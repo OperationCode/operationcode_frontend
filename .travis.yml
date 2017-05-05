@@ -2,11 +2,6 @@
 # need node at build time
 language: c
 
-#cache: yarn
-#sudo: required
-#
-#install: true
-
 services:
   - docker
 
