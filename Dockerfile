@@ -1,6 +1,8 @@
 # Dockerfile
 FROM node:7
 
+ENV IN_DOCKER true
+
 # Create app directory
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
