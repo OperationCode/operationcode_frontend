@@ -1,4 +1,15 @@
-language: node_js
-node_js:
-  "node"
-cache: yarn
+# Since we build and test in Docker we dont
+# need node at build time
+language: c
+
+#cache: yarn
+#sudo: required
+#
+#install: true
+
+services:
+  - docker
+
+script:
+  - make travis
+  - if [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_BRANCH" == "master" ]; then make publish; fi
