@@ -1,13 +1,17 @@
+
+.heading {
+  font-size:18px;
+  font-family: 'Noto Serif';
+  width:80%;
+}
+
 .list {
   display:flex;
   flex-flow: row wrap;
   justify-content: space-around;
   width:80%;
-}
-
-.heading {
-  font-size:18px;
-  font-family: 'Noto Serif'
+  margin:0;
+  padding:0;
 }
 
 .list li {
@@ -16,8 +20,15 @@
   margin: 0;
   font-size:18px;
   text-align: center;
+  display:flex;
+  flex-direction: column;
 }
 
-.flag {
-  color:#445366;
+.list li span {
+  padding-bottom: 20px;
+}
+
+.icon {
+  height:100px;
+  padding-bottom:20px;
 }

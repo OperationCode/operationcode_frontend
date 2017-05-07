@@ -2,11 +2,18 @@
   display: flex;
   justify-content: space-between;
   flex: 1 60%;
-  margin-right:80px;
+  margin-right:5vw;
   font-size:20px;
 }
 
-@media screen and (max-width: 950px) /* Tablet */ {
+@media screen and (max-width: 1000px) {
+  .topNav {
+    margin-right: 40px;
+    font-size:16px;
+  }
+}
+
+@media screen and (max-width: 760px) /* Tablet */ {
   .topNav {
     display: none;
   }

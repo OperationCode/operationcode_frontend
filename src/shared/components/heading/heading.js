@@ -1,19 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import styles from './heading.css';
 
 const Heading = (props) => {
-  const {
-    text,
-    ...otherProps
-  } = props;
-  return (
-    <h2 className={styles.heading} {...otherProps}>{text}</h2>
-  );
+  const { text, headingLines, theme, ...otherProps } = props;
+  const classes = classNames({
+    [`${styles.heading}`]: true,
+    [`${styles[theme]}`]: true,
+    [`${styles.headingLines}`]: headingLines
+  });
+
+  return <h2 className={classes} {...otherProps}>{text}</h2>;
 };
 
 Heading.propTypes = {
-  text: PropTypes.string.isRequired
+  text: PropTypes.string.isRequired,
+  headingLines: PropTypes.bool,
+  theme: PropTypes.string
+};
+
+Heading.defaultProps = {
+  headingLines: true,
+  theme: 'dark'
 };
 
 export default Heading;

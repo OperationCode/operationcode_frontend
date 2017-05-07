@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import centerLogo from 'images/Medal.svg';
+import centerLogo from 'images/icons/Medal-Icon.svg';
 import { Link } from 'react-router-dom';
 import SocialMedia from 'shared/components/socialMedia/socialMedia';
 import styles from './footer.css';

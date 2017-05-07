@@ -1,0 +1,17 @@
+.donateSection {
+  background-image: url('images/General-Flag.jpg');
+  min-height:300px;
+}
+
+.donate {
+  width:80%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.donate p {
+  max-width:500px;
+  font-size:16px;
+  color:#FFF;
+}

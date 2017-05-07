@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import styles from './section.css';
 import Heading from '../heading/heading';
 
@@ -9,26 +10,39 @@ const Section = (props) => {
     children,
     className,
     theme,
+    headingLines,
+    headingTheme,
     ...otherProps
   } = props;
+
+  const classes = classNames({
+    [`${styles.section}`]: true,
+    [`${styles[theme]}`]: true,
+    [`${className}`]: className
+  });
   return (
-    <div className={`${styles.section} ${styles[theme]} ${className}`} {...otherProps}>
-      <Heading text={title} />
+    <div className={classes} {...otherProps}>
+      {title && <Heading text={title} headingLines={headingLines} theme={headingTheme} />}
       {children}
     </div>
   );
 };
 
 Section.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   children: PropTypes.arrayOf(PropTypes.element).isRequired,
   className: PropTypes.string,
-  theme: PropTypes.string
+  theme: PropTypes.string,
+  headingLines: PropTypes.bool,
+  headingTheme: PropTypes.string
 };
 
 Section.defaultProps = {
   className: null,
-  theme: 'gray'
+  theme: 'gray',
+  headingLines: true,
+  headingTheme: 'dark',
+  title: null
 };
 
 export default Section;

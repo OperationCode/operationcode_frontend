@@ -12,18 +12,10 @@
 
 @media screen and (max-width: 900px) {
   .logo {
-    margin: 10px;
+    margin-left: 10px;
   }
 
   .logo img {
     height: 40px;
   }
 }
-/*@media screen and (max-width: 979px) {
-  .logo {
-    margin-left:40px;
-  }
-  .logo img {
-    height: 40px;
-  }
-}*/

@@ -5,11 +5,10 @@
   width: 80%;
   line-height: 20px;
   font-size:36px;
-  color:rgb(74,74,74);
  }
 
-.heading:before,
-.heading:after {
+.headingLines:before,
+.headingLines:after {
   flex-grow: 1;
   height: 3px;
   content: '\a0';
@@ -24,4 +23,12 @@
 
 .heading:after {
   margin-left:10px;
+}
+
+.dark {
+  color:rgb(74,74,74);
+}
+
+.white {
+  color: #FFF;
 }

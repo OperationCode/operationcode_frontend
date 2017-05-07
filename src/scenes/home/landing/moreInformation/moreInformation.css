@@ -1,0 +1,7 @@
+.moreInformation {
+  display: flex;
+  flex-flow: row wrap;
+  flex-grow: 1;
+  width:80%;
+  justify-content: space-around;
+}

@@ -2,20 +2,20 @@
   display: none;
 }
 
-@media screen and (max-width: 950px) {
-.burger {
-  display: block;
-  position: absolute;
-  right: 0;
-  margin: 0;
-  margin-right: 7px;
-  border: 1px white solid;
-  border-radius: 3px;
-  padding: 0 4px 0 4px;
-}
-
 .burger img {
     width: 40px;
     margin: 0;
  }
+
+ @media screen and (max-width: 760px) {
+  .burger {
+    display: block;
+    position: absolute;
+    right: 0;
+    margin: 0;
+    margin-right: 7px;
+    border: 1px white solid;
+    border-radius: 3px;
+    padding: 0 4px 0 4px;
+  }
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import burger from 'images/menu.svg';
+import burger from 'images/icons/menu.svg';
 import styles from './burger.css';
 
 class Burger extends Component {
