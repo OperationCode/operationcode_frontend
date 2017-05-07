@@ -8,10 +8,10 @@ class Partners extends Component {
       <Section className={styles.partnersSection} >
         <Section title="Partners" className={styles.partnersLeft}>
           <div className={styles.partners}>
-            <p> In-kind donations from the startup and developer community
-             allow Operation Code to focus on our mission.
-             We are deeply grateful for these companies, entrepreneurs
-              and developers who have our back. </p>
+            <p> The generosity of our partners allows Operation Code
+               to continue serving the military community.
+             We are deeply grateful to the leadership of these
+              organizations that support our mission. </p>
           </div>
         </Section>
         <Section className={styles.partnersRight} >
