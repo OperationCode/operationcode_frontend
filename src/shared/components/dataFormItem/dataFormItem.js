@@ -9,7 +9,12 @@ class DataFormItem extends Component {
     return (
       <div className={styles.dataFormItem}>
         {this.props.label && <Label htmlFor={this.props.id}>{this.props.displayName}</Label>}
-        <input id={this.props.id} type={this.props.type} value={this.props.value} />
+        <input
+          id={this.props.id}
+          type={this.props.type}
+          value={this.props.value}
+          placeholder={this.props.placeholder}
+        />
       </div>
     );
   }
@@ -18,6 +23,7 @@ class DataFormItem extends Component {
 DataFormItem.propTypes = {
   label: PropTypes.bool,
   displayName: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
   value: PropTypes.string,
   type: PropTypes.string,
   id: PropTypes.string.isRequired
@@ -25,6 +31,7 @@ DataFormItem.propTypes = {
 
 DataFormItem.defaultProps = {
   label: true,
+  placeholder: null,
   value: null,
   type: 'text'
 };
