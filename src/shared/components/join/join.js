@@ -18,7 +18,7 @@ const Join = (props) => {
           and build a career in the fast-growing technology sector.
         </p>
         <p>Join our community for free and jumpstart your skills today!</p>
-        <LinkButton text="Join" link="#" theme="red" />
+        <LinkButton text="Join" link="/join" theme="red" />
       </div>
     </Section>
   );

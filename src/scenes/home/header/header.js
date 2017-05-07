@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import styles from './header.css';
 import TopNav from './topNav/topNav';
 import SideNav from './sideNav/sideNav';
@@ -20,8 +22,12 @@ class Header extends Component {
   }
 
   render() {
+    const classes = classNames({
+      [`${styles.header}`]: true,
+      [`${styles.transparent}`]: this.props.transparent
+    });
     return (
-      <div className={styles.header} >
+      <div className={classes} >
         <Logo />
         <Burger onClick={this.toggleDrawer} />
         <TopNav />
@@ -30,5 +36,13 @@ class Header extends Component {
     );
   }
 }
+
+Header.propTypes = {
+  transparent: PropTypes.bool
+};
+
+Header.defaultProps = {
+  transparent: false
+};
 
 export default Header;
