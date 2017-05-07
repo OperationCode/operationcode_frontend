@@ -1,0 +1,7 @@
+.form * {
+  box-sizing: border-box;
+}
+
+.form div ~ div {
+  margin-top: 16px;
+}
