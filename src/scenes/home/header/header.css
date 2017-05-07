@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   height: 80px;
+  background-color: rgb(117,129,143);
 }
 
 .logo {
@@ -13,4 +14,8 @@
 
 .logo img {
   height: 50px;
+}
+
+.transparent {
+  background-color: transparent;
 }
