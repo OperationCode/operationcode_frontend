@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "Employment Services",
-      "body": "Our placement services work to bring developer job oppertunities to the community, can help you shine up that resume, or even prep for the big interview!",
+      "title": "Career Services",
+      "body": "Our career services team provides job opportunities, career guidance and resume reviews, and preparation for technical interviews.",
       "buttonText": "Our Partners",
       "linkTo": "/partners",
       "imageUrl": "images/General-Couple-Computer.jpg"
     },
     {
       "title": "Mentor Program",
-      "body": "Our mentor program pairs members with seasoned developers to help make sure you progress and achieve your goals.",
+      "body": "Our mentor program connects members with seasoned software developers to help you progress and achieve your goals.",
       "buttonText": "Success Stories",
       "linkTo": "/success",
       "imageUrl": "images/General-Group-Coffee.jpg"
     },
     {
-      "title": "Conference Scholorships",
-      "body": "Operation Code partners with software development conferences around the world and offers scholorship tickets to events throughout the year.",
+      "title": "Conference Scholarships",
+      "body": "Operation Code partners with tech conferences around the world and offers scholarship tickets to events throughout the year.",
       "buttonText": "View Past Events",
       "linkTo": "/pastEvents",
       "imageUrl": "images/ThinkstockPhotos-489787502.jpg"
