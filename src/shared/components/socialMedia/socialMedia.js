@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import fbImage from 'images/Facebook.svg';
-import ghImage from 'images/GitHub.svg';
-import twtImage from 'images/Icon-Twitter.svg';
-import liImage from 'images/LinkedIn.svg';
+import fbImage from 'images/icons/Facebook-Icon.svg';
+import ghImage from 'images/icons/GitHub-Icon.svg';
+import twtImage from 'images/icons/Twitter-Icon.svg';
+import liImage from 'images/icons/LinkedIn-Icon.svg';
 import SocialMediaContainer from './socialMediaContainer/socialMediaContainer';
 import SocialMediaItem from './socialMediaItem/socialMediaItem';
 

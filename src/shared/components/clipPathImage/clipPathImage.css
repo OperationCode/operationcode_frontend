@@ -1,0 +1,28 @@
+.cpContainer {
+  padding: 20px;
+  text-decoration: none;
+}
+
+.cpImage {
+  width:300px;
+  height:200px;
+}
+
+.cpImage img {
+  width: 300px;
+  clip-path: polygon(0 0, 100% 0, 100% 60%, 0 70%);
+}
+
+.cpImage h4 {
+  position: relative;
+  bottom: 70px;
+  text-align: center;
+  display:block;
+  font-size:18px;
+}
+
+.blue {
+  background-color: #249CBC;
+  border-color:#249CBC;
+  color: #fff;
+}
