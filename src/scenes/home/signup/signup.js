@@ -9,7 +9,7 @@ class SignUp extends Component {
       <div className={styles.signup}>
         <Form>
           <DataFormItem type="email" placeholder="Email" />
-          <DataFormItem type="number" placeholder="Zip" />
+          <DataFormItem placeholder="Zip Code" />
         </Form>
       </div>
     );
