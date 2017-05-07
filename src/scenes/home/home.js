@@ -29,17 +29,13 @@ class Home extends Component {
     this.setBgImage(this.props.location);
   }
 
-  shouldComponentUpdate() {
-    return this.state.bgChanged;
-  }
-
   setBgImage(location) {
     if (location.pathname === '/') {
-      const bgChanged = !this.state.bgImage;
-      this.setState({ bgChanged, bgImage: true, bgImageUrl: familyImage });
+      console.log(`landing ${this.state.bgImage}`);
+      this.setState({ bgChanged: !(this.state.bgImage), bgImage: true, bgImageUrl: familyImage });
     } else {
-      const bgChanged = this.state.bgImage;
-      this.setState({ bgChanged, bgImage: false, bgImageUrl: null });
+      console.log(`not landing ${this.state.bgImage}`);
+      this.setState({ bgChanged: this.state.bgImage, bgImage: false, bgImageUrl: null });
     }
   }
 
