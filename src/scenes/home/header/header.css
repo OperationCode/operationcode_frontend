@@ -3,6 +3,7 @@
   display: flex;
   height: 80px;
   align-items: center;
+  background-color: rgb(117,129,143);
 }
 .logo {
   height: 60px;
@@ -24,6 +25,10 @@
 }
 .logo img {
   height: 50px;
+}
+
+.transparent {
+  background-color: transparent;
 }
 
 /*@media screen and (max-width: 768px) {

@@ -1,14 +1,20 @@
 .home {
     display: flex;
     flex-direction: column;
-    background: url("images/Family-2.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
-
+    min-height: 100vh;
     overflow: hidden;
 }
 
 .main {
     display: flex;
     flex: 1;
+}
+
+.homeImage {
+    height:300px;
+}
+
+.backgroundImage {
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
