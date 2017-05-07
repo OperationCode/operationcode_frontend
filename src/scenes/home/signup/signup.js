@@ -8,8 +8,8 @@ class SignUp extends Component {
     return (
       <div className={styles.signup}>
         <Form>
-          <DataFormItem placeholder="Email" />
-          <DataFormItem placeholder="Zip" />
+          <DataFormItem type="email" placeholder="Email" />
+          <DataFormItem type="number" placeholder="Zip" />
         </Form>
       </div>
     );
