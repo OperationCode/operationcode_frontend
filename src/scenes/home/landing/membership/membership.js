@@ -12,7 +12,7 @@ class Membership extends Component {
 
       <Section title="Membership" theme="white">
         <h3 className={styles.heading}>Joining Operation Code is easy and free!  Once
-          you&#39;re signed up you can join us on Slack and start enjoying the
+          you&#39;re signed up, you can join us on Slack and start enjoying the
            benefits of your membership:
         </h3>
 
@@ -20,22 +20,22 @@ class Membership extends Component {
           <li>
             <img className={styles.icon} src={sharedIcon} alt="" />
             <span>
-              Join an open community of veterans, transitioning military
-            personnel, military spouses, and senior developers who you can engage and grow with
+              Join an open community of veterans, transitioning servicemembers,
+              and military spouses who you can engage and grow with
             </span>
           </li>
           <li>
             <img className={styles.icon} src={flagIcon} alt="" />
             <span>
               Access our mentorship and coding channels to jumpstart
-             your journey and start asking questions
+             your journey and learn from senior software engineers
              </span>
           </li>
           <li>
             <img className={styles.icon} src={roadIcon} alt="" />
             <span>
-            Get notified on opportunities to attend software develpment
-             conferences as part of the Operation Code scholarship program
+            Learn about opportunities to attend software develpment conferences
+             and coding bootcamps as part of the Operation Code scholarship program
              </span>
           </li>
           <li>
