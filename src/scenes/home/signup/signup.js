@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Form from 'shared/components/form/form';
-import DataFormItem from 'shared/components/dataFormItem/dataFormItem';
+import DataFormItem from 'shared/components/form/dataFormItem/dataFormItem';
+import FormPassword from 'shared/components/form/formPassword/formPassword';
 import styles from './signup.css';
 
 class SignUp extends Component {
@@ -8,8 +9,9 @@ class SignUp extends Component {
     return (
       <div className={styles.signup}>
         <Form>
-          <DataFormItem type="email" placeholder="Email" />
-          <DataFormItem placeholder="Zip Code" />
+          <DataFormItem id="email" type="email" placeholder="Email" />
+          <DataFormItem id="zip" placeholder="Zip Code" />
+          <FormPassword id="password" placeholder="Password" />
         </Form>
       </div>
     );
