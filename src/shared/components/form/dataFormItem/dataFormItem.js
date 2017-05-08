@@ -12,7 +12,6 @@ class DataFormItem extends Component {
         <input
           id={this.props.id}
           type={this.props.type}
-          value={this.props.value}
           placeholder={this.props.placeholder}
         />
       </div>
@@ -22,17 +21,16 @@ class DataFormItem extends Component {
 
 DataFormItem.propTypes = {
   label: PropTypes.bool,
-  displayName: PropTypes.string.isRequired,
+  displayName: PropTypes.string,
   placeholder: PropTypes.string,
-  value: PropTypes.string,
   type: PropTypes.string,
   id: PropTypes.string.isRequired
 };
 
 DataFormItem.defaultProps = {
+  displayName: null,
   label: true,
   placeholder: null,
-  value: null,
   type: 'text'
 };
 
