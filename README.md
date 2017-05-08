@@ -246,6 +246,8 @@ We are using CSS modules for styling.  Each components styles should be next to 
 
 - `yarn run build` - This bundles the application into static files for production (minimization, post-processing, etc.)
 
+  - *NOTE*: Please ignore prompted instructions to use `yarn global add serve` and/or `serve -s build`.
+
 - `yarn test` - This starts the test runner.
 
 - `yarn start:server` - Runs express js serving production static files.
