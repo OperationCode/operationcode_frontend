@@ -9,7 +9,7 @@ WORKDIR /usr/src/app
 
 # Install app dependencies
 COPY package.json /usr/src/app/
-RUN npm install --quiet
+RUN yarn install --production --silent --no-progress
 
 # Bundle app source
 COPY . /usr/src/app
