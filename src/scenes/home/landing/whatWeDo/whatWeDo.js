@@ -15,22 +15,22 @@ class WhatWeDo extends Component {
           image={image1}
           title={content.items[0].title}
           cardText={content.items[0].body}
-          buttonText={content.items[0].buttonText}
-          link={content.items[0].linkTo}
+          // buttonText={content.items[0].buttonText}
+          // link={content.items[0].linkTo}
         />
         <ImageCard
           image={image2}
           title={content.items[1].title}
           cardText={content.items[1].body}
-          buttonText={content.items[1].buttonText}
-          link={content.items[1].linkTo}
+          // buttonText={content.items[1].buttonText}
+          // link={content.items[1].linkTo}
         />
         <ImageCard
           image={image3}
           title={content.items[2].title}
           cardText={content.items[2].body}
-          buttonText={content.items[2].buttonText}
-          link={content.items[2].linkTo}
+          // buttonText={content.items[2].buttonText}
+          // link={content.items[2].linkTo}
         />
       </Section>
     );
