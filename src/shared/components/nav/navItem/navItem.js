@@ -12,7 +12,12 @@ class NavItem extends PureComponent {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
+  handleClick(e) {
+    // Prevent Clicking On Disabled Links
+    if (this.props.notClickable) {
+      e.preventDefault();
+    }
+
     if (!this.props.isExternal) {
       return;
     }
@@ -21,8 +26,10 @@ class NavItem extends PureComponent {
   }
 
   render() {
+    const disabledClass = this.props.notClickable ? styles.disabledNavItem : styles.navItem;
+
     return (
-      <Link className={styles.navItem} to={this.props.to} onClick={this.handleClick}>
+      <Link className={disabledClass} to={this.props.to} onClick={this.handleClick}>
         {this.props.text}
       </Link>
     );
@@ -31,12 +38,17 @@ class NavItem extends PureComponent {
 
 NavItem.propTypes = {
   isExternal: PropTypes.bool,
+  notClickable: PropTypes.bool,
   to: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired
 };
 
 NavItem.defaultProps = {
-  isExternal: false
+  isExternal: false,
+  notClickable: false
 };
+
+// TODO: Remove all references to notClickable and disabledClass (including .css) when
+// every route has been created.
 
 export default NavItem;

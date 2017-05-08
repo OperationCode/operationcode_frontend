@@ -2,3 +2,9 @@
   text-decoration: none;
   color: #F7F7F7;
 }
+
+.disabledNavItem {
+  cursor: default;
+  text-decoration: none;
+  color: #989AAA;
+}
