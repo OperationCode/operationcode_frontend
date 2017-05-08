@@ -11,15 +11,15 @@ class MoreInformation extends Component {
       <Section title="More Information" theme="gray">
         <div className={styles.moreInformation}>
           <ClipPathImage
-            title="Military Families &amp; Spouses" image={familyImage}
+            title="Military Families and Spouses" image={familyImage}
             altText="" link="#"
           />
           <ClipPathImage
-            title="Veterans, Active Duty &amp; Reservists"
+            title="Veterans, Active Duty and Reservists"
             image={familyImage} altText="" link="#"
           />
           <ClipPathImage
-            title="Volunteer &amp; Partners" image={familyImage}
+            title="Volunteers and Sponsors" image={familyImage}
             altText="" link="#"
           />
         </div>

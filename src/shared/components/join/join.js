@@ -13,11 +13,11 @@ const Join = (props) => {
     >
       <div className={styles.join} >
         <p>
-          Operation Code is leading the way to expand oppertunities
-          for military veterans and their families to learn new skills
-          and build a career in the fast-growing technology sector
+          Operation Code is leading the way to expand opportunities
+          for military veterans and their families to learn new skills,
+          and build a career in the fast-growing technology sector.
         </p>
-        <p>Join our community for free and jump start your skills today!</p>
+        <p>Join our community for free and jumpstart your skills today!</p>
         <LinkButton text="Join" link="#" theme="red" />
       </div>
     </Section>

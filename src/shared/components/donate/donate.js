@@ -13,12 +13,14 @@ const Donate = (props) => {
     >
       <div className={styles.donate} >
         <p>
-          Our mission and veteran programs are all maintained
-          through the efforts of our all volunteer staff.
-          Your thoughtful contribution to our fund allows us to expand
-          our reach and help more veterans attend developer conferences.
+          As a 501(c)(3) veteran-led nonprofit organization,
+          our programs and services are maintained
+          through the efforts of our volunteer staff.
+          Your financial support allows us to continue helping
+          the military community learn software development,
+          enter the tech industry, and code the future.
         </p>
-        <p>Thank you for helping us to get veterans coding!</p>
+        <p>Thank you for supporting our mission!</p>
         <LinkButton text="Donate Now" link="https://donorbox.org/operationcode" />
       </div>
     </Section>
