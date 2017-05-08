@@ -5,16 +5,18 @@ import styles from './partners.css';
 class Partners extends Component {
   render() {
     return (
-      <Section className={styles.partnersSection} >
-        <Section title="Partners" className={styles.partnersLeft}>
+      <Section className={styles.partnersSection} theme="white">
+        <Section title="Partners" className={styles.partnersLeft} theme="white">
           <div className={styles.partners}>
-            <p> Thanks to our partners, our all-volunteer organization at
-               Operation Code continues to serve the military community.
-             We are deeply grateful to the leadership of these
-              organizations that are supporting our mission. </p>
+            <p>
+              Thanks to our partners, our all-volunteer organization at
+              Operation Code continues to serve the military community.
+              We are deeply grateful to the leadership of these
+              organizations that are supporting our mission.
+            </p>
           </div>
         </Section>
-        <Section className={styles.partnersRight} >
+        <Section className={styles.partnersRight} theme="white">
           <p> GitHub </p>
           <p> Docker </p>
         </Section>
