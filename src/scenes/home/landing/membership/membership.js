@@ -21,28 +21,28 @@ class Membership extends Component {
             <img className={styles.icon} src={sharedIcon} alt="" />
             <span>
               Join an open community of veterans, transitioning servicemembers,
-              and military spouses who you can engage and grow with
+              and military spouses who you can engage and grow with.
             </span>
           </li>
           <li>
             <img className={styles.icon} src={flagIcon} alt="" />
             <span>
               Access our mentorship and coding channels to jumpstart
-             your journey and learn from senior software engineers
+              your journey and learn from senior software engineers.
              </span>
           </li>
           <li>
             <img className={styles.icon} src={roadIcon} alt="" />
             <span>
-            Learn about opportunities to attend software develpment conferences
-             and coding bootcamps as part of the Operation Code scholarship program
+              Learn about opportunities to attend software develpment conferences
+              and coding bootcamps as part of the Operation Code scholarship program.
              </span>
           </li>
           <li>
             <img className={styles.icon} src={suitcaseIcon} alt="" />
             <span>
-            Learn about job opportunities posted from around the country, and
-             receive feedback on your portfolio, side project, or resume
+              Find job opportunities posted from around the country, and
+              receive feedback on your portfolio, side project, or resume.
              </span>
           </li>
         </ul>
