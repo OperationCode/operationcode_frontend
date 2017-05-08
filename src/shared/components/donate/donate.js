@@ -19,7 +19,7 @@ const Donate = (props) => {
           our reach and help more veterans attend developer conferences.
         </p>
         <p>Thank you for helping us to get veterans coding!</p>
-        <LinkButton text="Donate Now" link="#" />
+        <LinkButton text="Donate Now" link="https://donorbox.org/operationcode" />
       </div>
     </Section>
   );
