@@ -136,15 +136,8 @@ function build(previousFileSizes) {
         console.log();
       }
       var build = path.relative(process.cwd(), paths.appBuild);
-      console.log('The ' + chalk.cyan(build) + ' folder is ready to be deployed.');
-      console.log('You may serve it with a static server:');
-      console.log();
-      if (useYarn) {
-        console.log(`  ${chalk.cyan('yarn')} global add serve`);
-      } else {
-        console.log(`  ${chalk.cyan('npm')} install -g serve`);
-      }
-      console.log(`  ${chalk.cyan('serve')} -s build`);
+      console.log('The ' + chalk.cyan(build) + ' folder is now hosted at localhost on port 80.');
+      console.log('Open your browser and go to http://localhost:80');
       console.log();
     }
   });
