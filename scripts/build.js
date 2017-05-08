@@ -136,8 +136,12 @@ function build(previousFileSizes) {
         console.log();
       }
       var build = path.relative(process.cwd(), paths.appBuild);
-      console.log('The ' + chalk.cyan(build) + ' folder is now hosted at localhost on port 80.');
-      console.log('Open your browser and go to http://localhost:80');
+      console.log('The ' + chalk.cyan(build) + ' folder is now ready for testing and hosting.');
+      console.log();
+      console.log('Test by running: ' + chalk.cyan('yarn') + 'test');
+      console.log('Host by running: ' + chalk.cyan('yarn') + ' start:server');
+      console.log();
+      console.log('Once hosted, open browser and go to - ' + chalk.cyan('http://localhost:4000/'));
       console.log();
     }
   });
