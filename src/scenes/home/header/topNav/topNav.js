@@ -11,7 +11,7 @@ class TopNav extends Component {
         <NavItem to="programs" text="Our Programs" />
         <NavItem to="involved" text="Get Involved" />
         <NavItem to="blog" text="Blog" />
-        <NavItem to="donate" text="Donate" />
+        <NavItem to="https://donorbox.org/operationcode" text="Donate" isExternal />
         <NavItem to="join" text="Join" />
       </Nav>
     );
