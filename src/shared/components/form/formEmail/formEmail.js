@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Label from 'shared/components/label/label';
-import styles from './formPassword.css';
+import styles from './formEmail.css';
 
-class FormPassword extends Component {
+class FormEmail extends Component {
+
   constructor() {
     super();
     this.state = {
@@ -19,7 +20,7 @@ class FormPassword extends Component {
 
   validate = (text) => {
     // todo: update regex if/when we decide to update password validation rules
-    const validationRegex = /^(?=.*[A-Z]).{6,}$/;
+    const validationRegex = /\S+@\S+\.\S+/; // simple email regex from: http://stackoverflow.com/a/9204568/4585393
 
     if (text.length > 0) {
       this.setState({ isValid: text.match(validationRegex) });
@@ -30,32 +31,33 @@ class FormPassword extends Component {
 
   render() {
     return (
-      <div className={styles.formPassword}>
+      <div className={styles.formEmail}>
         {this.props.label && <Label htmlFor={this.props.id}>{this.props.displayName}</Label>}
         <input
+          autoComplete="off"
           id={this.props.id}
-          type="password"
+          type="email"
           value={this.state.text}
           placeholder={this.props.placeholder}
           onChange={this.handleChange}
         />
-        { !this.state.isValid && <span>Must be 6 characters long and incude a capitalized letter</span>}
+        { !this.state.isValid && <span>Must be a valid email</span>}
       </div>
     );
   }
 }
 
-FormPassword.propTypes = {
+FormEmail.propTypes = {
   label: PropTypes.bool,
   displayName: PropTypes.string,
   placeholder: PropTypes.string,
   id: PropTypes.string.isRequired
 };
 
-FormPassword.defaultProps = {
+FormEmail.defaultProps = {
   displayName: null,
   label: true,
   placeholder: null
 };
 
-export default FormPassword;
+export default FormEmail;

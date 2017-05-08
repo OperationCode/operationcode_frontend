@@ -1,0 +1,3 @@
+.formEmail {
+  composes: formControl from '../form.css';
+}
