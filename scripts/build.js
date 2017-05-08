@@ -138,7 +138,7 @@ function build(previousFileSizes) {
       var build = path.relative(process.cwd(), paths.appBuild);
       console.log('The ' + chalk.cyan(build) + ' folder is now ready for testing and hosting.');
       console.log();
-      console.log('Test by running: ' + chalk.cyan('yarn') + 'test');
+      console.log('Test by running: ' + chalk.cyan('yarn') + ' test');
       console.log('Host by running: ' + chalk.cyan('yarn') + ' start:server');
       console.log();
       console.log('Once hosted, open browser and go to - ' + chalk.cyan('http://localhost:4000/'));
