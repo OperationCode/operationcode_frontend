@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Modal from 'shared/components/modal/modal';
 import Form from 'shared/components/form/form';
-import DataFormItem from 'shared/components/form/dataFormItem/dataFormItem';
+import FormEmail from 'shared/components/form/formEmail/formEmail';
+import FormPassword from 'shared/components/form/formPassword/formPassword';
 
 class Login extends Component {
   render() {
@@ -9,8 +10,8 @@ class Login extends Component {
       <div>
         <Modal>
           <Form>
-            <DataFormItem displayName="Username" />
-            <DataFormItem displayName="Password" type="password" />
+            <FormEmail displayName="Username" />
+            <FormPassword displayName="Password" />
           </Form>
         </Modal>
       </div>

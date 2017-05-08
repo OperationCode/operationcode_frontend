@@ -2,6 +2,20 @@
   box-sizing: border-box;
 }
 
-.form div ~ div {
+.formControl  ~ .formControl {
   margin-top: 16px;
+}
+
+.formControl input {
+  background-color: #E6E6E6;
+  color: #000;
+  border: none;
+  font-size: 1.3em;
+  padding: 0 16px;
+  height: 50px;
+  width: 100%;
+}
+
+.formControl input::placeholder  {
+    color: #000;
 }
