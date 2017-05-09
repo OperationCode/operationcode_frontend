@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './drawer.css';
 
 const Drawer = (props) => {
-  const { isVisible } = props;
+  const { isVisible, children } = props;
   let className = styles.hidden;
 
   if (isVisible) {
@@ -12,17 +12,20 @@ const Drawer = (props) => {
 
   return (
     <div className={className}>
-      <div className={styles.content} />
+      <div className={styles.content}>
+        {children}
+      </div>
     </div>
   );
 };
 
 Drawer.propTypes = {
-  isVisible: PropTypes.bool
+  isVisible: PropTypes.bool,
+  children: PropTypes.arrayOf(PropTypes.element).isRequired
 };
 
 Drawer.defaultProps = {
-  isVisible: false
+  isVisible: false,
 };
 
 export default Drawer;

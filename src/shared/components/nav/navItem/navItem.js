@@ -8,7 +8,8 @@ class NavItem extends PureComponent {
   constructor() {
     super();
 
-    // remove this if .eslintrc updated to parser:"babel-eslint", allowing class methods as => fns
+    // TODO: remove this if .eslintrc updated to parser:"babel-eslint",
+    // allowing class methods as => fns
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -21,10 +22,10 @@ class NavItem extends PureComponent {
   }
 
   render() {
-    const disabledClass = this.props.notClickable ? styles.disabledNavItem : styles.navItem;
-
+    const disabledClass = this.props.notClickable ? styles.disabledNavItem : '';
+    const classes = `${styles.navItem} ${disabledClass} ${styles[this.props.className]}`;
     return (
-      <Link className={disabledClass} to={this.props.to} onClick={this.handleClick}>
+      <Link className={classes} to={this.props.to} onClick={this.handleClick}>
         {this.props.text}
       </Link>
     );
@@ -32,6 +33,7 @@ class NavItem extends PureComponent {
 }
 
 NavItem.propTypes = {
+  className: PropTypes.string,
   isExternal: PropTypes.bool,
   notClickable: PropTypes.bool,
   to: PropTypes.string.isRequired,
@@ -39,6 +41,7 @@ NavItem.propTypes = {
 };
 
 NavItem.defaultProps = {
+  className: null,
   isExternal: false,
   notClickable: false
 };

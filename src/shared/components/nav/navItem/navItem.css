@@ -3,6 +3,15 @@
   color: #F7F7F7;
 }
 
+.menuItem {
+  composes: navItem;
+  font-size: 30px;
+}
+
+.menuItem ~ .menuItem {
+  margin-top: 16px;
+}
+
 .disabledNavItem {
   visibility: hidden;
 }
