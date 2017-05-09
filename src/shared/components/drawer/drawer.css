@@ -1,0 +1,39 @@
+.body {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  width: 320px;
+  transition: left .25s ease-in-out;
+}
+
+.hidden {
+  composes: body;
+  left: -100%;
+}
+
+.visible {
+  composes: body;
+  left: 0;
+}
+
+.content {
+  background-color: #4A4A4A;
+  height: 100%;
+  width: 100%;
+}
+
+
+@media screen and (max-width: 760px) /* Tablet */ {
+  .body {
+    display: block;
+    width: 480px;
+  }
+}
+
+@media screen and (max-width: 480px) /* Tablet */ {
+  .body {
+    width: 100%;
+  }
+}
