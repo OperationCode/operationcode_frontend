@@ -1,0 +1,13 @@
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  color: #F7F7F7;
+  font-size: 60px;
+}
+
+.item ~ .item {
+  margin-top: 16px;
+}
