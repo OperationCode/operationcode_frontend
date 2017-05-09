@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import LinkButton from 'shared/components/linkButton/linkButton';
+// import LinkButton from 'shared/components/linkButton/linkButton';
 import styles from './imageCard.css';
 
 
@@ -20,6 +20,10 @@ class ImageCard extends Component {
     );
   }
 }
+
+// TODO - AFTER MVP:
+// Add within cardText div under the paragraph tag once links are generated
+// <LinkButton text={this.props.buttonText} link={this.props.link} />
 
 ImageCard.propTypes = {
   image: PropTypes.string.isRequired,
