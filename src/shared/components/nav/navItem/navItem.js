@@ -12,12 +12,7 @@ class NavItem extends PureComponent {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(e) {
-    // Prevent Clicking On Disabled Links
-    if (this.props.notClickable) {
-      e.preventDefault();
-    }
-
+  handleClick() {
     if (!this.props.isExternal) {
       return;
     }

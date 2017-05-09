@@ -7,19 +7,15 @@ class TopNav extends Component {
   render() {
     return (
       <Nav className={styles.topNav} >
-        <NavItem notClickable to="about" text="        " />
-        <NavItem notClickable to="programs" text="            " />
-        <NavItem notClickable to="involved" text="            " />
-        <NavItem notClickable to="blog" text="    " />
+        <NavItem notClickable to="about" text="About" />
+        <NavItem notClickable to="programs" text="Programs" />
+        <NavItem notClickable to="involved" text="Get Involved" />
+        <NavItem notClickable to="blog" text="Blog" />
         <NavItem to="https://donorbox.org/operationcode" text="Donate" isExternal />
         <NavItem to="join" text="Join" />
       </Nav>
     );
   }
 }
-
-// TODO:
-// Replace empty spaces within text properties to match link content
-// Remove notClickable property as routes are implemented
 
 export default TopNav;
