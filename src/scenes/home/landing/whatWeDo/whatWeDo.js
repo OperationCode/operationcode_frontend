@@ -37,4 +37,7 @@ class WhatWeDo extends Component {
   }
 }
 
+// TODO: Uncomment buttons as routes are implemented
+// NOTE: ImageCard dynamically handles button-links as optionally, so no further work required
+
 export default WhatWeDo;

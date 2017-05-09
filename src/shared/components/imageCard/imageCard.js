@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 // import LinkButton from 'shared/components/linkButton/linkButton';
 import styles from './imageCard.css';
 
+
 class ImageCard extends Component {
   render() {
     return (
@@ -12,6 +13,7 @@ class ImageCard extends Component {
           <div className={styles.cardText}>
             <h2>{this.props.title}:</h2>
             <p>{this.props.cardText}</p>
+            {this.props.link && <LinkButton text={this.props.buttonText} link={this.props.link} />}
           </div>
         </div>
       </div>
@@ -27,8 +29,13 @@ ImageCard.propTypes = {
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   cardText: PropTypes.string.isRequired,
-  // buttonText: PropTypes.string.isRequired,
-  // link: PropTypes.string.isRequired
+  buttonText: PropTypes.string,
+  link: PropTypes.string
+};
+
+ImageCard.defaultProps = {
+  link: null,
+  buttonText: null
 };
 
 export default ImageCard;
