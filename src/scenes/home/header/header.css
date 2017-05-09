@@ -1,33 +1,16 @@
-
 .header {
   display: flex;
+  align-items: center;
   height: 80px;
-  align-items: center;
 }
+
 .logo {
-  height: 60px;
-  flex: 1 40%;
-  margin-left: 40px;
+  display: flex;
   align-items: center;
-  display: flex;
+  height: 60px;
+  margin-left: 40px;
 }
-.nav {
-  display: flex;
-  justify-content: space-between;
-  flex: 1 60%;
-  margin-right:8vw;
-}
-.nav a {
-  text-decoration: none;
-  color: #F7F7F7;
-  font-size: 16px;
-}
+
 .logo img {
   height: 50px;
 }
-
-/*@media screen and (max-width: 768px) {
-  .logo {
-    margin: 0 auto;
-  }
-}*/
