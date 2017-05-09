@@ -31,7 +31,7 @@ ImageCard.propTypes = {
 ImageCard.defaultProps = {
   link: null,
   buttonText: null
-}
+};
 
 // TODO: Uncomment buttons as routes are implemented
 // NOTE: ImageCard dynamically handles button-links as optionally, so no further work required
