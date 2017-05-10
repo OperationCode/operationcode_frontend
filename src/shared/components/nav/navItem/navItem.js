@@ -14,11 +14,13 @@ class NavItem extends PureComponent {
   }
 
   handleClick() {
-    if (!this.props.isExternal) {
-      return;
+    if (this.props.isExternal) {
+      window.location(this.props.to);
     }
 
-    window.location(this.props.to);
+    if (this.props.onClick) {
+      this.props.onClick();
+    }
   }
 
   render() {
@@ -36,6 +38,7 @@ NavItem.propTypes = {
   className: PropTypes.string,
   isExternal: PropTypes.bool,
   notClickable: PropTypes.bool,
+  onClick: PropTypes.func,
   to: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired
 };
@@ -43,7 +46,8 @@ NavItem.propTypes = {
 NavItem.defaultProps = {
   className: null,
   isExternal: false,
-  notClickable: false
+  notClickable: false,
+  onClick: null
 };
 
 // TODO: Remove all references to notClickable and disabledClass (including .css) when

@@ -5,6 +5,7 @@
   bottom: 0;
   overflow: hidden;
   width: 320px;
+  z-index: 2;
   transition: left .25s ease-in-out;
 }
 
