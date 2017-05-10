@@ -25,7 +25,7 @@ class Header extends Component {
         <Logo />
         <Burger onClick={this.toggleDrawer} />
         <TopNav />
-        <SideNav isVisible={this.state.isSideNavVisible} />
+        <SideNav isVisible={this.state.isSideNavVisible} onClose={this.toggleDrawer} />
       </div>
     );
   }
