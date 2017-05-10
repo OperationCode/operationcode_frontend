@@ -11,6 +11,7 @@ import Thanks from './thanks/thanks';
 import styles from './home.css';
 import Header from './header/header';
 import Landing from './landing/landing';
+import CodeSchools from './code_schools/codeSchools';
 import Footer from './footer/footer';
 
 class Home extends Component {
@@ -56,6 +57,7 @@ class Home extends Component {
             )}
           />
           <Route exact path="/" component={Landing} />
+          <Route path="/code_schools" component={CodeSchools} />
           <Route path="/login" component={Login} />
           <Route path="/signup" component={SignUp} />
           <Route path="/join" component={SignUp} />
