@@ -68,7 +68,10 @@
     "lint": "eslint src"
   },
   "jest": {
-    "moduleDirectories": ["node_modules", "src"],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}"
     ],

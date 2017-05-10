@@ -27,6 +27,12 @@ const SideNav = (props) => {
         <div className={styles.list}>
           <NavItem
             className="menuItem"
+            to="code_schools"
+            text="Code Schools"
+            onClick={handleCloseClick}
+          />
+          <NavItem
+            className="menuItem"
             to="https://donorbox.org/operationcode"
             text="Donate"
             isExternal
