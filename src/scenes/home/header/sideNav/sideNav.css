@@ -9,7 +9,9 @@
 
 .close {
   color: #fff;
-  font-size: 20px;
+  font-size: 26px;
+  padding: 6px; /*to increase clickability on mobile*/
+  text-decoration: none;
 }
 
 .logo {
