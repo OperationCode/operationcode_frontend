@@ -32,10 +32,8 @@ class Home extends Component {
 
   setBgImage(location) {
     if (location.pathname === '/') {
-      console.log(`landing ${this.state.bgImage}`);
       this.setState({ bgChanged: !(this.state.bgImage), bgImage: true, bgImageUrl: familyImage });
     } else {
-      console.log(`not landing ${this.state.bgImage}`);
       this.setState({ bgChanged: this.state.bgImage, bgImage: false, bgImageUrl: null });
     }
   }
