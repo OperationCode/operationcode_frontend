@@ -15,6 +15,7 @@ class JumboQuote extends Component {
 
   componentDidMount() {
     // TODO: Pull this from an API with fetch
+    // (kylemh: recommend axios if using promises) source: https://daveceddia.com/ajax-requests-in-react/
     Promise.try(
       () => quotes.quotes[Math.floor(Math.random() * quotes.quotes.length)]
     ).then((quote) => {
