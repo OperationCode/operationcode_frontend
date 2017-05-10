@@ -1,0 +1,3 @@
+.formInput {
+  composes: formControl from '../form.css';
+}
