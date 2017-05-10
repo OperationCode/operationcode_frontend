@@ -13,7 +13,7 @@ RUN yarn install --no-progress
 
 # Bundle app source
 COPY . /usr/src/app
-
+RUN cp /usr/src/app/src/config/environment-prod.js /usr/src/app/src/config/environment.js
 # Build and optimize react app
 RUN yarn run build
 

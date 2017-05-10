@@ -104,5 +104,6 @@
     "presets": [
       "react-app"
     ]
-  }
+  },
+  "homepage": "http://frontend.operationcode.org/"
 }
