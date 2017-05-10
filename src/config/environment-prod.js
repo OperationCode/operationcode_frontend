@@ -1,5 +1,5 @@
 const config = {
-  backendUrl: 'http://localhost:3000'
+  backendUrl: 'https://api.operationcode.org'
 };
 
 export default config;

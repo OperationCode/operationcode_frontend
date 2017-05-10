@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+import { Redirect } from 'react-router-dom';
+import _ from 'lodash';
 import Form from 'shared/components/form/form';
 import FormEmail from 'shared/components/form/formEmail/formEmail';
 import FormZipCode from 'shared/components/form/formZipCode/formZipCode';
 import FormPassword from 'shared/components/form/formPassword/formPassword';
 import FormButton from 'shared/components/form/formButton/formButton';
 import Section from 'shared/components/section/section';
+import config from 'config/environment';
 import styles from './signup.css';
 
 class SignUp extends Component {
@@ -18,7 +22,9 @@ class SignUp extends Component {
       isValid: true,
       emailValid: true,
       zipValid: true,
-      passwordValid: true
+      passwordValid: true,
+      error: false,
+      sucess: false
     };
   }
 
@@ -43,7 +49,30 @@ class SignUp extends Component {
 
   handleOnClick = (e) => {
     e.preventDefault = true;
+
+    if (this.isFormValid()) {
+      axios.post(`${config.backendUrl}/users`, { email: this.state.email, zip: this.state.zip }).then(() => {
+        this.setState({ success: true, error: null });
+      }).catch((error) => {
+        const data = _.get(error, 'response.data');
+        let errorMessage = '';
+        if (data) {
+          Object.keys(data).forEach((key) => {
+            if (data && data.hasOwnProperty(key)) { // eslint-disable-line
+              errorMessage += ` ${key}: ${data[key][0]} `;
+            }
+          });
+        }
+        this.setState({ error: errorMessage });
+      });
+    }
   }
+
+  isFormValid = () =>
+    this.state.emailValid
+    && this.state.zipValid
+    && this.state.passwordValid
+    && this.state.passwordConfirmValid;
 
   render() {
     return (
@@ -63,6 +92,8 @@ class SignUp extends Component {
             onChange={this.onConfirmPasswordChange} validateFunc={this.validatePasswordConfirm}
           />
           <FormButton className={styles.joinButton} text="Join" onClick={this.handleOnClick} theme="red" />
+          {this.state.error && <span>There was an error joining operation code: {this.state.error}</span>}
+          {this.state.success && <Redirect to="/thanks" />}
         </Form>
       </Section>
     );

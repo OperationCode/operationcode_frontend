@@ -7,6 +7,7 @@ import classNames from 'classnames';
 import Login from 'shared/components/login/login';
 import familyImage from 'images/Family-2.png';
 import SignUp from './signup/signup';
+import Thanks from './thanks/thanks';
 import styles from './home.css';
 import Header from './header/header';
 import Landing from './landing/landing';
@@ -61,6 +62,7 @@ class Home extends Component {
           <Route path="/signup" component={SignUp} />
           <Route path="/join" component={SignUp} />
           <Route path="/sign_up" component={SignUp} />
+          <Route path="/thanks" component={Thanks} />
         </div>
         <Footer />
       </div>
