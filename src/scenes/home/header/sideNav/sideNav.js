@@ -17,7 +17,9 @@ const SideNav = (props) => {
     <Drawer isVisible={isVisible}>
       <div className={styles.content}>
         <div className={styles.header}>
-          <a className={styles.close} href="/" onClick={handleCloseClick}>&#10006;</a>
+          <div>
+            <a className={styles.close} href="/" onClick={handleCloseClick}>&#10006;</a>
+          </div>
           <img className={styles.logo} src={logo} alt="Operation Code logo" />
         </div>
         <div className={styles.list}>
