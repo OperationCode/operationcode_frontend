@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import styles from './linkButton.css';
 
 const LinkButton = (props) => {
@@ -11,7 +12,7 @@ const LinkButton = (props) => {
   } = props;
 
   return (
-    <a className={`${styles.linkButton} ${styles[theme]}`} href={link} {...otherProps} >{text}</a>
+    <Link className={`${styles.linkButton} ${styles[theme]}`} to={link} {...otherProps}>{text}</Link>
   );
 };
 

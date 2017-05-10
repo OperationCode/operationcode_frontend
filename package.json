@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.16.1",
     "classnames": "^2.2.5",
     "express": "^4.15.2",
     "font-awesome": "^4.7.0",
@@ -16,6 +17,7 @@
     "react-router-dom": "^4.1.1"
   },
   "devDependencies": {
+    "@kadira/storybook": "^2.21.0",
     "autoprefixer": "6.7.2",
     "babel-core": "6.22.1",
     "babel-eslint": "7.1.1",
@@ -58,8 +60,7 @@
     "webpack": "1.14.0",
     "webpack-dev-server": "1.16.2",
     "webpack-manifest-plugin": "1.1.0",
-    "whatwg-fetch": "2.0.2",
-    "@kadira/storybook": "^2.21.0"
+    "whatwg-fetch": "2.0.2"
   },
   "scripts": {
     "start": "node scripts/start.js",

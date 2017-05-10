@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Label from 'shared/components/label/label';
@@ -13,21 +14,21 @@ class FormInput extends Component {
   }
 
   handleChange = (event) => {
-    this.setState({ text: event.target.value });
-    this.validate(event.target.value);
-    if (this.props.onChange) {
-      this.props.onChange(this.state.text, this.state.isValid);
-    }
+    const valid = this.validate(event.target.value);
+    this.setState({ text: event.target.value, isValid: valid }, () => {
+      if (this.props.onChange) {
+        this.props.onChange(this.state.text, this.state.isValid);
+      }
+    });
   }
 
   validate = (text) => {
     if (this.props.validateFunc) {
-      this.setState({ isValid: this.props.validateFunc(text) });
+      return this.props.validateFunc(text);
     } else if (text.length > 0) {
-      this.setState({ isValid: text.match(this.props.validationRegex) });
-    } else {
-      this.setState({ isValid: true });
+      return this.props.validationRegex.test(text);
     }
+    return true;
   }
 
   render() {
@@ -36,7 +37,7 @@ class FormInput extends Component {
         {this.props.label && <Label htmlFor={this.props.id}>{this.props.label}</Label>}
         <input
           id={this.props.id}
-          type="text"
+          type={this.props.inputType}
           value={this.state.text}
           placeholder={this.props.placeholder}
           onChange={this.handleChange}
@@ -54,7 +55,8 @@ FormInput.propTypes = {
   validationRegex: PropTypes.instanceOf(RegExp),
   validationErrorMessage: PropTypes.string,
   validateFunc: PropTypes.func,
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  inputType: PropTypes.string
 };
 
 FormInput.defaultProps = {
@@ -63,7 +65,8 @@ FormInput.defaultProps = {
   validationRegex: null,
   validationErrorMessage: null,
   validateFunc: null,
-  onChange: null
+  onChange: null,
+  intputType: "text"
 };
 
 export default FormInput;
