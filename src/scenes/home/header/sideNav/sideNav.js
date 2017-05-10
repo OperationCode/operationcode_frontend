@@ -20,15 +20,44 @@ const SideNav = (props) => {
           <div>
             <a className={styles.close} href="/" onClick={handleCloseClick}>&#10006;</a>
           </div>
-          <img className={styles.logo} src={logo} alt="Operation Code logo" />
+          <a className={styles.logoWrapper} href="/">
+            <img className={styles.logo} src={logo} alt="Operation Code logo" />
+          </a>
         </div>
         <div className={styles.list}>
-          <NavItem className="menuItem" to="https://donorbox.org/operationcode" text="Donate" isExternal />
-          <NavItem className="menuItem" to="join" text="Join" />
-          <NavItem className="menuItem" notClickable to="about" text="About" />
-          <NavItem className="menuItem" notClickable to="programs" text="Programs" />
-          <NavItem className="menuItem" notClickable to="involved" text="Get Involved" />
-          <NavItem className="menuItem" notClickable to="blog" text="Blog" />
+          <NavItem
+            className="menuItem"
+            to="https://donorbox.org/operationcode"
+            text="Donate"
+            isExternal
+            onClick={handleCloseClick}
+          />
+          <NavItem
+            className="menuItem"
+            to="join" text="Join"
+            onClick={handleCloseClick}
+          />
+          <NavItem
+            className="menuItem"
+            notClickable to="about"
+            text="About" onClick={handleCloseClick}
+          />
+          <NavItem
+            className="menuItem"
+            notClickable to="programs"
+            text="Programs" onClick={handleCloseClick}
+          />
+          <NavItem
+            className="menuItem"
+            notClickable to="involved"
+            text="Get Involved" onClick={handleCloseClick}
+          />
+          <NavItem
+            className="menuItem"
+            notClickable to="blog"
+            text="Blog"
+            onClick={handleCloseClick}
+          />
         </div>
       </div>
 
