@@ -10,23 +10,22 @@ class Header extends Component {
   constructor() {
     super();
     this.state = {
-      showDrawer: false
+      isSideNavVisible: false
     };
     this.toggleDrawer = this.toggleDrawer.bind(this);
   }
 
   toggleDrawer() {
-    this.setState({ showDrawer: !this.state.showDrawer });
+    this.setState({ isSideNavVisible: !this.state.isSideNavVisible });
   }
 
   render() {
     return (
       <div className={styles.header} >
         <Logo />
-        <Burger />
+        <Burger onClick={this.toggleDrawer} />
         <TopNav />
-        <SideNav isVisible={this.state.showDrawer} />
-        <button onClick={this.toggleDrawer}>Click</button>
+        <SideNav isVisible={this.state.isSideNavVisible} />
       </div>
     );
   }
