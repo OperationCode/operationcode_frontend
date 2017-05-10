@@ -1,16 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import burger from 'images/icons/menu.svg';
 import styles from './burger.css';
 
-class Burger extends Component {
-  render() {
-    return (
-      <div className={styles.burger} >
-        <a className="burger" href="/"><img src={burger} alt="" /></a>
-      </div>
-    );
-  }
-}
+const Burger = (props) => {
+  const { onClick } = props;
 
+  const handleClick = (e) => {
+    e.preventDefault();
+    onClick();
+  };
+
+  return (
+    <div className={styles.burger}>
+      <a className="burger" href="/" onClick={handleClick}><img src={burger} alt="" /></a>
+    </div>
+  );
+};
+
+Burger.propTypes = {
+  onClick: PropTypes.func.isRequired
+};
 
 export default Burger;
