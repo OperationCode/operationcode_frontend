@@ -1,5 +1,17 @@
 .signup {
-  max-height: 500px;
-  background-color:#fff;
-  flex: 1 1 100%;
+  width:100%;
+}
+
+.signup span {
+  padding: 10px 8px 30px 8px;
+  font-size:16px;
+
+}
+
+.signupForm {
+  max-width:500px;
+  margin:auto;
+  border: 1px solid rgb(92,105,122);
+  padding: 10px;
+  height:550px;
 }

@@ -32,7 +32,7 @@ Section.propTypes = {
   title: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.element),
-    PropTypes.element,
+    PropTypes.element
   ]).isRequired,
   className: PropTypes.string,
   theme: PropTypes.string,
