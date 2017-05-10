@@ -15,3 +15,8 @@
   padding: 10px;
   height:550px;
 }
+
+.joinButton {
+  align-self: flex-end;
+  margin-top: 10px;
+}

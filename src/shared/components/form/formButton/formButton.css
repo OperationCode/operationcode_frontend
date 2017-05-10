@@ -1,0 +1,11 @@
+.formButton {
+  composes: button from 'shared/styles/button.css';
+}
+
+.red {
+  composes: red from 'shared/styles/button.css';
+}
+
+.blue {
+  composes: blue from 'shared/styles/button.css';
+}
