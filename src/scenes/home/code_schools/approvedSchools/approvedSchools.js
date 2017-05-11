@@ -1,27 +1,35 @@
 import React, { Component } from 'react';
-import schools from '../schools.json';
+import { Link } from 'react-router-dom';
 import styles from './approvedSchools.css';
 
 class ApprovedSchools extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      vaSchools: {}
+    };
+  }
 
   render() {
     return (
-      <div>
+      <div className={styles.approvedSchools}>
         <h2>VA Approved Schools</h2>
         <ul>
-          <li>School 1</li>
-          <li>School 2</li>
-          <li>School 3</li>
-          <li>School 4</li>
+          <li>School Name 1</li>
+          <li>School Name 2</li>
+          <li>School Name 3</li>
         </ul>
 
         <hr />
 
         <h6>
           Require Code School Technical Assistance for state and VA approval?
-          <a href="mailto:schools@operationcode.org">Request technical assistance today.</a>
+          <Link to="mailto:schools@operationcode.org">Request technical assistance today.</Link>
         </h6>
       </div>
     );
   }
 }
+
+export default ApprovedSchools;
