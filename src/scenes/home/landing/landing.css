@@ -3,6 +3,7 @@
   flex-direction: column;
   flex: 1 0 100%;
   align-items: center;
+  width: 100%;
 }
 
 .pageHeading {
