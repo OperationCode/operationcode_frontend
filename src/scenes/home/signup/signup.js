@@ -52,10 +52,11 @@ class SignUp extends Component {
 
     if (this.isFormValid()) {
       axios.post(`${config.backendUrl}/users`, {
-        email: this.state.email,
-        zip: this.state.zip,
-        password: this.state.password,
-        password_confirmation: this.state.passwordConfirm
+        user: {
+          email: this.state.email,
+          zip: this.state.zip,
+          password: this.state.password
+        }
       }).then(() => {
         this.setState({ success: true, error: null });
       }).catch((error) => {
