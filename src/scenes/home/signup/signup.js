@@ -51,7 +51,12 @@ class SignUp extends Component {
     e.preventDefault = true;
 
     if (this.isFormValid()) {
-      axios.post(`${config.backendUrl}/users`, { email: this.state.email, zip: this.state.zip }).then(() => {
+      axios.post(`${config.backendUrl}/users`, {
+        email: this.state.email,
+        zip: this.state.zip,
+        password: this.state.password,
+        password_confirmation: this.state.passwordConfirm
+      }).then(() => {
         this.setState({ success: true, error: null });
       }).catch((error) => {
         const data = _.get(error, 'response.data');
