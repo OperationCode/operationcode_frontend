@@ -93,15 +93,30 @@ export default class MentorRequest extends Component {
 
           <h2>Service</h2>
           <p>Which one of our services would you like to book?</p>
-          <FormSelect id="serviceType" prompt="Choose service" options={this.buildServiceOptions()} onChange={e => this.onUpdateSelect('serviceType', e)} />
+          <FormSelect
+            id="serviceType"
+            prompt="Choose service"
+            options={this.buildServiceOptions()}
+            onChange={e => this.onUpdateSelect('serviceType', e)}
+          />
 
           <h2>Language</h2>
           <p>Do you need a mentor for a specific language?</p>
-          <FormSelect id="languageType" options={this.buildLanguageOptions()} onChange={e => this.onUpdateSelect('languageType', e)} prompt="Select language" />
+          <FormSelect
+            id="languageType"
+            options={this.buildLanguageOptions()}
+            onChange={e => this.onUpdateSelect('languageType', e)}
+            prompt="Select language"
+          />
 
           <h2>Mentor</h2>
           <p>Would you like to pick a specific mentor?</p>
-          <FormSelect id="mentor" prompt="Choose mentor" options={this.buildMentorOptions()} onChange={e => this.onUpdateSelect('mentor', e)} />
+          <FormSelect
+            id="mentor"
+            prompt="Choose mentor"
+            options={this.buildMentorOptions()}
+            onChange={e => this.onUpdateSelect('mentor', e)}
+          />
 
           <h2>Additional Details</h2>
           <p>Please provide us with any more info that may help in us in assigning a mentor to this request.</p>
