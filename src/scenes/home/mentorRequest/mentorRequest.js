@@ -8,29 +8,18 @@ import styles from './mentorRequest.css';
 
 export default class MentorRequest extends Component {
   state = {
-    additionalDetails: '',
     mentors: [],
-    slackName: '',
-    services: [],
-    serviceType: ''
+    services: []
   };
 
   componentDidMount() {
     getServices().then((services) => {
-      this.setState({
-        services
-      });
-    }).catch(() => {
-      alert('there was an error getting services');
-    });
+      this.setState({ services });
+    }).catch(this.setFetchError);
 
     getMentors().then((mentors) => {
-      this.setState({
-        mentors
-      });
-    }).catch(() => {
-      alert('there was an error getting mentors');
-    });
+      this.setState({ mentors });
+    }).catch(this.setFetchError);
   }
 
   onSlackNameChange = (name) => {
@@ -57,6 +46,10 @@ export default class MentorRequest extends Component {
     });
   }
 
+  setFetchError = () => {
+    this.setState({ error: 'There was an error building the form. Please try again' });
+  }
+
   buildServiceOptions = () =>
     this.state.services.map(service => ({ value: service, label: service }))
 
@@ -74,8 +67,10 @@ export default class MentorRequest extends Component {
     ]
 
   render() {
+    const { error } = this.state;
     return (
       <Section className={styles.mentorRequest} title="Mentor Service Request">
+        { error && <div className={styles.mentorRequestError}>{error}</div> }
         <Form className={styles.mentorRequestForm}>
           <span>
             Please use this form to schedule a mentorship session.
