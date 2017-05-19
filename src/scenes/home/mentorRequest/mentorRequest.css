@@ -19,3 +19,14 @@
   align-self: flex-end;
   margin-top: 10px;
 }
+
+.mentorRequestError {
+  background-color: #ffc2c2;
+  border-radius: 0.25rem;
+  color: red;
+  margin-bottom: 1rem;
+  max-width: 500px;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+}
