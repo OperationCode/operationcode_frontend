@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Form from 'shared/components/form/form';
 import FormInput from 'shared/components/form/formInput/formInput';
+import Section from 'shared/components/section/section';
+import styles from './mentorRequest.css';
 
 export default class MentorRequest extends Component {
   state = {
@@ -34,11 +36,15 @@ export default class MentorRequest extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Mentor Service Request</h1>
-        <Form>
+      <Section className={styles.mentorRequest} title="Mentor Service Request">
+        <Form className={styles.mentorRequestForm}>
+          <span>
+            Please use this form to schedule a mentorship session.
+            Each session is 30 minutes. If you think youll need more time
+            please let us know in the additional comments field below.
+          </span>
           <h2>Slack Name</h2>
-          <FormInput id="slackName" onChange={this.onSlackNameChange} />
+          <FormInput id="slackName" placeholder="Slack username" onChange={this.onSlackNameChange} />
           <h2>Service</h2>
           <p>Which one of our services would you like to book?</p>
           <select id="serviceType" value={this.state.serviceType} onChange={this.onServiceTypeChange}>
@@ -69,7 +75,7 @@ export default class MentorRequest extends Component {
           <FormInput id="additionalDetails" onChange={this.onDetailsChange} />
 
         </Form>
-      </div>
+      </Section>
     );
   }
 }

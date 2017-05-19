@@ -1,0 +1,21 @@
+.mentorRequest {
+  width:100%;
+}
+
+.mentorRequestForm span {
+  padding: 10px 8px 30px 8px;
+  font-size:16px;
+}
+
+.mentorRequestForm {
+  max-width:500px;
+  margin:auto;
+  border: 1px solid rgb(92,105,122);
+  padding: 10px;
+  min-height:550px;
+}
+
+.joinButton {
+  align-self: flex-end;
+  margin-top: 10px;
+}
