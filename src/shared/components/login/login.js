@@ -10,6 +10,8 @@ import FormPassword from 'shared/components/form/formPassword/formPassword';
 import FormButton from 'shared/components/form/formButton/formButton';
 import Cookies from 'universal-cookie';
 
+require('./login.css');
+
 class Login extends Component {
 
   state = {
