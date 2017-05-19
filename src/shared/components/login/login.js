@@ -8,6 +8,7 @@ import _ from 'lodash';
 import FormEmail from 'shared/components/form/formEmail/formEmail';
 import FormPassword from 'shared/components/form/formPassword/formPassword';
 import FormButton from 'shared/components/form/formButton/formButton';
+import Cookies from 'universal-cookie';
 
 class Login extends Component {
 
@@ -28,6 +29,11 @@ class Login extends Component {
     this.setState({ password: value, passwordValid: valid });
   }
 
+  setUserAuthCookie = (token) => {
+    const cookies = new Cookies();
+    cookies.set('token', token, { path: '/' });
+  }
+
   isFormValid = () => this.state.emailValid && this.state.passwordValid
 
   handleOnClick = (e) => {
@@ -39,7 +45,7 @@ class Login extends Component {
           password: this.state.password
         }
       }).then(({ data }) => {
-        document.cookie = `token=${data.token}`;
+        this.setUserAuthCookie(data.token);
         this.setState({ authenticated: true });
       }).catch((response) => {
         const error = _.get(response, 'response.data.error');
