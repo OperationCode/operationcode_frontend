@@ -12,6 +12,7 @@ import styles from './home.css';
 import Header from './header/header';
 import Landing from './landing/landing';
 import Footer from './footer/footer';
+import MentorRequest from './mentorRequest/mentorRequest';
 
 class Home extends Component {
   constructor(props) {
@@ -61,6 +62,7 @@ class Home extends Component {
           <Route path="/join" component={SignUp} />
           <Route path="/sign_up" component={SignUp} />
           <Route path="/thanks" component={Thanks} />
+          <Route path="/mentor-request" component={MentorRequest} />
         </div>
         <Footer />
       </div>
