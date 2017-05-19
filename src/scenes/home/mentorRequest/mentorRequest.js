@@ -4,7 +4,7 @@ import Form from 'shared/components/form/form';
 import FormButton from 'shared/components/form/formButton/formButton';
 import FormInput from 'shared/components/form/formInput/formInput';
 import FormSelect from 'shared/components/form/formSelect/formSelect';
-import { getServices, getMentors } from 'shared/utils/apiHelper';
+import * as ApiHelpers from 'shared/utils/apiHelper';
 import Section from 'shared/components/section/section';
 import styles from './mentorRequest.css';
 
@@ -16,11 +16,11 @@ export default class MentorRequest extends Component {
   };
 
   componentDidMount() {
-    getServices().then((services) => {
+    ApiHelpers.getServices().then((services) => {
       this.setState({ services });
     }).catch(this.setFetchError);
 
-    getMentors().then((mentors) => {
+    ApiHelpers.getMentors().then((mentors) => {
       this.setState({ mentors });
     }).catch(this.setFetchError);
   }
@@ -37,21 +37,9 @@ export default class MentorRequest extends Component {
     });
   }
 
-  onServiceTypeChange = (service) => {
+  onUpdateSelect = (name, event) => {
     this.setState({
-      serviceType: service
-    });
-  }
-
-  onLanguageTypeChange = (language) => {
-    this.setState({
-      languageType: language
-    });
-  }
-
-  onMentorChange = (mentor) => {
-    this.setState({
-      mentor
+      [name]: event.target.value
     });
   }
 
@@ -60,7 +48,7 @@ export default class MentorRequest extends Component {
   }
 
   buildServiceOptions = () =>
-    this.state.services.map(service => ({ value: service, label: service }))
+    this.state.services.map(service => ({ value: service.id, label: service.name }))
 
   buildMentorOptions = () =>
     this.state.mentors.map(mentor => ({ value: mentor.id, label: mentor.email }))
@@ -74,6 +62,19 @@ export default class MentorRequest extends Component {
       { value: 'dotnet', label: '.NET' },
       { value: 'htmlcss', label: 'HTML/CSS' }
     ]
+
+  handleOnClick = () => {
+    ApiHelpers.postRequest({
+      language: this.state.languageType,
+      additionalDetails: this.state.additionalDetails,
+      service: this.state.serviceType,
+      mentor: this.state.mentor
+    }).then(() => {
+      this.setState({ success: true });
+    }).catch(() => {
+      this.setState({ error: 'There was an error requesting a mentor.' });
+    });
+  }
 
   render() {
     const { error, success } = this.state;
@@ -92,21 +93,20 @@ export default class MentorRequest extends Component {
 
           <h2>Service</h2>
           <p>Which one of our services would you like to book?</p>
-          <FormSelect id="serviceType" prompt="Choose service" options={this.buildServiceOptions()} onChange={this.onServiceTypeChange} />
+          <FormSelect id="serviceType" prompt="Choose service" options={this.buildServiceOptions()} onChange={e => this.onUpdateSelect('serviceType', e)} />
 
           <h2>Language</h2>
           <p>Do you need a mentor for a specific language?</p>
-          <FormSelect id="languageType" options={this.buildLanguageOptions()} onChange={this.onLanguageTypeChange} prompt="Select language" />
+          <FormSelect id="languageType" options={this.buildLanguageOptions()} onChange={e => this.onUpdateSelect('languageType', e)} prompt="Select language" />
 
           <h2>Mentor</h2>
           <p>Would you like to pick a specific mentor?</p>
-          <FormSelect id="mentor" prompt="Choose mentor" options={this.buildMentorOptions()} onChange={this.onMentorChange} />
+          <FormSelect id="mentor" prompt="Choose mentor" options={this.buildMentorOptions()} onChange={e => this.onUpdateSelect('mentor', e)} />
 
           <h2>Additional Details</h2>
           <p>Please provide us with any more info that may help in us in assigning a mentor to this request.</p>
           <FormInput id="additionalDetails" onChange={this.onDetailsChange} />
           <FormButton className={styles.joinButton} text="Request Mentor" onClick={this.handleOnClick} theme="red" />
-          {error && <span>There was an error requesting mentor: {this.state.error}</span>}
           {success && <Redirect to="/thanks" />}
         </Form>
       </Section>
