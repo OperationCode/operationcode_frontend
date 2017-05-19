@@ -4,7 +4,10 @@ import FormInput from 'shared/components/form/formInput/formInput';
 import FormSelect from 'shared/components/form/formSelect/formSelect';
 import { getServices, getMentors } from 'shared/utils/apiHelper';
 import Section from 'shared/components/section/section';
+import FormButton from 'shared/components/form/formButton/formButton';
+import { Redirect } from 'react-router-dom';
 import styles from './mentorRequest.css';
+
 
 export default class MentorRequest extends Component {
   state = {
@@ -96,6 +99,9 @@ export default class MentorRequest extends Component {
           <h2>Additional Details</h2>
           <p>Please provide us with any more info that may help in us in assigning a mentor to this request.</p>
           <FormInput id="additionalDetails" onChange={this.onDetailsChange} />
+          <FormButton className={styles.joinButton} text="Request Mentor" onClick={this.handleOnClick} theme="red" />
+          {this.state.error && <span>There was an error requesting mentor: {this.state.error}</span>}
+          {this.state.success && <Redirect to="/thanks" />}
         </Form>
       </Section>
     );
