@@ -49,6 +49,12 @@ export default class MentorRequest extends Component {
     });
   }
 
+  onMentorChange = (mentor) => {
+    this.setState({
+      mentor
+    });
+  }
+
   setFetchError = () => {
     this.setState({ error: 'There was an error building the form. Please try again' });
   }
