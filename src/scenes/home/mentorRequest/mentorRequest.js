@@ -18,7 +18,6 @@ export default class MentorRequest extends Component {
       this.setState({
         services
       });
-      console.log(services);
     }).catch(() => {
       alert('there was an error getting services');
     });
@@ -27,7 +26,6 @@ export default class MentorRequest extends Component {
       this.setState({
         mentors
       });
-      console.log(mentors);
     }).catch(() => {
       alert('there was an error getting mentors');
     });
@@ -71,12 +69,7 @@ export default class MentorRequest extends Component {
           <h2>Service</h2>
           <p>Which one of our services would you like to book?</p>
           <select id="serviceType" value={this.state.serviceType} onChange={this.onServiceTypeChange}>
-            <option value="voiceChat">General Guidance - Voice Chat</option>
-            <option value="slackChat">General Guidance - Slack Chat</option>
-            <option value="pairProgramming">Pair Programming</option>
-            <option value="codeReview">Code Review</option>
-            <option value="mockInterview">Mock Interview</option>
-            <option value="resumeReview">Resume Review</option>
+            {this.state.services.map(service => <option value={service}>{service}</option>)}
           </select>
           <h2>Language</h2>
           <p>Do you need a mentor for a specific language?</p>
