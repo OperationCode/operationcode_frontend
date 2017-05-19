@@ -1,14 +1,37 @@
 import React, { Component } from 'react';
 import Form from 'shared/components/form/form';
 import FormInput from 'shared/components/form/formInput/formInput';
+import { getServices, getMentors } from 'shared/utils/apiHelper';
 import Section from 'shared/components/section/section';
 import styles from './mentorRequest.css';
 
 export default class MentorRequest extends Component {
   state = {
     additionalDetails: '',
-    slackName: ''
+    mentors: [],
+    slackName: '',
+    services: []
   };
+
+  componentDidMount() {
+    getServices().then((services) => {
+      this.setState({
+        services
+      });
+      console.log(services);
+    }).catch(() => {
+      alert('there was an error getting services');
+    });
+
+    getMentors().then((mentors) => {
+      this.setState({
+        mentors
+      });
+      console.log(mentors);
+    }).catch(() => {
+      alert('there was an error getting mentors');
+    });
+  }
 
   onSlackNameChange = (name) => {
     this.setState({
