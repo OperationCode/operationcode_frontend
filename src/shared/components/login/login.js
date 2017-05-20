@@ -1,5 +1,5 @@
+import Section from 'shared/components/section/section';
 import React, { Component } from 'react';
-import Modal from 'shared/components/modal/modal';
 import Form from 'shared/components/form/form';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
@@ -9,6 +9,7 @@ import FormEmail from 'shared/components/form/formEmail/formEmail';
 import FormPassword from 'shared/components/form/formPassword/formPassword';
 import FormButton from 'shared/components/form/formButton/formButton';
 import Cookies from 'universal-cookie';
+import styles from './login.css';
 
 require('./login.css');
 
@@ -63,17 +64,15 @@ class Login extends Component {
   render() {
     const { error } = this.state;
     return (
-      <div>
-        <Modal>
-          <Form autoComplete>
-            <FormEmail displayName="Email" label="Email" onChange={this.onEmailChange} />
-            <FormPassword displayName="Password" label="Password" onChange={this.onPasswordChange} />
-            {error && <h2>{error}</h2>}
-            <FormButton className="Login-btn" text="login" onClick={this.handleOnClick} />
-          </Form>
-        </Modal>
+      <Section title="Login" theme="white">
         {this.state.authenticated && <Redirect to="/mentor-request" />}
-      </div>
+        <Form autoComplete>
+          <FormEmail displayName="Email" label="Email" onChange={this.onEmailChange} />
+          <FormPassword displayName="Password" label="Password" onChange={this.onPasswordChange} />
+          {error && <h2>{error}</h2>}
+          <FormButton className={styles.Button} text="login" onClick={this.handleOnClick} />
+        </Form>
+      </Section>
     );
   }
 }

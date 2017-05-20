@@ -1,3 +1,8 @@
-.Login-btn {
-  background-color: red;
+.login Section {
+  align-self: center;
+}
+.Button {
+  align-self: center;
+  margin-top: 2rem;
+  width: 100%;
 }
