@@ -9,6 +9,7 @@ import familyImage from 'images/Family-2.png';
 import SignUp from './signup/signup';
 import MentorRequestsTable from './mentor/mentorRequestsTable/mentorRequestsTable';
 import SquadsTable from './squads/squadsTable/squadsTable';
+import MentorsTable from './mentor/mentorsTable/mentorsTable';
 import Thanks from './thanks/thanks';
 import styles from './home.css';
 import Header from './header/header';
@@ -68,6 +69,7 @@ class Home extends Component {
           <Route path="/mentor-request" component={MentorRequest} />
           <Route path="/mentor/requests" component={MentorRequestsTable} />
           <Route path="/squads/new-squad" component={SquadsNew} />
+          <Route path="/mentors" component={MentorsTable} />
           <Route path="/squads" component={SquadsTable} />
         </div>
         <Footer />

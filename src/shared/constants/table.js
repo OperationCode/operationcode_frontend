@@ -54,3 +54,20 @@ export const SQUAD_COLUMNS = [{
   accessor: 'description',
   minWidth: 200
 }];
+
+export const MENTOR_COLUMNS = [{
+  Header: 'Last Name',
+  accessor: 'last_name'
+}, {
+  Header: 'First Name',
+  accessor: 'first_name'
+}, {
+  Header: 'Slack Name',
+  accessor: 'slack_name'
+}, {
+  Header: 'Email',
+  accessor: 'email'
+}, {
+  Header: 'Zip Code',
+  accessor: 'zip'
+}];
