@@ -65,6 +65,7 @@ class Home extends Component {
           <Route path="/thanks" component={Thanks} />
           <Route path="/mentor-request" component={MentorRequest} />
           <Route path="/mentor/requests" component={MentorRequestsTable} />
+          <Route path="/squads/new-squad" component={SquadsNew} />
         </div>
         <Footer />
       </div>
