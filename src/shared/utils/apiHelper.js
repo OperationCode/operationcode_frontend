@@ -20,6 +20,8 @@ export const getServices = () => makeGenericGet('services');
 
 export const getMentors = () => makeGenericGet('mentors');
 
+export const getRequests = () => makeGenericGet('requests');
+
 export function postRequest({ language, additionalDetails, mentor, service }) {
   const authHeader = setAuthorizationHeader();
 
