@@ -25,7 +25,7 @@ class FormInput extends Component {
   validate = (text) => {
     if (this.props.validateFunc) {
       return this.props.validateFunc(text);
-    } else if (text.length > 0) {
+    } else if (text.length > 0 && this.props.validationRegex) {
       return this.props.validationRegex.test(text);
     }
     return true;
