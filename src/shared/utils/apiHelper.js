@@ -22,6 +22,8 @@ export const getMentors = () => makeGenericGet('mentors');
 
 export const getRequests = () => makeGenericGet('requests');
 
+export const getSquads = () => makeGenericGet('squads');
+
 export function postRequest({ language, additionalDetails, mentor, service }) {
   const authHeader = setAuthorizationHeader();
 

@@ -1,7 +1,7 @@
 import { Redirect } from 'react-router-dom';
 import React, { Component } from 'react';
 import ReactTable from 'react-table';
-import MENTOR_REQUEST_COLUMNS from 'shared/constants/table';
+import { MENTOR_REQUEST_COLUMNS } from 'shared/constants/table';
 import * as ApiHelpers from 'shared/utils/apiHelper';
 import Heading from 'shared/components/heading/heading';
 
