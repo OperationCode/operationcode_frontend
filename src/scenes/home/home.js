@@ -10,6 +10,7 @@ import SignUp from './signup/signup';
 import MentorRequestsTable from './mentor/mentorRequestsTable/mentorRequestsTable';
 import SquadsTable from './squads/squadsTable/squadsTable';
 import MentorsTable from './mentor/mentorsTable/mentorsTable';
+import MentorDetails from './mentor/mentorDetails/mentorDetails';
 import Thanks from './thanks/thanks';
 import styles from './home.css';
 import Header from './header/header';
@@ -70,6 +71,8 @@ class Home extends Component {
           <Route path="/mentor/requests" component={MentorRequestsTable} />
           <Route path="/squads/new-squad" component={SquadsNew} />
           <Route path="/mentors" component={MentorsTable} />
+          <Route exact path="/mentors" component={MentorsTable} />
+          <Route path="/mentors/:id" component={MentorDetails} />
           <Route path="/squads" component={SquadsTable} />
         </div>
         <Footer />

@@ -76,3 +76,21 @@ export const MENTOR_COLUMNS = [{
   Header: 'Zip Code',
   accessor: 'zip'
 }];
+
+export const LED_SQUAD_COLUMNS = [{
+  Header: 'Name',
+  accessor: 'name',
+  minWidth: 50
+}, {
+  id: 'members',
+  Header: 'Members',
+  accessor: d => `${d.minimum}-${d.maximum}`,
+  minWidth: 40
+}, {
+  Header: 'Skill Level',
+  accessor: 'skill_level',
+  minWidth: 50
+}, {
+  Header: 'Discription',
+  accessor: 'description'
+}];

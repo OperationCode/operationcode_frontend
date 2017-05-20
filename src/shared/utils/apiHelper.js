@@ -19,6 +19,7 @@ function makeGenericGet(endpoint) {
 export const getServices = () => makeGenericGet('services');
 
 export const getMentors = () => makeGenericGet('mentors');
+export const getMentor = id => makeGenericGet(`mentors/${id}`);
 
 export const getRequests = () => makeGenericGet('requests');
 

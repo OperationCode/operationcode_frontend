@@ -1,0 +1,8 @@
+.mentorDetails {
+  display: flex;
+  flex-direction: row;
+}
+
+.mentorColumn {
+  width: 50%;
+}
