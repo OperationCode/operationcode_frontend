@@ -29,9 +29,13 @@ class Login extends Component {
     this.setState({ password: value, passwordValid: valid });
   }
 
-  setUserAuthCookie = (token) => {
+  setUserAuthCookie = ({ token, user }) => {
     const cookies = new Cookies();
     cookies.set('token', token, { path: '/' });
+    cookies.set('firstName', user.first_name, { path: '/' });
+    cookies.set('lastName', user.last_name, { path: '/' });
+    cookies.set('slackName', user.slack_name, { path: '/' });
+    cookies.set('mentor', user.mentor, { path: '/' });
   }
 
   isFormValid = () => this.state.emailValid && this.state.passwordValid
@@ -45,7 +49,7 @@ class Login extends Component {
           password: this.state.password
         }
       }).then(({ data }) => {
-        this.setUserAuthCookie(data.token);
+        this.setUserAuthCookie(data);
         this.setState({ authenticated: true });
       }).catch((response) => {
         const error = _.get(response, 'response.data.error');
