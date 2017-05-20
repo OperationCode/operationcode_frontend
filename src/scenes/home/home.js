@@ -7,6 +7,7 @@ import classNames from 'classnames';
 import Login from 'shared/components/login/login';
 import familyImage from 'images/Family-2.png';
 import SignUp from './signup/signup';
+import MentorRequestsTable from './mentor/mentorRequestsTable/mentorRequestsTable';
 import Thanks from './thanks/thanks';
 import styles from './home.css';
 import Header from './header/header';
@@ -63,6 +64,7 @@ class Home extends Component {
           <Route path="/sign_up" component={SignUp} />
           <Route path="/thanks" component={Thanks} />
           <Route path="/mentor-request" component={MentorRequest} />
+          <Route path="/mentor/requests" component={MentorRequestsTable} />
         </div>
         <Footer />
       </div>
