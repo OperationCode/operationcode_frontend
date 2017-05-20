@@ -1,28 +1,29 @@
-import _ from 'lodash';
-import axios from 'axios';
+import { Redirect } from 'react-router-dom';
 import React, { Component } from 'react';
 import ReactTable from 'react-table';
-import Cookies from 'universal-cookie';
-import config from 'config/environment';
 import MENTOR_REQUEST_COLUMNS from 'shared/constants/table';
+import * as ApiHelpers from 'shared/utils/apiHelper';
 import Heading from 'shared/components/heading/heading';
 
 class MentorRequestsTable extends Component {
   state = {
-    requests: []
+    requests: [],
+    loggedIn: true
   }
 
   componentDidMount() {
-    const cookies = new Cookies();
-    const token = cookies.get('token');
-    axios.get(`${config.backendUrl}/requests`,
-      { headers: { Authorization: `bearer ${token}` } }
-    ).then(({ data }) => {
+    ApiHelpers.getRequests()
+    .then((data) => {
       this.setState({ requests: data });
-    }).catch((response) => {
-      const error = _.get(response, 'response.data.error');
-      this.setState({ error });
-    });
+    }).catch(this.setFetchError);
+  }
+
+  setFetchError = ({ response }) => {
+    // The 500 means you the user is not a mentor, should
+    // update that later
+    if (response.status === 401 || response.status === 500) {
+      this.setState({ loggedIn: false });
+    }
   }
 
   rowClickHandler = (state, rowInfo) => ({
@@ -32,7 +33,10 @@ class MentorRequestsTable extends Component {
   })
 
   render() {
-    const { requests } = this.state;
+    const { loggedIn, requests } = this.state;
+    if (!loggedIn) {
+      return <Redirect to="/login" />;
+    }
     return (
       <div style={{ width: '100%' }} >
         <Heading text="Pending Requests" style={{ margin: '4rem auto', lineHeight: 0 }} />
