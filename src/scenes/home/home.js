@@ -14,6 +14,7 @@ import Header from './header/header';
 import Landing from './landing/landing';
 import Footer from './footer/footer';
 import MentorRequest from './mentorRequest/mentorRequest';
+import SquadsNew from './squads/squadsNew/squadsNew';
 
 class Home extends Component {
   constructor(props) {
