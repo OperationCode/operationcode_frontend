@@ -12,16 +12,16 @@ import styles from './mentorRequest.css';
 export default class MentorRequest extends Component {
   state = {
     mentors: [],
-    services: []
+    services: [],
+    loggedIn: true
   };
 
   componentDidMount() {
-    ApiHelpers.getServices().then((services) => {
-      this.setState({ services });
-    }).catch(this.setFetchError);
-
-    ApiHelpers.getMentors().then((mentors) => {
-      this.setState({ mentors });
+    Promise.all([ApiHelpers.getServices(), ApiHelpers.getMentors()]).then((values) => {
+      this.setState({
+        services: values[0],
+        mentors: values[1]
+      });
     }).catch(this.setFetchError);
   }
 
@@ -43,8 +43,12 @@ export default class MentorRequest extends Component {
     });
   }
 
-  setFetchError = () => {
-    this.setState({ error: 'There was an error building the form. Please try again' });
+  setFetchError = ({ response }) => {
+    if (response.status === 401) {
+      this.setState({ loggedIn: false });
+    } else {
+      this.setState({ error: 'There was an error building the form. Please try again' });
+    }
   }
 
   buildServiceOptions = () =>
@@ -77,7 +81,10 @@ export default class MentorRequest extends Component {
   }
 
   render() {
-    const { error, success } = this.state;
+    const { error, loggedIn, success } = this.state;
+    if (!loggedIn) {
+      return <Redirect to="/login" />;
+    }
     return (
       <Section className={styles.mentorRequest} title="Mentor Service Request">
         { error && <div className={styles.mentorRequestError}>{error}</div> }
