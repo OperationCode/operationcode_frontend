@@ -20,3 +20,18 @@
   align-self: flex-end;
   margin-top: 10px;
 }
+
+@media screen and (max-width: 599px) {
+  .signupForm {
+    max-width: 298px;
+    margin: auto;
+    border: 1px solid rgb(92,105,122);
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .signup h2 {
+    font-size: 26px;
+  }
+}
