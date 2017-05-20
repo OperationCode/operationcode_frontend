@@ -15,7 +15,9 @@
     "react-fontawesome": "^1.5.0",
     "react-ga": "^2.2.0",
     "react-router": "^4.1.1",
-    "react-router-dom": "^4.1.1"
+    "react-router-dom": "^4.1.1",
+    "react-table": "^6.0.5",
+    "universal-cookie": "^2.0.7"
   },
   "devDependencies": {
     "@kadira/storybook": "^2.21.0",
