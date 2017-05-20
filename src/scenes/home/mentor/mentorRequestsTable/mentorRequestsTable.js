@@ -1,9 +1,8 @@
 import { Redirect } from 'react-router-dom';
 import React, { Component } from 'react';
-import ReactTable from 'react-table';
 import { MENTOR_REQUEST_COLUMNS } from 'shared/constants/table';
 import * as ApiHelpers from 'shared/utils/apiHelper';
-import Heading from 'shared/components/heading/heading';
+import IndexTable from 'shared/components/indexTable/indexTable';
 
 class MentorRequestsTable extends Component {
   state = {
@@ -38,10 +37,12 @@ class MentorRequestsTable extends Component {
       return <Redirect to="/login" />;
     }
     return (
-      <div style={{ width: '100%' }} >
-        <Heading text="Pending Requests" style={{ margin: '4rem auto', lineHeight: 0 }} />
-        <ReactTable data={requests} columns={MENTOR_REQUEST_COLUMNS} getTdProps={this.rowClickHandler} minWidth={1000} />
-      </div>
+      <IndexTable
+        heading="Pending Requests"
+        data={requests}
+        columns={MENTOR_REQUEST_COLUMNS}
+        onRowClick={this.rowClickHandler}
+      />
     );
   }
 }

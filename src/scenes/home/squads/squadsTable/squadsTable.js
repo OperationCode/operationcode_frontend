@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import { SQUAD_COLUMNS } from 'shared/constants/table';
 import { getSquads } from 'shared/utils/apiHelper';
-import Heading from 'shared/components/heading/heading';
-import ReactTable from 'react-table';
+import IndexTable from 'shared/components/indexTable/indexTable';
 
 export default class SquadsTable extends Component {
   state = {
@@ -39,10 +38,12 @@ export default class SquadsTable extends Component {
     }
 
     return (
-      <div style={{ width: '100%' }}>
-        <Heading text="Squads" style={{ margin: '4rem auto', lineHeight: 0 }} />
-        <ReactTable data={squads} columns={SQUAD_COLUMNS} getTdProps={this.rowClickHandler} minWidth={1000} />
-      </div>
+      <IndexTable
+        heading="Squads"
+        data={squads}
+        columns={SQUAD_COLUMNS}
+        onRowClick={this.rowClickHandler}
+      />
     );
   }
 }
