@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import LinkButton from 'shared/components/linkButton/linkButton';
-import ApprovedSchools from './approvedSchools/approvedSchools';
+import Section from 'shared/components/section/section';
+// import ApprovedSchools from './approvedSchools/approvedSchools';
 import styles from './codeSchools.css';
 
 class CodeSchools extends Component {
@@ -15,14 +16,10 @@ class CodeSchools extends Component {
 
   render() {
     return (
-      <div className={styles.codeSchools}>
-        <div className={styles.pageHeading}>
-          <h1>Code Schools</h1>
-          <h4>
+      <Section className={styles.codeSchools} title="Code Schools" theme="gray" margin>
+        <h4>
             Code schools prepare aspiring programmers for new careers in software development.
-          </h4>
-        </div>
-
+        </h4>
         <p>
           Code schools are accelerated learning programs that will prepare you for a career in
           software development. Each school listed below ranges in length, vary in tuition costs,
@@ -35,8 +32,6 @@ class CodeSchools extends Component {
           We encourage you to check out the schools below, do your research, and ask fellow
           software developers in <Link to="https://operation-code.slack.com/">Slack</Link>.
         </p>
-
-        <ApprovedSchools />
 
         <h2>Code School Scholarships</h2>
         <p>
@@ -149,7 +144,7 @@ class CodeSchools extends Component {
           theme="red"
           link="https://github.com/OperationCode/operationcode/blob/master/CONTRIBUTING.md"
         />
-      </div>
+      </Section>
     );
   }
 }
