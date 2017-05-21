@@ -13,10 +13,31 @@
   margin:auto;
   border: 1px solid rgb(92,105,122);
   padding: 10px;
-  height:550px;
+  height:475px;
 }
 
-.joinButton {
-  align-self: flex-end;
-  margin-top: 10px;
+.Button {
+  margin-top: 2rem;
+  align-self: center;
+  max-width: 300px;
+}
+
+.signup Form{
+  max-width: 500px;
+  align-items: center;
+}
+
+@media screen and (max-width: 599px) {
+  .signupForm {
+    max-width: 298px;
+    margin: auto;
+    border: 1px solid rgb(92,105,122);
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .signup h2 {
+    font-size: 26px;
+  }
 }

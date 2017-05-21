@@ -1,6 +1,9 @@
 .form {
   display:flex;
   flex-direction: column;
+  max-width: 100%;
+  margin: 0 auto 2rem;
+  height: 20rem;
 }
 
 .form * {
@@ -19,6 +22,7 @@
   padding: 0 16px;
   height: 50px;
   width: 100%;
+  width: 300px;
 }
 
 .formControl input::placeholder  {

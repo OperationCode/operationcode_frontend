@@ -7,11 +7,13 @@ import classNames from 'classnames';
 import Login from 'shared/components/login/login';
 import familyImage from 'images/Family-2.png';
 import SignUp from './signup/signup';
+import MentorRequestsTable from './mentor/mentorRequestsTable/mentorRequestsTable';
 import Thanks from './thanks/thanks';
 import styles from './home.css';
 import Header from './header/header';
 import Landing from './landing/landing';
 import Footer from './footer/footer';
+import MentorRequest from './mentorRequest/mentorRequest';
 
 class Home extends Component {
   constructor(props) {
@@ -61,6 +63,8 @@ class Home extends Component {
           <Route path="/join" component={SignUp} />
           <Route path="/sign_up" component={SignUp} />
           <Route path="/thanks" component={Thanks} />
+          <Route path="/mentor-request" component={MentorRequest} />
+          <Route path="/mentor/requests" component={MentorRequestsTable} />
         </div>
         <Footer />
       </div>
