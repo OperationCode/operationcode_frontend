@@ -9,6 +9,12 @@
   box-sizing: border-box;
 }
 
+.ReactTable .rt-tr-group:hover {
+    background: #f3f3f3;
+    cursor: pointer;
+    box-shadow: 14px 0px 6px #c2c2c2;
+}
+
 .ReactTable .rt-table {
   flex: 1;
   display: flex;

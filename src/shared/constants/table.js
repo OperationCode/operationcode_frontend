@@ -1,7 +1,7 @@
 export const MENTOR_REQUEST_COLUMNS = [{
   id: 'slackName',
   Header: 'Slack User',
-  accessor: d => d.requested_mentor.slack_name,
+  accessor: d => d.user.slack_name,
   minWidth: 100
 }, {
   Header: 'Language',
@@ -13,13 +13,18 @@ export const MENTOR_REQUEST_COLUMNS = [{
   accessor: d => d.service.name,
   minWidth: 100
 }, {
+  id: 'mentorSlackName',
   Header: 'Mentor Requested',
-  accessor: 'mentor_requested',
+  accessor: d => d.requested_mentor.slack_name,
   minWidth: 100
 }, {
   Header: 'Additional Details',
   minWidth: 300,
   accessor: 'details'
+}, {
+  Header: 'Current Status',
+  minWidth: 300,
+  accessor: 'status'
 }, {
   Header: 'Created At',
   accessor: 'created_at',

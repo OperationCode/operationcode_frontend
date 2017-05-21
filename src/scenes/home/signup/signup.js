@@ -7,6 +7,7 @@ import FormEmail from 'shared/components/form/formEmail/formEmail';
 import FormZipCode from 'shared/components/form/formZipCode/formZipCode';
 import FormPassword from 'shared/components/form/formPassword/formPassword';
 import FormButton from 'shared/components/form/formButton/formButton';
+import FormInput from 'shared/components/form/formInput/formInput';
 import Section from 'shared/components/section/section';
 import config from 'config/environment';
 import styles from './signup.css';
@@ -26,6 +27,14 @@ class SignUp extends Component {
       error: false,
       sucess: false
     };
+  }
+
+  onFirstNameChange = (value) => {
+    this.setState({ firstName: value });
+  }
+
+  onLastNameChange = (value) => {
+    this.setState({ lastName: value });
   }
 
   onEmailChange = (value, valid) => {
@@ -51,11 +60,14 @@ class SignUp extends Component {
     e.preventDefault = true;
 
     if (this.isFormValid()) {
+      const { email, zip, password, firstName, lastName } = this.state;
       axios.post(`${config.backendUrl}/users`, {
         user: {
-          email: this.state.email,
-          zip: this.state.zip,
-          password: this.state.password
+          first_name: firstName,
+          last_name: lastName,
+          email,
+          zip,
+          password
         }
       }).then(() => {
         this.setState({ success: true, error: null });
@@ -91,6 +103,8 @@ class SignUp extends Component {
             to join our Slack team.  Make sure you stop in and say hi!
           </span>
           <FormEmail id="email" placeholder="Email" onChange={this.onEmailChange} />
+          <FormInput id="firstName" placeholder="First Name" onChange={this.onFirstNameChange} />
+          <FormInput id="lastName" placeholder="Last Name" onChange={this.onLastNameChange} />
           <FormZipCode id="zip" placeholder="Zip Code" onChange={this.onZipChange} />
           <FormPassword id="password" placeholder="Password" onChange={this.onPasswordChange} />
           <FormPassword

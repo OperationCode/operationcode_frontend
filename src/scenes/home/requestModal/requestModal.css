@@ -1,0 +1,21 @@
+.modal {
+  align-items: left;
+}
+
+.modal select {
+  height: 3rem;
+  margin: 1rem 0;
+}
+
+.modal button {
+  margin: 2rem 0;
+}
+
+.modal h2:first-of-type {
+  margin: 2rem auto 4rem;
+  line-height: 0;
+}
+
+.modal > h2:not(:first-of-type) {
+  margin: 0;
+}
