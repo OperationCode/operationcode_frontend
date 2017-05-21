@@ -46,7 +46,6 @@ class RequestModal extends Component {
   }
 
   handleMentorChange = (mentor) => {
-    console.log(mentor);
     this.setState({
       mentor
     });

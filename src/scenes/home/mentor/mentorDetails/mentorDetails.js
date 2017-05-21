@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import ReactModal from 'react-modal';
 import Section from 'shared/components/section/section';
 import ReactTable from 'react-table';
 import { getMentor } from 'shared/utils/apiHelper';
@@ -7,26 +8,31 @@ import { LED_SQUAD_COLUMNS } from 'shared/constants/table';
 import styles from './mentorDetails.css';
 
 export default class MentorDetails extends Component {
-  static propTypes = {
-    match: PropTypes.shape({
-      params: PropTypes.shape({
-        id: PropTypes.string.isRequired
-      }).isRequired
-    }).isRequired
-  }
-  state = {
-    fetchingMessage: 'Fetching Details',
-    mentor: {}
+  static defaultProps = {
+    isOpen: false
   };
 
-  componentDidMount() {
-    const mentorId = this.props.match.params.id;
-    getMentor(mentorId).then((data) => {
-      this.setState({
-        fetchingMessage: null,
-        mentor: data
-      });
-    }).catch(this.handleFetchError);
+  static propTypes = {
+    mentorId: PropTypes.oneOfType([
+      PropTypes.number, PropTypes.bool
+    ]).isRequired,
+    isOpen: PropTypes.bool
+  };
+
+  state = {
+    fetchingMessage: null,
+    mentor: null
+  };
+
+  componentWillReceiveProps({ mentorId }) {
+    if (mentorId !== this.props.mentorId) {
+      getMentor(mentorId).then((data) => {
+        this.setState({
+          fetchingMessage: null,
+          mentor: data
+        });
+      }).catch(this.handleFetchError);
+    }
   }
 
   handleFetchError = (err) => {
@@ -63,34 +69,39 @@ export default class MentorDetails extends Component {
 
   render() {
     const { fetchingMessage, mentor } = this.state;
-    if (fetchingMessage) return <h2>{fetchingMessage}</h2>;
+    if (!this.props.mentorId) return null;
 
     return (
-      <Section title={`${mentor.first_name} ${mentor.last_name}`} >
-        <div className={styles.mentorDetails}>
-          <div className={styles.mentorColumn}>
-            <div>
-              <h2>Bio</h2>
-              <p>{mentor.bio}</p>
+      <ReactModal {...this.props} isOpen={this.props.isOpen && !!mentor} contentLabel="Mentor">
+        { fetchingMessage && <h2>{fetchingMessage}</h2>}
+        { mentor &&
+          <Section title={`${mentor.first_name} ${mentor.last_name}`} >
+            <div className={styles.mentorDetails}>
+              <div className={styles.mentorColumn}>
+                <div>
+                  <h2>Bio</h2>
+                  <p>{mentor.bio}</p>
+                </div>
+                <div>
+                  <h2>Location:</h2>
+                  <div>{mentor.zip}</div>
+                </div>
+              </div>
+              <div className={styles.mentorColumn}>
+                <div>
+                  <h2>Contact</h2>
+                  <div>Slack: {mentor.slack_name}</div>
+                  <div>Email: {mentor.email}</div>
+                </div>
+                <div>
+                  <h2>Led Squads</h2>
+                  { this.renderLedSquads() }
+                </div>
+              </div>
             </div>
-            <div>
-              <h2>Location:</h2>
-              <div>{mentor.zip}</div>
-            </div>
-          </div>
-          <div className={styles.mentorColumn}>
-            <div>
-              <h2>Contact</h2>
-              <div>Slack: {mentor.slack_name}</div>
-              <div>Email: {mentor.email}</div>
-            </div>
-            <div>
-              <h2>Led Squads</h2>
-              { this.renderLedSquads() }
-            </div>
-          </div>
-        </div>
-      </Section>
+          </Section>
+        }
+      </ReactModal>
     );
   }
 }

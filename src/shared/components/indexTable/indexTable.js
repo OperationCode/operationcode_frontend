@@ -9,11 +9,13 @@ export default class IndexTable extends Component {
     columns: PropTypes.arrayOf(PropTypes.object).isRequired,
     heading: PropTypes.string.isRequired,
     onRowClick: PropTypes.func,
-    fetchRecords: PropTypes.func.isRequired
+    fetchRecords: PropTypes.func.isRequired,
+    showPagination: PropTypes.bool
   };
 
   static defaultProps = {
-    onRowClick: () => {}
+    onRowClick: () => {},
+    showPagination: true
   };
 
   state = {
@@ -58,6 +60,7 @@ export default class IndexTable extends Component {
           columns={this.props.columns}
           getTdProps={this.handleRowClick}
           minWidth={1000}
+          showPagination={this.props.showPagination}
         />
       </div>
     );

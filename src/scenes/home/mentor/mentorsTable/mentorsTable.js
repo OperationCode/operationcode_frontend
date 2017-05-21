@@ -1,26 +1,37 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { MENTOR_COLUMNS } from 'shared/constants/table';
 import { getMentors } from 'shared/utils/apiHelper';
 import IndexTable from 'shared/components/indexTable/indexTable';
+import MentorDetails from 'scenes/home/mentor/mentorDetails/mentorDetails';
 
 export default class MentorsTable extends Component {
-  static propTypes = {
-    history: PropTypes.shape({
-      push: PropTypes.func.isRequired
-    }).isRequired
+  state = {
+    activeMentorId: false
   };
 
-  rowClickHandler = mentor => this.props.history.push(`/mentors/${mentor.id}`);
+  rowClickHandler = (mentor) => {
+    this.setState({ activeMentorId: mentor.id });
+  }
+
+  handleModalClose = () => this.setState({ activeMentorId: null });
 
   render() {
+    const { activeMentorId } = this.state;
     return (
-      <IndexTable
-        heading="Mentors"
-        columns={MENTOR_COLUMNS}
-        onRowClick={this.rowClickHandler}
-        fetchRecords={getMentors}
-      />
+      <div style={{ width: '100%' }}>
+        <IndexTable
+          heading="Mentors"
+          columns={MENTOR_COLUMNS}
+          onRowClick={this.rowClickHandler}
+          fetchRecords={getMentors}
+          showPagination={!activeMentorId}
+        />
+        <MentorDetails
+          mentorId={activeMentorId}
+          isOpen={!!activeMentorId}
+          onRequestClose={this.handleModalClose}
+        />
+      </div>
     );
   }
 }
