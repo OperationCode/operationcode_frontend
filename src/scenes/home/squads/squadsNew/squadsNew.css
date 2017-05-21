@@ -1,13 +1,18 @@
-.squadRequest {
+.squadNew {
   width:100%;
 }
 
-.squadRequestForm span {
-  padding: 10px 8px 30px 8px;
-  font-size:16px;
+.squadNewForm span {
+  font-size:14px;
 }
 
-.mentorRequestForm {
+.squadNewForm select {
+  margin-top: 16px;
+  height: 50px;
+  font-size: 1.3em;
+}
+
+.squadNewForm {
   max-width:500px;
   margin:auto;
   border: 1px solid rgb(92,105,122);
@@ -20,7 +25,7 @@
   margin-top: 10px;
 }
 
-.mentorRequestError {
+.squadNewError {
   background-color: #ffc2c2;
   border-radius: 0.25rem;
   color: red;

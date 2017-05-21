@@ -100,9 +100,9 @@ class SquadsNew extends Component {
     }
     console.log(this.state);
     return (
-      <Section className={styles.squadRequest} title="Create a New Squad" >
-        { error && <div className={styles.squadRequestError}>{error}</div> }
-        <Form className={styles.squadRequestError}>
+      <Section className={styles.squadNew} title="Create a New Squad" >
+        { error && <div className={styles.squadNewError}>{error}</div> }
+        <Form className={styles.squadNewForm}>
           <h2>Squad name*</h2>
           <FormInput id="squadName" placeholder=" " onChange={this.onSquadNameChange} />
 
@@ -111,7 +111,7 @@ class SquadsNew extends Component {
           <FormInput id="description" placeholder=" " onChange={this.onDescriptionChange} />
 
           <h2>Squad Leader</h2>
-          <p>Who will be leading this squad?</p>
+          <span>Who will be leading this squad?</span>
           <FormSelect
             id="squadLeader"
             prompt="Choose Squad Leader"
@@ -120,7 +120,7 @@ class SquadsNew extends Component {
           />
 
           <h2>Mentors</h2>
-          <p>Which mentors will be assisting this squad?</p>
+          <span>Which mentors will be assisting this squad?</span>
           <FormSelect
             id="mentorsAssistingSquad"
             prompt="Choose Mentors to Assist Squad"
