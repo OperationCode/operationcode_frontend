@@ -67,8 +67,8 @@ class Login extends Component {
       <Section title="Login" theme="white">
         {this.state.authenticated && <Redirect to="/mentor-request" />}
         <Form autoComplete>
-          <FormEmail displayName="Email" label="Email" onChange={this.onEmailChange} />
-          <FormPassword displayName="Password" label="Password" onChange={this.onPasswordChange} />
+          <FormEmail displayName="Email" placeholder="Email" onChange={this.onEmailChange} />
+          <FormPassword displayName="Password" placeholder="Password" onChange={this.onPasswordChange} />
           {error && <h2>{error}</h2>}
           <FormButton className={styles.Button} text="login" onClick={this.handleOnClick} />
         </Form>
