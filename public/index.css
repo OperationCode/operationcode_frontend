@@ -1,3 +1,7 @@
+.ReactModal__Body--open {
+    overflow: hidden;
+}
+
 .ReactTable {
   position: relative;
   display: flex;
