@@ -9,13 +9,14 @@ import styles from './mentorDetails.css';
 
 export default class MentorDetails extends Component {
   static defaultProps = {
-    isOpen: false
+    isOpen: false,
+    mentorId: null
   };
 
   static propTypes = {
     mentorId: PropTypes.oneOfType([
       PropTypes.number, PropTypes.bool
-    ]).isRequired,
+    ]),
     isOpen: PropTypes.bool
   };
 
@@ -25,7 +26,7 @@ export default class MentorDetails extends Component {
   };
 
   componentWillReceiveProps({ mentorId }) {
-    if (mentorId !== this.props.mentorId) {
+    if (mentorId && (mentorId !== this.props.mentorId)) {
       getMentor(mentorId).then((data) => {
         this.setState({
           fetchingMessage: null,
