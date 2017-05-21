@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-// import { Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import Form from 'shared/components/form/form';
-// import FormButton from 'shared/components/form/formButton/formButton';
+import FormButton from 'shared/components/form/formButton/formButton';
 import FormInput from 'shared/components/form/formInput/formInput';
 import FormSelect from 'shared/components/form/formSelect/formSelect';
 import * as ApiHelpers from 'shared/utils/apiHelper';
@@ -10,7 +10,9 @@ import Section from 'shared/components/section/section';
 
 class SquadsNew extends Component {
   state = {
-    mentors: []
+    mentors: [],
+    name: null,
+    loggedIn: true
   };
 
   componentDidMount() {
@@ -36,9 +38,31 @@ class SquadsNew extends Component {
   buildMentorOptions = () =>
     this.state.mentors.map(mentor => ({ value: mentor.id, label: mentor.email }))
 
+  handleOnClick = () => {
+    ApiHelpers.postSquads({
+      name: this.state.name,
+      leader_id: this.state.leaderId,
+      description: this.state.description,
+      minimum: this.state.minimum,
+      maximum: this.state.maximum,
+      skill_level: this.state.skillLevel,
+      activities: this.state.activities,
+      end_condition: this.state.endCondition
+    }).then(() => {
+      this.setState({ success: true });
+    }).catch(() => {
+      this.setState({ error: 'There was an error creating a squad.' });
+    });
+  }
+
   render() {
+    const { error, loggedIn, success } = this.state;
+    if (!loggedIn) {
+      return <Redirect to="/login" />;
+    }
     return (
       <Section title="Create a New Squad" >
+        { error && <div>{error}</div> }
         <Form>
           <h2>Name</h2>
           <FormInput id="slackOrEmailSquadsNew" placeholder="Email or Slack Username" onChange={this.onNameChange} />
@@ -58,6 +82,8 @@ class SquadsNew extends Component {
             options={this.buildMentorOptions()}
             onChange={e => this.onUpdateSelect('mentor', e)}
           />
+          <FormButton text="Create Squad" onClick={this.handleOnClick} theme="red" />
+          {success && <Redirect to="/thanks" />}
         </Form>
       </Section>
     );

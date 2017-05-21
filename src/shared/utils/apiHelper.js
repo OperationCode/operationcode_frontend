@@ -38,3 +38,22 @@ export function postRequest({ language, additionalDetails, mentor, service }) {
     headers: authHeader
   });
 }
+
+export function postSquads({ name, leaderId, description, minimum, maximum, skillLevel, activities, endCondition }) {
+  const authHeader = setAuthorizationHeader();
+
+  return axios.post(`${config.backendUrl}/squads`, {
+    squad: {
+      name,
+      leader_id: leaderId,
+      description,
+      minimum,
+      maximum,
+      skill_level: skillLevel,
+      activities,
+      end_condition: endCondition
+    }
+  }, {
+    headers: authHeader
+  });
+}
