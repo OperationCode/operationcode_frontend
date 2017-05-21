@@ -1,0 +1,32 @@
+.squadRequest {
+  width:100%;
+}
+
+.squadRequestForm span {
+  padding: 10px 8px 30px 8px;
+  font-size:16px;
+}
+
+.mentorRequestForm {
+  max-width:500px;
+  margin:auto;
+  border: 1px solid rgb(92,105,122);
+  padding: 10px;
+  min-height:550px;
+}
+
+.submitButton {
+  align-self: flex-end;
+  margin-top: 10px;
+}
+
+.mentorRequestError {
+  background-color: #ffc2c2;
+  border-radius: 0.25rem;
+  color: red;
+  margin-bottom: 1rem;
+  max-width: 500px;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+}

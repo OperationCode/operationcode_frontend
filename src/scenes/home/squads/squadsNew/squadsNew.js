@@ -7,7 +7,7 @@ import FormSelect from 'shared/components/form/formSelect/formSelect';
 // import FormButton from 'shared/components/form/formButton/formButton';
 import * as ApiHelpers from 'shared/utils/apiHelper';
 import Section from 'shared/components/section/section';
-// import styles from './squadsNew.css';
+import styles from './squadsNew.css';
 
 class SquadsNew extends Component {
   state = {
@@ -62,9 +62,9 @@ class SquadsNew extends Component {
       return <Redirect to="/login" />;
     }
     return (
-      <Section title="Create a New Squad" >
-        { error && <div>{error}</div> }
-        <Form>
+      <Section className={styles.squadRequest} title="Create a New Squad" >
+        { error && <div className={styles.squadRequestError}>{error}</div> }
+        <Form className={styles.squadRequestError}>
           <h2>Name*</h2>
           <FormInput id="slackOrEmailSquadsNew" placeholder="Email or Slack Username" onChange={this.onNameChange} />
 
@@ -115,7 +115,7 @@ class SquadsNew extends Component {
           <h2>End Condition*</h2>
           <span>When will this squad end? This can be a date, a time period (4 weeks), or when a goal is met.</span>
           <FormInput id="EndCondition" placeholder=" " onChange={this.onNameChange} />
-          <FormButton text="Create Squad" onClick={this.handleOnClick} theme="red" />
+          <FormButton className={styles.submitButton} text="Create Squad" onClick={this.handleOnClick} theme="red" />
           {success && <Redirect to="/thanks" />}
         </Form>
       </Section>
