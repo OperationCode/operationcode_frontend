@@ -21,7 +21,10 @@ const Drawer = (props) => {
 
 Drawer.propTypes = {
   isVisible: PropTypes.bool,
-  children: PropTypes.arrayOf(PropTypes.element).isRequired
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.arrayOf(PropTypes.element)
+  ]).isRequired
 };
 
 Drawer.defaultProps = {

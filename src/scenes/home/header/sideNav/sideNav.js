@@ -60,8 +60,6 @@ const SideNav = (props) => {
           />
         </div>
       </div>
-
-
     </Drawer>
   );
 };
