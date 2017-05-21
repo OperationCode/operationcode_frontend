@@ -9,6 +9,7 @@ import familyImage from 'images/Family-2.png';
 import SignUp from './signup/signup';
 import MentorRequestsTable from './mentor/mentorRequestsTable/mentorRequestsTable';
 import SquadsTable from './squads/squadsTable/squadsTable';
+import Dashboard from './dashboard/dashboard';
 import MentorsTable from './mentor/mentorsTable/mentorsTable';
 import MentorDetails from './mentor/mentorDetails/mentorDetails';
 import Thanks from './thanks/thanks';
@@ -62,6 +63,7 @@ class Home extends Component {
             )}
           />
           <Route exact path="/" component={Landing} />
+          <Route path="/home" component={Dashboard} />
           <Route path="/login" component={Login} />
           <Route path="/signup" component={SignUp} />
           <Route path="/join" component={SignUp} />
