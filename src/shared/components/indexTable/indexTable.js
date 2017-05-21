@@ -36,6 +36,12 @@ export default class IndexTable extends Component {
     }
   }
 
+  handleRowClick = (state, rowInfo) => ({
+    onClick: () => {
+      this.props.onRowClick(this.state.data[rowInfo.index]);
+    }
+  })
+
   render() {
     if (!this.state.loggedIn) {
       return <Redirect to="/login" />;
@@ -50,7 +56,7 @@ export default class IndexTable extends Component {
         <ReactTable
           data={this.state.data}
           columns={this.props.columns}
-          getTdProps={this.props.onRowClick}
+          getTdProps={this.handleRowClick}
           minWidth={1000}
         />
       </div>
