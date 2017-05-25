@@ -2,8 +2,19 @@
   display: flex;
   justify-content: space-between;
   flex: 1 60%;
-  margin-right:5vw;
   font-size:20px;
+}
+
+.topNav span {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 2rem;
+}
+
+.topNav span a {
+  flex: 0 1 auto;
+  text-align: center;
 }
 
 @media screen and (max-width: 1000px) {

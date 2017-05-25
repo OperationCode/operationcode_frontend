@@ -69,7 +69,7 @@ class Home extends Component {
           <Route path="/sign_up" component={SignUp} />
           <Route path="/thanks" component={Thanks} />
           <Route path="/mentor-request" component={MentorRequest} />
-          <Route path="/mentor/requests" component={MentorRequestsTable} />
+          <Route path="/requests" component={MentorRequestsTable} />
           <Route path="/squads/new-squad" component={SquadsNew} />
           <Route path="/mentors" component={MentorsTable} />
           <Route exact path="/mentors" component={MentorsTable} />

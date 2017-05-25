@@ -29,3 +29,97 @@
   padding: 15px 15px 0;
   pointer-events: auto;
 }
+
+.modal {
+  align-items: left;
+  display: flex;
+}
+
+.modal select {
+  height: 3rem;
+  margin: 1rem 0;
+}
+
+.modal button {
+  margin: 2rem 0;
+}
+
+.close {
+  background: #076078;
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  top: -1.3rem;
+  right: -1.3rem;
+  margin: 0;
+}
+
+.close::after {
+  content: 'X';
+  color: white;
+  font-size: 2rem;
+}
+
+.modalFlex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 60rem;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.modalBlock {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+
+.modalBlock:last-of-type {
+  flex: 1 1 100%;
+}
+
+.modalRow {
+}
+
+.scrollable {
+  overflow: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin-top: 8rem;
+}
+
+.modal select {
+  height: 4.2rem;
+  width: 90%;
+  padding: 2rem;
+  background-color: #e6e6e6;
+  font-size: 1.3rem;
+  margin: 0;
+}
+.modal > h2 {
+  margin: 2rem auto 4rem;
+  line-height: 0;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.joinButton {
+  width: 100%;
+}
+
+.modal > h2:not(:first-of-type) {
+  margin: 0;
+}
+
+
+@media screen and (max-width: 500px) {
+  .modalBlock {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}

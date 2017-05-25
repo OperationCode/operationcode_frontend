@@ -12,6 +12,14 @@ export default class SquadsTable extends Component {
   }
 
   componentDidMount() {
+    this.fetchSquads();
+  }
+
+  handleModalClose = () => this.setState({ activeSquad: null });
+
+  handleFormUpdate = () => this.fetchSquads();
+
+  fetchSquads = () => {
     getSquads()
     .then((data) => {
       this.setState({
@@ -19,9 +27,6 @@ export default class SquadsTable extends Component {
       });
     }).catch(this.setAuthFetchError);
   }
-
-  handleModalClose = () => this.setState({ activeSquad: null });
-
 
   rowClickHandler = (squad) => {
     const activeSquad = this.state.squads.find(x => x.id === squad.id);
@@ -42,6 +47,7 @@ export default class SquadsTable extends Component {
           squad={activeSquad}
           isOpen={!!activeSquad}
           onRequestClose={this.handleModalClose}
+          handleFormUpdate={this.handleFormUpdate}
         />}
       </div>
     );

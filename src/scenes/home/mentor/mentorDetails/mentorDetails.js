@@ -1,22 +1,18 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import ReactModal from 'react-modal';
-import Section from 'shared/components/section/section';
-import ReactTable from 'react-table';
-import { getMentor } from 'shared/utils/apiHelper';
-import { LED_SQUAD_COLUMNS } from 'shared/constants/table';
-import styles from './mentorDetails.css';
+import Modal from 'shared/components/modal/modal';
+import styles from 'shared/components/modal/modal.css';
 
 export default class MentorDetails extends Component {
   static defaultProps = {
     isOpen: false,
-    mentorId: null
+    onRequestClose: () => {},
+    mentor: null
   };
 
   static propTypes = {
-    mentorId: PropTypes.oneOfType([
-      PropTypes.number, PropTypes.bool
-    ]),
+    mentor: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+    onRequestClose: PropTypes.func,
     isOpen: PropTypes.bool
   };
 
@@ -25,84 +21,39 @@ export default class MentorDetails extends Component {
     mentor: null
   };
 
-  componentWillReceiveProps({ mentorId }) {
-    if (mentorId && (mentorId !== this.props.mentorId)) {
-      getMentor(mentorId).then((data) => {
-        this.setState({
-          fetchingMessage: null,
-          mentor: data
-        });
-      }).catch(this.handleFetchError);
-    }
-  }
-
-  handleFetchError = (err) => {
-    let fetchingMessage;
-    if (err.status === 401) {
-      fetchingMessage = 'You are not authorized to see this data';
-    } else {
-      fetchingMessage = 'There was a problem retrieving details. Please try again.';
-    }
-    this.setState({ fetchingMessage });
-  }
-
-  rowClickHandler = (state, rowInfo) => ({
-    onClick: () => {
-      console.log('It was in this row: ', rowInfo);
-    }
-  })
-
-  renderLedSquads() {
-    const { mentor } = this.state;
-    if (mentor.led_squads.length === 0) return <div>No squads to display</div>;
-
-    return (
-      <ReactTable
-        heading="Led Squads"
-        data={mentor.led_squads}
-        columns={LED_SQUAD_COLUMNS}
-        getTdProps={this.rowClickHandler}
-        showPagination={false}
-        minRows={0}
-      />
-    );
-  }
-
   render() {
-    const { fetchingMessage, mentor } = this.state;
-    if (!this.props.mentorId) return null;
+    const { mentor, isOpen } = this.props;
+    if (!this.props.mentor) return null;
 
     return (
-      <ReactModal {...this.props} isOpen={this.props.isOpen && !!mentor} contentLabel="Mentor">
-        { fetchingMessage && <h2>{fetchingMessage}</h2>}
-        { mentor &&
-          <Section title={`${mentor.first_name} ${mentor.last_name}`} >
-            <div className={styles.mentorDetails}>
-              <div className={styles.mentorColumn}>
-                <div>
-                  <h2>Bio</h2>
-                  <p>{mentor.bio}</p>
-                </div>
-                <div>
-                  <h2>Location:</h2>
-                  <div>{mentor.zip}</div>
-                </div>
-              </div>
-              <div className={styles.mentorColumn}>
-                <div>
-                  <h2>Contact</h2>
-                  <div>Slack: {mentor.slack_name}</div>
-                  <div>Email: {mentor.email}</div>
-                </div>
-                <div>
-                  <h2>Led Squads</h2>
-                  { this.renderLedSquads() }
-                </div>
-              </div>
+      <Modal
+        isOpen={isOpen}
+        title={`${mentor.first_name} ${mentor.last_name}`}
+        onRequestClose={this.props.onRequestClose}
+      >
+        <div className={styles.modalFlex}>
+          <div className={styles.modalBlock}>
+            <div className={styles.modalRow}>
+              <h2>Name:</h2>
+              <p>{`${mentor.first_name} ${mentor.last_name}`}</p>
             </div>
-          </Section>
-        }
-      </ReactModal>
+            <div className={styles.modalRow}>
+              <h2>Location:</h2>
+              <p>{mentor.zip}</p>
+            </div>
+          </div>
+          <div className={styles.modalBlock}>
+            <div className={styles.modalRow}>
+              <h2>Slack:</h2>
+              <p>{mentor.slack_name}</p>
+            </div>
+            <div className={styles.modalRow}>
+              <h2>Email:</h2>
+              <p>Email: {mentor.email}</p>
+            </div>
+          </div>
+        </div>
+      </Modal>
     );
   }
 }

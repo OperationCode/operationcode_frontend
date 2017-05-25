@@ -3,7 +3,6 @@
   flex-direction: row;
   justify-content: center;
   width: 80%;
-  line-height: 20px;
   font-size:36px;
  }
 
@@ -14,7 +13,7 @@
   content: '\a0';
   background-color: rgb(65, 164, 192);
   vertical-align: text-bottom;
-  align-self: flex-end;
+  align-self: center;
 }
 
 .heading:before {
@@ -31,4 +30,10 @@
 
 .white {
   color: #FFF;
+}
+
+@media only screen and (max-width: 500px) {
+    .heading {
+      font-size:20px;
+    }
 }

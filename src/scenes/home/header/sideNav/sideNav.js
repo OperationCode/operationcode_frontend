@@ -1,76 +1,163 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import Cookies from 'universal-cookie';
 import Drawer from 'shared/components/drawer/drawer';
 import NavItem from 'shared/components/nav/navItem/navItem';
-import PropTypes from 'prop-types';
 import logo from 'images/logos/small-white-logo.png';
 import styles from './sideNav.css';
 
-const SideNav = (props) => {
-  const { isVisible, onClose } = props;
+class SideNav extends Component {
 
-  const handleCloseClick = (e) => {
-    e.preventDefault();
-    onClose();
+  propTypes = {
+    isVisible: PropTypes.bool,
+    onClose: PropTypes.func.isRequired
   };
 
-  return (
-    <Drawer isVisible={isVisible}>
-      <div className={styles.content}>
-        <div className={styles.header}>
-          <div>
-            <a className={styles.close} href="/" onClick={handleCloseClick}>&#10006;</a>
+  defaultProps = {
+    isVisible: false,
+    onClose: () => {},
+  };
+
+  state = {
+    signedIn: false,
+    mentor: false
+  }
+
+  componentWillMount() {
+    const cookies = new Cookies();
+    this.setState({ mentor: !!cookies.get('mentor'), signedIn: !!cookies.get('token') });
+  }
+
+
+  handleCloseClick = (e) => {
+    e.preventDefault();
+    this.props.onClose();
+  };
+
+  renderNavItems = () => {
+    if (this.state.signedIn) {
+      if (this.state.mentor) {
+        return (
+          <span>
+            <NavItem
+              className="menuItem"
+              to="mentors"
+              text="Mentors"
+              onClick={this.handleCloseClick}
+            />
+            <NavItem
+              className="menuItem"
+              to="requests"
+              text="Requests"
+              onClick={this.handleCloseClick}
+            />
+            <NavItem
+              className="menuItem"
+              to="squads"
+              text="Squads"
+              onClick={this.handleCloseClick}
+            />
+            <NavItem
+              className="menuItem"
+              to="logout"
+              text="Logout"
+              onClick={this.handleCloseClick}
+            />
+          </span>
+        );
+      }
+      return (
+        <span>
+          <NavItem
+            className="menuItem"
+            to="mentors"
+            text="Mentors"
+            onClick={this.handleCloseClick}
+          />
+          <NavItem
+            className="menuItem"
+            to="squads"
+            text="Squads"
+            onClick={this.handleCloseClick}
+          />
+          <NavItem
+            className="menuItem"
+            to="logout"
+            text="Logout"
+            onClick={this.handleCloseClick}
+          />
+        </span>
+      );
+    }
+    return (
+      <span>
+        <NavItem
+          className="menuItem"
+          to="join" text="Join"
+          onClick={this.handleCloseClick}
+        />
+        <NavItem
+          className="menuItem"
+          to="login" text="Login"
+          onClick={this.handleCloseClick}
+        />
+      </span>
+    );
+  }
+
+
+  render() {
+    const { isVisible } = this.props;
+    return (
+      <Drawer isVisible={isVisible}>
+        <div className={styles.content}>
+          <div className={styles.header}>
+            <div>
+              <a className={styles.close} href="/" onClick={this.handleCloseClick}>&#10006;</a>
+            </div>
+            <a className={styles.logoWrapper} href="/">
+              <img className={styles.logo} src={logo} alt="Operation Code logo" />
+            </a>
           </div>
-          <a className={styles.logoWrapper} href="/">
-            <img className={styles.logo} src={logo} alt="Operation Code logo" />
-          </a>
+          <div className={styles.list}>
+            <NavItem
+              className="menuItem"
+              to="https://donorbox.org/operationcode"
+              text="Donate"
+              isExternal
+              onClick={this.handleCloseClick}
+            />
+            {this.renderNavItems()}
+            <NavItem
+              className="menuItem"
+              to="about"
+              text="About" onClick={this.handleCloseClick}
+              notClickable
+            />
+            <NavItem
+              className="menuItem"
+              to="programs"
+              text="Programs" onClick={this.handleCloseClick}
+              notClickable
+            />
+            <NavItem
+              className="menuItem"
+              to="involved"
+              text="Get Involved" onClick={this.handleCloseClick}
+              notClickable
+            />
+            <NavItem
+              className="menuItem"
+              to="blog"
+              text="Blog"
+              onClick={this.handleCloseClick}
+              notClickable
+            />
+          </div>
         </div>
-        <div className={styles.list}>
-          <NavItem
-            className="menuItem"
-            to="https://donorbox.org/operationcode"
-            text="Donate"
-            isExternal
-            onClick={handleCloseClick}
-          />
-          <NavItem
-            className="menuItem"
-            to="join" text="Join"
-            onClick={handleCloseClick}
-          />
-          <NavItem
-            className="menuItem"
-            notClickable to="about"
-            text="About" onClick={handleCloseClick}
-          />
-          <NavItem
-            className="menuItem"
-            notClickable to="programs"
-            text="Programs" onClick={handleCloseClick}
-          />
-          <NavItem
-            className="menuItem"
-            notClickable to="involved"
-            text="Get Involved" onClick={handleCloseClick}
-          />
-          <NavItem
-            className="menuItem"
-            notClickable to="blog"
-            text="Blog"
-            onClick={handleCloseClick}
-          />
-        </div>
-      </div>
-    </Drawer>
-  );
-};
-
-SideNav.propTypes = {
-  isVisible: PropTypes.bool,
-  onClose: PropTypes.func.isRequired
-};
-
-SideNav.defaultProps = {
-  isVisible: false,
-};
+      </Drawer>
+    );
+  }
+}
 
 export default SideNav;

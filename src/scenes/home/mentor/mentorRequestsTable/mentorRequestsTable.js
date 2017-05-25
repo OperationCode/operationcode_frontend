@@ -30,13 +30,10 @@ export default class MentorRequestsTable extends Component {
 
   handleModalClose = () => this.setState({ activeRequest: null });
 
-  rowClickHandler = (state, rowInfo) => ({
-    onClick: () => {
-      const id = rowInfo.original.id;
-      const activeRequest = this.state.requests.find(x => x.id === id);
-      this.setState({ activeRequest });
-    }
-  })
+  rowClickHandler = (request) => {
+    const activeRequest = this.state.requests.find(x => x.id === request.id);
+    this.setState({ activeRequest });
+  }
 
   render() {
     const { authenticated, activeRequest } = this.state;

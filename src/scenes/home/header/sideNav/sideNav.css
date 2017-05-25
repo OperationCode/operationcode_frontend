@@ -41,3 +41,10 @@
 .item ~ .item {
   margin-top: 16px;
 }
+
+span {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  padding-top: 1rem;
+}

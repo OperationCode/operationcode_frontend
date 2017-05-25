@@ -95,41 +95,55 @@ export default class MentorRequest extends Component {
             please let us know in the additional comments field below.
           </span>
 
-          <h2>Slack Name</h2>
-          <FormInput id="slackName" placeholder="Slack username" onChange={this.onSlackNameChange} />
+          <div className={styles.formBlock}>
+            <div className={styles.formElement}>
+              <h2>Slack Name</h2>
+              <p>If you are on Slack, this will help us better serve you</p>
+              <FormInput id="slackName" placeholder="Slack username" onChange={this.onSlackNameChange} />
+            </div>
 
-          <h2>Service</h2>
-          <p>Which one of our services would you like to book?</p>
-          <FormSelect
-            id="serviceType"
-            prompt="Choose service"
-            options={this.buildServiceOptions()}
-            onChange={e => this.onUpdateSelect('serviceType', e)}
-          />
+            <div className={styles.formElement}>
+              <h2>Service</h2>
+              <p>Which one of our services would you like to book?</p>
+              <FormSelect
+                id="serviceType"
+                prompt="Choose service"
+                options={this.buildServiceOptions()}
+                onChange={e => this.onUpdateSelect('serviceType', e)}
+              />
+            </div>
+          </div>
 
-          <h2>Language</h2>
-          <p>Do you need a mentor for a specific language?</p>
-          <FormSelect
-            id="languageType"
-            options={this.buildLanguageOptions()}
-            onChange={e => this.onUpdateSelect('languageType', e)}
-            prompt="Select language"
-          />
+          <div className={styles.formBlock}>
+            <div className={styles.formElement}>
+              <h2>Language</h2>
+              <p>Do you need a mentor for a specific language?</p>
+              <FormSelect
+                id="languageType"
+                options={this.buildLanguageOptions()}
+                onChange={e => this.onUpdateSelect('languageType', e)}
+                prompt="Select language"
+              />
+            </div>
 
-          <h2>Mentor</h2>
-          <p>Would you like to pick a specific mentor?</p>
-          <FormSelect
-            id="mentor"
-            prompt="Choose mentor"
-            options={this.buildMentorOptions()}
-            onChange={e => this.onUpdateSelect('mentor', e)}
-          />
-
-          <h2>Additional Details</h2>
-          <p>Please provide us with any more info that may help in us in assigning a mentor to this request.</p>
-          <FormInput id="additionalDetails" onChange={this.onDetailsChange} />
-          <FormButton className={styles.joinButton} text="Request Mentor" onClick={this.handleOnClick} theme="red" />
-          {success && <Redirect to="/thanks" />}
+            <div className={styles.formElement}>
+              <h2>Mentor</h2>
+              <p>Would you like to pick a specific mentor?</p>
+              <FormSelect
+                id="mentor"
+                prompt="Choose mentor"
+                options={this.buildMentorOptions()}
+                onChange={e => this.onUpdateSelect('mentor', e)}
+              />
+            </div>
+          </div>
+          <div className={styles.formRow}>
+            <h2>Additional Details</h2>
+            <p>Please provide us with any more info that may help in us in assigning a mentor to this request.</p>
+            <FormInput id="additionalDetails" onChange={this.onDetailsChange} />
+            <FormButton className={styles.joinButton} text="Request Mentor" onClick={this.handleOnClick} theme="red" />
+            {success && <Redirect to="/thanks" />}
+          </div>
         </Form>
       </Section>
     );

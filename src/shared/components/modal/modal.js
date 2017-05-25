@@ -1,18 +1,31 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import ReactModal from 'react-modal';
+import Section from 'shared/components/section/section';
 import styles from './modal.css';
 
 class Modal extends Component {
+  propTypes = {
+    isOpen: PropTypes.bool,
+    onRequestClose: PropTypes.func,
+    title: PropTypes.string
+  };
+
   render() {
     return (
-      <div>
-        <div className={styles.modalOverlay} />
-        <div className={styles.modalWrapper}>
-          <div className={styles.modalForm}>
+      <ReactModal
+        isOpen={this.props.isOpen}
+        contentLabel={this.props.title}
+        shouldCloseOnOverlayClick
+        onRequestClose={this.props.onRequestClose}
+      >
+        <Section title={this.props.title} theme="white" className={styles.modal}>
+          <div className={styles.scrollable}>
             {this.props.children}
           </div>
-        </div>
-      </div>
+        </Section>
+        <button className={styles.close} onClick={() => this.props.onRequestClose()} />
+      </ReactModal>
     );
   }
 }

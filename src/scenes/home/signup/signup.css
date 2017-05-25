@@ -14,11 +14,13 @@
   border: 1px solid rgb(92,105,122);
   padding: 10px;
   height: 100%;
+  width: 100%;
 }
 
 .joinButton {
   align-self: flex-end;
   margin-top: 10px;
+  width: 100%;
 }
 
 @media screen and (max-width: 599px) {

@@ -1,5 +1,14 @@
+.ReactModal__Content {
+    overflow: visible !important;
+}
+
 .ReactModal__Body--open {
     overflow: hidden;
+}
+
+.ReactModal__Body--open #root {
+  position: relative;
+  z-index: 0;
 }
 
 .ReactTable {

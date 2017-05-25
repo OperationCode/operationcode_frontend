@@ -6,17 +6,17 @@ import MentorDetails from 'scenes/home/mentor/mentorDetails/mentorDetails';
 
 export default class MentorsTable extends Component {
   state = {
-    activeMentorId: false
+    activeMentor: null
   };
 
-  rowClickHandler = (mentor) => {
-    this.setState({ activeMentorId: mentor.id });
+  rowClickHandler = (activeMentor) => {
+    this.setState({ activeMentor });
   }
 
-  handleModalClose = () => this.setState({ activeMentorId: null });
+  handleModalClose = () => this.setState({ activeMentor: null });
 
   render() {
-    const { activeMentorId } = this.state;
+    const { activeMentor } = this.state;
     return (
       <div style={{ width: '100%' }}>
         <IndexTable
@@ -24,11 +24,11 @@ export default class MentorsTable extends Component {
           columns={MENTOR_COLUMNS}
           onRowClick={this.rowClickHandler}
           fetchRecords={getMentors}
-          showPagination={!activeMentorId}
+          showPagination
         />
         <MentorDetails
-          mentorId={activeMentorId}
-          isOpen={!!activeMentorId}
+          mentor={activeMentor}
+          isOpen={!!activeMentor}
           onRequestClose={this.handleModalClose}
         />
       </div>
