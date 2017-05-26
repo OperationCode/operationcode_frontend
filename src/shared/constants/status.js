@@ -25,4 +25,15 @@ const REQUEST_STATUSES = [
   }
 ];
 
+export const MENTOR_ANSWERS = [
+  {
+    value: true,
+    label: 'Yes'
+  },
+  {
+    value: false,
+    label: 'No'
+  }
+];
+
 export default REQUEST_STATUSES;
