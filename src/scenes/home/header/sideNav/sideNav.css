@@ -42,7 +42,7 @@
   margin-top: 16px;
 }
 
-span {
+.list span {
   display: flex;
   height: 100%;
   flex-direction: column;

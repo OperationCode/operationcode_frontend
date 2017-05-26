@@ -10,11 +10,13 @@ class SideNav extends Component {
 
   propTypes = {
     isVisible: PropTypes.bool,
+    handleLogOut: PropTypes.func,
     onClose: PropTypes.func.isRequired
   };
 
   defaultProps = {
     isVisible: false,
+    handleLogOut: () => {},
     onClose: () => {},
   };
 
@@ -25,13 +27,21 @@ class SideNav extends Component {
 
   componentWillMount() {
     const cookies = new Cookies();
-    this.setState({ mentor: !!cookies.get('mentor'), signedIn: !!cookies.get('token') });
+    this.setState({
+      mentor: !!cookies.get('mentor'),
+      signedIn: !!cookies.get('token')
+    });
   }
 
 
   handleCloseClick = (e) => {
     e.preventDefault();
     this.props.onClose();
+  };
+
+  handleLogOutClick = (e) => {
+    e.preventDefault();
+    this.props.handleLogOut();
   };
 
   renderNavItems = () => {
@@ -61,7 +71,7 @@ class SideNav extends Component {
               className="menuItem"
               to="logout"
               text="Logout"
-              onClick={this.handleCloseClick}
+              onClick={this.handleLogoutClick}
             />
           </span>
         );
@@ -84,7 +94,7 @@ class SideNav extends Component {
             className="menuItem"
             to="logout"
             text="Logout"
-            onClick={this.handleCloseClick}
+            onClick={this.handleLogoutClick}
           />
         </span>
       );

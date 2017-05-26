@@ -1,15 +1,12 @@
 .topNav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   flex: 1 60%;
   font-size:20px;
 }
 
-.topNav span {
-  flex: 1 1 auto;
-  display: flex;
-  justify-content: space-around;
-  margin-left: 2rem;
+.topNav a {
+  margin: 1rem;
 }
 
 .topNav span a {
