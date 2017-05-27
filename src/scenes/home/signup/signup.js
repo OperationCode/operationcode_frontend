@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
-import Cookies from 'universal-cookie';
 import _ from 'lodash';
 import { MENTOR_ANSWERS } from 'shared/constants/status';
 import Form from 'shared/components/form/form';
@@ -13,6 +12,7 @@ import FormInput from 'shared/components/form/formInput/formInput';
 import FormSelect from 'shared/components/form/formSelect/formSelect';
 import Section from 'shared/components/section/section';
 import config from 'config/environment';
+import * as CookieHelpers from 'shared/utils/cookieHelper';
 import styles from './signup.css';
 
 class SignUp extends Component {
@@ -78,13 +78,8 @@ class SignUp extends Component {
           password,
           mentor
         }
-      }).then(({ token, user }) => {
-        const cookies = new Cookies();
-        cookies.set('token', token, { path: '/' });
-        cookies.set('firstName', user.first_name, { path: '/' });
-        cookies.set('lastName', user.last_name, { path: '/' });
-        cookies.set('slackName', user.slack_name, { path: '/' });
-        cookies.set('mentor', user.mentor, { path: '/' });
+      }).then((data) => {
+        CookieHelpers.setUserAuthCookie(data);
         this.setState({ success: true, error: null });
       }).catch((error) => {
         const data = _.get(error, 'response.data');

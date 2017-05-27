@@ -6,6 +6,7 @@ import { Route, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Login from 'shared/components/login/login';
+import * as CookieHelpers from 'shared/utils/cookieHelper';
 import familyImage from 'images/Family-2.png';
 import SignUp from './signup/signup';
 import MentorRequestsTable from './mentor/mentorRequestsTable/mentorRequestsTable';
@@ -56,18 +57,8 @@ class Home extends Component {
     });
   }
 
-  handleSignIn = () => {
-    this.setSessionCookies();
-    window.location = '/home';
-  }
-
   logOut = () => {
-    const cookies = new Cookies();
-    cookies.remove('token');
-    cookies.remove('firstName');
-    cookies.remove('lastName');
-    cookies.remove('slackName');
-    cookies.remove('mentor');
+    CookieHelpers.clearAuthCookies();
     window.location = '/';
   }
 
@@ -88,44 +79,19 @@ class Home extends Component {
       >
         <Header transparent={this.state.bgImage} logOut={this.logOut} signedIn={signedIn} mentor={mentor} />
         <div className={styles.main} >
+          <Route path="/home" component={Dashboard} />
+          <Route path="/signup" component={SignUp} />
+          <Route path="/join" component={SignUp} />
+          <Route path="/sign_up" component={SignUp} />
+          <Route path="/thanks" component={Thanks} />
+          <Route exact path="/" component={Landing} />
+          <Route exact path="/login" component={Login} />
           <Route
             exact
             path="/"
             render={props => (
               <Landing {...props} />
             )}
-          />
-          <Route
-            exact
-            path="/"
-            component={Landing}
-          />
-          <Route
-            path="/home"
-            component={Dashboard}
-          />
-          <Route
-            exact
-            path="/login"
-            render={() => (
-              <Login handleSignIn={this.handleSignIn} />
-            )}
-          />
-          <Route
-            path="/signup"
-            component={SignUp}
-          />
-          <Route
-            path="/join"
-            component={SignUp}
-          />
-          <Route
-            path="/sign_up"
-            component={SignUp}
-          />
-          <Route
-            path="/thanks"
-            component={Thanks}
           />
           <Route
             path="/mentor-request"
