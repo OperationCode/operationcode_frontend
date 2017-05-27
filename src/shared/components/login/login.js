@@ -21,8 +21,7 @@ class Login extends Component {
     password: '',
     passwordValid: false,
     authenticated: false,
-    error: '',
-    isMentor: false
+    error: ''
   }
 
   onEmailChange = (value, valid) => {
@@ -43,11 +42,8 @@ class Login extends Component {
           email: this.state.email,
           password: this.state.password
         }
-      }).then(({ data }) => {
-        this.setState({
-          isMentor: data.user.mentor,
-          authenticated: true
-        });
+      }).then(() => {
+        this.setState({ authenticated: true });
         this.props.updateRootAuthState();
       }).catch((response) => {
         const error = _.get(response, 'response.data.error');
@@ -57,11 +53,10 @@ class Login extends Component {
   }
 
   render() {
-    const { error, isMentor } = this.state;
-    const signinRedirect = isMentor ? '/requests' : '/dashboard';
+    const { error } = this.state;
     return (
       <Section title="Login" theme="white">
-        {this.state.authenticated && <Redirect to={signinRedirect} />}
+        {this.state.authenticated && <Redirect to="/home" />}
         <Form autoComplete>
           <FormEmail displayName="Email" label="Email" onChange={this.onEmailChange} />
           <FormPassword displayName="Password" label="Password" onChange={this.onPasswordChange} />
