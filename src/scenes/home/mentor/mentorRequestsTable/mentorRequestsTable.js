@@ -1,16 +1,24 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { MENTOR_REQUEST_COLUMNS } from 'shared/constants/table';
 import * as ApiHelpers from 'shared/utils/apiHelper';
 import IndexTable from 'shared/components/indexTable/indexTable';
 import RequestModal from 'scenes/home/requestModal/requestModal';
 
 export default class MentorRequestsTable extends Component {
+  propTypes = {
+    signedIn: PropTypes.bool
+  };
+
+  defaultProps = {
+    signedIn: true,
+  };
+
   state = {
     requests: [],
     mentors: [],
-    activeRequest: false,
-    authenticated: true
+    activeRequest: false
   }
 
   componentDidMount() {
@@ -20,13 +28,15 @@ export default class MentorRequestsTable extends Component {
         requests: data[0],
         mentors: data[1]
       });
-    }).catch(this.setAuthFetchError);
+    });
   }
 
-  setAuthFetchError = () => this.setState({ authenticated: false });
-
   buildMentorOptions = () =>
-    this.state.mentors.map(mentor => ({ value: mentor.id, label: `${mentor.first_name} ${mentor.last_name}` }))
+    this.state.mentors.map(mentor => ({
+      value: mentor.id,
+      label: `${mentor.first_name} ${mentor.last_name}`
+    })
+  );
 
   handleModalClose = () => this.setState({ activeRequest: null });
 
@@ -36,10 +46,8 @@ export default class MentorRequestsTable extends Component {
   }
 
   render() {
-    const { authenticated, activeRequest } = this.state;
-    if (!authenticated) {
-      return <Redirect to="/login" />;
-    }
+    const { activeRequest } = this.state;
+    const { signedIn } = this.props;
     return (
       <div style={{ width: '100%' }} >
         <IndexTable
@@ -54,6 +62,7 @@ export default class MentorRequestsTable extends Component {
           isOpen={!!activeRequest}
           onRequestClose={this.handleModalClose}
         />
+        {!signedIn && <Redirect to="/login" />}
       </div>
     );
   }

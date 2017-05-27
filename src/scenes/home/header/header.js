@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Cookies from 'universal-cookie';
 import styles from './header.css';
 import TopNav from './topNav/topNav';
 import SideNav from './sideNav/sideNav';
@@ -10,28 +9,14 @@ import Burger from './burger/burger';
 
 class Header extends Component {
 
-  constructor() {
-    super();
-    this.state = {
-      isSideNavVisible: false
-    };
-    this.toggleDrawer = this.toggleDrawer.bind(this);
+  state = {
+    isSideNavVisible: false
   }
 
-  toggleDrawer() {
-    this.setState({ isSideNavVisible: !this.state.isSideNavVisible });
-  }
-
-  logout = () => {
-    const cookies = new Cookies();
-    cookies.remove('token');
-    cookies.remove('firstName');
-    cookies.remove('lastName');
-    cookies.remove('slackName');
-    cookies.remove('mentor');
-  }
+  toggleDrawer = () => this.setState({ isSideNavVisible: !this.state.isSideNavVisible });
 
   render() {
+    const { mentor, signedIn } = this.props;
     const classes = classNames({
       [`${styles.header}`]: true,
       [`${styles.transparent}`]: this.props.transparent
@@ -40,19 +25,35 @@ class Header extends Component {
       <div className={classes} >
         <Logo />
         <Burger onClick={this.toggleDrawer} />
-        <TopNav handleLogout={this.logOut} />
-        <SideNav isVisible={this.state.isSideNavVisible} onClose={this.toggleDrawer} handleLogout={this.logOut} />
+        <TopNav
+          onLogOutClick={this.props.logOut}
+          signedIn={signedIn}
+          mentor={mentor}
+        />
+        <SideNav
+          isVisible={this.state.isSideNavVisible}
+          onClose={this.toggleDrawer}
+          onLogOutClick={this.props.logOut}
+          signedIn={signedIn}
+          mentor={mentor}
+        />
       </div>
     );
   }
 }
 
 Header.propTypes = {
-  transparent: PropTypes.bool
+  transparent: PropTypes.bool,
+  logOut: PropTypes.func,
+  signedIn: false,
+  mentor: false
 };
 
 Header.defaultProps = {
-  transparent: false
+  transparent: false,
+  logOut: () => {},
+  signedIn: false,
+  mentor: true
 };
 
 export default Header;

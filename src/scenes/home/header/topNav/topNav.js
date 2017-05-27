@@ -1,32 +1,27 @@
 import React, { Component } from 'react';
 import Nav from 'shared/components/nav/nav';
 import PropTypes from 'prop-types';
-import Cookies from 'universal-cookie';
 import NavItem from 'shared/components/nav/navItem/navItem';
 import styles from './topNav.css';
 
 class TopNav extends Component {
   propTypes = {
-    handleLogOut: PropTypes.func
+    mentor: PropTypes.bool,
+    onLogOutClick: PropTypes.func,
+    signedIn: PropTypes.bool
   };
 
   defaultProps = {
-    handleLogOut: () => {}
+    onLogOutClick: () => {},
+    mentor: false,
+    signedIn: false
   };
 
-  state = {
-    signedIn: false,
-    mentor: false
-  }
-
-  componentWillMount() {
-    const cookies = new Cookies();
-    this.setState({ mentor: !!cookies.get('mentor'), signedIn: !!cookies.get('token') });
-  }
 
   renderNavItems = () => {
-    if (this.state.signedIn) {
-      if (this.state.mentor) {
+    const { signedIn, mentor } = this.props;
+    if (signedIn) {
+      if (mentor) {
         return (
           <Nav className={styles.topNav} >
             <NavItem notClickable to="about" text="About" />
@@ -37,7 +32,7 @@ class TopNav extends Component {
             <NavItem to="mentors" text="Mentors" />
             <NavItem to="requests" text="Requests" />
             <NavItem to="squads" text="Squads" />
-            <NavItem to="logout" text="Logout" onClick={this.props.handleLogOut} />
+            <button className="navItem" onClick={() => this.props.onLogOutClick()}>Logout</button>
           </Nav>
         );
       }
@@ -50,7 +45,7 @@ class TopNav extends Component {
           <NavItem to="https://donorbox.org/operationcode" text="Donate" isExternal />
           <NavItem to="mentors" text="Mentors" />
           <NavItem to="squads" text="Squads" />
-          <NavItem to="logout" text="Logout" onClick={this.props.handleLogOut} />
+          <button onClick={() => this.props.onLogOutClick()}>Logout</button>
         </Nav>
       );
     }

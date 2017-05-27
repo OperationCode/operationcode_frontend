@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Cookies from 'universal-cookie';
 import Drawer from 'shared/components/drawer/drawer';
 import NavItem from 'shared/components/nav/navItem/navItem';
 import logo from 'images/logos/small-white-logo.png';
@@ -10,43 +9,29 @@ class SideNav extends Component {
 
   propTypes = {
     isVisible: PropTypes.bool,
-    handleLogOut: PropTypes.func,
-    onClose: PropTypes.func.isRequired
+    mentor: PropTypes.bool,
+    onLogOutClick: PropTypes.func,
+    onClose: PropTypes.func.isRequired,
+    signedIn: PropTypes.bool
   };
 
   defaultProps = {
     isVisible: false,
-    handleLogOut: () => {},
+    mentor: false,
+    signedIn: false,
+    onLogOutClick: () => {},
     onClose: () => {},
   };
-
-  state = {
-    signedIn: false,
-    mentor: false
-  }
-
-  componentWillMount() {
-    const cookies = new Cookies();
-    this.setState({
-      mentor: !!cookies.get('mentor'),
-      signedIn: !!cookies.get('token')
-    });
-  }
-
 
   handleCloseClick = (e) => {
     e.preventDefault();
     this.props.onClose();
   };
 
-  handleLogOutClick = (e) => {
-    e.preventDefault();
-    this.props.handleLogOut();
-  };
-
   renderNavItems = () => {
-    if (this.state.signedIn) {
-      if (this.state.mentor) {
+    const { signedIn, mentor } = this.props;
+    if (signedIn) {
+      if (mentor) {
         return (
           <span>
             <NavItem
@@ -67,12 +52,7 @@ class SideNav extends Component {
               text="Squads"
               onClick={this.handleCloseClick}
             />
-            <NavItem
-              className="menuItem"
-              to="logout"
-              text="Logout"
-              onClick={this.handleLogoutClick}
-            />
+            <button onClick={() => this.props.onLogOutClick()}>Logout</button>
           </span>
         );
       }
@@ -90,12 +70,7 @@ class SideNav extends Component {
             text="Squads"
             onClick={this.handleCloseClick}
           />
-          <NavItem
-            className="menuItem"
-            to="logout"
-            text="Logout"
-            onClick={this.handleLogoutClick}
-          />
+          <button onClick={() => this.props.onLogOutClick()}>Logout</button>
         </span>
       );
     }

@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Form from 'shared/components/form/form';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
+import PropTypes from 'prop-types';
 import config from 'config/environment';
 import _ from 'lodash';
 import FormEmail from 'shared/components/form/formEmail/formEmail';
@@ -14,6 +15,13 @@ import styles from './login.css';
 require('./login.css');
 
 class Login extends Component {
+  propTypes = {
+    handleSignIn: PropTypes.func
+  };
+
+  defaultProps = {
+    handleSignIn: () => {},
+  };
 
   state = {
     email: '',
@@ -54,6 +62,7 @@ class Login extends Component {
       }).then(({ data }) => {
         this.setUserAuthCookie(data);
         this.setState({ authenticated: true });
+        this.props.handleSignIn();
       }).catch((response) => {
         const error = _.get(response, 'response.data.error');
         this.setState({ error });

@@ -1,5 +1,6 @@
 /* eslint-disable no-console, react/forbid-prop-types */
 
+import Cookies from 'universal-cookie';
 import React, { Component } from 'react';
 import { Route, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -24,7 +25,9 @@ class Home extends Component {
     super(props);
     this.state = {
       bgImage: false,
-      bgImageUrl: null
+      bgImageUrl: null,
+      signedIn: false,
+      mentor: false
     };
 
     this.props.history.listen((location) => {
@@ -34,6 +37,7 @@ class Home extends Component {
 
   componentWillMount() {
     this.setBgImage(this.props.location);
+    this.setSessionCookies();
   }
 
   setBgImage(location) {
@@ -44,7 +48,35 @@ class Home extends Component {
     }
   }
 
+  setSessionCookies = () => {
+    const cookies = new Cookies();
+    this.setState({
+      mentor: !!cookies.get('mentor'),
+      signedIn: !!cookies.get('token')
+    });
+  }
+
+  handleSignIn = () => {
+    this.setSessionCookies();
+    window.location = '/home';
+  }
+
+  logOut = () => {
+    const cookies = new Cookies();
+    cookies.remove('token');
+    cookies.remove('firstName');
+    cookies.remove('lastName');
+    cookies.remove('slackName');
+    cookies.remove('mentor');
+    window.location = '/';
+  }
+
   render() {
+    const { mentor, signedIn } = this.state;
+    const authProps = {
+      signedIn,
+      mentor
+    };
     const classes = classNames({
       [`${styles.home}`]: true,
       [`${styles.backgroundImage}`]: this.state.bgImage
@@ -54,26 +86,77 @@ class Home extends Component {
         className={classes}
         style={(this.state.bgImage) ? { backgroundImage: `url(${this.state.bgImageUrl})` } : {}}
       >
-        <Header transparent={this.state.bgImage} />
+        <Header transparent={this.state.bgImage} logOut={this.logOut} signedIn={signedIn} mentor={mentor} />
         <div className={styles.main} >
           <Route
-            exact path="/" render={props => (
+            exact
+            path="/"
+            render={props => (
               <Landing {...props} />
             )}
           />
-          <Route exact path="/" component={Landing} />
-          <Route path="/home" component={Dashboard} />
-          <Route path="/login" component={Login} />
-          <Route path="/signup" component={SignUp} />
-          <Route path="/join" component={SignUp} />
-          <Route path="/sign_up" component={SignUp} />
-          <Route path="/thanks" component={Thanks} />
-          <Route path="/mentor-request" component={MentorRequest} />
-          <Route path="/requests" component={MentorRequestsTable} />
-          <Route path="/squads/new-squad" component={SquadsNew} />
-          <Route path="/mentors" component={MentorsTable} />
-          <Route exact path="/mentors" component={MentorsTable} />
-          <Route path="/squads" component={SquadsTable} />
+          <Route
+            exact
+            path="/"
+            component={Landing}
+          />
+          <Route
+            path="/home"
+            component={Dashboard}
+          />
+          <Route
+            exact
+            path="/login"
+            render={() => (
+              <Login handleSignIn={this.handleSignIn} />
+            )}
+          />
+          <Route
+            path="/signup"
+            component={SignUp}
+          />
+          <Route
+            path="/join"
+            component={SignUp}
+          />
+          <Route
+            path="/sign_up"
+            component={SignUp}
+          />
+          <Route
+            path="/thanks"
+            component={Thanks}
+          />
+          <Route
+            path="/mentor-request"
+            render={() => (
+              <MentorRequest {...authProps} />
+            )}
+          />
+          <Route
+            path="/requests"
+            render={() => (
+              <MentorRequestsTable {...authProps} />
+            )}
+          />
+          <Route
+            path="/squads/new-squad"
+            render={() => (
+              <SquadsNew {...authProps} />
+            )}
+          />
+          <Route
+            exact path="/mentors"
+            render={() => (
+              <MentorsTable {...authProps} />
+            )}
+          />
+          <Route
+            path="/squads"
+            render={() => (
+              <SquadsTable {...authProps} />
+            )}
+          />
         </div>
         <Footer />
       </div>
