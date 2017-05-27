@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Form from 'shared/components/form/form';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
+import PropTypes from 'prop-types';
 import config from 'config/environment';
 import _ from 'lodash';
 import FormEmail from 'shared/components/form/formEmail/formEmail';
@@ -47,6 +48,7 @@ class Login extends Component {
           isMentor: data.user.mentor,
           authenticated: true
         });
+        this.props.updateRootAuthState();
       }).catch((response) => {
         const error = _.get(response, 'response.data.error');
         this.setState({ error });
@@ -70,5 +72,15 @@ class Login extends Component {
     );
   }
 }
+
+
+Login.propTypes = {
+  updateRootAuthState: PropTypes.func
+};
+
+Login.defaultProps = {
+  updateRootAuthState: () => {}
+};
+
 
 export default Login;

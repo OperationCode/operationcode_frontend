@@ -1,6 +1,5 @@
 /* eslint-disable no-console, react/forbid-prop-types */
 
-import Cookies from 'universal-cookie';
 import React, { Component } from 'react';
 import { Route, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -38,7 +37,6 @@ class Home extends Component {
 
   componentWillMount() {
     this.setBgImage(this.props.location);
-    this.setSessionCookies();
   }
 
   setBgImage(location) {
@@ -49,11 +47,10 @@ class Home extends Component {
     }
   }
 
-  setSessionCookies = () => {
-    const cookies = new Cookies();
+  updateRootAuthState = () => {
     this.setState({
-      mentor: !!cookies.get('mentor'),
-      signedIn: !!cookies.get('token')
+      mentor: true,
+      signedIn: true
     });
   }
 
@@ -85,7 +82,13 @@ class Home extends Component {
           <Route path="/sign_up" component={SignUp} />
           <Route path="/thanks" component={Thanks} />
           <Route exact path="/" component={Landing} />
-          <Route exact path="/login" component={Login} />
+          <Route
+            exact
+            path="/login"
+            render={() => (
+              <Login updateRootAuthState={this.updateRootAuthState} />
+            )}
+          />
           <Route
             exact
             path="/"
