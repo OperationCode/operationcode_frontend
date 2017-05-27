@@ -3,25 +3,16 @@ import React, { Component } from 'react';
 import Form from 'shared/components/form/form';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
-import PropTypes from 'prop-types';
 import config from 'config/environment';
 import _ from 'lodash';
 import FormEmail from 'shared/components/form/formEmail/formEmail';
 import FormPassword from 'shared/components/form/formPassword/formPassword';
 import FormButton from 'shared/components/form/formButton/formButton';
-import Cookies from 'universal-cookie';
 import styles from './login.css';
 
 require('./login.css');
 
 class Login extends Component {
-  propTypes = {
-    handleSignIn: PropTypes.func
-  };
-
-  defaultProps = {
-    handleSignIn: () => {},
-  };
 
   state = {
     email: '',
@@ -29,7 +20,8 @@ class Login extends Component {
     password: '',
     passwordValid: false,
     authenticated: false,
-    error: ''
+    error: '',
+    isMentor: false
   }
 
   onEmailChange = (value, valid) => {
@@ -38,15 +30,6 @@ class Login extends Component {
 
   onPasswordChange = (value, valid) => {
     this.setState({ password: value, passwordValid: valid });
-  }
-
-  setUserAuthCookie = ({ token, user }) => {
-    const cookies = new Cookies();
-    cookies.set('token', token, { path: '/' });
-    cookies.set('firstName', user.first_name, { path: '/' });
-    cookies.set('lastName', user.last_name, { path: '/' });
-    cookies.set('slackName', user.slack_name, { path: '/' });
-    cookies.set('mentor', user.mentor, { path: '/' });
   }
 
   isFormValid = () => this.state.emailValid && this.state.passwordValid
@@ -60,9 +43,10 @@ class Login extends Component {
           password: this.state.password
         }
       }).then(({ data }) => {
-        this.setUserAuthCookie(data);
-        this.setState({ authenticated: true });
-        this.props.handleSignIn();
+        this.setState({
+          isMentor: data.user.mentor,
+          authenticated: true
+        });
       }).catch((response) => {
         const error = _.get(response, 'response.data.error');
         this.setState({ error });
@@ -71,10 +55,11 @@ class Login extends Component {
   }
 
   render() {
-    const { error } = this.state;
+    const { error, isMentor } = this.state;
+    const signinRedirect = isMentor ? '/requests' : '/dashboard';
     return (
       <Section title="Login" theme="white">
-        {this.state.authenticated && <Redirect to="/mentor-request" />}
+        {this.state.authenticated && <Redirect to={signinRedirect} />}
         <Form autoComplete>
           <FormEmail displayName="Email" label="Email" onChange={this.onEmailChange} />
           <FormPassword displayName="Password" label="Password" onChange={this.onPasswordChange} />
