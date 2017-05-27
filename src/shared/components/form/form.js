@@ -20,7 +20,7 @@ class Form extends Component {
 
 Form.propTypes = {
   children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.element),
+    PropTypes.arrayOf(PropTypes.node),
     PropTypes.element
   ]).isRequired,
   className: PropTypes.string

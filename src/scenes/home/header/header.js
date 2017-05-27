@@ -45,8 +45,8 @@ class Header extends Component {
 Header.propTypes = {
   transparent: PropTypes.bool,
   logOut: PropTypes.func,
-  signedIn: false,
-  mentor: false
+  signedIn: PropTypes.bool,
+  mentor: PropTypes.bool
 };
 
 Header.defaultProps = {

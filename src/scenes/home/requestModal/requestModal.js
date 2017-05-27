@@ -10,12 +10,6 @@ import FormSelect from 'shared/components/form/formSelect/formSelect';
 import styles from 'shared/components/modal/modal.css';
 
 class RequestModal extends Component {
-  propTypes = {
-    isOpen: PropTypes.bool,
-    onRequestClose: PropTypes.func,
-    request: PropTypes.object, // eslint-disable-line react/forbid-prop-types
-    mentors: PropTypes.array // eslint-disable-line react/forbid-prop-types
-  };
 
   state = {
     services: [],
@@ -136,5 +130,19 @@ class RequestModal extends Component {
     );
   }
 }
+
+RequestModal.propTypes = {
+  isOpen: PropTypes.bool,
+  onRequestClose: PropTypes.func,
+  request: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+  mentors: PropTypes.array // eslint-disable-line react/forbid-prop-types
+};
+
+RequestModal.defaultProps = {
+  isOpen: false,
+  onRequestClose: () => {},
+  request: null,
+  mentors: null
+};
 
 export default RequestModal;

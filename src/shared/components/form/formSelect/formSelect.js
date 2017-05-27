@@ -25,7 +25,7 @@ export default class FormSelect extends Component {
 FormSelect.propTypes = {
   prompt: PropTypes.string,
   options: PropTypes.arrayOf(PropTypes.shape({
-    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]).isRequired,
     label: PropTypes.string.isRequired
   })).isRequired,
   onChange: PropTypes.func,

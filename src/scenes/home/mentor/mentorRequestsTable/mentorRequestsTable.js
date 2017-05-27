@@ -7,18 +7,11 @@ import IndexTable from 'shared/components/indexTable/indexTable';
 import RequestModal from 'scenes/home/requestModal/requestModal';
 
 export default class MentorRequestsTable extends Component {
-  propTypes = {
-    signedIn: PropTypes.bool
-  };
-
-  defaultProps = {
-    signedIn: true,
-  };
 
   state = {
     requests: [],
     mentors: [],
-    activeRequest: false
+    activeRequest: null
   }
 
   componentDidMount() {
@@ -67,3 +60,11 @@ export default class MentorRequestsTable extends Component {
     );
   }
 }
+
+MentorRequestsTable.propTypes = {
+  signedIn: PropTypes.bool
+};
+
+MentorRequestsTable.defaultProps = {
+  signedIn: true,
+};

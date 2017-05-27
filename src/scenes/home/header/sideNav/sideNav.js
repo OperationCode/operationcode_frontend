@@ -7,22 +7,6 @@ import styles from './sideNav.css';
 
 class SideNav extends Component {
 
-  propTypes = {
-    isVisible: PropTypes.bool,
-    mentor: PropTypes.bool,
-    onLogOutClick: PropTypes.func,
-    onClose: PropTypes.func.isRequired,
-    signedIn: PropTypes.bool
-  };
-
-  defaultProps = {
-    isVisible: false,
-    mentor: false,
-    signedIn: false,
-    onLogOutClick: () => {},
-    onClose: () => {},
-  };
-
   handleCloseClick = (e) => {
     e.preventDefault();
     this.props.onClose();
@@ -52,7 +36,7 @@ class SideNav extends Component {
               text="Squads"
               onClick={this.handleCloseClick}
             />
-            <button onClick={() => this.props.onLogOutClick()}>Logout</button>
+            <button className={styles.navButton} onClick={() => this.props.onLogOutClick()}>Logout</button>
           </span>
         );
       }
@@ -70,7 +54,7 @@ class SideNav extends Component {
             text="Squads"
             onClick={this.handleCloseClick}
           />
-          <button onClick={() => this.props.onLogOutClick()}>Logout</button>
+          <button className={styles.navButton} onClick={() => this.props.onLogOutClick()}>Logout</button>
         </span>
       );
     }
@@ -144,5 +128,19 @@ class SideNav extends Component {
     );
   }
 }
+SideNav.propTypes = {
+  isVisible: PropTypes.bool,
+  mentor: PropTypes.bool,
+  onLogOutClick: PropTypes.func,
+  onClose: PropTypes.func.isRequired,
+  signedIn: PropTypes.bool
+};
 
+SideNav.defaultProps = {
+  isVisible: false,
+  mentor: false,
+  signedIn: false,
+  onLogOutClick: () => {},
+  onClose: () => {},
+};
 export default SideNav;

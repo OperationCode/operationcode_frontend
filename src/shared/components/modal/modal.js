@@ -5,11 +5,6 @@ import Section from 'shared/components/section/section';
 import styles from './modal.css';
 
 class Modal extends Component {
-  propTypes = {
-    isOpen: PropTypes.bool,
-    onRequestClose: PropTypes.func,
-    title: PropTypes.string
-  };
 
   render() {
     return (
@@ -31,7 +26,17 @@ class Modal extends Component {
 }
 
 Modal.propTypes = {
-  children: PropTypes.element.isRequired
+  children: PropTypes.element.isRequired,
+  isOpen: PropTypes.bool,
+  onRequestClose: PropTypes.func,
+  title: PropTypes.string
+};
+
+Modal.defaultProps = {
+  children: <span />,
+  isOpen: false,
+  onRequestClose: () => {},
+  title: ''
 };
 
 export default Modal;

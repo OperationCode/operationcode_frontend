@@ -5,18 +5,6 @@ import NavItem from 'shared/components/nav/navItem/navItem';
 import styles from './topNav.css';
 
 class TopNav extends Component {
-  propTypes = {
-    mentor: PropTypes.bool,
-    onLogOutClick: PropTypes.func,
-    signedIn: PropTypes.bool
-  };
-
-  defaultProps = {
-    onLogOutClick: () => {},
-    mentor: false,
-    signedIn: false
-  };
-
 
   renderNavItems = () => {
     const { signedIn, mentor } = this.props;
@@ -66,5 +54,17 @@ class TopNav extends Component {
     return this.renderNavItems();
   }
 }
+
+TopNav.propTypes = {
+  mentor: PropTypes.bool,
+  onLogOutClick: PropTypes.func,
+  signedIn: PropTypes.bool
+};
+
+TopNav.defaultProps = {
+  onLogOutClick: () => {},
+  mentor: false,
+  signedIn: false
+};
 
 export default TopNav;

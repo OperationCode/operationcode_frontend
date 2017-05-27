@@ -48,3 +48,13 @@
   flex-direction: column;
   padding-top: 1rem;
 }
+
+.navButton {
+  background: transparent;
+  border: none;
+  color: white;
+  text-align: left;
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+  padding: 0;
+}

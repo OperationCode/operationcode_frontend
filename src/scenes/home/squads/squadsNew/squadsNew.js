@@ -98,7 +98,6 @@ class SquadsNew extends Component {
     if (!loggedIn) {
       return <Redirect to="/login" />;
     }
-    console.log(this.state);
     return (
       <Section className={styles.squadNew} title="Create a New Squad" >
         { error && <div className={styles.squadNewError}>{error}</div> }

@@ -6,13 +6,7 @@ import FormButton from 'shared/components/form/formButton/formButton';
 import Modal from 'shared/components/modal/modal';
 import styles from 'shared/components/modal/modal.css';
 
-class RequestModal extends Component {
-  propTypes = {
-    isOpen: PropTypes.bool,
-    onRequestClose: PropTypes.func,
-    handleFormUpdate: PropTypes.func,
-    squad: PropTypes.object // eslint-disable-line react/forbid-prop-types
-  };
+class SquadsModal extends Component {
 
   handleButtonClick = () => {
     joinSquad(this.props.squad.id);
@@ -40,7 +34,7 @@ class RequestModal extends Component {
             </div>
             <div className={styles.modalRow}>
               <h2>Mentors</h2>
-              {squad.mentors.map(m => <p>{`${m.first_name} ${m.last_name}`}</p>)}
+              {squad.mentors.map(m => <p key={`${m.first_name}-${m.last_name}`}>{`${m.first_name} ${m.last_name}`}</p>)}
             </div>
             <div className={styles.modalRow}>
               <h2>Activities</h2>
@@ -58,7 +52,7 @@ class RequestModal extends Component {
             </div>
             <div className={styles.modalRow}>
               <h2>Current Members</h2>
-              {squad.members.map(m => <p>{`${m.first_name} ${m.last_name}`}</p>)}
+              {squad.members.map(m => <p key={`${m.first_name}-${m.last_name}`}>{`${m.first_name} ${m.last_name}`}</p>)}
             </div>
           </div>
           <div className={styles.modalRow}>
@@ -83,4 +77,18 @@ class RequestModal extends Component {
   }
 }
 
-export default RequestModal;
+SquadsModal.propTypes = {
+  isOpen: PropTypes.bool,
+  onRequestClose: PropTypes.func,
+  handleFormUpdate: PropTypes.func,
+  squad: PropTypes.object // eslint-disable-line react/forbid-prop-types
+};
+
+SquadsModal.defaultProps = {
+  isOpen: false,
+  onRequestClose: () => {},
+  handleFormUpdate: () => {},
+  squad: {} // eslint-disable-line react/forbid-prop-types
+};
+
+export default SquadsModal;
