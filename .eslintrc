@@ -15,7 +15,8 @@
     "import/extensions": 0,
     "import/no-extraneous-dependencies": 0,
     "linebreak-style": 0,
-    "max-len": 0
+    "max-len": 0,
+    "react/jsx-max-props-per-line": 0
    },
    "settings": {
      "import/resolver": {
