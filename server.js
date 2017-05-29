@@ -4,16 +4,18 @@ const path = require('path');
 
 const app = express();
 
+const FALLBACK_PORT = 4000;
+
 // Redirect all HTTP traffic to HTTPS
 function ensureSecure(req, res, next) {
   if (req.headers['x-forwarded-proto'] === 'https') {
     return next();
   }
   let redirectUrl = `https://${req.hostname}`;
-  if (process.env.PORT && process.env.PORT !== 443) {
-    redirectUrl = redirectUrl.concat(`:${process.env.PORT}`);
-  } else {
-    redirectUrl = redirectUrl.concat(':4000');
+  let port = process.env.PORT;
+  if (port !== 443) {
+    if (!port) port = FALLBACK_PORT;
+    redirectUrl = `${redirectUrl}:${port}`;
   }
   redirectUrl = redirectUrl.concat(req.url);
   return res.redirect(redirectUrl);
@@ -25,4 +27,4 @@ app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, './build', 'index.html'));
 });
 
-app.listen(process.env.PORT || 4000);
+app.listen(process.env.PORT || FALLBACK_PORT);
