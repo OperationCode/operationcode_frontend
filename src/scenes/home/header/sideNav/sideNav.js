@@ -20,19 +20,25 @@ class SideNav extends Component {
           <span>
             <NavItem
               className="menuItem"
-              to="mentors"
+              to="/mentor-request"
+              text="Request Help"
+              onClick={this.handleCloseClick}
+            />
+            <NavItem
+              className="menuItem"
+              to="/mentors"
               text="Mentors"
               onClick={this.handleCloseClick}
             />
             <NavItem
               className="menuItem"
-              to="requests"
+              to="/requests"
               text="Requests"
               onClick={this.handleCloseClick}
             />
             <NavItem
               className="menuItem"
-              to="squads"
+              to="/squads"
               text="Squads"
               onClick={this.handleCloseClick}
             />
@@ -44,13 +50,19 @@ class SideNav extends Component {
         <span>
           <NavItem
             className="menuItem"
-            to="mentors"
+            to="/mentor-request"
+            text="Request Help"
+            onClick={this.handleCloseClick}
+          />
+          <NavItem
+            className="menuItem"
+            to="/mentors"
             text="Mentors"
             onClick={this.handleCloseClick}
           />
           <NavItem
             className="menuItem"
-            to="squads"
+            to="/squads"
             text="Squads"
             onClick={this.handleCloseClick}
           />
@@ -62,12 +74,12 @@ class SideNav extends Component {
       <span>
         <NavItem
           className="menuItem"
-          to="join" text="Join"
+          to="/join" text="Join"
           onClick={this.handleCloseClick}
         />
         <NavItem
           className="menuItem"
-          to="login" text="Login"
+          to="/login" text="Login"
           onClick={this.handleCloseClick}
         />
       </span>

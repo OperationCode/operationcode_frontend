@@ -37,6 +37,11 @@ class Home extends Component {
 
   componentWillMount() {
     this.setBgImage(this.props.location);
+    const cookies = CookieHelpers.getUserStatus();
+    this.setState({
+      signedIn: cookies.signedIn,
+      mentor: cookies.mentor
+    });
   }
 
   setBgImage(location) {

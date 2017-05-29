@@ -6,6 +6,7 @@ import axios from 'axios';
 import PropTypes from 'prop-types';
 import config from 'config/environment';
 import _ from 'lodash';
+import * as CookieHelpers from 'shared/utils/cookieHelper';
 import FormEmail from 'shared/components/form/formEmail/formEmail';
 import FormPassword from 'shared/components/form/formPassword/formPassword';
 import FormButton from 'shared/components/form/formButton/formButton';
@@ -42,7 +43,8 @@ class Login extends Component {
           email: this.state.email,
           password: this.state.password
         }
-      }).then(() => {
+      }).then(({ data }) => {
+        CookieHelpers.setUserAuthCookie(data);
         this.setState({ authenticated: true });
         this.props.updateRootAuthState();
       }).catch((response) => {

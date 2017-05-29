@@ -12,7 +12,6 @@ import FormInput from 'shared/components/form/formInput/formInput';
 import FormSelect from 'shared/components/form/formSelect/formSelect';
 import Section from 'shared/components/section/section';
 import config from 'config/environment';
-import * as CookieHelpers from 'shared/utils/cookieHelper';
 import styles from './signup.css';
 
 class SignUp extends Component {
@@ -27,7 +26,7 @@ class SignUp extends Component {
       password: '',
       passwordConfirm: '',
       passwordValid: true,
-      sucess: false,
+      success: false,
       zip: '',
       zipValid: true
     };
@@ -78,8 +77,7 @@ class SignUp extends Component {
           password,
           mentor
         }
-      }).then((data) => {
-        CookieHelpers.setUserAuthCookie(data);
+      }).then(() => {
         this.setState({ success: true, error: null });
       }).catch((error) => {
         const data = _.get(error, 'response.data');
@@ -128,7 +126,7 @@ class SignUp extends Component {
             onChange={this.onConfirmPasswordChange} validateFunc={this.validatePasswordConfirm}
           />
           {this.state.error && <span>There was an error joining operation code: {this.state.error}</span>}
-          {this.state.success && <Redirect to="/thanks" />}
+          {this.state.success && <Redirect to="/login" />}
           <FormButton className={styles.joinButton} text="Join" onClick={this.handleOnClick} theme="red" />
         </Form>
       </Section>

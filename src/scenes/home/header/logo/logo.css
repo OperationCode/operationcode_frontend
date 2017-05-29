@@ -1,7 +1,6 @@
 .logo {
   height: 60px;
   flex: 0 40%;
-  margin-left: 80px;
   align-items: center;
   display:flex;
 }

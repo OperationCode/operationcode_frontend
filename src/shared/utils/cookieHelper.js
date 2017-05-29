@@ -22,3 +22,11 @@ export const isMentor = () => {
   const cookies = new Cookies();
   return cookies.get('mentor');
 };
+
+export const getUserStatus = () => {
+  const cookies = new Cookies();
+  return {
+    mentor: !!cookies.get('mentor'),
+    signedIn: !!cookies.get('token')
+  };
+};
