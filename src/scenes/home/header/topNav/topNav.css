@@ -1,7 +1,7 @@
 .topNav {
   display: flex;
   justify-content: flex-end;
-  flex: 1 60%;
+  flex: 1 0 60%;
   font-size:20px;
 }
 

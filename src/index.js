@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import 'font-awesome/css/font-awesome.css';
 import App from './App';
 import './index.css';
+import './index.global.css';
 
 ReactDOM.render(
   <App />,
