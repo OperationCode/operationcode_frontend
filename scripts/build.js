@@ -22,7 +22,6 @@ const config = require('../config/webpack.config.prod');
 const paths = require('../config/paths');
 const checkRequiredFiles = require('react-dev-utils/checkRequiredFiles');
 const formatWebpackMessages = require('react-dev-utils/formatWebpackMessages');
-const printHostingInstructions = require('react-dev-utils/printHostingInstructions');
 const FileSizeReporter = require('react-dev-utils/FileSizeReporter');
 
 const measureFileSizesBeforeBuild =
@@ -57,30 +56,13 @@ measureFileSizesBeforeBuild(paths.appBuild)
             chalk.underline(chalk.yellow('keywords'))
             } to learn more about each warning.`
         );
-        console.log(
-          `To ignore, add ${
-            chalk.cyan('// eslint-disable-next-line')
-            } to the line before.\n`
-        );
       } else {
         console.log(chalk.green('Compiled successfully.\n'));
       }
 
       console.log('File sizes after gzip:\n');
       printFileSizesAfterBuild(stats, previousFileSizes, paths.appBuild);
-      console.log();
 
-      const appPackage = require(paths.appPackageJson);
-      const publicUrl = paths.publicUrl;
-      const publicPath = config.output.publicPath;
-      const buildFolder = path.relative(process.cwd(), paths.appBuild);
-      printHostingInstructions(
-        appPackage,
-        publicUrl,
-        publicPath,
-        buildFolder,
-        useYarn
-      );
     },
     (err) => {
       console.log(chalk.red('Failed to compile.\n'));
