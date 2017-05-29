@@ -13,6 +13,7 @@ import SquadsTable from './squads/squadsTable/squadsTable';
 import Dashboard from './dashboard/dashboard';
 import MentorsTable from './mentor/mentorsTable/mentorsTable';
 import Thanks from './thanks/thanks';
+import FinancialStatements from './about/financialStatements/financialStatements';
 import styles from './home.css';
 import Header from './header/header';
 import Landing from './landing/landing';
@@ -131,6 +132,7 @@ class Home extends Component {
               <SquadsTable {...authProps} />
             )}
           />
+          <Route exact path="/about/financial-statements" component={FinancialStatements} />
         </div>
         <Footer />
       </div>
