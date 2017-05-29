@@ -1,9 +1,9 @@
 .ReactModal__Content {
-    overflow: visible !important;
+  overflow: visible !important;
 }
 
 .ReactModal__Body--open {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .ReactModal__Body--open #root {
@@ -23,9 +23,9 @@
 }
 
 .ReactTable .rt-tr-group:hover {
-    background: #f3f3f3;
-    cursor: pointer;
-    box-shadow: 14px 0px 6px #c2c2c2;
+  background: #f3f3f3;
+  cursor: pointer;
+  box-shadow: 14px 0px 6px #c2c2c2;
 }
 
 .ReactTable .rt-table {
@@ -69,7 +69,8 @@
   text-align: center;
 }
 
-.ReactTable .rt-thead .rt-th, .ReactTable .rt-thead .rt-td {
+.ReactTable .rt-thead .rt-th,
+.ReactTable .rt-thead .rt-td {
   padding: 5px 5px;
   line-height: normal;
   position: relative;
@@ -78,19 +79,23 @@
   box-shadow: inset 0 0 0 0 transparent;
 }
 
-.ReactTable .rt-thead .rt-th.-sort-asc, .ReactTable .rt-thead .rt-td.-sort-asc {
+.ReactTable .rt-thead .rt-th.-sort-asc,
+.ReactTable .rt-thead .rt-td.-sort-asc {
   box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.6);
 }
 
-.ReactTable .rt-thead .rt-th.-sort-desc, .ReactTable .rt-thead .rt-td.-sort-desc {
+.ReactTable .rt-thead .rt-th.-sort-desc,
+.ReactTable .rt-thead .rt-td.-sort-desc {
   box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.6);
 }
 
-.ReactTable .rt-thead .rt-th.-cursor-pointer, .ReactTable .rt-thead .rt-td.-cursor-pointer {
+.ReactTable .rt-thead .rt-th.-cursor-pointer,
+.ReactTable .rt-thead .rt-td.-cursor-pointer {
   cursor: pointer;
 }
 
-.ReactTable .rt-thead .rt-th:last-child, .ReactTable .rt-thead .rt-td:last-child {
+.ReactTable .rt-thead .rt-th:last-child,
+.ReactTable .rt-thead .rt-td:last-child {
   border-right: 0;
 }
 
@@ -111,7 +116,8 @@
   border-right-color: #f7f7f7;
 }
 
-.ReactTable .rt-thead .rt-header-pivot:after, .ReactTable .rt-thead .rt-header-pivot:before {
+.ReactTable .rt-thead .rt-header-pivot:after,
+.ReactTable .rt-thead .rt-header-pivot:before {
   left: 100%;
   top: 50%;
   border: solid transparent;
@@ -175,7 +181,8 @@
   display: inline-flex;
 }
 
-.ReactTable .rt-th, .ReactTable .rt-td {
+.ReactTable .rt-th,
+.ReactTable .rt-td {
   flex: 1 0 0px;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -185,7 +192,8 @@
   transition-property: width, min-width, padding, opacity;
 }
 
-.ReactTable .rt-th.-hidden, .ReactTable .rt-td.-hidden {
+.ReactTable .rt-th.-hidden,
+.ReactTable .rt-td.-hidden {
   width: 0 !important;
   min-width: 0 !important;
   padding: 0 !important;
@@ -290,7 +298,8 @@
   color: #fff;
 }
 
-.ReactTable .-pagination .-previous, .ReactTable .-pagination .-next {
+.ReactTable .-pagination .-previous,
+.ReactTable .-pagination .-next {
   flex: 1;
   text-align: center;
 }
@@ -375,7 +384,8 @@
   transform: translateY(50%);
 }
 
-.ReactTable input, .ReactTable select {
+.ReactTable input,
+.ReactTable select {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background: #fff;
   padding: 5px 7px;
@@ -385,7 +395,8 @@
   outline: none;
 }
 
-.ReactTable input:not([type="checkbox"]):not([type="radio"]), .ReactTable select {
+.ReactTable input:not([type="checkbox"]):not([type="radio"]),
+.ReactTable select {
   appearance: none;
 }
 
@@ -410,7 +421,8 @@
   border-width: 5px 5px 2.5px;
 }
 
-.ReactTable .rt-resizing .rt-th, .ReactTable .rt-resizing .rt-td {
+.ReactTable .rt-resizing .rt-th,
+.ReactTable .rt-resizing .rt-td {
   transition: none !important;
   cursor: col-resize;
   user-select: none;
