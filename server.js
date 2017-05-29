@@ -12,7 +12,7 @@ function ensureSecure(req, res, next) {
     return next();
   }
   let redirectUrl = `https://${req.hostname}`;
-  let port = process.env.PORT;
+  let port = parseInt(process.env.PORT, 10);
   if (port !== 443) {
     if (!port) port = FALLBACK_PORT;
     redirectUrl = `${redirectUrl}:${port}`;
