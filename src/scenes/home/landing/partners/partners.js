@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Section from 'shared/components/section/section';
+import apexPartnerImage from 'images/partners/apex.jpg';
 import styles from './partners.css';
+
 
 class Partners extends Component {
   render() {
@@ -17,6 +19,7 @@ class Partners extends Component {
           </div>
         </Section>
         <Section className={styles.partnersRight} theme="white">
+          <p><img src={apexPartnerImage} alt="Apex" className={styles.apexLogo} /></p>
           <p> GitHub </p>
           <p> Docker </p>
         </Section>
