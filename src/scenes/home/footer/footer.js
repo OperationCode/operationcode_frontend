@@ -32,6 +32,9 @@ class Footer extends Component {
           </div>
         </div>
         <div className={styles.copyright}>
+          Please note that this website is managed by Operation Code.
+          The content of this website is solely the responsibility of
+          Operation Code.<br />
           Copyright 2017 Operation Code
         </div>
       </div>
