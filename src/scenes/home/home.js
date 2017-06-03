@@ -89,7 +89,11 @@ class Home extends Component {
           <Route path="/join" component={SignUp} />
           <Route path="/sign-up" component={SignUp} />
           <Route path="/thanks" component={Thanks} />
-          <Route exact path="/" component={Landing} />
+          <Route
+            exact
+            path="/"
+            component={Landing}
+          />
           <Route
             exact
             path="/login"
