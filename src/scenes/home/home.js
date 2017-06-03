@@ -84,10 +84,10 @@ class Home extends Component {
         <Header transparent={this.state.bgImage} logOut={this.logOut} signedIn={signedIn} mentor={mentor} />
         <div className={styles.main} >
           <Route path="/home" component={Dashboard} />
-          <Route path="/code_schools" component={CodeSchools} />
+          <Route path="/code-schools" component={CodeSchools} />
           <Route path="/signup" component={SignUp} />
           <Route path="/join" component={SignUp} />
-          <Route path="/sign_up" component={SignUp} />
+          <Route path="/sign-up" component={SignUp} />
           <Route path="/thanks" component={Thanks} />
           <Route exact path="/" component={Landing} />
           <Route

@@ -1,9 +1,14 @@
+.sectionContainer {
+  width: 100%;
+  padding: 10px 0;
+  display:flex;
+  justify-content: center;
+}
 .section {
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: center;
-  padding: 10px 0;
 }
 
 .gray {
@@ -12,4 +17,8 @@
 
 .white {
   background-color:#FFF;
+}
+
+.margin {
+  width: 80%;
 }

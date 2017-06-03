@@ -12,18 +12,27 @@ const Section = (props) => {
     theme,
     headingLines,
     headingTheme,
+    margin,
     ...otherProps
   } = props;
 
   const classes = classNames({
     [`${styles.section}`]: true,
-    [`${styles[theme]}`]: true,
-    [`${className}`]: className
+    [`${className}`]: className,
+    [`${styles.margin}`]: margin
   });
+
+  const containerClasses = classNames({
+    [`${styles[theme]}`]: true,
+    [`${styles.sectionContainer}`]: true,
+  });
+
   return (
-    <div className={classes} {...otherProps}>
-      {title && <Heading text={title} headingLines={headingLines} theme={headingTheme} />}
-      {children}
+    <div className={containerClasses} >
+      <div className={classes} {...otherProps}>
+        {title && <Heading text={title} headingLines={headingLines} theme={headingTheme} />}
+        {children}
+      </div>
     </div>
   );
 };
@@ -37,7 +46,8 @@ Section.propTypes = {
   className: PropTypes.string,
   theme: PropTypes.string,
   headingLines: PropTypes.bool,
-  headingTheme: PropTypes.string
+  headingTheme: PropTypes.string,
+  margin: PropTypes.bool
 };
 
 Section.defaultProps = {
@@ -45,7 +55,8 @@ Section.defaultProps = {
   theme: 'gray',
   headingLines: true,
   headingTheme: 'dark',
-  title: null
+  title: null,
+  margin: false
 };
 
 export default Section;
