@@ -1,3 +1,12 @@
-.header {
-	font-size: 10rem;
+.headLine {
+	font-size: 2.5rem;
+	font-weight: 100;
+	margin: 0px 40px;
+	text-align: center;
+}
+
+.paragraph {
+	font-size: 1.4rem;
+	margin: 20px 40px;
+	text-align: center;
 }
