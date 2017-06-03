@@ -3,8 +3,8 @@
   flex-direction: row;
   justify-content: center;
   width: 80%;
-  font-size:36px;
- }
+  font-size: 36px;
+}
 
 .headingLines:before,
 .headingLines:after {
@@ -17,15 +17,15 @@
 }
 
 .heading:before {
-  margin-right:10px;
+  margin-right: 10px;
 }
 
 .heading:after {
-  margin-left:10px;
+  margin-left: 10px;
 }
 
 .dark {
-  color:rgb(74,74,74);
+  color: rgb(74,74,74);
 }
 
 .white {
@@ -33,7 +33,7 @@
 }
 
 @media only screen and (max-width: 500px) {
-    .heading {
-      font-size:20px;
-    }
+  .heading {
+    font-size: 20px;
+  }
 }
