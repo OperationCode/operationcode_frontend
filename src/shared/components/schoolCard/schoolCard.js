@@ -14,7 +14,11 @@ class SchoolCard extends Component {
           <p>
             <span className={styles.schoolName}>{this.props.schoolName}</span>
             <br />
-            <span className={styles.schoolLocation}>{this.props.schoolLocation}</span>
+            <span className={styles.schoolLocation}>
+              {this.props.schoolAddress}
+              <br />
+              {this.props.schoolCity}, {this.props.schoolState}
+            </span>
           </p>
 
           <p className={styles.schoolInfo}>
@@ -33,7 +37,9 @@ class SchoolCard extends Component {
 SchoolCard.propTypes = {
   alt: PropTypes.string.isRequired,
   schoolName: PropTypes.string.isRequired,
-  schoolLocation: PropTypes.string.isRequired,
+  schoolAddress: PropTypes.string.isRequired,
+  schoolCity: PropTypes.string.isRequired,
+  schoolState: PropTypes.string.isRequired,
   GI: PropTypes.string.isRequired,
   fullTime: PropTypes.string.isRequired,
   hardware: PropTypes.string.isRequired

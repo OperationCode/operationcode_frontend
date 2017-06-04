@@ -5,7 +5,8 @@ import SchoolCard from 'shared/components/schoolCard/schoolCard';
 import styles from './approvedSchools.css';
 
 
-const endpoint = 'https://api.operationcode.org/api/v1/code_schools.json';
+const endpoint = 'https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/scenes/home/codeSchools/schools.json';
+// const endpoint = 'https://api.operationcode.org/api/v1/code_schools.json';
 const gettingSchoolData = fetch(endpoint)
   .then(response => response.json());
 
@@ -18,14 +19,26 @@ class ApprovedSchools extends Component {
     };
 
     gettingSchoolData.then(data =>
-       this.setState({ vaSchools: data.va_approved })
+      this.setState({ vaSchools: data.va_approved })
     );
   }
 
   render() {
+
     const vaSchools = !this.state.vaSchools ? null :
                       this.state.vaSchools.map(s =>
                         <SchoolCard schoolName={s.name} schoolLocation={s.address1} GI={s.va_accepted === true ? 'Yes' : 'No'} fullTime={s.full_time} hardware={s.hardware_included} />
+
+    const vaSchools = !this.state.vaSchools ? null : this.state.vaSchools.map(s =>
+                        (
+                          <SchoolCard
+                            schoolName={s.name}
+                            schoolAddress={s.address1}
+                            schoolCity={s.city}
+                            schoolState={s.state}
+                          />
+                        )
+
                       );
     return (
       <Section
