@@ -7,9 +7,10 @@
 .section {
   display: flex;
   flex-direction: column;
+  min-height: 300px;
   width: 100%;
   align-items: center;
-  padding-bottom: 5%;
+  padding: 2.5% 0 2.5% 0;
 }
 
 .gray {
@@ -22,10 +23,4 @@
 
 .margin {
   width: 80%;
-}
-
-@media only screen and (min-width: 768px) {
-  .section {
-    padding-bottom: 35px;
-  }
 }
