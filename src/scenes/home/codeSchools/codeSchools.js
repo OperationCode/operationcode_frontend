@@ -64,13 +64,15 @@ class CodeSchools extends Component {
           headingLines={false}
           margin
         >
-          <p>
-            Are you a code school seeking state and/or VA approval?
-            <br />
-            <Link to="mailto:staff@operationcode.org" role="button">
-              Request technical assistance today.
-            </Link>
-          </p>
+          <div className={styles.noteForSchoolReps}>
+            <p>
+              Are you a code school seeking state and/or VA approval?
+              <br />
+              <Link to="mailto:staff@operationcode.org" role="button">
+                Request technical assistance today.
+              </Link>
+            </p>
+          </div>
         </Section>
 
 
@@ -81,13 +83,15 @@ class CodeSchools extends Component {
           headingLines={false}
           margin
         >
-          <p>
-            Are you a code school seeking state and/or VA approval?
-            <br />
-            <Link to="mailto:staff@operationcode.org" role="button">
-              Request technical assistance today.
-            </Link>
-          </p>
+          <div className={styles.noteForSchoolReps}>
+            <p>
+              Are you a code school seeking a partnership with Operation Code?
+              <br />
+              <Link to="mailto:staff@operationcode.org" role="button">
+                Reach out to us!
+              </Link>
+            </p>
+          </div>
         </Section>
 
 
@@ -101,14 +105,9 @@ class CodeSchools extends Component {
           <p>
             Many code schools around the nation offer military/veterans discounts to make coding
             education more accessible to those who&apos;ve worn the uniform and served our country.
+            <br />
             <b>Apply for a scholarship with our partners now and get coding:</b>
           </p>
-
-          <LinkButton
-            text="Add your code school &raquo;"
-            theme="red"
-            link="https://github.com/OperationCode/operationcode/blob/master/CONTRIBUTING.md"
-          />
         </Section>
       </div>
     );
