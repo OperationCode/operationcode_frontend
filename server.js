@@ -5,10 +5,10 @@ const path = require('path');
 const app = express();
 
 app.use((req, res, next) => {
-  if (!req.secure) {
-    return res.redirect(`https://${req.headers.host}${req.url}`);
+  if (req.headers['x-forwarded-proto'] === 'https') {
+    return next();
   }
-  return next();
+  return res.redirect(`https://${req.headers.host}${req.url}`);
 });
 
 app.use(express.static('./build'));
