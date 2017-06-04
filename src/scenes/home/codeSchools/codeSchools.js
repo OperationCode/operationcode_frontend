@@ -10,7 +10,7 @@ export default class codeSchools extends Component {
       <Section title="Code Schools" theme="white">
         <h2 className={styles.headLine}> Code Schools prepare aspiring programmers for new careers in software development.</h2>
 
-        <p className={styles.paragraph}> Code schools are accelerated learning programs that will prepare you for a career in software development. <br /> Each school listed below ranges in length, vary in tuition costs, and in programming languages. Desirable from an employer&#39;s standpoint, code schools are founded by software developers who saw a need for more programmers and aspired to teach the next generation.
+        <p className={styles.paragraph}> Code schools are accelerated learning programs that will prepare you for a career in software development. <br /> Each school listed below ranges in length, vary in tuition costs, and in programming languages. Desirable from an employer&#39;s standpoint, <br /> code schools are founded by software developers who saw a need for more programmers and aspired to teach the next generation.
         </p>
 
         <p className={styles.paragraph}>
