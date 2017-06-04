@@ -33,7 +33,7 @@ class ApprovedSchools extends Component {
         headingLines={false}
         margin
       >
-        <div className="vaSchools">
+        <div className={styles.vaSchools}>
           {vaSchools}
         </div>
 
