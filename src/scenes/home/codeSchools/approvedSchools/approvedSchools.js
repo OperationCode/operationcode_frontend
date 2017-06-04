@@ -18,14 +18,20 @@ class ApprovedSchools extends Component {
     };
 
     gettingSchoolData.then(data =>
-       this.setState({ vaSchools: data.va_approved })
+      this.setState({ vaSchools: data.va_approved })
     );
   }
 
   render() {
-    const vaSchools = !this.state.vaSchools ? null :
-                      this.state.vaSchools.map(s =>
-                        <SchoolCard schoolName={s.name} schoolLocation={s.address1} />
+    const vaSchools = !this.state.vaSchools ? null : this.state.vaSchools.map(s =>
+                        (
+                          <SchoolCard
+                            schoolName={s.name}
+                            schoolAddress={s.address1}
+                            schoolCity={s.city}
+                            schoolState={s.state}
+                          />
+                        )
                       );
     return (
       <Section
