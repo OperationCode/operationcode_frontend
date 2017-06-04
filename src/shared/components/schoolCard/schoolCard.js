@@ -17,7 +17,7 @@ class SchoolCard extends Component {
             <span className={styles.schoolLocation}>
               {this.props.schoolAddress}
               <br />
-              {this.props.schoolCity}, {this.props.schoolState}
+              {this.props.schoolCity} {this.props.schoolState}
             </span>
           </p>
 

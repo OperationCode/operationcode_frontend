@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Section from 'shared/components/section/section';
+import SchoolCard from 'shared/components/schoolCard/schoolCard';
 import styles from './partnerSchools.css';
 
 class PartnerSchools extends Component {
@@ -27,6 +28,71 @@ class PartnerSchools extends Component {
           code schools around the country. <b>Apply for a scholarship with our partners now and
           get coding:</b>
         </p>
+
+        <div className={styles.partnerSchools}>
+          <SchoolCard
+            schoolName="Thinkful (Online, HQ in NYC)"
+            link="http://www.thinkful.com"
+            schoolAddress="304 Hudson Street"
+            schoolCity="New York"
+            schoolState="NY"
+            logo="https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/thinkful.jpg"
+            GI="No"
+            fullTime="Full Time"
+            hardware="No"
+          />
+          <SchoolCard
+            schoolName="Sabio"
+            link="http://sabio.la/veterans"
+            schoolAddress="400 Corporate Pointe"
+            schoolCity="Culver City"
+            schoolState="CA"
+            logo="https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/sabio.jpg"
+            GI="Yes"
+            fullTime="Full Time"
+            hardware="No"
+          />
+          <SchoolCard
+            schoolName="The Flatiron School"
+            link="http://flatironschool.com/"
+            schoolAddress="11 Broadway, Suite 260"
+            schoolCity="New York"
+            schoolState="NY"
+            logo="https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/flatiron_school.jpg"
+            GI="No"
+            fullTime="Full Time"
+            hardware="No"
+          />
+          <SchoolCard
+            schoolName="Startup Institute"
+            link="https://www.startupinstitute.com/new-york/"
+            schoolAddress="25 Broadway, 10th Floor"
+            schoolCity="New York"
+            schoolState="NY"
+            logo="https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/startup_institute.jpg"
+            GI="No"
+            fullTime="Full Time"
+            hardware="No"
+          />
+          <SchoolCard
+            schoolName="Launch School"
+            link="https://launchschool.com/blog/operation-code-scholarship/"
+            schoolAddress="Online"
+            logo="https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/startup_institute.jpg"
+            GI="No"
+            fullTime="Self Driven"
+            hardware="No"
+          />
+          <SchoolCard
+            schoolName="Bloc"
+            link="http://try.bloc.io/operation-code-bootcamp-scholarship/"
+            schoolAddress="Online"
+            logo="https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/startup_institute.jpg"
+            GI="No"
+            fullTime="Self Driven"
+            hardware="No"
+          />
+        </div>
 
         <div className={styles.noteForSchoolReps}>
           <p>

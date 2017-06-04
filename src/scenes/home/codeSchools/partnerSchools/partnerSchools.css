@@ -3,3 +3,10 @@
   font-size: 1.2em;
   margin: 25px;
 }
+
+.partnerSchools {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+}
