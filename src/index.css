@@ -22,6 +22,11 @@ h1, h2, h3, h4, h5, h6, a, button {
   font-family: 'PF Din Display'
 }
 
+h1, h2, h3, h4, h5, h6 {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+
 /*16px*/
 body {
   font-size: 1rem;
