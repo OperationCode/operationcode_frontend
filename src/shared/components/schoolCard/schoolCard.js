@@ -12,7 +12,7 @@ class SchoolCard extends Component {
 
         <div className={styles.text}>
           <p>
-            <span className={styles.schoolName}>{this.props.schoolName}</span>
+            <span className={styles.schoolName}><a href={this.props.link}>{this.props.schoolName}</a></span>
             <br />
             <span className={styles.schoolLocation}>
               {this.props.schoolAddress}
@@ -36,6 +36,7 @@ class SchoolCard extends Component {
 
 SchoolCard.propTypes = {
   alt: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
   schoolName: PropTypes.string.isRequired,
   schoolAddress: PropTypes.string.isRequired,
   schoolCity: PropTypes.string.isRequired,

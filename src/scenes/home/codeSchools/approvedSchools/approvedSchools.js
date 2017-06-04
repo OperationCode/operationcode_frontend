@@ -28,6 +28,7 @@ class ApprovedSchools extends Component {
                         (
                           <SchoolCard
                             schoolName={s.name}
+                            link={s.url}
                             schoolAddress={s.address1}
                             schoolCity={s.city}
                             schoolState={s.state}
