@@ -67,4 +67,6 @@ class CodeSchools extends Component {
   }
 }
 
+// TODO: Current scroll anchors do not work with file structure - Fix 'em
+
 export default CodeSchools;
