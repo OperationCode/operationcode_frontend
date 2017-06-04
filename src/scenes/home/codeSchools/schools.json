@@ -1,655 +1,585 @@
 {
-    "va_approved": [
-        {
-            "name": "Nashville Software School",
-            "url": "http://nashvillesoftwareschool.com/",
-            "address1": "500 Interstate Blvd South,",
-            "address2": "Suite 300",
-            "city": "Nashville,",
-            "state": "TN",
-            "zip": "37210",
-            "va_accepted": "true",
+    "va_approved": [{
+        "name": "Nashville Software School",
+        "url": "http://nashvillesoftwareschool.com/",
+        "address1": "500 Interstate Blvd South",
+        "address2": "Suite 300",
+        "city": "Nashville",
+        "state": "TN",
+        "zip": "37210",
+        "va_accepted": "true",
+        "full_time": "true",
+        "hardware_included": "false"
+    }, {
+        "name": "Sabio",
+        "url": "http://sabio.la/veterans",
+        "address1": "400 Corporate Pointe",
+        "city": "Culver City",
+        "state": "CA",
+        "zip": "90230",
+        "va_accepted": "true",
+        "full_time": "true",
+        "hardware_included": "false",
+        "notes": "Sabio enables Operation Code veterans to learn the skills needed to secure a full-time position in an awesome tech company in six months all while earning college credits towards an undergraduate degree. The New GI Bill is an option for non-BA degree holders."
+    }, {
+        "name": "RefactorU",
+        "url": "http://refactoru.com",
+        "address1": "5717 Arapahoe Avenue",
+        "city": "Boulder",
+        "state": "CO",
+        "zip": "80303",
+        "va_accepted": "true",
+        "full_time": "true",
+        "hardware_included": "false",
+        "notes": "RefactorU is proud and honored to announce that its Web Development Bootcamp has been approved by the <a href=\"http://www.benefits.va.gov/gibill/\">Colorado State Approving Agency for Veterans Education & Training</a>. Students eligible for the The Post-9/11 GI Bill, Montgomery GI Bill (Active Duty/Selected Reserve), Reserve Educational Assistance Program, Veterans Educational Assistance Program, and Survivors’ and Dependents’ Educational Assistance Program may be eligible to apply those benefits to RefactorU’s Web Application Development Bootcamp."
+    }, {
+        "name": "Turing School of Software & Design",
+        "url": "http://turing.io/",
+        "address1": "1331 17th Street",
+        "address2": "Suite LL100",
+        "city": "Denver",
+        "state": "CO",
+        "zip": "80202",
+        "va_accepted": "true",
+        "full_time": "true",
+        "hardware_included": "false"
+    }, {
+        "name": "Deep Dive Fullstack",
+        "url": "http://stemuluscenter.org/deep-dive-fullstack",
+        "address1": "20 1st Plaza Center Northwest",
+        "city": "Albuquerque",
+        "state": "NM",
+        "zip": "87102",
+        "va_accepted": "true",
+        "full_time": "true",
+        "hardware_included": "false"
+    }, {
+        "name": "Code Fellows",
+        "url": "https://www.codefellows.org",
+        "address1": "511 Boren Avenue North",
+        "city": "Seattle",
+        "state": "WA",
+        "zip": "98109",
+        "va_accepted": "true",
+        "full_time": "true",
+        "hardware_included": "false"
+    }, {
+        "name": "Codeup",
+        "url": "http://codeup.com/",
+        "address1": "600 Navarro Street",
+        "address2": "#350",
+        "city": "San Antonio",
+        "state": "TX",
+        "zip": "78205",
+        "va_accepted": "true",
+        "full_time": "true",
+        "hardware_included": "false"
+    }, {
+        "name": "Galvanize",
+        "url": "https://new.galvanize.com/denver/web-development",
+        "address1": "1062 Delaware Street",
+        "city": "Denver",
+        "state": "CO",
+        "zip": "80204",
+        "va_accepted": "true",
+        "full_time": "true",
+        "hardware_included": "false"
+    }],
+    "by_state": {
+        "California": [{
+            "name": "Dev Bootcamp",
+            "url": "http://devbootcamp.com",
+            "address1": "633 Folsom Street (at Hawthorne)",
+            "address2": "6th Floor",
+            "city": "San Francisco",
+            "state": "CA",
+            "zip": "94107",
+            "va_accepted": "false",
             "full_time": "true",
             "hardware_included": "false"
-        },
-        {
+        }, {
+            "name": "Galvanize",
+            "url": "https://new.galvanize.com/san-francisco/web-development",
+            "address1": "44 Tehama Street",
+            "city": "San Francisco",
+            "state": "CA",
+            "zip": "94015",
+            "va_accepted": "false",
+            "full_time": "true",
+            "hardware_included": "false"
+        }, {
+            "name": "Hack Reactor",
+            "url": "http://www.hackreactor.com",
+            "address1": "944 Market Street",
+            "address2": "8th Floor",
+            "city": "San Francisco",
+            "state": "CA",
+            "zip": "94102",
+            "va_accepted": "false",
+            "full_time": "true",
+            "hardware_included": "false"
+        }, {
+            "name": "MakerSquare",
+            "url": "http://www.makersquare.com",
+            "address1": "611 Mission Street",
+            "address2": "2nd Floor",
+            "city": "San Francisco",
+            "state": "CA",
+            "zip": "94105",
+            "va_accepted": "false",
+            "full_time": "true",
+            "hardware_included": "false"
+        }, {
             "name": "Sabio",
             "url": "http://sabio.la/veterans",
-            "address1": "400 Corporate Pointe,",
-            "city": "Culver City,",
+            "address1": "400 Corporate Pointe",
+            "city": "Culver City",
             "state": "CA",
             "zip": "90230",
             "va_accepted": "true",
             "full_time": "true",
             "hardware_included": "false",
             "notes": "Sabio enables Operation Code veterans to learn the skills needed to secure a full-time position in an awesome tech company in six months all while earning college credits towards an undergraduate degree. The New GI Bill is an option for non-BA degree holders."
-        },
-        {
+        }, {
+            "name": "Tradecraft",
+            "url": "http://tradecrafted.com/",
+            "address1": "400 Corporate Pointe",
+            "city": "San Fransisco",
+            "state": "CA",
+            "zip": "94105",
+            "va_accepted": "false",
+            "full_time": "true",
+            "hardware_included": "false"
+        }, {
+            "name": "App Academy",
+            "url": "https://www.appacademy.io/",
+            "address1": "160 Spear Street",
+            "city": "San Francisco",
+            "state": "CA",
+            "zip": "94105",
+            "va_accepted": "false",
+            "full_time": "true",
+            "hardware_included": "false",
+            "notes": "Deferred financing system (20% of your first year's salary)"
+        }],
+        "Colorado": [{
+            "name": "Galvanize",
+            "url": "https://new.galvanize.com/boulder/web-development",
+            "address1": "1023 Walnut Street",
+            "city": "Boulder",
+            "state": "CO",
+            "zip": "80302",
+            "va_accepted": "false",
+            "full_time": "true",
+            "hardware_included": "false"
+        }, {
             "name": "RefactorU",
             "url": "http://refactoru.com",
-            "address1": "5717 Arapahoe Avenue,",
-            "city": "Boulder,",
+            "address1": "5717 Arapahoe Avenue",
+            "city": "Boulder",
             "state": "CO",
             "zip": "80303",
             "va_accepted": "true",
             "full_time": "true",
             "hardware_included": "false",
             "notes": "RefactorU is proud and honored to announce that its Web Development Bootcamp has been approved by the <a href=\"http://www.benefits.va.gov/gibill/\">Colorado State Approving Agency for Veterans Education & Training</a>. Students eligible for the The Post-9/11 GI Bill, Montgomery GI Bill (Active Duty/Selected Reserve), Reserve Educational Assistance Program, Veterans Educational Assistance Program, and Survivors’ and Dependents’ Educational Assistance Program may be eligible to apply those benefits to RefactorU’s Web Application Development Bootcamp."
-        },
-        {
+        }, {
             "name": "Turing School of Software & Design",
             "url": "http://turing.io/",
-            "address1": "1331 17th Street,",
+            "address1": "1331 17th Street",
             "address2": "Suite LL100",
-            "city": "Denver,",
+            "city": "Denver",
             "state": "CO",
             "zip": "80202",
             "va_accepted": "true",
             "full_time": "true",
             "hardware_included": "false"
-        },
-        {
-            "name": "Deep Dive Fullstack",
-            "url": "http://stemuluscenter.org/deep-dive-fullstack",
-            "address1": "20 1st Plaza Center NW,",
-            "city": "Albuquerque,",
-            "state": "NM",
-            "zip": "87102",
-            "va_accepted": "true",
+        }, {
+            "name": "DeVry Bootcamp",
+            "url": "http://partner.devry.edu/bootcamp/",
+            "address1": "1870 W 122nd Avenue",
+            "city": "Westminster",
+            "state": "CO",
+            "zip": "80234",
+            "va_accepted": "false",
             "full_time": "true",
-            "hardware_included": "false"
-        },
-        {
-            "name": "Code Fellows",
-            "url": "https://www.codefellows.org",
-            "address1": "511 Boren Avenue North,",
-            "city": "Seattle,",
-            "state": "WA",
-            "zip": "98109",
-            "va_accepted": "true",
-            "full_time": "true",
-            "hardware_included": "false"
-        },
-        {
-            "name": "Codeup",
-            "url": "http://codeup.com/",
-            "address1": "600 Navarro Street,",
-            "address2": "#350",
-            "city": "San Antonio,",
-            "state": "TX",
-            "zip": "78205",
-            "va_accepted": "true",
-            "full_time": "true",
-            "hardware_included": "false"
-        },
-        {
+            "hardware_included": "true"
+        }, {
             "name": "Galvanize",
             "url": "https://new.galvanize.com/denver/web-development",
-            "address1": "1062 Delaware Street,",
-            "city": "Denver,",
+            "address2": "1062 Delaware Street",
+            "city": "Denver",
             "state": "CO",
             "zip": "80204",
             "va_accepted": "true",
             "full_time": "true",
             "hardware_included": "false"
-        }
-    ],
-    "by_state": {
-        "California": [
-            {
-                "name": "Dev Bootcamp",
-                "url": "http://devbootcamp.com",
-                "address1": "633 Folsom Street (at Hawthorne),",
-                "address2": "6th Floor",
-                "city": "San Francisco,",
-                "state": "CA",
-                "zip": "94107",
-                "va_accepted": "false",
-                "full_time": "true",
-                "hardware_included": "false"
-            },
-            {
-                "name": "Galvanize",
-                "url": "https://new.galvanize.com/san-francisco/web-development",
-                "address1": "44 Tehama Street,",
-                "city": "San Francisco,",
-                "state": "CA",
-                "zip": "94015",
-                "va_accepted": "false",
-                "full_time": "true",
-                "hardware_included": "false"
-            },
-            {
-                "name": "Hack Reactor",
-                "url": "http://www.hackreactor.com",
-                "address1": "944 Market Street,",
-                "address2": "8th Floor",
-                "city": "San Francisco,",
-                "state": "CA",
-                "zip": "94102",
-                "va_accepted": "false",
-                "full_time": "true",
-                "hardware_included": "false"
-            },
-            {
-                "name": "MakerSquare",
-                "url": "http://www.makersquare.com",
-                "address1": "611 Mission Street,",
-                "address2": "2nd Floor",
-                "city": "San Francisco,",
-                "state": "CA",
-                "zip": "94105",
-                "va_accepted": "false",
-                "full_time": "true",
-                "hardware_included": "false"
-            },
-            {
-                "name": "Sabio",
-                "url": "http://sabio.la/veterans",
-                "address1": "400 Corporate Pointe,",
-                "city": "Culver City,",
-                "state": "CA",
-                "zip": "90230",
-                "va_accepted": "true",
-                "full_time": "true",
-                "hardware_included": "false",
-                "notes": "Sabio enables Operation Code veterans to learn the skills needed to secure a full-time position in an awesome tech company in six months all while earning college credits towards an undergraduate degree. The New GI Bill is an option for non-BA degree holders."
-            },
-            {
-                "name": "Tradecraft",
-                "url": "http://tradecrafted.com/",
-                "address1": "400 Corporate Pointe,",
-                "city": "San Fransisco,",
-                "state": "CA",
-                "zip": "94105",
-                "va_accepted": "false",
-                "full_time": "true",
-                "hardware_included": "false"
-            },
-            {
-                "name": "App Academy",
-                "url": "https://www.appacademy.io/",
-                "address1": "160 Spear Street,",
-                "city": "San Francisco,",
-                "state": "CA",
-                "zip": "94105",
-                "va_accepted": "false",
-                "full_time": "true",
-                "hardware_included": "false",
-                "notes": "Deferred financing system (20% of your first year's salary)"
-            }
-        ],
-        "Colorado": [
-            {
-                "name": "Galvanize",
-                "url": "https://new.galvanize.com/boulder/web-development",
-                "address1": "1023 Walnut Street",
-                "city": "Boulder,",
-                "state": "CO",
-                "zip": "80302",
-                "va_accepted": "false",
-                "full_time": "true",
-                "hardware_included": "false"
-            },
-            {
-                "name": "RefactorU",
-                "url": "http://refactoru.com",
-                "address1": "5717 Arapahoe Avenue,",
-                "city": "Boulder,",
-                "state": "CO",
-                "zip": "80303",
-                "va_accepted": "true",
-                "full_time": "true",
-                "hardware_included": "false",
-                "notes": "RefactorU is proud and honored to announce that its Web Development Bootcamp has been approved by the <a href=\"http://www.benefits.va.gov/gibill/\">Colorado State Approving Agency for Veterans Education & Training</a>. Students eligible for the The Post-9/11 GI Bill, Montgomery GI Bill (Active Duty/Selected Reserve), Reserve Educational Assistance Program, Veterans Educational Assistance Program, and Survivors’ and Dependents’ Educational Assistance Program may be eligible to apply those benefits to RefactorU’s Web Application Development Bootcamp."
-            },
-            {
-                "name": "Turing School of Software & Design",
-                "url": "http://turing.io/",
-                "address1": "1331 17th Street,",
-                "address2": "Suite LL100",
-                "city": "Denver,",
-                "state": "CO",
-                "zip": "80202",
-                "va_accepted": "true",
-                "full_time": "true",
-                "hardware_included": "false"
-            },
-            {
-                "name": "DeVry Bootcamp",
-                "url": "http://partner.devry.edu/bootcamp/",
-                "address1": "1870 W 122nd Avenue,",
-                "city": "Westminster,",
-                "state": "CO",
-                "zip": "80234",
-                "va_accepted": "false",
-                "full_time": "true",
-                "hardware_included": "true"
-            },
-            {
-                "name": "Galvanize",
-                "url": "https://new.galvanize.com/denver/web-development",
-                "address2": "1062 Delaware Street,",
-                "city": "Denver,",
-                "state": "CO",
-                "zip": "80204",
-                "va_accepted": "true",
-                "full_time": "true",
-                "hardware_included": "false"
-            }
-        ],
-        "Florida": [
-            {
-                "name": "The Iron Yard",
-                "url": "https://www.theironyard.com/locations/orlando.html",
-                "address1": "101 S. Garland Avenue,",
-                "address2": "Suite 102",
-                "city": "Orlando,",
-                "state": "FL",
-                "zip": "32801",
-                "va_accepted": "false",
-                "full_time": "true",
-                "hardware_included": "false"
-            },
-            {
-                "name": "The Iron Yard",
-                "url": "http://theironyard.com/locations/tampa-st-petersburg",
-                "address1": "260 1st Avenue South,",
-                "city": "Tampa Bay,",
-                "state": "FL",
-                "zip": "33701",
-                "va_accepted": "false",
-                "full_time": "true",
-                "hardware_included": "false"
-            }
-        ],
-        "Georgia": [
-            {
-                "name": "The Iron Yard",
-                "url": "http://theironyard.com/locations/atlanta/",
-                "address1": "3423 Piedmont Road Northeast,",
-                "city": "Atlanta,",
-                "state": "GA",
-                "zip": "30305",
-                "va_accepted": "false",
-                "full_time": "true",
-                "hardware_included": "false"
-            },
-            {
-                "name": "General Assembly",
-                "url": "https://generalassemb.ly/education?where=atlanta",
-                "address1": "675 Ponce de Leon Avenue Northeast,",
-                "city": "Atlanta,",
-                "state": "GA",
-                "zip": "30308",
-                "va_accepted": "false",
-                "full_time": "true",
-                "hardware_included": "false"
-            }
-        ],
-        "Illinois": [
-            {
-                "name": "Code Platoon",
-                "url": "http://www.codeplatoon.org",
-                "address1": "444 North Wabash Avenue,",
-                "city": "Chicago,",
-                "state": "IL",
-                "zip": "60654",
-                "va_accepted": "false",
-                "full_time": "true",
-                "hardware_included": "false"
-            },
-            {
-                "name": "Dev Bootcamp",
-                "url": "http://devbootcamp.com",
-                "address1": "351 West Hubbard Street (at Orleans),",
-                "address2": "Suite 701",
-                "city": "Chicago,",
-                "state": "IL",
-                "zip": "60605",
-                "va_accepted": "false",
-                "full_time": "true",
-                "hardware_included": "false"
-            },
-            {
-                "name": "The Starter League",
-                "url": "http://www.starterleague.com/",
-                "address1": "30 N Racine Avenue,",
-                "city": "Chicago,",
-                "state": "IL",
-                "zip": "60607",
-                "va_accepted": "false",
-                "full_time": "true",
-                "hardware_included": "false"
-            },
-            {
-                "name": "Fullstack Academy at Chicago",
-                "url": "http://fullstackacademy.com",
-                "address1": "222 West Merchandise Mart Plaza,",
-                "city": "Chicago,",
-                "state": "IL",
-                "zip": "60654",
-                "va_accepted": "false",
-                "full_time": "true",
-                "hardware_included": "false"
-            }
-        ],
-        "Louisiana": [
-            {
-                "name": "Operation Spark",
-                "url": "https://operationspark.org",
-                "address1": "748 Camp Street,",
-                "address2": "2nd Floor",
-                "city": "New Orleans,",
-                "state": "LA",
-                "zip": "70130",
-                "va_accepted": "false",
-                "full_time": "true",
-                "hardware_included": "false"
-            }
-        ],
-        "Massachussets": [
-            {
-                "name": "Startup Institute",
-                "url": "https://www.startupinstitute.com/boston/",
-                "address1": "50 Milk Street,",
-                "address2": "14th Floor",
-                "city": "Boston,",
-                "state": "MA",
-                "zip": "02109",
-                "va_accepted": "false",
-                "full_time": "true",
-                "hardware_included": "false"
-            }
-        ],
-        "North Carolina": [
-            {
-                "name": "The Iron Yard",
-                "url": "http://theironyard.com/locations/raleigh-durham/",
-                "address1": "334 Blackwell Street,",
-                "address2": "Suite B017",
-                "city": "Durham,",
-                "state": "NC",
-                "zip": "27701",
-                "va_accepted": "false",
-                "full_time": "true",
-                "hardware_included": "false"
-            }
-        ],
-        "New Mexico": [
-            {
-                "name": "Deep Dive Fullstack (Albuquerque, New Mexico)",
-                "url": "http://stemuluscenter.org/deep-dive-fullstack",
-                "address1": "20 1st Plaza Center Northwest",
-                "city": "Albuquerque,",
-                "state": "NM",
-                "zip": "87102",
-                "va_accepted": "true",
-                "full_time": "true",
-                "hardware_included": "false"
-            }
-        ],
-        "New York": [
-            {
-                "name": "Dev Bootcamp",
-                "url": "http://devbootcamp.com/",
-                "address1": "48 Wall Street,",
-                "address2": "15th Floor",
-                "city": "New York,",
-                "state": "NY",
-                "zip": "10005",
-                "va_accepted": "false",
-                "full_time": "true",
-                "hardware_included": "false"
-            },
-            {
-                "name": "Fullstack Academy,",
-                "url": "http://fullstackacademy.com",
-                "address1": "5 Hanover Square,",
-                "address2": "25th Floor",
-                "city": "New York,",
-                "state": "NY",
-                "zip": "10004",
-                "va_accepted": "false",
-                "full_time": "true",
-                "hardware_included": "false"
-            },
-            {
-                "name": "The Flatiron School",
-                "url": "http://flatironschool.com/",
-                "address1": "11 Broadway,",
-                "address2": "Suite 260",
-                "city": "New York,",
-                "state": "NY",
-                "zip": "10004",
-                "va_accepted": "false",
-                "full_time": "true",
-                "hardware_included": "false"
-            },
-            {
-                "name": "Thinkful (Online, HQ in NYC)",
-                "url": "http://www.thinkful.com",
-                "address1": "304 Hudson Street,",
-                "address2": "5th Floor",
-                "city": "New York,",
-                "state": "NY",
-                "zip": "10013",
-                "va_accepted": "false",
-                "full_time": "true",
-                "hardware_included": "false"
-            },
-            {
-                "name": "Tradecraft",
-                "url": "http://tradecrafted.com",
-                "address1": "304 Hudson Street,",
-                "address2": "5th Floor",
-                "city": "New York,",
-                "state": "NY",
-                "zip": "10004",
-                "va_accepted": "false",
-                "full_time": "true",
-                "hardware_included": "false"
-            },
-            {
-                "name": "Startup Institute",
-                "url": "https://www.startupinstitute.com/new-york/",
-                "address1": "25 Broadway,",
-                "address2": "10th Floor",
-                "city": "New York,",
-                "state": "NY",
-                "zip": "10004",
-                "va_accepted": "false",
-                "full_time": "true",
-                "hardware_included": "false"
-            }
-        ],
-        "Ohio": [
-            {
-                "name": "Tech Elevator",
-                "url": "http://www.techelevator.com/",
-                "address1": "7100 Euclid Avenue,",
-                "city": "Cleveland,",
-                "state": "OH",
-                "zip": "44103",
-                "va_accepted": "false",
-                "full_time": "true",
-                "hardware_included": "true"
-            },
-            {
-                "name": "Tech Elevator",
-                "url": "http://www.techelevator.com/",
-                "address1": "1275 Kinnear Road,",
-                "address2": "Suite 121",
-                "city": "Columbus,",
-                "state": "OH",
-                "zip": "43212",
-                "va_accepted": "false",
-                "full_time": "true",
-                "hardware_included": "true"
-            }
-        ],
-        "Oregon": [
-            {
-                "name": "Code Fellows",
-                "url": "https://www.codefellows.org/blog/code-fellows-is-coming-to-portland-this-fall",
-                "address1": "920 Southwest Third Avenue,",
-                "address2": "2nd Floor",
-                "city": "Portland,",
-                "state": "OR",
-                "zip": "97204",
-                "va_accepted": "false",
-                "full_time": "true",
-                "hardware_included": "false"
-            },
-            {
-                "name": "Epicodus",
-                "url": "http://www.epicodus.com/",
-                "address1": "208 Southwest 5th Avenue,",
-                "city": "Portland,",
-                "state": "OR",
-                "zip": "97214",
-                "va_accepted": "false",
-                "full_time": "true",
-                "hardware_included": "false",
-                "notes": "(Also see, <a href=\"http://www.learnhowtoprogram.com/lessons/learn-how-to-program\">Learn how to program</a>.)"
-            },
-            {
-                "name": "PDX Code Guild",
-                "url": "http://pdxcodeguild.com",
-                "address1": "2626 SW Corbett Avenue,",
-                "address2": "Suite 100",
-                "city": "Portland,",
-                "state": "OR",
-                "zip": "97201",
-                "va_accepted": "false",
-                "full_time": "true",
-                "hardware_included": "false"
-            }
-        ],
-        "South Carolina": [
-            {
-                "name": "The Iron Yard",
-                "url": "http://theironyard.com/locations/greenville",
-                "address1": "510 Mill Street,",
-                "city": "Mount Pleasant,",
-                "state": "SC",
-                "zip": "29464",
-                "va_accepted": "false",
-                "full_time": "true",
-                "hardware_included": "false"
-            },
-            {
-                "name": "The Iron Yard",
-                "url": "http://theironyard.com/locations/greenville",
-                "address1": "411 University Ridge,",
-                "address2": "Suite 220",
-                "city": "Greenville,",
-                "state": "SC",
-                "zip": "29601",
-                "va_accepted": "false",
-                "full_time": "true",
-                "hardware_included": "false"
-            }
-        ],
-        "Tennessee": [
-            {
-                "name": "Nashville Software School",
-                "url": "http://nashvillesoftwareschool.com/",
-                "address1": "500 Interstate Boulevard South,",
-                "address2": "Suite 300",
-                "city": "Nashville,",
-                "state": "TN",
-                "zip": "37210",
-                "va_accepted": "true",
-                "full_time": "true",
-                "hardware_included": "false"
-            }
-        ],
-        "Texas": [
-            {
-                "name": "The Iron Yard",
-                "url": "http://theironyard.com/locations/austin",
-                "address1": "3601 South Congress Avenue,",
-                "address2": "Suite C304",
-                "city": "Austin,",
-                "state": "TX",
-                "zip": "78704",
-                "va_accepted": "false",
-                "full_time": "true",
-                "hardware_included": "false"
-            },
-            {
-                "name": "The Iron Yard",
-                "url": "http://theironyard.com/locations/houston",
-                "address1": "1121 Delano Street,",
-                "city": "Houstin,",
-                "state": "TX",
-                "zip": "77003",
-                "va_accepted": "false",
-                "full_time": "true",
-                "hardware_included": "false"
-            },
-            {
-                "name": "MakerSquare",
-                "url": "http://www.makersquare.com/",
-                "address1": "716 Congress Avenue,",
-                "city": "Austin",
-                "state": "TX",
-                "zip": "78701",
-                "va_accepted": "false",
-                "full_time": "true",
-                "hardware_included": "false"
-            },
-            {
-                "name": "Codeup",
-                "url": "http://codeup.com/",
-                "address1": "600 Navarro Street,",
-                "address2": "#350",
-                "city": "San Antonio,",
-                "state": "TX",
-                "zip": "78205",
-                "va_accepted": "true",
-                "full_time": "true",
-                "hardware_included": "false"
-            }
-        ],
-        "Washington": [
-            {
-                "name": "Ada Developers Academy",
-                "url": "http://adadevelopersacademy.org",
-                "address1": "1215 4th Avenue,",
-                "address2": "Suite 1050",
-                "city": "Seattle,",
-                "state": "WA",
-                "zip": "98109",
-                "va_accepted": "false",
-                "full_time": "true",
-                "hardware_included": "false",
-                "notes": "<strong>Women-only and tuition-free</strong>. One-year program."
-            },
-            {
-                "name": "Code Fellows",
-                "url": "https://www.codefellows.org",
-                "address1": "511 Boren Avenue North,",
-                "city": "Seattle,",
-                "state": "WA",
-                "zip": "98109",
-                "va_accepted": "true",
-                "full_time": "true",
-                "hardware_included": "false"
-            },
-            {
-                "name": "General Assembly",
-                "url": "https://generalassemb.ly/education?where=seattle",
-                "address1": "1218 3rd Avenue,",
-                "address2": "3rd Floor",
-                "city": "Seattle,",
-                "state": "WA",
-                "zip": "98109",
-                "va_accepted": "false",
-                "full_time": "true",
-                "hardware_included": "false"
-            }
-        ]
+        }],
+        "Florida": [{
+            "name": "The Iron Yard",
+            "url": "https://www.theironyard.com/locations/orlando.html",
+            "address1": "101 S. Garland Avenue",
+            "address2": "Suite 102",
+            "city": "Orlando",
+            "state": "FL",
+            "zip": "32801",
+            "va_accepted": "false",
+            "full_time": "true",
+            "hardware_included": "false"
+        }, {
+            "name": "The Iron Yard",
+            "url": "http://theironyard.com/locations/tampa-st-petersburg",
+            "address1": "260 1st Avenue South",
+            "city": "Tampa Bay",
+            "state": "FL",
+            "zip": "33701",
+            "va_accepted": "false",
+            "full_time": "true",
+            "hardware_included": "false"
+        }],
+        "Georgia": [{
+            "name": "The Iron Yard",
+            "url": "http://theironyard.com/locations/atlanta/",
+            "address1": "3423 Piedmont Road Northeast",
+            "city": "Atlanta",
+            "state": "GA",
+            "zip": "30305",
+            "va_accepted": "false",
+            "full_time": "true",
+            "hardware_included": "false"
+        }, {
+            "name": "General Assembly",
+            "url": "https://generalassemb.ly/education?where=atlanta",
+            "address1": "675 Ponce de Leon Avenue Northeast",
+            "city": "Atlanta",
+            "state": "GA",
+            "zip": "30308",
+            "va_accepted": "false",
+            "full_time": "true",
+            "hardware_included": "false"
+        }],
+        "Illinois": [{
+            "name": "Code Platoon",
+            "url": "http://www.codeplatoon.org",
+            "address1": "444 North Wabash Avenue",
+            "city": "Chicago",
+            "state": "IL",
+            "zip": "60654",
+            "va_accepted": "false",
+            "full_time": "true",
+            "hardware_included": "false"
+        }, {
+            "name": "Dev Bootcamp",
+            "url": "http://devbootcamp.com",
+            "address1": "351 West Hubbard Street (at Orleans)",
+            "address2": "Suite 701",
+            "city": "Chicago",
+            "state": "IL",
+            "zip": "60605",
+            "va_accepted": "false",
+            "full_time": "true",
+            "hardware_included": "false"
+        }, {
+            "name": "The Starter League",
+            "url": "http://www.starterleague.com/",
+            "address1": "30 N Racine Avenue",
+            "city": "Chicago",
+            "state": "IL",
+            "zip": "60607",
+            "va_accepted": "false",
+            "full_time": "true",
+            "hardware_included": "false"
+        }, {
+            "name": "Fullstack Academy at Chicago",
+            "url": "http://fullstackacademy.com",
+            "address1": "222 West Merchandise Mart Plaza",
+            "city": "Chicago",
+            "state": "IL",
+            "zip": "60654",
+            "va_accepted": "false",
+            "full_time": "true",
+            "hardware_included": "false"
+        }],
+        "Louisiana": [{
+            "name": "Operation Spark",
+            "url": "https://operationspark.org",
+            "address1": "748 Camp Street",
+            "address2": "2nd Floor",
+            "city": "New Orleans",
+            "state": "LA",
+            "zip": "70130",
+            "va_accepted": "false",
+            "full_time": "true",
+            "hardware_included": "false"
+        }],
+        "Massachussets": [{
+            "name": "Startup Institute",
+            "url": "https://www.startupinstitute.com/boston/",
+            "address1": "50 Milk Street",
+            "address2": "14th Floor",
+            "city": "Boston",
+            "state": "MA",
+            "zip": "02109",
+            "va_accepted": "false",
+            "full_time": "true",
+            "hardware_included": "false"
+        }],
+        "North Carolina": [{
+            "name": "The Iron Yard",
+            "url": "http://theironyard.com/locations/raleigh-durham/",
+            "address1": "334 Blackwell Street",
+            "address2": "Suite B017",
+            "city": "Durham",
+            "state": "NC",
+            "zip": "27701",
+            "va_accepted": "false",
+            "full_time": "true",
+            "hardware_included": "false"
+        }],
+        "New Mexico": [{
+            "name": "Deep Dive Fullstack (Albuquerque, New Mexico)",
+            "url": "http://stemuluscenter.org/deep-dive-fullstack",
+            "address1": "20 1st Plaza Center Northwest",
+            "city": "Albuquerque",
+            "state": "NM",
+            "zip": "87102",
+            "va_accepted": "true",
+            "full_time": "true",
+            "hardware_included": "false"
+        }],
+        "New York": [{
+            "name": "Dev Bootcamp",
+            "url": "http://devbootcamp.com/",
+            "address1": "48 Wall Street",
+            "address2": "15th Floor",
+            "city": "New York",
+            "state": "NY",
+            "zip": "10005",
+            "va_accepted": "false",
+            "full_time": "true",
+            "hardware_included": "false"
+        }, {
+            "name": "Fullstack Academy,",
+            "url": "http://fullstackacademy.com",
+            "address1": "5 Hanover Square",
+            "address2": "25th Floor",
+            "city": "New York",
+            "state": "NY",
+            "zip": "10004",
+            "va_accepted": "false",
+            "full_time": "true",
+            "hardware_included": "false"
+        }, {
+            "name": "The Flatiron School",
+            "url": "http://flatironschool.com/",
+            "address1": "11 Broadway",
+            "address2": "Suite 260",
+            "city": "New York",
+            "state": "NY",
+            "zip": "10004",
+            "va_accepted": "false",
+            "full_time": "true",
+            "hardware_included": "false"
+        }, {
+            "name": "Thinkful (Online, HQ in NYC)",
+            "url": "http://www.thinkful.com",
+            "address1": "304 Hudson Street",
+            "address2": "5th Floor",
+            "city": "New York",
+            "state": "NY",
+            "zip": "10013",
+            "va_accepted": "false",
+            "full_time": "true",
+            "hardware_included": "false"
+        }, {
+            "name": "Tradecraft",
+            "url": "http://tradecrafted.com",
+            "address1": "304 Hudson Street",
+            "address2": "5th Floor",
+            "city": "New York",
+            "state": "NY",
+            "zip": "10004",
+            "va_accepted": "false",
+            "full_time": "true",
+            "hardware_included": "false"
+        }, {
+            "name": "Startup Institute",
+            "url": "https://www.startupinstitute.com/new-york/",
+            "address1": "25 Broadway",
+            "address2": "10th Floor",
+            "city": "New York",
+            "state": "NY",
+            "zip": "10004",
+            "va_accepted": "false",
+            "full_time": "true",
+            "hardware_included": "false"
+        }],
+        "Ohio": [{
+            "name": "Tech Elevator",
+            "url": "http://www.techelevator.com/",
+            "address1": "7100 Euclid Avenue",
+            "city": "Cleveland",
+            "state": "OH",
+            "zip": "44103",
+            "va_accepted": "false",
+            "full_time": "true",
+            "hardware_included": "true"
+        }, {
+            "name": "Tech Elevator",
+            "url": "http://www.techelevator.com/",
+            "address1": "1275 Kinnear Road",
+            "address2": "Suite 121",
+            "city": "Columbus",
+            "state": "OH",
+            "zip": "43212",
+            "va_accepted": "false",
+            "full_time": "true",
+            "hardware_included": "true"
+        }],
+        "Oregon": [{
+            "name": "Code Fellows",
+            "url": "https://www.codefellows.org/blog/code-fellows-is-coming-to-portland-this-fall",
+            "address1": "920 Southwest Third Avenue",
+            "address2": "2nd Floor",
+            "city": "Portland",
+            "state": "OR",
+            "zip": "97204",
+            "va_accepted": "false",
+            "full_time": "true",
+            "hardware_included": "false"
+        }, {
+            "name": "Epicodus",
+            "url": "http://www.epicodus.com/",
+            "address1": "208 Southwest 5th Avenue",
+            "city": "Portland",
+            "state": "OR",
+            "zip": "97214",
+            "va_accepted": "false",
+            "full_time": "true",
+            "hardware_included": "false",
+            "notes": "(Also see, <a href=\"http://www.learnhowtoprogram.com/lessons/learn-how-to-program\">Learn how to program</a>.)"
+        }, {
+            "name": "PDX Code Guild",
+            "url": "http://pdxcodeguild.com",
+            "address1": "2626 SW Corbett Avenue",
+            "address2": "Suite 100",
+            "city": "Portland",
+            "state": "OR",
+            "zip": "97201",
+            "va_accepted": "false",
+            "full_time": "true",
+            "hardware_included": "false"
+        }],
+        "South Carolina": [{
+            "name": "The Iron Yard",
+            "url": "http://theironyard.com/locations/greenville",
+            "address1": "510 Mill Street",
+            "city": "Mount Pleasant",
+            "state": "SC",
+            "zip": "29464",
+            "va_accepted": "false",
+            "full_time": "true",
+            "hardware_included": "false"
+        }, {
+            "name": "The Iron Yard",
+            "url": "http://theironyard.com/locations/greenville",
+            "address1": "411 University Ridge",
+            "address2": "Suite 220",
+            "city": "Greenville",
+            "state": "SC",
+            "zip": "29601",
+            "va_accepted": "false",
+            "full_time": "true",
+            "hardware_included": "false"
+        }],
+        "Tennessee": [{
+            "name": "Nashville Software School",
+            "url": "http://nashvillesoftwareschool.com/",
+            "address1": "500 Interstate Boulevard South",
+            "address2": "Suite 300",
+            "city": "Nashville",
+            "state": "TN",
+            "zip": "37210",
+            "va_accepted": "true",
+            "full_time": "true",
+            "hardware_included": "false"
+        }],
+        "Texas": [{
+            "name": "The Iron Yard",
+            "url": "http://theironyard.com/locations/austin",
+            "address1": "3601 South Congress Avenue",
+            "address2": "Suite C304",
+            "city": "Austin",
+            "state": "TX",
+            "zip": "78704",
+            "va_accepted": "false",
+            "full_time": "true",
+            "hardware_included": "false"
+        }, {
+            "name": "The Iron Yard",
+            "url": "http://theironyard.com/locations/houston",
+            "address1": "1121 Delano Street",
+            "city": "Houstin",
+            "state": "TX",
+            "zip": "77003",
+            "va_accepted": "false",
+            "full_time": "true",
+            "hardware_included": "false"
+        }, {
+            "name": "MakerSquare",
+            "url": "http://www.makersquare.com/",
+            "address1": "716 Congress Avenue",
+            "city": "Austi",
+            "state": "TX",
+            "zip": "78701",
+            "va_accepted": "false",
+            "full_time": "true",
+            "hardware_included": "false"
+        }, {
+            "name": "Codeup",
+            "url": "http://codeup.com/",
+            "address1": "600 Navarro Street",
+            "address2": "#350",
+            "city": "San Antonio",
+            "state": "TX",
+            "zip": "78205",
+            "va_accepted": "true",
+            "full_time": "true",
+            "hardware_included": "false"
+        }],
+        "Washington": [{
+            "name": "Ada Developers Academy",
+            "url": "http://adadevelopersacademy.org",
+            "address1": "1215 4th Avenue",
+            "address2": "Suite 1050",
+            "city": "Seattle",
+            "state": "WA",
+            "zip": "98109",
+            "va_accepted": "false",
+            "full_time": "true",
+            "hardware_included": "false",
+            "notes": "<strong>Women-only and tuition-free</strong>. One-year program."
+        }, {
+            "name": "Code Fellows",
+            "url": "https://www.codefellows.org",
+            "address1": "511 Boren Avenue North",
+            "city": "Seattle",
+            "state": "WA",
+            "zip": "98109",
+            "va_accepted": "true",
+            "full_time": "true",
+            "hardware_included": "false"
+        }, {
+            "name": "General Assembly",
+            "url": "https://generalassemb.ly/education?where=seattle",
+            "address1": "1218 3rd Avenue",
+            "address2": "3rd Floor",
+            "city": "Seattle",
+            "state": "WA",
+            "zip": "98109",
+            "va_accepted": "false",
+            "full_time": "true",
+            "hardware_included": "false"
+        }]
     }
 }
