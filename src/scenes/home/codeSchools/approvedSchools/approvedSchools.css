@@ -3,3 +3,12 @@
   font-size: 1.2em;
   margin: 25px;
 }
+
+.va-schools {
+  margin: 50px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
