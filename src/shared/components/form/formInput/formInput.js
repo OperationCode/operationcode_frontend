@@ -69,4 +69,7 @@ FormInput.defaultProps = {
   intputType: "text"
 };
 
+// TODO: Add prop for icon placement on left-side of input bar
+// TODO: Decrease opacity of placeholder text
+
 export default FormInput;
