@@ -31,8 +31,12 @@ class ApprovedSchools extends Component {
                             schoolAddress={s.address1}
                             schoolCity={s.city}
                             schoolState={s.state}
+                            GI={s.va_accepted ? 'Yes' : 'No'}
+                            fullTime={s.full_time ? 'Full Time' : 'Flexible'}
+                            hardware={s.hardware_included ? 'Yes' : 'No'}
                           />
                         )
+
                       );
     return (
       <Section
