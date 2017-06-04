@@ -36,6 +36,12 @@
 
 .schoolName {
   font-weight: 800;
+  font-size: 1.4rem;
+
+}
+
+.schoolName a {
+  text-decoration: none;
 }
 
 .schoolLocation {
