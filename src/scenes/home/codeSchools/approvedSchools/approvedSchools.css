@@ -4,11 +4,10 @@
   margin: 25px;
 }
 
-#vaSchools {
-  margin: 50px 0px;
+
+.vaSchools {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: space-around;
 }
