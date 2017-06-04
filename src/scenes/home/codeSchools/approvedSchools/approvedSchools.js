@@ -24,11 +24,6 @@ class ApprovedSchools extends Component {
   }
 
   render() {
-
-    const vaSchools = !this.state.vaSchools ? null :
-                      this.state.vaSchools.map(s =>
-                        <SchoolCard schoolName={s.name} schoolLocation={s.address1} GI={s.va_accepted === true ? 'Yes' : 'No'} fullTime={s.full_time} hardware={s.hardware_included} />
-
     const vaSchools = !this.state.vaSchools ? null : this.state.vaSchools.map(s =>
                         (
                           <SchoolCard
@@ -36,6 +31,9 @@ class ApprovedSchools extends Component {
                             schoolAddress={s.address1}
                             schoolCity={s.city}
                             schoolState={s.state}
+                            GI={s.va_accepted ? 'Yes' : 'No'}
+                            fullTime={s.full_time ? 'Full Time' : 'Flexible'}
+                            hardware={s.hardware_included ? 'Yes' : 'No'}
                           />
                         )
 
