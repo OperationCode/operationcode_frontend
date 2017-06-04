@@ -43,6 +43,7 @@ class TopNav extends Component {
         <NavItem notClickable to="programs" text="Programs" />
         <NavItem notClickable to="involved" text="Get Involved" />
         <NavItem notClickable to="blog" text="Blog" />
+        <NavItem to="code-schools" text="Code Schools" />
         <NavItem to="https://donorbox.org/operationcode" text="Donate" isExternal />
         <NavItem to="join" text="Join" />
         <NavItem to="login" text="Login" />

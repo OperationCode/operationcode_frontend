@@ -86,7 +86,6 @@ class SideNav extends Component {
     );
   }
 
-
   render() {
     const { isVisible } = this.props;
     return (
@@ -140,6 +139,7 @@ class SideNav extends Component {
     );
   }
 }
+
 SideNav.propTypes = {
   isVisible: PropTypes.bool,
   mentor: PropTypes.bool,
@@ -155,4 +155,5 @@ SideNav.defaultProps = {
   onLogOutClick: () => {},
   onClose: () => {},
 };
+
 export default SideNav;

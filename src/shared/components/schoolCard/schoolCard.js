@@ -5,19 +5,24 @@ import styles from './schoolCard.css';
 class schoolCard extends Component {
   render() {
     return (
-        <div className={styles.card}>
-    		<div className={styles.card-image}>  
-    		  <img src={this.props.image} alt={this.props.title} />
+      <div className={styles.schoolCard}>
+    		<div className={styles.schoolCardImage}>
+    		  <img src={this.props.image} alt={this.props.alt} />
     		</div>
-    
+
     		<div className={styles.text}>
-    		  <p><span className={styles.school-name}> {this.props.schoolName} </span> <br />
-    		  <span className={styles.school-location}>{this.props.schoolLocation}</span>
+    		  <p>
+            <span className={styles.schoolName}>{this.props.schoolName}</span>
+            <br />
+      		  <span className={styles.schoolLocation}>{this.props.schoolLocation}</span>
     		  </p>
-    		  <p className={styles.school-info}>
-    		    <strong>GI Bill Accepted:</strong> {this.props.GI}
-    		    <strong>Commitment:</strong> {this.props.fullTime}
-    		    <strong>Hardware Included:</strong> {this.props.hardware}
+
+    		  <p className={styles.schoolInfo}>
+    		    <b>GI Bill Accepted:</b> {this.props.GI}
+            <br />
+    		    <b>Commitment:</b> {this.props.fullTime}
+            <br />
+    		    <b>Hardware Included:</b> {this.props.hardware}
     		  </p>
     		</div>
   		</div>
@@ -27,7 +32,7 @@ class schoolCard extends Component {
 
 ImageCard.propTypes = {
   image: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
   schoolName: PropTypes.string.isRequired,
   schoolLocation: PropTypes.string.isRequired,
   GI: PropTypes.string.isRequired,

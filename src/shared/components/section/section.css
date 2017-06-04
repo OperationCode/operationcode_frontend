@@ -1,15 +1,32 @@
+.sectionContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .section {
   display: flex;
   flex-direction: column;
+  min-height: 300px;
   width: 100%;
   align-items: center;
-  padding: 10px 0;
+  padding: 3% 0 3% 0;
 }
 
 .gray {
-  background-color:#F0F2F2
+  background-color: #F0F2F2
 }
 
 .white {
-  background-color:#FFF;
+  background-color: #FFF;
+}
+
+.margin {
+  width: 80%;
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 7.5% 0 7.5% 0;
+  }
 }

@@ -1,12 +1,12 @@
-.headLine {
-	font-size: 2.5rem;
-	font-weight: 100;
-	margin: 0px 40px;
-	text-align: center;
+.filterButtonDiv {
+  display: flex;
+  flex-flow: row wrap;
+  width: 80%;
+  justify-content: space-around;
+  padding-top: 15px;
 }
 
-.paragraph {
-	font-size: 1.4rem;
-	margin: 20px 40px;
-	text-align: center;
+/* Space between buttons for vertical, single column */
+.filterButtonDiv > * {
+  margin: 1em 0;
 }
