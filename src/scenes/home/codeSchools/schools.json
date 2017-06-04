@@ -7,6 +7,7 @@
         "city": "Nashville",
         "state": "TN",
         "zip": "37210",
+        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/nss.jpg",
         "va_accepted": "true",
         "full_time": "true",
         "hardware_included": "false"
@@ -17,6 +18,7 @@
         "city": "Culver City",
         "state": "CA",
         "zip": "90230",
+        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/sabio.jpg",
         "va_accepted": "true",
         "full_time": "true",
         "hardware_included": "false",
@@ -28,6 +30,7 @@
         "city": "Boulder",
         "state": "CO",
         "zip": "80303",
+        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/refactoru.jpg",
         "va_accepted": "true",
         "full_time": "true",
         "hardware_included": "false",
@@ -40,6 +43,7 @@
         "city": "Denver",
         "state": "CO",
         "zip": "80202",
+        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/turing.jpg",
         "va_accepted": "true",
         "full_time": "true",
         "hardware_included": "false"
@@ -50,6 +54,7 @@
         "city": "Albuquerque",
         "state": "NM",
         "zip": "87102",
+        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/deep_dive_fullstack.jpg",
         "va_accepted": "true",
         "full_time": "true",
         "hardware_included": "false"
@@ -60,6 +65,7 @@
         "city": "Seattle",
         "state": "WA",
         "zip": "98109",
+        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/code_fellows.jpg",
         "va_accepted": "true",
         "full_time": "true",
         "hardware_included": "false"
@@ -71,6 +77,7 @@
         "city": "San Antonio",
         "state": "TX",
         "zip": "78205",
+        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/codeup.jpg",
         "va_accepted": "true",
         "full_time": "true",
         "hardware_included": "false"
@@ -81,6 +88,7 @@
         "city": "Denver",
         "state": "CO",
         "zip": "80204",
+        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/galvanize.jpg",
         "va_accepted": "true",
         "full_time": "true",
         "hardware_included": "false"
@@ -94,6 +102,7 @@
             "city": "San Francisco",
             "state": "CA",
             "zip": "94107",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/dev_bootcamp.jpg",
             "va_accepted": "false",
             "full_time": "true",
             "hardware_included": "false"
@@ -104,6 +113,7 @@
             "city": "San Francisco",
             "state": "CA",
             "zip": "94015",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/galvanize.jpg",
             "va_accepted": "false",
             "full_time": "true",
             "hardware_included": "false"
@@ -115,17 +125,7 @@
             "city": "San Francisco",
             "state": "CA",
             "zip": "94102",
-            "va_accepted": "false",
-            "full_time": "true",
-            "hardware_included": "false"
-        }, {
-            "name": "MakerSquare",
-            "url": "http://www.makersquare.com",
-            "address1": "611 Mission Street",
-            "address2": "2nd Floor",
-            "city": "San Francisco",
-            "state": "CA",
-            "zip": "94105",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/hack_reactor.jpg",
             "va_accepted": "false",
             "full_time": "true",
             "hardware_included": "false"
@@ -136,6 +136,7 @@
             "city": "Culver City",
             "state": "CA",
             "zip": "90230",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/sabio.jpg",
             "va_accepted": "true",
             "full_time": "true",
             "hardware_included": "false",
@@ -147,6 +148,7 @@
             "city": "San Fransisco",
             "state": "CA",
             "zip": "94105",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/tradecraft.jpg",
             "va_accepted": "false",
             "full_time": "true",
             "hardware_included": "false"
@@ -157,6 +159,7 @@
             "city": "San Francisco",
             "state": "CA",
             "zip": "94105",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/app_academy.jpg",
             "va_accepted": "false",
             "full_time": "true",
             "hardware_included": "false",
@@ -169,6 +172,7 @@
             "city": "Boulder",
             "state": "CO",
             "zip": "80302",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/galvanize.jpg",
             "va_accepted": "false",
             "full_time": "true",
             "hardware_included": "false"
@@ -179,6 +183,7 @@
             "city": "Boulder",
             "state": "CO",
             "zip": "80303",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/refactoru.jpg",
             "va_accepted": "true",
             "full_time": "true",
             "hardware_included": "false",
@@ -191,6 +196,7 @@
             "city": "Denver",
             "state": "CO",
             "zip": "80202",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/turing.jpg",
             "va_accepted": "true",
             "full_time": "true",
             "hardware_included": "false"
@@ -201,16 +207,18 @@
             "city": "Westminster",
             "state": "CO",
             "zip": "80234",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/devry_bootcamp.jpg",
             "va_accepted": "false",
             "full_time": "true",
             "hardware_included": "true"
         }, {
             "name": "Galvanize",
             "url": "https://new.galvanize.com/denver/web-development",
-            "address2": "1062 Delaware Street",
+            "address1": "1062 Delaware Street",
             "city": "Denver",
             "state": "CO",
             "zip": "80204",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/galvanize.jpg",
             "va_accepted": "true",
             "full_time": "true",
             "hardware_included": "false"
@@ -223,6 +231,7 @@
             "city": "Orlando",
             "state": "FL",
             "zip": "32801",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/iron_yard.jpg",
             "va_accepted": "false",
             "full_time": "true",
             "hardware_included": "false"
@@ -233,6 +242,7 @@
             "city": "Tampa Bay",
             "state": "FL",
             "zip": "33701",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/iron_yard.jpg",
             "va_accepted": "false",
             "full_time": "true",
             "hardware_included": "false"
@@ -244,6 +254,7 @@
             "city": "Atlanta",
             "state": "GA",
             "zip": "30305",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/iron_yard.jpg",
             "va_accepted": "false",
             "full_time": "true",
             "hardware_included": "false"
@@ -254,6 +265,7 @@
             "city": "Atlanta",
             "state": "GA",
             "zip": "30308",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/general_assembly.jpg",
             "va_accepted": "false",
             "full_time": "true",
             "hardware_included": "false"
@@ -265,6 +277,7 @@
             "city": "Chicago",
             "state": "IL",
             "zip": "60654",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/code_platoon.jpg",
             "va_accepted": "false",
             "full_time": "true",
             "hardware_included": "false"
@@ -276,6 +289,7 @@
             "city": "Chicago",
             "state": "IL",
             "zip": "60605",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/dev_bootcamp.jpg",
             "va_accepted": "false",
             "full_time": "true",
             "hardware_included": "false"
@@ -286,16 +300,18 @@
             "city": "Chicago",
             "state": "IL",
             "zip": "60607",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/starter_league.jpg",
             "va_accepted": "false",
             "full_time": "true",
             "hardware_included": "false"
         }, {
-            "name": "Fullstack Academy at Chicago",
+            "name": "Fullstack Academy",
             "url": "http://fullstackacademy.com",
             "address1": "222 West Merchandise Mart Plaza",
             "city": "Chicago",
             "state": "IL",
             "zip": "60654",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/fullstack_academy.jpg",
             "va_accepted": "false",
             "full_time": "true",
             "hardware_included": "false"
@@ -308,6 +324,7 @@
             "city": "New Orleans",
             "state": "LA",
             "zip": "70130",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/operation_spark.jpg",
             "va_accepted": "false",
             "full_time": "true",
             "hardware_included": "false"
@@ -320,6 +337,7 @@
             "city": "Boston",
             "state": "MA",
             "zip": "02109",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/startup_institute.jpg",
             "va_accepted": "false",
             "full_time": "true",
             "hardware_included": "false"
@@ -332,17 +350,19 @@
             "city": "Durham",
             "state": "NC",
             "zip": "27701",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/iron_yard.jpg",
             "va_accepted": "false",
             "full_time": "true",
             "hardware_included": "false"
         }],
         "New Mexico": [{
-            "name": "Deep Dive Fullstack (Albuquerque, New Mexico)",
+            "name": "Deep Dive Fullstack",
             "url": "http://stemuluscenter.org/deep-dive-fullstack",
             "address1": "20 1st Plaza Center Northwest",
             "city": "Albuquerque",
             "state": "NM",
             "zip": "87102",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/deep_dive_fullstack.jpg",
             "va_accepted": "true",
             "full_time": "true",
             "hardware_included": "false"
@@ -355,6 +375,7 @@
             "city": "New York",
             "state": "NY",
             "zip": "10005",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/dev_bootcamp.jpg",
             "va_accepted": "false",
             "full_time": "true",
             "hardware_included": "false"
@@ -366,6 +387,7 @@
             "city": "New York",
             "state": "NY",
             "zip": "10004",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/fullstack_academy.jpg",
             "va_accepted": "false",
             "full_time": "true",
             "hardware_included": "false"
@@ -377,6 +399,7 @@
             "city": "New York",
             "state": "NY",
             "zip": "10004",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/flatiron_school.jpg",
             "va_accepted": "false",
             "full_time": "true",
             "hardware_included": "false"
@@ -388,6 +411,7 @@
             "city": "New York",
             "state": "NY",
             "zip": "10013",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/thinkful.jpg",
             "va_accepted": "false",
             "full_time": "true",
             "hardware_included": "false"
@@ -399,6 +423,7 @@
             "city": "New York",
             "state": "NY",
             "zip": "10004",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/tradecraft.jpg",
             "va_accepted": "false",
             "full_time": "true",
             "hardware_included": "false"
@@ -410,6 +435,7 @@
             "city": "New York",
             "state": "NY",
             "zip": "10004",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/startup_institute.jpg",
             "va_accepted": "false",
             "full_time": "true",
             "hardware_included": "false"
@@ -421,6 +447,7 @@
             "city": "Cleveland",
             "state": "OH",
             "zip": "44103",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/tech_elevator.jpg",
             "va_accepted": "false",
             "full_time": "true",
             "hardware_included": "true"
@@ -432,6 +459,7 @@
             "city": "Columbus",
             "state": "OH",
             "zip": "43212",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/tech_elevator.jpg",
             "va_accepted": "false",
             "full_time": "true",
             "hardware_included": "true"
@@ -444,6 +472,7 @@
             "city": "Portland",
             "state": "OR",
             "zip": "97204",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/code_fellows.jpg",
             "va_accepted": "false",
             "full_time": "true",
             "hardware_included": "false"
@@ -454,6 +483,7 @@
             "city": "Portland",
             "state": "OR",
             "zip": "97214",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/epicodus.jpg",
             "va_accepted": "false",
             "full_time": "true",
             "hardware_included": "false",
@@ -466,6 +496,7 @@
             "city": "Portland",
             "state": "OR",
             "zip": "97201",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/pdx_code_guild.jpg",
             "va_accepted": "false",
             "full_time": "true",
             "hardware_included": "false"
@@ -477,6 +508,7 @@
             "city": "Mount Pleasant",
             "state": "SC",
             "zip": "29464",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/iron_yard.jpg",
             "va_accepted": "false",
             "full_time": "true",
             "hardware_included": "false"
@@ -488,6 +520,7 @@
             "city": "Greenville",
             "state": "SC",
             "zip": "29601",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/iron_yard.jpg",
             "va_accepted": "false",
             "full_time": "true",
             "hardware_included": "false"
@@ -500,6 +533,7 @@
             "city": "Nashville",
             "state": "TN",
             "zip": "37210",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/nss.jpg",
             "va_accepted": "true",
             "full_time": "true",
             "hardware_included": "false"
@@ -512,6 +546,7 @@
             "city": "Austin",
             "state": "TX",
             "zip": "78704",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/iron_yard.jpg",
             "va_accepted": "false",
             "full_time": "true",
             "hardware_included": "false"
@@ -522,16 +557,7 @@
             "city": "Houstin",
             "state": "TX",
             "zip": "77003",
-            "va_accepted": "false",
-            "full_time": "true",
-            "hardware_included": "false"
-        }, {
-            "name": "MakerSquare",
-            "url": "http://www.makersquare.com/",
-            "address1": "716 Congress Avenue",
-            "city": "Austi",
-            "state": "TX",
-            "zip": "78701",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/iron_yard.jpg",
             "va_accepted": "false",
             "full_time": "true",
             "hardware_included": "false"
@@ -543,6 +569,7 @@
             "city": "San Antonio",
             "state": "TX",
             "zip": "78205",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/codeup.jpg",
             "va_accepted": "true",
             "full_time": "true",
             "hardware_included": "false"
@@ -555,6 +582,7 @@
             "city": "Seattle",
             "state": "WA",
             "zip": "98109",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/ada_developers.jpg",
             "va_accepted": "false",
             "full_time": "true",
             "hardware_included": "false",
@@ -566,6 +594,7 @@
             "city": "Seattle",
             "state": "WA",
             "zip": "98109",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/code_fellows.jpg",
             "va_accepted": "true",
             "full_time": "true",
             "hardware_included": "false"
@@ -577,6 +606,7 @@
             "city": "Seattle",
             "state": "WA",
             "zip": "98109",
+            "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/general_assembly.jpg",
             "va_accepted": "false",
             "full_time": "true",
             "hardware_included": "false"

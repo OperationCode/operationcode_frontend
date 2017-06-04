@@ -24,6 +24,11 @@
   overflow: hidden;
 }
 
+.logo {
+  width: 125px;
+  height: 125px;
+}
+
 .schoolCardText {
   width: 50%;
   padding-left: 5%;
