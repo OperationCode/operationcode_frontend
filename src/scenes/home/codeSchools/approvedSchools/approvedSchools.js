@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Section from 'shared/components/section/section';
 import styles from './approvedSchools.css';
 
 class ApprovedSchools extends Component {
@@ -13,21 +14,21 @@ class ApprovedSchools extends Component {
 
   render() {
     return (
-      <div className={styles.approvedSchools}>
-        <h2>VA Approved Schools</h2>
-        <ul>
-          <li>School Name 1</li>
-          <li>School Name 2</li>
-          <li>School Name 3</li>
-        </ul>
-
-        <hr />
-
-        <h6>
-          Require Code School Technical Assistance for state and VA approval?
-          <Link to="mailto:schools@operationcode.org">Request technical assistance today.</Link>
-        </h6>
-      </div>
+      <Section
+        title="VA-Approved Schools"
+        headingLines={false}
+        margin
+      >
+        <div className={styles.noteForSchoolReps}>
+          <p>
+            Are you a code school seeking state and/or VA approval?
+            <br />
+            <Link to="mailto:staff@operationcode.org" role="button">
+              Request technical assistance today.
+            </Link>
+          </p>
+        </div>
+      </Section>
     );
   }
 }

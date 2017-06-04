@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import LinkButton from 'shared/components/linkButton/linkButton';
 import Section from 'shared/components/section/section';
-// import ApprovedSchools from './approvedSchools/approvedSchools';
+import ApprovedSchools from './approvedSchools/approvedSchools';
+import PartnerSchools from './partnerSchools/partnerSchools';
+import StateSortedSchools from './stateSortedSchools/stateSortedSchools';
+// import schools from './schools.json';
 import styles from './codeSchools.css';
 
 class CodeSchools extends Component {
@@ -18,7 +21,6 @@ class CodeSchools extends Component {
     return (
       <div>
         <Section
-          className={styles.codeSchools}
           title="Code Schools"
           theme="white"
           margin
@@ -57,58 +59,9 @@ class CodeSchools extends Component {
           </div>
         </Section>
 
-
-        <Section
-          className={styles.schoolsByApproval}
-          title="VA-Approved Schools"
-          headingLines={false}
-          margin
-        >
-          <div className={styles.noteForSchoolReps}>
-            <p>
-              Are you a code school seeking state and/or VA approval?
-              <br />
-              <Link to="mailto:staff@operationcode.org" role="button">
-                Request technical assistance today.
-              </Link>
-            </p>
-          </div>
-        </Section>
-
-
-        <Section
-          className={styles.schoolsByScholarship}
-          title="Partners With Scholarships"
-          theme="white"
-          headingLines={false}
-          margin
-        >
-          <div className={styles.noteForSchoolReps}>
-            <p>
-              Are you a code school seeking a partnership with Operation Code?
-              <br />
-              <Link to="mailto:staff@operationcode.org" role="button">
-                Reach out to us!
-              </Link>
-            </p>
-          </div>
-        </Section>
-
-
-        <Section
-          id="schoolsByState"
-          className={styles.schoolsByState}
-          title="Schools by State"
-          headingLines={false}
-          margin
-        >
-          <p>
-            Many code schools around the nation offer military/veterans discounts to make coding
-            education more accessible to those who&apos;ve worn the uniform and served our country.
-            <br />
-            <b>Apply for a scholarship with our partners now and get coding:</b>
-          </p>
-        </Section>
+        <ApprovedSchools />
+        <PartnerSchools />
+        <StateSortedSchools />
       </div>
     );
   }
