@@ -59,4 +59,6 @@ Section.defaultProps = {
   margin: false
 };
 
+// TODO: Implement id and send prop to heading to set <h2>'s id to passed prop
+
 export default Section;
