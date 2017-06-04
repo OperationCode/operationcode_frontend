@@ -7,7 +7,7 @@ class SchoolCard extends Component {
     return (
       <div className={styles.schoolCard}>
         <div className={styles.schoolCardImage}>
-          <img src="#" alt={this.props.alt} />
+          <img src={this.props.logo} alt={this.props.alt} className={styles.logo} />
         </div>
 
         <div className={styles.text}>
@@ -40,6 +40,7 @@ SchoolCard.propTypes = {
   schoolAddress: PropTypes.string.isRequired,
   schoolCity: PropTypes.string.isRequired,
   schoolState: PropTypes.string.isRequired,
+  logo: PropTypes.string.isRequired,
   GI: PropTypes.string.isRequired,
   fullTime: PropTypes.string.isRequired,
   hardware: PropTypes.string.isRequired
