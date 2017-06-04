@@ -29,7 +29,7 @@ class ApprovedSchools extends Component {
         headingLines={false}
         margin
       >
-        <ul className="va-schools">
+        <ul className={styles.vaSchools}>
           {vaSchools}
         </ul>
         <div className={styles.noteForSchoolReps}>
