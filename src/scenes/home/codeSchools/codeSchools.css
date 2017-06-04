@@ -18,20 +18,48 @@
   color: #fff;
 }
 
+.filterButtonDiv {
+  display: flex;
+  flex-flow: row wrap;
+  flex-grow: 1;
+  width: 80%;
+  justify-content: space-around;
+  padding-top: 15px;
+}
+
+/* Space between buttons for vertical, single column */
+.filterButtonDiv > * {
+  margin: 1em 0;
+}
+
+.schoolsByApproval {
+
+}
+
+.schoolsByScholarship {
+
+}
+
+.schoolsByState {
+
+}
+
 @media screen and (max-width: 900px) {
   .pageHeading {
-    margin-top:5vw;
+    margin-top: 5vw;
   }
+
   .pageHeading h1 {
-    font-size:16px;
+    font-size: 16px;
   }
 }
 
 @media screen and (max-width: 500px) {
   .pageHeading {
-    margin-top:3vw;
+    margin-top: 3vw;
   }
+
   .pageHeading h1 {
-    font-size:14px;
+    font-size: 14px;
   }
 }
