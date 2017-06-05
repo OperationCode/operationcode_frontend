@@ -19,9 +19,9 @@ class MoreInformation extends Component {
             link="#"
           />
           <ClipPathImage
-            title="Veterans, Active Duty and Reservists"
+            title="Veterans, Active Duty, and Reservists"
             image={milImage}
-            altText="Veterans, Active Duty and Reservists"
+            altText="Veterans, Active Duty, and Reservists"
             link="#"
           />
           <ClipPathImage
