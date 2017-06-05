@@ -10,7 +10,7 @@
   min-height: 300px;
   width: 100%;
   align-items: center;
-  padding: 3% 0 3% 0;
+  padding: 2.5% 0 2.5% 0;
 }
 
 .gray {
@@ -22,7 +22,7 @@
 }
 
 .margin {
-  width: 80%;
+  width: 90%;
 }
 
 @media screen and (max-width: 768px) {
