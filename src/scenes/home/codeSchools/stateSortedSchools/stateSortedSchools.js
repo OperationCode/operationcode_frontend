@@ -33,12 +33,12 @@ class StateSortedSchools extends Component {
   searchState = (string) => {
     const stringFormat = string.replace(/\w\S*/g, txt => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase());
     const schools = [];
-    this.state.schools.forEach((School) => {
-      const locations = School.locations.filter(location =>
+    this.state.schools.forEach((school) => {
+      const locations = school.locations.filter(location =>
         location.state === stringFormat
       );
       if (locations.length > 0) {
-        const newSchool = Object.assign({}, School);
+        const newSchool = Object.assign({}, school);
         newSchool.locations = locations;
         schools.push(newSchool);
       }
