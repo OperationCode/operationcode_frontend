@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Section from 'shared/components/section/section';
+import SchoolCard from 'shared/components/schoolCard/schoolCard';
 import FormInput from 'shared/components/form/formInput/formInput';
-// import styles from './stateSortedSchools.css';
+import styles from './stateSortedSchools.css';
 
 const endpoint = 'https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/scenes/home/codeSchools/schools.json';
 const gettingSchoolData = fetch(endpoint)
@@ -12,23 +13,56 @@ class StateSortedSchools extends Component {
     super(props);
     this.state = {
       query: null,
-      stateList: null,
-      by_state: null
+      schoolsByState: null,
+      schools: null
     };
 
     gettingSchoolData.then(data =>
-      this.setState({ by_state: data.by_state })
+      this.setState({ schools: data })
     );
   }
 
   onSearchChange = (value) => {
-    const regex = new RegExp(value, 'gi');
-    const arr = this.state.by_state.match(regex);
-    this.setState({ stateList: arr });
+    // const regex = new RegExp(value, 'gi');
+    // const arr = this.state.by_state.match(regex);
+    // this.setState({ stateList: arr });
     this.setState({ query: value });
+    this.setState({ schoolsByState: this.searchState(value) });
+  }
+
+  searchState = (string) => {
+    const stringFormat = string.replace(/\w\S*/g, txt => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase());
+    const schools = [];
+    this.state.schools.forEach((School) => {
+      const locations = School.locations.filter(location =>
+        location.state === stringFormat
+      );
+      if (locations.length > 0) {
+        const newSchool = Object.assign({}, School);
+        newSchool.locations = locations;
+        schools.push(newSchool);
+      }
+    });
+    this.setState({ schoolsByState: schools });
   }
 
   render() {
+    const stateSchools = !this.state.schoolsByState ? null : this.state.schoolsByState
+      .map(school =>
+        (
+          <SchoolCard
+            schoolName={school.name}
+            link={school.url}
+            schoolAddress={school.locations[0].address1}
+            schoolCity={school.locations[0].city}
+            schoolState={school.locations[0].state}
+            logo={school.logo}
+            GI={school.va_accepted ? 'Yes' : 'No'}
+            fullTime={school.full_time ? 'Full-Time' : 'Flexible'}
+            hardware={school.hardware_included ? 'Yes' : 'No'}
+          />
+        )
+        );
     return (
       <Section
         id="schoolsByState"
@@ -42,6 +76,9 @@ class StateSortedSchools extends Component {
           onChange={this.onSearchChange}
           id="search"
         />
+        <div className={styles.stateSchool}>
+          {stateSchools}
+        </div>
       </Section>
     );
   }
