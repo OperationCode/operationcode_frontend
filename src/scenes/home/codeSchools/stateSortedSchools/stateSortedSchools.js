@@ -27,6 +27,10 @@ class StateSortedSchools extends Component {
       // Prevent query with just one character in search field
       this.setState({ query: value });
       this.setState({ schoolsByState: this.searchState(value) });
+    } else {
+      // Clear results when search field is 1 char or blank
+      this.setState({ query: null });
+      this.setState({ schoolsByState: null });
     }
   }
 
