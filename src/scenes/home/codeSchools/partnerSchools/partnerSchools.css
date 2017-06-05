@@ -1,7 +1,7 @@
 .noteForSchoolReps {
   text-align: center;
-  font-size: 1.2em;
-  margin: 25px;
+  font-size: 1em;
+  margin: 15px 0 0 0;
 }
 
 .partnerSchools {
@@ -9,4 +9,8 @@
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-around;
+}
+
+.intro {
+  padding: 0 0 2.5% 0;
 }
