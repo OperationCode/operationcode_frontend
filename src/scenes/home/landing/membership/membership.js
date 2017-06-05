@@ -11,11 +11,13 @@ class Membership extends Component {
     return (
 
       <Section title="Membership" theme="white">
-        <h3 className={styles.heading}>Joining Operation Code is easy and free!  Once
-          you&#39;re signed up, you can join us on Slack and start enjoying the
-           benefits of your membership:
-        </h3>
-
+        <div className={styles.intro}>
+          <p>
+            Joining Operation Code is easy and free! Once you&#39;re signed up, you can join us on
+            Slack and start enjoying the benefits of your membership:
+          </p>
+        </div>
+        <br />
         <ul className={styles.list}>
           <li>
             <img className={styles.icon} src={sharedIcon} alt="" />
