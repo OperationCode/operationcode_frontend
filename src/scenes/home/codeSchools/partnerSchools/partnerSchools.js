@@ -16,7 +16,8 @@ class PartnerSchools extends Component {
   render() {
     return (
       <Section
-        title="Partners With Scholarships"
+        id="schoolsByScholarship"
+        title="Partnered Schools"
         theme="white"
         headingLines={false}
         margin
@@ -31,14 +32,12 @@ class PartnerSchools extends Component {
 
         <div className={styles.partnerSchools}>
           <SchoolCard
-            schoolName="Thinkful (Online, HQ in NYC)"
+            schoolName="Thinkful"
             link="http://www.thinkful.com"
-            schoolAddress="304 Hudson Street"
-            schoolCity="New York"
-            schoolState="NY"
+            schoolAddress="Online"
             logo="https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/thinkful.jpg"
             GI="No"
-            fullTime="Full Time"
+            fullTime="Self-Driven"
             hardware="No"
           />
           <SchoolCard
@@ -49,7 +48,7 @@ class PartnerSchools extends Component {
             schoolState="CA"
             logo="https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/sabio.jpg"
             GI="Yes"
-            fullTime="Full Time"
+            fullTime="Full-Time"
             hardware="No"
           />
           <SchoolCard
@@ -60,7 +59,7 @@ class PartnerSchools extends Component {
             schoolState="NY"
             logo="https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/flatiron_school.jpg"
             GI="No"
-            fullTime="Full Time"
+            fullTime="Full-Time"
             hardware="No"
           />
           <SchoolCard
@@ -71,25 +70,34 @@ class PartnerSchools extends Component {
             schoolState="NY"
             logo="https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/startup_institute.jpg"
             GI="No"
-            fullTime="Full Time"
+            fullTime="Full-Time"
             hardware="No"
           />
           <SchoolCard
             schoolName="Launch School"
             link="https://launchschool.com/blog/operation-code-scholarship/"
             schoolAddress="Online"
-            logo="https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/startup_institute.jpg"
+            logo="https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/launch_school.jpg"
             GI="No"
-            fullTime="Self Driven"
+            fullTime="Self-Driven"
             hardware="No"
           />
           <SchoolCard
             schoolName="Bloc"
             link="http://try.bloc.io/operation-code-bootcamp-scholarship/"
             schoolAddress="Online"
-            logo="https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/startup_institute.jpg"
+            logo="https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/bloc.jpg"
             GI="No"
-            fullTime="Self Driven"
+            fullTime="Self-Driven"
+            hardware="No"
+          />
+          <SchoolCard
+            schoolName="Fullstack Academy"
+            link="https://www.fullstackacademy.com/remote-immersive#scholarships"
+            schoolAddress="Online, Chicago, New York"
+            logo="https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/fullstack_academy.jpg"
+            GI="No"
+            fullTime="Full-Time"
             hardware="No"
           />
         </div>
