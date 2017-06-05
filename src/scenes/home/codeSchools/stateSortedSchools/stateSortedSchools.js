@@ -43,7 +43,7 @@ class StateSortedSchools extends Component {
         schools.push(newSchool);
       }
     });
-    this.setState({ schoolsByState: schools });
+    return schools;
   }
 
   render() {
