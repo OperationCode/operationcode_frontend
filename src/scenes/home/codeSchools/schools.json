@@ -1,779 +1,611 @@
 [{
     "name": "Dev Bootcamp",
+    "url": "http://devbootcamp.com",
+    "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/dev_bootcamp.jpg",
+    "va_accepted": "false",
+    "full_time": "true",
+    "hardware_included": "false",
+    "has_online": "false",
     "locations": [{
-        "url": "http://devbootcamp.com",
         "address1": "633 Folsom Street (at Hawthorne)",
         "address2": "6th Floor",
         "city": "San Francisco",
         "state": "California",
-        "zip": "94107",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/dev_bootcamp.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "94107"
     }, {
-        "url": "http://devbootcamp.com",
         "address1": "351 W Hubbard Street (at Orleans)",
         "address2": "Suite 701",
         "city": "Chicago",
         "state": "Illinois",
-        "zip": "60605",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/dev_bootcamp.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "60605"
     }, {
-        "url": "http://devbootcamp.com/",
         "address1": "48 Wall Street",
         "address2": "15th Floor",
         "city": "New York",
         "state": "New York",
         "zip": "10005",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/dev_bootcamp.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
     }]
 }, {
     "name": "Galvanize",
+    "url": "https://new.galvanize.com/san-francisco/web-development",
+    "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/galvanize.jpg",
+    "va_accepted": "false",
+    "full_time": "true",
+    "hardware_included": "false",
+    "has_online": "false",
     "locations": [{
-        "url": "https://new.galvanize.com/san-francisco/web-development",
         "address1": "44 Tehama Street",
         "city": "San Francisco",
         "state": "California",
-        "zip": "94015",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/galvanize.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "94015"
     }, {
-        "url": "https://new.galvanize.com/boulder/web-development",
         "address1": "1023 Walnut Street",
         "city": "Boulder",
         "state": "Colorado",
-        "zip": "80302",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/galvanize.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "80302"
     }, {
-        "url": "https://new.galvanize.com/denver/web-development",
         "address1": "1062 Delaware Street",
         "city": "Denver",
         "state": "Colorado",
-        "zip": "80204",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/galvanize.jpg",
-        "va_accepted": "true",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "80204"
     }]
 }, {
     "name": "Hack Reactor",
+    "url": "http://www.hackreactor.com",
+    "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/hack_reactor.jpg",
+    "va_accepted": "false",
+    "full_time": "true",
+    "hardware_included": "false",
+    "has_online": "false",
     "locations": [{
-        "url": "http://www.hackreactor.com",
         "address1": "944 Market Street",
         "address2": "8th Floor",
         "city": "San Francisco",
         "state": "California",
-        "zip": "94102",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/hack_reactor.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "94102"
     }]
 }, {
     "name": "Sabio",
+    "url": "http://sabio.la/veterans",
+    "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/sabio.jpg",
+    "va_accepted": "true",
+    "full_time": "true",
+    "hardware_included": "false",
+    "notes": "Sabio enables Operation Code veterans to learn the skills needed to secure a full-time position in an awesome tech company in six months all while earning college credits towards an undergraduate degree. The New GI Bill is an option for non-BA degree holders.",
+    "has_online": "false",
     "locations": [{
-        "url": "http://sabio.la/veterans",
         "address1": "400 Corporate Pointe",
         "city": "Culver City",
         "state": "California",
         "zip": "90230",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/sabio.jpg",
-        "va_accepted": "true",
-        "full_time": "true",
-        "hardware_included": "false",
-        "notes": "Sabio enables Operation Code veterans to learn the skills needed to secure a full-time position in an awesome tech company in six months all while earning college credits towards an undergraduate degree. The New GI Bill is an option for non-BA degree holders."
     }]
 }, {
     "name": "Tradecraft",
+    "url": "http://tradecrafted.com/",
+    "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/tradecraft.jpg",
+    "va_accepted": "false",
+    "full_time": "true",
+    "hardware_included": "false",
+    "has_online": "false",
     "locations": [{
-        "url": "http://tradecrafted.com/",
         "address1": "400 Corporate Pointe",
         "city": "San Fransisco",
         "state": "California",
-        "zip": "94105",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/tradecraft.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "94105"
     }, {
-        "url": "http://tradecrafted.com",
         "address1": "304 Hudson Street",
         "address2": "5th Floor",
         "city": "New York",
         "state": "New York",
-        "zip": "10004",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/tradecraft.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "10004"
     }]
 }, {
     "name": "App Academy",
+    "url": "https://www.appacademy.io/",
+    "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/app_academy.jpg",
+    "va_accepted": "false",
+    "full_time": "true",
+    "hardware_included": "false",
+    "notes": "Deferred financing system (20% of your first year's salary)",
+    "has_online": "false",
     "locations": [{
-        "url": "https://www.appacademy.io/",
         "address1": "160 Spear Street",
         "city": "San Francisco",
         "state": "California",
-        "zip": "94105",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/app_academy.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false",
-        "notes": "Deferred financing system (20% of your first year's salary)"
+        "zip": "94105"
     }]
 }, {
     "name": "RefactorU",
+    "url": "http://refactoru.com",
+    "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/refactoru.jpg",
+    "va_accepted": "true",
+    "full_time": "true",
+    "hardware_included": "false",
+    "notes": "RefactorU is proud and honored to announce that its Web Development Bootcamp has been approved by the <a href=\"http://www.benefits.va.gov/gibill/\">Colorado State Approving Agency for Veterans Education & Training</a>. Students eligible for the The Post-9/11 GI Bill, Montgomery GI Bill (Active Duty/Selected Reserve), Reserve Educational Assistance Program, Veterans Educational Assistance Program, and Survivors’ and Dependents’ Educational Assistance Program may be eligible to apply those benefits to RefactorU’s Web Application Development Bootcamp.",
+    "has_online": "false",
     "locations": [{
-        "url": "http://refactoru.com",
         "address1": "5717 Arapahoe Avenue",
         "city": "Boulder",
         "state": "Colorado",
-        "zip": "80303",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/refactoru.jpg",
-        "va_accepted": "true",
-        "full_time": "true",
-        "hardware_included": "false",
-        "notes": "RefactorU is proud and honored to announce that its Web Development Bootcamp has been approved by the <a href=\"http://www.benefits.va.gov/gibill/\">Colorado State Approving Agency for Veterans Education & Training</a>. Students eligible for the The Post-9/11 GI Bill, Montgomery GI Bill (Active Duty/Selected Reserve), Reserve Educational Assistance Program, Veterans Educational Assistance Program, and Survivors’ and Dependents’ Educational Assistance Program may be eligible to apply those benefits to RefactorU’s Web Application Development Bootcamp."
+        "zip": "80303"
     }]
 }, {
     "name": "Turing School of Software & Design",
+    "url": "http://turing.io/",
+    "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/turing.jpg",
+    "va_accepted": "true",
+    "full_time": "true",
+    "hardware_included": "false",
+    "has_online": "false",
     "locations": [{
-        "url": "http://turing.io/",
         "address1": "1331 17th Street",
         "address2": "Suite LL100",
         "city": "Denver",
         "state": "Colorado",
-        "zip": "80202",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/turing.jpg",
-        "va_accepted": "true",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "80202"
     }]
 }, {
     "name": "DeVry Bootcamp",
+    "url": "http://partner.devry.edu/bootcamp/",
+    "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/devry_bootcamp.jpg",
+    "va_accepted": "false",
+    "full_time": "true",
+    "hardware_included": "true",
+    "has_online": "false",
     "locations": [{
-        "url": "http://partner.devry.edu/bootcamp/",
         "address1": "1870 W 122nd Avenue",
         "city": "Westminster",
         "state": "Colorado",
-        "zip": "80234",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/devry_bootcamp.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "true"
+        "zip": "80234"
     }]
 }, {
     "name": "The Iron Yard",
+    "url": "https://www.theironyard.com/locations/orlando.html",
+    "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/iron_yard.jpg",
+    "va_accepted": "false",
+    "full_time": "true",
+    "hardware_included": "false",
+    "has_online": "false",
     "locations": [{
-        "url": "https://www.theironyard.com/locations/orlando.html",
         "address1": "101 S. Garland Avenue",
         "address2": "Suite 102",
         "city": "Orlando",
         "state": "Florida",
-        "zip": "32801",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/iron_yard.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "32801"
     }, {
-        "url": "http://theironyard.com/locations/tampa-st-petersburg",
         "address1": "260 1st Avenue S",
         "city": "Tampa Bay",
         "state": "Florida",
-        "zip": "33701",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/iron_yard.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "33701"
     }, {
-        "url": "http://theironyard.com/locations/atlanta/",
         "address1": "3423 Piedmont Road NE",
         "city": "Atlanta",
         "state": "Georgia",
-        "zip": "30305",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/iron_yard.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "30305"
     }, {
-        "url": "http://theironyard.com/locations/raleigh-durham/",
         "address1": "334 Blackwell Street",
         "address2": "Suite B017",
         "city": "Durham",
         "state": "N Carolina",
-        "zip": "27701",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/iron_yard.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "27701"
     }, {
-        "url": "http://theironyard.com/locations/greenville",
         "address1": "510 Mill Street",
         "city": "Mount Pleasant",
         "state": "South Carolina",
-        "zip": "29464",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/iron_yard.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "29464"
     }, {
-        "url": "http://theironyard.com/locations/greenville",
         "address1": "411 University Ridge",
         "address2": "Suite 220",
         "city": "Greenville",
-        "state": "South Carolina",
-        "zip": "29601",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/iron_yard.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "state": "South Carolina"
     }, {
-        "url": "http://theironyard.com/locations/austin",
         "address1": "3601 S Congress Avenue",
         "address2": "Suite C304",
         "city": "Austin",
         "state": "Texas",
-        "zip": "78704",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/iron_yard.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "78704"
     }, {
-        "url": "http://theironyard.com/locations/houston",
         "address1": "1121 Delano Street",
         "city": "Houstin",
         "state": "Texas",
-        "zip": "77003",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/iron_yard.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "77003"
     }]
 }, {
     "name": "General Assembly",
+    "url": "https://generalassemb.ly",
+    "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/general_assembly.jpg",
+    "va_accepted": "false",
+    "full_time": "true",
+    "hardware_included": "false",
+    "has_online": "false",
     "locations": [{
-        "url": "https://generalassemb.ly/locations/atlanta",
         "address1": "675 Ponce de Leon Avenue NE",
         "city": "Atlanta",
         "state": "Georgia",
-        "zip": "30308",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/general_assembly.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "30308"
     }, {
-        "url": "https://generalassemb.ly/locations/seattle",
         "address1": "1218 3rd Avenue",
         "address2": "3rd Floor",
         "city": "Seattle",
         "state": "Washington",
-        "zip": "98109",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/general_assembly.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "98109"
     }, {
-        "url": "https://generalassemb.ly/locations/washington-dc",
         "address1": "1133 15th Street NW",
         "address2": "8th Floor",
         "city": "Washington",
         "state": "District of Columbia",
-        "zip": "20005",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/general_assembly.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "20005"
     }, {
-        "url": "https://generalassemb.ly/locations/washington-dc",
         "address1": "2231 Crystal Drive",
         "address2": "10th Floor",
         "city": "Arlington",
         "state": "Virginia",
-        "zip": "22202",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/general_assembly.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "22202"
     }, {
-        "url": "https://generalassemb.ly/locations/seattle",
         "address1": "1218 3rd Avenue",
         "address2": "3rd Floor",
         "city": "Seattle",
         "state": "Washington",
-        "zip": "98109",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/general_assembly.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "98109"
     }, {
-        "url": "https://generalassemb.ly/locations/austin",
         "address1": "600 Congress Avenue",
         "address2": "14th Floor",
         "city": "Austin",
         "state": "Texas",
-        "zip": "78701",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/general_assembly.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "78701"
     }, {
-        "url": "https://generalassemb.ly/locations/boston",
         "address1": "125 Summer Street",
         "address2": "13th Floor",
         "city": "Boston",
         "state": "Massachussets",
-        "zip": "02110",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/general_assembly.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "02110"
     }, {
-        "url": "https://generalassemb.ly/locations/chicago",
         "address1": "444 N Wabash Avenue",
         "address2": "5th Floor",
         "city": "Chicago",
         "state": "Illinois",
-        "zip": "60611",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/general_assembly.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "60611"
     }, {
-        "url": "https://generalassemb.ly/locations/Providence",
         "address1": "80 Washington Street, Room 423",
         "address2": "University of Rhode Island: Providence",
         "city": "Providence",
         "state": "Rhode Island",
-        "zip": "02903",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/general_assembly.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "02903"
     }, {
-        "url": "https://generalassemb.ly/locations/new-york-city",
         "address1": "10 E 21st Street (Class)",
         "address2": "902 Broadway, 4th Floor (HQ)",
         "city": "New York",
         "state": "New York",
-        "zip": "10010",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/general_assembly.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "10010"
     }, {
-        "url": "https://generalassemb.ly/locations/los-angeles",
         "address1": "360 E 2nd Street",
         "address2": "Suite 400",
         "city": "Los Angeles",
         "state": "California",
-        "zip": "90012",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/general_assembly.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "90012"
     }, {
-        "url": "https://generalassemb.ly/locations/los-angeles",
         "address1": "1520 2nd Street",
         "city": "Santa Monica",
         "state": "California",
-        "zip": "90401",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/general_assembly.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "90401"
     }, {
-        "url": "https://generalassemb.ly/locations/los-angeles",
         "address1": "1621 Alton Parkway",
         "city": "Irvine",
         "state": "California",
-        "zip": "92606",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/general_assembly.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "92606"
     }, {
-        "url": "https://generalassemb.ly/locations/denver",
         "address1": "2420 17th Street",
         "address2": "3rd Floor",
         "city": "Denver",
         "state": "Colorado",
-        "zip": "80202",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/general_assembly.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "80202"
     }, {
-        "url": "https://generalassemb.ly/locations/san-francisco",
         "address1": "225 Bush Street",
         "address2": "5th Floor",
         "city": "San Francisco",
         "state": "California",
-        "zip": "94104",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/general_assembly.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "94104"
     }, {
-        "url": "https://generalassemb.ly/locations/san-francisco",
         "address1": "75 E Santa Clara Street",
         "address2": "6th Floor",
         "city": "San Jose",
         "state": "California",
-        "zip": "95113",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/general_assembly.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "95113"
     }]
 }, {
     "name": "Code Platoon",
+    "url": "http://www.codeplatoon.org",
+    "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/code_platoon.jpg",
+    "va_accepted": "false",
+    "full_time": "true",
+    "hardware_included": "false",
+    "has_online": "false",
     "locations": [{
-        "url": "http://www.codeplatoon.org",
         "address1": "444 N Wabash Avenue",
         "city": "Chicago",
         "state": "Illinois",
-        "zip": "60654",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/code_platoon.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "60654"
     }]
 }, {
     "name": "The Starter League",
+    "url": "http://www.starterleague.com/",
+    "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/starter_league.jpg",
+    "va_accepted": "false",
+    "full_time": "true",
+    "hardware_included": "false",
+    "has_online": "false",
     "locations": [{
-        "url": "http://www.starterleague.com/",
         "address1": "30 N Racine Avenue",
         "city": "Chicago",
         "state": "Illinois",
-        "zip": "60607",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/starter_league.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "60607"
     }]
 }, {
     "name": "Operation Spark",
+    "url": "https://operationspark.org",
+    "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/operation_spark.jpg",
+    "va_accepted": "false",
+    "full_time": "true",
+    "hardware_included": "false",
+    "has_online": "false",
     "locations": [{
-        "url": "https://operationspark.org",
         "address1": "748 Camp Street",
         "address2": "2nd Floor",
         "city": "New Orleans",
         "state": "Louisiana",
-        "zip": "70130",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/operation_spark.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "70130"
     }]
 }, {
     "name": "Startup Institute",
+    "url": "https://www.startupinstitute.com/boston/",
+    "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/startup_institute.jpg",
+    "va_accepted": "false",
+    "full_time": "true",
+    "hardware_included": "false",
+    "has_online": "false",
     "locations": [{
-        "url": "https://www.startupinstitute.com/boston/",
         "address1": "50 Milk Street",
         "address2": "14th Floor",
         "city": "Boston",
         "state": "Massachussets",
-        "zip": "02109",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/startup_institute.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "02109"
     }, {
-        "url": "https://www.startupinstitute.com/new-york/",
         "address1": "25 Broadway",
         "address2": "10th Floor",
         "city": "New York",
         "state": "New York",
-        "zip": "10004",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/startup_institute.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "10004"
     }]
 }, {
     "name": "Deep Dive Fullstack",
+    "url": "http://stemuluscenter.org/deep-dive-fullstack",
+    "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/deep_dive_fullstack.jpg",
+    "va_accepted": "true",
+    "full_time": "true",
+    "hardware_included": "false",
+    "has_online": "false",
     "locations": [{
-        "url": "http://stemuluscenter.org/deep-dive-fullstack",
         "address1": "20 1st Plaza Center NW",
         "city": "Albuquerque",
         "state": "New Mexico",
-        "zip": "87102",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/deep_dive_fullstack.jpg",
-        "va_accepted": "true",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "87102"
     }]
 }, {
     "name": "Fullstack Academy,",
+    "url": "http://fullstackacademy.com",
+    "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/fullstack_academy.jpg",
+    "va_accepted": "false",
+    "full_time": "true",
+    "hardware_included": "false",
+    "has_online": "true",
     "locations": [{
-        "url": "http://fullstackacademy.com",
         "address1": "5 Hanover Square",
         "address2": "25th Floor",
         "city": "New York",
         "state": "New York",
-        "zip": "10004",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/fullstack_academy.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "10004"
     }, {
-        "url": "http://fullstackacademy.com",
         "address1": "222 W Merchandise Mart Plaza",
         "city": "Chicago",
         "state": "Illinois",
-        "zip": "60654",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/fullstack_academy.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "60654"
     }, {
-        "url": "http://fullstackacademy.com",
         "address1": "Online",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/fullstack_academy.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
     }]
 }, {
     "name": "The Flatiron School",
+    "url": "http://flatironschool.com/",
+    "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/flatiron_school.jpg",
+    "va_accepted": "false",
+    "full_time": "true",
+    "hardware_included": "false",
+    "has_online": "true",
     "locations": [{
-        "url": "http://flatironschool.com/",
         "address1": "11 Broadway",
         "address2": "Suite 260",
         "city": "New York",
         "state": "New York",
-        "zip": "10004",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/flatiron_school.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "10004"
     }, {
-        "url": "http://flatironschool.com/",
         "address1": "Online",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/flatiron_school.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
     }]
 }, {
     "name": "Thinkful",
+    "url": "http://www.thinkful.com",
+    "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/thinkful.jpg",
+    "va_accepted": "false",
+    "full_time": "true",
+    "hardware_included": "false",
+    "has_online": "true",
     "locations": [{
-        "url": "http://www.thinkful.com",
         "address1": "Online",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/thinkful.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
     }]
 }, {
     "name": "Tech Elevator",
+    "url": "http://www.techelevator.com/",
+    "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/tech_elevator.jpg",
+    "va_accepted": "false",
+    "full_time": "true",
+    "hardware_included": "true",
+    "has_online": "false",
     "locations": [{
-        "url": "http://www.techelevator.com/",
         "address1": "7100 Euclid Avenue",
         "city": "Cleveland",
         "state": "Ohio",
-        "zip": "44103",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/tech_elevator.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "true"
+        "zip": "44103"
     }, {
-        "url": "http://www.techelevator.com/",
         "address1": "1275 Kinnear Road",
         "address2": "Suite 121",
         "city": "Columbus",
         "state": "Ohio",
-        "zip": "43212",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/tech_elevator.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "true"
+        "zip": "43212"
     }]
 }, {
     "name": "Code Fellows",
+    "url": "https://www.codefellows.org/blog/code-fellows-is-coming-to-portland-this-fall",
+    "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/code_fellows.jpg",
+    "va_accepted": "false",
+    "full_time": "true",
+    "hardware_included": "false",
+    "has_online": "false",
     "locations": [{
-        "url": "https://www.codefellows.org/blog/code-fellows-is-coming-to-portland-this-fall",
         "address1": "920 SW Third Avenue",
         "address2": "2nd Floor",
         "city": "Portland",
         "state": "Oregon",
-        "zip": "97204",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/code_fellows.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "97204"
     }, {
-        "url": "https://www.codefellows.org",
         "address1": "511 Boren Avenue N",
         "city": "Seattle",
         "state": "Washington",
-        "zip": "98109",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/code_fellows.jpg",
-        "va_accepted": "true",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "98109"
     }]
 }, {
     "name": "Epicodus",
+    "url": "http://www.epicodus.com/",
+    "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/epicodus.jpg",
+    "va_accepted": "false",
+    "full_time": "true",
+    "hardware_included": "false",
+    "notes": "(Also see, <a href=\"http://www.learnhowtoprogram.com/lessons/learn-how-to-program\">Learn how to program</a>.)",
+    "has_online": "false",
     "locations": [{
-        "url": "http://www.epicodus.com/",
         "address1": "208 SW 5th Avenue",
         "city": "Portland",
         "state": "Oregon",
-        "zip": "97214",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/epicodus.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false",
-        "notes": "(Also see, <a href=\"http://www.learnhowtoprogram.com/lessons/learn-how-to-program\">Learn how to program</a>.)"
+        "zip": "97214"
     }]
 }, {
     "name": "PDX Code Guild",
+    "url": "http://pdxcodeguild.com",
+    "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/pdx_code_guild.jpg",
+    "va_accepted": "false",
+    "full_time": "true",
+    "hardware_included": "false",
+    "has_online": "false",
     "locations": [{
-        "url": "http://pdxcodeguild.com",
         "address1": "2626 SW Corbett Avenue",
         "address2": "Suite 100",
         "city": "Portland",
         "state": "Oregon",
-        "zip": "97201",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/pdx_code_guild.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "97201"
     }]
 }, {
     "name": "Nashville Software School",
+    "url": "http://nashvillesoftwareschool.com/",
+    "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/nss.jpg",
+    "va_accepted": "true",
+    "full_time": "true",
+    "hardware_included": "false",
+    "has_online": "false",
     "locations": [{
-        "url": "http://nashvillesoftwareschool.com/",
         "address1": "500 Interstate Boulevard S",
         "address2": "Suite 300",
         "city": "Nashville",
         "state": "Tennessee",
-        "zip": "37210",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/nss.jpg",
-        "va_accepted": "true",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "37210"
     }]
 }, {
     "name": "Codeup",
+    "url": "http://codeup.com/",
+    "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/codeup.jpg",
+    "va_accepted": "true",
+    "full_time": "true",
+    "hardware_included": "false",
+    "has_online": "false",
     "locations": [{
-        "url": "http://codeup.com/",
         "address1": "600 Navarro Street",
         "address2": "#350",
         "city": "San Antonio",
         "state": "Texas",
-        "zip": "78205",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/codeup.jpg",
-        "va_accepted": "true",
-        "full_time": "true",
-        "hardware_included": "false"
+        "zip": "78205"
     }]
 }, {
     "name": "Bloc",
+    "url": "https://bloc.io",
+    "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/bloc.jpg",
+    "va_accepted": "false",
+    "full_time": "false",
+    "hardware_included": "false",
+    "has_online": "true",
     "locations": [{
-        "url": "https://bloc.io",
         "address1": "Online",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/bloc.jpg",
-        "va_accepted": "false",
-        "full_time": "false",
-        "hardware_included": "false"
     }]
 }, {
     "name": "LaunchCode",
+    "url": "https://launchcode.org",
+    "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/launch_code.jpg",
+    "va_accepted": "false",
+    "full_time": "true",
+    "hardware_included": "false",
+    "notes": "Completely free for accepted applicants. This is a non-profit code school.",
+    "has_online": "false",
     "locations": [{
-        "url": "https://launchcode.org",
         "address1": "4811 Delmar Boulevard",
         "city": "Saint Louis",
         "state": "Missouri",
-        "zip": "63108",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/launch_code.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false",
-        "notes": "Completely free for accepted applicants. This is a non-profit code school."
+        "zip": "63108"
     }, {
-        "url": "https://launchcode.org",
         "address1": "315 NE 2nd Avenue",
         "city": "Miami",
         "state": "Florida",
-        "zip": "33132",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/launch_code.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false",
-        "notes": "Completely free for accepted applicants. This is a non-profit code school."
+        "zip": "33132"
     }, {
-        "url": "https://launchcode.org",
         "address1": "210 W 19th Terrace",
         "city": "Kansas City",
         "state": "Missouri",
-        "zip": "64108",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/launch_code.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false",
-        "notes": "Completely free for accepted applicants. This is a non-profit code school."
+        "zip": "64108"
     }, {
-        "url": "https://launchcode.org",
         "address1": "80 Washington Street",
         "address2": "University of Rhode Island: Providence",
         "city": "Providence",
         "state": "Rhode Island",
-        "zip": "02903",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/launch_code.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false",
-        "notes": "Completely free for accepted applicants. This is a non-profit code school."
+        "zip": "02903"
     }, {
-        "url": "https://launchcode.org",
         "address1": "Undisclosed Address",
         "city": "Portland",
         "state": "Oregon",
-        "zip": "97204",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/launch_code.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false",
-        "notes": "Completely free for accepted applicants. This is a non-profit code school."
+        "zip": "97204"
     }, {
-        "url": "https://launchcode.org",
         "address1": "Undisclosed Address",
         "city": "Seattle",
         "state": "Washington",
-        "zip": "98121",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/launch_code.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false",
-        "notes": "Completely free for accepted applicants. This is a non-profit code school."
+        "zip": "98121"
     }]
 }, {
     "name": "Ada Developers Academy",
+    "url": "http://adadevelopersacademy.org",
+    "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/ada_developers.jpg",
+    "va_accepted": "false",
+    "full_time": "true",
+    "hardware_included": "false",
+    "notes": "<b>Women-only and tuition-free</b>. One-year program.",
+    "has_online": "false",
     "locations": [{
-        "url": "http://adadevelopersacademy.org",
         "address1": "1215 4th Avenue",
         "address2": "Suite 1050",
         "city": "Seattle",
         "state": "Washington",
-        "zip": "98109",
-        "logo": "https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/ada_developers.jpg",
-        "va_accepted": "false",
-        "full_time": "true",
-        "hardware_included": "false",
-        "notes": "<strong>Women-only and tuition-free</strong>. One-year program."
+        "zip": "98109"
     }]
 }]
