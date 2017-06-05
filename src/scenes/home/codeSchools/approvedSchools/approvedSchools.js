@@ -4,12 +4,10 @@ import Section from 'shared/components/section/section';
 import SchoolCard from 'shared/components/schoolCard/schoolCard';
 import styles from './approvedSchools.css';
 
-
 // const endpoint = 'https://api.operationcode.org/api/v1/code_schools.json';
 const endpoint = 'https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/scenes/home/codeSchools/schools.json';
 const gettingSchoolData = fetch(endpoint)
   .then(response => response.json());
-
 
 class ApprovedSchools extends Component {
   constructor(props) {
@@ -19,27 +17,29 @@ class ApprovedSchools extends Component {
     };
 
     gettingSchoolData.then(data =>
-      this.setState({ vaSchools: data.va_approved })
+      this.setState({ vaSchools: data })
     );
   }
 
   render() {
-    const vaSchools = !this.state.vaSchools ? null : this.state.vaSchools.map(s =>
-                        (
-                          <SchoolCard
-                            schoolName={s.name}
-                            link={s.url}
-                            schoolAddress={s.address1}
-                            schoolCity={s.city}
-                            schoolState={s.state}
-                            logo={s.logo}
-                            GI={s.va_accepted ? 'Yes' : 'No'}
-                            fullTime={s.full_time ? 'Full Time' : 'Flexible'}
-                            hardware={s.hardware_included ? 'Yes' : 'No'}
-                          />
-                        )
+    const vaSchools = !this.state.vaSchools ? null : this.state.vaSchools
+      .filter(school => school.va_accepted)
+      .map(school =>
+        (
+          <SchoolCard
+            schoolName={school.name}
+            link={school.url}
+            schoolAddress={school.locations[0].address1}
+            schoolCity={school.locations[0].city}
+            schoolState={school.locations[0].state}
+            logo={school.logo}
+            GI={school.va_accepted ? 'Yes' : 'No'}
+            fullTime={school.full_time ? 'Full-Time' : 'Flexible'}
+            hardware={school.hardware_included ? 'Yes' : 'No'}
+          />
+        )
+      );
 
-                      );
     return (
       <Section
         title="VA-Approved Schools"
