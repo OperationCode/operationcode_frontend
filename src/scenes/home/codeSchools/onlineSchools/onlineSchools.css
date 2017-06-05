@@ -1,0 +1,25 @@
+.intro {
+  padding: 0 0 2.5% 0;
+}
+
+.eSchools {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.moocs {
+  padding: 2.5% 0 2.5% 0;
+}
+
+.moocs h3 {
+  text-align: center;
+}
+
+.moocCards {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-around;
+}
