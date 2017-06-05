@@ -410,7 +410,7 @@
         "state": "Illinois",
         "zip": "60654"
     }, {
-        "address1": "Online",
+        "address1": "Online"
     }]
 }, {
     "name": "The Flatiron School",
@@ -427,7 +427,7 @@
         "state": "New York",
         "zip": "10004"
     }, {
-        "address1": "Online",
+        "address1": "Online"
     }]
 }, {
     "name": "Thinkful",
@@ -438,7 +438,7 @@
     "hardware_included": "false",
     "has_online": "true",
     "locations": [{
-        "address1": "Online",
+        "address1": "Online"
     }]
 }, {
     "name": "Tech Elevator",
@@ -549,7 +549,7 @@
     "hardware_included": "false",
     "has_online": "true",
     "locations": [{
-        "address1": "Online",
+        "address1": "Online"
     }]
 }, {
     "name": "LaunchCode",
