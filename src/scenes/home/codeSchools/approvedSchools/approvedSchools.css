@@ -1,9 +1,8 @@
 .noteForSchoolReps {
   text-align: center;
-  font-size: 1.2em;
-  margin: 25px;
+  font-size: 1em;
+  margin: 15px 0 0 0;
 }
-
 
 .vaSchools {
   display: flex;

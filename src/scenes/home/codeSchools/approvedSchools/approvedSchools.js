@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import Section from 'shared/components/section/section';
 import SchoolCard from 'shared/components/schoolCard/schoolCard';
 import styles from './approvedSchools.css';
@@ -54,9 +53,9 @@ class ApprovedSchools extends Component {
           <p>
             Are you a code school seeking state and/or VA approval?
             <br />
-            <Link to="mailto:staff@operationcode.org" role="button">
+            <a href="mailto:staff@operationcode.org">
               Request technical assistance today.
-            </Link>
+            </a>
           </p>
         </div>
       </Section>
