@@ -7,7 +7,6 @@ const endpoint = 'https://raw.githubusercontent.com/OperationCode/operationcode_
 const gettingSchoolData = fetch(endpoint)
   .then(response => response.json());
 
-
 class StateSortedSchools extends Component {
   constructor(props) {
     super(props);
@@ -26,7 +25,7 @@ class StateSortedSchools extends Component {
     const regex = new RegExp(value, 'gi');
     const arr = this.state.by_state.match(regex);
     this.setState({ stateList: arr });
-      // this.setState({ query: value });
+    this.setState({ query: value });
   }
 
   render() {
@@ -34,12 +33,14 @@ class StateSortedSchools extends Component {
       <Section
         id="schoolsByState"
         title="Schools by State"
+        theme="white"
         headingLines={false}
         margin
       >
         <FormInput
           placeholder="Start typing a state..."
           onChange={this.onSearchChange}
+          id="search"
         />
       </Section>
     );
