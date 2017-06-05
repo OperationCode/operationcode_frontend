@@ -257,7 +257,7 @@
         "address1": "125 Summer Street",
         "address2": "13th Floor",
         "city": "Boston",
-        "state": "Massachussets",
+        "state": "Massachussetts",
         "zip": "02110"
     }, {
         "address1": "444 N Wabash Avenue",
@@ -367,7 +367,7 @@
         "address1": "50 Milk Street",
         "address2": "14th Floor",
         "city": "Boston",
-        "state": "Massachussets",
+        "state": "Massachussetts",
         "zip": "02109"
     }, {
         "address1": "25 Broadway",
