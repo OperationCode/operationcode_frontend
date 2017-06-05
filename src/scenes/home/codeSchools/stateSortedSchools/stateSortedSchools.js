@@ -23,26 +23,31 @@ class StateSortedSchools extends Component {
   }
 
   onSearchChange = (value) => {
-    // const regex = new RegExp(value, 'gi');
-    // const arr = this.state.by_state.match(regex);
-    // this.setState({ stateList: arr });
-    this.setState({ query: value });
-    this.setState({ schoolsByState: this.searchState(value) });
+    if (value.length > 1) {
+      // Prevent query with just one character in search field
+      this.setState({ query: value });
+      this.setState({ schoolsByState: this.searchState(value) });
+    }
   }
 
   searchState = (string) => {
-    const stringFormat = string.replace(/\w\S*/g, txt => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase());
+    const stringFormat = string.replace(/\w\S*/g, txt =>
+      txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()
+    );
     const schools = [];
+
     this.state.schools.forEach((school) => {
-      const locations = school.locations.filter(location =>
-        location.state === stringFormat
-      );
+      // Search non-online locations for input per key stroke
+      const locations = school.locations.filter(location => location.state !== undefined)
+                                        .filter(location => location.state.includes(stringFormat));
+
       if (locations.length > 0) {
         const newSchool = Object.assign({}, school);
         newSchool.locations = locations;
         schools.push(newSchool);
       }
     });
+
     return schools;
   }
 
@@ -62,7 +67,8 @@ class StateSortedSchools extends Component {
             hardware={school.hardware_included ? 'Yes' : 'No'}
           />
         )
-        );
+      );
+
     return (
       <Section
         id="schoolsByState"
@@ -76,7 +82,7 @@ class StateSortedSchools extends Component {
           onChange={this.onSearchChange}
           id="search"
         />
-        <div className={styles.stateSchool}>
+        <div className={styles.stateSchools}>
           {stateSchools}
         </div>
       </Section>
