@@ -26,6 +26,8 @@ class ApprovedSchools extends Component {
       .map(school =>
         (
           <SchoolCard
+            key={school.name}
+            alt={school.name}
             schoolName={school.name}
             link={school.url}
             schoolAddress={school.locations[0].address1}

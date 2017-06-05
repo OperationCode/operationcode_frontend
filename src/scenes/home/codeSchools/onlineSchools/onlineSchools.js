@@ -30,6 +30,8 @@ class OnlineSchools extends Component {
       .map(school =>
         (
           <SchoolCard
+            key={school.name}
+            alt={school.name}
             schoolName={school.name}
             link={school.url}
             schoolAddress="Online"
