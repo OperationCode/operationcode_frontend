@@ -1,15 +1,19 @@
 .schoolCard {
   display: flex;
-/*  border: 1px solid #CAD0D2;*/
   border-radius: 4px;
   align-items: center;
   margin: 20px 10px;
   padding: 10px;
-  width: 350px;
+  width: 360px;
   height: 150px;
   background: #fff;
   box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.1);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.schoolCard p {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
 }
 
 .schoolCard:hover {
@@ -21,23 +25,23 @@
   height: 150px;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
-  overflow: hidden;
 }
 
 .logo {
-  width: 125px;
-  height: 125px;
+  width: 150px;
+  height: 150px;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
 }
 
-.schoolCardText {
-  width: 50%;
-  padding-left: 5%;
+.schoolDetails {
+  padding-left: 10px;
 }
 
 .schoolName {
   font-weight: 800;
   font-size: 1.4rem;
-
 }
 
 .schoolName a {

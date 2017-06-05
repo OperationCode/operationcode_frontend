@@ -10,7 +10,7 @@ class SchoolCard extends Component {
           <img src={this.props.logo} alt={this.props.alt} className={styles.logo} />
         </div>
 
-        <div className={styles.text}>
+        <div className={styles.schoolDetails}>
           <p>
             <span className={styles.schoolName}>
               <a href={this.props.link}>{this.props.schoolName}</a>
@@ -19,7 +19,9 @@ class SchoolCard extends Component {
             <span className={styles.schoolLocation}>
               {this.props.schoolAddress}{this.props.schoolAddress.includes('Online') ? null : ','}
               <br />
-              {this.props.schoolCity}{this.props.schoolCity ? ',' : null} {this.props.schoolState}
+              {this.props.schoolCity}{this.props.schoolCity ? ', ' : null}
+              {this.props.schoolState}{this.props.schoolState ? <br /> : null}
+              <br />
             </span>
           </p>
 
