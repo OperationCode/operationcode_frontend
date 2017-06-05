@@ -12,21 +12,23 @@ class SchoolCard extends Component {
 
         <div className={styles.text}>
           <p>
-            <span className={styles.schoolName}><a href={this.props.link}>{this.props.schoolName}</a></span>
+            <span className={styles.schoolName}>
+              <a href={this.props.link}>{this.props.schoolName}</a>
+            </span>
             <br />
             <span className={styles.schoolLocation}>
-              {this.props.schoolAddress}
+              {this.props.schoolAddress}{this.props.schoolAddress.includes('Online') ? null : ','}
               <br />
-              {this.props.schoolCity} {this.props.schoolState}
+              {this.props.schoolCity}{this.props.schoolCity ? ',' : null} {this.props.schoolState}
             </span>
           </p>
 
           <p className={styles.schoolInfo}>
-            <b>GI Bill Accepted:</b> {this.props.GI}
+            GI Bill Accepted: <b>{this.props.GI}</b>
             <br />
-            <b>Commitment:</b> {this.props.fullTime}
+            Commitment: <b>{this.props.fullTime}</b>
             <br />
-            <b>Hardware Included:</b> {this.props.hardware}
+            Hardware Included: <b>{this.props.hardware}</b>
           </p>
         </div>
       </div>
@@ -39,12 +41,17 @@ SchoolCard.propTypes = {
   link: PropTypes.string.isRequired,
   schoolName: PropTypes.string.isRequired,
   schoolAddress: PropTypes.string.isRequired,
-  schoolCity: PropTypes.string.isRequired,
-  schoolState: PropTypes.string.isRequired,
+  schoolCity: PropTypes.string,
+  schoolState: PropTypes.string,
   logo: PropTypes.string.isRequired,
   GI: PropTypes.string.isRequired,
   fullTime: PropTypes.string.isRequired,
   hardware: PropTypes.string.isRequired
+};
+
+SchoolCard.defaultProps = {
+  schoolCity: null,
+  schoolState: null
 };
 
 export default SchoolCard;
