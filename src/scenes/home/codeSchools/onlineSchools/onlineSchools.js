@@ -7,9 +7,7 @@ import treehouseLogo from 'images/moocLogos/treehouse.jpg';
 import udacityLogo from 'images/moocLogos/udacity.jpg';
 import styles from './onlineSchools.css';
 
-// const endpoint = 'https://api.operationcode.org/api/v1/code_schools.json';
-const endpoint = 'https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/scenes/home/codeSchools/schools.json';
-const gettingSchoolData = fetch(endpoint)
+const gettingSchoolData = fetch('https://api.operationcode.org/api/v1/code_schools.json')
   .then(response => response.json());
 
 class OnlineSchools extends Component {
