@@ -49,8 +49,8 @@ class OnlineSchools extends Component {
         margin
       >
         <div className={styles.intro}>
-          <p>
-            Many programs offer coding schools in a completely digital fashion. Regardless of where
+          <p className={styles.leadingParagraph}>
+            Many programs offer coding schools in a completely digital fashion. <br />Regardless of where
             you are in the world, you can learn how to code through these programs!
           </p>
         </div>
@@ -61,12 +61,12 @@ class OnlineSchools extends Component {
 
         <div className={styles.moocs}>
           <h3>MOOCs</h3>
-          <p>
+          <p className={styles.leadingParagraph}>
             Massive, Open, Online Courses (or MOOCs) are course study programs made available over
             the internet!
             <br />
-            Typically there are start and end dates, but the work is on your own time.
-            MOOCs are usually free, but there are certain benefits to paying for premium aspects
+            Typically there are start and end dates, but the work itself is done at your own pace.
+            <br />MOOCs are usually free, but there are certain benefits to paying for premium aspects
             of MOOCs.
             <br />
           </p>
@@ -85,6 +85,7 @@ class OnlineSchools extends Component {
               cardText={'Offers only paid programs, but we have licenses available.'}
               buttonText={'Website'}
               link={'https://teamtreehouse.com/'}
+              className={styles.boxShadow}
             />
             <ImageCard
               image={udacityLogo}

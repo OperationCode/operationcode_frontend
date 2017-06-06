@@ -22,11 +22,11 @@ class PartnerSchools extends Component {
         margin
       >
         <div className={styles.intro}>
-          <p>
+          <p className={styles.introParagraph}>
             Many code schools around the nation offer military/veterans discounts to make coding
-            education more accessible to those who&apos;ve worn the uniform and served our country.
+            education more accessible to our veterans.<br />
             We&apos;ve partnered up with those schools in order to help direct veterans to the best
-            code schools around the country. <b>Apply for a scholarship with our partners now and
+            code schools around the country. <br /> <b>Apply for a scholarship with our partners now and
             get coding:</b>
           </p>
         </div>
