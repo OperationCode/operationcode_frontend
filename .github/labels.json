@@ -1,4 +1,5 @@
 [
+  { "name": "beginner friendly", "color": "#c2e0c6" },
   { "name": "Status: Blocked", "color": "#e11d21" },
   { "name": "Status: Duplicate", "color": "#fef2c0" },
   { "name": "Status: In Progress", "color": "#cccccc" },
