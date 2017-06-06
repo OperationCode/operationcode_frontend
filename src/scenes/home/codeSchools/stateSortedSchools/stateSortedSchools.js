@@ -3,7 +3,7 @@ import Section from 'shared/components/section/section';
 import SchoolCard from 'shared/components/schoolCard/schoolCard';
 import FormInput from 'shared/components/form/formInput/formInput';
 import styles from './stateSortedSchools.css';
-
+import stateCodes from '../stateCodes.json';
 
 const gettingSchoolData = fetch('https://api.operationcode.org/api/v1/code_schools.json')
   .then(response => response.json());
@@ -35,22 +35,36 @@ class StateSortedSchools extends Component {
   }
 
   searchState = (string) => {
-    const stringFormat = string.replace(/\w\S*/g, txt => txt.toUpperCase());
+    const userInput = string.replace(/\w\S*/g, txt => txt.toUpperCase());
     const schools = [];
+
+    // Return true if input matches state code or name (ex: "CA or California")
+    function matchesState(school, input) {
+      const stateName = stateCodes[school.state].toUpperCase();
+      return school.state.includes(input) || stateName.includes(input);
+    }
+
     this.state.schools.forEach((school) => {
-      const locations = school.locations.filter(location =>
-        location.state === stringFormat
-      );
-      if (locations.length > 0) {
-        const newSchool = Object.assign({}, school);
-        newSchool.locations = locations;
-        schools.push(newSchool);
+      for (location of school.locations.filter(_school => matchesState(_school, userInput))) {
+        schools.push({
+          name: school.name,
+          url: school.url,
+          address: school.location.address1,
+          city: school.location.city,
+          state: school.location.state,
+          zip: school.location.zip,
+          va_accepted: school.location.va_accepted,
+          full_time: school.full_time,
+          hardware_included: school.hardware_included
+        });
       }
     });
+
     return schools;
-  }
+  };
 
   render() {
+    console.log(this.state.schoolsByState);
     const stateSchools = !this.state.schoolsByState ? null : this.state.schoolsByState
       .map(school =>
         (
@@ -59,12 +73,11 @@ class StateSortedSchools extends Component {
             alt={school.name}
             schoolName={school.name}
             link={school.url}
-            schoolAddress={school.locations[0].address1}
-            schoolCity={school.locations[0].city}
-            schoolState={school.locations[0].state}
+            schoolAddress={school.address}
+            schoolCity={school.city}
+            schoolState={school.state}
             logo={school.logo}
-            GI={'Yes'}
-            // GI={school.locations[0].va_accepted ? 'Yes' : 'No'}
+            GI={school.va_accepted ? 'Yes' : 'No'}
             fullTime={school.full_time ? 'Full-Time' : 'Flexible'}
             hardware={school.hardware_included ? 'Yes' : 'No'}
           />
