@@ -41,24 +41,18 @@ class StateSortedSchools extends Component {
     // Return true if input matches state code or name (ex: "CA or California")
     function matchesState(school, input) {
       const stateName = stateCodes[school.state].toUpperCase();
-      console.log(stateName);
       return school.state.includes(input) || stateName.includes(input);
     }
 
     this.state.schools.forEach((school) => {
-      const locations = school.locations.filter(location => matchesState(location, userInput));
-
-      if (locations.length > 0) {
-        const newSchool = Object.assign({}, school);
-        newSchool.locations = locations;
-        schools.push(newSchool);
-      }
+      schools.push(school.locations.filter(location => matchesState(location, userInput)));
     });
 
     return schools;
   };
 
   render() {
+    console.log(this.state.schoolsByState);
     const stateSchools = !this.state.schoolsByState ? null : this.state.schoolsByState
       .map(school =>
         (
@@ -67,11 +61,12 @@ class StateSortedSchools extends Component {
             alt={school.name}
             schoolName={school.name}
             link={school.url}
-            schoolAddress={school.locations[0].address1}
-            schoolCity={school.locations[0].city}
-            schoolState={school.locations[0].state}
+            schoolAddress={'school.locations[0].address1'}
+            schoolCity={'school.locations[0].city'}
+            schoolState={'school.locations[0].state'}
             logo={school.logo}
-            GI={school.va_accepted ? 'Yes' : 'No'}
+            GI={'Yes'}
+            // GI={school.locations[0].va_accepted ? 'Yes' : 'No'}
             fullTime={school.full_time ? 'Full-Time' : 'Flexible'}
             hardware={school.hardware_included ? 'Yes' : 'No'}
           />
