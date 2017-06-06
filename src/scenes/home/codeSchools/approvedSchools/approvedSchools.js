@@ -4,29 +4,25 @@ import Section from 'shared/components/section/section';
 import SchoolCard from 'shared/components/schoolCard/schoolCard';
 import styles from './approvedSchools.css';
 
-const gettingSchoolData = fetch('https://api.operationcode.org/api/v1/code_schools.json')
-  .then(response => response.json());
-
 class ApprovedSchools extends Component {
   constructor(props) {
     super(props);
     this.state = {
       vaSchools: null
     };
-  }
 
-  componentWillMount() {
-    gettingSchoolData.then((data) => {
-      this.setState({ vaSchools: this.getApprovedSchools(data) });
-    });
+    fetch('https://api.operationcode.org/api/v1/code_schools.json')
+    .then(response => response.json()).then(data =>
+      this.setState({ vaSchools: this.getApprovedSchools(data) })
+    );
   }
 
   getApprovedSchools = (schools) => {
-    const approvedSchools = [];
+    let approvedSchools = [];
     schools.forEach((school) => {
       const locations = school.locations.filter(location => location.va_accepted === true);
       if (locations.length > 0) {
-        approvedSchools.push(locations.map(location =>
+        approvedSchools = approvedSchools.concat(locations.map(location =>
           Object.assign({}, _.omit(school, ['locations']), location)));
       }
     });
@@ -35,20 +31,20 @@ class ApprovedSchools extends Component {
   }
 
   render() {
+    console.log(JSON.stringify(this.state.vaSchools, null, 2));
     const vaSchools = !this.state.vaSchools ? null : this.state.vaSchools
-      .filter(school => school.locations[0].va_accepted)
       .map(school =>
         (
           <SchoolCard
-            key={school.name}
+            key={school.address}
             alt={school.name}
             schoolName={school.name}
             link={school.url}
-            schoolAddress={school.locations[0].address1}
-            schoolCity={school.locations[0].city}
-            schoolState={school.locations[0].state}
+            schoolAddress={school.address1}
+            schoolCity={school.city}
+            schoolState={school.state}
             logo={school.logo}
-            GI={school.locations[0].va_accepted ? 'Yes' : 'No'}
+            GI={school.va_accepted ? 'Yes' : 'No'}
             fullTime={school.full_time ? 'Full-Time' : 'Flexible'}
             hardware={school.hardware_included ? 'Yes' : 'No'}
           />

@@ -7,9 +7,6 @@ import treehouseLogo from 'images/moocLogos/treehouse.jpg';
 import udacityLogo from 'images/moocLogos/udacity.jpg';
 import styles from './onlineSchools.css';
 
-const gettingSchoolData = fetch('https://api.operationcode.org/api/v1/code_schools.json')
-  .then(response => response.json());
-
 class OnlineSchools extends Component {
   constructor(props) {
     super(props);
@@ -17,7 +14,8 @@ class OnlineSchools extends Component {
       eSchools: null
     };
 
-    gettingSchoolData.then(data =>
+    fetch('https://api.operationcode.org/api/v1/code_schools.json')
+    .then(response => response.json()).then(data =>
       this.setState({ eSchools: data })
     );
   }
