@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Section from 'shared/components/section/section';
 import SchoolCard from 'shared/components/schoolCard/schoolCard';
 import ImageCard from 'shared/components/imageCard/imageCard';
@@ -13,32 +14,31 @@ class OnlineSchools extends Component {
     this.state = {
       eSchools: null
     };
-
-    fetch('https://api.operationcode.org/api/v1/code_schools.json')
-    .then(response => response.json()).then(data =>
-      this.setState({ eSchools: data })
-    );
   }
 
-  render() {
-    const eSchools = !this.state.eSchools ? null : this.state.eSchools
-      .filter(school => school.has_online)
-      .map(school =>
-        (
-          <SchoolCard
-            key={school.name}
-            alt={school.name}
-            schoolName={school.name}
-            link={school.url}
-            schoolAddress="Online"
-            logo={school.logo}
-            GI={school.va_accepted ? 'Yes' : 'No'}
-            fullTime={school.full_time ? 'Full-Time' : 'Flexible'}
-            hardware={school.hardware_included ? 'Yes' : 'No'}
-          />
-        )
-      );
+  componentWillMount() {
+    this.setState({ eSchools: this.loadSchools() });
+  }
 
+  loadSchools() {
+    return this.props.schools.filter(school => school.has_online);
+  }
+  render() {
+    const eSchools = this.state.eSchools.map(school =>
+      (
+        <SchoolCard
+          key={school.name}
+          alt={school.name}
+          schoolName={school.name}
+          link={school.url}
+          schoolAddress="Online"
+          logo={school.logo}
+          GI={school.va_accepted ? 'Yes' : 'No'}
+          fullTime={school.full_time ? 'Full-Time' : 'Flexible'}
+          hardware={school.hardware_included ? 'Yes' : 'No'}
+        />
+      )
+    );
     return (
       <Section
         id="onlineSchools"
@@ -98,5 +98,9 @@ class OnlineSchools extends Component {
     );
   }
 }
+
+OnlineSchools.propTypes = {
+  schools: PropTypes.array.isRequired // eslint-disable-line
+};
 
 export default OnlineSchools;

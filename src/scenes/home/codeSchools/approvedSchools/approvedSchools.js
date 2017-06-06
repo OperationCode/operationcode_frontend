@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Section from 'shared/components/section/section';
 import SchoolCard from 'shared/components/schoolCard/schoolCard';
 import styles from './approvedSchools.css';
@@ -10,16 +11,15 @@ class ApprovedSchools extends Component {
     this.state = {
       vaSchools: null
     };
-
-    fetch('https://api.operationcode.org/api/v1/code_schools.json')
-    .then(response => response.json()).then(data =>
-      this.setState({ vaSchools: this.getApprovedSchools(data) })
-    );
   }
 
-  getApprovedSchools = (schools) => {
+  componentWillMount() {
+    this.setState({ vaSchools: this.loadSchools() });
+  }
+
+  loadSchools() {
     let approvedSchools = [];
-    schools.forEach((school) => {
+    this.props.schools.forEach((school) => {
       const locations = school.locations.filter(location => location.va_accepted === true);
       if (locations.length > 0) {
         approvedSchools = approvedSchools.concat(locations.map(location =>
@@ -31,8 +31,7 @@ class ApprovedSchools extends Component {
   }
 
   render() {
-    console.log(JSON.stringify(this.state.vaSchools, null, 2));
-    const vaSchools = !this.state.vaSchools ? null : this.state.vaSchools
+    const vaSchools = this.state.vaSchools
       .map(school =>
         (
           <SchoolCard
@@ -74,5 +73,9 @@ class ApprovedSchools extends Component {
     );
   }
 }
+
+ApprovedSchools.propTypes = {
+  schools: PropTypes.array.isRequired // eslint-disable-line
+};
 
 export default ApprovedSchools;

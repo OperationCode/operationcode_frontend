@@ -13,10 +13,17 @@ class CodeSchools extends Component {
     super(props);
 
     this.state = {
-      schools: {}
+      schools: null
     };
   }
-
+  componentWillMount() {
+    return fetch('https://api.operationcode.org/api/v1/code_schools.json').then(response =>
+      response.json().then((data) => {
+        console.log(data); // eslint-disable-line
+        this.setState({ schools: data });
+      })
+    );
+  }
   render() {
     return (
       <div>
@@ -64,10 +71,10 @@ class CodeSchools extends Component {
           </div>
         </Section>
 
-        <ApprovedSchools />
-        <PartnerSchools />
-        <OnlineSchools />
-        <StateSortedSchools />
+        {this.state.schools && <ApprovedSchools schools={this.state.schools} />}
+        {this.state.schools && <PartnerSchools schools={this.state.schools} />}
+        {this.state.schools && <OnlineSchools schools={this.state.schools} />}
+        {this.state.schools && <StateSortedSchools schools={this.state.schools} />}
       </div>
     );
   }

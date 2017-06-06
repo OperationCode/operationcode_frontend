@@ -1,25 +1,18 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Section from 'shared/components/section/section';
 import SchoolCard from 'shared/components/schoolCard/schoolCard';
 import FormInput from 'shared/components/form/formInput/formInput';
 import styles from './stateSortedSchools.css';
 import stateCodes from '../stateCodes.json';
 
-const gettingSchoolData = fetch('https://api.operationcode.org/api/v1/code_schools.json')
-  .then(response => response.json());
-
 class StateSortedSchools extends Component {
   constructor(props) {
     super(props);
     this.state = {
       query: null,
-      schools: null,
       schoolsByState: null
     };
-
-    gettingSchoolData.then(data =>
-      this.setState({ schools: data })
-    );
   }
 
   onSearchChange = (value) => {
@@ -44,7 +37,7 @@ class StateSortedSchools extends Component {
       return school.state.includes(input) || stateName.includes(input);
     }
 
-    this.state.schools.forEach((school) => {
+    this.props.schools.forEach((school) => {
       school.locations.filter(_school => matchesState(_school, userInput)).forEach((location) => {
         schools.push({
           name: school.name,
@@ -104,5 +97,9 @@ class StateSortedSchools extends Component {
     );
   }
 }
+
+StateSortedSchools.propTypes = {
+  schools: PropTypes.array.isRequired // eslint-disable-line
+};
 
 export default StateSortedSchools;
