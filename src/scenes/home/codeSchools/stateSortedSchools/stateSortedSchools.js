@@ -45,19 +45,20 @@ class StateSortedSchools extends Component {
     }
 
     this.state.schools.forEach((school) => {
-      for (location of school.locations.filter(_school => matchesState(_school, userInput))) {
+      school.locations.filter(_school => matchesState(_school, userInput)).forEach((location) => {
         schools.push({
           name: school.name,
           url: school.url,
-          address: school.location.address1,
-          city: school.location.city,
-          state: school.location.state,
-          zip: school.location.zip,
-          va_accepted: school.location.va_accepted,
+          address: location.address1,
+          city: location.city,
+          state: location.state,
+          zip: location.zip,
+          logo: school.logo,
+          va_accepted: location.va_accepted,
           full_time: school.full_time,
           hardware_included: school.hardware_included
         });
-      }
+      });
     });
 
     return schools;
