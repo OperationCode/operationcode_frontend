@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, { Component } from 'react';
 import Section from 'shared/components/section/section';
 import SchoolCard from 'shared/components/schoolCard/schoolCard';
@@ -10,12 +11,28 @@ class ApprovedSchools extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      schools: null,
       vaSchools: null
     };
 
-    gettingSchoolData.then(data =>
-      this.setState({ vaSchools: data })
-    );
+    gettingSchoolData.then(data => this.setState({ schools: data }));
+  }
+
+  componentWillMount() {
+    this.setState({ vaSchools: this.getApprovedSchools(this.state.schools) });
+  }
+
+  getApprovedSchools = (schools) => {
+    const approvedSchools = [];
+    schools.forEach((school) => {
+      const locations = school.locations.filter(location => location.va_accepted === true);
+      if (locations.length > 0) {
+        approvedSchools.push(locations.map(location =>
+          Object.assign({}, _.omit(school, ['locations']), location)));
+      }
+    });
+
+    return approvedSchools;
   }
 
   render() {
