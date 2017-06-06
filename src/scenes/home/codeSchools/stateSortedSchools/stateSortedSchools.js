@@ -13,8 +13,8 @@ class StateSortedSchools extends Component {
     super(props);
     this.state = {
       query: null,
-      schoolsByState: null,
-      schools: null
+      schools: null,
+      schoolsByState: null
     };
 
     gettingSchoolData.then(data =>
@@ -65,7 +65,6 @@ class StateSortedSchools extends Component {
   };
 
   render() {
-    console.log(this.state.schoolsByState);
     const stateSchools = !this.state.schoolsByState ? null : this.state.schoolsByState
       .map(school =>
         (

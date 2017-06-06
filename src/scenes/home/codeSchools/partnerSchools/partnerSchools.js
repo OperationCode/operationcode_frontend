@@ -33,8 +33,9 @@ class PartnerSchools extends Component {
 
         <div className={styles.partnerSchools}>
           <SchoolCard
-            schoolName="Thinkful"
+            key="0"
             alt="Thinkful Logo"
+            schoolName="Thinkful"
             link="http://www.thinkful.com"
             schoolAddress="Online"
             logo="https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/thinkful.jpg"
@@ -43,8 +44,9 @@ class PartnerSchools extends Component {
             hardware="No"
           />
           <SchoolCard
-            schoolName="Sabio"
+            key="1"
             alt="Sabio Logo"
+            schoolName="Sabio"
             link="http://sabio.la/veterans"
             schoolAddress="400 Corporate Pointe"
             schoolCity="Culver City"
@@ -55,8 +57,9 @@ class PartnerSchools extends Component {
             hardware="No"
           />
           <SchoolCard
-            schoolName="The Flatiron School"
+            key="2"
             alt="Flatiron Logo"
+            schoolName="The Flatiron School"
             link="http://flatironschool.com/"
             schoolAddress="11 Broadway, Suite 260"
             schoolCity="New York"
@@ -67,8 +70,9 @@ class PartnerSchools extends Component {
             hardware="No"
           />
           <SchoolCard
-            schoolName="Startup Institute"
+            key="3"
             alt="Startup Institute Logo"
+            schoolName="Startup Institute"
             link="https://www.startupinstitute.com/new-york/"
             schoolAddress="25 Broadway, 10th Floor"
             schoolCity="New York"
@@ -79,8 +83,9 @@ class PartnerSchools extends Component {
             hardware="No"
           />
           <SchoolCard
-            schoolName="Launch School"
+            key="4"
             alt="Launch School Logo"
+            schoolName="Launch School"
             link="https://launchschool.com/blog/operation-code-scholarship/"
             schoolAddress="Online"
             logo="https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/launch_school.jpg"
@@ -89,8 +94,9 @@ class PartnerSchools extends Component {
             hardware="No"
           />
           <SchoolCard
-            schoolName="Bloc"
+            key="5"
             alt="Bloc Logo"
+            schoolName="Bloc"
             link="http://try.bloc.io/operation-code-bootcamp-scholarship/"
             schoolAddress="Online"
             logo="https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/bloc.jpg"
@@ -99,8 +105,9 @@ class PartnerSchools extends Component {
             hardware="No"
           />
           <SchoolCard
-            schoolName="Fullstack Academy"
+            key="6"
             alt="Fullstack Academy Logo"
+            schoolName="Fullstack Academy"
             link="https://www.fullstackacademy.com/remote-immersive#scholarships"
             schoolAddress="Online, Chicago, New York"
             logo="https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/fullstack_academy.jpg"
