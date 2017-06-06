@@ -11,15 +11,14 @@ class ApprovedSchools extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      schools: null,
       vaSchools: null
     };
-
-    gettingSchoolData.then(data => this.setState({ schools: data }));
   }
 
   componentWillMount() {
-    this.setState({ vaSchools: this.getApprovedSchools(this.state.schools) });
+    gettingSchoolData.then((data) => {
+      this.setState({ vaSchools: this.getApprovedSchools(data) });
+    });
   }
 
   getApprovedSchools = (schools) => {
