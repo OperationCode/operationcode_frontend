@@ -3,9 +3,9 @@ import Section from 'shared/components/section/section';
 import SchoolCard from 'shared/components/schoolCard/schoolCard';
 import FormInput from 'shared/components/form/formInput/formInput';
 import styles from './stateSortedSchools.css';
+import stateCodes from '../stateCodes.json';
 
-const endpoint = 'https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/scenes/home/codeSchools/schools.json';
-const gettingSchoolData = fetch(endpoint)
+const gettingSchoolData = fetch('https://api.operationcode.org/api/v1/code_schools.json')
   .then(response => response.json());
 
 class StateSortedSchools extends Component {
@@ -35,15 +35,18 @@ class StateSortedSchools extends Component {
   }
 
   searchState = (string) => {
-    const stringFormat = string.replace(/\w\S*/g, txt =>
-      txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()
-    );
+    const userInput = string.replace(/\w\S*/g, txt => txt.toUpperCase());
     const schools = [];
 
+    // Return true if input matches state code or name (ex: "CA or California")
+    function matchesState(school, input) {
+      const stateName = stateCodes[school.state].toUpperCase();
+      console.log(stateName);
+      return school.state.includes(input) || stateName.includes(input);
+    }
+
     this.state.schools.forEach((school) => {
-      // Search non-online locations for input per key stroke
-      const locations = school.locations.filter(location => location.state !== undefined)
-                                        .filter(location => location.state.includes(stringFormat));
+      const locations = school.locations.filter(location => matchesState(location, userInput));
 
       if (locations.length > 0) {
         const newSchool = Object.assign({}, school);
@@ -53,7 +56,7 @@ class StateSortedSchools extends Component {
     });
 
     return schools;
-  }
+  };
 
   render() {
     const stateSchools = !this.state.schoolsByState ? null : this.state.schoolsByState
