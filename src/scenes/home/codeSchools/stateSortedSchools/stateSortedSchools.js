@@ -70,7 +70,7 @@ class StateSortedSchools extends Component {
       .map(school =>
         (
           <SchoolCard
-            key={school.name}
+            key={school.address}
             alt={school.name}
             schoolName={school.name}
             link={school.url}
