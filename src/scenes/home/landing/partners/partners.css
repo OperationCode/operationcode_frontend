@@ -1,35 +1,15 @@
-.partnersSection {
-  flex-flow: row wrap;
-  justify-content: space-around;
-}
-
-.partnersLeft, .partnersRight {
-  width:auto;
-  max-width: 50%;
-  min-width:400px;
-}
 .partners {
-  min-width:400px;
-  max-width: 50%;
-  font-size:16px;
-  display:flex;
-  justify-content: center;
+  font-size: 16px;
 }
 
-.partners p {
-  display: block;
-  width:80%;
-}
-
-.partnersLogos {
-  min-width:400px;
-  display:flex;
-  justify-content: center;
-}
-
-.apexLogo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.partnerLogos {
+  display: flex;
+  flex-flow: row wrap;
   width: 80%;
+  justify-content: space-around;
+  padding-top: 15px;
+}
+
+.partnerLogos > div {
+  margin: 2.5%;
 }
