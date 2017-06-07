@@ -16,14 +16,15 @@ class CodeSchools extends Component {
       schools: null
     };
   }
+
   componentWillMount() {
     return fetch('https://api.operationcode.org/api/v1/code_schools.json').then(response =>
       response.json().then((data) => {
-        console.log(data); // eslint-disable-line
         this.setState({ schools: data });
       })
     );
   }
+
   render() {
     return (
       <div>

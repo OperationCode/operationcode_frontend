@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Section from 'shared/components/section/section';
@@ -21,17 +22,28 @@ class OnlineSchools extends Component {
   }
 
   loadSchools() {
-    return this.props.schools.filter(school => school.has_online);
+    let onlineSchools = [];
+    this.props.schools.forEach((school) => {
+      if (school.has_online === true) {
+        onlineSchools = onlineSchools.concat(school.locations.map(location =>
+          Object.assign({}, _.omit(school, ['locations']), location)));
+      }
+    });
+
+    return onlineSchools;
   }
+
   render() {
     const eSchools = this.state.eSchools.map(school =>
       (
         <SchoolCard
-          key={school.name}
+          key={school.address}
           alt={school.name}
           schoolName={school.name}
           link={school.url}
-          schoolAddress="Online"
+          schoolAddress={school.online_only ? 'Online Only' : 'Online and in'}
+          schoolCity={school.city}
+          schoolState={school.state}
           logo={school.logo}
           GI={school.va_accepted ? 'Yes' : 'No'}
           fullTime={school.full_time ? 'Full-Time' : 'Flexible'}
