@@ -15,12 +15,14 @@ const Heading = (props) => {
 };
 
 Heading.propTypes = {
+  id: PropTypes.string,
   text: PropTypes.string.isRequired,
   headingLines: PropTypes.bool,
   theme: PropTypes.string
 };
 
 Heading.defaultProps = {
+  id: null,
   headingLines: true,
   theme: 'dark'
 };

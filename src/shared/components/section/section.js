@@ -6,6 +6,7 @@ import Heading from '../heading/heading';
 
 const Section = (props) => {
   const {
+    id,
     title,
     children,
     className,
@@ -30,7 +31,7 @@ const Section = (props) => {
   return (
     <div className={containerClasses} >
       <div className={classes} {...otherProps}>
-        {title && <Heading text={title} headingLines={headingLines} theme={headingTheme} />}
+        {title && <Heading text={title} id={id} headingLines={headingLines} theme={headingTheme} />}
         {children}
       </div>
     </div>
@@ -38,6 +39,7 @@ const Section = (props) => {
 };
 
 Section.propTypes = {
+  id: PropTypes.string,
   title: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.element),
@@ -51,14 +53,13 @@ Section.propTypes = {
 };
 
 Section.defaultProps = {
+  id: null,
+  title: null,
   className: null,
   theme: 'gray',
   headingLines: true,
   headingTheme: 'dark',
-  title: null,
   margin: false
 };
-
-// TODO: Implement id and send prop to heading to set <h2>'s id to passed prop
 
 export default Section;

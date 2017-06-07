@@ -15,7 +15,7 @@ class PartnerSchools extends Component {
   render() {
     return (
       <Section
-        id="schoolsByScholarship"
+        id="partnerSchools"
         title="Partnered Schools"
         theme="white"
         headingLines={false}

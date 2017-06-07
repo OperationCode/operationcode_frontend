@@ -7,9 +7,6 @@ class NavItem extends PureComponent {
 
   constructor() {
     super();
-
-    // TODO: remove this if .eslintrc updated to parser:"babel-eslint",
-    // allowing class methods as => fns
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -50,8 +47,7 @@ NavItem.defaultProps = {
   onClick: null
 };
 
-// TODO: Remove all references to notClickable and disabledClass (including .css)
-// when every route has been created.
+// TODO: When all routes complete, remove all references to notClickable and disabledClass (js/css)
 // NOTE: For the usage of disabledClass within the classes const, ask jjhampton if there are issues
 
 export default NavItem;

@@ -52,6 +52,7 @@ class ApprovedSchools extends Component {
 
     return (
       <Section
+        id="approvedSchools"
         title="VA-Approved Schools"
         headingLines={false}
         margin
