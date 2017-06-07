@@ -37,7 +37,7 @@ class OnlineSchools extends Component {
     const eSchools = this.state.eSchools.map(school =>
       (
         <SchoolCard
-          key={school.address}
+          key={`${Math.random()} + ${school.name}`}
           alt={school.name}
           schoolName={school.name}
           link={school.url}

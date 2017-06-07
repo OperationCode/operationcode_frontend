@@ -38,8 +38,10 @@ class StateSortedSchools extends Component {
         return thisCampus.state.includes(thisInput) || stateName.includes(thisInput);
       } catch (e) {
         if (e instanceof TypeError) {
+          /* eslint-disable no-console */
           console.log('Error: Typo in code_schools.yaml on the back-end under the `state` field');
           console.log(e);
+          /* eslint-disable no-console */
           return false;
         }
         // Unknown error issue
