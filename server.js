@@ -4,8 +4,10 @@ const path = require('path');
 
 const app = express();
 
+app.enable('trust proxy');
+
 app.use((req, res, next) => {
-  if (!req.secure) {
+  if (req.headers['x-forwarded-proto'] !== 'https') {
     return res.redirect(`https://${req.headers.host}${req.url}`);
   }
   return next();
