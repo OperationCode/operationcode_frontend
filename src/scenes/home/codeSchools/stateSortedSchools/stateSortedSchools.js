@@ -29,32 +29,42 @@ class StateSortedSchools extends Component {
 
   searchState = (string) => {
     const userInput = string.replace(/\w\S*/g, txt => txt.toUpperCase());
-    const schools = [];
+    const matchingSchools = [];
 
-    // Return true if input matches state code or name (ex: "CA or California")
-    function matchesState(school, input) {
-      const stateName = stateCodes[school.state].toUpperCase();
-      return school.state.includes(input) || stateName.includes(input);
+    // Return true if thisInput matches thisCampus's state code or name (ex: "CA or California")
+    function matchesState(thisInput, thisCampus) {
+      try {
+        const stateName = stateCodes[thisCampus.state].toUpperCase();
+        return thisCampus.state.includes(thisInput) || stateName.includes(thisInput);
+      } catch (e) {
+        if (e instanceof TypeError) {
+          console.log('Error: Typo in code_schools.yaml on the back-end under the `state` field');
+          console.log(e);
+          return false;
+        }
+        // Unknown error issue
+        return e;
+      }
     }
 
     this.props.schools.forEach((school) => {
-      school.locations.filter(_school => matchesState(_school, userInput)).forEach((location) => {
-        schools.push({
+      school.locations.filter(location => matchesState(userInput, location)).forEach((campus) => {
+        matchingSchools.push({
           name: school.name,
           url: school.url,
-          address: location.address1,
-          city: location.city,
-          state: location.state,
-          zip: location.zip,
+          address: campus.address1,
+          city: campus.city,
+          state: campus.state,
+          zip: campus.zip,
           logo: school.logo,
-          va_accepted: location.va_accepted,
+          va_accepted: campus.va_accepted,
           full_time: school.full_time,
           hardware_included: school.hardware_included
         });
       });
     });
 
-    return schools;
+    return matchingSchools;
   };
 
   render() {
