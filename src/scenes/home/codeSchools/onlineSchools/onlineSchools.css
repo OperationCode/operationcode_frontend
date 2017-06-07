@@ -13,7 +13,8 @@
   padding: 2.5% 0 2.5% 0;
 }
 
-.moocs > h3 {
+/* CodeClimate didn't like .moocs > h3 */
+.moocs:first-child {
   text-align: center;
   font-size: 1.8rem;
 }

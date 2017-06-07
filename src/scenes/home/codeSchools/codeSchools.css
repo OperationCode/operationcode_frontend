@@ -3,12 +3,12 @@
   flex-flow: row wrap;
   width: 80%;
   justify-content: space-around;
-  padding-top: 15px;
+  padding-top: 10px;
 }
 
 /* Space between buttons for vertical, single column */
-.filterButtonDiv > * {
-  margin: 2.5% 0;
+.filterButtonDiv > a {
+  margin: 2% 1%;
 }
 
 .leadingParagraph {

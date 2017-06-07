@@ -6,11 +6,9 @@ class AccordianItem extends Component {
   render() {
     return (
       <dt className={styles.accordianItem}>
-        <a
-          className={styles.accordianItemHeading}
-          aria-expanded="false"
-          aria-controls="accordion1"
-          class="accordion-title accordionTitle js-accordionTrigger">First Accordion heading</a>
+        <a className={styles.accordianItemHeading} aria-expanded="false" aria-controls="accordion1">
+          First Accordion heading
+        </a>
       </dt>
     );
   }
