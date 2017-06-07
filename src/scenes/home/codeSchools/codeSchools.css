@@ -1,0 +1,20 @@
+.filterButtonDiv {
+  display: flex;
+  flex-flow: row wrap;
+  width: 80%;
+  justify-content: space-around;
+  padding-top: 10px;
+}
+
+/* Space between buttons for vertical, single column */
+.filterButtonDiv > a {
+  margin: 2% 1%;
+}
+
+.leadingParagraph {
+	font-size: 2rem;
+}
+
+.secondParagraph {
+	font-size: 1.4rem;
+}

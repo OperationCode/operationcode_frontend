@@ -1,0 +1,9 @@
+.accordianItem {
+  border: #888 solid;
+}
+
+.accordianItemHeading {
+  font-size: 26px;
+  padding: 20px;
+  text-align: center;
+}

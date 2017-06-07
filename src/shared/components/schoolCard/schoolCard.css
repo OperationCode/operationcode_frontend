@@ -1,0 +1,57 @@
+.schoolCard {
+  display: flex;
+  border-radius: 4px;
+  align-items: center;
+  margin: 20px 10px;
+  padding: 10px;
+  width: 360px;
+  height: 150px;
+  background: #fff;
+  box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.schoolCard p {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+
+.schoolCard:hover {
+   box-shadow: 0 14px 28px rgba(0,0,0,0.25);
+}
+
+.schoolCardImage {
+  width: 150px;
+  height: 150px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+}
+
+.schoolDetails {
+  padding-left: 10px;
+}
+
+.schoolName {
+  font-weight: 800;
+  font-size: 1.4rem;
+}
+
+.schoolName a {
+  text-decoration: none;
+}
+
+.schoolLocation {
+  font-style: italic;
+}
+
+.schoolInfo {
+  font-size: .8rem;
+}

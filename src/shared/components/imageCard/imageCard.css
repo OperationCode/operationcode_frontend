@@ -1,48 +1,52 @@
 .imageCard {
-  display:flex;
+  display: flex;
   flex-flow: row wrap;
   max-width: 600px;
   justify-content: center;
-  flex-grow: 1;
-  min-height:250px;
+  min-height: 250px;
   align-items: center;
-  width:100%;
+  width: 100%;
 }
 
 .image {
-  height:200px;
-  width:300px;
+  height: 200px;
+  width: 300px;
 }
 
 .cardContainer {
-  display:flex;
+  display: flex;
   flex-direction: row;
-  width:300px;
+  width: 300px;
   justify-content: space-around;
   align-items: center;
-  height:100%;
-  min-height:200px;
-  background-color:#FFF;
+  height: 100%;
+  min-height: 200px;
+  background-color: #FFF;
 }
 
 .cardText {
-  width:80%;
-  min-height:200px;
-  display:flex;
-  flex-direction:column;
+  width: 80%;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
 
 .cardText h2 {
   align-self: flex-start;
-  margin:0;
-  padding:0;
 }
 
 .cardText p {
   align-self: flex-start;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   font-size:14px;
+}
+
+/* Vertical space between cards for vertical layout */
+@media screen and (max-width: 599px) {
+  .imageCard {
+    padding: 5% 0;
+  }
 }

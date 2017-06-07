@@ -3,8 +3,8 @@
   flex-direction: row;
   justify-content: center;
   width: 80%;
-  font-size:36px;
- }
+  font-size: 36px;
+}
 
 .headingLines:before,
 .headingLines:after {
@@ -12,20 +12,12 @@
   height: 3px;
   content: '\a0';
   background-color: rgb(65, 164, 192);
-  vertical-align: text-bottom;
   align-self: center;
-}
-
-.heading:before {
-  margin-right:10px;
-}
-
-.heading:after {
-  margin-left:10px;
+  margin: 0 10px 5px 10px;
 }
 
 .dark {
-  color:rgb(74,74,74);
+  color: rgb(74,74,74);
 }
 
 .white {
@@ -33,7 +25,7 @@
 }
 
 @media only screen and (max-width: 500px) {
-    .heading {
-      font-size:20px;
-    }
+  .heading {
+    font-size: 24px;
+  }
 }
