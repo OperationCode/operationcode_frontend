@@ -40,7 +40,6 @@ class StateSortedSchools extends Component {
         if (e instanceof TypeError) {
           /* eslint-disable no-console */
           console.log('Error: Typo in code_schools.yaml on the back-end under the `state` field');
-          console.log(e);
           /* eslint-disable no-console */
           return false;
         }
@@ -74,7 +73,7 @@ class StateSortedSchools extends Component {
       .map(school =>
         (
           <SchoolCard
-            key={school.address}
+            key={`${Math.random()} + ${school.name} + ${school.address}`}
             alt={school.name}
             schoolName={school.name}
             link={school.url}

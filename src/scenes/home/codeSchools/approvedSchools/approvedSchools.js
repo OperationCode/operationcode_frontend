@@ -35,7 +35,7 @@ class ApprovedSchools extends Component {
       .map(school =>
         (
           <SchoolCard
-            key={`${Math.random()} + ${school.name}`}
+            key={`${Math.random()} + ${school.name} + ${school.address}`}
             alt={school.name}
             schoolName={school.name}
             link={school.url}
