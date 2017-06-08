@@ -26,7 +26,6 @@ const env = getClientEnvironment(publicUrl);
 const postCSSLoaderOptions = {
   ident: 'postcss', // https://webpack.js.org/guides/migrating/#complex-options
   plugins: () => [
-    require('postcss-flexbugs-fixes'),
     autoprefixer({
       browsers: [
         '>1%',
