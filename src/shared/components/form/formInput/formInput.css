@@ -1,3 +1,7 @@
 .formInput {
   composes: formControl from '../form.css';
 }
+
+.formInput > input::placeholder {
+  color: #999;
+}

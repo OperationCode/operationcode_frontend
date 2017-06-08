@@ -12,7 +12,13 @@ const LinkButton = (props) => {
   } = props;
 
   return (
-    <Link className={`${styles.linkButton} ${styles[theme]}`} to={link} {...otherProps}>{text}</Link>
+    <Link
+      className={`${styles.linkButton} ${styles[theme]}`}
+      to={link}
+      {...otherProps}
+    >
+      {text}
+    </Link>
   );
 };
 
