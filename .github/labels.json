@@ -7,6 +7,7 @@
   { "name": "Status: On Hold", "color": "#e11d21" },
   { "name": "Type: Bug", "color": "#e11d21" },
   { "name": "Type: Feature", "color": "#84b6eb" },
+  { "name": "Type: Improvement/Refactor", "color": "#0052cc" },
   { "name": "Type: Question", "color": "#cc317c" },
   { "name": "Priority: Low", "color": "#009800" },
   { "name": "Priority: Medium", "color": "#fbca04" },
