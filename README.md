@@ -3,6 +3,8 @@
 
 This is OperationCode.org's repository for their new front-end implementation using React.js
 
+![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=<badge_key>)
+
 ## Table Of Contents
 - [Technologies](#technologies)
 - [Getting Started](#getting-started)
