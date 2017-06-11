@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Section from 'shared/components/section/section';
+import LinkButton from 'shared/components/linkButton/linkButton';
 import apexLogo from 'images/partnerLogos/apex_systems_logo.jpg';
 import githubLogo from 'images/partnerLogos/github_logo.jpg';
 import dockerLogo from 'images/partnerLogos/docker_logo.jpg';
@@ -56,6 +57,15 @@ class Partners extends Component {
             </a>
           </div>
         </div>
+
+        <div className={styles.partners}>
+          <p>We are always looking for organizations who are
+            interested in sponsoring or partnering with us!
+
+          </p>
+          <LinkButton text="Contact Us" link="mailto:partnerships@operationcode.org" />
+        </div>
+
       </Section>
     );
   }
