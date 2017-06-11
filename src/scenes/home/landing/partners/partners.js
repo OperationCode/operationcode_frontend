@@ -18,9 +18,13 @@ class Partners extends Component {
       >
         <div className={styles.partners}>
           <p>
-            Thanks to our partners, our all-volunteer organization at
-            Operation Code continues to serve the military community.
-            We are deeply grateful to the leadership of these
+            Operation Code and our all-volunteer team offers our
+            programs and services through the generous support
+            of our partners. Their support, made via either
+            financial contributions or in-kind donations,
+            demonstrate their commitment to veterans,
+            servicemembers, and military spouses.
+            We are deeply grateful to the leadership of the
             organizations that are supporting our mission.
           </p>
         </div>
