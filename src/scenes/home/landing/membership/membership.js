@@ -22,29 +22,33 @@ class Membership extends Component {
           <li>
             <img className={styles.icon} src={sharedIcon} alt="" />
             <span>
-              Join veterans, fellow servicemembers,
-              and military spouses. Learn and grow with our open community.
+              Join our open community. Learn and grow with <b>fellow veterans,
+              servicemembers</b>, and <b>military spouses</b>. Work with your peers to
+              build <b>open source projects</b>.
             </span>
-          </li>
-          <li>
-            <img className={styles.icon} src={flagIcon} alt="" />
-            <span>
-              Access our mentorship and coding channels and jumpstart
-              your journey. Learn from senior software engineers with years of experience.
-             </span>
           </li>
           <li>
             <img className={styles.icon} src={roadIcon} alt="" />
             <span>
-              Attend software development conferences and coding bootcamps,
-              as part of the Operation Code scholarship program.
+              Find new opportunities in the tech industry through our
+              <b>scholarship program.</b> Attend <b>software development conferences</b>
+              and <b>coding bootcamps</b>, and build the skills of the future.
+             </span>
+          </li>
+          <li>
+            <img className={styles.icon} src={flagIcon} alt="" />
+            <span>
+              Jumpstart your journey. Access our <b>mentorship</b> and coding
+              channels, and learn from <b>senior software engineers</b> at
+              <b>top-tier tech companies</b> with years of experience.
              </span>
           </li>
           <li>
             <img className={styles.icon} src={suitcaseIcon} alt="" />
             <span>
-              Find job opportunities posted from around the country.
-              Receive feedback on your portfolio, side project, or resume.
+              Launch your career in the tech industry on our <b>job board</b>.
+              Find <b>local and remote jobs</b> all across the country.
+              <b>Get expert feedback</b> on your portfolio, side project, or resume.
              </span>
           </li>
         </ul>
