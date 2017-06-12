@@ -2,5 +2,10 @@
 {
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
-  "files.trimTrailingWhitespace": true
+  "files.trimTrailingWhitespace": true,
+  "search.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/build": true
+  }
 }

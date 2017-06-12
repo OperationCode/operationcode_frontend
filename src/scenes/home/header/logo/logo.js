@@ -7,7 +7,7 @@ class Logo extends Component {
   render() {
     return (
       <div className={styles.logo} >
-        <Link to="/"><img src={logo} alt="" /></Link>
+        <Link to="/"><img src={logo} alt="" /></Link><span className={styles.trademark}>™</span>
       </div>
     );
   }
