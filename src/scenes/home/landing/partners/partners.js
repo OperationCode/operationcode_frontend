@@ -59,10 +59,7 @@ class Partners extends Component {
         </div>
 
         <div className={styles.partners}>
-          <p>We are always looking for organizations who are
-            interested in sponsoring or partnering with us!
-
-          </p>
+          <p>We are always looking for organizations who are interested in working with us!</p>
           <LinkButton text="Contact Us" link="mailto:partnerships@operationcode.org" />
         </div>
 
