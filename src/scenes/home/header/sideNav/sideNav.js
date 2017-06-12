@@ -96,7 +96,7 @@ class SideNav extends Component {
               <a className={styles.close} href="/" onClick={this.handleCloseClick}>&#10006;</a>
             </div>
             <a className={styles.logoWrapper} href="/">
-              <img className={styles.logo} src={logo} alt="Operation Code logo" />
+              <img className={styles.logo} src={logo} alt="Operation Code™ logo" />
             </a>
           </div>
           <div className={styles.list}>

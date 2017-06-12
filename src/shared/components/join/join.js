@@ -13,7 +13,7 @@ const Join = (props) => {
     >
       <div className={styles.join} >
         <p>
-          Operation Code is leading the way to expand opportunities
+          Operation Code™ is leading the way to expand opportunities
           for military veterans and their families to learn new skills,
           and build a career in the fast-growing technology sector.
         </p>

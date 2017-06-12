@@ -19,7 +19,7 @@ class Partners extends Component {
       >
         <div className={styles.partners}>
           <p>
-            Operation Code and our all-volunteer team offers our
+            Operation Code™ and our all-volunteer team offers our
             programs and services through the generous support
             of our partners. Their support, made via either
             financial contributions or in-kind donations,
