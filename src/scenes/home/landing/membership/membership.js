@@ -22,7 +22,7 @@ class Membership extends Component {
           <li>
             <img className={styles.icon} src={sharedIcon} alt="" />
             <span>
-              Join veterans, transitioning servicemembers,
+              Join veterans, fellow servicemembers,
               and military spouses. Learn and grow with our open community.
             </span>
           </li>
@@ -36,8 +36,8 @@ class Membership extends Component {
           <li>
             <img className={styles.icon} src={roadIcon} alt="" />
             <span>
-              Learn about opportunities to attend software development conferences
-              and coding bootcamps, as part of the Operation Code scholarship program.
+              Attend software development conferences and coding bootcamps,
+              as part of the Operation Code scholarship program.
              </span>
           </li>
           <li>
