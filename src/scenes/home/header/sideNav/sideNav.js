@@ -77,11 +77,6 @@ class SideNav extends Component {
           to="/join" text="Join"
           onClick={this.handleCloseClick}
         />
-        <NavItem
-          className="menuItem"
-          to="/login" text="Login"
-          onClick={this.handleCloseClick}
-        />
       </span>
     );
   }

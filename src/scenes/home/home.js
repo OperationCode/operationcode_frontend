@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 import { Route, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Login from 'shared/components/login/login';
 import * as CookieHelpers from 'shared/utils/cookieHelper';
 import familyImage from 'images/Family-2.png';
 import SignUp from './signup/signup';
@@ -106,13 +105,6 @@ class Home extends Component {
           <Route
             path="/thanks"
             component={Thanks}
-          />
-          <Route
-            exact
-            path="/login"
-            render={() => (
-              <Login updateRootAuthState={this.updateRootAuthState} />
-            )}
           />
           <Route
             exact
