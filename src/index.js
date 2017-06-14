@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'font-awesome/css/font-awesome.css';
 import App from './App';
-import './normalize.global.css';
+import './shared/styles/normalize.global.css';
+import './shared/styles/react-table.global.css';
 import './index.css';
-import './index.global.css';
 
 ReactDOM.render(
   <App />,
