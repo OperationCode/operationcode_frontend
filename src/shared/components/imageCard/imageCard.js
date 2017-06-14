@@ -10,7 +10,7 @@ class ImageCard extends Component {
         <img className={styles.image} src={this.props.image} alt={this.props.title} />
         <div className={styles.cardContainer}>
           <div className={styles.cardText}>
-            <h2>{this.props.title}:</h2>
+            <h2>{this.props.title}</h2>
             <p>{this.props.cardText}</p>
             {this.props.link && <LinkButton text={this.props.buttonText} link={this.props.link} />}
           </div>

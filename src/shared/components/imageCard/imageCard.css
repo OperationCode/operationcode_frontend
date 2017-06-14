@@ -19,7 +19,6 @@
   width: 300px;
   justify-content: space-around;
   align-items: center;
-  height: 100%;
   min-height: 200px;
   background-color: #FFF;
 }
@@ -29,16 +28,16 @@
   min-height: 200px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
 .cardText h2 {
-  align-self: flex-start;
+  align-self: center;
 }
 
 .cardText p {
-  align-self: flex-start;
+  align-self: center;
   margin: 0;
   padding: 0;
   font-size:14px;

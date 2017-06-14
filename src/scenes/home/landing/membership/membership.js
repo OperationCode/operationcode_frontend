@@ -31,7 +31,7 @@ class Membership extends Component {
             <img className={styles.icon} src={roadIcon} alt="" />
             <span>
               Find new opportunities in the tech industry through our
-              <b>scholarship program.</b> Attend <b>software development conferences</b>
+              <b> scholarship program.</b> Attend <b>software development conferences</b>
               and <b>coding bootcamps</b>, and build the skills of the future.
              </span>
           </li>
@@ -40,7 +40,7 @@ class Membership extends Component {
             <span>
               Jumpstart your journey. Access our <b>mentorship</b> and coding
               channels, and learn from <b>senior software engineers</b> at
-              <b>top-tier tech companies</b> with years of experience.
+              <b> top-tier tech companies</b> with years of experience.
              </span>
           </li>
           <li>
@@ -48,7 +48,7 @@ class Membership extends Component {
             <span>
               Launch your career in the tech industry on our <b>job board</b>.
               Find <b>local and remote jobs</b> all across the country.
-              <b>Get expert feedback</b> on your portfolio, side project, or resume.
+              <b>  Get expert feedback</b> on your portfolio, side project, or resume.
              </span>
           </li>
         </ul>
