@@ -67,7 +67,6 @@ class SignUp extends Component {
     e.preventDefault = true;
 
     if (this.isFormValid()) {
-      console.log('yes');
       const { email, zip, password, firstName, lastName, mentor } = this.state;
       axios.post(`${config.backendUrl}/users`, {
         user: {
