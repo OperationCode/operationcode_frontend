@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import styles from './socialMediaItem.css';
 
@@ -12,7 +11,7 @@ const SocialMediaItem = (props) => {
 
   return (
     <div className={styles.socialMediaItem}>
-      <Link to={link}><img src={smImage} alt={smText} /></Link>
+      <a href={link}><img src={smImage} alt={smText} /></a>
     </div>
   );
 };
