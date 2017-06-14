@@ -16,19 +16,16 @@ class MoreInformation extends Component {
             title="Military Families and Spouses"
             image={familyImage}
             altText="Military Families and Spouses"
-            link="#"
           />
           <ClipPathImage
             title="Veterans, Active Duty, and Reservists"
             image={milImage}
             altText="Veterans, Active Duty, and Reservists"
-            link="#"
           />
           <ClipPathImage
             title="Volunteers and Sponsors"
             image={volunteerImage}
             altText="Volunteers and Sponsors"
-            link="#"
           />
         </div>
       </Section>
