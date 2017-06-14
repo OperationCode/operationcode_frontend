@@ -1,16 +1,10 @@
-.sectionContainer {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
 .section {
+  width: 100%;
+  min-height: 250px;
   display: flex;
   flex-direction: column;
-  min-height: 300px;
-  width: 100%;
   align-items: center;
-  padding: 2.5% 0 2.5% 0;
+  padding: 40px 0 40px 0;
 }
 
 .gray {
@@ -21,12 +15,10 @@
   background-color: #FFF;
 }
 
-.margin {
-  width: 90%;
-}
-
+/*
 @media screen and (max-width: 768px) {
   .section {
     padding: 7.5% 0 7.5% 0;
   }
 }
+*/

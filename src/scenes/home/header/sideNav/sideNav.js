@@ -18,62 +18,36 @@ class SideNav extends Component {
       if (mentor) {
         return (
           <span>
-            <NavItem
-              className="menuItem"
-              to="/mentor-request"
-              text="Request Help"
-              onClick={this.handleCloseClick}
-            />
-            <NavItem
-              className="menuItem"
-              to="/mentors"
-              text="Mentors"
-              onClick={this.handleCloseClick}
-            />
-            <NavItem
-              className="menuItem"
-              to="/requests"
-              text="Requests"
-              onClick={this.handleCloseClick}
-            />
-            <NavItem
-              className="menuItem"
-              to="/squads"
-              text="Squads"
-              onClick={this.handleCloseClick}
-            />
-            <button className={styles.navButton} onClick={() => this.props.onLogOutClick()}>Logout</button>
+            <NavItem to="/mentor-request" text="Request Help" onClick={this.handleCloseClick} />
+            <NavItem to="/mentors" text="Mentors" onClick={this.handleCloseClick} />
+            <NavItem to="/requests" text="Requests" onClick={this.handleCloseClick} />
+            <NavItem to="/squads" text="Squads" onClick={this.handleCloseClick} />
+            <button
+              className={styles.navButton}
+              onClick={() => this.props.onLogOutClick()}
+            >
+              Logout
+            </button>
           </span>
         );
       }
       return (
         <span>
-          <NavItem
-            className="menuItem"
-            to="/mentor-request"
-            text="Request Help"
-            onClick={this.handleCloseClick}
-          />
-          <NavItem
-            className="menuItem"
-            to="/mentors"
-            text="Mentors"
-            onClick={this.handleCloseClick}
-          />
-          <NavItem
-            className="menuItem"
-            to="/squads"
-            text="Squads"
-            onClick={this.handleCloseClick}
-          />
-          <button className={styles.navButton} onClick={() => this.props.onLogOutClick()}>Logout</button>
+          <NavItem to="/mentor-request" text="Request Help" onClick={this.handleCloseClick} />
+          <NavItem to="/mentors" text="Mentors" onClick={this.handleCloseClick} />
+          <NavItem to="/squads" text="Squads" onClick={this.handleCloseClick} />
+          <button
+            className={styles.navButton}
+            onClick={() => this.props.onLogOutClick()}
+          >
+            Logout
+          </button>
         </span>
       );
     }
     return (
       <span>
         <NavItem
-          className="menuItem"
           to="/join" text="Join"
           onClick={this.handleCloseClick}
         />
@@ -91,12 +65,16 @@ class SideNav extends Component {
               <a className={styles.close} href="/" onClick={this.handleCloseClick}>&#10006;</a>
             </div>
             <a className={styles.logoWrapper} href="/">
-              <img className={styles.logo} src={logo} alt="Operation Code™ logo" />
+              <img className={styles.logo} src={logo} alt="Operation Code logo" />
             </a>
           </div>
           <div className={styles.list}>
             <NavItem
-              className="menuItem"
+              to="code-schools"
+              text="Code Schools"
+              onClick={this.handleCloseClick}
+            />
+            <NavItem
               to="https://donorbox.org/operationcode"
               text="Donate"
               isExternal
@@ -104,25 +82,24 @@ class SideNav extends Component {
             />
             {this.renderNavItems()}
             <NavItem
-              className="menuItem"
               to="about"
-              text="About" onClick={this.handleCloseClick}
+              text="About"
+              onClick={this.handleCloseClick}
               notClickable
             />
             <NavItem
-              className="menuItem"
               to="programs"
-              text="Programs" onClick={this.handleCloseClick}
+              text="Programs"
+              onClick={this.handleCloseClick}
               notClickable
             />
             <NavItem
-              className="menuItem"
               to="involved"
-              text="Get Involved" onClick={this.handleCloseClick}
+              text="Get Involved"
+              onClick={this.handleCloseClick}
               notClickable
             />
             <NavItem
-              className="menuItem"
               to="blog"
               text="Blog"
               onClick={this.handleCloseClick}

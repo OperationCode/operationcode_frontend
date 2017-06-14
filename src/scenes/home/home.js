@@ -91,6 +91,10 @@ class Home extends Component {
             component={CodeSchools}
           />
           <Route
+            path="/code_schools"
+            component={CodeSchools}
+          />
+          <Route
             path="/signup"
             component={SignUp}
           />
