@@ -11,7 +11,7 @@ class FormButton extends Component {
       [`${this.props.className}`]: this.props.className
     });
     return (
-      <button type="button" className={classes} onClick={this.props.onClick}>{this.props.text}</button>
+      <button type="submit" className={classes} onSubmit={this.props.onClick}>{this.props.text}</button>
     );
   }
 }

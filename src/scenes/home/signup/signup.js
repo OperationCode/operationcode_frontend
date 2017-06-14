@@ -63,10 +63,11 @@ class SignUp extends Component {
   validatePasswordConfirm = value =>
     value === '' || value === this.state.password;
 
-  handleOnClick = (e) => {
+  handleOnSubmit = (e) => {
     e.preventDefault = true;
 
     if (this.isFormValid()) {
+      console.log('yes');
       const { email, zip, password, firstName, lastName, mentor } = this.state;
       axios.post(`${config.backendUrl}/users`, {
         user: {
@@ -127,7 +128,7 @@ class SignUp extends Component {
           />
           {this.state.error && <span>There was an error joining Operation Code™: {this.state.error}</span>}
           {this.state.success && <Redirect to="/thanks" />}
-          <FormButton className={styles.joinButton} text="Join" onClick={this.handleOnClick} theme="red" />
+          <FormButton className={styles.joinButton} text="Join" onSubmit={this.handleOnSubmit} theme="red" />
         </Form>
       </Section>
     );
