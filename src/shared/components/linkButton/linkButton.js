@@ -5,6 +5,11 @@ import { Link as ScrollLink } from 'react-scroll';
 import styles from './linkButton.css';
 
 const LinkButton = (props) => {
+  function isExternalLink(link) {
+    if (link.startsWith('http://') || link.startsWith('https://') || link.startsWith('mailto:')) { return true; }
+    return false;
+  }
+
   const {
     link,
     text,
@@ -23,6 +28,12 @@ const LinkButton = (props) => {
       >
         {text}
       </ScrollLink>
+    );
+  }
+
+  if (isExternalLink(link)) {
+    return (
+      <a href={link} className={`${styles.linkButton} ${styles[theme]}`}>{text}</a>
     );
   }
 
