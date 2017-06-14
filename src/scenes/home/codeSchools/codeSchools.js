@@ -50,24 +50,28 @@ class CodeSchools extends Component {
 
           <div className={styles.filterButtonDiv}>
             <LinkButton
-              link="#approvedSchools"
+              link="approvedSchools"
               text="Code Schools with VA Approval"
               theme="blue"
+              scrollLink
             />
             <LinkButton
-              link="#partnerSchools"
+              link="partnerSchools"
               text="Partner Schools with Scholarships"
               theme="blue"
+              scrollLink
             />
             <LinkButton
-              link="#onlineSchools"
+              link="onlineSchools"
               text="Online Schools"
               theme="blue"
+              scrollLink
             />
             <LinkButton
-              link="#schoolsByState"
+              link="schoolsByState"
               text="Search by State"
               theme="blue"
+              scrollLink
             />
           </div>
         </Section>

@@ -23,7 +23,7 @@ const Section = (props) => {
   });
 
   return (
-    <div className={classes} {...otherProps} >
+    <div name={id} className={classes} {...otherProps} >
       {title && <Heading text={title} id={id} headingLines={headingLines} theme={headingTheme} />}
       {children}
     </div>
