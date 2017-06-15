@@ -1,9 +1,26 @@
-.pageContainer .bg {
-  position: absolute;
-  top: 0;
-  left: 0;
+.FourOhFour {
+  width: 100vw;
+  height: 100vh;
+  background: #121212;
+}
+
+.FourOhFour .bg {
+  background-image: url('./404.gif');
   width: 100vw;
   height: 100vh;
   background-size: cover;
-  mix-blend-mode: overlay;
+  color: white;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
+.title{
+  font-size: 4rem;
+}
+
+.paragraph {
+  font-size: 1.4rem;
+}
+

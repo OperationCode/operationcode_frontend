@@ -1,7 +1,7 @@
 /* eslint-disable no-console, react/forbid-prop-types */
 
 import React, { Component } from 'react';
-import { Route, withRouter } from 'react-router-dom';
+import { Route, withRouter, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import * as CookieHelpers from 'shared/utils/cookieHelper';
@@ -83,73 +83,77 @@ class Home extends Component {
       >
         <Header transparent={this.state.bgImage} logOut={this.logOut} signedIn={signedIn} mentor={mentor} />
         <div className={styles.main} >
-          <Route
-            path="/home"
-            component={Dashboard}
-          />
-          <Route
-            path="/code-schools"
-            component={CodeSchools}
-          />
-          <Route
-            path="/code_schools"
-            component={CodeSchools}
-          />
-          <Route
-            path="/signup"
-            component={SignUp}
-          />
-          <Route
-            path="/join"
-            component={SignUp}
-          />
-          <Route
-            path="/sign-up"
-            component={SignUp}
-          />
-          <Route
-            path="/thanks"
-            component={Thanks}
-          />
-          <Route
-            exact
-            path="/"
-            render={props => (
-              <Landing {...props} />
-            )}
-          />
-          <Route
-            path="/mentor-request"
-            render={() => (
-              <MentorRequest {...authProps} />
-            )}
-          />
-          <Route
-            path="/requests"
-            render={() => (
-              <MentorRequestsTable {...authProps} />
-            )}
-          />
-          <Route
-            path="/squads/new-squad"
-            render={() => (
-              <SquadsNew {...authProps} />
-            )}
-          />
-          <Route
-            exact path="/mentors"
-            render={() => (
-              <MentorsTable {...authProps} />
-            )}
-          />
-          <Route
-            path="/squads"
-            render={() => (
-              <SquadsTable {...authProps} />
-            )}
-          />
-          <Route exact path="/about/financial-statements" component={FinancialStatements} />
-          <Route component={FourOhFour} />
+          <Switch>
+            <Route
+              path="/home"
+              component={Dashboard}
+            />
+            <Route
+              path="/code-schools"
+              component={CodeSchools}
+            />
+            <Route
+              path="/code_schools"
+              component={CodeSchools}
+            />
+            <Route
+              path="/signup"
+              component={SignUp}
+            />
+            <Route
+              path="/join"
+              component={SignUp}
+            />
+            <Route
+              path="/sign-up"
+              component={SignUp}
+            />
+            <Route
+              path="/thanks"
+              component={Thanks}
+            />
+            <Route
+              exact
+              path="/"
+              render={props => (
+                <Landing {...props} />
+              )}
+            />
+            <Route
+              path="/mentor-request"
+              render={() => (
+                <MentorRequest {...authProps} />
+              )}
+            />
+            <Route
+              path="/requests"
+              render={() => (
+                <MentorRequestsTable {...authProps} />
+              )}
+            />
+            <Route
+              path="/squads/new-squad"
+              render={() => (
+                <SquadsNew {...authProps} />
+              )}
+            />
+            <Route
+              exact path="/mentors"
+              render={() => (
+                <MentorsTable {...authProps} />
+              )}
+            />
+            <Route
+              path="/squads"
+              render={() => (
+                <SquadsTable {...authProps} />
+              )}
+            />
+            <Route exact path="/about/financial-statements" component={FinancialStatements} />
+            <Route
+              path="*" component={FourOhFour}
+            />
+          </Switch>
         </div>
         <Footer />
       </div>
