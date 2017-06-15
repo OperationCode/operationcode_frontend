@@ -141,7 +141,7 @@ export default class MentorRequest extends Component {
             <h2>Additional Details</h2>
             <p>Please provide us with any more info that may help in us in assigning a mentor to this request.</p>
             <FormInput id="additionalDetails" onChange={this.onDetailsChange} />
-            <FormButton className={styles.joinButton} text="Request Mentor" onClick={this.handleOnClick} theme="red" />
+            <FormButton className={styles.joinButton} text="Request Mentor" onSubmit={this.handleOnClick} theme="red" />
             {success && <Redirect to="/thanks" />}
           </div>
         </Form>

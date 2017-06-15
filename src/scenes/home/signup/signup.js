@@ -102,10 +102,10 @@ class SignUp extends Component {
 
   render() {
     return (
-      <Section className={styles.signup} title="Join Operation Code™">
+      <Section className={styles.signup} title="Join Operation Code">
         <Form className={styles.signupForm}>
           <span>
-            Are you ready to deploy your future?  Join Operation Code™
+            Are you ready to deploy your future?  Join Operation Code
             today and launch your career in software development.
             Once you complete the form below you&#8217;ll be invited
             to join our Slack team.  Make sure you stop in and say hi!
@@ -125,7 +125,7 @@ class SignUp extends Component {
             id="passwordConfirm" placeholder="Confirm Password"
             onChange={this.onConfirmPasswordChange} validateFunc={this.validatePasswordConfirm}
           />
-          {this.state.error && <span>There was an error joining Operation Code™: {this.state.error}</span>}
+          {this.state.error && <span>There was an error joining Operation Code: {this.state.error}</span>}
           {this.state.success && <Redirect to="/thanks" />}
           <FormButton className={styles.joinButton} text="Join" onSubmit={this.handleOnSubmit} theme="red" />
         </Form>

@@ -35,7 +35,8 @@
   margin-right: -50%;
 }
 
-.schoolDetails {
+.schoolText {
+  line-height: 1;
   padding-left: 10px;
 }
 
@@ -53,5 +54,6 @@
 }
 
 .schoolInfo {
-  font-size: .8rem;
+  font-size: 0.8rem;
+  line-height: 1.1;
 }

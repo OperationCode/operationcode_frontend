@@ -10,7 +10,7 @@ class SchoolCard extends Component {
           <img src={this.props.logo} alt={this.props.alt} className={styles.logo} />
         </div>
 
-        <div className={styles.schoolDetails}>
+        <div className={styles.schoolText}>
           <p>
             <span className={styles.schoolName}>
               <a href={this.props.link}>{this.props.schoolName}</a>

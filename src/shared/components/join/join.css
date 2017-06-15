@@ -1,7 +1,5 @@
 .joinSection {
-  background-image: url('images/General-Military-Departing.jpeg');
-  background-blend-mode: overlay;
-  min-height:300px;
+  background-image: url('images/General-Military-Departing.jpg');
 }
 
 .join {
@@ -11,6 +9,7 @@
   align-items: center;
 }
 .join p {
-  max-width:500px;
-  font-size:16px;
+  max-width:700px;
+  font-size:20px;
+  color:#47566B;
 }

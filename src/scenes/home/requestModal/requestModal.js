@@ -122,7 +122,7 @@ class RequestModal extends Component {
           <FormButton
             className={styles.joinButton}
             text="Update Request"
-            onClick={this.handleButtonClick}
+            onSubmit={this.handleButtonClick}
             theme="blue"
           />
         </Form>

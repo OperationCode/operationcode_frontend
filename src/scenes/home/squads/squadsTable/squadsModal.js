@@ -61,13 +61,13 @@ class SquadsModal extends Component {
           </div>
           <FormButton
             text="Join Squad"
-            onClick={this.handleButtonClick}
+            onSubmit={this.handleButtonClick}
             theme="blue"
             className={styles.joinButton}
           />
           <FormButton
             text="Go Back"
-            onClick={this.handleCloseClick}
+            onSubmit={this.handleCloseClick}
             theme="blue"
             className={styles.joinButton}
           />

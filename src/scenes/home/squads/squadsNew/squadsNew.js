@@ -150,7 +150,7 @@ class SquadsNew extends Component {
           <h2>End Condition*</h2>
           <span>When will this squad end? This can be a date, a time period (4 weeks), or when a goal is met.</span>
           <FormInput id="endCondition" placeholder=" " onChange={this.onEndConditionChange} />
-          <FormButton className={styles.submitButton} text="Create Squad" onClick={this.handleOnClick} theme="red" />
+          <FormButton className={styles.submitButton} text="Create Squad" onSubmit={this.handleOnClick} theme="red" />
           {success && <Redirect to="/thanks" />}
         </Form>
       </Section>

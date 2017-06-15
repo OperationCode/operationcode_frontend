@@ -119,7 +119,7 @@ class PartnerSchools extends Component {
 
         <div className={styles.noteForSchoolReps}>
           <p>
-            Are you a code school seeking a partnership with Operation Code™?
+            Are you a code school seeking a partnership with Operation Code?
             <br />
             <a href="mailto:staff@operationcode.org">
               Reach out to us!
