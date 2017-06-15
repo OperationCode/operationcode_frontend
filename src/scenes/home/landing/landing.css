@@ -18,6 +18,8 @@
 .pageHeading h1 {
   width: 80%;
   color: #fff;
+  text-shadow: black 1px 0 15px;
+  margin: 30px 0 50px 0;
 }
 
 @media screen and (max-width: 900px) {
