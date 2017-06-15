@@ -17,6 +17,7 @@ import styles from './home.css';
 import Header from './header/header';
 import Landing from './landing/landing';
 import Footer from './footer/footer';
+import FourOhFour from './404/fourOhFour';
 import MentorRequest from './mentorRequest/mentorRequest';
 import SquadsNew from './squads/squadsNew/squadsNew';
 import CodeSchools from './codeSchools/codeSchools';
@@ -148,6 +149,7 @@ class Home extends Component {
             )}
           />
           <Route exact path="/about/financial-statements" component={FinancialStatements} />
+          <Route component={FourOhFour} />
         </div>
         <Footer />
       </div>
