@@ -22,14 +22,7 @@
 
 @media screen and (max-width: 760px) {
   .backgroundImage {
-    background-size: auto 50%;
-    background-attachment: fixed;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .backgroundImage {
-    background-size: auto 75%;
+    background-size: auto 500px;
     background-attachment: fixed;
   }
 }
