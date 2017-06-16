@@ -16,7 +16,7 @@ class Landing extends Component {
         <div className={styles.pageHeading}>
           <h1>The largest community dedicated to helping military veterans and
             families launch software development careers.</h1>
-          <LinkButton text="Join" theme="red" link="/signup" />
+          <LinkButton text="JOIN" theme="red" link="/signup" />
         </div>
         <WhatWeDo />
         <Membership />

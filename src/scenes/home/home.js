@@ -5,13 +5,14 @@ import { Route, withRouter, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import * as CookieHelpers from 'shared/utils/cookieHelper';
-import familyImage from 'images/Family-2.png';
+import familyImage from 'images/Family-2.jpg';
 import SignUp from './signup/signup';
 import MentorRequestsTable from './mentor/mentorRequestsTable/mentorRequestsTable';
 import SquadsTable from './squads/squadsTable/squadsTable';
 import Dashboard from './dashboard/dashboard';
 import MentorsTable from './mentor/mentorsTable/mentorsTable';
 import Thanks from './thanks/thanks';
+import Gala from './gala/gala';
 import FinancialStatements from './about/financialStatements/financialStatements';
 import styles from './home.css';
 import Header from './header/header';
@@ -147,6 +148,12 @@ class Home extends Component {
               path="/squads"
               render={() => (
                 <SquadsTable {...authProps} />
+              )}
+            />
+            <Route
+              path="/gala"
+              render={() => (
+                <Gala {...authProps} />
               )}
             />
             <Route exact path="/about/financial-statements" component={FinancialStatements} />

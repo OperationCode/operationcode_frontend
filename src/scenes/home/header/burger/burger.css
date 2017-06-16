@@ -3,17 +3,21 @@
 }
 
 .burger img {
-    width: 40px;
+    width: 2.5em;
     margin: 0;
+    background-color: #fafafa;
+    padding: 10px;
+    border-radius: 5px;
+    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0.2s;
+    box-shadow: 0 2px 5px 0 grey;
  }
 
  @media screen and (max-width: 760px) {
   .burger {
     display: block;
     position: absolute;
-    right: 0;
-    margin: 0;
-    margin-right: 7px;
-    padding: 0 4px 0 4px;
+    right: 5%;
+    top: 15px;
   }
 }

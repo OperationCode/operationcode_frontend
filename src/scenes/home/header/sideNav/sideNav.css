@@ -1,5 +1,9 @@
 .content {
-  padding: 16px;
+  background-color: black;
+  background-color:rgba(47,52,72,.95);
+  height: 100%;
+  width: 100%;
+  position: fixed;
 }
 
 .header {
@@ -9,9 +13,13 @@
 
 .close {
   color: #fff;
-  font-size: 26px;
-  padding: 6px; /*to increase clickability on mobile*/
   text-decoration: none;
+  font-size: 40px;
+  position: absolute;
+  right: 5%;
+  top: 22px;
+  padding-right: 10px;
+  line-height: 1;
 }
 
 .logoWrapper {
@@ -19,23 +27,24 @@
 }
 
 .logo {
-  margin: 16px auto;
   max-width: 75%;
   max-height: 40px;
-  width: auto;
-  height: auto;
+  position: absolute;
+  top: 20px;
+  left: 5%;
 }
 
 .list {
   display: flex;
   flex-direction: column;
-  margin-top: 8px;
-  padding: 16px;
+  margin-top: 80px;
+  padding: 50px 5%;
+  border-top: 1px solid #fafafa;
+  font-size: 40px;
 }
 
 .item {
   color: #F7F7F7;
-  font-size: 60px;
 }
 
 .item ~ .item {
@@ -46,7 +55,8 @@
   display: flex;
   height: 100%;
   flex-direction: column;
-  padding-top: 1rem;
+  padding-top: 1.75rem;
+  position: relative;
 }
 
 .navButton {
@@ -56,5 +66,5 @@
   text-align: left;
   font-size: 2.5rem;
   margin: 0.5rem 0;
-  padding: 0;
+  padding: 0; 
 }
