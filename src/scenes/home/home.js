@@ -1,11 +1,11 @@
 /* eslint-disable no-console, react/forbid-prop-types */
 
 import React, { Component } from 'react';
-import { Route, withRouter } from 'react-router-dom';
+import { Route, withRouter, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import * as CookieHelpers from 'shared/utils/cookieHelper';
-import familyImage from 'images/Family-2.png';
+import familyImage from 'images/Family-2.jpg';
 import SignUp from './signup/signup';
 import MentorRequestsTable from './mentor/mentorRequestsTable/mentorRequestsTable';
 import SquadsTable from './squads/squadsTable/squadsTable';
@@ -18,6 +18,7 @@ import styles from './home.css';
 import Header from './header/header';
 import Landing from './landing/landing';
 import Footer from './footer/footer';
+import FourOhFour from './404/fourOhFour';
 import MentorRequest from './mentorRequest/mentorRequest';
 import SquadsNew from './squads/squadsNew/squadsNew';
 import CodeSchools from './codeSchools/codeSchools';
@@ -83,78 +84,83 @@ class Home extends Component {
       >
         <Header transparent={this.state.bgImage} logOut={this.logOut} signedIn={signedIn} mentor={mentor} />
         <div className={styles.main} >
-          <Route
-            path="/home"
-            component={Dashboard}
-          />
-          <Route
-            path="/code-schools"
-            component={CodeSchools}
-          />
-          <Route
-            path="/code_schools"
-            component={CodeSchools}
-          />
-          <Route
-            path="/signup"
-            component={SignUp}
-          />
-          <Route
-            path="/join"
-            component={SignUp}
-          />
-          <Route
-            path="/sign-up"
-            component={SignUp}
-          />
-          <Route
-            path="/thanks"
-            component={Thanks}
-          />
-          <Route
-            exact
-            path="/"
-            render={props => (
-              <Landing {...props} />
-            )}
-          />
-          <Route
-            path="/mentor-request"
-            render={() => (
-              <MentorRequest {...authProps} />
-            )}
-          />
-          <Route
-            path="/requests"
-            render={() => (
-              <MentorRequestsTable {...authProps} />
-            )}
-          />
-          <Route
-            path="/squads/new-squad"
-            render={() => (
-              <SquadsNew {...authProps} />
-            )}
-          />
-          <Route
-            exact path="/mentors"
-            render={() => (
-              <MentorsTable {...authProps} />
-            )}
-          />
-          <Route
-            path="/squads"
-            render={() => (
-              <SquadsTable {...authProps} />
-            )}
-          />
-          <Route
-            path="/gala"
-            render={() => (
-              <Gala {...authProps} />
-            )}
-          />
-          <Route exact path="/about/financial-statements" component={FinancialStatements} />
+          <Switch>
+            <Route
+              path="/home"
+              component={Dashboard}
+            />
+            <Route
+              path="/code-schools"
+              component={CodeSchools}
+            />
+            <Route
+              path="/code_schools"
+              component={CodeSchools}
+            />
+            <Route
+              path="/signup"
+              component={SignUp}
+            />
+            <Route
+              path="/join"
+              component={SignUp}
+            />
+            <Route
+              path="/sign-up"
+              component={SignUp}
+            />
+            <Route
+              path="/thanks"
+              component={Thanks}
+            />
+            <Route
+              exact
+              path="/"
+              render={props => (
+                <Landing {...props} />
+              )}
+            />
+            <Route
+              path="/mentor-request"
+              render={() => (
+                <MentorRequest {...authProps} />
+              )}
+            />
+            <Route
+              path="/requests"
+              render={() => (
+                <MentorRequestsTable {...authProps} />
+              )}
+            />
+            <Route
+              path="/squads/new-squad"
+              render={() => (
+                <SquadsNew {...authProps} />
+              )}
+            />
+            <Route
+              exact path="/mentors"
+              render={() => (
+                <MentorsTable {...authProps} />
+              )}
+            />
+            <Route
+              path="/squads"
+              render={() => (
+                <SquadsTable {...authProps} />
+              )}
+            />
+            <Route
+              path="/gala"
+              render={() => (
+                <Gala {...authProps} />
+              )}
+            />
+            <Route exact path="/about/financial-statements" component={FinancialStatements} />
+            <Route
+              path="*" component={FourOhFour}
+            />
+          </Switch>
         </div>
         <Footer />
       </div>

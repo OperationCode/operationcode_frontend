@@ -39,10 +39,17 @@
     border: 1px solid rgb(92,105,122);
     padding: 10px;
   }
-}
-
-@media screen and (max-width: 599px) {
   .signup h2 {
     font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .signupForm {
+    border-left-style: none;
+    border-right-style: none;
+  }
+  .signup h2 {
+    font-size: 20px;
   }
 }
