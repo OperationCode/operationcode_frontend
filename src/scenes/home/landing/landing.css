@@ -19,9 +19,7 @@
   width: 80%;
   color: #fff;
   text-shadow: black 1px 0 15px;
-  padding: 50px 0 50px 0;
-  background-color:rgba(47,52,72,.05);
-  border-radius: 1rem;
+  padding: 50px 0 0 0;
 }
 
 @media screen and (max-width: 900px) {
