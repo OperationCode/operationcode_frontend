@@ -13,3 +13,7 @@ publish: build
 
 travis: build test
 
+.PHONY: backend
+backend:
+	bin/run_backend.sh
+
