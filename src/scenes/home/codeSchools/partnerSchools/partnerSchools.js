@@ -45,6 +45,17 @@ class PartnerSchools extends Component {
           />
           <SchoolCard
             key="1"
+            alt="RMOTR logo"
+            schoolName="RMOTR"
+            link="https://rmotr.com/"
+            schoolAddress="Online"
+            logo="https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/rmotr.jpg"
+            GI="No"
+            fullTime="Flexible"
+            hardware="No"
+          />
+          <SchoolCard
+            key="2"
             alt="Sabio Logo"
             schoolName="Sabio"
             link="http://sabio.la/veterans"
@@ -57,7 +68,7 @@ class PartnerSchools extends Component {
             hardware="No"
           />
           <SchoolCard
-            key="2"
+            key="3"
             alt="Flatiron Logo"
             schoolName="The Flatiron School"
             link="http://flatironschool.com/"
@@ -70,7 +81,7 @@ class PartnerSchools extends Component {
             hardware="No"
           />
           <SchoolCard
-            key="3"
+            key="4"
             alt="Startup Institute Logo"
             schoolName="Startup Institute"
             link="https://www.startupinstitute.com/new-york/"
@@ -83,7 +94,7 @@ class PartnerSchools extends Component {
             hardware="No"
           />
           <SchoolCard
-            key="4"
+            key="5"
             alt="Launch School Logo"
             schoolName="Launch School"
             link="https://launchschool.com/blog/operation-code-scholarship/"
@@ -94,7 +105,7 @@ class PartnerSchools extends Component {
             hardware="No"
           />
           <SchoolCard
-            key="5"
+            key="6"
             alt="Bloc Logo"
             schoolName="Bloc"
             link="http://try.bloc.io/operation-code-bootcamp-scholarship/"
@@ -105,7 +116,7 @@ class PartnerSchools extends Component {
             hardware="No"
           />
           <SchoolCard
-            key="6"
+            key="7"
             alt="Fullstack Academy Logo"
             schoolName="Fullstack Academy"
             link="https://www.fullstackacademy.com/remote-immersive#scholarships"
