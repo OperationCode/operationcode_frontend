@@ -11,10 +11,12 @@
         <meta property="og:image" content="https://static1.squarespace.com/static/586d87de725e2585df6e8448/t/5870110d6b8f5b61fdd8ee05/1483739408996/?format=500w" />
 
         <link rel="stylesheet" type="styles/css" href="styles/css/styles.css">
+        <script src="https://cdn.ravenjs.com/3.16.0/raven.min.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
         <div id="app"></div>
+        <script>Raven.config('https://23e9c0c37a3841b8a692c98b8978f515@sentry.io/147247').install();</script>
         <script src="scripts/src/app.js"></script>
     </body>
 </html>
