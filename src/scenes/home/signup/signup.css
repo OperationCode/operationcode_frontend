@@ -32,6 +32,21 @@
   width: 100%;
 }
 
+.errorList {
+  align-self: center;
+  color: #ff665A;
+  font-size: 1.5rem;
+  font-weight: 800;
+  list-style-position: inside;
+  margin-bottom: 12px;
+  margin-top: 12px;
+  padding: 0;
+}
+
+.errorMessage {
+  padding-left: 20px;
+}
+
 @media screen and (max-width: 599px) {
   .signupForm {
     max-width: 298px;
