@@ -4,7 +4,7 @@ import LinkButton from 'shared/components/linkButton/linkButton';
 import apexLogo from 'images/partnerLogos/apex_systems_logo.jpg';
 import githubLogo from 'images/partnerLogos/github_logo.jpg';
 import dockerLogo from 'images/partnerLogos/docker_logo.jpg';
-import oracleLogo from 'images/partnerLogos/oracle_logo.png';
+import oracleLogo from 'images/partnerLogos/oracle_logo.jpg';
 import oreillyLogo from 'images/partnerLogos/oreilly_logo.jpg';
 import hackerrankLogo from 'images/partnerLogos/hackerrank_logo.jpg';
 import styles from './partners.css';
