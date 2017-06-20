@@ -115,6 +115,17 @@ class PartnerSchools extends Component {
             fullTime="Full-Time"
             hardware="No"
           />
+          <SchoolCard
+            key="7"
+            alt="Code Platoon Logo"
+            schoolName="Code Platoon"
+            link="https://www.codeplatoon.org/"
+            schoolAddress="Online, Chicago"
+            logo="https://raw.githubusercontent.com/OperationCode/operationcode_frontend/master/src/images/codeSchoolLogos/code_platoon.jpg"
+            GI="No"
+            fullTime="Full-Time"
+            hardware="No"
+          />
         </div>
 
         <div className={styles.noteForSchoolReps}>
