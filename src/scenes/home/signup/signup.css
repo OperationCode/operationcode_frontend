@@ -54,8 +54,13 @@
     border: 1px solid rgb(92,105,122);
     padding: 10px;
   }
+
   .signup h2 {
     font-size: 26px;
+  }
+
+  .errorList {
+    font-size: 1.25rem;
   }
 }
 
@@ -64,6 +69,7 @@
     border-left-style: none;
     border-right-style: none;
   }
+
   .signup h2 {
     font-size: 20px;
   }
