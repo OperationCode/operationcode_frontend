@@ -269,5 +269,4 @@ We are using CSS modules for styling.  Each components styles should be next to 
 [Operation Code Contribution Guide](https://github.com/OperationCode/START_HERE)
 
 ## License
-
-[MIT](LICENSE) © OperationCode
+This project is licensed under the terms of the MIT license.
