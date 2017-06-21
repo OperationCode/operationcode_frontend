@@ -1,10 +1,19 @@
+.wrapper {
+	text-align: center;
+}
+
 .auth {
 	padding-top: 2%;
 	font-size: 1.5rem;
 }
 
 .authbtn {
-	padding: 1% 2%;
+	padding: 2% 2%;
+	font-size: 1.3rem;
 	background: #C23A27;
 	cursor: pointer;
+	outline: none;
+	border: none;
+	color: white;
+	margin-top: 3%;
 }

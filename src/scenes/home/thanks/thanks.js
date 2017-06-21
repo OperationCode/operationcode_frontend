@@ -19,14 +19,13 @@ class Thanks extends Component {
 
   render() {
     return (
-      <Section title="Thanks for joining">
+      <Section title="Thanks for joining" className={styles.wrapper}>
         <span>Thanks for joining operation code. Please check your email for orders.</span>
         <span className={styles.auth}>If you are interested in scholarships and / or hardware loans, please authenticate yourself using the button below.</span>
         <Button className={styles.authbtn} onClick={this.idMe}>
           ID.Me Authentication
         </Button>
       </Section>
-
     );
   }
 }
