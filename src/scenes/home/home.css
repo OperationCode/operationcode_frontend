@@ -18,11 +18,18 @@
     background-size: 100%;
     background-position: center top;
     background-repeat: no-repeat;
-}
+} 
 
 @media screen and (max-width: 760px) {
   .backgroundImage {
-    background-size: auto 500px;
+    background-size: auto 75%;
+    background-attachment: fixed;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .backgroundImage {
+    background-size: auto 75%;
     background-attachment: fixed;
   }
 }
