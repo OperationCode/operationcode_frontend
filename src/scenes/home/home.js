@@ -5,6 +5,7 @@ import { Route, withRouter, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import * as CookieHelpers from 'shared/utils/cookieHelper';
+import Login from 'shared/components/login/login';
 import familyImage from 'images/Family-2.jpg';
 import SignUp from './signup/signup';
 import MentorRequestsTable from './mentor/mentorRequestsTable/mentorRequestsTable';
@@ -157,6 +158,12 @@ class Home extends Component {
               )}
             />
             <Route
+              path="/login"
+              render={() => (
+                <Login updateRootAuthState={this.updateRootAuthState} {...authProps} />
+              )}
+            />
+	    <Route
               path="/profile/verify"
               component={Thanks}
             />

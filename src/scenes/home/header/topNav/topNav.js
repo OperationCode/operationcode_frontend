@@ -7,24 +7,8 @@ import styles from './topNav.css';
 class TopNav extends Component {
 
   renderNavItems = () => {
-    const { signedIn, mentor } = this.props;
+    const { signedIn } = this.props;
     if (signedIn) {
-      if (mentor) {
-        return (
-          <Nav className={styles.topNav} >
-            <NavItem notClickable to="about" text="About" />
-            <NavItem notClickable to="programs" text="Programs" />
-            <NavItem notClickable to="involved" text="Get Involved" />
-            <NavItem notClickable to="blog" text="Blog" />
-            <NavItem to="code-schools" text="Code Schools" />
-            <NavItem to="https://donorbox.org/operationcode" text="Donate" isExternal />
-            <NavItem to="mentors" text="Mentors" />
-            <NavItem to="requests" text="Requests" />
-            <NavItem to="squads" text="Squads" />
-            <button className="navItem" onClick={() => this.props.onLogOutClick()}>Logout</button>
-          </Nav>
-        );
-      }
       return (
         <Nav className={styles.topNav} >
           <NavItem notClickable to="about" text="About" />
@@ -33,9 +17,8 @@ class TopNav extends Component {
           <NavItem notClickable to="blog" text="Blog" />
           <NavItem to="code-schools" text="Code Schools" />
           <NavItem to="https://donorbox.org/operationcode" text="Donate" isExternal />
-          <NavItem to="mentors" text="Mentors" />
-          <NavItem to="squads" text="Squads" />
-          <button onClick={() => this.props.onLogOutClick()}>Logout</button>
+          <NavItem to="profile" text="Profile" />
+          <button className="navItem" onClick={() => this.props.onLogOutClick()}>Logout</button>
         </Nav>
       );
     }
@@ -48,6 +31,7 @@ class TopNav extends Component {
         <NavItem to="code-schools" text="Code Schools" />
         <NavItem to="https://donorbox.org/operationcode" text="Donate" isExternal />
         <NavItem to="join" text="Join" />
+        <NavItem to="login" text="Login" />
       </Nav>
     );
   }
@@ -58,14 +42,12 @@ class TopNav extends Component {
 }
 
 TopNav.propTypes = {
-  mentor: PropTypes.bool,
   onLogOutClick: PropTypes.func,
   signedIn: PropTypes.bool
 };
 
 TopNav.defaultProps = {
   onLogOutClick: () => {},
-  mentor: false,
   signedIn: false
 };
 

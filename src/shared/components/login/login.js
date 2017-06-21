@@ -48,7 +48,7 @@ class Login extends Component {
         this.setState({ authenticated: true });
         this.props.updateRootAuthState();
       }).catch((response) => {
-        const error = _.get(response, 'response.data.error');
+        const error = _.get(response, 'message');
         this.setState({ error });
       });
     }
@@ -58,11 +58,11 @@ class Login extends Component {
     const { error } = this.state;
     return (
       <Section title="Login" theme="white">
-        {this.state.authenticated && <Redirect to="/home" />}
+        {this.state.authenticated && <Redirect to="/" />}
         <Form autoComplete>
           <FormEmail displayName="Email" label="Email" onChange={this.onEmailChange} />
           <FormPassword displayName="Password" label="Password" onChange={this.onPasswordChange} />
-          {error && <h2>{error}</h2>}
+          {error && <h2 className={styles.loginError}>Login Error: {error}</h2>}
           <FormButton className={styles.Button} text="login" onClick={this.handleOnClick} />
         </Form>
       </Section>

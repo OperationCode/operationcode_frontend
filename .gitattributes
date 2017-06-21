@@ -42,3 +42,8 @@ LICENSE text
 *.ttf binary
 *.eot binary
 *.woff binary
+
+[submodule "backend"]
+    path = backend
+    url = https://github.com/OperationCode/operationcode_backend.git
+    ignore = all

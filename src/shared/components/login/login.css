@@ -7,6 +7,9 @@
   width: 100%;
 }
 
+.loginError {
+  color:red;
+}
 select {
     border:1px solid #ccc;
     vertical-align:top;
