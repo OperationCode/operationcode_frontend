@@ -15,6 +15,10 @@ import config from 'config/environment';
 import styles from './signup.css';
 
 class SignUp extends Component {
+  static contextTypes = {
+    router: React.PropTypes.object
+  }
+
   constructor(props) {
     super(props);
     this.state = {
