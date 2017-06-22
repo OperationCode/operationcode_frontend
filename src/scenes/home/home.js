@@ -156,6 +156,10 @@ class Home extends Component {
                 <Gala {...authProps} />
               )}
             />
+            <Route
+              path="/profile/verify"
+              component={Thanks}
+            />
             <Route exact path="/about/financial-statements" component={FinancialStatements} />
             <Route
               path="*" component={FourOhFour}
