@@ -125,7 +125,9 @@ class SignUp extends Component {
             id="passwordConfirm" placeholder="Confirm Password"
             onChange={this.onConfirmPasswordChange} validateFunc={this.validatePasswordConfirm}
           />
-          {this.state.error && <span>There was an error joining Operation Code: {this.state.error}</span>}
+          {this.state.error ? <ul className={styles.errorList}>There was an error joining Operation Code:
+            <li className={styles.errorMessage}>{this.state.error}</li>
+          </ul> : null }
           {this.state.success && <Redirect to="/thanks" />}
           <FormButton className={styles.joinButton} text="Join" onClick={this.handleOnClick} theme="red" />
         </Form>
