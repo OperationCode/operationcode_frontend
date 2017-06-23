@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Section from 'shared/components/section/section';
 import Idme from 'shared/components/idme/idme';
+import styles from './profile.css';
 
 class Profile extends Component {
 
@@ -9,7 +10,7 @@ class Profile extends Component {
     return (
       <Section title="User Profile">
         {this.props.verified && <h2>Your profile is verified with id.me</h2>}
-        {!this.props.verified && <Idme />}
+        {!this.props.verified && <div className={styles.idmeButton}><Idme /></div>}
       </Section>
     );
   }

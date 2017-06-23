@@ -165,13 +165,13 @@ class Home extends Component {
               )}
             />
             <Route
-              path="/profile"
+              exact path="/profile"
               render={() => (
                 <Profile {...authProps} />
               )}
             />
             <Route
-              path="/idmeverify"
+              exact path="/profile/verify"
               render={() => (
                 <IdmeVerify updateRootAuthState={this.updateRootAuthState} {...authProps} />
               )}

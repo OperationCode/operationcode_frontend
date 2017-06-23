@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { postBackend } from 'shared/utils/apiHelper';
 import { withRouter } from 'react-router-dom';
 import Section from 'shared/components/section/section';
+import _ from 'lodash';
 import styles from './idmeverify.css';
 
 class IdmeVerify extends Component {
@@ -16,8 +17,8 @@ class IdmeVerify extends Component {
     if (qs.error_description) {
       this.setState({ error: qs.error_description });
     } else if (qs.access_token) {
-      postBackend('/users/profile/verify', { access_token: qs.access_token }).then((response) => {
-        if (response && response.verified) {
+      postBackend('users/profile/verify', { access_token: qs.access_token }).then((response) => {
+        if (_.get(response, 'data.verified')) {
           this.setState({ verified: true });
           this.props.updateRootAuthState();
         }
