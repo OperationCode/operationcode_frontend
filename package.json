@@ -12,6 +12,7 @@
     "lodash": "^4.17.4",
     "postscribe": "^2.0.8",
     "prop-types": "^15.5.8",
+    "query-string": "^4.3.4",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-error-overlay": "^1.0.7",

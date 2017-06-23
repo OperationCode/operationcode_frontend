@@ -6,7 +6,9 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import * as CookieHelpers from 'shared/utils/cookieHelper';
 import Login from 'shared/components/login/login';
+import IdmeVerify from 'shared/components/idme/idmeverify/idmeverify';
 import familyImage from 'images/Family-2.jpg';
+import Profile from './profile/profile';
 import SignUp from './signup/signup';
 import MentorRequestsTable from './mentor/mentorRequestsTable/mentorRequestsTable';
 import SquadsTable from './squads/squadsTable/squadsTable';
@@ -41,11 +43,7 @@ class Home extends Component {
 
   componentWillMount() {
     this.setBgImage(this.props.location);
-    const cookies = CookieHelpers.getUserStatus();
-    this.setState({
-      signedIn: cookies.signedIn,
-      mentor: cookies.mentor
-    });
+    this.updateRootAuthState();
   }
 
   setBgImage(location) {
@@ -57,9 +55,11 @@ class Home extends Component {
   }
 
   updateRootAuthState = () => {
+    const cookies = CookieHelpers.getUserStatus();
     this.setState({
-      mentor: true,
-      signedIn: true
+      signedIn: cookies.signedIn,
+      mentor: cookies.mentor,
+      verified: cookies.verified
     });
   }
 
@@ -69,10 +69,11 @@ class Home extends Component {
   }
 
   render() {
-    const { mentor, signedIn } = this.state;
+    const { mentor, signedIn, verified } = this.state;
     const authProps = {
       signedIn,
-      mentor
+      mentor,
+      verified
     };
     const classes = classNames({
       [`${styles.home}`]: true,
@@ -163,9 +164,17 @@ class Home extends Component {
                 <Login updateRootAuthState={this.updateRootAuthState} {...authProps} />
               )}
             />
-	    <Route
-              path="/profile/verify"
-              component={Thanks}
+            <Route
+              path="/profile"
+              render={() => (
+                <Profile {...authProps} />
+              )}
+            />
+            <Route
+              path="/idmeverify"
+              render={() => (
+                <IdmeVerify updateRootAuthState={this.updateRootAuthState} {...authProps} />
+              )}
             />
             <Route exact path="/about/financial-statements" component={FinancialStatements} />
             <Route

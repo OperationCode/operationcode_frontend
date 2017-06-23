@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Button from 'shared/components/button/button';
+import config from 'config/environment';
 import styles from './idme.css';
 
 class Idme extends Component {
@@ -13,7 +14,7 @@ class Idme extends Component {
     document.body.appendChild(script, script1);
   }
   idMe = () => {
-    window.open('https://api.id.me/oauth/authorize?client_id=6d781bfd42506613a0fe4ad4123aaf6d&redirect_uri=https://www.operationcode.org/profile/verify&response_type=code&scope=military&display=popup', '', 'scrollbars=yes,menubar=no,status=no,location=no,toolbar=no,width=750,height=780,top=200,left=200');
+    window.open(`https://api.id.me/oauth/authorize?client_id=${config.idmeClientId}&redirect_uri=${config.host}/idmeverify&response_type=token&scope=military&display=popup', '', 'scrollbars=yes,menubar=no,status=no,location=no,toolbar=no,width=750,height=780,top=200,left=200`);
   }
 
   render() {

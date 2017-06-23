@@ -7,6 +7,7 @@ export const setUserAuthCookie = ({ token, user }) => {
   cookies.set('lastName', user.last_name, { path: '/' });
   cookies.set('slackName', user.slack_name, { path: '/' });
   cookies.set('mentor', user.mentor, { path: '/' });
+  cookies.set('verified', user.verified, { path: '/' });
 };
 
 export const clearAuthCookies = () => {
@@ -16,6 +17,7 @@ export const clearAuthCookies = () => {
   cookies.remove('lastName');
   cookies.remove('slackName');
   cookies.remove('mentor');
+  cookies.remove('verified');
 };
 
 export const isMentor = () => {
@@ -27,6 +29,7 @@ export const getUserStatus = () => {
   const cookies = new Cookies();
   return {
     mentor: !!cookies.get('mentor'),
-    signedIn: !!cookies.get('token')
+    signedIn: !!cookies.get('token'),
+    verified: !!cookies.get('verified')
   };
 };
