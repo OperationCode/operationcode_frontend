@@ -5,4 +5,5 @@ const config = {
   idmeOAuthUrl: process.env.OC_IDME_AUTH_URL || 'http://localhost:4001/oauth/authorize'
 };
 
+console.dir(config); //eslint-disable-line
 export default config;
