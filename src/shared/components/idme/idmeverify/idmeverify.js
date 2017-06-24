@@ -13,7 +13,7 @@ class IdmeVerify extends Component {
     this.state = {};
   }
   componentWillMount() {
-    const qs = QueryString.parse(this.props.location.search);
+    const qs = QueryString.parse(this.props.location.hash);
     if (qs.error_description) {
       this.setState({ error: qs.error_description });
     } else if (qs.access_token) {
@@ -26,6 +26,7 @@ class IdmeVerify extends Component {
         this.setState({ error: 'Operation Code could not verify your military affiliation with id.me' });
       });
     } else {
+      console.dir(qs); //eslint-disable-line
       this.setState({ error: 'Unknown Error occured while verifying with id.me' });
     }
   }
@@ -47,7 +48,7 @@ IdmeVerify.defaultProps = {
 
 IdmeVerify.propTypes = {
   location: PropTypes.shape({
-    search: PropTypes.string
+    hash: PropTypes.string
   }),
   updateRootAuthState: PropTypes.func
 };

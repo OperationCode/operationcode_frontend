@@ -4,6 +4,5 @@ const config = {
   idmeClientId: process.env.OC_IDME_CLIENT_ID,
   idmeOAuthUrl: process.env.OC_IDME_AUTH_URL
 };
-console.dir(process.env); //eslint-disable-line
-console.dir(config); //eslint-disable-line
+
 export default config;
