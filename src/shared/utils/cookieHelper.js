@@ -28,8 +28,8 @@ export const isMentor = () => {
 export const getUserStatus = () => {
   const cookies = new Cookies();
   return {
-    mentor: !!cookies.get('mentor'),
-    signedIn: !!cookies.get('token'),
-    verified: !!cookies.get('verified')
+    mentor: cookies.get('mentor') === true,
+    signedIn: cookies.get('token') !== undefined,
+    verified: cookies.get('verified') === true
   };
 };

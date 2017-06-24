@@ -75,6 +75,7 @@ class Home extends Component {
       mentor,
       verified
     };
+    console.dir(authProps); //eslint-disable-line
     const classes = classNames({
       [`${styles.home}`]: true,
       [`${styles.backgroundImage}`]: this.state.bgImage
