@@ -1,7 +1,6 @@
 import Section from 'shared/components/section/section';
 import React, { Component } from 'react';
 import Form from 'shared/components/form/form';
-import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 import config from 'config/environment';
@@ -46,7 +45,9 @@ class Login extends Component {
       }).then(({ data }) => {
         CookieHelpers.setUserAuthCookie(data);
         this.setState({ authenticated: true });
-        this.props.updateRootAuthState();
+        this.props.updateRootAuthState((history) => {
+          history.push('/');
+        });
       }).catch((response) => {
         const error = _.get(response, 'message');
         this.setState({ error });
@@ -56,9 +57,9 @@ class Login extends Component {
 
   render() {
     const { error } = this.state;
+
     return (
       <Section title="Login" theme="white">
-        {this.state.authenticated && <Redirect to="/" />}
         <Form autoComplete>
           <FormEmail displayName="Email" label="Email" onChange={this.onEmailChange} />
           <FormPassword displayName="Password" label="Password" onChange={this.onPasswordChange} />

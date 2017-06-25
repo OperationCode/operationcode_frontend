@@ -16,7 +16,6 @@ class Partners extends Component {
       <Section
         title="Partners"
         theme="white"
-        margin
       >
         <div className={styles.partners}>
           <p>

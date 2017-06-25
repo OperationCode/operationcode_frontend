@@ -54,18 +54,26 @@ class Home extends Component {
     }
   }
 
-  updateRootAuthState = () => {
+  updateRootAuthState = (cb) => {
     const cookies = CookieHelpers.getUserStatus();
     this.setState({
       signedIn: cookies.signedIn,
       mentor: cookies.mentor,
       verified: cookies.verified
+    }, () => {
+      if (cb) {
+        cb(this.props.history);
+      }
     });
   }
 
   logOut = () => {
     CookieHelpers.clearAuthCookies();
-    window.location = '/';
+    this.setState({
+      signedIn: false,
+      mentor: false,
+      verified: false
+    }, () => this.props.history.push('/'));
   }
 
   render() {
@@ -75,7 +83,7 @@ class Home extends Component {
       mentor,
       verified
     };
-    console.dir(authProps); //eslint-disable-line
+
     const classes = classNames({
       [`${styles.home}`]: true,
       [`${styles.backgroundImage}`]: this.state.bgImage
