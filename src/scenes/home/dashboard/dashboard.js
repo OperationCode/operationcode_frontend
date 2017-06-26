@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Cookies from 'universal-cookie';
 import { Link } from 'react-router-dom';
 import Section from 'shared/components/section/section';
+import Idme from 'shared/components/idme/idme';
 import styles from './dashboard.css';
 
 class Dashboard extends Component {
@@ -51,6 +52,7 @@ class Dashboard extends Component {
     return (
       <Section title="What would you like to do?" theme="white">
         {this.renderLinks()}
+        <Idme />
       </Section>
     );
   }
