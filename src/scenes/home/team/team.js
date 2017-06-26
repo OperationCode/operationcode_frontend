@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
 import Section from 'shared/components/section/section';
-import styles from './team.css';
+// import styles from './team.css';
 
-import React from 'react';
-
-export default class Team extends React.Component {
+class Team extends Component {
   render() {
     return (
-      <div></div>
+      <div>
+        <h1>
+          This is the header section
+        </h1>
+        <Section
+          title="Mission"
+        />
+      </div>
     );
   }
 }
+
+export default Team;
