@@ -1,4 +1,32 @@
 
+.titleQuote{
+	background: #75818F;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	height: 40%;
+	padding-bottom: 5rem;
+}
+
+.line {
+	border: 1px solid white;
+	width: 80%;
+}
+
+.quote {
+	font-size: 3.4rem;
+	color: white;
+	padding: 10rem 2rem;
+}
+
+@media screen and (max-width: 650px) {
+	.quote {
+		font-size: 2rem;
+	}
+}
+
 .serviceSealWrapper {
 	display: flex;
 	justify-content: space-between;
@@ -26,4 +54,5 @@
   padding-left: 5rem;
   padding-right: 5rem;
 }
+
 
