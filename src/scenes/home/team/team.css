@@ -1,0 +1,19 @@
+.wrapper {
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+.serviceSealWrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.serviceSeal {
+	height: 75px;
+	width: 75px;
+}
+
+.paragraph {
+	font-size: 1.3rem;
+}
