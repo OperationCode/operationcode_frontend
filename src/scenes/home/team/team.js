@@ -14,9 +14,13 @@ class Team extends Component {
   render() {
     return (
       <div className={styles.wrapper}>
-        <h1>
-          This is the header section
-        </h1>
+        <div className={styles.titleQuote}>
+          <div className={styles.line} />
+          <span className={styles.quote}>
+            &quot;TO CARE FOR HIM WHO SHALL HAVE BORNE THE BATTLE, AND FOR HIS WIDOW, AND HIS ORPHAN&quot;
+          </span>
+          <div className={styles.line} />
+        </div>
         <Section title="Mission" theme="white">
           <p className={styles.paragraph}>Operation code is leading the way to expand opportunities for military veterans and their families to learn new skills and build a career in the fast-growing technology sector. Our team’s mission, led by veterans and other dedicated volunteers who are passionate about technology, is to hep open doors for our diverse membership through unique program offerings, such as our Software Mentor Program, Conference Scholarships, and Employment Services - all made possible by individual donations and corporate partnerships.
           </p>
