@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Section from 'shared/components/section/section';
+import TeamCard from 'shared/components/teamCard/teamCard';
 import armySeal from 'images/serviceSeals/Army.png';
 import navySeal from 'images/serviceSeals/Navy.png';
 import marineSeal from 'images/serviceSeals/USMC.png';
@@ -31,6 +32,11 @@ class Team extends Component {
             <img className={styles.serviceSeal} src={airForceSeal} alt="Army Seal" />
             <img className={styles.serviceSeal} src={armyReserveSeal} alt="Army Seal" />
             <img className={styles.serviceSeal} src={navyReserveSeal} alt="Army Seal" />
+          </div>
+        </Section>
+        <Section title="Our Team" theme="gray">
+          <div className={styles.team}>
+            <TeamCard />
           </div>
         </Section>
       </div>
