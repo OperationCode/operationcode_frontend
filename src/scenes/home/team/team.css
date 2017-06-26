@@ -5,8 +5,10 @@
 
 .serviceSealWrapper {
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
+	width: 70%;
+	padding-top: 2%;
 }
 
 .serviceSeal {
@@ -16,4 +18,27 @@
 
 .paragraph {
 	font-size: 1.3rem;
+}
+
+.team {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.teamCard {
+  border-radius: 4px;
+  align-items: center;
+  margin: 20px 10px;
+  padding: 10px;
+  width: 100px;
+  height: auto;
+  background: #fff;
+  box-shadow: 0 3px 6px 1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.teamCard:hover {
+  box-shadow: 0 9px 28px rgba(0,0,0,0.25);
 }
