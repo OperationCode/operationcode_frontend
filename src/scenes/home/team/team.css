@@ -6,7 +6,7 @@
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	height: 26%;
+	height: 15%;
 	padding-bottom: 5rem;
 }
 
@@ -19,12 +19,6 @@
 	font-size: 3.4rem;
 	color: white;
 	padding: 6rem 2rem;
-}
-
-@media screen and (max-width: 650px) {
-	.quote {
-		font-size: 2rem;
-	}
 }
 
 .serviceSealWrapper {
@@ -46,18 +40,31 @@
 	padding-right: 5rem;
 }
 
-.headline {
-	font-size: 2rem;
-	padding: 2rem 0;
-}
-
 .team {
   display: flex;
   flex-wrap: wrap;
   padding-left: 5rem;
   padding-right: 5rem;
+  align-items: center;
+  justify-content: center;
 }
 
+@media screen and (max-width: 850px) {
+	.titleQuote {
+		height: 10%;
+	}
+}
 
+@media screen and (max-width: 650px) {
+	.quote {
+		font-size: 2rem;
+	}
 
+	.serviceSealWrapper {
+		flex-wrap: wrap;
+	}
+	.titleQuote {
+		height: 5%;
+	}
+}
 
