@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Section from 'shared/components/section/section';
+import Question from './question/question';
 import styles from './faq.css';
 
 class FAQ extends Component {
