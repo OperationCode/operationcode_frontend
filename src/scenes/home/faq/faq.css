@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.accordion {
+  line-height: 1.5;
+  max-width: 80%;
+}
+
