@@ -48,9 +48,9 @@
 
 .team {
   display: flex;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   padding-left: 5rem;
   padding-right: 5rem;
 }
