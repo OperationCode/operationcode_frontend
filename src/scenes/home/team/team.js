@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Section from 'shared/components/section/section';
-import TeamCard from 'shared/components/teamCard/teamCard';
+// import TeamCard from 'shared/components/teamCard/teamCard';
+import StaffCard from 'shared/components/staffCard/staffCard';
 import armySeal from 'images/serviceSeals/Army.png';
 import navySeal from 'images/serviceSeals/Navy.png';
 import marineSeal from 'images/serviceSeals/USMC.png';
@@ -14,6 +15,10 @@ import styles from './team.css';
 
 class Team extends Component {
   render() {
+    const founder = {
+      name: 'David Molina',
+      role: 'Prez'
+    };
     return (
       <div className={styles.wrapper}>
         <div className={styles.titleQuote}>
@@ -43,8 +48,16 @@ class Team extends Component {
           </div>
         </Section>
         <Section title="Our Team" theme="gray">
+          <p className={styles.paragraph}>
+            Our all volunteer staff are dedicated individuals who come from a wide variety of backgrounds, including U.S Military Veterans, civilians, those with technology backgrounds, and those who have skills outside of web development.
+          </p>
+          <h2>Our Board</h2>
           <div className={styles.team}>
-            <TeamCard />
+            <StaffCard name={founder.name} role={founder.role} />
+            <StaffCard name={founder.name} role={founder.role} />
+            <StaffCard name={founder.name} role={founder.role} />
+            <StaffCard name={founder.name} role={founder.role} />
+            <h2>Our Team Members</h2>
           </div>
         </Section>
       </div>
