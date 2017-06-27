@@ -14,6 +14,7 @@ import MentorsTable from './mentor/mentorsTable/mentorsTable';
 import Thanks from './thanks/thanks';
 import Team from './team/team';
 import Gala from './gala/gala';
+import FAQ from './faq/faq';
 import FinancialStatements from './about/financialStatements/financialStatements';
 import styles from './home.css';
 import Header from './header/header';
@@ -117,6 +118,10 @@ class Home extends Component {
             <Route
               path="/team"
               component={Team}
+            />
+            <Route
+              path="/faq"
+              component={FAQ}
             />
             <Route
               exact
