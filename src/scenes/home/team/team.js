@@ -4,8 +4,10 @@ import TeamCard from 'shared/components/teamCard/teamCard';
 import armySeal from 'images/serviceSeals/Army.png';
 import navySeal from 'images/serviceSeals/Navy.png';
 import marineSeal from 'images/serviceSeals/USMC.png';
+import marineReserveSeal from 'images/serviceSeals/USMCReserve.png';
 import coastGuardSeal from 'images/serviceSeals/USCG.png';
 import airForceSeal from 'images/serviceSeals/AirForce.png';
+import airForceReserveSeal from 'images/serviceSeals/AirForceReserve.png';
 import armyReserveSeal from 'images/serviceSeals/ArmyReserve.png';
 import navyReserveSeal from 'images/serviceSeals/NavyReserve.png';
 import styles from './team.css';
@@ -32,8 +34,10 @@ class Team extends Component {
             <img className={styles.serviceSeal} src={armySeal} alt="Army Seal" />
             <img className={styles.serviceSeal} src={navySeal} alt="Army Seal" />
             <img className={styles.serviceSeal} src={marineSeal} alt="Army Seal" />
+            <img className={styles.serviceSeal} src={marineReserveSeal} alt="Army Seal" />
             <img className={styles.serviceSeal} src={coastGuardSeal} alt="Army Seal" />
             <img className={styles.serviceSeal} src={airForceSeal} alt="Army Seal" />
+            <img className={styles.serviceSeal} src={airForceReserveSeal} alt="Army Seal" />
             <img className={styles.serviceSeal} src={armyReserveSeal} alt="Army Seal" />
             <img className={styles.serviceSeal} src={navyReserveSeal} alt="Army Seal" />
           </div>
