@@ -8,5 +8,14 @@
 .accordion {
   line-height: 1.5;
   max-width: 80%;
+}	
+
+.paragraph {
+	font-size: 1.5rem;
 }
 
+.headline {
+	font-size: 1.7rem;
+	font-weight: 800rem;
+	margin: 2rem 0;
+}
