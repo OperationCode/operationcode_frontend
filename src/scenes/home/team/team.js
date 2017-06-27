@@ -52,22 +52,18 @@ class Team extends Component {
         </Section>
         <Section title="Our Team" theme="gray">
           <p className={styles.paragraph}>
-            Our all volunteer staff are dedicated individuals who come from a wide variety of backgrounds, including U.S Military Veterans, civilians, those with technology backgrounds, and those who have skills outside of web development.
+            Our all volunteer staff are dedicated individuals who come from a wide variety of backgrounds, including U.S Military Veterans, civilians, those with tech backgrounds, and those who have skills outside of web development.
           </p>
-          <h2>The Board</h2>
+          <span className={styles.headline}>The Board</span>
           <div className={styles.team}>
             <StaffCard name={founder.name} role={founder.role} src={founder.src} twitter={founder.twitter} email={founder.email} />
             <StaffCard name={founder.name} role={founder.role} src={founder.src} twitter={founder.twitter} email={founder.email} />
             <StaffCard name={founder.name} role={founder.role} src={founder.src} twitter={founder.twitter} email={founder.email} />
             <StaffCard name={founder.name} role={founder.role} src={founder.src} twitter={founder.twitter} email={founder.email} />
           </div>
-          <h2>The Team Members</h2>
+          <span className={styles.headline}>The Team</span>
           <div className={styles.team}>
-            <StaffCard name={founder.name} role={founder.role} />
-            <StaffCard name={founder.name} role={founder.role} />
-            <StaffCard name={founder.name} role={founder.role} />
-            <StaffCard name={founder.name} role={founder.role} />
-            <StaffCard name={founder.name} role={founder.role} />
+            The Team
           </div>
 
         </Section>
