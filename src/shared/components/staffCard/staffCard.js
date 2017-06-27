@@ -11,14 +11,14 @@ class StaffCard extends Component {
           {this.props.name}
         </span>
         <hr className={styles.hr} />
-        <span className={styles.role}>
-          <strong>Role: </strong> {this.props.role}
+        <span className={styles.item}>
+          <span className={styles.upper}>Role: </span> {this.props.role}
         </span>
-        <span className={styles.email}>
-          <strong>Twitter: </strong> {this.props.twitter}
+        <span className={styles.item}>
+          <span className={styles.upper}>Twitter: </span> {this.props.twitter}
         </span>
-        <span className={styles.twitter}>
-          <strong>Email: </strong> {this.props.email}
+        <span className={styles.item}>
+          <span className={styles.upper}>Email: </span> {this.props.email}
         </span>
       </div>
     );
