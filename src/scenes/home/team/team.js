@@ -17,7 +17,10 @@ class Team extends Component {
   render() {
     const founder = {
       name: 'David Molina',
-      role: 'Prez'
+      role: 'President / Founder',
+      src: 'https://pbs.twimg.com/profile_images/875514479202639873/vFr09yW4_400x400.jpg',
+      twitter: '@davidcmolina',
+      email: 'david@operationcode.org'
     };
     return (
       <div className={styles.wrapper}>
@@ -51,14 +54,22 @@ class Team extends Component {
           <p className={styles.paragraph}>
             Our all volunteer staff are dedicated individuals who come from a wide variety of backgrounds, including U.S Military Veterans, civilians, those with technology backgrounds, and those who have skills outside of web development.
           </p>
-          <h2>Our Board</h2>
+          <h2>The Board</h2>
+          <div className={styles.team}>
+            <StaffCard name={founder.name} role={founder.role} src={founder.src} twitter={founder.twitter} email={founder.email} />
+            <StaffCard name={founder.name} role={founder.role} src={founder.src} twitter={founder.twitter} email={founder.email} />
+            <StaffCard name={founder.name} role={founder.role} src={founder.src} twitter={founder.twitter} email={founder.email} />
+            <StaffCard name={founder.name} role={founder.role} src={founder.src} twitter={founder.twitter} email={founder.email} />
+          </div>
+          <h2>The Team Members</h2>
           <div className={styles.team}>
             <StaffCard name={founder.name} role={founder.role} />
             <StaffCard name={founder.name} role={founder.role} />
             <StaffCard name={founder.name} role={founder.role} />
             <StaffCard name={founder.name} role={founder.role} />
-            <h2>Our Team Members</h2>
+            <StaffCard name={founder.name} role={founder.role} />
           </div>
+
         </Section>
       </div>
     );

@@ -10,8 +10,15 @@ class StaffCard extends Component {
         <span className={styles.name}>
           {this.props.name}
         </span>
+        <hr className={styles.hr} />
         <span className={styles.role}>
-          {this.props.role}
+          <strong>Role: </strong> {this.props.role}
+        </span>
+        <span className={styles.email}>
+          <strong>Twitter: </strong> {this.props.twitter}
+        </span>
+        <span className={styles.twitter}>
+          <strong>Email: </strong> {this.props.email}
         </span>
       </div>
     );
@@ -22,7 +29,9 @@ StaffCard.propTypes = {
   name: PropTypes.string.isRequired,
   src: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
-  role: PropTypes.string.isRequired
+  role: PropTypes.string.isRequired,
+  twitter: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired
 };
 
 export default StaffCard;
