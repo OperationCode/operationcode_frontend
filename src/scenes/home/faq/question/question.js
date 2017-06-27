@@ -5,13 +5,13 @@ import styles from './question.css';
 class Question extends Component {
   render() {
     return (
-    <div class="accordionSingle">
-      <input class="accordionSingleHidden" type="checkbox" id={this.props.q} />
-      <label class="accordionSingleQuestion" for={this.props.q}> {this.props.q}</label>
-      <p class="accordionSingleAnswer">
-        {this.props.a}
-      </p>
-    </div>
+      <div className={styles.accordionSingle}>
+        <input className={styles.accordionSingleHidden} type="checkbox" id={this.props.q} />
+        <label className={styles.accordionSingleQuestion} htmlFor={this.props.q}> {this.props.q}</label>
+        <p className={styles.accordionSingleAnswer}>
+          {this.props.a}
+        </p>
+      </div>
     );
   }
 }

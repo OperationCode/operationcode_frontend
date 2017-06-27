@@ -2,19 +2,19 @@
   "general": [
     {
       "question": "When was Operation Code founded?",
-      "answer": "Operation Code was founded on <a href=\"https://github.com/OperationCode/operationcode/tree/master/bin\">August 21, 2014.</a>"
+      "answer": "Operation Code was founded on August 21, 2014."
     },
     {
       "question": "How was Operation Code founded?",
-      "answer": "Operation Code was founded in Portland, Oregon by ex-Army Captain David Molina, who took action and built operationcode.org to petition Congress to expand the New GI Bill to include code schools. <a href=\"/history\">Learn our full history</a>."
+      "answer": "Operation Code was founded in Portland, Oregon by ex-Army Captain David Molina, who took action and built operationcode.org to petition Congress to expand the New GI Bill to include code schools."
     },
     {
       "question": "Is Operation Code a 501(c)(3) nonprofit organization?",
-      "answer": "Yes. Operation Code was granted tax-exempt status by the Internal Revenue Service, functioning as a charity under 501(c)(3) of the Internal Revenue Code, <a href=\"https://twitter.com/operation_code/status/728018497343660032\">effective 4 May 2016</a>, with retroactive status to 15 June 2015. Donations to the organization are deductible as charitable contributions."
+      "answer": "Yes. Operation Code was granted tax-exempt status by the Internal Revenue Service, functioning as a charity under 501(c)(3) of the Internal Revenue Code, effective 4 May 2016, with retroactive status to 15 June 2015. Donations to the organization are deductible as charitable contributions."
     },
     {
       "question": "Where is Operation Code based? Do you have a location near me?",
-      "answer": "Operation Code, much like software, is <a href='https://github.com/OperationCode/operationcode/graphs/contributors'>built from anywhere</a> with an internet connection, and is not based in one location. While we're headquartered in Portland, the entire organization is decentralized, including the board of directors and the core team, allowing us to more effectively serve the entire military community, whether they're veterans or military spouses, whether they're OCONUS or in-country. <a href='https://www.meetup.com/pro/operationcode/'>We have chapters all over the nation.</a> Use Slack and join the closest town to you!"
+      "answer": "Operation Code, much like software, is built from anywhere with an internet connection, and is not based in one location. While we're headquartered in Portland, the entire organization is decentralized, including the board of directors and the core team, allowing us to more effectively serve the entire military community, whether they're veterans or military spouses, whether they're OCONUS or in-country. We have chapters all over the nation. Use Slack and join the closest town to you!"
     },
     {
       "question": "Who does Operation Code serve?",
@@ -22,7 +22,7 @@
     },
     {
       "question": "What do I need to start learning software development and how much is this going to cost?",
-      "answer": "First off, you will need access to a solid computer, a good browser (ex. Chrome), and a strong internet connection. It costs nothing to start learning to code and receive software mentorship through Operation Code, you just need a positive attitude, persistence and grit, and a thirst for new knowledge. We have over a dozen channels, from Ruby to JavaScript, iOS to Android, and from Free Code Camp to edX study groups. <a href=\"/join\">Join now</a>."
+      "answer": "First off, you will need access to a solid computer, a good browser (ex. Chrome), and a strong internet connection. It costs nothing to start learning to code and receive software mentorship through Operation Code, you just need a positive attitude, persistence and grit, and a thirst for new knowledge. We have over a dozen channels, from Ruby to JavaScript, iOS to Android, and from Free Code Camp to edX study groups."
     },
     {
       "question": "What is available to start learning to code today?",
