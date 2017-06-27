@@ -26,6 +26,8 @@
 
 .accordionSingle {
   margin-bottom: 30px;
+  background: lightgray;
+  padding: 1.5rem;
 }
 
 .accordionSingleQuestion {
