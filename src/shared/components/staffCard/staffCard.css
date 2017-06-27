@@ -33,3 +33,11 @@
 	width: 80%;
 }
 
+.item {
+	align-self: left;
+}
+
+.upper {
+	text-transform: uppercase;
+	font-weight: 800;
+}
