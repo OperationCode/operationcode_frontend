@@ -14,6 +14,7 @@ class Thanks extends Component {
           <LinkButton link="/profile" text="Click to set up your user profile!" />
         </div>
       </Section>
+
     );
   }
 }
