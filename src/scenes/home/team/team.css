@@ -1,0 +1,70 @@
+
+.titleQuote{
+	background: #75818F;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	height: 15%;
+	padding-bottom: 5rem;
+}
+
+.line {
+	border: 1px solid white;
+	width: 80%;
+}
+
+.quote {
+	font-size: 3.4rem;
+	color: white;
+	padding: 6rem 2rem;
+}
+
+.serviceSealWrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 70%;
+	padding-top: 2%;
+}
+
+.serviceSeal {
+	height: 75px;
+	width: 75px;
+}
+
+.paragraph {
+	font-size: 1.3rem;
+	padding-left: 5rem;
+	padding-right: 5rem;
+}
+
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 850px) {
+	.titleQuote {
+		height: 10%;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.quote {
+		font-size: 2rem;
+	}
+
+	.serviceSealWrapper {
+		flex-wrap: wrap;
+	}
+	.titleQuote {
+		height: 5%;
+	}
+}
+

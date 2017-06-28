@@ -12,6 +12,7 @@ import SquadsTable from './squads/squadsTable/squadsTable';
 import Dashboard from './dashboard/dashboard';
 import MentorsTable from './mentor/mentorsTable/mentorsTable';
 import Thanks from './thanks/thanks';
+import Team from './team/team';
 import Gala from './gala/gala';
 import FinancialStatements from './about/financialStatements/financialStatements';
 import styles from './home.css';
@@ -112,6 +113,10 @@ class Home extends Component {
             <Route
               path="/thanks"
               component={Thanks}
+            />
+            <Route
+              path="/team"
+              component={Team}
             />
             <Route
               exact
