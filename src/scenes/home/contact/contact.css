@@ -1,0 +1,35 @@
+.paragraph {
+	font-size: 1.3rem;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+.wrapper {
+	display: flex;
+	padding-left: 40px;
+	padding-right: 40px;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid red;
+}
+
+.left {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid red;
+}
+
+.right {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid red;
+}
+
+img {
+	height: 100px;
+	width: auto;
+}
