@@ -18,6 +18,7 @@ import Thanks from './thanks/thanks';
 import Team from './team/team';
 import Gala from './gala/gala';
 import FAQ from './faq/faq';
+import Contact from './contact/contact';
 import FinancialStatements from './about/financialStatements/financialStatements';
 import styles from './home.css';
 import Header from './header/header';
@@ -133,6 +134,10 @@ class Home extends Component {
             <Route
               path="/faq"
               component={FAQ}
+            />
+            <Route
+              path="/contact"
+              component={Contact}
             />
             <Route
               exact
