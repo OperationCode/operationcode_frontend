@@ -9,7 +9,7 @@ class FormPassword extends Component {
         {...this.props}
         inputType="password"
         validationRegex={/^(?=.*[A-Z]).{6,}$/}
-        validationErrorMessage="Must be 6 characters long and incude a capitalized letter"
+        validationErrorMessage="Must be 6 characters long and include a capitalized letter"
       />
     );
   }
