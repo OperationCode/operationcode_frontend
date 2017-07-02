@@ -46,8 +46,8 @@ Lastly, if you run into any problems with the following instructions, please try
 1. Run `node -v`. If you do not have version 6 or greater, go to [nodejs.org](https://nodejs.org) and install the latest stable build.
 2. Run `npm -v`. If you do not have version 4 or greater, run `npm install -g npm`
 3. Run `yarn --version`. If you do not have version 0.21 or greater, run `npm install --global yarn`.
-4. Navigate your terminal into the directory where you'd like to place this repository and run `git clone https://github.com/OperationCode/operationcode_frontend.git`
-5. Move into `/operationcode_frontend`
+4. Fork and clone the repository.
+5. Move into the repository
 6. Run `yarn install`
 
 #### Addressing An Issue
@@ -59,7 +59,7 @@ When finished, [create a PR on GitHub](https://help.github.com/articles/creating
 
 #### Returning To Work After A Break
 Some issues take awhile to code a solution for. Just because you're working on an issue doesn't mean everybody puts there work on hold for you! You'll want to continually rebase your branch to ensure that your PR will have a seamless merge. Assuming you're ready to code again and you're already in the /operationcode_frontend directory...
-1. Run `git rebase master`
+1. [Keep your fork in sync with Operation Code's master branch.](https://help.github.com/articles/syncing-a-fork/)
 2. Run `yarn install`
 3. Run `yarn start`
 
@@ -268,12 +268,8 @@ Example...
 │       └── home.js
 ```
 
-#### Running the development Server
-- `npm install --global yarn` - Install Yarn Globally
-
-- `yarn install` - Install Package dependencies.  Be sure to run this each time you pull from Github to update the dependencies.
-
-- `yarn start` - Start the development server
+#### Running the development environment
+Now that you understand the technology and project structure, feel free to direct yourself to the [Quick-Start Guide](#quick-start-guide).
 
 ### Production Builds
 #### Static Site
