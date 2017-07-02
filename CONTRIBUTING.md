@@ -7,12 +7,12 @@ This is OperationCode.org's repository for their new front-end implementation us
 ## Table Of Contents
 - [Quick-Start Guide](#quick-start-guide)
 - [Technologies](#technologies)
-- [Getting Started](#getting-started)
+- [Getting Started (For Newbies)](#getting-started)
   - [Brush up on Development Tools](#brush-up-on-development-tools)
     - [Git and basic Command Line](#git-and-basic-command-line)
     - [NodeJS](#nodejs)
   - [Development Environment](#development-environment)
-  - [Mac OSX](#mac-osx)
+  - [MacOS](#macos)
     - [Update your mac](#update-your-mac)
     - [Xcode Command Line Tools](#xcode-command-line-tools)
     - [Homebrew](#homebrew)
@@ -38,7 +38,7 @@ This is OperationCode.org's repository for their new front-end implementation us
 ## Quick Start Guide
 With an open source project involving contributors of varying levels of experience, it's difficult to create a one-size-fits-all guide. However, if if you feel confident with navigating your command line interface (CLI), please follow these step-by-step instructions. Please note: most of the following instructions are not relevant to many Windows users - you'll need to research the equivalent of each command knowing what terminal you use on your Windows platform.
 
-If you're unfamiliar with any of the instructions, you can navigate the rest of this guide to figure out the relevant technology and potential environment issues. <b>If an instruction begins with "Run ...", that means to type the text in place of ... within your CLI.</b>
+If you're unfamiliar with any of the instructions, you can navigate the [rest of this guide](#technologies) to figure out the relevant technology and potential environment issues. <b>If an instruction begins with "Run ...", that means to type the text in place of ... within your CLI.</b>
 
 Lastly, if you run into any problems with the following instructions, please try to communicate with us on Slack. You can get an invite to our Slack channel by [requesting to join Operation Code](https://operationcode.org/join). Once in our Slack team, simply type: `/open #oc-projects` and then click enter.
 
@@ -75,7 +75,7 @@ Here is a breakdown and summary of the main technologies our project utilizes:
 - [CSS Modules](https://css-tricks.com/css-modules-part-1-need/) - CSS Modules allow us to encapsulate CSS within components. Instead of HTML/CSS - our project structure is basically JSX/CSS.
 
 
-## Getting Started For Newbies
+## Getting Started
 ### Brush up on Development Tools
 #### Git and basic Command Line
 You will be working with Git and Github to manage source code.  Understanding the basics and how to set things up will be helpful.
