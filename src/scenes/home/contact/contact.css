@@ -1,39 +1,39 @@
 .wrapper {
-	width: 100%;
-	text-align: center;
-	padding-top: 40px;
+  width: 100%;
+  text-align: center;
+  padding-top: 40px;
 }
 
 .paragraph {
-	font-size: 1.3rem;
-	padding-left: 80px;
-	padding-right: 80px;
+  font-size: 1.3rem;
+  padding-left: 80px;
+  padding-right: 80px;
 }
 
 
 .title {
-	font-size: 4rem;
+  font-size: 4rem;
 }
 
 .headline {
-	font-size: 2.5rem;
-	display: block;
+  font-size: 2.5rem;
+  display: block;
 }
 
 .section {
-	display: block;
-	width: auto;
-	padding: 20px 0;
-	text-align: center;
-	position: relative;
-	margin: 0 auto;
+  display: block;
+  width: auto;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
 }
 
 .section a {
-	font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .line {
-	border-top: 1px solid #8c8b8b;
-	width: 60%;
+  border-top: 1px solid #8c8b8b;
+  width: 60%;
 }
