@@ -9,9 +9,7 @@ class Contact extends Component {
   render() {
     return (
       <div className={styles.wrapper}>
-        <Section
-          title="Contact Us"
-        >
+        <Section title="Contact Us" >
           <p className={styles.introParagraph}>
             We are a decentralized community of hard-working volunteers, and we love hearing feedback, comments, and suggestions. Feel free to send us an e-mail, or even mail a letter.
             <br />
@@ -20,48 +18,31 @@ class Contact extends Component {
           </p>
         </Section>
 
-        <br />
-
-        <Section
-          theme="white"
-          headingLines={false}
-        >
+        <Section theme="white" headingLines={false} >
           <div className={styles.flexContainer}>
             <div className={styles.columns}>
               <h3>Email</h3>
               <a href="mailto:staff@operationcode.org">
-                <FaEnvelope
-                  className={styles.mailIcon}
-                  size={200}
-                />
+                <FaEnvelope className={styles.mailIcon} size={200} />
               </a>
               <p>
-                <a href="mailto:staff@operationcode.org">
-                  staff@operationcode.org
-                </a>
+                <a href="mailto:staff@operationcode.org">staff@operationcode.org</a>
               </p>
             </div>
 
             <div className={styles.columns}>
               <h3>Slack Team</h3>
               <a href="https://operation-code.slack.com">
-                <FaSlack
-                  className={styles.slackIcon}
-                  size={170}
-                />
+                <FaSlack className={styles.slackIcon} size={170} />
               </a>
               <p>
-                <a href="https://operation-code.slack.com">
-                  https://operation-code.slack.com
-                </a>
+                <a href="https://operation-code.slack.com">https://operation-code.slack.com</a>
               </p>
             </div>
 
             <div className={styles.columns}>
               <h3>Mailing Address</h3>
-              <FaHome
-                size={217}
-              />
+              <FaHome size={217} />
               <p className={styles.address}>
                 Operation Code
                 <br />
