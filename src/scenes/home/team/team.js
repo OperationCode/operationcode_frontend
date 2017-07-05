@@ -12,10 +12,35 @@ import airForceReserveSeal from 'images/serviceSeals/AirForceReserve.png';
 import armyReserveSeal from 'images/serviceSeals/ArmyReserve.png';
 import navyReserveSeal from 'images/serviceSeals/NavyReserve.png';
 import styles from './team.css';
-import Data from './team.json';
+// import Data from './team.json';
 
 class Team extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      members: []
+    };
+  }
+
+  componentWillMount() {
+    return fetch('https://api.operationcode.org/api/v1/team_members.json').then(response =>
+      response.json().then((data) => {
+        this.setState({ members: data });
+      })
+    );
+  }
+
   render() {
+    const team = this.state.members.map(member =>
+      (
+        <TeamCard
+          key={`${Math.random()} + ${member.name}`}
+          name={member.name}
+          role={member.role}
+        />
+      )
+    );
     const founder = {
       name: 'David Molina',
       role: 'Founder / Executive Director',
@@ -32,16 +57,7 @@ class Team extends Component {
       twitter: '@hollomancer',
       email: 'conrad@operationcode.org'
     };
-    const team = Data
-      .map(person =>
-        (
-          <TeamCard
-            name={person.name}
-            role={person.role}
-            key={person.name}
-          />
-        )
-      );
+
     return (
       <div className={styles.wrapper}>
         <div className={styles.titleQuote}>
@@ -84,7 +100,7 @@ class Team extends Component {
             Our all volunteer staff are dedicated individuals who come from a wide variety of backgrounds, including U.S Military Veterans, civilians, those with tech backgrounds, and those who have skills outside of web development.
           </p>
           <div className={styles.team}>
-            {team}
+            { team }
           </div>
         </Section>
       </div>
