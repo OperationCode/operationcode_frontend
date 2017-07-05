@@ -67,6 +67,12 @@
   display: none;
 }
 
+@media screen and (min-width: 481px) {
+  .logo {
+    padding: 0 50px;
+  }
+}
+
 @media screen and (max-width: 1250px) {
   .copyrightLineBreak {
     display: block;
