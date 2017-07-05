@@ -1,39 +1,46 @@
 .wrapper {
   width: 100%;
+}
+
+.introParagraph {
+  font-size: 1.2rem;
+  padding: 0 20px 0 20px;
+}
+
+.flexContainer {
+  width: 80%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 15px 0 0 0;
+}
+
+.flexContainer > div {
+  padding: 0 30px 50px 30px;
+}
+
+.columns {
   text-align: center;
-  padding-top: 40px;
 }
 
-.paragraph {
-  font-size: 1.3rem;
-  padding-left: 80px;
-  padding-right: 80px;
+svg {
+  color: #249CBC;
 }
 
-
-.title {
-  font-size: 4rem;
+a:hover > svg {
+  color: #44BCDC;
 }
 
-.headline {
-  font-size: 2.5rem;
-  display: block;
+/* Icons are not uniform in size... */
+.slackIcon {
+  padding: 27.5px 0 18.5px 0;
 }
 
-.section {
-  display: block;
-  width: auto;
-  padding: 20px 0;
-  text-align: center;
-  position: relative;
-  margin: 0 auto;
+.mailIcon {
+  padding: 0 0 16px 0;
 }
 
-.section a {
-  font-size: 1.5rem;
-}
-
-.line {
-  border-top: 1px solid #8c8b8b;
-  width: 60%;
+.address {
+  text-align: left;
+  padding: 0 0 0 27px;
 }
