@@ -4,6 +4,24 @@
 	position: relative;
 }
 
+.quote {
+	font-size: 3rem;
+	background: #75818F;
+	padding: 80px 80px;
+	color: white;
+	text-align: center;
+}
+
+.noMargin {
+padding-top: 0;
+}
+
+.line {
+	border: 1px solid white;
+	width: 80%;
+	margin: 0 auto;
+}
+
 .timeline {
 	padding: 40px 0px;
 	width: 80%;
@@ -32,6 +50,10 @@
   margin-bottom: 40px;
 }
 
+.timeline .column .title h2 {
+	text-transform: uppercase;
+}
+
 .timeline .column .title h1:before {
 	content: "";
 	position: absolute;
@@ -49,7 +71,7 @@
 }
 
 .timeline .column .description p {
-	font-size: 13px;
+	font-size: 1.4rem;
 	line-height: 20px;
 	margin-left: 20px;
 	margin-top: 10px;
