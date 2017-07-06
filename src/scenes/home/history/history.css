@@ -1,3 +1,62 @@
-.paragraph {
-  font-size: 2rem;
+* {
+	pading: 0;
+	margin: 0;
+	position: relative;
 }
+
+.timeline {
+	padding: 40px 0px;
+	width: 80%;
+	margin-bottom: 40px;
+}
+
+.timeline:before {
+	content: "";
+	position: absolute;
+	top: 40px;
+	left: 65px;
+	width: 3px;
+	height: calc(100% - 50px);
+	background: #41A4C0;
+}
+
+.timeline .column {
+	margin: 40px 40px 40px 120px;
+}
+
+.timeline .column .title h1 {
+	font-size: 60px;
+	color: rgba(0,0,0,0.1);
+	font-family: serif;
+	letter-spacing: 3px;
+  margin-bottom: 40px;
+}
+
+.timeline .column .title h1:before {
+	content: "";
+	position: absolute;
+	left: -62px;
+	top: 86px;
+	width: 10px;
+	height: 10px;
+	background: #fff;
+	border: 3px solid #41A4C0;
+}
+
+.timeline .column .title h2 {
+	margin-top: -60px;
+	font-size: 33px;
+}
+
+.timeline .column .description p {
+	font-size: 13px;
+	line-height: 20px;
+	margin-left: 20px;
+	margin-top: 10px;
+	font-family: serif;
+}
+
+.timeline .column .description {
+	border-left: 1px solid #000;
+}
+
