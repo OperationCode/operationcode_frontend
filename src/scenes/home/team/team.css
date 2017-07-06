@@ -7,7 +7,7 @@
 	align-items: center;
 	text-align: center;
 	height: 15%;
-	padding-bottom: 5rem;
+	padding-bottom: 40px;
 }
 
 .line {
@@ -36,15 +36,13 @@
 
 .paragraph {
 	font-size: 1.3rem;
-	padding-left: 5rem;
-	padding-right: 5rem;
+	padding: 0 40px;
 }
 
 .team {
   display: flex;
   flex-wrap: wrap;
-  padding-left: 5rem;
-  padding-right: 5rem;
+	padding: 20px 40px;
   align-items: center;
   justify-content: center;
 }
