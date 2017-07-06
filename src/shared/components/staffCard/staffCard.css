@@ -9,7 +9,7 @@
 	box-shadow: 0 3px 6px 1px rgba(0, 0, 0, 0.1);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
     margin: 1rem;
-    padding: 1rem;
+    padding: 15px;
 }
 
 
