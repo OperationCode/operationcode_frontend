@@ -18,6 +18,7 @@ import Thanks from './thanks/thanks';
 import Team from './team/team';
 import Gala from './gala/gala';
 import FAQ from './faq/faq';
+import History from './history/history';
 import FinancialStatements from './about/financialStatements/financialStatements';
 import styles from './home.css';
 import Header from './header/header';
@@ -117,6 +118,10 @@ class Home extends Component {
             <Route
               path="/join"
               component={SignUp}
+            />
+            <Route
+              path="/history"
+              component={History}
             />
             <Route
               path="/sign-up"
