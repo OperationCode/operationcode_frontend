@@ -6,7 +6,9 @@ class History extends Component {
   render() {
     return (
       <Section title="Our History" theme="white">
-        The history slider will go here
+        <p className={styles.paragraph}>
+          The history slider will go here
+        </p>
       </Section>
     );
   }
