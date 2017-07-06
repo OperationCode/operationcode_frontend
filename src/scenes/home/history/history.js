@@ -5,8 +5,15 @@ import styles from './history.css';
 class History extends Component {
   render() {
     return (
-      <Section title="Our History" theme="white">
-
+      <Section theme="white" headingLines={false} className={styles.noMargin}>
+        <blockquote className={styles.quote}>
+          <div className={styles.line} />
+          <br />
+            &#34;There are no secrets to success. It is the result of preparation, hard work,   learning from failure.&#34;
+           - Colin Powell
+           <br /><br />
+          <div className={styles.line} />
+        </blockquote>
         <div className={styles.timeline}>
 
           <div className={styles.column}>
