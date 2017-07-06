@@ -86,6 +86,14 @@ class Team extends Component {
             <img className={styles.serviceSeal} src={navyReserveSeal} alt="Army Seal" />
           </div>
         </Section>
+        <Section title="Our Team" theme="white">
+          <p className={styles.paragraph}>
+            Our all volunteer staff are dedicated individuals who come from a wide variety of backgrounds, including U.S Military Veterans, civilians, those with tech backgrounds, and those who have skills outside of web development.
+          </p>
+          <div className={styles.team}>
+            { team }
+          </div>
+        </Section>
         <Section title="Our Board" theme="gray">
           <p className={styles.paragraph}>
             Our fearless volunteer leaders. No salaries here.
@@ -93,14 +101,6 @@ class Team extends Component {
           <div className={styles.team}>
             <StaffCard name={founder.name} role={founder.role} src={founder.src} twitter={founder.twitter} email={founder.email} alt={founder.alt} />
             <StaffCard name={coo.name} role={coo.role} src={coo.src} twitter={coo.twitter} email={coo.email} alt={coo.alt} />
-          </div>
-        </Section>
-        <Section title="Our Team" theme="gray" id="long">
-          <p className={styles.paragraph}>
-            Our all volunteer staff are dedicated individuals who come from a wide variety of backgrounds, including U.S Military Veterans, civilians, those with tech backgrounds, and those who have skills outside of web development.
-          </p>
-          <div className={styles.team}>
-            { team }
           </div>
         </Section>
       </div>
