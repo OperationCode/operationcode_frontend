@@ -98,7 +98,7 @@ class Team extends Component {
           <p className={styles.paragraph}>
             Our fearless volunteer leaders. No salaries here.
           </p>
-          <div className={styles.team}>
+          <div className={styles.board}>
             <StaffCard name={founder.name} role={founder.role} src={founder.src} twitter={founder.twitter} email={founder.email} alt={founder.alt} />
             <StaffCard name={coo.name} role={coo.role} src={coo.src} twitter={coo.twitter} email={coo.email} alt={coo.alt} />
           </div>

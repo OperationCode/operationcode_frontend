@@ -47,9 +47,36 @@
   justify-content: center;
 }
 
+.board {
+	display: flex;
+  flex-wrap: wrap;
+	padding: 20px 40px;
+  align-items: center;
+  justify-content: center;
+	margin-bottom: 170px;
+}
+
+@media screen and (max-width: 1200px) {
+	.titleQuote {
+		height: 12%;
+	}
+	.board {
+		margin-bottom: 75px;
+	}
+}
+
 @media screen and (max-width: 850px) {
 	.titleQuote {
 		height: 10%;
+	}
+	.board {
+		margin-bottom: 50px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.board {
+		margin-bottom: 25px;
 	}
 }
 
