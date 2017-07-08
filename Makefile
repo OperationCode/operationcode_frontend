@@ -4,6 +4,10 @@ NODE_CONTAINER := web
 build:
 	docker-compose build
 
+.PHONY: build_site
+build_site:
+	yarn install && yarn run build
+
 .PHONY: test
 test:
 	docker-compose run ${NODE_CONTAINER} bash -c 'cd /usr/src/app && yarn test'
@@ -11,7 +15,7 @@ test:
 publish: build
 	bin/publish
 
-travis: build test
+travis: build_site build test
 
 .PHONY: backend
 backend:
