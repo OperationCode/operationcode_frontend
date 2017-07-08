@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import LinkButton from 'shared/components/linkButton/linkButton';
 import Section from 'shared/components/section/section';
 import ApprovedSchools from './approvedSchools/approvedSchools';
@@ -45,7 +44,7 @@ class CodeSchools extends Component {
             <br />
             <br />
             We encourage you to check out the schools below, do your research, and ask fellow
-            software developers in <Link to="https://operation-code.slack.com/">Slack</Link>.
+            software developers in <a href="https://operation-code.slack.com/">Slack</a>.
           </p>
 
           <div className={styles.filterButtonDiv}>

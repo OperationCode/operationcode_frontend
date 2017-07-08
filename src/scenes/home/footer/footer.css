@@ -35,46 +35,64 @@
 
 .logo {
   display: flex;
-  flex: 1 0 20%;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .logo img {
-  height: 150px;
+  height: 120px;
 }
 
 .blockGroup {
   display: flex;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: space-around;
-  visibility: hidden; /* TODO: Remove to reveal footer links when routes have been implemented */
 }
 
 .blockGroup a {
   text-decoration: none;
   color: #F7F7F7;
-  padding: 0 20px;
+  padding: 0 30px;
 }
 
 .copyright {
-  position: absolute;
-  margin: 0 auto;
-  right: 0;
-  left: 0;
-  bottom: 10px;
-  width: 100;
   color:#F7F7F7;
+  font-size: 1rem;
   text-align: center;
-  font-size: 0.7rem;
+}
+
+.copyrightLineBreak {
+  display: none;
+}
+
+@media screen and (min-width: 481px) {
+  .logo {
+    padding: 0 50px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .copyrightLineBreak {
+    display: block;
+  }
 }
 
 @media screen and (min-width: 481px) and (max-width: 979px) {
-
-  .logo img {
-    height: 90px;
+  .logo > img {
+    height: 100px;
   }
 
+  .logo > p {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logo > p {
+    font-size: 0.5rem;
+  }
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
@@ -99,48 +117,39 @@
 }
 
 @media screen and (max-width: 480px) {
+  .footer {
+    height: 500px;
+    padding: 0px 16px;
+  }
 
-    .footer {
-      height: 410px;
-      padding: 0px 16px;
-    }
+  .content {
+    display: block;
+  }
 
-    .content {
-      display: block;
-    }
+  .block {
+    justify-content: center;
+    flex: 1 0 auto;
+    padding: 20px 0;
+  }
 
-    .block {
-      justify-content: center;
-      flex: 1 0 auto;
-      padding: 16px 0;
-    }
+  .email {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
 
-    .email {
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-    }
+  .logo img {
+    height: 100px;
+  }
 
-    .logo {
-      flex: 0 1 auto;
-    }
+  .blockGroup {
+    font-size: 1.5rem;
+  }
 
-    .logo img {
-      height: 90px;
-    }
+  .blockGroup a {
+    padding: 0 10px;
+  }
 
-    .blockGroup {
-      font-size: 1.3rem;
-    }
-
-    .blockGroup a {
-      padding: 0 10px;
-    }
-
-    .blockGroup ~ .blockGroup {
-          margin-top: 16px;
-    }
-
-    .copyright {
-      font-size: 1rem;
-    }
+  .blockGroup ~ .blockGroup {
+        margin-top: 16px;
+  }
 }
