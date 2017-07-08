@@ -1,95 +1,95 @@
 
 .titleQuote{
-	background: #75818F;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	height: 15%;
-	padding-bottom: 40px;
+  background: #75818F;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 15%;
+  padding-bottom: 40px;
 }
 
 .line {
-	border: 1px solid white;
-	width: 80%;
+  border: 1px solid white;
+  width: 80%;
 }
 
 .quote {
-	font-size: 3.4rem;
-	color: white;
-	padding: 75px 30px;
+  font-size: 3.4rem;
+  color: white;
+  padding: 75px 30px;
 }
 
 .serviceSealWrapper {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 70%;
-	padding-top: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  padding-top: 2%;
 }
 
 .serviceSeal {
-	height: 75px;
-	width: 75px;
+  height: 75px;
+  width: 75px;
 }
 
 .paragraph {
-	font-size: 1.3rem;
-	padding: 0 40px;
+  font-size: 1.3rem;
+  padding: 0 40px;
 }
 
 .team {
   display: flex;
   flex-wrap: wrap;
-	padding: 20px 40px;
+  padding: 20px 40px;
   align-items: center;
   justify-content: center;
 }
 
 .board {
-	display: flex;
+  display: flex;
   flex-wrap: wrap;
-	padding: 20px 40px;
+  padding: 20px 40px;
   align-items: center;
   justify-content: center;
-	margin-bottom: 170px;
+  margin-bottom: 170px;
 }
 
 @media screen and (max-width: 1200px) {
-	.titleQuote {
-		height: 12%;
-	}
-	.board {
-		margin-bottom: 75px;
-	}
+  .titleQuote {
+    height: 12%;
+  }
+  .board {
+    margin-bottom: 75px;
+  }
 }
 
 @media screen and (max-width: 850px) {
-	.titleQuote {
-		height: 10%;
-	}
-	.board {
-		margin-bottom: 50px;
-	}
+  .titleQuote {
+    height: 10%;
+  }
+  .board {
+    margin-bottom: 50px;
+  }
 }
 
 @media screen and (max-width: 800px) {
-	.board {
-		margin-bottom: 25px;
-	}
+  .board {
+    margin-bottom: 25px;
+  }
 }
 
 @media screen and (max-width: 650px) {
-	.quote {
-		font-size: 2rem;
-	}
+  .quote {
+    font-size: 2rem;
+  }
 
-	.serviceSealWrapper {
-		flex-wrap: wrap;
-	}
-	.titleQuote {
-		height: 5%;
-	}
+  .serviceSealWrapper {
+    flex-wrap: wrap;
+  }
+  .titleQuote {
+    height: 5%;
+  }
 }
 
