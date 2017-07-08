@@ -1,29 +1,7 @@
-* {
-  padding: 0;
+.timeline {
+  padding: 40px 0;
   margin: 0;
   position: relative;
-}
-
-.quote {
-  font-size: 3rem;
-  background: #75818F;
-  padding: 80px 80px;
-  color: white;
-  text-align: center;
-}
-
-.noMargin {
-padding-top: 0;
-}
-
-.line {
-  border: 1px solid white;
-  width: 80%;
-  margin: 0 auto;
-}
-
-.timeline {
-  padding: 40px 0px;
   width: 80%;
   margin-bottom: 40px;
 }
@@ -80,10 +58,6 @@ padding-top: 0;
 }
 
 @media screen and (max-width: 850px) {
-  .quote {
-    font-size: 2rem;
-  }
-
   .timeline .column .title h2 {
     font-size: 2rem;
   }
@@ -99,11 +73,6 @@ padding-top: 0;
 }
 
 @media screen and (max-width: 650px) {
-  .quote {
-    font-size: 1.5rem;
-    padding: 40px;
-  }
-
   .timeline .column {
     margin: 40px 10px 40px 120px;
   }
