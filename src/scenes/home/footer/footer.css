@@ -1,21 +1,22 @@
 .footer {
   background-color: #4A4A4A;
-  height: 225px;
-  padding: 0 32px;
+  height: 250px;
+  padding: 0 20px;
   position: relative;
 }
 
 .content {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 100%;
 }
 
-.block {
-  flex: 1 0 40%;
+/* outerFooterGroups class represents the NON logo columns of the footer flex container */
+.outerFooterGroups {
   display: flex;
-  flex-direction: column;
+  flex: 1 0 30%;
+  flex-flow: column wrap;
   padding: 64px 0;
   justify-content: space-around;
   align-items: center;
@@ -35,7 +36,8 @@
 
 .logo {
   display: flex;
-  flex-direction: column;
+  flex: 1 0 40%;
+  flex-flow: column wrap;
   justify-content: center;
   align-items: center;
 }
@@ -46,6 +48,7 @@
 
 .blockGroup {
   display: flex;
+  flex: 1 0 50%;
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-around;
@@ -61,19 +64,24 @@
   color:#F7F7F7;
   font-size: 1rem;
   text-align: center;
+  min-width: 100%;
 }
 
 .copyrightLineBreak {
   display: none;
 }
 
-@media screen and (min-width: 481px) {
+@media screen and (max-width: 1330px) {
+  .outerFooterGroups {
+    flex: 1 0 35%;
+  }
+
   .logo {
-    padding: 0 50px;
+    flex: 1 0 30%;
   }
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 979px) {
   .copyrightLineBreak {
     display: block;
   }
@@ -96,7 +104,7 @@
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
-  .block {
+  .outerFooterGroups {
     padding: 32px 0;
   }
 
@@ -126,7 +134,7 @@
     display: block;
   }
 
-  .block {
+  .outerFooterGroups {
     justify-content: center;
     flex: 1 0 auto;
     padding: 20px 0;

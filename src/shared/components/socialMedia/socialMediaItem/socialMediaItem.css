@@ -1,11 +1,18 @@
 .socialMediaItem {
-    padding: 0 10px;
+  padding: 0 10px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
-    .socialMediaItem {
-        padding: 10px 0 0 0;
-        flex-basis: 50%;
-        text-align: center;
-    }
+  .socialMediaItem {
+    padding: 10px 0 0 0;
+    flex-basis: 50%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 828px) {
+  .socialMediaItem img {
+    width: 48px;
+    height: 48px;
+  }
 }

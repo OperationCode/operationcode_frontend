@@ -9,7 +9,7 @@ class Footer extends Component {
     return (
       <div className={styles.footer}>
         <div className={styles.content}>
-          <div className={styles.block}>
+          <div className={styles.outerFooterGroups}>
             <div className={styles.email} >
               <a href="mailto:contact@operationcode.org">contact@operationcode.org</a>
             </div>
@@ -23,7 +23,7 @@ class Footer extends Component {
               Operation Code™
             </p>
           </div>
-          <div className={styles.block}>
+          <div className={styles.outerFooterGroups}>
             {/* TODO: Uncomment when links are implemented */}
             <div className={styles.blockGroup} >
               <Link to="faq">FAQ</Link>
