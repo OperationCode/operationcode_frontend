@@ -70,7 +70,7 @@ class SideNav extends Component {
           </div>
           <div className={styles.list}>
             <NavItem
-              to="code-schools"
+              to="code_schools"
               text="Code Schools"
               onClick={this.handleCloseClick}
             />
@@ -85,7 +85,6 @@ class SideNav extends Component {
               to="about"
               text="About"
               onClick={this.handleCloseClick}
-              notClickable
             />
             <NavItem
               to="programs"
