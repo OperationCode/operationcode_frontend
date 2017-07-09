@@ -4,9 +4,9 @@
 process.env.BABEL_ENV = 'production';
 process.env.NODE_ENV = 'production';
 process.env.OC_BACKEND_URL = 'https://api.operationcode.org/api/v1';
-process.env.IDMECLIENTID = '6d781bfd42506613a0fe4ad4123aaf6d';
-process.env.HOST = 'https://www.operationcode.org',
-process.env.IDMEOAUTHURL = 'https://api.id.me/oauth/authorize'
+process.env.OC_IDME_CLIENT_ID = '6d781bfd42506613a0fe4ad4123aaf6d';
+process.env.OC_HOST = 'https://www.operationcode.org',
+process.env.OC_IDME_AUTH_URL = 'https://api.id.me/oauth/authorize'
 
 // Makes the script crash on unhandled rejections instead of silently
 // ignoring them. In the future, promise rejections that are not handled will
