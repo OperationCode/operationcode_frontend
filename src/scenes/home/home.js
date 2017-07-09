@@ -29,6 +29,7 @@ import FourOhFour from './404/fourOhFour';
 import MentorRequest from './mentorRequest/mentorRequest';
 import SquadsNew from './squads/squadsNew/squadsNew';
 import CodeSchools from './codeSchools/codeSchools';
+import About from './about/about';
 
 class Home extends Component {
   constructor(props) {
@@ -143,6 +144,10 @@ class Home extends Component {
             <Route
               path="/contact"
               component={Contact}
+            />
+            <Route
+              path="/about"
+              component={About}
             />
             <Route
               exact
