@@ -13,6 +13,8 @@ import ValueCard from './valueCard/valueCard';
 import styles from './about.css';
 
 class About extends Component {
+  // TODO: Link /history, /faq, /contact, and /team somewhere on the page.
+
   render() {
     return (
       <div>
