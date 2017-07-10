@@ -127,7 +127,7 @@
 @media screen and (max-width: 480px) {
   .footer {
     height: 500px;
-    padding: 0px 16px;
+    padding: 0 16px;
   }
 
   .content {
@@ -158,6 +158,6 @@
   }
 
   .blockGroup ~ .blockGroup {
-        margin-top: 16px;
+    margin-top: 16px;
   }
 }
