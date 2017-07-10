@@ -11,11 +11,11 @@ class TopNav extends Component {
     if (signedIn) {
       return (
         <Nav className={styles.topNav} >
-          <NavItem notClickable to="about" text="About" />
           <NavItem notClickable to="programs" text="Programs" />
           <NavItem notClickable to="involved" text="Get Involved" />
           <NavItem notClickable to="blog" text="Blog" />
-          <NavItem to="code-schools" text="Code Schools" />
+          <NavItem to="about" text="About" />
+          <NavItem to="code_schools" text="Code Schools" />
           <NavItem to="https://donorbox.org/operationcode" text="Donate" isExternal />
           <NavItem to="profile" text="Profile" />
           <button className="navItem" onClick={() => this.props.onLogOutClick()}>Logout</button>
@@ -24,11 +24,11 @@ class TopNav extends Component {
     }
     return (
       <Nav className={styles.topNav} >
-        <NavItem notClickable to="about" text="About" />
         <NavItem notClickable to="programs" text="Programs" />
         <NavItem notClickable to="involved" text="Get Involved" />
         <NavItem notClickable to="blog" text="Blog" />
-        <NavItem to="code-schools" text="Code Schools" />
+        <NavItem to="about" text="About" />
+        <NavItem to="code_schools" text="Code Schools" />
         <NavItem to="https://donorbox.org/operationcode" text="Donate" isExternal />
         <NavItem to="join" text="Join" />
         <NavItem to="login" text="Login" />

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Promise from 'bluebird';
-import FontAwesome from 'react-fontawesome';
+import { FaQuoteLeft, FaQuoteRight } from 'react-icons/lib/fa';
 import quotes from './quotes.json';
 import styles from './jumboQuote.css';
 
@@ -13,9 +13,9 @@ class JumboQuote extends Component {
     };
   }
 
+  // TODO: Ditch bluebird promise for axios to drop a dependency
+  // TODO: Is there a need to move the quotes to a back-end API endpoint, or should we just bail on the promise-based API request idea for this data?
   componentDidMount() {
-    // TODO: Pull this from an API with fetch
-    // (kylemh: recommend axios if using promises) source: https://daveceddia.com/ajax-requests-in-react/
     Promise.try(
       () => quotes.quotes[Math.floor(Math.random() * quotes.quotes.length)]
     ).then((quote) => {
@@ -27,9 +27,9 @@ class JumboQuote extends Component {
     return (
       <div className={styles.quotes}>
         <h4 className={styles.quoteBody}>
-          <FontAwesome name="quote-left" className={styles.quoteIcon} />
+          <FaQuoteLeft className={styles.quoteIcon} />
           {this.state.quote.body}
-          <FontAwesome name="quote-right" className={styles.quoteIcon} />
+          <FaQuoteRight className={styles.quoteIcon} />
         </h4>
         <h5 className={styles.quoteAuthor}>{this.state.quote.author} </h5>
       </div>

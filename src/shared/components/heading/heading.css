@@ -3,7 +3,6 @@
   flex-direction: row;
   justify-content: center;
   width: 80%;
-  font-size: 36px;
 }
 
 .headingLines:before,
@@ -22,10 +21,4 @@
 
 .white {
   color: #FFF;
-}
-
-@media only screen and (max-width: 500px) {
-  .heading {
-    font-size: 24px;
-  }
 }
