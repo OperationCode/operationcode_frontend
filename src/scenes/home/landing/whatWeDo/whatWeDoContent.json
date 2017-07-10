@@ -8,18 +8,25 @@
       "imageUrl": "images/General-Couple-Computer.jpg"
     },
     {
-      "title": "Mentor Program",
-      "body": "Our mentor program connects members with seasoned software developers to help you progress and achieve your goals.",
+      "title": "Mentorship Program",
+      "body": "Our mentorship program connects members with seasoned software developers to help you progress and achieve your goals.",
       "buttonText": "Success Stories",
       "linkTo": "/success",
       "imageUrl": "images/General-Group-Coffee.jpg"
     },
     {
       "title": "Conference Scholarships",
-      "body": "Operation Code partners with tech conferences around the world and offers scholarship tickets to events throughout the year.",
+      "body": "We partner with tech conferences around the country and offers scholarship tickets to events throughout the year.",
       "buttonText": "View Past Events",
       "linkTo": "/pastEvents",
       "imageUrl": "images/ThinkstockPhotos-489787502.jpg"
+    }
+    {
+      "title": "Code School Scholarships",
+      "body": "Our scholarships to code schools provide opportunities for the military community to kickstart their careers in software development.",
+      "buttonText": "View Past Events",
+      "linkTo": "/pastEvents",
+      "imageUrl": "images/rhs2017_photo.jpg"
     }
   ]
 }
