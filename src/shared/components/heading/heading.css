@@ -22,3 +22,10 @@
 .white {
   color: #FFF;
 }
+
+
+@media screen and (max-width: 650px) {
+  .heading {
+    font-size: 1.8em;
+  }
+}

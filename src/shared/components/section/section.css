@@ -14,3 +14,11 @@
 .white {
   background-color: #FFF;
 }
+
+.content {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
