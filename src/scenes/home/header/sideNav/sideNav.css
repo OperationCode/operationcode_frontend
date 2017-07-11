@@ -66,5 +66,14 @@
   text-align: left;
   font-size: 2.5rem;
   margin: 0.5rem 0;
-  padding: 0; 
+  padding: 0;
+}
+
+@media screen and (orientation: landscape) {
+  .content {
+    position: absolute;
+  }
+  .list {
+    font-size: 20px;
+  }
 }
