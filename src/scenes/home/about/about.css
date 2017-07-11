@@ -26,8 +26,3 @@
     width: 75px;
   }
 }
-
-/* TODO: Remove if #230 is resolved */
-.sectionParagraph {
-  padding: 0 10%;
-}
