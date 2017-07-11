@@ -46,12 +46,10 @@ class SideNav extends Component {
       );
     }
     return (
-      <span>
-        <NavItem
-          to="/join" text="Join"
-          onClick={this.handleCloseClick}
-        />
-      </span>
+      <NavItem
+        to="/join" text="Join"
+        onClick={this.handleCloseClick}
+      />
     );
   }
 
@@ -69,6 +67,7 @@ class SideNav extends Component {
             </a>
           </div>
           <div className={styles.list}>
+            {this.renderNavItems()}
             <NavItem
               to="code_schools"
               text="Code Schools"
@@ -80,7 +79,6 @@ class SideNav extends Component {
               isExternal
               onClick={this.handleCloseClick}
             />
-            {this.renderNavItems()}
             <NavItem
               to="about"
               text="About"
