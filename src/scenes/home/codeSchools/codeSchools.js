@@ -32,10 +32,7 @@ class CodeSchools extends Component {
           theme="white"
           margin
         >
-          <p className={styles.leadingParagraph}>
-            Code schools prepare aspiring programmers for new careers in software development.
-          </p>
-          <p className={styles.secondParagraph}>
+          <p>
             Code schools are accelerated learning programs that will prepare you for a career in
             software development. <br />Each school listed below ranges in length, vary in tuition costs,
             and in programming languages. <br />Desirable from an employer&apos;s standpoint, code schools

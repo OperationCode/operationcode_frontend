@@ -21,15 +21,15 @@ class PartnerSchools extends Component {
         headingLines={false}
         margin
       >
-        <div className={styles.intro}>
-          <p className={styles.introParagraph}>
-            Many code schools around the nation offer military/veterans discounts to make coding
-            education more accessible to our veterans.<br />
-            We&apos;ve partnered up with those schools in order to help direct veterans to the best
-            code schools around the country. <br /> <b>Apply for a scholarship with our partners now and
-            get coding:</b>
-          </p>
-        </div>
+        <p>
+          Many code schools around the nation offer military/veterans discounts to make coding education more accessible to our veterans.
+          <br />
+          We&apos;ve partnered up with those schools in order to help direct veterans to the best code schools around the country.
+          <br />
+          <br />
+          <b>Apply for a scholarship with our partners now and get coding:</b>
+        </p>
+
 
         <div className={styles.partnerSchools}>
           <SchoolCard
