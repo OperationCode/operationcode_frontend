@@ -20,16 +20,26 @@
     background-repeat: no-repeat;
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 1200px) {
   .backgroundImage {
-    background-size: auto 75%;
-    background-attachment: fixed;
+    background-size: auto 17%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .backgroundImage {
+    background-size: auto 15%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .backgroundImage {
+    background-size: auto 8%;
   }
 }
 
 @media screen and (max-width: 500px) {
   .backgroundImage {
-    background-size: auto 75%;
-    background-attachment: fixed;
+    background-size: auto 5%;
   }
 }
