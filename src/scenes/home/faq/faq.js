@@ -3,7 +3,6 @@ import LinkButton from 'shared/components/linkButton/linkButton';
 import Section from 'shared/components/section/section';
 import Question from './question/question';
 import Data from './questions.json';
-import styles from './faq.css';
 
 class FAQ extends Component {
   render() {
@@ -36,40 +35,29 @@ class FAQ extends Component {
     );
 
     return (
-      <div>
-        <Section title="Frequently Asked Questions" theme="white">
-          <span id="top" className={styles.headline}>General Questions</span>
-          <div className={styles.container}>
-            <div className={styles.accordion}>
-              {generalQuestions}
-            </div>
-          </div>
+      <Section title="Frequently Asked Questions" theme="white" headingLines={false}>
+        <Section theme="white" headingLines={false}>
+          {generalQuestions}
           <LinkButton
             link="top"
             text="Scroll to Top"
             theme="blue"
             scrollLink
           />
-          <span className={styles.headline}>Donation Questions</span>
-          <div className={styles.container}>
-            <div className={styles.accordion}>
-              {donationQuestions}
-            </div>
-          </div>
-          <LinkButton
-            link="top"
-            text="Scroll to Top"
-            theme="blue"
-            scrollLink
-          />
-          <span className={styles.headline}>Volunteer Questions</span>
-          <div className={styles.container}>
-            <div className={styles.accordion}>
-              {volunteerQuestions}
-            </div>
-          </div>
         </Section>
-      </div>
+        <Section title="Donation Questions" theme="white" headingLines={false}>
+          {donationQuestions}
+          <LinkButton
+            link="top"
+            text="Scroll to Top"
+            theme="blue"
+            scrollLink
+          />
+        </Section>
+        <Section title="Volunteer Questions" theme="white" headingLines={false}>
+          {volunteerQuestions}
+        </Section>
+      </Section>
     );
   }
 }
