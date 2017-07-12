@@ -2,7 +2,7 @@
   "general": [
     {
       "question": "When was Operation Code founded?",
-      "answer": "Operation Code was founded on August 21, 2014."
+      "answer": "The first line of code for the Operation Code site was pushed on August 21, 2014. Operation Code formally became a 501(c)3 nonprofit on May 4, 2016."
     },
     {
       "question": "How was Operation Code founded?",
@@ -14,11 +14,11 @@
     },
     {
       "question": "Where is Operation Code based? Do you have a location near me?",
-      "answer": "Operation Code, much like software, is built from anywhere with an internet connection, and is not based in one location. While we're headquartered in Portland, the entire organization is decentralized, including the board of directors and the core team, allowing us to more effectively serve the entire military community, whether they're veterans or military spouses, whether they're OCONUS or in-country. We have chapters all over the nation. Use Slack and join the closest town to you!"
+      "answer": "Operation Code, much like software, is built from anywhere with an internet connection, and is not based in one location. While we're headquartered in Portland, the entire organization is decentralized, including the board of directors and the core team. This allows us to more effectively serve the entire military community, whether they're veterans or military spouses, whether they're OCONUS or in-country. We have chapters all over the nation. Use Slack and join the closest town to you!"
     },
     {
       "question": "Who does Operation Code serve?",
-      "answer": "Operation Code serves our nation's finest who've worn the uniform and their families who are interested in coding and software development. Our programs are offered at no cost to the military community."
+      "answer": "Operation Code serves our nation's finest who've worn the uniform and their families who are interested in coding and software development. Our programs are offered at no cost to the military community, including veterans, transitioning servicemembers, and military spouses and families."
     },
     {
       "question": "What do I need to start learning software development and how much is this going to cost?",
@@ -34,11 +34,11 @@
     },
     {
       "question": "How can I help, if I can't afford to donate to Operation Code?",
-      "answer": "In addition to requiring financial support, we also need volunteers and interns. The larger our community, the more we can spread the word about our work. Please sign up for our <a href=\"http://operationcode.us10.list-manage2.com/subscribe?u=0ab8e2b2d6c6608926c4f17d6&id=809aaab2df\">SITREPs</a> and share it with your friends. Also, remember that every <a href=\"/donate\">donation</a>, no matter how modest, brings us closer to our goals."
+      "answer": "In addition to requiring financial support, we also need volunteers and interns. The larger our community, the more we can spread the word about our work. Also, remember that every <a href=\"/donate\">donation</a>, no matter how modest, brings us closer to our goals."
     },
     {
       "question": "I would like to receive Operation Code updates and news. How can I receive these communications?",
-      "answer": "Anyone can sign up to join our email list through our <a href='http://operationcode.us10.list-manage2.com/subscribe?u=0ab8e2b2d6c6608926c4f17d6&id=809aaab2df'>online subscription form</a>. The Operation Code SITREPs are sent periodically throughout the year. We primarily use <a href='https://twitter.com/operation_code'>Twitter</a> and <a href='http://facebook.com/operationcode.org'>Facebook</a> to put out updates and news since it's faster to put out info and respond. Given our chosen craft, we don't do regular mail."
+      "answer": "We primarily use <a href='https://twitter.com/operation_code'>Twitter</a> and <a href='http://facebook.com/operationcode.org'>Facebook</a> to put out updates and news since it's faster to put out info and respond. Given our chosen craft, we don't do regular emails as often."
     },
     {
       "question": "My question isn't listed. How do I contact Operation Code?",
