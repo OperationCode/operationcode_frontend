@@ -57,3 +57,21 @@
   font-size: 0.8rem;
   line-height: 1.1;
 }
+
+@media screen and (max-width: 650px) {
+  .schoolCard {
+    width: 250px;
+    height: 100px;
+  }
+  .schoolCardImage {
+    height: 75px;
+    width: 75px;
+  }
+  .schoolName {
+    font-size: 1em;
+  }
+  .logo {
+    height: 75px;
+    width: 75px;
+  }
+}
