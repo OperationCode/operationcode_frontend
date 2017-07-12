@@ -52,26 +52,28 @@ class OnlineSchools extends Component {
       )
     );
     return (
-      <Section
-        id="onlineSchools"
-        title="Online Schools"
-        headingLines={false}
-        margin
-      >
-        <div className={styles.intro}>
-          <p className={styles.leadingParagraph}>
+      <div>
+        <Section
+          id="onlineSchools"
+          title="Online Schools"
+          headingLines={false}
+        >
+          <p>
             Many programs offer coding schools in a completely digital fashion. <br />Regardless of where
             you are in the world, you can learn how to code through these programs!
           </p>
-        </div>
 
-        <div className={styles.eSchools}>
-          {eSchools}
-        </div>
+          <div className={styles.eSchools}>
+            {eSchools}
+          </div>
+        </Section>
 
-        <div className={styles.moocs}>
-          <h3>MOOCs</h3>
-          <p className={styles.leadingParagraph}>
+        <Section
+          id="moocSchools"
+          title="MOOCs"
+          headingLines={false}
+        >
+          <p>
             Massive, Open, Online Courses (or MOOCs) are course study programs made available over
             the internet!
             <br />
@@ -105,8 +107,8 @@ class OnlineSchools extends Component {
               link={'https://udacity.org/'}
             />
           </div>
-        </div>
-      </Section>
+        </Section>
+      </div>
     );
   }
 }
