@@ -34,19 +34,27 @@ class Team extends Component {
     );
     const founder = {
       name: 'David Molina',
-      role: 'Founder / Executive Director',
+      role: 'CEO',
       src: 'https://pbs.twimg.com/profile_images/875514479202639873/vFr09yW4_400x400.jpg',
       alt: 'David Molina',
       twitter: '@davidcmolina',
       email: 'david@operationcode.org'
     };
     const coo = {
-      name: 'Conrad Holloman',
-      role: 'Chief of Staff / COO',
+      name: 'Conrad Hollomon',
+      role: 'COO',
       src: 'https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAP6AAAAJDk2MTJkMDc3LTdiZDYtNGNkZi1hOTgxLWE3YmI0OWFjYzQ4Nw.jpg',
-      alt: 'Conrad Holloman',
+      alt: 'Conrad Hollomon',
       twitter: '@hollomancer',
       email: 'conrad@operationcode.org'
+    };
+    const cto = {
+      name: 'Rick Rein',
+      role: 'CTO',
+      src: 'https://avatars1.githubusercontent.com/u/334550?v=3&s=400',
+      alt: 'Rick Rein',
+      twitter: '@rickrrrrrr',
+      email: 'rick@operationcode.org'
     };
 
     return (
@@ -56,7 +64,7 @@ class Team extends Component {
           quote="To care for him who shall have borne the battle and for his widow, and his orphan."
         />
 
-        <Section title="Our Team" theme="white">
+        <Section title="Our Staff" theme="white">
           <p>
             Our all volunteer staff are dedicated individuals who come from a wide variety of backgrounds, including U.S Military Veterans, civilians, those with tech backgrounds, and those who have skills outside of web development.
           </p>
@@ -65,10 +73,11 @@ class Team extends Component {
           </div>
         </Section>
 
-        <Section title="Our Board" theme="gray">
+        <Section title="Our Team" theme="gray">
           <div className={styles.board}>
             <StaffCard name={founder.name} role={founder.role} src={founder.src} twitter={founder.twitter} email={founder.email} alt={founder.alt} />
             <StaffCard name={coo.name} role={coo.role} src={coo.src} twitter={coo.twitter} email={coo.email} alt={coo.alt} />
+            <StaffCard name={cto.name} role={cto.role} src={cto.src} twitter={cto.twitter} email={cto.email} alt={cto.alt} />
           </div>
         </Section>
       </div>
