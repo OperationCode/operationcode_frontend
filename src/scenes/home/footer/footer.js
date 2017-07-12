@@ -39,6 +39,7 @@ class Footer extends Component {
               {/* <Link to="involved">Get Involved</Link>
               <Link to="blog">Blog</Link> */}
               <Link to="contact">Contact</Link>
+              <Link to="privacy">Privacy</Link>
             </div>
           </div>
         </div>
