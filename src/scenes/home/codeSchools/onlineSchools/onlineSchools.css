@@ -5,20 +5,9 @@
   justify-content: space-around;
 }
 
-/* CodeClimate didn't like .moocs > h3 */
-.moocs:first-child {
-  text-align: center;
-  font-size: 1.8rem;
-}
-
 .moocCards {
   display: flex;
-  flex-flow: column;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: space-around;
-}
-
-.boxShadow {
-  box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }

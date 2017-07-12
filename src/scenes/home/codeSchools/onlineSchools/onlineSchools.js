@@ -78,7 +78,8 @@ class OnlineSchools extends Component {
             the internet!
             <br />
             Typically there are start and end dates, but the work itself is done at your own pace.
-            <br />MOOCs are usually free, but there are certain benefits to paying for premium aspects
+            <br />
+            MOOCs are usually free, but there are certain benefits to paying for premium aspects
             of MOOCs.
             <br />
           </p>
@@ -97,7 +98,6 @@ class OnlineSchools extends Component {
               cardText={'Offers only paid programs, but we have licenses available.'}
               buttonText={'Website'}
               link={'https://teamtreehouse.com/'}
-              className={styles.boxShadow}
             />
             <ImageCard
               image={udacityLogo}
