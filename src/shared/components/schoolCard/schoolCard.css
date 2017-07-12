@@ -74,4 +74,10 @@
     height: 75px;
     width: 75px;
   }
+  .schoolLocation {
+    font-size: 0.8em;
+  }
+  .schoolInfo {
+    font-size: 0.7em;
+  }
 }
