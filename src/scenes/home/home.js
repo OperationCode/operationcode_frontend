@@ -30,7 +30,6 @@ import MentorRequest from './mentorRequest/mentorRequest';
 import SquadsNew from './squads/squadsNew/squadsNew';
 import CodeSchools from './codeSchools/codeSchools';
 import About from './about/about';
-import PrivacyPolicy from './privacyPolicy/privacyPolicy';
 
 class Home extends Component {
   constructor(props) {
@@ -113,10 +112,6 @@ class Home extends Component {
             <Route
               path="/code_schools"
               component={CodeSchools}
-            />
-            <Route
-              path="/privacy"
-              component={PrivacyPolicy}
             />
             <Route
               path="/signup"
