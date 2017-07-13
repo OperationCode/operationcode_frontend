@@ -39,7 +39,7 @@ class Footer extends Component {
               {/* <Link to="involved">Get Involved</Link>
               <Link to="blog">Blog</Link> */}
               <Link to="contact">Contact</Link>
-              <Link to="privacy">Privacy</Link>
+              <a href="https://www.iubenda.com/privacy-policy/8174861" target="_blank" rel="noopener noreferrer">Privacy</a>
             </div>
           </div>
         </div>
