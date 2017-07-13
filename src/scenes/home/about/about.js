@@ -20,9 +20,7 @@ class About extends Component {
       <div>
         <Section title="Mission" theme="white">
           <p className={styles.sectionParagraph}>
-            Our mission is to help the military community learn software development, enter the tech industry, and code the future! Through teaching veterans, transitioning servicemembers, and their families to code with open source projects, we'll be able to help fill our economy's technical talent shortage with our nation's finest.
-
-            We aim to help veterans learn new skills and build their careers in the fast-growing technology sector. Our team’s mission - led by veterans and other dedicated, passionate volunteers - is to help open doors for the diverse military community through our mentorship, career development, and scholarship programs. All of this is made possible by individual donations and corporate sponsorships.
+            Our mission is to help the military community learn software development, enter the tech industry, and code the future! Through teaching veterans, transitioning servicemembers, and their families to code with open source projects, we'll be able to help fill our economy's technical talent shortage with our nation's finest. We aim to help veterans learn new skills and build their careers in the fast-growing technology sector. Our team’s mission - led by veterans and other dedicated, passionate volunteers - is to help open doors for the diverse military community through our mentorship, career development, and scholarship programs. All of this is made possible by individual donations and corporate sponsorships.
           </p>
         </Section>
 
