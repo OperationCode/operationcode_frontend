@@ -22,7 +22,11 @@
 }
 
 .accordionSingle {
-  padding: 1rem;
+  border: 1px solid #c5c5c5;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 100%;
 }
 
 .accordionSingleQuestion {
