@@ -3,6 +3,7 @@ import LinkButton from 'shared/components/linkButton/linkButton';
 import Section from 'shared/components/section/section';
 import Question from './question/question';
 import Data from './questions.json';
+import styles from './faq.css';
 
 class FAQ extends Component {
   render() {
@@ -35,9 +36,12 @@ class FAQ extends Component {
     );
 
     return (
-      <Section title="Frequently Asked Questions" theme="white" headingLines={false}>
+      <Section title="Frequently Asked Questions" theme="white">
         <Section theme="white" headingLines={false}>
-          {generalQuestions}
+          <div className={styles.container}>
+            {generalQuestions}
+          </div>
+          <br />
           <LinkButton
             link="top"
             text="Scroll to Top"
@@ -45,8 +49,12 @@ class FAQ extends Component {
             scrollLink
           />
         </Section>
-        <Section title="Donation Questions" theme="white" headingLines={false}>
-          {donationQuestions}
+        <Section title="Donation Questions" theme="white">
+          <br />
+          <div className={styles.container}>
+            {donationQuestions}
+          </div>
+          <br />
           <LinkButton
             link="top"
             text="Scroll to Top"
@@ -54,8 +62,11 @@ class FAQ extends Component {
             scrollLink
           />
         </Section>
-        <Section title="Volunteer Questions" theme="white" headingLines={false}>
-          {volunteerQuestions}
+        <Section title="Volunteer Questions" theme="white">
+          <br />
+          <div className={styles.container}>
+            {volunteerQuestions}
+          </div>
         </Section>
       </Section>
     );
