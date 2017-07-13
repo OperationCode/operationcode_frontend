@@ -29,3 +29,9 @@
     font-size: 1.8em;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .heading {
+    font-size: 1.5em;
+  }
+}
