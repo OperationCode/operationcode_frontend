@@ -3,6 +3,7 @@
   height: 250px;
   padding: 0 20px;
   position: relative;
+  line-height: 1;
 }
 
 .content {
@@ -118,15 +119,11 @@
   .email {
     font-size: 0.8rem;
   }
-
-  .blockRow a {
-    padding: 10px 10px;
-  }
 }
 
 @media screen and (max-width: 480px) {
   .footer {
-    height: 500px;
+    height: 515px;
     padding: 0 16px;
   }
 
@@ -154,7 +151,7 @@
   }
 
   .blockGroup a {
-    padding: 0 10px;
+    padding: 10px 10px;
   }
 
   .blockGroup ~ .blockGroup {
