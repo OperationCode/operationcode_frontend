@@ -13,6 +13,7 @@ class FAQ extends Component {
           <Question
             q={question.question}
             a={question.answer}
+            key={Math.random + question.question}
           />
         )
     );
@@ -22,6 +23,7 @@ class FAQ extends Component {
           <Question
             q={question.question}
             a={question.answer}
+            key={Math.random + question.question}
           />
         )
     );
@@ -31,12 +33,13 @@ class FAQ extends Component {
           <Question
             q={question.question}
             a={question.answer}
+            key={Math.random + question.question}
           />
         )
     );
 
     return (
-      <Section title="Frequently Asked Questions" theme="white">
+      <Section title="General Questions" theme="white">
         <Section theme="white" headingLines={false}>
           <div className={styles.container}>
             {generalQuestions}
