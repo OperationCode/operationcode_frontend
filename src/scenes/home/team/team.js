@@ -34,7 +34,7 @@ class Team extends Component {
     );
     const founder = {
       name: 'David Molina',
-      role: 'CEO',
+      role: 'Founder / CEO',
       src: 'https://pbs.twimg.com/profile_images/875514479202639873/vFr09yW4_400x400.jpg',
       alt: 'David Molina',
       twitter: '@davidcmolina',
@@ -51,7 +51,7 @@ class Team extends Component {
     const cto = {
       name: 'Rick Rein',
       role: 'CTO',
-      src: 'https://avatars1.githubusercontent.com/u/334550?v=3&s=400',
+      src: 'https://raw.githubusercontent.com/OperationCode/operationcode_frontend/master/src/images/RickRein.jpg',
       alt: 'Rick Rein',
       twitter: '@rickrrrrrr',
       email: 'rick@operationcode.org'
@@ -66,7 +66,7 @@ class Team extends Component {
 
         <Section title="Our Staff" theme="white">
           <p>
-            Our all volunteer staff are dedicated individuals who come from a wide variety of backgrounds, including U.S Military Veterans, civilians, those with tech backgrounds, and those who have skills outside of web development.
+            Our all volunteer staff are dedicated individuals who come from a wide variety of backgrounds, including members of both the civilian and military community.
           </p>
           <div className={styles.team}>
             { team }

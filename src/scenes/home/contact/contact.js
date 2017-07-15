@@ -10,10 +10,11 @@ class Contact extends Component {
       <div>
         <Section title="Contact Us" >
           <p>
-            We are a decentralized community of hard-working volunteers, and we love hearing feedback, comments, and suggestions. Feel free to send us an e-mail, or even mail a letter.
+            We are a decentralized community of hard-working volunteers, and we love hearing feedback, comments, and suggestions!
             <br />
             <br />
-            The best way to reach our staff and our members is by <Link to="join">joining Operation Code</Link> to receive an invite to our Slack team..
+            The best way to reach our staff and our members is by <Link to="join">joining Operation Code</Link> to receive an invite to our Slack team.
+            You can also reach us on via e-mail, physical, or <a href="twitter.com/operation_code">Twitter.</a>
           </p>
         </Section>
 
