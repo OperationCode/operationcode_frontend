@@ -70,7 +70,7 @@ class SideNav extends Component {
           <div className={styles.list}>
             {this.renderNavItems()}
             <NavItem
-              to="code_schools"
+              to="/code_schools"
               text="Code Schools"
               onClick={this.handleCloseClick}
             />
@@ -81,24 +81,24 @@ class SideNav extends Component {
               onClick={this.handleCloseClick}
             />
             <NavItem
-              to="about"
+              to="/about"
               text="About"
               onClick={this.handleCloseClick}
             />
             <NavItem
-              to="programs"
+              to="/programs"
               text="Programs"
               onClick={this.handleCloseClick}
               notClickable
             />
             <NavItem
-              to="involved"
+              to="/involved"
               text="Get Involved"
               onClick={this.handleCloseClick}
               notClickable
             />
             <NavItem
-              to="blog"
+              to="/blog"
               text="Blog"
               onClick={this.handleCloseClick}
               notClickable

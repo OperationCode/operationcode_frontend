@@ -26,19 +26,19 @@ class Footer extends Component {
           <div className={styles.outerFooterGroups}>
             {/* TODO: Uncomment when links are implemented */}
             <div className={styles.blockGroup} >
-              <Link to="faq">FAQ</Link>
-              <Link to="team">Team</Link>
+              <Link to="/faq">FAQ</Link>
+              <Link to="/team">Team</Link>
               {/*
-              <Link to="about">About Us</Link>
-              <Link to="programs">Our Programs</Link>
-              <Link to="involved">Our Partners</Link>
+              <Link to="/about">About Us</Link>
+              <Link to="/programs">Our Programs</Link>
+              <Link to="/involved">Our Partners</Link>
               */}
             </div>
             <div className={styles.blockGroup} >
               {/* TODO: Uncomment when links are implemented */}
-              {/* <Link to="involved">Get Involved</Link>
-              <Link to="blog">Blog</Link> */}
-              <Link to="contact">Contact</Link>
+              {/* <Link to="/involved">Get Involved</Link>
+              <Link to="/blog">Blog</Link> */}
+              <Link to="/contact">Contact</Link>
               <a href="https://www.iubenda.com/privacy-policy/8174861" target="_blank" rel="noopener noreferrer">Privacy</a>
             </div>
           </div>
