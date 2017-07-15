@@ -2,7 +2,7 @@ import Cookies from 'universal-cookie';
 
 export const setUserAuthCookie = ({ token, user }) => {
   const cookies = new Cookies();
-  cookies.set('token', token, { path: '/' });
+  cookies.set('token', token, { path: '/', domain: 'operationcode.org' });
   cookies.set('firstName', user.first_name, { path: '/' });
   cookies.set('lastName', user.last_name, { path: '/' });
   cookies.set('slackName', user.slack_name, { path: '/' });
