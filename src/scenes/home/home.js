@@ -21,7 +21,6 @@ import FAQ from './faq/faq';
 import Contact from './contact/contact';
 import History from './history/history';
 import FinancialStatements from './about/financialStatements/financialStatements';
-import styles from './home.css';
 import Header from './header/header';
 import Landing from './landing/landing';
 import Footer from './footer/footer';
@@ -30,6 +29,7 @@ import MentorRequest from './mentorRequest/mentorRequest';
 import SquadsNew from './squads/squadsNew/squadsNew';
 import CodeSchools from './codeSchools/codeSchools';
 import About from './about/about';
+import styles from './home.css';
 
 class Home extends Component {
   constructor(props) {

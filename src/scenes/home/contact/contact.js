@@ -4,18 +4,17 @@ import { FaEnvelope, FaSlack, FaHome } from 'react-icons/lib/fa';
 import Section from 'shared/components/section/section';
 import styles from './contact.css';
 
-
 class Contact extends Component {
   render() {
     return (
-      <div className={styles.wrapper}>
+      <div>
         <Section title="Contact Us" >
-          <p className={styles.introParagraph}>
+          <p2>
             We are a decentralized community of hard-working volunteers, and we love hearing feedback, comments, and suggestions. Feel free to send us an e-mail, or even mail a letter.
             <br />
             <br />
             The best way to reach our staff and our members is by <Link to="join">joining Operation Code</Link> to receive an invite to our Slack team..
-          </p>
+          </p2>
         </Section>
 
         <Section theme="white" headingLines={false} >

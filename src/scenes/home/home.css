@@ -10,6 +10,10 @@
     flex: 1;
 }
 
+.main > div {
+    width: 100%;
+}
+
 .homeImage {
     height:300px;
 }
