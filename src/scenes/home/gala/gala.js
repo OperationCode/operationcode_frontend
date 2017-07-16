@@ -33,7 +33,7 @@ class Gala extends Component {
             <div className="tt-widget-fallback">
               <p>
                 <a href="https://www.tickettailor.com/new-order/99297/d163/ref/website_widget/" target="_blank" rel="noopener noreferrer">Click here to buy tickets</a><br />
-                <small><a href="http://www.tickettailor.com?rf=wdg" className="tt-widget-powered">Sell tickets online with Ticket Tailor</a></small>
+                <small><a href="//www.tickettailor.com?rf=wdg" className="tt-widget-powered">Sell tickets online with Ticket Tailor</a></small>
               </p>
             </div>
           </div>

@@ -30,7 +30,7 @@ export const getUserStatus = () => {
 
   return {
     mentor: cookies.get('mentor') === 'true',
-    signedIn: cookies.get('token') !== undefined,
+    signedIn: cookies.get('token') !== 'null',
     verified: cookies.get('verified') === 'true'
   };
 };
