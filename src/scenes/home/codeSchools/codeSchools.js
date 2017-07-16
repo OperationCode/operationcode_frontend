@@ -30,7 +30,6 @@ class CodeSchools extends Component {
         <Section
           title="Code Schools"
           theme="white"
-          margin
         >
           <p>
             Code schools are accelerated learning programs that will prepare you for a career in

@@ -4,13 +4,12 @@ import { FaEnvelope, FaSlack, FaHome } from 'react-icons/lib/fa';
 import Section from 'shared/components/section/section';
 import styles from './contact.css';
 
-
 class Contact extends Component {
   render() {
     return (
-      <div className={styles.wrapper}>
+      <div>
         <Section title="Contact Us" >
-          <p className={styles.introParagraph}>
+          <p>
             We are a decentralized community of hard-working volunteers, and we love hearing feedback, comments, and suggestions!
             <br />
             <br />
