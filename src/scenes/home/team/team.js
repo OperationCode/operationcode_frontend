@@ -3,6 +3,7 @@ import Section from 'shared/components/section/section';
 import QuoteBanner from 'shared/components/quoteBanner/quoteBanner';
 import TeamCard from 'shared/components/teamCard/teamCard';
 import StaffCard from 'shared/components/staffCard/staffCard';
+import BoardCard from 'shared/components/boardCard/boardCard';
 import styles from './team.css';
 
 class Team extends Component {
@@ -114,11 +115,11 @@ class Team extends Component {
 
         <Section title="Our Board" theme="white">
           <div className={styles.board}>
-            <StaffCard name={chair.name} role={chair.role} src={chair.src} alt={chair.alt} />
-            <StaffCard name={vicechair.name} role={vicechair.role} src={vicechair.src} alt={vicechair.alt} />
-            <StaffCard name={treasurer.name} role={treasurer.role} src={treasurer.src} alt={treasurer.alt} />
-            <StaffCard name={secretary.name} role={secretary.role} src={secretary.src} alt={secretary.alt} />
-            <StaffCard name={aimee.name} role={aimee.role} src={aimee.src} alt={aimee.alt} />
+            <BoardCard name={chair.name} role={chair.role} src={chair.src} alt={chair.alt} />
+            <BoardCard name={vicechair.name} role={vicechair.role} src={vicechair.src} alt={vicechair.alt} />
+            <BoardCard name={aimee.name} role={aimee.role} src={aimee.src} alt={aimee.alt} />
+            <BoardCard name={treasurer.name} role={treasurer.role} src={treasurer.src} alt={treasurer.alt} />
+            <BoardCard name={secretary.name} role={secretary.role} src={secretary.src} alt={secretary.alt} />
           </div>
         </Section>
       </div>
