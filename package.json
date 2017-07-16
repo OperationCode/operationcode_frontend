@@ -9,6 +9,7 @@
     "express": "^4.15.2",
     "font-awesome": "^4.7.0",
     "history": "^4.6.1",
+    "jwt-decode": "^2.2.0",
     "lodash": "^4.17.4",
     "postscribe": "^2.0.8",
     "prop-types": "^15.5.8",
