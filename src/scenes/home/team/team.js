@@ -60,32 +60,32 @@ class Team extends Component {
     const chair = {
       name: 'Dr. James Davis',
       role: 'Chair',
-      src: 'https://raw.githubusercontent.com/OperationCode/operationcode_frontend/master/src/images/RickRein.jpg',
+      src: 'https://raw.githubusercontent.com/OperationCode/operationcode_frontend/master/src/images/james.jpg',
       alt: 'Dr. James Davis'
     };
     const vicechair = {
       name: 'Dr. Tyrone Grandison',
       role: 'Vice Chair',
-      src: 'https://raw.githubusercontent.com/OperationCode/operationcode_frontend/master/src/images/RickRein.jpg',
+      src: 'https://raw.githubusercontent.com/OperationCode/operationcode_frontend/master/src/images/tyrone.png',
       alt: 'Dr. Tyrone Grandison'
+    };
+    const aimee = {
+      name: 'Aimee Knight',
+      role: 'Board Member',
+      src: 'https://raw.githubusercontent.com/OperationCode/operationcode_frontend/master/src/images/aimee.jpg',
+      alt: 'Aimee Knight'
     };
     const treasurer = {
       name: 'Elmer Thomas',
       role: 'Treasurer',
-      src: 'https://raw.githubusercontent.com/OperationCode/operationcode_frontend/master/src/images/RickRein.jpg',
+      src: 'https://raw.githubusercontent.com/OperationCode/operationcode_frontend/master/src/images/elmer.png',
       alt: 'Elmer Thomas'
     };
     const secretary = {
       name: 'Thomas Ciszec',
       role: 'Secretary',
-      src: 'https://raw.githubusercontent.com/OperationCode/operationcode_frontend/master/src/images/RickRein.jpg',
+      src: 'https://raw.githubusercontent.com/OperationCode/operationcode_frontend/master/src/images/thomas.jpg',
       alt: 'Thomas Ciszec'
-    };
-    const aimee = {
-      name: 'Aimee Knight',
-      role: 'Board Member',
-      src: 'https://raw.githubusercontent.com/OperationCode/operationcode_frontend/master/src/images/RickRein.jpg',
-      alt: 'Aimee Knight'
     };
 
     return (
