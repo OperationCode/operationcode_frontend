@@ -8,24 +8,26 @@ const cookieDomain = () => {
   return 'operationcode.org';
 };
 
+const cookieOptions = { path: '/', domain: cookieDomain() };
+
 export const setUserAuthCookie = ({ token, user }) => {
   const cookies = new Cookies();
-  cookies.set('token', token, { path: '/', domain: cookieDomain() });
-  cookies.set('firstName', user.first_name, { path: '/' });
-  cookies.set('lastName', user.last_name, { path: '/' });
-  cookies.set('slackName', user.slack_name, { path: '/' });
-  cookies.set('mentor', user.mentor, { path: '/' });
-  cookies.set('verified', user.verified, { path: '/' });
+  cookies.set('token', token, cookieOptions);
+  cookies.set('firstName', user.first_name, cookieOptions);
+  cookies.set('lastName', user.last_name, cookieOptions);
+  cookies.set('slackName', user.slack_name, cookieOptions);
+  cookies.set('mentor', user.mentor, cookieOptions);
+  cookies.set('verified', user.verified, cookieOptions);
 };
 
 export const clearAuthCookies = () => {
   const cookies = new Cookies();
-  cookies.remove('token');
-  cookies.remove('firstName');
-  cookies.remove('lastName');
-  cookies.remove('slackName');
-  cookies.remove('mentor');
-  cookies.remove('verified');
+  cookies.remove('token', cookieOptions);
+  cookies.remove('firstName', cookieOptions);
+  cookies.remove('lastName', cookieOptions);
+  cookies.remove('slackName', cookieOptions);
+  cookies.remove('mentor', cookieOptions);
+  cookies.remove('verified', cookieOptions);
 };
 
 export const isMentor = () => {
