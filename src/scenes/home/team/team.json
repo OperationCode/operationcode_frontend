@@ -25,7 +25,7 @@
     },
     {
         "name": "Caleb Singer",
-        "role": "Marketing & Development Advisor"
+        "role": "Corporate Partnerships"
     },
     {
         "name": "Charles Sipe",
@@ -42,14 +42,6 @@
     {
         "name": "Dane King",
         "role": "Deploy Mentor"
-    },
-    {
-        "name": "Dave Barner",
-        "role": "Product Strategy"
-    },
-    {
-        "name": "David Denninger",
-        "role": "Legislative Affairs"
     },
     {
         "name": "David Marchante",
@@ -74,10 +66,6 @@
     {
         "name": "Eunice Heymann",
         "role": "Austin Chapter Leader"
-    },
-    {
-        "name": "Farrah Morrisey",
-        "role": "Development Advisor"
     },
     {
         "name": "Franklin Webber",
@@ -120,16 +108,8 @@
         "role": "San Diego Chapter Leader"
     },
     {
-        "name": "Jeremy Hall",
-        "role": "Product Design"
-    },
-    {
         "name": "Jesse James",
         "role": "Portland Chapter Leader"
-    },
-    {
-        "name": "Jessica Rose",
-        "role": "Comms/Marketing"
     },
     {
         "name": "John Bailey",
@@ -236,10 +216,6 @@
         "role": "Deploy Mentor"
     },
     {
-        "name": "Reid Olmstead",
-        "role": "Finance & Accounting"
-    },
-    {
         "name": "Rhonda Tilford",
         "role": "Funding & Admin Support"
     },
@@ -276,7 +252,7 @@
         "role": "Board Director"
     },
     {
-        "name": "Walter Valdez Santos",
+        "name": "Walter Valdez-Santos",
         "role": "Community Support"
     }
 ]

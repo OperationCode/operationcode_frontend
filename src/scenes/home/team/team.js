@@ -3,6 +3,7 @@ import Section from 'shared/components/section/section';
 import QuoteBanner from 'shared/components/quoteBanner/quoteBanner';
 import TeamCard from 'shared/components/teamCard/teamCard';
 import StaffCard from 'shared/components/staffCard/staffCard';
+import BoardCard from 'shared/components/boardCard/boardCard';
 import styles from './team.css';
 
 class Team extends Component {
@@ -32,7 +33,7 @@ class Team extends Component {
         />
       )
     );
-    const founder = {
+    const ceo = {
       name: 'David Molina',
       role: 'Founder / CEO',
       src: 'https://pbs.twimg.com/profile_images/875514479202639873/vFr09yW4_400x400.jpg',
@@ -57,6 +58,37 @@ class Team extends Component {
       email: 'rick@operationcode.org'
     };
 
+    const chair = {
+      name: 'Dr. James Davis',
+      role: 'Chair',
+      src: 'https://raw.githubusercontent.com/OperationCode/operationcode_frontend/master/src/images/james.jpg',
+      alt: 'Dr. James Davis'
+    };
+    const vicechair = {
+      name: 'Dr. Tyrone Grandison',
+      role: 'Vice Chair',
+      src: 'https://raw.githubusercontent.com/OperationCode/operationcode_frontend/master/src/images/tyrone.png',
+      alt: 'Dr. Tyrone Grandison'
+    };
+    const aimee = {
+      name: 'Aimee Knight',
+      role: 'Board Member',
+      src: 'https://raw.githubusercontent.com/OperationCode/operationcode_frontend/master/src/images/aimee.jpg',
+      alt: 'Aimee Knight'
+    };
+    const treasurer = {
+      name: 'Elmer Thomas',
+      role: 'Treasurer',
+      src: 'https://raw.githubusercontent.com/OperationCode/operationcode_frontend/master/src/images/elmer.png',
+      alt: 'Elmer Thomas'
+    };
+    const secretary = {
+      name: 'Thomas Ciszec',
+      role: 'Secretary',
+      src: 'https://raw.githubusercontent.com/OperationCode/operationcode_frontend/master/src/images/thomas.jpg',
+      alt: 'Thomas Ciszec'
+    };
+
     return (
       <div>
         <QuoteBanner
@@ -75,9 +107,19 @@ class Team extends Component {
 
         <Section title="Our Team" theme="gray">
           <div className={styles.board}>
-            <StaffCard name={founder.name} role={founder.role} src={founder.src} twitter={founder.twitter} email={founder.email} alt={founder.alt} />
+            <StaffCard name={ceo.name} role={ceo.role} src={ceo.src} twitter={ceo.twitter} email={ceo.email} alt={ceo.alt} />
             <StaffCard name={coo.name} role={coo.role} src={coo.src} twitter={coo.twitter} email={coo.email} alt={coo.alt} />
             <StaffCard name={cto.name} role={cto.role} src={cto.src} twitter={cto.twitter} email={cto.email} alt={cto.alt} />
+          </div>
+        </Section>
+
+        <Section title="Our Board" theme="white">
+          <div className={styles.board}>
+            <BoardCard name={chair.name} role={chair.role} src={chair.src} alt={chair.alt} />
+            <BoardCard name={vicechair.name} role={vicechair.role} src={vicechair.src} alt={vicechair.alt} />
+            <BoardCard name={aimee.name} role={aimee.role} src={aimee.src} alt={aimee.alt} />
+            <BoardCard name={treasurer.name} role={treasurer.role} src={treasurer.src} alt={treasurer.alt} />
+            <BoardCard name={secretary.name} role={secretary.role} src={secretary.src} alt={secretary.alt} />
           </div>
         </Section>
       </div>

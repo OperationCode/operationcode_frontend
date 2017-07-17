@@ -18,4 +18,4 @@ COPY . /usr/src/app
 EXPOSE 8080
 
 # defined in package.json
-CMD [ "npm", "run", "start:docker" ]
+CMD [ "npm", "run", "start:server" ]
