@@ -8,9 +8,7 @@ class Question extends Component {
       <div className={styles.accordionSingle}>
         <input className={styles.accordionSingleHidden} type="checkbox" id={this.props.q} />
         <label className={styles.accordionSingleQuestion} htmlFor={this.props.q}> {this.props.q}</label>
-        <p className={styles.accordionSingleAnswer}>
-          {this.props.a}
-        </p>
+        <p className={styles.accordionSingleAnswer} dangerouslySetInnerHTML={{ __html: this.props.a }} />
       </div>
     );
   }
