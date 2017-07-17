@@ -7,7 +7,7 @@ import config from 'config/environment';
 import _ from 'lodash';
 import * as CookieHelpers from 'shared/utils/cookieHelper';
 import FormEmail from 'shared/components/form/formEmail/formEmail';
-import FormPassword from 'shared/components/form/formPassword/formPassword';
+import FormInput from 'shared/components/form/formInput/formInput';
 import FormButton from 'shared/components/form/formButton/formButton';
 import styles from './login.css';
 
@@ -62,7 +62,7 @@ class Login extends Component {
       <Section title="Login" theme="white">
         <Form autoComplete>
           <FormEmail displayName="Email" label="Email" onChange={this.onEmailChange} />
-          <FormPassword displayName="Password" label="Password" onChange={this.onPasswordChange} />
+          <FormInput displayName="Password" label="Password" inputType="password" onChange={this.onPasswordChange} />
           {error && <h2 className={styles.loginError}>Login Error: {error}</h2>}
           <FormButton className={styles.Button} text="login" onClick={this.handleOnClick} />
         </Form>
