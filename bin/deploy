@@ -29,7 +29,7 @@ contexts:
     namespace: operationcode-staging
     user: $KUBE_USER
   name: staging
-current-context: staging
+current-context: operationcode
 kind: Config
 preferences: {}
 users:
