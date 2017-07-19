@@ -8,18 +8,17 @@ class Question extends Component {
       <div className={styles.accordionSingle}>
         <input className={styles.accordionSingleHidden} type="checkbox" id={this.props.q} />
         <label className={styles.accordionSingleQuestion} htmlFor={this.props.q}> {this.props.q}</label>
-        <p className={styles.accordionSingleAnswer} React.createElement ("div", { props.dangerouslySetInnerHTML: { __html: this.props.a } });/>
-
+        {   // eslint-disable-next-line react/no-danger react/prop-types: 0) }
+            // eslint-disable-next-line
+          <p className={styles.accordionSingleAnswer} dangerouslySetInnerHTML={{ __html: this.props.a }} />
+      }</div>
     );
   }
 }
-<div 
+
 Question.propTypes = {
   q: PropTypes.string.isRequired,
   a: PropTypes.string.isRequired
-};>
-</div>
-
-</div>
+};
 
 export default Question;
