@@ -15,6 +15,9 @@ test:
 publish: build
 	bin/publish
 
+deploy: build
+	bin/deploy
+
 travis: build_site build test
 
 .PHONY: backend
