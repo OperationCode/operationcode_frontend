@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styles from './question.css';
-// eslint-disable-next-line react/no-danger react/prop-types: 0
+
 class Question extends Component {
   render() {
     return (
