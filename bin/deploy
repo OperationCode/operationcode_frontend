@@ -40,4 +40,4 @@ users:
 EOF
 
 # Update the deployment
-KUBECONFIG=${KUBE_CONFIG} kubectl set image deployment/operationcode-frontend app=operationcode/operationcode_frontend:${TRAVIS_BUILD_NUMBER}
+KUBECONFIG=${KUBE_CONFIG} ./kubectl set image deployment/operationcode-frontend app=operationcode/operationcode_frontend:${TRAVIS_BUILD_NUMBER}
