@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styles from './question.css';
-
+// eslint-disable-next-line react/no-danger react/prop-types: 0
 class Question extends Component {
   render() {
     return (
       <div className={styles.accordionSingle}>
         <input className={styles.accordionSingleHidden} type="checkbox" id={this.props.q} />
         <label className={styles.accordionSingleQuestion} htmlFor={this.props.q}> {this.props.q}</label>
-        /* eslint-disable-next-line react/no-danger react/prop-types: 0 */
         <p className={styles.accordionSingleAnswer} dangerouslySetInnerHTML={{ __html: this.props.a }} />
       </div>
     );
