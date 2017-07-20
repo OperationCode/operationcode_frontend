@@ -1,3 +1,0 @@
-.formZipCode {
-  composes: formControl from '../form.css';
-}
