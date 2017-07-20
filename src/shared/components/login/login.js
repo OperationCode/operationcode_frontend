@@ -75,9 +75,9 @@ class Login extends Component {
         user: {
           email: this.state.email,
           password: this.state.password,
-          sso: this.state.sso,
-          sig: this.state.sig
-        }
+        },
+        sso: this.state.sso,
+        sig: this.state.sig
       }).then(({ data }) => {
         CookieHelpers.setUserAuthCookie(data);
         this.setState({ authenticated: true });
