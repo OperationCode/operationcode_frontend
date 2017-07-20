@@ -59,6 +59,13 @@ class Login extends Component {
 
   isFormValid = () => this.state.emailValid && this.state.passwordValid
 
+  // This is a temp function to ensure we return a URL if the changes to the API
+  // aren't in place. It can be removed after operationcode_backend#91 has been deployed
+  resolveRedirectUrl = (redirectUrl) => {
+    if (redirectUrl) { return redirectUrl; }
+    return '/profile';
+  }
+
   handleOnClick = (e) => {
     e.preventDefault = true;
     this.setSsoParams();
@@ -78,7 +85,7 @@ class Login extends Component {
           if (this.state.ssoParamsPresent) {
             window.location = data.redirect_to;
           } else {
-            history.push(data.redirect_to);
+            history.push(this.resolveRedirectUrl(data.redirect_to));
           }
         });
       }).catch((error) => {
