@@ -56,15 +56,20 @@ class Login extends Component {
   }
 
   render() {
-    const { error } = this.state;
+    let { error } = this.state;
+    if (error === 'Request failed with status code 401') {
+      error = 'Sorry, you entered an invalid email or password.';
+    } else if (error) {
+      error = `Login error: ${error}.`;
+    }
 
     return (
       <Section title="Login" theme="white">
         <Form autoComplete>
           <FormEmail displayName="Email" label="Email" onChange={this.onEmailChange} />
           <FormInput displayName="Password" label="Password" inputType="password" onChange={this.onPasswordChange} />
-          {error && <h2 className={styles.loginError}>Login Error: {error}</h2>}
-          <FormButton className={styles.Button} text="login" onClick={this.handleOnClick} />
+          {error && <h2 className={styles.loginError}>{error}</h2>}
+          <FormButton className={styles.Button} text="Login" onClick={this.handleOnClick} />
         </Form>
       </Section>
     );
