@@ -1,4 +1,4 @@
-.staffCard {
+.boardCard {
 	height: 28rem;
 	width: auto;
 	background: white;
@@ -13,11 +13,11 @@
 }
 
 
-.staffCard:hover {
+.boardCard:hover {
 	box-shadow: 0 9px 28px rgba(0,0,0,0.25);
 }
 
-.staffCard:hover > .img {
+.boardCard:hover > .img {
 	filter: grayscale(0%);
 }
 

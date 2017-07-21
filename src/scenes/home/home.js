@@ -7,6 +7,7 @@ import classNames from 'classnames';
 import * as CookieHelpers from 'shared/utils/cookieHelper';
 import Login from 'shared/components/login/login';
 import IdmeVerify from 'shared/components/idme/idmeverify/idmeverify';
+import AuthenticatedRoute from 'shared/components/authenticatedRoute/authenticatedRoute';
 import familyImage from 'images/Family-2.jpg';
 import Profile from './profile/profile';
 import SignUp from './signup/signup';
@@ -193,22 +194,27 @@ class Home extends Component {
               )}
             />
             <Route
+              path="/newgibill"
+              component={() => (window.location = 'http://www.benefits.va.gov/gibill/post911_gibill.asp')}
+            />
+            <Route
               path="/login"
               render={() => (
                 <Login updateRootAuthState={this.updateRootAuthState} {...authProps} />
               )}
             />
-            <Route
+            <AuthenticatedRoute
               exact path="/profile"
-              render={() => (
-                <Profile {...authProps} />
-              )}
+              isLoggedIn={CookieHelpers.getUserStatus().signedIn}
+              component={Profile}
+              {...authProps}
             />
-            <Route
+            <AuthenticatedRoute
               exact path="/profile/verify"
-              render={() => (
-                <IdmeVerify updateRootAuthState={this.updateRootAuthState} {...authProps} />
-              )}
+              isLoggedIn={CookieHelpers.getUserStatus().signedIn}
+              component={IdmeVerify}
+              updateRootAuthState={this.updateRootAuthState}
+              {...authProps}
             />
             <Route exact path="/about/financial-statements" component={FinancialStatements} />
             <Route
