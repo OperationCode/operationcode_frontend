@@ -21,7 +21,8 @@ class Login extends Component {
     password: '',
     passwordValid: false,
     authenticated: false,
-    error: ''
+    errorStatus: -1,
+    errorMessage: ''
   }
 
   onEmailChange = (value, valid) => {
@@ -48,19 +49,21 @@ class Login extends Component {
         this.props.updateRootAuthState((history) => {
           history.push('/');
         });
-      }).catch((response) => {
-        const error = _.get(response, 'message');
-        this.setState({ error });
+      }).catch((error) => {
+        const errorStatus = _.get(error, ['response', 'status'], -1);
+        const errorMessage = _.get(error, 'message');
+        this.setState({ errorStatus, errorMessage });
       });
     }
   }
 
   render() {
-    let { error } = this.state;
-    if (error === 'Request failed with status code 401') {
-      error = 'Sorry, you entered an invalid email or password.';
-    } else if (error) {
-      error = `Login error: ${error}.`;
+    const { errorStatus, errorMessage } = this.state;
+    let errorFeedback;
+    if (errorStatus === 401) {
+      errorFeedback = 'Sorry, you entered an invalid email or password.';
+    } else if (errorMessage) {
+      errorFeedback = `Login error: ${errorMessage}.`;
     }
 
     return (
@@ -68,7 +71,7 @@ class Login extends Component {
         <Form autoComplete>
           <FormEmail displayName="Email" label="Email" onChange={this.onEmailChange} />
           <FormInput displayName="Password" label="Password" inputType="password" onChange={this.onPasswordChange} />
-          {error && <h2 className={styles.loginError}>{error}</h2>}
+          {errorFeedback && <h2 className={styles.loginError}>{errorFeedback}</h2>}
           <FormButton className={styles.Button} text="Login" onClick={this.handleOnClick} />
         </Form>
       </Section>
