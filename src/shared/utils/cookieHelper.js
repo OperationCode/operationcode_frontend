@@ -57,4 +57,3 @@ export const getUserStatus = () => {
     verified: cookies.get('verified') === 'true'
   };
 };
-
