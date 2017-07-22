@@ -1,3 +1,15 @@
+p {
+  font-size: 1.1rem;
+}
+
+svg {
+  color: #249CBC;
+}
+
+a:hover > svg {
+  color: #44BCDC;
+}
+
 .flexContainer {
   width: 80%;
   display: flex;
@@ -10,16 +22,8 @@
   padding: 0 30px 50px 30px;
 }
 
-.columns {
+.centerText {
   text-align: center;
-}
-
-svg {
-  color: #249CBC;
-}
-
-a:hover > svg {
-  color: #44BCDC;
 }
 
 /* Icons are not uniform in size... */
