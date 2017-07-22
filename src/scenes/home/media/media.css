@@ -1,0 +1,43 @@
+.flexContainer {
+  width: 90%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 15px 0 0 0;
+}
+
+.flexContainer > div {
+  padding: 0 30px 50px 30px;
+}
+
+.threeColumn {
+  width: 350px;
+  text-align: center;
+}
+
+.twoColumn {
+  width: 550px;
+  text-align: center;
+}
+
+@media screen and (min-width: 415px) and (max-width: 1280px) {
+  .threeColumn {
+    width: 300px;
+  }
+
+  .twoColumn {
+    width: 300px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .threeColumn {
+    width: 250px;
+  }
+
+  .twoColumn {
+    width: 250px;
+    text-align: center;
+  }
+}
