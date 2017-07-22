@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import NavItem from 'shared/components/nav/navItem/navItem';
 import styles from './header.css';
 import TopNav from './topNav/topNav';
 import SideNav from './sideNav/sideNav';
@@ -8,12 +9,36 @@ import Logo from './logo/logo';
 import Burger from './burger/burger';
 
 class Header extends Component {
-
-  state = {
-    isSideNavVisible: false
+  constructor() {
+    super();
+    this.state = {
+      isSideNavVisible: false
+    };
+    this.handleToggleDrawer = this.handleToggleDrawer.bind(this);
   }
 
-  toggleDrawer = () => this.setState({ isSideNavVisible: !this.state.isSideNavVisible });
+  handleToggleDrawer(e) {
+    e.preventDefault();
+    this.setState({ isSideNavVisible: !this.state.isSideNavVisible });
+  }
+
+  renderNavContents(signedIn, mentor, onClick) {
+    return (
+      <span>
+        <NavItem to="/about" text="About" onClick={onClick} />
+        <NavItem to="/code_schools" text="Code Schools" onClick={onClick} />
+        <NavItem to="https://donorbox.org/operationcode" text="Donate" isExternal onClick={onClick} />
+        {signedIn && <NavItem to="/mentor-request" text="Request Help" onClick={onClick} />}
+        {signedIn && <NavItem to="/mentors" text="Mentors" onClick={onClick} />}
+        {mentor && <NavItem to="/requests" text="Requests" onClick={onClick} />}
+        {signedIn && <NavItem to="/squads" text="Squads" onClick={onClick} />}
+        {signedIn ? <NavItem to="/profile" text="Profile" onClick={onClick} />
+                  : <NavItem to="/join" text="Join" onClick={onClick} />}
+        {signedIn ? (<button className="navItem" onClick={this.props.logOut}>Logout</button>)
+                  : <NavItem to="/login" text="Login" onClick={onClick} />}
+      </span>
+    );
+  }
 
   render() {
     const { mentor, signedIn } = this.props;
@@ -24,19 +49,16 @@ class Header extends Component {
     return (
       <div className={classes} >
         <Logo />
-        <Burger onClick={this.toggleDrawer} />
-        <TopNav
-          onLogOutClick={this.props.logOut}
-          signedIn={signedIn}
-          mentor={mentor}
-        />
+        <Burger onClick={this.handleToggleDrawer} />
+        <TopNav>
+          {this.renderNavContents(signedIn, mentor)}
+        </TopNav>
         <SideNav
           isVisible={this.state.isSideNavVisible}
-          onClose={this.toggleDrawer}
-          onLogOutClick={this.props.logOut}
-          signedIn={signedIn}
-          mentor={mentor}
-        />
+          onClose={this.handleToggleDrawer}
+        >
+          {this.renderNavContents(signedIn, mentor, this.handleToggleDrawer)}
+        </SideNav>
       </div>
     );
   }
@@ -53,7 +75,7 @@ Header.defaultProps = {
   transparent: false,
   logOut: () => {},
   signedIn: false,
-  mentor: true
+  mentor: true // should this be false?
 };
 
 export default Header;
