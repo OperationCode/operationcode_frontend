@@ -24,7 +24,7 @@ class Nav extends Component {
 }
 
 Nav.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.element).isRequired,
+  children: PropTypes.element.isRequired,
   className: PropTypes.string
 };
 
