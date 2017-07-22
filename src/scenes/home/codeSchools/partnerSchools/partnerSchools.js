@@ -19,7 +19,7 @@ class PartnerSchools extends Component {
         title="Partnered Schools"
         theme="white"
         headingLines={false}
-        margin
+        margin1
       >
         <p>
           Many code schools around the nation offer military/veterans discounts to make coding education more accessible to our veterans.
@@ -30,34 +30,38 @@ class PartnerSchools extends Component {
           <b>Apply for a scholarship with our partners now and get coding:</b>
         </p>
 
-
         <div className={styles.partnerSchools}>
           <SchoolCard
-            key="0"
-            alt="Thinkful Logo"
-            schoolName="Thinkful"
-            link="http://www.thinkful.com"
+            alt="Bloc Logo"
+            schoolName="Bloc"
+            link="http://try.bloc.io/operation-code-bootcamp-scholarship/"
             schoolAddress="Online"
-            logo="https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/thinkful.jpg"
+            logo="https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/bloc.jpg"
             GI="No"
             fullTime="Self-Driven"
             hardware="No"
           />
           <SchoolCard
-            key="1"
-            alt="Sabio Logo"
-            schoolName="Sabio"
-            link="http://sabio.la/veterans"
-            schoolAddress="400 Corporate Pointe"
-            schoolCity="Culver City"
-            schoolState="CA"
-            logo="https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/sabio.jpg"
-            GI="Yes"
+            alt="Coder Camps Logo"
+            schoolName="Coder Camps"
+            link="https://www.codeplatoon.org/"
+            schoolAddress="Online, Pheonix, Seattle"
+            logo="https://raw.githubusercontent.com/OperationCode/operationcode_frontend/master/src/images/codeSchoolLogos/coder_camps.jpg"
+            GI="No"
             fullTime="Full-Time"
             hardware="No"
           />
           <SchoolCard
-            key="2"
+            alt="Code Platoon Logo"
+            schoolName="Code Platoon"
+            link="https://www.codeplatoon.org/"
+            schoolAddress="Online, Chicago"
+            logo="https://raw.githubusercontent.com/OperationCode/operationcode_frontend/master/src/images/codeSchoolLogos/code_platoon.jpg"
+            GI="No"
+            fullTime="Full-Time"
+            hardware="No"
+          />
+          <SchoolCard
             alt="Flatiron Logo"
             schoolName="The Flatiron School"
             link="http://flatironschool.com/"
@@ -70,7 +74,38 @@ class PartnerSchools extends Component {
             hardware="No"
           />
           <SchoolCard
-            key="3"
+            alt="Fullstack Academy Logo"
+            schoolName="Fullstack Academy"
+            link="https://www.fullstackacademy.com/remote-immersive#scholarships"
+            schoolAddress="Online, Chicago, New York"
+            logo="https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/fullstack_academy.jpg"
+            GI="No"
+            fullTime="Full-Time"
+            hardware="No"
+          />
+          <SchoolCard
+            alt="Launch School Logo"
+            schoolName="Launch School"
+            link="https://launchschool.com/blog/operation-code-scholarship/"
+            schoolAddress="Online"
+            logo="https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/launch_school.jpg"
+            GI="No"
+            fullTime="Self-Driven"
+            hardware="No"
+          />
+          <SchoolCard
+            alt="Sabio Logo"
+            schoolName="Sabio"
+            link="http://sabio.la/veterans"
+            schoolAddress="400 Corporate Pointe"
+            schoolCity="Culver City"
+            schoolState="CA"
+            logo="https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/sabio.jpg"
+            GI="Yes"
+            fullTime="Full-Time"
+            hardware="No"
+          />
+          <SchoolCard
             alt="Startup Institute Logo"
             schoolName="Startup Institute"
             link="https://www.startupinstitute.com/new-york/"
@@ -83,47 +118,13 @@ class PartnerSchools extends Component {
             hardware="No"
           />
           <SchoolCard
-            key="4"
-            alt="Launch School Logo"
-            schoolName="Launch School"
-            link="https://launchschool.com/blog/operation-code-scholarship/"
+            alt="Thinkful Logo"
+            schoolName="Thinkful"
+            link="http://www.thinkful.com"
             schoolAddress="Online"
-            logo="https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/launch_school.jpg"
+            logo="https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/thinkful.jpg"
             GI="No"
             fullTime="Self-Driven"
-            hardware="No"
-          />
-          <SchoolCard
-            key="5"
-            alt="Bloc Logo"
-            schoolName="Bloc"
-            link="http://try.bloc.io/operation-code-bootcamp-scholarship/"
-            schoolAddress="Online"
-            logo="https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/bloc.jpg"
-            GI="No"
-            fullTime="Self-Driven"
-            hardware="No"
-          />
-          <SchoolCard
-            key="6"
-            alt="Fullstack Academy Logo"
-            schoolName="Fullstack Academy"
-            link="https://www.fullstackacademy.com/remote-immersive#scholarships"
-            schoolAddress="Online, Chicago, New York"
-            logo="https://raw.githubusercontent.com/OperationCode/operationcode_frontend/code-schools-cooper-kyle/src/images/codeSchoolLogos/fullstack_academy.jpg"
-            GI="No"
-            fullTime="Full-Time"
-            hardware="No"
-          />
-          <SchoolCard
-            key="7"
-            alt="Code Platoon Logo"
-            schoolName="Code Platoon"
-            link="https://www.codeplatoon.org/"
-            schoolAddress="Online, Chicago"
-            logo="https://raw.githubusercontent.com/OperationCode/operationcode_frontend/master/src/images/codeSchoolLogos/code_platoon.jpg"
-            GI="No"
-            fullTime="Full-Time"
             hardware="No"
           />
         </div>
