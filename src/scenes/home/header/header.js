@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import NavItem from 'shared/components/nav/navItem/navItem';
 import styles from './header.css';
+import NavItem from './navItem/navItem';
 import TopNav from './topNav/topNav';
 import SideNav from './sideNav/sideNav';
 import Logo from './logo/logo';
