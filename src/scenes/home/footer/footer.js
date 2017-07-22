@@ -29,7 +29,6 @@ class Footer extends Component {
               <Link to="/faq">FAQ</Link>
               <Link to="/team">Team</Link>
               {/*
-              <Link to="/about">About Us</Link>
               <Link to="/programs">Our Programs</Link>
               <Link to="/involved">Our Partners</Link>
               */}
@@ -40,6 +39,7 @@ class Footer extends Component {
               <Link to="/blog">Blog</Link> */}
               <Link to="/contact">Contact</Link>
               <a href="https://www.iubenda.com/privacy-policy/8174861" target="_blank" rel="noopener noreferrer">Privacy</a>
+              <a href="https://smile.amazon.com/ch/47-4247572" target="_blank" rel="noopener noreferrer">Amazon Smile</a>
             </div>
           </div>
         </div>
