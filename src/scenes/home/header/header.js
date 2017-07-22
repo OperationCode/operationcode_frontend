@@ -34,7 +34,7 @@ class Header extends Component {
         {signedIn && <NavItem to="/squads" text="Squads" onClick={onClick} />}
         {signedIn ? <NavItem to="/profile" text="Profile" onClick={onClick} />
                   : <NavItem to="/join" text="Join" onClick={onClick} />}
-        {signedIn ? (<button className="navItem" onClick={this.props.logOut}>Logout</button>)
+        {signedIn ? <NavItem to="/" text="Logout" onClick={this.props.logOut} />
                   : <NavItem to="/login" text="Login" onClick={onClick} />}
       </span>
     );
@@ -75,7 +75,7 @@ Header.defaultProps = {
   transparent: false,
   logOut: () => {},
   signedIn: false,
-  mentor: true // should this be false?
+  mentor: false
 };
 
 export default Header;
