@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import armySeal from 'images/serviceSeals/Army.png';
 import navySeal from 'images/serviceSeals/Navy.png';
 import marineSeal from 'images/serviceSeals/USMC.png';
@@ -13,18 +14,28 @@ import ValueCard from './valueCard/valueCard';
 import styles from './about.css';
 
 class About extends Component {
-  // TODO: Link /history, /faq, /contact, and /team somewhere on the page.
-
   render() {
     return (
       <div>
-        <Section title="Mission" theme="white">
+        <Section title="About" theme="white">
+          <p>
+            We at Operation Code strive to provide an efficient way into a tech career for veterans and their families. We work directly with Senators, Congressmen, and Congresswomen to allow veterans total control of their future by permitting the use of the GI Bill on coding bootcamps. You can read about our organization&apos;s history <Link to="/history">here</Link>.
+          </p>
+          <p>
+            Aside from our work on the Hill, we offer many services to veterans and are continuing to expand our offerings as often as possible. First and foremost, <Link to="/team">our staff</Link> work tirelessly to provide mentorship for veterans interested in learning about various tech careers. Dozens of software engineers, product managers, system architects, security engineers, and various other IT professionals act as 1-on-1  mentors to all of our members. We also have a hardware loan program to help veterans in need of a laptop!
+          </p>
+          <p>
+            As a non-profit organization, we rely heavily on your support. If you are interested in helping us financially, please <a href="https://donorbox.org/operationcode" target="_blank" rel="noopener noreferrer">donate here</a> or <a href="https://smile.amazon.com/ch/47-4247572" target="_blank" rel="noopener noreferrer">set your Amazon Smile organization to &quot;Operation Code&quot;</a>. If you have questions about our organization, platforms, or services, please reference our <Link to="/faq">FAQ page</Link>. Otherwise, do not hesitate to <Link to="/contact">reach out to our staff</Link>.
+          </p>
+        </Section>
+
+        <Section title="Mission">
           <p className={styles.sectionParagraph}>
             Operation Code is leading the way to expand opportunities for military veterans and their families. We aim to help veterans learn new skills and build their careers in the fast-growing technology sector. Our team’s mission - led by veterans and other dedicated, passionate volunteers - is to help open doors for our diverse member base through unique program offerings, such as our Software Mentor Program, conference scholarships, and employment services. All of this is made possible by individual donations and corporate partnerships.
           </p>
         </Section>
 
-        <Section title="Who We Serve">
+        <Section title="Who We Serve" theme="white">
           <p className={styles.sectionParagraph}>
             Past and present Army, Navy, Marines, Air Force, and Coast Guard service members, veterans, military spouses, and family members are welcome to apply to any of our programs. Through our online community, we work with 2000+ members around the world.
           </p>
@@ -42,7 +53,7 @@ class About extends Component {
           </div>
         </Section>
 
-        <Section title="Core Values" theme="white">
+        <Section title="Core Values">
           <div className={styles.coreValues}>
             <ValueCard
               name="Integrity"
