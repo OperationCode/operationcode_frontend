@@ -1,14 +1,13 @@
-import React, { Component } from 'react';
-import Nav from 'shared/components/nav/nav';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import styles from './topNav.css';
 
-class TopNav extends Component {
+class TopNav extends PureComponent {
   render() {
     return (
-      <Nav className={styles.topNav} >
+      <div className={styles.topNav} >
         {this.props.children}
-      </Nav>
+      </div>
     );
   }
 }
