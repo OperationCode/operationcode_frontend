@@ -34,7 +34,7 @@ import Press from './press/press';
 import styles from './home.css';
 
 class Home extends Component {
-constructor(props) {
+  constructor(props) {
     super(props);
     this.state = {
       bgImage: false,
