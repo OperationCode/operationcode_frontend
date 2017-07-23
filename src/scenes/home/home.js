@@ -30,7 +30,7 @@ import MentorRequest from './mentorRequest/mentorRequest';
 import SquadsNew from './squads/squadsNew/squadsNew';
 import CodeSchools from './codeSchools/codeSchools';
 import About from './about/about';
-import Media from './media/media';
+import Press from './press/press';
 import styles from './home.css';
 
 class Home extends Component {
@@ -152,8 +152,8 @@ class Home extends Component {
               component={About}
             />
             <Route
-              path="/media"
-              component={Media}
+              path="/press"
+              component={Press}
             />
             <Route
               exact
