@@ -1,0 +1,33 @@
+.videos {
+  padding-top: 15px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+iframe {
+  padding: 25px;
+}
+
+/* Video iFrame Media Queries */
+@media screen and (max-width: 960px) {
+  iframe {
+    width: 666px;
+    height: 375px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  iframe {
+    width: 444px;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  iframe {
+    width: 333px;
+    height: 187.5px;
+  }
+}
