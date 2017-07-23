@@ -34,7 +34,7 @@ import Press from './press/press';
 import styles from './home.css';
 
 class Home extends Component {
-  constructor(props) {
+constructor(props) {
     super(props);
     this.state = {
       bgImage: false,
@@ -153,6 +153,10 @@ class Home extends Component {
             />
             <Route
               path="/press"
+              component={Press}
+            />
+            <Route
+              path="/media"
               component={Press}
             />
             <Route
