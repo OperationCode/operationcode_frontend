@@ -17,8 +17,8 @@
 
 .content {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
+  width: 80%;
 }
