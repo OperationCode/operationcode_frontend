@@ -22,14 +22,14 @@
 }
 
 .blue {
-  background-color: #249CCC;
-  border-color:#249CCC;
+  background-color: #249CBC;
+  border-color:#249CBC;
   color: #fff;
 }
 
 .red:hover {
-  background-color: #E1665A;
-  border-color: #E1665A;
+  background-color: #F1665A;
+  border-color: #F1665A;
 }
 
 .blue:hover {
