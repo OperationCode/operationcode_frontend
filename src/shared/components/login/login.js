@@ -3,12 +3,14 @@ import React, { Component } from 'react';
 import Form from 'shared/components/form/form';
 import axios from 'axios';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import config from 'config/environment';
 import _ from 'lodash';
 import * as CookieHelpers from 'shared/utils/cookieHelper';
 import FormEmail from 'shared/components/form/formEmail/formEmail';
 import FormInput from 'shared/components/form/formInput/formInput';
 import FormButton from 'shared/components/form/formButton/formButton';
+import SignUpLink from 'shared/components/signUpLink/signUpLink';
 import styles from './login.css';
 
 require('./login.css');
@@ -113,6 +115,9 @@ class Login extends Component {
           {errorFeedback && <h2 className={styles.loginError}>{errorFeedback}</h2>}
           <FormButton className={styles.Button} text="Login" onClick={this.handleOnClick} />
         </Form>
+
+        <Link to="/reset_password">Reset Password</Link>
+        <SignUpLink />
       </Section>
     );
   }
