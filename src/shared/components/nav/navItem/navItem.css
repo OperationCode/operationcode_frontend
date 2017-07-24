@@ -15,3 +15,8 @@
 .disabledNavItem {
   display: none;
 }
+
+.navItem:hover {
+  text-shadow: 2px 2px 2px #333;
+  transition-duration: 0.2s;
+}
