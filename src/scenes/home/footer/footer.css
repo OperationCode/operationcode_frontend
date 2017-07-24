@@ -60,6 +60,11 @@
   padding: 0 30px;
 }
 
+.blockGroup a:hover {
+  font-weight: bold;
+  transition-duration: 0.1s;
+}
+
 .copyright {
   color:#F7F7F7;
   font-size: 1rem;

@@ -1,5 +1,10 @@
 .socialMediaItem {
   padding: 0 10px;
+  opacity: 0.8;
+}
+
+.socialMediaItem:hover {
+  opacity: 1;
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
