@@ -21,8 +21,18 @@
   color: #FFF;
 }
 
+.red:hover {
+  background-color: #F1665A;
+  border-color: #F1665A;
+}
+
 .blue {
   background-color: #249CBC;
   border-color:#249CBC;
   color: #fff;
+}
+
+.blue:hover {
+  background-color: #249CDE;
+  border-color: #249CDE;
 }
