@@ -31,6 +31,7 @@ import SquadsNew from './squads/squadsNew/squadsNew';
 import CodeSchools from './codeSchools/codeSchools';
 import About from './about/about';
 import Press from './press/press';
+import ResetPassword from './resetPassword/resetPassword';
 import styles from './home.css';
 
 class Home extends Component {
@@ -226,6 +227,7 @@ class Home extends Component {
               {...authProps}
             />
             <Route exact path="/about/financial-statements" component={FinancialStatements} />
+            <Route exact path="/reset_password" component={ResetPassword} />
             <Route
               path="*" component={FourOhFour}
             />
