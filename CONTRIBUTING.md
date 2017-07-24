@@ -42,11 +42,26 @@ If you're unfamiliar with any of the instructions, you can navigate the [rest of
 
 Lastly, if you run into any problems with the following instructions, please try to communicate with us on Slack. You can get an invite to our Slack channel by [requesting to join Operation Code](https://operationcode.org/join). Once in our Slack team, simply type: `/open #oc-projects` and then click enter.
 
+#### Forking and Cloning this repository
+
+1. Click on the 'Fork' button on the top right corner of the page. You'll have your own copy of the repository available on your Github account.
+2. Go to the forked repository page on your Github account.
+3. Click on the green 'Clone or download' button and copy the link.  
+Your link will look like `https://github.com/<your_username>/operationcode_frontend.git`.  
+(Use the HTTPS link. Click [here](https://help.github.com/articles/which-remote-url-should-i-use/) for more info).
+4. Open a terminal on your system and move to the directory where the repository should be.
+5. Run `git clone <paste the link here>`. You'll now have a local copy of the repository.
+6. `cd` to the repository.
+7. Run `git remote add upstream https://github.com/OperationCode/operationcode_frontend.git`.  
+**Note:** You may replace 'upstream' with any nickname you'd like to give to the original repository.  
+Run `git remote -v` to check if both the repositories are listed.
+8. Now you may make changes, add and commit to the repository.
+
 #### Initial Install
 1. Run `node -v`. If you do not have version 6 or greater, go to [nodejs.org](https://nodejs.org) and install the latest stable build.
 2. Run `npm -v`. If you do not have version 4 or greater, run `npm install -g npm`
 3. Run `yarn --version`. If you do not have version 0.21 or greater, run `npm install --global yarn`.
-4. Fork and clone the repository.
+4. [Fork and clone](#forking-and-cloning-this-repository) the repository.
 5. Move into the repository
 6. Run `yarn install`
 
