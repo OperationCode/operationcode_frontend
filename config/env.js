@@ -73,6 +73,7 @@ function getClientEnvironment(publicUrl) {
         // This should only be used as an escape hatch. Normally you would put
         // images into the `src` and `import` them in code to get their paths.
       PUBLIC_URL: publicUrl,
+      OC_BACKEND_HOST: process.env.OC_BACKEND_HOST || 'http://localhost:3000/',
       OC_BACKEND_URL: process.env.OC_BACKEND_URL || 'http://localhost:3000/api/v1',
       OC_HOST: process.env.OC_HOST || 'http://localhost:4000',
       OC_IDME_CLIENT_ID: process.env.OC_IDME_CLIENT_ID || '6d781bfd42506613a0fe4ad4123aaf6d',

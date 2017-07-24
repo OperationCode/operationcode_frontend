@@ -11,7 +11,7 @@ class SignUpLink extends Component {
 }
 
 SignUpLink.propTypes = {
-  text: PropTypes.text
+  text: PropTypes.string
 };
 
 SignUpLink.defaultProps = {
