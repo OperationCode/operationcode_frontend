@@ -11,7 +11,7 @@ class Press extends Component {
       <div>
         <Section title="Press" theme="white">
           <p>
-            This page is designed to make a journalist&apos;s job easy in writing, blogging, or documenting Operation Code. Below you will find targeted information corresponding to common representative visitors, videos, and photos. Eventually this page will also contain a list of press releases and our branding guidelines (with logos/images for you to use). If you are looking for our mission statement or our values, please <Link to="/about">go to the About page</Link>. On other pages of our website you can <Link to="/faq">see answers to frequently asked questions</Link>, <Link to="/history">view our history</Link>, and <Link to="/team">learn more about our staff</Link>. Lastly, if you are seeking information not located on our website, please do not hesitate to email us at <a href="mailto:staff@operationcode.org">staff@operationcode.org</a>.
+            This page is designed to make a journalist&apos;s job easy in writing, blogging, or documenting Operation Code. Below you will find targeted information corresponding to common representative visitors, videos, photos, and our branding guidelines. Eventually this page will also contain a list of press releases. If you are looking for our mission statement or our values, please <Link to="/about">go to the About page</Link>. On other pages of our website you can <Link to="/faq">see answers to frequently asked questions</Link>, <Link to="/history">view our history</Link>, and <Link to="/team">learn more about our staff</Link>. Lastly, if you are seeking information not located on our website, please do not hesitate to email us at <a href="mailto:staff@operationcode.org">staff@operationcode.org</a>.
           </p>
 
           <br />
@@ -46,6 +46,11 @@ class Press extends Component {
 
         <Section title="Photos" theme="white">
           <PressPhotos />
+        </Section>
+
+        <Section title="Branding">
+          <br />
+          <a href="https://ocbranding.squarespace.com/" className={styles.brandingLink} target="_blank" rel="noopener noreferrer">CLICK HERE</a>
         </Section>
       </div>
     );

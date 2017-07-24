@@ -18,6 +18,10 @@
   text-align: center;
 }
 
+.brandingLink {
+  font-size: 1.5rem;
+}
+
 @media screen and (min-width: 415px) and (max-width: 1280px) {
   .column {
     width: 300px;
