@@ -24,13 +24,14 @@ class Footer extends Component {
             </p>
           </div>
           <div className={styles.outerFooterGroups}>
-            <div className={styles.blockGroup} >
+            <div className={styles.blockGroup}>
               <Link to="/about">About</Link>
               <Link to="/press">Press</Link>
               <Link to="/faq">FAQ</Link>
               <Link to="/team">Team</Link>
             </div>
-            <div className={styles.blockGroup} >
+            <div className={styles.blockGroup}>
+              <a href="https://github.com/OperationCode/operationcode_frontend/issues/new" target="_blank" rel="noopener noreferrer">Report A Bug</a>
               <a href="https://smile.amazon.com/ch/47-4247572" target="_blank" rel="noopener noreferrer">Amazon Smile</a>
               <Link to="/contact">Contact</Link>
               <a href="https://www.iubenda.com/privacy-policy/8174861" target="_blank" rel="noopener noreferrer">Privacy</a>
