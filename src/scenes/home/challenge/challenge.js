@@ -13,11 +13,12 @@ class Challenge extends Component {
   }
 
   componentDidMount() {
-    axios.get(namesFile).then((response) => {
-      const names = response.data;
-      console.log(names);
-      this.setState({ names });
-    });
+    if (!this.state.names) {
+      axios.get(namesFile).then((response) => {
+        const names = response.data;
+        this.setState({ names });
+      });
+    }
   }
 
   render() {
