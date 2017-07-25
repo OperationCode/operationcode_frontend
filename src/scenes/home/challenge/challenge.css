@@ -1,0 +1,18 @@
+code {
+  background-color: #F0F2F2;
+  border-radius: 4px;
+  border-style: solid;
+  border-color: #F0F2F2;
+}
+
+.displayLinebreak {
+  white-space: pre-line;
+}
+
+a {
+  word-wrap: break-word;
+}
+
+.displayBlock > div {
+  display: block;
+}

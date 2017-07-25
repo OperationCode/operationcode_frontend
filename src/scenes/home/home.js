@@ -32,6 +32,7 @@ import CodeSchools from './codeSchools/codeSchools';
 import About from './about/about';
 import Press from './press/press';
 import ResetPassword from './resetPassword/resetPassword';
+import Challenge from './challenge/challenge';
 import styles from './home.css';
 
 class Home extends Component {
@@ -159,6 +160,10 @@ class Home extends Component {
             <Route
               path="/media"
               component={Press}
+            />
+            <Route
+              path="/challenge"
+              component={Challenge}
             />
             <Route
               exact
