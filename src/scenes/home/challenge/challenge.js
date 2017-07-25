@@ -41,7 +41,7 @@ class Challenge extends Component {
             Congratulations - you now have your very own personal copy of our website!
           </p>
           <p>
-            Now lets edit a file to add your name! Click on the <code>opcode_challenge</code> directory and click on the file called <code>names.txt</code>. On the right hand side you should see a pencil icon. This will allow you to edit the file right on github!<br />
+            Now lets edit a file to add your name! Inside <code>src</code>, click on the <code>operationcode_challenge</code> directory and click on the file called <code>names.txt</code>. On the right hand side you should see a pencil icon. This will allow you to edit the file right on github!<br />
             Add your name to the file and then scroll to the bottom. Inside the <code>Commit changes</code> box type <code>Added &lt;YOUR NAME&gt;</code> into the box labeled <code>Update names.txt</code>.<br />
             Check the <code>Create a new branch</code> box and then click <code>Propose file change</code>.<br />
             Now navigate back to the repo we forked from: <a href="https://github.com/OperationCode/operationcode_frontend">https://github.com/OperationCode/operationcode_frontend</a>
