@@ -31,7 +31,7 @@ class Challenge extends Component {
           </p>
           <p>
             The first step we need to take is to visit the Github repository for this page. Github is a website dedicated to hosting source code. You can see all of the code written and used by Operation Code here: <a href="https://github.com/OperationCode">https://github.com/OperationCode</a><br />
-            Take a moment to explore Github. You can see this page here: <a href="https://github.com/OperationCode/operationcode_frontend/src/scenes/home/challenge/challenge.js">https://github.com/OperationCode/operationcode_frontend/src/scenes/home/challenge/challenge.js</a>
+            Take a moment to explore Github. You can see this page here: <a href="https://github.com/OperationCode/operationcode_frontend/blob/master/src/scenes/home/challenge/challenge.js">https://github.com/OperationCode/operationcode_frontend/blob/master/src/scenes/home/challenge/challenge.js</a>
           </p>
           <p>
             The next thing we need to do is fork the repository. Forking a repository takes a snapshot of the repo and places that snapshot into your personal area. This allows anyone to make changes to any project and easily contribute them back.<br />
