@@ -24,7 +24,7 @@ class Footer extends Component {
             </p>
           </div>
           <div className={styles.outerFooterGroups}>
-            <div className={styles.blockGroup} >
+            <div className={styles.blockGroup}>
               <Link to="/about">About</Link>
               <Link to="/press">Press</Link>
               <Link to="/faq">FAQ</Link>
