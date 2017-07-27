@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Label from 'shared/components/label/label';
+import Label from '../../label/label';
 import styles from './formInput.css';
 
 class FormInput extends Component {

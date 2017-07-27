@@ -12,7 +12,10 @@ module.exports = {
   ],
   module: {
     loaders: [
-      // add your custom loaders.
+      {
+        test: /\.css$/,
+        loader: 'style!css?modules'
+      }
     ],
   },
 };
