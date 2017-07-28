@@ -1,0 +1,41 @@
+.wide {
+  height: auto;
+  width: 100%;
+}
+
+.tall {
+  height: 100%;
+  width: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+img[alt^="Small"] {
+  transform: scale(.7);
+}
+
+.logos {
+  padding-top: 15px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logos > .imgBox {
+  padding: 25px;
+  height: auto;
+  width: 45%;
+}
+
+@media screen and (min-width: 415px) and (max-width: 1280px) {
+  .logos > .imgBox {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .logos > .imgBox {
+    width: 300px;
+  }
+}

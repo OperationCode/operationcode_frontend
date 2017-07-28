@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Section from 'shared/components/section/section';
 import PressVideos from './pressVideos/pressVideos';
 import PressPhotos from './pressPhotos/pressPhotos';
+import PressBranding from './pressBranding/pressBranding';
 import styles from './press.css';
 
 class Press extends Component {
@@ -49,8 +50,7 @@ class Press extends Component {
         </Section>
 
         <Section title="Branding">
-          <br />
-          <a href="https://ocbranding.squarespace.com/" className={styles.brandingLink} target="_blank" rel="noopener noreferrer">CLICK HERE</a>
+          <PressBranding />
         </Section>
       </div>
     );
