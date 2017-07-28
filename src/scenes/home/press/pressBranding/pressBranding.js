@@ -17,8 +17,10 @@ function PressBranding() {
       <div className={styles.imgBox}><img className={styles.wide} src={smallStackedLogo} alt="Small Stacked Logo" /></div>
       <div className={styles.imgBox}><img className={styles.tall} src={largeBlueMedal} alt="Large Blue Medal" /></div>
       <div className={styles.imgBox}><img className={styles.tall} src={smallRedMedal} alt="Small Red Medal" /></div>
-      <p>For the full range of sizes and colors, please <a href={logos}>download all logos (241KB)</a>.</p>
-      <p>The size ratio between the star and medallion changes depending on the size of reproduction, so please use the appropriate size: small when the logo is less than 1&quot; tall and large otherwise. Also, in most cases please refrain from using the red-accent logo: it is delivered for special uses only. Thank you!</p>
+      <div>
+        <p>For the full range of sizes and colors, please <a href={logos}>download all logos (241KB)</a>.</p>
+        <p>The size ratio between the star and medallion changes depending on the size of reproduction, so please use the appropriate size: small when the logo is less than 1&quot; tall and large otherwise. Also, in most cases please refrain from using the red-accent logo: it is delivered for special uses only. Thank you!</p>
+      </div>
     </div>
   );
 }

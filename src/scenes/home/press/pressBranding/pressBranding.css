@@ -11,7 +11,7 @@
 }
 
 img[alt^="Small"] {
-  transform: scale(.7);
+  transform: scale(.6);
 }
 
 .logos {
@@ -26,6 +26,7 @@ img[alt^="Small"] {
   padding: 25px;
   height: auto;
   width: 45%;
+  max-width: 560px;
 }
 
 @media screen and (min-width: 415px) and (max-width: 1280px) {
