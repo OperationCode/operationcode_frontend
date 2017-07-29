@@ -11,10 +11,13 @@
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
+  margin-top: -50px;
+  margin-bottom: 25px;
 }
 
   .partnerLogos img {
-    width: 175px;
+    //width: 125px;
+    height: 100px;
     filter: grayscale(100%);
     transition: .3s ease-in-out;
   }
@@ -24,8 +27,34 @@
   }
 
 .partnerLogos > div {
-  margin: .5% 2.5%;
+  margin: 50px 50px 0 50px;
 }
+
+  @media screen and (max-width: 800px) {
+    
+    .partners{
+      width: 100%;
+    }
+
+    .partnerLogos {
+      width: 100%;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0;
+    }
+
+    .partnerLogos img {
+      width: 40%;
+      height: auto;
+      filter: grayscale(0);
+    }
+
+    .partnerLogos > div {
+      margin: 0;
+    }
+
+  }
 
 .contactUs {
   text-align: center;
