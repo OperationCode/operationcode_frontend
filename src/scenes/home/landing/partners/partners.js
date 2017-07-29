@@ -19,7 +19,7 @@ class Partners extends Component {
       >
         <div className={styles.partners}>
           <p>
-            Operation Codxe and our all-volunteer team offers our
+            Operation Code and our all-volunteer team offers our
             programs and services through the generous support
             of our partners. Their support, made via either
             financial contributions or in-kind donations,
@@ -32,9 +32,11 @@ class Partners extends Component {
 
         <div className={styles.partnerLogos}>
           <div>
-            <a href="https://apexsystems.com/">
-              <img src={apexLogo} alt="Apex Systems" />
-            </a>
+            <div>
+              <a href="https://apexsystems.com/">
+                <img src={apexLogo} alt="Apex Systems" />
+              </a>
+            </div>
           </div>
           <div>
             <a href="https://github.com/">
