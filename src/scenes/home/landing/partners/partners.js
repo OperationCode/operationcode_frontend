@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import Section from 'shared/components/section/section';
 import LinkButton from 'shared/components/linkButton/linkButton';
-import apexLogo from 'images/partnerLogos/apex_systems_logo.jpg';
-import githubLogo from 'images/partnerLogos/github_logo.jpg';
-import dockerLogo from 'images/partnerLogos/docker_logo.jpg';
-import oracleLogo from 'images/partnerLogos/oracle_logo.jpg';
-import oreillyLogo from 'images/partnerLogos/oreilly_logo.jpg';
-import hackerrankLogo from 'images/partnerLogos/hackerrank_logo.jpg';
+import apexLogo from 'images/partnerLogos/apex_systems_logo.png';
+import githubLogo from 'images/partnerLogos/github_logo.png';
+import dockerLogo from 'images/partnerLogos/docker_logo.png';
+import oracleLogo from 'images/partnerLogos/oracle_logo.png';
+import oreillyLogo from 'images/partnerLogos/oreilly_logo.png';
+import hackerrankLogo from 'images/partnerLogos/hackerrank_logo.png';
 import styles from './partners.css';
 
 
@@ -19,7 +19,7 @@ class Partners extends Component {
       >
         <div className={styles.partners}>
           <p>
-            Operation Code and our all-volunteer team offers our
+            Operation Codxe and our all-volunteer team offers our
             programs and services through the generous support
             of our partners. Their support, made via either
             financial contributions or in-kind donations,
@@ -33,32 +33,32 @@ class Partners extends Component {
         <div className={styles.partnerLogos}>
           <div>
             <a href="https://apexsystems.com/">
-              <img src={apexLogo} alt="Apex Systems" width="200" />
+              <img src={apexLogo} alt="Apex Systems" />
             </a>
           </div>
           <div>
             <a href="https://github.com/">
-              <img src={githubLogo} alt="GitHub" width="200" />
+              <img src={githubLogo} alt="GitHub" />
             </a>
           </div>
           <div>
             <a href="https://docker.com/">
-              <img src={dockerLogo} alt="Docker" width="200" />
+              <img src={dockerLogo} alt="Docker" />
             </a>
           </div>
           <div>
             <a href="https://oreilly.com/">
-              <img src={oreillyLogo} alt="O&apos;Reilly Media" width="200" />
+              <img src={oreillyLogo} alt="O&apos;Reilly Media" />
             </a>
           </div>
           <div>
             <a href="https://hackerrank.com/">
-              <img src={hackerrankLogo} alt="HackerRank" width="200" />
+              <img src={hackerrankLogo} alt="HackerRank" />
             </a>
           </div>
           <div>
             <a href="https://oracle.com/">
-              <img src={oracleLogo} alt="Oracle" width="200" />
+              <img src={oracleLogo} alt="Oracle" />
             </a>
           </div>
         </div>

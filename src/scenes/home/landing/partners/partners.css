@@ -1,9 +1,8 @@
 .partners {
-  font-size: 16px;
-  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 80%;
 }
 
 .partnerLogos {
@@ -11,11 +10,21 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  padding-top: 15px;
+  align-items: center;
 }
 
+  .partnerLogos img {
+    width: 175px;
+    filter: grayscale(100%);
+    transition: .3s ease-in-out;
+  }
+
+  .partnerLogos img:hover {
+    filter: grayscale(0%);
+  }
+
 .partnerLogos > div {
-  margin: 2.5%;
+  margin: .5% 2.5%;
 }
 
 .contactUs {
