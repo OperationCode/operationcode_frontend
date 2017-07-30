@@ -19,7 +19,7 @@
     .partnerLogos img {
       height: 100px;
       filter: grayscale(100%);
-      transition: .3s ease-in-out;
+      transition: .2s ease-in-out;
     }
 
     .partnerLogos img:hover {
