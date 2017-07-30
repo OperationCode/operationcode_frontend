@@ -32,11 +32,9 @@ class Partners extends Component {
 
         <div className={styles.partnerLogos}>
           <div>
-            <div>
-              <a href="https://apexsystems.com/">
-                <img src={apexLogo} alt="Apex Systems" />
-              </a>
-            </div>
+            <a href="https://apexsystems.com/">
+              <img src={apexLogo} alt="Apex Systems" />
+            </a>
           </div>
           <div>
             <a href="https://github.com/">
