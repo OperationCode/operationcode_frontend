@@ -150,6 +150,11 @@ class Home extends Component {
               component={Contact}
             />
             <Route
+              exact
+              path="/about/financial-statements"
+              component={FinancialStatements}
+            />
+            <Route
               path="/about"
               component={About}
             />
@@ -231,7 +236,6 @@ class Home extends Component {
               updateRootAuthState={this.updateRootAuthState}
               {...authProps}
             />
-            <Route exact path="/about/financial-statements" component={FinancialStatements} />
             <Route exact path="/reset_password" component={ResetPassword} />
             <Route
               path="*" component={FourOhFour}
