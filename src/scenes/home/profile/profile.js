@@ -10,7 +10,7 @@ class Profile extends Component {
   render() {
     return (
       <div>
-        <Section title="Operation Code Community">
+        <Section title="Operation Code Community" theme="white">
           <span className={styles.discourseText}>Visit the Operation Code Community by clicking below.</span>
           <a href="https://community.operationcode.org">
             <img className={styles.discourseImage} src={discourseImage} alt="Visit the Operation Code Community" />
@@ -18,7 +18,7 @@ class Profile extends Component {
         </Section>
 
         <Section title="Sign-in with Slack">
-          <a href="https://slack.com/oauth/authorize?scope=identity.basic&client_id=3570763187.139671776449">
+          <a href="https://operation-code.slack.com">
             <img alt="Sign in with Slack" height="40" width="172" src="https://platform.slack-edge.com/img/sign_in_with_slack.png" srcSet="https://platform.slack-edge.com/img/sign_in_with_slack.png 1x, https://platform.slack-edge.com/img/sign_in_with_slack@2x.png 2x" />
           </a>
         </Section>
