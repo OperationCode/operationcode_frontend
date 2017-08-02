@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 // import { Redirect } from 'react-router-dom';
-import _ from 'lodash';
+// import _ from 'lodash';
 import Section from 'shared/components/section/section';
+// import config from 'config/environment';
 import Identifier from './identifier';
-import config from 'config/environment';
 import styles from './informationForm.css';
 
-class SignUp extends Component {
+class SignupInformation extends Component {
 
   constructor(props) {
     super(props);
+    this.onIdentifierStatusChange = this.onIdentifierStatusChange.bind(this);
     this.state = {
       error: false,
       isValid: true,
@@ -46,10 +47,10 @@ class SignUp extends Component {
         return <Success fieldValues={fieldValues} />
       */
       default:
-        return <Identifier />
+        return <Identifier update={this.onIdentifierStatusChange} />;
     }
   }
-
+  /*
   handleOnClick = (e) => {
     e.preventDefault = true;
     if (this.isFormValid()) {
@@ -79,7 +80,7 @@ class SignUp extends Component {
       });
     }
   }
-
+  */
   render() {
     const showStep = this.showStep();
     return (
@@ -91,4 +92,4 @@ class SignUp extends Component {
   }
 }
 
-export default SignUp;
+export default SignupInformation;
