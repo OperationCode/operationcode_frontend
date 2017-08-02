@@ -2,14 +2,12 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
 import _ from 'lodash';
-import { MENTOR_ANSWERS } from 'shared/constants/status';
 import Form from 'shared/components/form/form';
 import FormEmail from 'shared/components/form/formEmail/formEmail';
 import FormZipCode from 'shared/components/form/formZipCode/formZipCode';
 import FormPassword from 'shared/components/form/formPassword/formPassword';
 import FormButton from 'shared/components/form/formButton/formButton';
 import FormInput from 'shared/components/form/formInput/formInput';
-import FormSelect from 'shared/components/form/formSelect/formSelect';
 import Section from 'shared/components/section/section';
 import config from 'config/environment';
 import styles from './signup.css';
@@ -23,8 +21,12 @@ class SignUp extends Component {
       emailValid: true,
       error: false,
       isValid: true,
+<<<<<<< HEAD
       isLoading: false,
       mentor: false,
+=======
+      identifier: '',
+>>>>>>> d0fbeba... Add informaitonForm master component, remove form select from original signup form
       password: '',
       passwordConfirm: '',
       passwordValid: true,
@@ -42,8 +44,8 @@ class SignUp extends Component {
     this.setState({ lastName: value });
   }
 
-  onMentorStatusChange = (value) => {
-    this.setState({ mentor: value });
+  onIdentifierStatusChange = (value) => {
+    this.setState({ identifier: value });
   }
 
   onEmailChange = (value, valid) => {
@@ -71,7 +73,7 @@ class SignUp extends Component {
     this.setState({ isLoading: true });
 
     if (this.isFormValid()) {
-      const { email, zip, password, firstName, lastName, mentor } = this.state;
+      const { email, zip, password, firstName, lastName, identifier } = this.state;
       axios.post(`${config.backendUrl}/users`, {
         user: {
           first_name: firstName,
@@ -79,7 +81,7 @@ class SignUp extends Component {
           email,
           zip,
           password,
-          mentor
+          identifier
         }
       }).then(() => {
         this.setState({ success: true, error: null, isLoading: false });
@@ -116,12 +118,6 @@ class SignUp extends Component {
             Once you complete the form below you&#8217;ll be invited
             to join our Slack team.  Make sure you stop in and say hi!
           </span>
-          <FormSelect
-            id="mentor"
-            options={MENTOR_ANSWERS}
-            prompt="Would you like to be a mentor?"
-            onChange={e => this.onMentorStatusChange(e.target.value)}
-          />
           <FormEmail id="email" placeholder="Email" onChange={this.onEmailChange} />
           <FormInput id="firstName" placeholder="First Name" onChange={this.onFirstNameChange} />
           <FormInput id="lastName" placeholder="Last Name" onChange={this.onLastNameChange} />
