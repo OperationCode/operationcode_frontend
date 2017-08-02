@@ -17,6 +17,12 @@ class Profile extends Component {
           </a>
         </Section>
 
+        <Section title="Sign-in with Slack">
+          <a href="https://slack.com/oauth/authorize?scope=identity.basic&client_id=3570763187.139671776449">
+            <img alt="Sign in with Slack" height="40" width="172" src="https://platform.slack-edge.com/img/sign_in_with_slack.png" srcSet="https://platform.slack-edge.com/img/sign_in_with_slack.png 1x, https://platform.slack-edge.com/img/sign_in_with_slack@2x.png 2x" />
+          </a>
+        </Section>
+
         <Section title="Veteran Status" theme="white">
           {this.props.verified && <h2>Your profile is verified with id.me</h2>}
           {!this.props.verified && <div className={styles.idmeButton}><Idme /></div>}
