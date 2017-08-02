@@ -36,4 +36,19 @@ export const MENTOR_ANSWERS = [
   }
 ];
 
+export const IDENTIFIERS = [
+  {
+    value: 'civ',
+    label: 'Volunteer'
+  },
+  {
+    value: 'mil',
+    label: 'Mil / Vet / Spouse'
+  },
+  {
+    value: 'sponsor',
+    label: 'Sponsor'
+  }
+];
+
 export default REQUEST_STATUSES;
