@@ -22,8 +22,12 @@ class SignUp extends Component {
       error: false,
       isValid: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
       isLoading: false,
       mentor: false,
+=======
+      identifier: '',
+>>>>>>> d0fbeba... Add informaitonForm master component, remove form select from original signup form
 =======
       identifier: '',
 >>>>>>> d0fbeba... Add informaitonForm master component, remove form select from original signup form
