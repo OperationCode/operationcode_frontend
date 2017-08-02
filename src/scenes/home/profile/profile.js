@@ -13,7 +13,7 @@ class Profile extends Component {
         <Section title="Operation Code Community">
           <span className={styles.discourseText}>Visit the Operation Code Community by clicking below.</span>
           <a href="https://community.operationcode.org">
-            <img className={styles.discourseImage} src={discourseImage} alt="Verify your status with Id.Me" />
+            <img className={styles.discourseImage} src={discourseImage} alt="Visit the Operation Code Community" />
           </a>
         </Section>
 
