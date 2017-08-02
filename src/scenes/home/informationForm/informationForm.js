@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Redirect } from 'react-router-dom';
-import { IDENTIFIERS } from 'shared/constants/status';
+// import { Redirect } from 'react-router-dom';
 import _ from 'lodash';
 import Section from 'shared/components/section/section';
+import Identifier from './identifier';
 import config from 'config/environment';
-import styles from './signup.css';
+import styles from './informationForm.css';
 
 class SignUp extends Component {
 
@@ -16,7 +16,7 @@ class SignUp extends Component {
       isValid: true,
       identifier: '',
       success: false,
-      step: '1'
+      step: ''
     };
   }
 
@@ -25,13 +25,15 @@ class SignUp extends Component {
   }
 
   showStep = () => {
-    switch (this.state.step) {
-      case 1:
+    const step = this.state.step + this.state.identifier;
+    switch (step) {
+      /*
+      case '1mil':
         return <AccountFields fieldValues={fieldValues}
                               nextStep={this.nextStep}
                               previousStep={this.previousStep}
                               saveValues={this.saveValues} />
-      case 2:
+      case '1civ':
         return <SurveyFields fieldValues={fieldValues}
                              nextStep={this.nextStep}
                              previousStep={this.previousStep}
@@ -42,6 +44,7 @@ class SignUp extends Component {
                              submitRegistration={this.submitRegistration} />
       case 4:
         return <Success fieldValues={fieldValues} />
+      */
       default:
         return <Identifier />
     }
