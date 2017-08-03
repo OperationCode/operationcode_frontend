@@ -3,8 +3,9 @@ import React, { Component } from 'react';
 // import { Redirect } from 'react-router-dom';
 // import _ from 'lodash';
 import Section from 'shared/components/section/section';
+import FormButton from 'shared/components/form/formButton/formButton';
 // import config from 'config/environment';
-import Identifier from './identifier';
+import Identifier from './formComponents/identifier';
 import styles from './informationForm.css';
 
 class SignupInformation extends Component {
@@ -25,68 +26,61 @@ class SignupInformation extends Component {
     this.setState({ identifier: value });
   }
 
+  saveAndContinue = () => {
+    this.setState({ step: this.state.step + 1 });
+    /*
+    axios.patch(`${config.backendHost}/users/password`, {
+      user: {
+        reset_password_token: this.props.resetPasswordToken,
+        password: this.state.password
+      }
+    }).then(() => {
+      this.setState({ step: this.state.step + 1 });
+    }).catch(() => {
+      this.setState({ error: 'We were unable to set the password for this email' });
+    });
+    */
+  }
+
   showStep = () => {
     const step = this.state.step + this.state.identifier;
     switch (step) {
-      /*
       case '1mil':
-        return <AccountFields fieldValues={fieldValues}
-                              nextStep={this.nextStep}
-                              previousStep={this.previousStep}
-                              saveValues={this.saveValues} />
+        return (
+          <Section>
+            <p>MilStep1</p>
+          </Section>
+        );
       case '1civ':
-        return <SurveyFields fieldValues={fieldValues}
-                             nextStep={this.nextStep}
-                             previousStep={this.previousStep}
-                             saveValues={this.saveValues} />
+        return (
+          <Section>
+            <p>CivStep1</p>
+          </Section>
+        );
       case 3:
-        return <Confirmation fieldValues={fieldValues}
-                             previousStep={this.previousStep}
-                             submitRegistration={this.submitRegistration} />
+        return (
+          <Section>
+            <p>MilStep2</p>
+          </Section>
+        );
       case 4:
-        return <Success fieldValues={fieldValues} />
-      */
+        return (
+          <Section>
+            <p>MilStep3</p>
+          </Section>
+        );
       default:
         return <Identifier update={this.onIdentifierStatusChange} />;
     }
   }
-  /*
-  handleOnClick = (e) => {
-    e.preventDefault = true;
-    if (this.isFormValid()) {
-      const { email, zip, password, firstName, lastName, identifier } = this.state;
-      axios.post(`${config.backendUrl}/users`, {
-        user: {
-          first_name: firstName,
-          last_name: lastName,
-          email,
-          zip,
-          password,
-          identifier
-        }
-      }).then(() => {
-        this.setState({ success: true, error: null });
-      }).catch((error) => {
-        const data = _.get(error, 'response.data');
-        let errorMessage = '';
-        if (data) {
-          Object.keys(data).forEach((key) => {
-            if (data && data.hasOwnProperty(key)) { // eslint-disable-line
-              errorMessage += ` ${key}: ${data[key][0]} `;
-            }
-          });
-        }
-        this.setState({ error: errorMessage });
-      });
-    }
-  }
-  */
+
   render() {
     const showStep = this.showStep();
     return (
       <Section className={styles.signup} title="More Info">
         <p>At Op-Code, we really need more information to make this all work. Please take a minute to complete these steps.</p>
         {showStep}
+        <FormButton className={styles.joinButton} text="Save and Continue" onClick={this.saveAndContinue} theme="red" />
       </Section>
     );
   }
