@@ -220,7 +220,7 @@ class Home extends Component {
             <Route
               path="/login"
               render={() => (
-                <Login updateRootAuthState={this.updateRootAuthState} {...authProps} />
+                <Login updateRootAuthState={this.updateRootAuthState} isLoggedIn={this.state.signedIn} {...authProps} />
               )}
             />
             <AuthenticatedRoute
