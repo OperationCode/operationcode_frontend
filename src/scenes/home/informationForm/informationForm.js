@@ -50,13 +50,9 @@ class SignupInformation extends Component {
     const step = this.state.step + this.state.identifier;
     switch (step) {
       case '1mil':
-        return <WorkInfo />;
+        return <WorkInfo update={this.onIdentifierStatusChange} />;
       case '1civ':
-        return (
-          <Section>
-            <p>CivStep1</p>
-          </Section>
-        );
+        return <WorkInfo update={this.onIdentifierStatusChange} />;
       case 3:
         return (
           <Section>

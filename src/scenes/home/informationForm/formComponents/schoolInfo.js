@@ -3,27 +3,28 @@ import Form from 'shared/components/form/form';
 import PropTypes from 'prop-types';
 import FormSelect from 'shared/components/form/formSelect/formSelect';
 // import FormInput from 'shared/components/form/formInput/formInput';
-import { WORKINFO } from 'shared/constants/status';
+import { SCHOOLINFO, SCHOOLTYPE } from 'shared/constants/status';
 
-class WorkInfo extends Component {
+class SchoolInfo extends Component {
 
   render() {
     return (
       <Form>
         <FormSelect
-          id="WorkInfo"
-          options={WORKINFO}
-          prompt="Current Employment Status"
+          id="schoolInfo"
+          options={SCHOOLINFO}
+          prompt="How much schooling do you have?"
+          onChange={e => this.props.update(e, e.target.value)}
+        />
+        <FormSelect
+          id="schoolType"
+          options={SCHOOLTYPE}
+          prompt="School Type"
           onChange={e => this.props.update(e, e.target.value)}
         />
         <input
-          id="role"
-          placeholder="Job Role"
-          onChange={e => this.props.update(e, e.target.value)}
-        />
-        <input
-          id="company"
-          placeholder="Company Name"
+          id="schoolName"
+          placeholder="School Name"
           onChange={e => this.props.update(e, e.target.value)}
         />
       </Form>
@@ -31,12 +32,12 @@ class WorkInfo extends Component {
   }
 }
 
-WorkInfo.propTypes = {
+SchoolInfo.propTypes = {
   update: PropTypes.func
 };
 
-WorkInfo.defaultProps = {
+SchoolInfo.defaultProps = {
   update: null
 };
 
-export default WorkInfo;
+export default SchoolInfo;
