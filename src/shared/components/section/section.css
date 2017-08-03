@@ -15,10 +15,10 @@
   background-color: #FFF;
 }
 
-/*
-@media screen and (max-width: 768px) {
-  .section {
-    padding: 7.5% 0 7.5% 0;
-  }
+.content {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
 }
-*/

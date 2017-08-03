@@ -55,7 +55,6 @@ class ApprovedSchools extends Component {
         id="approvedSchools"
         title="VA-Approved Schools"
         headingLines={false}
-        margin
       >
         <div className={styles.vaSchools}>
           {vaSchools}

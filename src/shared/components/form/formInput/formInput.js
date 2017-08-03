@@ -37,6 +37,7 @@ class FormInput extends Component {
         {this.props.label && <Label htmlFor={this.props.id}>{this.props.label}</Label>}
 
         <input
+          className={!this.state.isValid && styles.error}
           id={this.props.id}
           type={this.props.inputType}
           value={this.state.text}

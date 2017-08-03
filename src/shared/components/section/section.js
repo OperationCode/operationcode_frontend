@@ -13,7 +13,6 @@ const Section = (props) => {
     theme,
     headingLines,
     headingTheme,
-    ...otherProps
   } = props;
 
   const classes = classNames({
@@ -23,9 +22,11 @@ const Section = (props) => {
   });
 
   return (
-    <div name={id} className={classes} {...otherProps} >
+    <div name={id} className={classes}>
       {title && <Heading text={title} id={id} headingLines={headingLines} theme={headingTheme} />}
-      {children}
+      <div className={styles.content}>
+        {children}
+      </div>
     </div>
   );
 };

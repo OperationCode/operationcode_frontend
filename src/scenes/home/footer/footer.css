@@ -1,21 +1,22 @@
 .footer {
   background-color: #4A4A4A;
-  height: 225px;
-  padding: 0 32px;
+  height: 250px;
+  padding: 0 20px;
   position: relative;
 }
 
 .content {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 100%;
 }
 
-.block {
-  flex: 1 0 40%;
+/* outerFooterGroups class represents the NON logo columns of the footer flex container */
+.outerFooterGroups {
   display: flex;
-  flex-direction: column;
+  flex: 1 0 30%;
+  flex-flow: column wrap;
   padding: 64px 0;
   justify-content: space-around;
   align-items: center;
@@ -35,50 +36,80 @@
 
 .logo {
   display: flex;
-  flex: 1 0 20%;
+  flex: 1 0 40%;
+  flex-flow: column wrap;
   justify-content: center;
   align-items: center;
 }
 
 .logo img {
-  height: 150px;
+  height: 120px;
 }
 
 .blockGroup {
   display: flex;
+  flex: 1 0 50%;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: space-around;
-  visibility: hidden; /* TODO: Remove to reveal footer links when routes have been implemented */
 }
 
 .blockGroup a {
   text-decoration: none;
   color: #F7F7F7;
-  padding: 0 20px;
+  padding: 0 30px;
+}
+
+.blockGroup a:hover {
+  font-weight: bold;
+  transition-duration: 0.1s;
 }
 
 .copyright {
-  position: absolute;
-  margin: 0 auto;
-  right: 0;
-  left: 0;
-  bottom: 10px;
-  width: 100;
   color:#F7F7F7;
+  font-size: 1rem;
   text-align: center;
-  font-size: 0.7rem;
+  min-width: 100%;
+}
+
+.copyrightLineBreak {
+  display: none;
+}
+
+@media screen and (max-width: 1330px) {
+  .outerFooterGroups {
+    flex: 1 0 35%;
+  }
+
+  .logo {
+    flex: 1 0 30%;
+  }
+}
+
+@media screen and (max-width: 979px) {
+  .copyrightLineBreak {
+    display: block;
+  }
 }
 
 @media screen and (min-width: 481px) and (max-width: 979px) {
-
-  .logo img {
-    height: 90px;
+  .logo > img {
+    height: 100px;
   }
 
+  .logo > p {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logo > p {
+    font-size: 0.5rem;
+  }
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
-  .block {
+  .outerFooterGroups {
     padding: 32px 0;
   }
 
@@ -99,48 +130,39 @@
 }
 
 @media screen and (max-width: 480px) {
+  .footer {
+    height: 500px;
+    padding: 0 16px;
+  }
 
-    .footer {
-      height: 410px;
-      padding: 0px 16px;
-    }
+  .content {
+    display: block;
+  }
 
-    .content {
-      display: block;
-    }
+  .outerFooterGroups {
+    justify-content: center;
+    flex: 1 0 auto;
+    padding: 20px 0;
+  }
 
-    .block {
-      justify-content: center;
-      flex: 1 0 auto;
-      padding: 16px 0;
-    }
+  .email {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
 
-    .email {
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-    }
+  .logo img {
+    height: 100px;
+  }
 
-    .logo {
-      flex: 0 1 auto;
-    }
+  .blockGroup {
+    font-size: 1rem;
+  }
 
-    .logo img {
-      height: 90px;
-    }
+  .blockGroup a {
+    padding: 10px 10px;
+  }
 
-    .blockGroup {
-      font-size: 1.3rem;
-    }
-
-    .blockGroup a {
-      padding: 0 10px;
-    }
-
-    .blockGroup ~ .blockGroup {
-          margin-top: 16px;
-    }
-
-    .copyright {
-      font-size: 1rem;
-    }
+  .blockGroup ~ .blockGroup {
+    margin-top: 10px;
+  }
 }

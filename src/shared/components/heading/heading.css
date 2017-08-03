@@ -3,7 +3,6 @@
   flex-direction: row;
   justify-content: center;
   width: 80%;
-  font-size: 36px;
 }
 
 .headingLines:before,
@@ -24,8 +23,15 @@
   color: #FFF;
 }
 
-@media only screen and (max-width: 500px) {
+
+@media screen and (max-width: 650px) {
   .heading {
-    font-size: 24px;
+    font-size: 1.8em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .heading {
+    font-size: 1.5em;
   }
 }

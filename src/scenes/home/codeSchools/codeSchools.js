@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import LinkButton from 'shared/components/linkButton/linkButton';
 import Section from 'shared/components/section/section';
 import ApprovedSchools from './approvedSchools/approvedSchools';
@@ -31,12 +30,8 @@ class CodeSchools extends Component {
         <Section
           title="Code Schools"
           theme="white"
-          margin
         >
-          <p className={styles.leadingParagraph}>
-            Code schools prepare aspiring programmers for new careers in software development.
-          </p>
-          <p className={styles.secondParagraph}>
+          <p>
             Code schools are accelerated learning programs that will prepare you for a career in
             software development. <br />Each school listed below ranges in length, vary in tuition costs,
             and in programming languages. <br />Desirable from an employer&apos;s standpoint, code schools
@@ -45,7 +40,7 @@ class CodeSchools extends Component {
             <br />
             <br />
             We encourage you to check out the schools below, do your research, and ask fellow
-            software developers in <Link to="https://operation-code.slack.com/">Slack</Link>.
+            software developers in <a href="https://operation-code.slack.com/">Slack</a>.
           </p>
 
           <div className={styles.filterButtonDiv}>

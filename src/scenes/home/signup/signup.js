@@ -15,6 +15,7 @@ import config from 'config/environment';
 import styles from './signup.css';
 
 class SignUp extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -65,7 +66,6 @@ class SignUp extends Component {
 
   handleOnClick = (e) => {
     e.preventDefault = true;
-
     if (this.isFormValid()) {
       const { email, zip, password, firstName, lastName, mentor } = this.state;
       axios.post(`${config.backendUrl}/users`, {
@@ -120,10 +120,15 @@ class SignUp extends Component {
           <FormInput id="firstName" placeholder="First Name" onChange={this.onFirstNameChange} />
           <FormInput id="lastName" placeholder="Last Name" onChange={this.onLastNameChange} />
           <FormZipCode id="zip" placeholder="Zip Code" onChange={this.onZipChange} />
-          <FormPassword id="password" placeholder="Password" onChange={this.onPasswordChange} />
+          <FormPassword
+            id="password" placeholder="Password"
+            onChange={this.onPasswordChange} validationRegex={/^(?=.*[A-Z]).{6,}$/}
+            validationErrorMessage="Must be 6 characters long and include a capitalized letter"
+          />
           <FormPassword
             id="passwordConfirm" placeholder="Confirm Password"
             onChange={this.onConfirmPasswordChange} validateFunc={this.validatePasswordConfirm}
+            validationErrorMessage="Passwords must match"
           />
           {this.state.error ? <ul className={styles.errorList}>There was an error joining Operation Code:
             <li className={styles.errorMessage}>{this.state.error}</li>

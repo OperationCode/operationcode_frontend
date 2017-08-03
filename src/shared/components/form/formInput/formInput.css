@@ -5,3 +5,17 @@
 .formInput > input::placeholder {
   color: #999;
 }
+
+.formInput > .error {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #D1665A;
+}
+
+.formInput > span {
+  color: #D1665A;
+}
+
+.formInput > input:focus {
+  border-style: none;
+}
