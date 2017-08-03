@@ -13,7 +13,7 @@ class Identifier extends Component {
           id="identifier"
           options={IDENTIFIERS}
           prompt="Which describes you"
-          onChange={e => this.props.update(e.target.value)}
+          onChange={e => this.props.update(e, e.target.value)}
         />
       </Form>
     );
