@@ -44,10 +44,21 @@ export const IDENTIFIERS = [
   {
     value: 'mil',
     label: 'Mil / Vet / Spouse'
+  }
+];
+
+export const WORKINFO = [
+  {
+    value: 'fulltime',
+    label: 'Employed Full-Time'
   },
   {
-    value: 'sponsor',
-    label: 'Sponsor'
+    value: 'parttime',
+    label: 'Employed Part-Time'
+  },
+  {
+    value: 'none',
+    label: 'Currently Un-Employed'
   }
 ];
 
