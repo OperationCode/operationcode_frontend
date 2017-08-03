@@ -14,12 +14,12 @@ class WorkInfo extends Component {
           id="WorkInfo"
           options={WORKINFO}
           prompt="Current Employment Status"
-          onChange={e => this.props.update(e.target.value)}
+          onChange={e => this.props.update(e, e.target.value)}
         />
-        {this.state.employment !== 'none' &&
+        {this.state.workInfo !== 'none' &&
           <div>
-            <FormInput id="firstName" placeholder="First Name" onChange={this.onFirstNameChange} />
-            <FormInput id="lastName" placeholder="Last Name" onChange={this.onLastNameChange} />
+            <FormInput id="firstName" placeholder="First Name" onChange={e => this.props.update(e, e.target.value)} />
+            <FormInput id="lastName" placeholder="Last Name" onChange={e => this.props.update(e, e.target.value)} />
           </div>
         }
       </Form>

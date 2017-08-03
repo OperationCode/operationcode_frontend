@@ -6,6 +6,7 @@ import Section from 'shared/components/section/section';
 import FormButton from 'shared/components/form/formButton/formButton';
 // import config from 'config/environment';
 import Identifier from './formComponents/identifier';
+import WorkInfo from './formComponents/workInfo';
 import styles from './informationForm.css';
 
 class SignupInformation extends Component {
@@ -17,13 +18,16 @@ class SignupInformation extends Component {
       error: false,
       isValid: true,
       identifier: '',
+      workInfo: 'none',
+      role: '',
+      company: '',
       success: false,
       step: ''
     };
   }
 
-  onIdentifierStatusChange = (value) => {
-    this.setState({ identifier: value });
+  onIdentifierStatusChange = (e, value) => {
+    this.setState({ [e.target.id]: value });
   }
 
   saveAndContinue = () => {
@@ -46,11 +50,7 @@ class SignupInformation extends Component {
     const step = this.state.step + this.state.identifier;
     switch (step) {
       case '1mil':
-        return (
-          <Section>
-            <p>MilStep1</p>
-          </Section>
-        );
+        return <WorkInfo />;
       case '1civ':
         return (
           <Section>
