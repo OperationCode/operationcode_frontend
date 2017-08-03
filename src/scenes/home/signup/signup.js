@@ -138,7 +138,7 @@ class SignUp extends Component {
             <li className={styles.errorMessage}>{this.state.error}</li>
           </ul> : null }
           {this.state.success && <Redirect to="/thanks" />}
-          {this.state.isLoading ? <FormButton className={styles.joinButton} text="Loading..." onClick={this.handleOnClick} theme="red" /> : <FormButton className={styles.joinButton} text="Join" onClick={this.handleOnClick} theme="red" />}
+          {this.state.isLoading ? <FormButton className={styles.joinButton} text="Loading..." disabled={this.state.isLoading} theme="red" /> : <FormButton className={styles.joinButton} text="Join" onClick={this.handleOnClick} theme="red" />}
         </Form>
       </Section>
     );
