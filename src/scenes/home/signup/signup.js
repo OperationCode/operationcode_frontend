@@ -23,6 +23,7 @@ class SignUp extends Component {
       emailValid: true,
       error: false,
       isValid: true,
+      isLoading: false,
       mentor: false,
       password: '',
       passwordConfirm: '',
@@ -66,6 +67,9 @@ class SignUp extends Component {
 
   handleOnClick = (e) => {
     e.preventDefault = true;
+
+    this.setState({ isLoading: true });
+
     if (this.isFormValid()) {
       const { email, zip, password, firstName, lastName, mentor } = this.state;
       axios.post(`${config.backendUrl}/users`, {
@@ -78,7 +82,7 @@ class SignUp extends Component {
           mentor
         }
       }).then(() => {
-        this.setState({ success: true, error: null });
+        this.setState({ success: true, error: null, isLoading: false });
       }).catch((error) => {
         const data = _.get(error, 'response.data');
         let errorMessage = '';
@@ -89,7 +93,7 @@ class SignUp extends Component {
             }
           });
         }
-        this.setState({ error: errorMessage });
+        this.setState({ error: errorMessage, isLoading: false });
       });
     }
   }
@@ -134,7 +138,7 @@ class SignUp extends Component {
             <li className={styles.errorMessage}>{this.state.error}</li>
           </ul> : null }
           {this.state.success && <Redirect to="/thanks" />}
-          <FormButton className={styles.joinButton} text="Join" onClick={this.handleOnClick} theme="red" />
+          {this.state.isLoading ? <FormButton className={styles.joinButton} text="Loading..." onClick={this.handleOnClick} theme="red" /> : <FormButton className={styles.joinButton} text="Join" onClick={this.handleOnClick} theme="red" />}
         </Form>
       </Section>
     );
