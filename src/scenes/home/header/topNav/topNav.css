@@ -28,6 +28,9 @@
     margin-right: 40px;
     font-size:16px;
   }
+  .topNav a {
+    margin: 0.7rem;
+  }
 }
 
 @media screen and (max-width: 760px) /* Tablet */ {
