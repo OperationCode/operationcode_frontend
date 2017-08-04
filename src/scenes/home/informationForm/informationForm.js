@@ -6,6 +6,7 @@ import Section from 'shared/components/section/section';
 import FormButton from 'shared/components/form/formButton/formButton';
 // import config from 'config/environment';
 import Identifier from './formComponents/identifier';
+import Interests from './formComponents/interests';
 import WorkInfo from './formComponents/workInfo';
 import SchoolInfo from './formComponents/schoolInfo';
 import MilitaryInfo from './formComponents/militaryInfo';
@@ -65,7 +66,9 @@ class SignupInformation extends Component {
         );
       case '2civ':
         return (
-          <p>tags section</p>
+          <Interests
+            percent={'75'}
+          />
         );
       case '3civ':
         return (
