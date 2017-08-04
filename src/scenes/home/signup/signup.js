@@ -95,6 +95,8 @@ class SignUp extends Component {
         }
         this.setState({ error: errorMessage, isLoading: false });
       });
+    } else {
+      this.setState({ error: 'Missing required field(s)', isLoading: false });
     }
   }
 
