@@ -100,6 +100,7 @@ class Gala extends Component {
                 <li>Table seating for 8</li>
               </ul>
             </div>
+            <div />
           </div>
           <div className={styles.container}>
             <div id="tt-widget">
@@ -112,7 +113,7 @@ class Gala extends Component {
             </div>
           </div>
         </Section>
-        <Section title="Event Information">
+        <Section title="Event Information" theme="white">
           <div className={styles.header}>
             <h3>Nov 10, 2017</h3>
             <h3>Governor&#39;s Ballroom, Sentinel Hotel</h3>
