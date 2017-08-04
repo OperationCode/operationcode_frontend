@@ -3,7 +3,7 @@ import Form from 'shared/components/form/form';
 import PropTypes from 'prop-types';
 import FormSelect from 'shared/components/form/formSelect/formSelect';
 // import FormInput from 'shared/components/form/formInput/formInput';
-import { SCHOOLINFO, SCHOOLTYPE } from 'shared/constants/status';
+import { SCHOOLINFO } from 'shared/constants/status';
 
 class SchoolInfo extends Component {
 
@@ -14,17 +14,6 @@ class SchoolInfo extends Component {
           id="schoolInfo"
           options={SCHOOLINFO}
           prompt="How much schooling do you have?"
-          onChange={e => this.props.update(e, e.target.value)}
-        />
-        <FormSelect
-          id="schoolType"
-          options={SCHOOLTYPE}
-          prompt="School Type"
-          onChange={e => this.props.update(e, e.target.value)}
-        />
-        <input
-          id="schoolName"
-          placeholder="School Name"
           onChange={e => this.props.update(e, e.target.value)}
         />
       </Form>
