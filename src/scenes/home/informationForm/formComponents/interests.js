@@ -12,22 +12,34 @@ class Interests extends Component {
         <span>Progress = {this.props.percent}%</span>
         <Line percent={this.props.percent} strokeWidth="4" strokeColor="green" />
         <FormCheckBox
-          name={'Java'}
+          name={'Interest'}
+          value={'Java'}
+          onChange={e => this.props.update(e, e.target.value)}
         />
         <FormCheckBox
-          name={'Java'}
+          name={'Interest'}
+          value={'Python'}
+          onChange={e => this.props.update(e, e.target.value)}
         />
         <FormCheckBox
-          name={'Java'}
+          name={'Interest'}
+          value={'Butts'}
+          onChange={e => this.props.update(e, e.target.value)}
         />
         <FormCheckBox
-          name={'Java'}
+          name={'Interest'}
+          value={'JS'}
+          onChange={e => this.props.update(e, e.target.value)}
         />
         <FormCheckBox
-          name={'Java'}
+          name={'Interest'}
+          value={'Other Butts'}
+          onChange={e => this.props.update(e, e.target.value)}
         />
         <FormCheckBox
-          name={'Java'}
+          name={'Interest'}
+          value={'Things'}
+          onChange={e => this.props.update(e, e.target.value)}
         />
       </Form>
     );
@@ -35,11 +47,13 @@ class Interests extends Component {
 }
 
 Interests.propTypes = {
-  percent: PropTypes.string
+  percent: PropTypes.string,
+  update: PropTypes.func
 };
 
 Interests.defaultProps = {
-  percent: '0'
+  percent: '0',
+  update: null,
 };
 
 export default Interests;

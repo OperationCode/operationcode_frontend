@@ -17,6 +17,7 @@ class SignupInformation extends Component {
   constructor(props) {
     super(props);
     this.onIdentifierStatusChange = this.onIdentifierStatusChange.bind(this);
+    this.checkBoxChange = this.checkBoxChange.bind(this);
     this.state = {
       error: false,
       isValid: true,
@@ -26,6 +27,10 @@ class SignupInformation extends Component {
   }
 
   onIdentifierStatusChange = (e, value) => {
+    this.setState({ [e.target.id]: value });
+  }
+
+  checkBoxChange = (e, value) => {
     this.setState({ [e.target.id]: value });
   }
 
@@ -67,6 +72,7 @@ class SignupInformation extends Component {
       case '2civ':
         return (
           <Interests
+            update={this.onIdentifierStatusChange}
             percent={'75'}
           />
         );
