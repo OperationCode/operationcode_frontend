@@ -9,3 +9,7 @@
 .blue {
   composes: blue from 'shared/styles/button.css';
 }
+
+.grey {
+  composes: grey from 'shared/styles/button.css';
+}
