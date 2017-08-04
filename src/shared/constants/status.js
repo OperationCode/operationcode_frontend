@@ -62,4 +62,27 @@ export const WORKINFO = [
   }
 ];
 
+export const SCHOOLINFO = [
+  {
+    value: 'postgrad',
+    label: 'Post Graduate Studies'
+  },
+  {
+    value: 'college',
+    label: '4 Year Degree'
+  },
+  {
+    value: 'associates',
+    label: '2 Year Degree'
+  },
+  {
+    value: 'bootcamp',
+    label: 'Code Bootcamp'
+  },
+  {
+    value: 'online',
+    label: 'Self-Taught (MOOCS, Etc.)'
+  },
+];
+
 export default REQUEST_STATUSES;

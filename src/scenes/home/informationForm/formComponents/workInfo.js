@@ -16,14 +16,16 @@ class WorkInfo extends Component {
           prompt="Current Employment Status"
           onChange={e => this.props.update(e, e.target.value)}
         />
+        <label htmlFor="role">Job Role</label>
         <input
           id="role"
-          placeholder="Job Role"
+          placeholder={this.props.role}
           onChange={e => this.props.update(e, e.target.value)}
         />
+        <label htmlFor="company">Company Name</label>
         <input
           id="company"
-          placeholder="Company Name"
+          placeholder={this.props.company}
           onChange={e => this.props.update(e, e.target.value)}
         />
       </Form>
@@ -32,11 +34,15 @@ class WorkInfo extends Component {
 }
 
 WorkInfo.propTypes = {
-  update: PropTypes.func
+  update: PropTypes.func,
+  role: PropTypes.string,
+  company: PropTypes.string
 };
 
 WorkInfo.defaultProps = {
-  update: null
+  update: null,
+  role: 'Your Role / Title',
+  company: 'Company Name'
 };
 
 export default WorkInfo;
