@@ -7,6 +7,7 @@ import FormButton from 'shared/components/form/formButton/formButton';
 // import config from 'config/environment';
 import Identifier from './formComponents/identifier';
 import WorkInfo from './formComponents/workInfo';
+import SchoolInfo from './formComponents/schoolInfo';
 import styles from './informationForm.css';
 
 class SignupInformation extends Component {
@@ -19,10 +20,12 @@ class SignupInformation extends Component {
       isValid: true,
       identifier: '',
       workInfo: 'none',
+      schoolLevel: '',
+      schoolInfo: '',
       role: '',
       company: '',
       success: false,
-      step: ''
+      step: 0
     };
   }
 
@@ -31,7 +34,7 @@ class SignupInformation extends Component {
   }
 
   saveAndContinue = () => {
-    this.setState({ step: this.state.step + 1 });
+    this.setState({ step: this.state.step += 1 });
     /*
     axios.patch(`${config.backendHost}/users/password`, {
       user: {
@@ -66,11 +69,12 @@ class SignupInformation extends Component {
             update={this.onIdentifierStatusChange}
           />
         );
-      case 3:
+      case '2mil':
         return (
-          <Section>
-            <p>MilStep2</p>
-          </Section>
+          <SchoolInfo
+            update={this.onIdentifierStatusChange}
+            percent={'50'}
+          />
         );
       case 4:
         return (
