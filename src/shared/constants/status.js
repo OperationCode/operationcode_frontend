@@ -57,32 +57,32 @@ export const WORKINFO = [
     label: 'Employed Part-Time'
   },
   {
-    value: 'none',
+    value: 'unemployed',
     label: 'Currently Un-Employed'
   }
 ];
 
 export const SCHOOLINFO = [
   {
-    value: 'postgrad',
-    label: 'Post Graduate Studies'
-  },
-  {
-    value: 'college',
-    label: '4 Year Degree'
-  },
-  {
-    value: 'associates',
-    label: '2 Year Degree'
+    value: 'online',
+    label: 'Self-Taught (MOOCS, Etc.)'
   },
   {
     value: 'bootcamp',
     label: 'Code Bootcamp'
   },
   {
-    value: 'online',
-    label: 'Self-Taught (MOOCS, Etc.)'
+    value: 'associates',
+    label: '2 Year Degree'
   },
+  {
+    value: 'college',
+    label: '4 Year Degree'
+  },
+  {
+    value: 'postgrad',
+    label: 'Post Graduate Studies'
+  }
 ];
 
 export default REQUEST_STATUSES;
