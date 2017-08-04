@@ -13,7 +13,7 @@ class SchoolInfo extends Component {
         <FormSelect
           id="schoolInfo"
           options={SCHOOLINFO}
-          prompt="How much schooling do you have?"
+          prompt="Level of Schooling"
           onChange={e => this.props.update(e, e.target.value)}
         />
       </Form>

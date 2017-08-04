@@ -55,6 +55,7 @@ class SignupInformation extends Component {
             role={this.state.role}
             company={this.state.company}
             update={this.onIdentifierStatusChange}
+            percent={'25'}
           />
         );
       case '1civ':
