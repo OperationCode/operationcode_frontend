@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Line } from 'rc-progress';
 import Form from 'shared/components/form/form';
 import PropTypes from 'prop-types';
 import FormSelect from 'shared/components/form/formSelect/formSelect';
@@ -10,6 +11,8 @@ class WorkInfo extends Component {
   render() {
     return (
       <Form>
+        <span>Progress = {this.props.percent}%</span>
+        <Line percent={this.props.percent} strokeWidth="4" strokeColor="green" />
         <FormSelect
           id="WorkInfo"
           options={WORKINFO}
@@ -36,13 +39,15 @@ class WorkInfo extends Component {
 WorkInfo.propTypes = {
   update: PropTypes.func,
   role: PropTypes.string,
-  company: PropTypes.string
+  company: PropTypes.string,
+  percent: PropTypes.string
 };
 
 WorkInfo.defaultProps = {
   update: null,
   role: 'Your Role / Title',
-  company: 'Company Name'
+  company: 'Company Name',
+  percent: '0'
 };
 
 export default WorkInfo;
