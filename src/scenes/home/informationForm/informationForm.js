@@ -8,6 +8,7 @@ import FormButton from 'shared/components/form/formButton/formButton';
 import Identifier from './formComponents/identifier';
 import WorkInfo from './formComponents/workInfo';
 import SchoolInfo from './formComponents/schoolInfo';
+import MilitaryInfo from './formComponents/militaryInfo';
 import styles from './informationForm.css';
 
 class SignupInformation extends Component {
@@ -18,12 +19,6 @@ class SignupInformation extends Component {
     this.state = {
       error: false,
       isValid: true,
-      identifier: '',
-      workInfo: 'none',
-      schoolLevel: '',
-      schoolInfo: '',
-      role: '',
-      company: '',
       success: false,
       step: 0
     };
@@ -54,9 +49,7 @@ class SignupInformation extends Component {
     switch (step) {
       case '1mil':
         return (
-          <WorkInfo
-            role={this.state.role}
-            company={this.state.company}
+          <MilitaryInfo
             update={this.onIdentifierStatusChange}
             percent={'25'}
           />
@@ -71,16 +64,19 @@ class SignupInformation extends Component {
         );
       case '2mil':
         return (
-          <SchoolInfo
+          <WorkInfo
+            role={this.state.role}
+            company={this.state.company}
             update={this.onIdentifierStatusChange}
             percent={'50'}
           />
         );
-      case 4:
+      case '3mil':
         return (
-          <Section>
-            <p>MilStep3</p>
-          </Section>
+          <SchoolInfo
+            update={this.onIdentifierStatusChange}
+            percent={'75'}
+          />
         );
       default:
         return <Identifier update={this.onIdentifierStatusChange} />;
