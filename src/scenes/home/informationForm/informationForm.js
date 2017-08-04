@@ -60,7 +60,16 @@ class SignupInformation extends Component {
             role={this.state.role}
             company={this.state.company}
             update={this.onIdentifierStatusChange}
+            percent={'50'}
           />
+        );
+      case '2civ':
+        return (
+          <p>tags section</p>
+        );
+      case '3civ':
+        return (
+          <p>next steps section</p>
         );
       case '2mil':
         return (
@@ -77,6 +86,14 @@ class SignupInformation extends Component {
             update={this.onIdentifierStatusChange}
             percent={'75'}
           />
+        );
+      case '4mil':
+        return (
+          <p> tags section </p>
+        );
+      case '5mil':
+        return (
+          <p> next steps section </p>
         );
       default:
         return <Identifier update={this.onIdentifierStatusChange} />;
