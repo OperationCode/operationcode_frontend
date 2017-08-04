@@ -85,4 +85,50 @@ export const SCHOOLINFO = [
   }
 ];
 
+export const MILSTATUS = [
+  {
+    value: 'current',
+    label: 'Currently Serving'
+  },
+  {
+    value: 'veteran',
+    label: 'Veteran'
+  },
+  {
+    value: 'spouse',
+    label: 'Spouse / Family Member of Service Member'
+  }
+];
+
+export const BRANCH = [
+  {
+    value: 'army',
+    label: 'Army / Army Reserves'
+  },
+  {
+    value: 'navy',
+    label: 'Navy / Navy Reserves'
+  },
+  {
+    value: 'marine',
+    label: 'Marine Corps / Marine Corps Reserves'
+  },
+  {
+    value: 'airforce',
+    label: 'Air Force / Air Force Reserves'
+  },
+  {
+    value: 'coastguard',
+    label: 'Coast Guard / Coast Guard Reserves'
+  },
+  {
+    value: 'armyguard',
+    label: 'Army National Guard'
+  },
+  {
+    value: 'airguard',
+    label: 'Air National Guard'
+  },
+];
+
 export default REQUEST_STATUSES;
