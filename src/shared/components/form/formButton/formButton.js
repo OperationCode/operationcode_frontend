@@ -28,7 +28,7 @@ FormButton.propTypes = {
   text: PropTypes.string.isRequired,
   onClick: PropTypes.func,
   className: PropTypes.string,
-  disabled: PropTypes.boolean,
+  disabled: PropTypes.bool,
 };
 
 FormButton.defaultProps = {
