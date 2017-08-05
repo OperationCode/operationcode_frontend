@@ -1,0 +1,18 @@
+.parent {
+  display: inline-block;
+}
+
+.children {
+  position: absolute;
+}
+
+@media screen and (max-width: 760px) {
+  .children {
+    position: relative;
+  }
+}
+
+.child {
+  text-align: left;
+  display: block;
+}

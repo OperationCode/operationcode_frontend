@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import styles from './header.css';
 import NavItem from './navItem/navItem';
+import NavDropdown from './navDropdown/navDropdown';
 import TopNav from './topNav/topNav';
 import SideNav from './sideNav/sideNav';
 import Logo from './logo/logo';
@@ -29,10 +30,12 @@ class Header extends Component {
         <NavItem to="/about" text="About" onClick={onClick} />
         <NavItem to="/code_schools" text="Code Schools" onClick={onClick} />
         <NavItem to="https://donorbox.org/operationcode" text="Donate" isExternal onClick={onClick} />
-        {signedIn && <NavItem to="/mentor-request" text="Request Help" onClick={onClick} />}
-        {signedIn && <NavItem to="/mentors" text="Mentors" onClick={onClick} />}
-        {mentor && <NavItem to="/requests" text="Requests" onClick={onClick} />}
-        {signedIn && <NavItem to="/squads" text="Squads" onClick={onClick} />}
+        {!signedIn && <NavDropdown text="Platform">
+          <NavItem to="/mentor-request" text="Request Help" onClick={onClick} />
+          <NavItem to="/mentors" text="Mentors" onClick={onClick} />
+          {mentor && <NavItem to="/requests" text="Requests" onClick={onClick} />}
+          <NavItem to="/squads" text="Squads" onClick={onClick} />
+        </NavDropdown>}
         {signedIn ? <NavItem to="/profile" text="Profile" onClick={onClick} />
                   : <NavItem to="/join" text="Join" onClick={onClick} />}
         {signedIn ? <NavItem to="/" text="Logout" onClick={this.props.logOut} />
