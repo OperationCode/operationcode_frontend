@@ -3,15 +3,15 @@ import Form from 'shared/components/form/form';
 import { Line } from 'rc-progress';
 import PropTypes from 'prop-types';
 import FormSelect from 'shared/components/form/formSelect/formSelect';
-// import FormInput from 'shared/components/form/formInput/formInput';
 import { SCHOOLINFO } from 'shared/constants/status';
+import styles from './formComponents.css';
 
 class SchoolInfo extends Component {
 
   render() {
     return (
-      <Form>
-        <span>Progress = {this.props.percent}%</span>
+      <Form className={styles.signup}>
+        <h3>Progress = {this.props.percent}%</h3>
         <Line percent={this.props.percent} strokeWidth="4" strokeColor="green" />
         <FormSelect
           id="schoolLevel"
@@ -19,7 +19,6 @@ class SchoolInfo extends Component {
           prompt="Level of Schooling"
           onChange={e => this.props.update(e, e.target.value)}
         />
-        <label htmlFor="schoolInfo">Seeking School Information?</label>
         <FormSelect
           id="schoolInfo"
           options={
