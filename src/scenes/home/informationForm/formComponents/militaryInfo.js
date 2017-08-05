@@ -3,15 +3,15 @@ import { Line } from 'rc-progress';
 import Form from 'shared/components/form/form';
 import PropTypes from 'prop-types';
 import FormSelect from 'shared/components/form/formSelect/formSelect';
-// import FormInput from 'shared/components/form/formInput/formInput';
 import { MILSTATUS, BRANCH } from 'shared/constants/status';
+import styles from './formComponents.css';
 
 class MilitaryInfo extends Component {
 
   render() {
     return (
-      <Form>
-        <span>Progress = {this.props.percent}%</span>
+      <Form className={styles.signup}>
+        <h3>Progress = {this.props.percent}%</h3>
         <Line percent={this.props.percent} strokeWidth="4" strokeColor="green" />
         <FormSelect
           id="militaryStatus"

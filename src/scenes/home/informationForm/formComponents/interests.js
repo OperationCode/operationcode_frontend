@@ -3,6 +3,7 @@ import { Line } from 'rc-progress';
 import Form from 'shared/components/form/form';
 import FormCheckBox from 'shared/components/form/formCheckBox/formCheckBox';
 import PropTypes from 'prop-types';
+import styles from './formComponents.css';
 
 const languageValues = ['Javascript', 'Ruby', 'Java', 'Python', 'C#', 'C', 'Swift', '.NET', 'HTML / CSS'];
 const disciplineValues = ['Web Developer', 'Web Designer', 'Front-End Developer', 'Back-End Developer', 'Full-Stack Developer', 'Mobile / IOS', 'Mobile / Android', 'I.T / SysAdmin', 'Cyber Security', 'Data Science'];
@@ -33,8 +34,8 @@ class Interests extends Component {
       )
     );
     return (
-      <Form>
-        <span>Progress = {this.props.percent}%</span>
+      <Form className={styles.signup}>
+        <h3>Progress = {this.props.percent}%</h3>
         <Line percent={this.props.percent} strokeWidth="4" strokeColor="green" />
         <label htmlFor="languages">Select any languages you are interested in</label>
         {languages}

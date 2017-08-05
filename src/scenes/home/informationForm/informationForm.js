@@ -10,7 +10,6 @@ import Interests from './formComponents/interests';
 import WorkInfo from './formComponents/workInfo';
 import SchoolInfo from './formComponents/schoolInfo';
 import MilitaryInfo from './formComponents/militaryInfo';
-import styles from './informationForm.css';
 
 class SignupInformation extends Component {
 
@@ -58,7 +57,7 @@ class SignupInformation extends Component {
         return (
           <MilitaryInfo
             update={this.onIdentifierStatusChange}
-            percent={'25'}
+            percent={'20'}
           />
         );
       case '1civ':
@@ -67,14 +66,14 @@ class SignupInformation extends Component {
             role={this.state.role}
             company={this.state.company}
             update={this.onIdentifierStatusChange}
-            percent={'50'}
+            percent={'33'}
           />
         );
       case '2civ':
         return (
           <Interests
             update={this.onCheckBoxChange}
-            percent={'75'}
+            percent={'66'}
           />
         );
       case '3civ':
@@ -87,21 +86,21 @@ class SignupInformation extends Component {
             role={this.state.role}
             company={this.state.company}
             update={this.onIdentifierStatusChange}
-            percent={'50'}
+            percent={'40'}
           />
         );
       case '3mil':
         return (
           <SchoolInfo
             update={this.onIdentifierStatusChange}
-            percent={'75'}
+            percent={'60'}
           />
         );
       case '4mil':
         return (
           <Interests
             update={this.onCheckBoxChange}
-            percent={'75'}
+            percent={'80'}
           />
         );
       case '5mil':
@@ -116,10 +115,10 @@ class SignupInformation extends Component {
   render() {
     const showStep = this.showStep();
     return (
-      <Section className={styles.signup} title="More Info">
-        <p>At Op-Code, we really need more information to make this all work. Please take a minute to complete these steps.</p>
+      <Section title="More Info">
+        <p>At Op-Code, we are dedicated to helping our community thrive. In order to do so, we need to collect some information to better serve you. Please take a minute to complete these steps and help us on our mission to code the future. We will never sell or distribute your information.</p>
         {showStep}
-        <FormButton className={styles.joinButton} text="Save and Continue" onClick={this.saveAndContinue} theme="red" />
+        <FormButton text="Save and Continue" onClick={this.saveAndContinue} theme="red" />
       </Section>
     );
   }
