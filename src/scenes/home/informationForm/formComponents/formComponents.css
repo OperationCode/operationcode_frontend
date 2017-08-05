@@ -33,3 +33,13 @@
 .signup {
   width:100%;
 }
+
+.signup .info__tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 40px;
+}
+
+.signup .info__tagsTitle {
+  font-size: 1.5em;
+}

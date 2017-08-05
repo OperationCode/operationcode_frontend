@@ -37,10 +37,23 @@ class Interests extends Component {
       <Form className={styles.signup}>
         <h3>Progress = {this.props.percent}%</h3>
         <Line percent={this.props.percent} strokeWidth="4" strokeColor="green" />
-        <label htmlFor="languages">Select any languages you are interested in</label>
-        {languages}
-        <label htmlFor="disciplines">Select any disciplines you are interested in</label>
-        {disciplines}
+        &nbsp;
+        <label htmlFor="languages">
+          <span className={styles.info__tagsTitle}>
+            Select any languages you are interested in
+          </span>
+        </label>
+        <div className={styles.info__tags}>
+          {languages}
+        </div>
+        <label htmlFor="disciplines">
+          <span className={styles.info__tagsTitle}>
+            Select any disciplines you are interested in
+          </span>
+        </label>
+        <div className={styles.info__tags}>
+          {disciplines}
+        </div>
       </Form>
     );
   }
