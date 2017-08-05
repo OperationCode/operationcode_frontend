@@ -70,12 +70,6 @@ class Team extends Component {
       src: 'https://raw.githubusercontent.com/OperationCode/operationcode_frontend/master/src/images/tyrone.png',
       alt: 'Dr. Tyrone Grandison'
     };
-    const aimee = {
-      name: 'Aimee Knight',
-      role: 'Board Member',
-      src: 'https://raw.githubusercontent.com/OperationCode/operationcode_frontend/master/src/images/aimee.jpg',
-      alt: 'Aimee Knight'
-    };
     const treasurer = {
       name: 'Elmer Thomas',
       role: 'Treasurer',
