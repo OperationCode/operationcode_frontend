@@ -6,7 +6,7 @@ class FormCheckBox extends Component {
 
   render() {
     return (
-      <div>
+      <div className={styles.checkBox}>
         <input
           type="checkbox"
           name={this.props.name}
