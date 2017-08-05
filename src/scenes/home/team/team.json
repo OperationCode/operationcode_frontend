@@ -56,12 +56,20 @@
         "role": "Austin Chapter Leader"
     },
     {
+        "name": "Evan Cooper",
+        "role": "Frontend Developer"
+    },
+    {
         "name": "Franklin Webber",
         "role": "Scholarship Committee"
     },
     {
         "name": "George Everts",
         "role": "Code School Outreach Specialist/Troops to Coders Lead"
+    },
+    {
+        "name": "Harry Levine",
+        "role": "Backend Developer"
     },
     {
         "name": "Ian Lenny",
@@ -96,10 +104,6 @@
         "role": "Portland Chapter Leader"
     },
     {
-        "name": "John Bailey",
-        "role": "Finance Advisor"
-    },
-    {
         "name": "John Garcia",
         "role": "Board Advisor"
     },
@@ -120,6 +124,10 @@
         "role": "Seattle Chapter Co-Leader"
     },
     {
+        "name": "Julian Meyer",
+        "role": "Backend Developers"
+    },
+    {
         "name": "Ken Collier",
         "role": "Utah Chapter Leader"
     },
@@ -133,7 +141,7 @@
     },
     {
         "name": "Kyle Holmberg",
-        "role": "Python-Squad Lead"
+        "role": "Frontend Developer"
     },
     {
         "name": "Larry Burris",
@@ -158,6 +166,10 @@
     {
         "name": "Matthew Bach",
         "role": "Hampton Roads Chapter Assistant"
+    },
+    {
+        "name": "Matt MacNeil",
+        "role": "UX Designer"
     },
     {
         "name": "Meg Ludwa",
@@ -198,6 +210,10 @@
     {
         "name": "Roy Mosby",
         "role": "Ft. Stewart - HAAF Chapter Leader"
+    },
+    {
+        "name": "Seth Bergman",
+        "role": "Frontend Developer"
     },
     {
         "name": "Shelly Xiong",
