@@ -5,6 +5,24 @@
 This is the repository for the front-end portion of https://operationcode.org.
 
 ## Quick Start
+
+### TLDR
+```
+npm i
+// or
+yarn
+```
+
+```
+npm run backend
+```
+If it doesn't work the first time, run it again.
+
+In another shell tab:
+```
+npm start
+```
+
 If you're an experienced developer, please navigate to our [Quick Start Guide](https://github.com/OperationCode/operationcode_frontend/blob/master/CONTRIBUTING.md#quick-start-guide).
 
 ## What is a frontend?
