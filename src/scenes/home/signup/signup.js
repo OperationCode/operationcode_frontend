@@ -186,9 +186,12 @@ class SignUp extends Component {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           {this.state.success && <Redirect to="/thanks" />}
           {this.state.isLoading ? <FormButton className={styles.joinButton} text="Loading..." disabled theme="grey" /> : <FormButton className={styles.joinButton} text="Join" onClick={this.handleOnClick} theme="red" />}
 =======
+=======
+>>>>>>> 0558b78... Fix redirect from signup for flow
 =======
 >>>>>>> 0558b78... Fix redirect from signup for flow
 =======
