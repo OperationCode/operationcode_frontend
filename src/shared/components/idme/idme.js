@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import config from 'config/environment';
-import idmeImage from 'images/IdmeTroop.png';
+import troopImage from 'images/Troop.png';
 import styles from './idme.css';
 
 class Idme extends Component {
@@ -16,7 +16,7 @@ class Idme extends Component {
       <div className={styles.wrapper}>
         <span className={styles.auth}>If you are interested in scholarships and / or hardware loans, verify your veteran status with Id.Me below.</span>
         <span className={styles.authbtn} role="link" onClick={this.idMe} tabIndex={0} >
-          <img className={styles.authImage} src={idmeImage} alt="Verify your status with Id.Me" />
+          <img className={styles.authImage} src={troopImage} alt="Verify your status with Id.Me" />
         </span>
       </div>
     );
