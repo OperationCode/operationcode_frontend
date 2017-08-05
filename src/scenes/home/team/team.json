@@ -1,35 +1,35 @@
 [
     {
         "name": "Aaron Suarez",
-        "role": "Gulf Coast Chapter Leader"
-    },
-    {
-        "name": "Aimee Knight",
-        "role": "Board Director"
+        "role": "New Orleans Chapter Leader"
     },
     {
         "name": "Alexander Laquitara",
-        "role": "NYC Chapter Co-Leader"
+        "role": "NYC Chapter Team"
+    },
+    {
+        "name": "Andrew Siemer",
+        "role": "Austin Chapter Leader"
     },
     {
         "name": "Ashley Templet",
         "role": "North Carolina Chapter Leader"
     },
     {
-        "name": "Bradley Cantor",
-        "role": "Legislative Affairs"
-    },
-    {
-        "name": "Bret Funk",
-        "role": "Deploy Advisor"
-    },
-    {
         "name": "Caleb Singer",
         "role": "Corporate Partnerships"
     },
     {
+        "name": "Cameron Hopkin",
+        "role": "Denver Chapter Leader"
+    },
+    {
         "name": "Charles Sipe",
-        "role": "Seattle Chapter Co-Leader"
+        "role": "Seattle Chapter Team"
+    },
+    {
+        "name": "Cherie Burgett",
+        "role": "Ft. Rucker Chapter Leader"
     },
     {
         "name": "Conrad Hollomon",
@@ -44,8 +44,12 @@
         "role": "Deploy Mentor"
     },
     {
+        "name": "David Lim",
+        "role": "Seattle Chapter Leader"
+    },
+    {
         "name": "David Marchante",
-        "role": "Florida Chapter Leader"
+        "role": "UX Designer, Florida Chapter Leader"
     },
     {
         "name": "David Molina",
@@ -68,6 +72,10 @@
         "role": "Austin Chapter Leader"
     },
     {
+        "name": "Evan Cooper",
+        "role": "Frontend Developer"
+    },
+    {
         "name": "Franklin Webber",
         "role": "Scholarship Committee"
     },
@@ -76,12 +84,12 @@
         "role": "Code School Outreach Specialist/Troops to Coders Lead"
     },
     {
-        "name": "Heather Baldry",
-        "role": "Scholarship Committee"
+        "name": "Harry Levine",
+        "role": "Backend Developer"
     },
     {
         "name": "Ian Lenny",
-        "role": "Director of Code School Technical Assistance"
+        "role": "Director of Schools"
     },
     {
         "name": "Jameel Matin",
@@ -96,10 +104,6 @@
         "role": "Deploy Business Development"
     },
     {
-        "name": "Janine Medina",
-        "role": "Legislative Director"
-    },
-    {
         "name": "Jay Bloom",
         "role": "Board Advisor"
     },
@@ -108,12 +112,12 @@
         "role": "San Diego Chapter Leader"
     },
     {
-        "name": "Jesse James",
-        "role": "Portland Chapter Leader"
+        "name": "Jay-Ar Jamon",
+        "role": "San Francisco Chapter Team"
     },
     {
-        "name": "John Bailey",
-        "role": "Finance Advisor"
+        "name": "Jesse James",
+        "role": "Portland Chapter Leader"
     },
     {
         "name": "John Garcia",
@@ -122,10 +126,6 @@
     {
         "name": "John Hampton",
         "role": "Director of Mentorship"
-    },
-    {
-        "name": "Josh Smith",
-        "role": "San Diego Chapter Assistant"
     },
     {
         "name": "Josh Springer",
@@ -137,7 +137,11 @@
     },
     {
         "name": "Juan Chavez",
-        "role": "Seattle Chapter Co-Leader"
+        "role": "Seattle Chapter Team"
+    },
+    {
+        "name": "Julian Meyer",
+        "role": "Backend Developer"
     },
     {
         "name": "Ken Collier",
@@ -148,16 +152,12 @@
         "role": "Midwest Military Outreach"
     },
     {
-        "name": "Kevin Henry",
-        "role": "Social Media"
-    },
-    {
         "name": "Krystyna Ewing",
-        "role": "Deploy Developer & Columbus Chapter Leader"
+        "role": "Columbus Chapter Leader"
     },
     {
         "name": "Kyle Holmberg",
-        "role": "Python-Squad Lead"
+        "role": "Frontend Developer"
     },
     {
         "name": "Larry Burris",
@@ -169,11 +169,15 @@
     },
     {
         "name": "Lyn Dee",
-        "role": "Community Engagement"
+        "role": "Community Manager"
     },
     {
-        "name": "Maggi Molina",
+        "name": "Maggi Vargas",
         "role": "Community Manager"
+    },
+    {
+        "name": "Maggie O'Connor",
+        "role": "Gala Coordinator"
     },
     {
         "name": "Mark Kerr",
@@ -181,7 +185,19 @@
     },
     {
         "name": "Matthew Bach",
-        "role": "Hampton Roads Chapter Assistant"
+        "role": "Hampton Roads Chapter Team"
+    },
+    {
+        "name": "Matthew Swogger",
+        "role": "San Francisco Chapter Team"
+    },
+    {
+        "name": "Matthew Philips",
+        "role": "San Francisco Chapter Team"
+    },
+    {
+        "name": "Matt MacNeil",
+        "role": "UX Designer"
     },
     {
         "name": "Meg Ludwa",
@@ -196,20 +212,12 @@
         "role": "Board Advisor"
     },
     {
-        "name": "Nathanael Duke",
-        "role": "Re-Deploy Coordinator"
-    },
-    {
         "name": "Nell Shamrell",
-        "role": "Tech Partnerships"
+        "role": "Technology Partnerships"
     },
     {
         "name": "Nina Alli",
-        "role": "NYC Chapter Co-Leader"
-    },
-    {
-        "name": "Philip Percesepe",
-        "role": "Employer Partnerships"
+        "role": "Government Partnerships"
     },
     {
         "name": "Reid Blomquist",
@@ -224,12 +232,12 @@
         "role": "CTO"
     },
     {
-        "name": "Rob Kriner",
-        "role": "Director of Marketing"
-    },
-    {
         "name": "Roy Mosby",
         "role": "Ft. Stewart - HAAF Chapter Leader"
+    },
+    {
+        "name": "Seth Bergman",
+        "role": "Frontend Developer"
     },
     {
         "name": "Shelly Xiong",
@@ -237,7 +245,7 @@
     },
     {
         "name": "Stacy Chin",
-        "role": "Grant Writer"
+        "role": "Board Advisor"
     },
     {
         "name": "Steve Arcand",
@@ -253,7 +261,7 @@
     },
     {
         "name": "Walter Valdez-Santos",
-        "role": "Community Support"
+        "role": "Community Manager"
     }
 ]
 

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Section from 'shared/components/section/section';
 import Idme from 'shared/components/idme/idme';
 import discourseImage from '../../../images/Discourse_logo.png';
+import slackImage from '../../../images/slack.png';
 import styles from './profile.css';
 
 class Profile extends Component {
@@ -17,9 +18,10 @@ class Profile extends Component {
           </a>
         </Section>
 
-        <Section title="Sign-in with Slack">
+        <Section title="Sign-in with Slack" theme="white">
+          <span className={styles.discourseText}>Visit the Operation Code Slack Channel by clicking below.</span>
           <a href="https://operation-code.slack.com">
-            <img alt="Sign in with Slack" height="40" width="172" src="https://platform.slack-edge.com/img/sign_in_with_slack.png" srcSet="https://platform.slack-edge.com/img/sign_in_with_slack.png 1x, https://platform.slack-edge.com/img/sign_in_with_slack@2x.png 2x" />
+            <img className={styles.discourseImage} alt="Sign in with Slack" src={slackImage} />
           </a>
         </Section>
 
