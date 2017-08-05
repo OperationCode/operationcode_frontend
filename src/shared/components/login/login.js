@@ -117,6 +117,13 @@ class Login extends Component {
     return '/profile';
   }
 
+  handleEnter = (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      this.handleOnClick(e);
+    }
+  }
+
   handleOnClick = (e) => {
     e.preventDefault = true;
 
@@ -157,7 +164,7 @@ class Login extends Component {
       <Section title="Login" theme="white">
         <Form autoComplete>
           <FormEmail id="email" displayName="Email" label="Email" onChange={this.onEmailChange} />
-          <FormInput id="password" displayName="Password" label="Password" inputType="password" onChange={this.onPasswordChange} />
+          <FormInput id="password" displayName="Password" label="Password" inputType="password" onChange={this.onPasswordChange} onKeyDown={this.handleEnter} />
           {errorFeedback && <h2 className={styles.loginError}>{errorFeedback}</h2>}
           <FormButton className={styles.Button} text="Login" onClick={this.handleOnClick} />
         </Form>

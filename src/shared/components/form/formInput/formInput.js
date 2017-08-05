@@ -43,6 +43,7 @@ class FormInput extends Component {
           value={this.state.text}
           placeholder={this.props.placeholder}
           onChange={this.handleChange}
+          onKeyDown={this.props.onKeyDown}
         />
         {!this.state.isValid && <span>{this.props.validationErrorMessage}</span>}
       </div>
