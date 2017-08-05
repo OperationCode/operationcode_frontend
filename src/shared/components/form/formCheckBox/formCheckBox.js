@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import styles from './formCheckBox.css';
 
 class FormCheckBox extends Component {
 
@@ -12,8 +13,9 @@ class FormCheckBox extends Component {
           id={this.props.value}
           value={this.props.value}
           onChange={this.props.onChange}
+          className={styles.input}
         />
-        <label htmlFor={this.props.name}>
+        <label className={styles.label} htmlFor={this.props.name}>
           {this.props.value}
         </label>
       </div>
