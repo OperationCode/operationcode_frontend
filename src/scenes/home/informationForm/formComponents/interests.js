@@ -12,34 +12,34 @@ class Interests extends Component {
         <span>Progress = {this.props.percent}%</span>
         <Line percent={this.props.percent} strokeWidth="4" strokeColor="green" />
         <FormCheckBox
-          name={'Interest'}
+          name={'interests'}
           value={'Java'}
-          onChange={e => this.props.update(e, e.target.value)}
+          onChange={e => this.props.update(e.target.value)}
         />
         <FormCheckBox
-          name={'Interest'}
+          name={'interests'}
           value={'Python'}
-          onChange={e => this.props.update(e, e.target.value)}
+          onChange={e => this.props.update(e.target.value)}
         />
         <FormCheckBox
-          name={'Interest'}
+          name={'interests'}
           value={'Butts'}
-          onChange={e => this.props.update(e, e.target.value)}
+          onChange={e => this.props.update(e.target.value)}
         />
         <FormCheckBox
-          name={'Interest'}
+          name={'interests'}
           value={'JS'}
-          onChange={e => this.props.update(e, e.target.value)}
+          onChange={e => this.props.update(e.target.value)}
         />
         <FormCheckBox
-          name={'Interest'}
+          name={'interests'}
           value={'Other Butts'}
-          onChange={e => this.props.update(e, e.target.value)}
+          onChange={e => this.props.update(e.target.value)}
         />
         <FormCheckBox
-          name={'Interest'}
+          name={'interests'}
           value={'Things'}
-          onChange={e => this.props.update(e, e.target.value)}
+          onChange={e => this.props.update(e.target.value)}
         />
       </Form>
     );

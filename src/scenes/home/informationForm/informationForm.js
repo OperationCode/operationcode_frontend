@@ -17,11 +17,12 @@ class SignupInformation extends Component {
   constructor(props) {
     super(props);
     this.onIdentifierStatusChange = this.onIdentifierStatusChange.bind(this);
-    this.checkBoxChange = this.checkBoxChange.bind(this);
+    this.onCheckBoxChange = this.onCheckBoxChange.bind(this);
     this.state = {
       error: false,
       isValid: true,
       success: false,
+      interests: new Set(),
       step: 0
     };
   }
@@ -30,8 +31,8 @@ class SignupInformation extends Component {
     this.setState({ [e.target.id]: value });
   }
 
-  checkBoxChange = (e, value) => {
-    this.setState({ [e.target.id]: value });
+  onCheckBoxChange = (value) => {
+    this.setState({ interests: this.state.interests.add(value) });
   }
 
   saveAndContinue = () => {
@@ -72,7 +73,7 @@ class SignupInformation extends Component {
       case '2civ':
         return (
           <Interests
-            update={this.onIdentifierStatusChange}
+            update={this.onCheckBoxChange}
             percent={'75'}
           />
         );
@@ -98,7 +99,10 @@ class SignupInformation extends Component {
         );
       case '4mil':
         return (
-          <p> tags section </p>
+          <Interests
+            update={this.onCheckBoxChange}
+            percent={'75'}
+          />
         );
       case '5mil':
         return (
