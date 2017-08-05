@@ -26,3 +26,13 @@
   border-color:#249CBC;
   color: #fff;
 }
+
+.grey {
+  background-color: #ABABAB;
+  border-color: #999;
+  color: #fff;
+}
+
+.grey:hover {
+  cursor: wait;
+}
