@@ -40,7 +40,7 @@ class Interests extends Component {
         &nbsp;
         <label htmlFor="languages">
           <span className={styles.info__tagsTitle}>
-            Select any languages you are interested in
+            Select any languages you are interested in:
           </span>
         </label>
         <div className={styles.info__tags}>
@@ -48,7 +48,7 @@ class Interests extends Component {
         </div>
         <label htmlFor="disciplines">
           <span className={styles.info__tagsTitle}>
-            Select any disciplines you are interested in
+            Select any disciplines you are interested in:
           </span>
         </label>
         <div className={styles.info__tags}>

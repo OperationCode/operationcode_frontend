@@ -1,3 +1,11 @@
+.buttonContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttonContainer > * {
+  margin: 10px;
+}
 
 .signup span {
   padding: 10px 8px 30px 8px;

@@ -37,7 +37,8 @@
 .signup .info__tags {
   display: flex;
   flex-wrap: wrap;
-  margin: 40px;
+  margin: 20px 0;
+  width: 100%;
 }
 
 .signup .info__tagsTitle {
