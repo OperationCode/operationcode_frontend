@@ -76,7 +76,8 @@
     "test": "node scripts/test.js --env=jsdom",
     "lint": "eslint src",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "backend": "./bin/run_backend.sh"
   },
   "jest": {
     "moduleDirectories": [
