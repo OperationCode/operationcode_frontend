@@ -184,9 +184,12 @@ class SignUp extends Component {
             <li className={styles.errorMessage}>{this.state.error}</li>
           </ul> : null }
 <<<<<<< HEAD
+<<<<<<< HEAD
           {this.state.success && <Redirect to="/thanks" />}
           {this.state.isLoading ? <FormButton className={styles.joinButton} text="Loading..." disabled theme="grey" /> : <FormButton className={styles.joinButton} text="Join" onClick={this.handleOnClick} theme="red" />}
 =======
+=======
+>>>>>>> 0558b78... Fix redirect from signup for flow
           {this.state.success && <Redirect to="/signup-info" />}
           <FormButton className={styles.joinButton} text="Join" onClick={this.handleOnClick} theme="red" />
 >>>>>>> 0558b78... Fix redirect from signup for flow
