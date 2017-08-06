@@ -20,20 +20,20 @@ class SchoolInfo extends Component {
           onChange={e => this.props.update(e, e.target.value)}
         />
         <FormSelect
-          id="schoolInfo"
+          id="scholarships"
           options={
           [
             {
               value: true,
-              label: 'I would like updates on schools'
+              label: 'I would like updates on scholarships'
             },
             {
               value: false,
-              label: 'I would not like to receive updates'
+              label: 'I would not like to receive scholarships'
             },
           ]
           }
-          prompt="Seeking School Information?"
+          prompt="Seeking Scholarship Information?"
           onChange={e => this.props.update(e, e.target.value)}
         />
 

@@ -48,7 +48,7 @@ WorkInfo.propTypes = {
 
 WorkInfo.defaultProps = {
   update: null,
-  role: 'Your Role / Title',
+  role: 'Your Role / Title at Work',
   company: 'Company Name',
   percent: '0'
 };

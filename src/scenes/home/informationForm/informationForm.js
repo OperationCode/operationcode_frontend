@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-// import axios from 'axios';
 import { Redirect } from 'react-router-dom';
-// import _ from 'lodash';
 import Section from 'shared/components/section/section';
 import FormButton from 'shared/components/form/formButton/formButton';
-// import config from 'config/environment';
+import { patchBackend } from 'shared/utils/apiHelper';
 import Identifier from './formComponents/identifier';
 import Interests from './formComponents/interests';
 import WorkInfo from './formComponents/workInfo';
@@ -44,19 +42,18 @@ class SignupInformation extends Component {
   }
 
   saveAndContinue = () => {
-    this.setState({ step: this.state.step += 1 });
-    /*
-    axios.patch(`${config.backendHost}/users/password`, {
+    patchBackend('api/v1/users', {
       user: {
-        reset_password_token: this.props.resetPasswordToken,
-        password: this.state.password
+        education_level: this.state.schoolLevel,
+        scholarships: this.state.scholarships,
+        employment_status: this.state.workInfo,
+        company_name: this.state.company,
+        company_role: this.state.role,
+        branch_of_service: this.state.branch,
+        interests: [...this.state.interests]
       }
-    }).then(() => {
-      this.setState({ step: this.state.step + 1 });
-    }).catch(() => {
-      this.setState({ error: 'We were unable to set the password for this email' });
     });
-    */
+    this.setState({ step: this.state.step += 1 });
   }
 
   showStep = () => {
