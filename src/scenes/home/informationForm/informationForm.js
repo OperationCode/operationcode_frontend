@@ -42,7 +42,7 @@ class SignupInformation extends Component {
   }
 
   saveAndContinue = () => {
-    patchBackend('api/v1/users', {
+    patchBackend('users', {
       user: {
         education_level: this.state.schoolLevel,
         scholarships: this.state.scholarships,
