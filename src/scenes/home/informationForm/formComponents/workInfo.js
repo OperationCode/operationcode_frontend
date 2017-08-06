@@ -15,7 +15,7 @@ class WorkInfo extends Component {
         <Line percent={this.props.percent} strokeWidth="4" strokeColor="green" />
         &nbsp;
         <FormSelect
-          id="WorkInfo"
+          id="workInfo"
           options={WORKINFO}
           prompt="Current Employment Status"
           onChange={e => this.props.update(e, e.target.value)}
