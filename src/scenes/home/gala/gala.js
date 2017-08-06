@@ -1,25 +1,10 @@
 import React, { Component } from 'react';
 import Section from 'shared/components/section/section';
-import postscribe from 'postscribe';
+import LinkButton from 'shared/components/linkButton/linkButton';
 
 import styles from './gala.css';
 
 class Gala extends Component {
-
-  componentDidMount() {
-    const script = document.createElement('script');
-
-    script.src = 'https://dc161a0a89fedd6639c9-03787a0970cd749432e2a6d3b34c55df.ssl.cf3.rackcdn.com/tt-widget.js';
-    script.async = true;
-    script.setAttribute('data-url', 'https://www.tickettailor.com/new-order/99297/d163/ref/website_widget/');
-    script.setAttribute('data-type', 'inline');
-    script.setAttribute('data-inline-minimal', 'true');
-    script.setAttribute('data-inline-show-logo', 'false');
-    script.setAttribute('data-inline-bg-fill', 'true');
-
-    postscribe('#tt-widget', script.outerHTML);
-  }
-
   render() {
     return (
       <div>
@@ -102,15 +87,8 @@ class Gala extends Component {
             </div>
             <div />
           </div>
-          <div className={styles.container}>
-            <div id="tt-widget">
-              <div className="tt-widget-fallback">
-                <p>
-                  <a href="https://www.tickettailor.com/new-order/99297/d163/ref/website_widget/" target="_blank" rel="noopener noreferrer">Click here to buy tickets</a><br />
-                  <small><a href="//www.tickettailor.com?rf=wdg" className="tt-widget-powered">Sell tickets online with Ticket Tailor</a></small>
-                </p>
-              </div>
-            </div>
+          <div>
+            <LinkButton text="Buy now!" theme="red-large" link="https://operationcode.ejoinme.org/MyEvents/DeploytheFutureGala2017/DeploytheFutureTicketTableRegistration/tabid/892109/Default.aspx" />
           </div>
         </Section>
         <Section title="Event Information" theme="white">
