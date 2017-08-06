@@ -33,6 +33,7 @@ import About from './about/about';
 import Press from './press/press';
 import ResetPassword from './resetPassword/resetPassword';
 import Challenge from './challenge/challenge';
+import SignupInformation from './informationForm/informationForm';
 import styles from './home.css';
 
 class Home extends Component {
@@ -165,6 +166,10 @@ class Home extends Component {
             <Route
               path="/media"
               component={Press}
+            />
+            <Route
+              path="/signup-info"
+              component={SignupInformation}
             />
             <Route
               path="/challenge"
