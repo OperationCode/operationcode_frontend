@@ -16,6 +16,9 @@ class Gala extends Component {
             <p>The Operation Code community gratefully offers you the opportunity to join us in this mission! Operation Code and the Deploy the Future Gala are vehicles for us to each grow our impact. We hope you will join our efforts to ease the transition of our veterans back to civilian life, and contribute to an endowment to provide scholarships to the men and women who have given so much to all of us.</p>
             <p>In becoming a Deploy the Future sponsor, you will have a front row seat to supporting a great cause and promoting your organization to civic and military officials; business, tech and community leaders; and our global community of military veterans who are bettering themselves with educational opportunities through Operation Code.</p>
             <p>Please join this incredibly dedicated team of individuals known as Operation Code as we expand our services, educate our veterans, and Deploy the Future.</p>
+            <p className={styles.cta}>
+              <LinkButton text="Join us!" theme="red-large" link="https://operationcode.ejoinme.org/MyEvents/DeploytheFutureGala2017/DeploytheFutureTicketTableRegistration/tabid/892109/Default.aspx" />
+            </p>
           </div>
         </Section>
         <Section title="Sponsors">

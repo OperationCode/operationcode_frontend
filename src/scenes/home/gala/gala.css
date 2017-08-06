@@ -3,6 +3,10 @@
   padding-bottom: 20px;
 }
 
+.cta {
+  text-align: center;
+}
+
 .tickets {
   padding-top: 15px;
   display: flex;
