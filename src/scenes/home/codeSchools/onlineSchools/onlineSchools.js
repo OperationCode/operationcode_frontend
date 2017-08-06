@@ -104,7 +104,7 @@ class OnlineSchools extends Component {
               title={'Udacity'}
               cardText={'Offers free courses with the option to pay for certificates/grading.'}
               buttonText={'Website'}
-              link={'https://udacity.org/'}
+              link={'https://udacity.com/'}
             />
           </div>
         </Section>
