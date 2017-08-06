@@ -9,13 +9,14 @@ class FormInput extends Component {
     super();
     this.state = {
       text: '',
-      isValid: true
+      isValid: true,
+      _handleKeyPress: null,
     };
   }
 
   handleChange = (event) => {
     const valid = this.validate(event.target.value);
-    this.setState({ text: event.target.value, isValid: valid }, () => {
+    this.setState({ text: event.target.value, isValid: valid, onKeyPress: valid }, () => {
       if (this.props.onChange) {
         this.props.onChange(this.state.text, this.state.isValid);
       }
@@ -29,6 +30,13 @@ class FormInput extends Component {
       return this.props.validationRegex.test(text);
     }
     return true;
+  }
+
+  _handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      validate();
+      console.log('do validate');
+    }
   }
 
   render() {
@@ -63,6 +71,7 @@ FormInput.propTypes = {
 
 FormInput.defaultProps = {
   label: null,
+  onKeyDown: null,
   placeholder: null,
   validationRegex: null,
   validationErrorMessage: null,
