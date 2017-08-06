@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import Section from 'shared/components/section/section';
 import QuoteBanner from 'shared/components/quoteBanner/quoteBanner';
 import TeamCard from 'shared/components/teamCard/teamCard';
@@ -17,7 +16,7 @@ class Team extends Component {
   }
 
   componentWillMount() {
-    return axios.patch('https://api.operationcode.org/api/v1/team.json').then(response =>
+    return fetch('https://api.operationcode.org/api/v1/team_members.json').then(response =>
       response.json().then((data) => {
         this.setState({ members: data });
       })
