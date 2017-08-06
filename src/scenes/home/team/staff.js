@@ -1,8 +1,12 @@
-[
+members = [
     {
         "name": "Aaron Suarez",
         "role": "New Orleans Chapter Leader"
     },
+    {
+       "name": "Aimee Knight",
+       "role": "Board Director"
+     },
     {
         "name": "Alexander Laquitara",
         "role": "NYC Chapter Team"
@@ -12,8 +16,24 @@
         "role": "Austin Chapter Leader"
     },
     {
+        "name": "Andy LaMora",
+        "role": "Legislative Affairs"
+     },
+    {
         "name": "Ashley Templet",
         "role": "North Carolina Chapter Leader"
+    },
+    {
+        "name": "Bradley Cantor",
+        "role": "Legislative Affairs"
+    },
+    {
+        "name": "Bret Funk",
+        "role": "Deploy Advisor"
+    },
+    {
+        "name": "Caleb Singer",
+        "role": "Marketing & Development Advisor"
     },
     {
         "name": "Caleb Singer",
@@ -42,6 +62,14 @@
     {
         "name": "Dane King",
         "role": "Deploy Mentor"
+    },
+    {
+        "name": "Dave Barner",
+        "role": "Product Strategy"
+    },
+    {
+        "name": "David Denninger",
+        "role": "Legislative Affairs"
     },
     {
         "name": "David Lim",
@@ -86,6 +114,10 @@
     {
         "name": "Harry Levine",
         "role": "Backend Developer"
+    },
+    {
+        "name": "Heather Baldry",
+        "role": "Scholarship Committee"
     },
     {
         "name": "Ian Lenny",
