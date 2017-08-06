@@ -34,7 +34,7 @@ class RequestToken extends Component {
     value === '' || value === this.state.password;
 
   handleOnClick = (e) => {
-    e.preventDefault = true;
+    e.preventDefault();
     if (this.isFormValid()) {
       axios.patch(`${config.backendHost}/users/password`, {
         user: {

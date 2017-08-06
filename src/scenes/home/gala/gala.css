@@ -1,14 +1,10 @@
-.container {
-  width:80%;
-}
-
-#tt-widget {
-  width: 100%;
-}
-
 .header {
   text-align: center;
   padding-bottom: 20px;
+}
+
+.cta {
+  text-align: center;
 }
 
 .tickets {

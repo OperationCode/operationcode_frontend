@@ -1,25 +1,10 @@
 import React, { Component } from 'react';
 import Section from 'shared/components/section/section';
-import postscribe from 'postscribe';
+import LinkButton from 'shared/components/linkButton/linkButton';
 
 import styles from './gala.css';
 
 class Gala extends Component {
-
-  componentDidMount() {
-    const script = document.createElement('script');
-
-    script.src = 'https://dc161a0a89fedd6639c9-03787a0970cd749432e2a6d3b34c55df.ssl.cf3.rackcdn.com/tt-widget.js';
-    script.async = true;
-    script.setAttribute('data-url', 'https://www.tickettailor.com/new-order/99297/d163/ref/website_widget/');
-    script.setAttribute('data-type', 'inline');
-    script.setAttribute('data-inline-minimal', 'true');
-    script.setAttribute('data-inline-show-logo', 'false');
-    script.setAttribute('data-inline-bg-fill', 'true');
-
-    postscribe('#tt-widget', script.outerHTML);
-  }
-
   render() {
     return (
       <div>
@@ -31,6 +16,9 @@ class Gala extends Component {
             <p>The Operation Code community gratefully offers you the opportunity to join us in this mission! Operation Code and the Deploy the Future Gala are vehicles for us to each grow our impact. We hope you will join our efforts to ease the transition of our veterans back to civilian life, and contribute to an endowment to provide scholarships to the men and women who have given so much to all of us.</p>
             <p>In becoming a Deploy the Future sponsor, you will have a front row seat to supporting a great cause and promoting your organization to civic and military officials; business, tech and community leaders; and our global community of military veterans who are bettering themselves with educational opportunities through Operation Code.</p>
             <p>Please join this incredibly dedicated team of individuals known as Operation Code as we expand our services, educate our veterans, and Deploy the Future.</p>
+            <p className={styles.cta}>
+              <LinkButton text="Join us!" theme="red-large" link="https://operationcode.ejoinme.org/MyEvents/DeploytheFutureGala2017/DeploytheFutureTicketTableRegistration/tabid/892109/Default.aspx" />
+            </p>
           </div>
         </Section>
         <Section title="Sponsors">
@@ -102,15 +90,8 @@ class Gala extends Component {
             </div>
             <div />
           </div>
-          <div className={styles.container}>
-            <div id="tt-widget">
-              <div className="tt-widget-fallback">
-                <p>
-                  <a href="https://www.tickettailor.com/new-order/99297/d163/ref/website_widget/" target="_blank" rel="noopener noreferrer">Click here to buy tickets</a><br />
-                  <small><a href="//www.tickettailor.com?rf=wdg" className="tt-widget-powered">Sell tickets online with Ticket Tailor</a></small>
-                </p>
-              </div>
-            </div>
+          <div>
+            <LinkButton text="Buy now!" theme="red-large" link="https://operationcode.ejoinme.org/MyEvents/DeploytheFutureGala2017/DeploytheFutureTicketTableRegistration/tabid/892109/Default.aspx" />
           </div>
         </Section>
         <Section title="Event Information" theme="white">
