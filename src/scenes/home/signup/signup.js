@@ -66,7 +66,7 @@ class SignUp extends Component {
     value === '' || value === this.state.password;
 
   handleOnClick = (e) => {
-    e.preventDefault = true;
+    e.preventDefault();
 
     this.setState({ isLoading: true });
 

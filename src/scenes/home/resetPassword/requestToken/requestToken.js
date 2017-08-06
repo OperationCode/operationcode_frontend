@@ -25,7 +25,7 @@ class RequestToken extends Component {
   }
 
   handleOnClick = (e) => {
-    e.preventDefault = true;
+    e.preventDefault();
     if (this.isFormValid()) {
       axios.post(`${config.backendUrl}/users/passwords/reset`, {
         email: this.state.email

@@ -12,7 +12,7 @@ class FormButton extends Component {
     });
     return (
       <button
-        type="button"
+        type="submit"
         className={classes}
         onClick={this.props.onClick}
         disabled={this.props.disabled}
