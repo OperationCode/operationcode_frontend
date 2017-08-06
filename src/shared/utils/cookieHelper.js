@@ -35,6 +35,12 @@ export const isMentor = () => {
   return cookies.get('mentor');
 };
 
+export const authToken = () => {
+  const cookies = new Cookies();
+  const token = cookies.get('token');
+  return token;
+};
+
 const validToken = (token) => {
   if (token === undefined) { return false; }
 

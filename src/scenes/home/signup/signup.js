@@ -21,7 +21,8 @@ class SignUp extends Component {
       emailValid: true,
       error: false,
       isValid: true,
-      identifier: '',
+      isLoading: false,
+      mentor: false,
       password: '',
       passwordConfirm: '',
       passwordValid: true,
@@ -64,6 +65,9 @@ class SignUp extends Component {
 
   handleOnClick = (e) => {
     e.preventDefault = true;
+
+    this.setState({ isLoading: true });
+
     if (this.isFormValid()) {
       const { email, zip, password, firstName, lastName, identifier } = this.state;
       axios.post(`${config.backendUrl}/users`, {
@@ -76,7 +80,7 @@ class SignUp extends Component {
           identifier
         }
       }).then(() => {
-        this.setState({ success: true, error: null });
+        this.setState({ success: true, error: null, isLoading: false });
       }).catch((error) => {
         const data = _.get(error, 'response.data');
         let errorMessage = '';
@@ -87,8 +91,10 @@ class SignUp extends Component {
             }
           });
         }
-        this.setState({ error: errorMessage });
+        this.setState({ error: errorMessage, isLoading: false });
       });
+    } else {
+      this.setState({ error: 'Missing required field(s)', isLoading: false });
     }
   }
 

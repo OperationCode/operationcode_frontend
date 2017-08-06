@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Section from 'shared/components/section/section';
 import Idme from 'shared/components/idme/idme';
 import discourseImage from '../../../images/Discourse_logo.png';
+import slackImage from '../../../images/slack.png';
 import styles from './profile.css';
 
 class Profile extends Component {
@@ -10,10 +11,17 @@ class Profile extends Component {
   render() {
     return (
       <div>
-        <Section title="Operation Code Community">
+        <Section title="Operation Code Community" theme="white">
           <span className={styles.discourseText}>Visit the Operation Code Community by clicking below.</span>
           <a href="https://community.operationcode.org">
             <img className={styles.discourseImage} src={discourseImage} alt="Visit the Operation Code Community" />
+          </a>
+        </Section>
+
+        <Section title="Sign-in with Slack" theme="white">
+          <span className={styles.discourseText}>Visit the Operation Code Slack Channel by clicking below.</span>
+          <a href="https://operation-code.slack.com">
+            <img className={styles.discourseImage} alt="Sign in with Slack" src={slackImage} />
           </a>
         </Section>
 

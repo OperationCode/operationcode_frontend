@@ -27,7 +27,8 @@ FormButton.propTypes = {
 FormButton.defaultProps = {
   theme: 'blue',
   onClick: null,
-  className: null
+  className: null,
+  disabled: false,
 };
 
 export default FormButton;

@@ -44,19 +44,68 @@ class Login extends Component {
     this.setState({ password: value, passwordValid: valid });
   }
 
+  setErrorMessage = (error) => {
+    const errorStatus = _.get(error, ['response', 'status'], -1);
+    const errorMessage = _.get(error, 'message');
+    this.setState({ errorStatus, errorMessage });
+  }
+
   setSsoParams = () => {
     const parsed = queryString.parse(location.search);
 
     if (this.state.ssoParamsPresent) {
-      this.state.sso = parsed.sso;
-      this.state.sig = parsed.sig;
+      this.setState(
+        {
+          sso: parsed.sso,
+          sig: parsed.sig
+        },
+        this.checkSsoLoggedIn
+      );
     }
   }
 
+  // SSO Flow:
+  //   * Discourse sends us an SSO token and a signature for that token (shared key)
+  //     If those params exist we assume we're doing an SSO login.
+  //
+  //   Scenario: user not logged in
+  //     * If the user is not logged in they enter their creds and we pass along the
+  //       token and sig to the backend where it's verified
+  //     * If we have a succesful login we redirect back to discourse with our payload and sig
+  //     * These values are provided by the backend
+  //
+  //   Scenario: user logged in
+  //     * When the login page mounts we check to see if the user is logged in via props
+  //     * If the user is logged in AND this is an SSO request we perform a GET request with
+  //       the token and sig
+  //     * If the users auth token is valid and the token and sig are valid we redirect back
+  //       to discourse with our payload and sig
+  //     * These values are provided by the backend
   checkForSsoParams = () => {
     const parsed = queryString.parse(location.search);
 
-    if (parsed.sso && parsed.sig) { this.setState({ ssoParamsPresent: true }); }
+    if (parsed.sso && parsed.sig) {
+      this.setState(
+        { ssoParamsPresent: true },
+        this.setSsoParams
+      );
+    }
+  }
+
+  checkSsoLoggedIn = () => {
+    if (this.state.ssoParamsPresent && this.props.isLoggedIn) { this.ssoLoggedInRedirect(); }
+  }
+
+  ssoLoggedInRedirect = () => {
+    axios.get(`${config.backendUrl}/sessions/sso?sso=${this.state.sso}&sig=${this.state.sig}`, {
+      headers: {
+        Authorization: `Bearer ${CookieHelpers.authToken()}`
+      }
+    }).then(({ data }) => {
+      window.location = data.redirect_to;
+    }).catch((error) => {
+      this.setErrorMessage(error);
+    });
   }
 
   isFormValid = () => this.state.emailValid && this.state.passwordValid
@@ -70,7 +119,6 @@ class Login extends Component {
 
   handleOnClick = (e) => {
     e.preventDefault = true;
-    this.setSsoParams();
 
     if (this.isFormValid()) {
       axios.post(`${config.backendUrl}/sessions`, {
@@ -91,9 +139,7 @@ class Login extends Component {
           }
         });
       }).catch((error) => {
-        const errorStatus = _.get(error, ['response', 'status'], -1);
-        const errorMessage = _.get(error, 'message');
-        this.setState({ errorStatus, errorMessage });
+        this.setErrorMessage(error);
       });
     }
   }
@@ -125,11 +171,13 @@ class Login extends Component {
 
 
 Login.propTypes = {
-  updateRootAuthState: PropTypes.func
+  updateRootAuthState: PropTypes.func,
+  isLoggedIn: PropTypes.bool
 };
 
 Login.defaultProps = {
-  updateRootAuthState: () => {}
+  updateRootAuthState: () => {},
+  isLoggedIn: false
 };
 
 export default Login;

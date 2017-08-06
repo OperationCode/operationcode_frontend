@@ -13,7 +13,6 @@
 select {
     border:1px solid #ccc;
     vertical-align:top;
-    height:20px;
 }
 input, select{
   box-sizing: border-box;
