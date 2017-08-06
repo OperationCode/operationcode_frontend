@@ -117,15 +117,9 @@ class Login extends Component {
     return '/profile';
   }
 
-  handleEnter = (e) => {
-    if (e.key === 'Enter') {
-      e.preventDefault();
-      this.handleOnClick(e);
-    }
-  }
 
   handleOnClick = (e) => {
-    e.preventDefault = true;
+    e.preventDefault();
 
     if (this.isFormValid()) {
       axios.post(`${config.backendUrl}/sessions`, {
@@ -164,11 +158,10 @@ class Login extends Component {
       <Section title="Login" theme="white">
         <Form autoComplete>
           <FormEmail id="email" displayName="Email" label="Email" onChange={this.onEmailChange} />
-          <FormInput id="password" displayName="Password" label="Password" inputType="password" onChange={this.onPasswordChange} onKeyPress={this.handleEnter} />
+          <FormInput id="password" displayName="Password" label="Password" inputType="password" onChange={this.onPasswordChange} />
           {errorFeedback && <h2 className={styles.loginError}>{errorFeedback}</h2>}
           <FormButton className={styles.Button} text="Login" onClick={this.handleOnClick} />
         </Form>
-
         <Link to="/reset_password">Reset Password</Link>
         <SignUpLink />
       </Section>
