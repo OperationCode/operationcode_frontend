@@ -97,7 +97,7 @@ class Login extends Component {
   }
 
   ssoLoggedInRedirect = () => {
-    axios.get(`${config.backendUrl}/sessions/sso?sso=${this.state.sso}&sig=${this.state.sig}`, {
+    axios.get(`${config.backendUrl}/sessions/sso?sso=${encodeURI(this.state.sso)}&sig=${this.state.sig}`, {
       headers: {
         Authorization: `Bearer ${CookieHelpers.authToken()}`
       }
