@@ -6,13 +6,20 @@
   position: absolute;
 }
 
+.child {
+  display: block;
+}
+
+.opaque {
+  background-color: rgb(117,129,143);
+}
+
 @media screen and (max-width: 760px) {
   .children {
     position: relative;
   }
-}
 
-.child {
-  text-align: left;
-  display: block;
+  .opaque {
+    background: none;
+  }
 }
