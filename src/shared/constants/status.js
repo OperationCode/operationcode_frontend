@@ -38,11 +38,11 @@ export const MENTOR_ANSWERS = [
 
 export const IDENTIFIERS = [
   {
-    value: false,
+    value: true,
     label: 'Volunteer'
   },
   {
-    value: true,
+    value: false,
     label: 'Mil / Vet / Spouse'
   }
 ];
