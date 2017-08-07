@@ -58,14 +58,14 @@ class SignupInformation extends Component {
   showStep = () => {
     const step = this.state.step + this.state.identifier;
     switch (step) {
-      case '1mil':
+      case '1true':
         return (
           <MilitaryInfo
             update={this.onIdentifierStatusChange}
             percent={'20'}
           />
         );
-      case '1civ':
+      case '1false':
         return (
           <WorkInfo
             role={this.state.role}
@@ -74,18 +74,18 @@ class SignupInformation extends Component {
             percent={'33'}
           />
         );
-      case '2civ':
+      case '2false':
         return (
           <Interests
             update={this.onCheckBoxChange}
             percent={'66'}
           />
         );
-      case '3civ':
+      case '3false':
         return (
           <Redirect to="/thanks" />
         );
-      case '2mil':
+      case '2true':
         return (
           <WorkInfo
             role={this.state.role}
@@ -94,21 +94,21 @@ class SignupInformation extends Component {
             percent={'40'}
           />
         );
-      case '3mil':
+      case '3true':
         return (
           <SchoolInfo
             update={this.onIdentifierStatusChange}
             percent={'60'}
           />
         );
-      case '4mil':
+      case '4true':
         return (
           <Interests
             update={this.onCheckBoxChange}
             percent={'80'}
           />
         );
-      case '5mil':
+      case '5true':
         return (
           <Redirect to="/thanks" />
         );
