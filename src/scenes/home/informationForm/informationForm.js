@@ -48,6 +48,7 @@ class SignupInformation extends Component {
         employment_status: this.state.workInfo,
         company_name: this.state.company,
         company_role: this.state.role,
+        volunteer: this.state.identifier,
         branch_of_service: this.state.branch,
         interests: [...this.state.interests]
       }
