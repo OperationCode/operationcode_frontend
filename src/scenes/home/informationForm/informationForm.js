@@ -33,11 +33,10 @@ class SignupInformation extends Component {
     this.setState({ interests: this.state.interests.add(value) });
   }
 
-  nextPage = () => {
-    this.setState({ step: this.state.step += 1 });
-  }
-
   previousPage = () => {
+    if (this.state.step < 1) {
+      return;
+    }
     this.setState({ step: this.state.step -= 1 });
   }
 
@@ -125,7 +124,7 @@ class SignupInformation extends Component {
         <p>At Op-Code, we are dedicated to helping our community thrive. In order to do so, we need to collect some information to better serve you. Please take a minute to complete these steps and help us on our mission to code the future. We will never sell or distribute your information.</p>
         {showStep}
         <div className={styles.buttonContainer}>
-          <FormButton text="Go Back" onClick={this.previousPage} theme="grey" />
+          <FormButton text="Go Back" onClick={this.previousPage} theme="blue" />
           <FormButton text="Save and Continue" onClick={this.saveAndContinue} theme="red" />
         </div>
       </Section>
