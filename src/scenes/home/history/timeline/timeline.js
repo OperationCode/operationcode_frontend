@@ -3,7 +3,9 @@ import TimelineEvent from '../timelineEvent/timelineEvent';
 import styles from './timeline.css';
 
 class Timeline extends Component {
-  // TODO: Create a timelineSegment component that accepts to make the code more readable (requires API endpoint for history content). Once that component is made, <Timeline>, <TimelineSegment>, and <TimelineSegment> can be moved as a group to /shared/components to be utilized in other faculties.
+  // TODO: Create a timelineSegment component that accepts to make the code more readable (requires API endpoint for history content).
+  // Once that component is made, <Timeline>, <TimelineSegment>, and <TimelineSegment> can be moved as a group to
+  // /shared/components to be utilized in other faculties.
 
   render() {
     return (
@@ -43,11 +45,11 @@ class Timeline extends Component {
             />
             <TimelineEvent
               title="The Vision Forms"
-              content={['Molina attended ', <a href="https://railsconf.com" rel="noopener noreferrer">RailsConf</a>, ' as a scholarship fellow. After meeting Rubyists from around the world, he is introduced to the Portland Ruby group.']}
+              content={['Molina attended ', <a href="https://railsconf.com" target="_blank" rel="noopener noreferrer">RailsConf</a>, ' as a scholarship fellow. After meeting Rubyists from around the world, he is introduced to the Portland Ruby group.']}
             />
             <TimelineEvent
               title="Patriot Boot Camp"
-              content={['Molina joins ', <a href="https://techstars.com/patriotbootcamp" rel="noopener noreferrer">Techstar&apos;s Patriot Boot Camp (PBC)</a>, ' at George Washington University. During this time, Molina tells Virginia Senator, Tim Kaine, of the inability to use the New GI Bill for coding bootcamps. Before departing D.C., Molina receives advice from U.S. Army Congressional Fellow, Ben Culver, on gathering data to address the problem.']}
+              content={['Molina joins ', <a href="https://techstars.com/patriotbootcamp" target="_blank" rel="noopener noreferrer">Techstar&apos;s Patriot Boot Camp (PBC)</a>, ' at George Washington University. During this time, Molina tells Virginia Senator, Tim Kaine, of the inability to use the New GI Bill for coding bootcamps. Before departing D.C., Molina receives advice from U.S. Army Congressional Fellow, Ben Culver, on gathering data to address the problem.']}
             />
             <TimelineEvent
               title="First Draft"
