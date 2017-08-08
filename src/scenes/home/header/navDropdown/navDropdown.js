@@ -26,9 +26,11 @@ function NavDropdown(props) {
 }
 
 NavDropdown.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.object).isRequired, // eslint-disable-line react/forbid-prop-types
+  /* eslint-disable react/forbid-prop-types */
+  children: PropTypes.arrayOf(PropTypes.object).isRequired,
   text: PropTypes.string.isRequired,
-  location: PropTypes.object.isRequired // eslint-disable-line react/forbid-prop-types
+  location: PropTypes.object.isRequired
+  /* eslint-disable react/forbid-prop-types */
 };
 
 export default withRouter(NavDropdown);
