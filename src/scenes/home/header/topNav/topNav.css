@@ -19,7 +19,7 @@
   }
 }
 
-@media screen and (max-width: 760px) /* Tablet */ {
+@media screen and (max-width: 779px) /* Tablet */ {
   .topNav {
     display: none;
   }
