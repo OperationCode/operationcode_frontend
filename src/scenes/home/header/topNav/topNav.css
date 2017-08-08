@@ -1,7 +1,7 @@
 .topNav {
   display: flex;
   justify-content: flex-end;
-  flex: 1 0 60%;
+  flex: none;
   font-size:20px;
 }
 
@@ -19,8 +19,18 @@
 }
 
 .topNav span a {
-  flex: 0 1 auto;
-  text-align: center;
+  flex: none;
+  text-align: right;
+}
+
+.topNav__topNav___2W-uf {
+    display: -ms-flexbox;
+    display: flow-root;
+    -ms-flex-pack: unset;
+    text-align: right;
+    -ms-flex: 60%;
+    flex: none;
+    font-size: 20px;
 }
 
 @media screen and (max-width: 1000px) {

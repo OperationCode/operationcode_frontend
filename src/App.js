@@ -5,6 +5,7 @@ import ReactGA from 'react-ga';
 import Home from './scenes/home/home';
 import ScrollToTop from './shared/components/ScrollToTop';
 import * as CookieHelpers from './shared/utils/cookieHelper';
+// import DocumentTitle from './shared/constants/documentTitle';
 
 class App extends Component {
   constructor(prevState, props) {
@@ -23,6 +24,7 @@ class App extends Component {
   }
 
   setState() {
+    // DocumentTitle();
     const cookies = CookieHelpers.getUserStatus();
     // eslint-disable-next-line
     this.setState((prevState, props) => {

@@ -113,5 +113,6 @@
       "react-app"
     ]
   },
-  "homepage": "http://frontend.operationcode.org/"
+  "homepage": "http://frontend.operationcode.org/",
+  "proxy": "http://localhost:3000"
 }
