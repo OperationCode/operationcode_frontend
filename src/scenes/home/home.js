@@ -10,7 +10,6 @@ import IdmeVerify from 'shared/components/idme/idmeverify/idmeverify';
 import AuthenticatedRoute from 'shared/components/authenticatedRoute/authenticatedRoute';
 import familyImage from 'images/Family-2.jpg';
 import Profile from './profile/profile';
-import SignUp from './signup/signup';
 import MentorRequestsTable from './mentor/mentorRequestsTable/mentorRequestsTable';
 import SquadsTable from './squads/squadsTable/squadsTable';
 import Dashboard from './dashboard/dashboard';
@@ -124,7 +123,7 @@ class Home extends Component {
             />
             <Route
               path="/join"
-              component={SignUp}
+              component={SignupInformation}
             />
             <Route
               path="/history"
@@ -132,7 +131,7 @@ class Home extends Component {
             />
             <Route
               path="/sign-up"
-              component={SignUp}
+              component={SignupInformation}
             />
             <Route
               path="/thanks"
@@ -166,10 +165,6 @@ class Home extends Component {
             <Route
               path="/media"
               component={Press}
-            />
-            <Route
-              path="/signup-info"
-              component={SignupInformation}
             />
             <Route
               path="/challenge"
@@ -218,10 +213,10 @@ class Home extends Component {
                 <Gala {...authProps} />
               )}
             />
-            <Route
+            {/* <Route
               path="/newgibill"
-              render="http://www.benefits.va.gov/gibill/post911_gibill.asp"
-            />
+              component={() => (window.location = 'http://www.benefits.va.gov/gibill/post911_gibill.asp')}
+            /> */}
             <Route
               path="/login"
               render={() => (
@@ -231,7 +226,8 @@ class Home extends Component {
             <AuthenticatedRoute
               exact path="/profile"
               isLoggedIn={CookieHelpers.getUserStatus().signedIn}
-              component={() => (<Profile {...authProps} />)}
+              component={Profile}
+              {...authProps}
             />
             <AuthenticatedRoute
               exact path="/profile/verify"

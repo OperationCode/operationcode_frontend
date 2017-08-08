@@ -75,18 +75,18 @@ class SignupInformation extends Component {
             percent={'33'}
           />
         );
-      case '2false':
+      case '2true':
         return (
           <Interests
             update={this.onCheckBoxChange}
             percent={'66'}
           />
         );
-      case '3false':
+      case '3true':
         return (
           <Redirect to="/thanks" />
         );
-      case '2true':
+      case '2false':
         return (
           <WorkInfo
             role={this.state.role}
@@ -95,21 +95,21 @@ class SignupInformation extends Component {
             percent={'40'}
           />
         );
-      case '3true':
+      case '3false':
         return (
           <SchoolInfo
             update={this.onIdentifierStatusChange}
             percent={'60'}
           />
         );
-      case '4true':
+      case '4false':
         return (
           <Interests
             update={this.onCheckBoxChange}
             percent={'80'}
           />
         );
-      case '5true':
+      case '5false':
         return (
           <Redirect to="/thanks" />
         );
