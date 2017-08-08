@@ -39,6 +39,20 @@
   text-align: center;
 }
 
-.opaque {
-  background-color: rgb(117,129,143);
+/* TODO: Make sure that navDropdown looks good on pages with smaller height headers (like /about) */
+
+@media screen and (max-width: 1000px) and (min-width: 780px) {
+  .content {
+    padding: 85px 0 0 0;
+  }
+}
+
+@media screen and (max-width: 779px) {
+  .parent {
+    display: none;
+  }
+
+  .content {
+    position: relative;
+  }
 }
