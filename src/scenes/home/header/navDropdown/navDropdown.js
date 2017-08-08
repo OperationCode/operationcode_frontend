@@ -1,36 +1,53 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
-import classNames from 'classnames';
 import NavItem from '../navItem/navItem';
 import styles from './navDropdown.css';
 
-function NavDropdown(props) {
-  const classes = classNames({
-    [`${styles.child}`]: true,
-    [`${styles.opaque}`]: !(props.location.pathname === '/')
-  });
+class NavDropdown extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isDesktopScreenSize: true,
+    };
+    this.updateWindowSize = this.updateWindowSize.bind(this);
+  }
 
-  return (
-    <div className={styles.parent}>
-      <NavItem text={`${props.text} ${''} ▾`} />
-      <ul className={styles.content}>
-        {props.children.map(v => (
-          <li key={v.props.text} className={classes}>
-            {v}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+  componentDidMount() {
+    this.updateWindowSize();
+    window.addEventListener('resize', this.updateWindowSize);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowSize);
+  }
+
+  updateWindowSize() {
+    this.setState({ isDekstopScreenSize: window.innerWidth > 779 });
+  }
+
+  // TODO: Utilize isDesktopScreenSize to render just the children so that the sideNav renders things properly without CSS Media Queries
+  render() {
+    return (
+      <div className={styles.parent}>
+        <NavItem text={`${this.props.text} ${''} ▾`} />
+        <ul className={styles.content}>
+          {this.props.children.map(v => (
+            <li key={v.props.text} className={styles.child}>
+              {v}
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
 }
 
 NavDropdown.propTypes = {
-  /* eslint-disable react/forbid-prop-types */
+  /* eslint-disable-rule react/forbid-prop-types */
   children: PropTypes.arrayOf(PropTypes.object).isRequired,
   text: PropTypes.string.isRequired,
-  location: PropTypes.object.isRequired
-  /* eslint-disable react/forbid-prop-types */
+  /* eslint-disable-rule */
 };
 
 export default withRouter(NavDropdown);
