@@ -59,14 +59,14 @@ class SignupInformation extends Component {
   showStep = () => {
     const step = this.state.step + this.state.identifier;
     switch (step) {
-      case '1true':
+      case '1false':
         return (
           <MilitaryInfo
             update={this.onIdentifierStatusChange}
             percent={'20'}
           />
         );
-      case '1false':
+      case '1true':
         return (
           <WorkInfo
             role={this.state.role}

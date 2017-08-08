@@ -120,7 +120,7 @@ class Home extends Component {
             />
             <Route
               path="/signup"
-              component={SignUp}
+              component={SignupInformation}
             />
             <Route
               path="/join"
@@ -220,7 +220,7 @@ class Home extends Component {
             />
             <Route
               path="/newgibill"
-              component={() => (window.location = 'http://www.benefits.va.gov/gibill/post911_gibill.asp')}
+              render="http://www.benefits.va.gov/gibill/post911_gibill.asp"
             />
             <Route
               path="/login"
