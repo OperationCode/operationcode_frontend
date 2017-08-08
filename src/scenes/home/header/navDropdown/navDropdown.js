@@ -12,16 +12,16 @@ function NavDropdown(props) {
   });
 
   return (
-    <span className={styles.parent}>
-      <NavItem text={props.text} />
-      <div className={styles.content}>
+    <div className={styles.parent}>
+      <NavItem text={`${props.text} ${''} ▾`} />
+      <ul className={styles.content}>
         {props.children.map(v => (
-          <span key={v.props.text} className={classes}>
+          <li key={v.props.text} className={classes}>
             {v}
-          </span>
+          </li>
         ))}
-      </div>
-    </span>
+      </ul>
+    </div>
   );
 }
 
