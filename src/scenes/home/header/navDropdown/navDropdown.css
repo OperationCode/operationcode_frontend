@@ -2,8 +2,9 @@
   display: inline-block;
 }
 
-.children {
+.content {
   position: absolute;
+  display: none;
 }
 
 .child {
@@ -15,11 +16,15 @@
 }
 
 @media screen and (max-width: 760px) {
-  .children {
+  .content {
     position: relative;
   }
 
   .opaque {
     background: none;
   }
+}
+
+.parent:hover .content {
+  display: block;
 }

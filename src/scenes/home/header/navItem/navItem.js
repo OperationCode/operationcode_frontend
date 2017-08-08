@@ -29,8 +29,8 @@ class NavItem extends PureComponent {
         </Link>
       );
     }
-    return (// eslint-disable-next-line
-      <a className={classes} href="#" onClick={this.handleClick}>
+    return (
+      <a className={classes}>
         {this.props.text}
       </a>
     );
