@@ -97,7 +97,7 @@ class Login extends Component {
   }
 
   ssoLoggedInRedirect = () => {
-    axios.get(`${config.backendUrl}/sessions/sso?sso=${this.state.sso}&sig=${this.state.sig}`, {
+    axios.get(`${config.backendUrl}/sessions/sso?sso=${encodeURI(this.state.sso)}&sig=${this.state.sig}`, {
       headers: {
         Authorization: `Bearer ${CookieHelpers.authToken()}`
       }
@@ -117,8 +117,9 @@ class Login extends Component {
     return '/profile';
   }
 
+
   handleOnClick = (e) => {
-    e.preventDefault = true;
+    e.preventDefault();
 
     if (this.isFormValid()) {
       axios.post(`${config.backendUrl}/sessions`, {
@@ -161,7 +162,6 @@ class Login extends Component {
           {errorFeedback && <h2 className={styles.loginError}>{errorFeedback}</h2>}
           <FormButton className={styles.Button} text="Login" onClick={this.handleOnClick} />
         </Form>
-
         <Link to="/reset_password">Reset Password</Link>
         <SignUpLink />
       </Section>

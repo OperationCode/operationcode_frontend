@@ -1,10 +1,11 @@
 .teamCard {
   border-radius: 4px;
   align-items: center;
+  text-align: center;
   margin: 20px 10px;
   padding: 10px;
-  width: 140px;
-  height: auto;
+  width: 185px;
+  height: 110px;
   background: #F0F2F2;
   box-shadow: 0 3px 6px 1px rgba(0, 0, 0, 0.1);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
