@@ -84,7 +84,7 @@ class SignupInformation extends Component {
         );
       case '3true':
         return (
-          <Redirect to="/thanks" />
+          <Redirect to="/join" />
         );
       case '2false':
         return (
