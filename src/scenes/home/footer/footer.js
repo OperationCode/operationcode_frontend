@@ -9,33 +9,33 @@ class Footer extends Component {
   render() {
     return (
       <div className={styles.footer}>
-        <div className={styles.content}>
-          <div className={styles.outerFooterGroups}>
-            <div className={styles.email} >
-              <a href="mailto:contact@operationcode.org">contact@operationcode.org</a>
+        <div className={styles.footerContent}>
+          <div className={styles.footerOuterFooterGroups}>
+            <div className={styles.footerEmail} >
+              <a href="mailto:contact@operationcode.org" target="_blank" rel="noopener noreferrer">contact@operationcode.org</a>
             </div>
             <SocialMedia />
           </div>
-          <div className={styles.logo}>
-            <img src={centerLogo} alt="Operation Code Logo" />
-            <p className={styles.copyright}>
+          <div className={styles.footerOuterFooterGroups}>
+            <img className={styles.footerImg} src={centerLogo} alt="Operation Code Logo" />
+            <p className={styles.footerLogoCopyright}>
               Copyright 2017 {' '}
-              <br className={styles.copyrightLineBreak} />
+              <br className={styles.footerLogoCopyrightLineBreak} />
               Operation Code™
             </p>
           </div>
-          <div className={styles.outerFooterGroups}>
-            <div className={styles.blockGroup} >
+          <div className={styles.footerOuterFooterGroups}>
+            <div className={styles.footerBlockGroup} >
               <Link to="/about">About</Link>
               <Link to="/press">Press</Link>
               <Link to="/faq">FAQ</Link>
               <Link to="/team">Team</Link>
             </div>
-            <div className={styles.blockGroup}>
-              <a href="https://github.com/OperationCode/operationcode_frontend/issues/new" rel="noopener noreferrer">Report A Bug</a>
-              <a href="https://smile.amazon.com/ch/47-4247572" rel="noopener noreferrer">Amazon Smile</a>
+            <div className={styles.footerBlockGroup}>
+              <a href="https://github.com/OperationCode/operationcode_frontend/issues/new" target="_blank" rel="noopener noreferrer">Report A Bug</a>
+              <a href="https://smile.amazon.com/ch/47-4247572" target="_blank" rel="noopener noreferrer">Amazon Smile</a>
               <Link to="/contact">Contact</Link>
-              <a href="https://www.iubenda.com/privacy-policy/8174861" rel="noopener noreferrer">Privacy</a>
+              <a href="https://www.iubenda.com/privacy-policy/8174861" target="_blank" rel="noopener noreferrer">Privacy</a>
             </div>
           </div>
         </div>
