@@ -64,7 +64,7 @@ class ApprovedSchools extends Component {
           <p>
             Are you a code school seeking state and/or VA approval?
             <br />
-            <a href="mailto:staff@operationcode.org">
+            <a href="mailto:staff@operationcode.org" target="_blank" rel="noopener noreferrer">
               Request technical assistance today.
             </a>
           </p>

@@ -15,8 +15,6 @@
   height: 100%;
 }
 
-/* outerFooterGroups class represents the NON logo columns of the footer flex container */
-
 .outerFooterGroups {
   display: grid;
   grid-auto-flow: unset;
@@ -64,12 +62,11 @@
   padding-bottom: 0px;
 }
 
-
 .footerBlockGroup a:hover {
   font-weight: bold;
   -webkit-transition-duration: 0.1s;
-       -o-transition-duration: 0.1s;
-          transition-duration: 0.1s;
+  -o-transition-duration: 0.1s;
+   transition-duration: 0.1s;
 }
 
 .footerCopyright {
@@ -104,7 +101,6 @@
   .outerFooterGroups {
     flex: 1 0 35%;
   }
-
   .footerImg {
     flex: 1 0 30%;
   }
@@ -120,7 +116,6 @@
   .footerImg > img {
     height: 100px;
   }
-
   .footerImg > p {
     font-size: 0.7rem;
   }
@@ -136,7 +131,6 @@
   .outerFooterGroups {
     padding: 32px 0;
   }
-
   .footerBlockGroup {
     flex-direction: column;
     height: 100%;
@@ -147,7 +141,6 @@
   .footerEmail {
     font-size: 0.8rem;
   }
-
   .footerBlockGroup {
     padding: 10px 10px;
   }
@@ -158,35 +151,28 @@
     height: 500px;
     padding: 0 16px;
   }
-
   .footerContent {
     display: block;
   }
-
   .outerFooterGroups {
     justify-content: center;
     flex: 1 0 auto;
     padding: 20px 0;
   }
-
   .footerEmail {
     font-size: 1.3rem;
     margin-bottom: 10px;
   }
-
   .footerImg img {
     height: 100px;
   }
-
   .footerBlockGroup {
     font-size: 1rem;
   }
-
   .footerBlockGroup a {
     padding: 10px 10px;
   }
-
-  .footerBlockGroup ~ .blockGroup {
+  .footerBlockGroup {
     margin-top: 10px;
   }
 }
