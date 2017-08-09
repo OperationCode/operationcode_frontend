@@ -21,6 +21,8 @@ import Gala from './gala/gala';
 import FAQ from './faq/faq';
 import Contact from './contact/contact';
 import History from './history/history';
+import ScholarshipList from './scholarship/scholarshipList';
+import ScholarshipApplication from './scholarshipApplication/scholarshipApplication';
 import FinancialStatements from './about/financialStatements/financialStatements';
 import Header from './header/header';
 import Landing from './landing/landing';
@@ -178,6 +180,12 @@ class Home extends Component {
               )}
             />
             <Route
+              path="/scholarship-list"
+              render={() => (
+                <ScholarshipList />
+              )}
+            />
+            <Route
               path="/mentor-request"
               render={() => (
                 <MentorRequest {...authProps} />
@@ -222,6 +230,11 @@ class Home extends Component {
               render={() => (
                 <Login updateRootAuthState={this.updateRootAuthState} isLoggedIn={this.state.signedIn} {...authProps} />
               )}
+            />
+            <AuthenticatedRoute
+              exact path="/scholarship-application"
+              isLoggedIn={CookieHelpers.getUserStatus().signedIn}
+              component={ScholarshipApplication}
             />
             <AuthenticatedRoute
               exact path="/profile"
