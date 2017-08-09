@@ -1,7 +1,7 @@
 .topNav {
   display: flex;
   justify-content: flex-end;
-  flex: none;
+  flex: 1 0 60%;
   font-size:20px;
 }
 
@@ -19,8 +19,8 @@
 }
 
 .topNav span a {
-  flex: none;
-  text-align: right;
+  flex: 0 1 auto;
+  text-align: center;
 }
 
 .topNav__topNav___2W-uf {
