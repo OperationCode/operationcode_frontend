@@ -13,19 +13,28 @@
 }
 
 /* outerFooterGroups class represents the NON logo columns of the footer flex container */
+
 .outerFooterGroups {
-  display: flex;
-  flex: 1 0 30%;
-  flex-flow: column wrap;
-  padding: 64px 0;
-  justify-content: space-around;
-  align-items: center;
-  overflow: hidden;
+    display: -ms-flexbox;
+    display: grid;
+    grid-auto-flow: unset;
+    text-align: center;
+    text-align: -webkit-center;
+    padding-bottom: 96px;
+    padding-top: 38px;
+    padding-left: 20px;
+    padding-right: 20px;
+    -ms-flex-pack: distribute;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 .email {
   flex-direction: row;
   justify-content: center;
+  color: white;
+  text-align: center;
+  hover: pointer;
 }
 
 .email a {
@@ -35,23 +44,17 @@
 }
 
 .logo {
-  display: flex;
-  flex: 1 0 40%;
+  height: 120px;
+  padding-left: 20px;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
 }
 
-.logo img {
-  height: 120px;
-}
-
-.blockGroup {
-  display: flex;
-  flex: 1 0 50%;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: space-around;
+img {
+    padding-left: 30px;
+    padding-right: 25px;
+    padding-bottom: 0px;
 }
 
 .blockGroup a {
@@ -66,15 +69,46 @@
 }
 
 .copyright {
-  color:#F7F7F7;
-  font-size: 1rem;
+  color: #F7F7F7;
+  font-size: 12.5px;
+  font-weight: bold;
   font-family: sans-serif;
-  text-align: center;
-  min-width: 100%;
 }
 
 .copyrightLineBreak {
   display: none;
+}
+
+.socialMediaItem {
+    padding: 15px 10px;
+    opacity: 1.8;
+}
+
+.socialMediaItem: img:hover {
+  opacity: .8;
+  hover: pointer;
+}
+
+.footer__blockGroup___U7lG2 a {
+    text-decoration: none;
+    color: #F7F7F7;
+    padding: 15px 30px;
+    margin-top: 40px;
+}
+
+.footer__outerFooterGroups___2ONRK {
+    display: -ms-flexbox;
+    display: grid;
+    grid-auto-flow: unset;
+    text-align: center;
+    text-align: -webkit-center;
+    padding-bottom: 69px;
+    padding-top: 55px;
+    padding-left: 25px;
+    padding-right: 25px;
+    -ms-flex-pack: distribute;
+    -ms-flex-align: center;
+    align-items: end;
 }
 
 @media screen and (max-width: 1330px) {

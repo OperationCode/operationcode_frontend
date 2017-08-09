@@ -4,6 +4,7 @@ import SocialMedia from 'shared/components/socialMedia/socialMedia';
 import centerLogo from 'images/icons/Medal-Icon.svg';
 import styles from './footer.css';
 
+
 class Footer extends Component {
   render() {
     return (
@@ -31,10 +32,10 @@ class Footer extends Component {
               <Link to="/team">Team</Link>
             </div>
             <div className={styles.blockGroup}>
-              <a href="https://github.com/OperationCode/operationcode_frontend/issues/new" target="_blank" rel="noopener noreferrer">Report A Bug</a>
-              <a href="https://smile.amazon.com/ch/47-4247572" target="_blank" rel="noopener noreferrer">Amazon Smile</a>
+              <a href="https://github.com/OperationCode/operationcode_frontend/issues/new" rel="noopener noreferrer">Report A Bug</a>
+              <a href="https://smile.amazon.com/ch/47-4247572" rel="noopener noreferrer">Amazon Smile</a>
               <Link to="/contact">Contact</Link>
-              <a href="https://www.iubenda.com/privacy-policy/8174861" target="_blank" rel="noopener noreferrer">Privacy</a>
+              <a href="https://www.iubenda.com/privacy-policy/8174861" rel="noopener noreferrer">Privacy</a>
             </div>
           </div>
         </div>

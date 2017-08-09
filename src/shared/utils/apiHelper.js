@@ -2,14 +2,14 @@ import axios from 'axios';
 import config from 'config/environment';
 import Cookies from 'universal-cookie';
 
-export const setAuthorizationHeader = () => {
+const setAuthorizationHeader = () => {
   const cookies = new Cookies();
   return {
     Authorization: `bearer ${cookies.get('token')}`
   };
 };
 
-function makeGenericGet(endpoint) {
+export function makeGenericGet(endpoint) {
   const authHeader = setAuthorizationHeader();
   return axios.get(`${config.backendUrl}/${endpoint}`, {
     headers: authHeader
