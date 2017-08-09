@@ -6,7 +6,6 @@ import './shared/styles/normalize.global.css';
 import './shared/styles/react-table.global.css';
 import './index.css';
 
-
 ReactDOM.render(
   <App />,
   document.getElementById('root')
