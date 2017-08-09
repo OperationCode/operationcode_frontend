@@ -254,9 +254,6 @@ class Home extends Component {
 }
 
 Home.propTypes = {
-  // exact: PropTypes.bool,
-  // path: PropTypes.string,
-  // component: PropTypes.func,
   history: PropTypes.object.isRequired,
   location: PropTypes.object.isRequired,
 };

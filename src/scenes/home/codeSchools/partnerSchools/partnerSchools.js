@@ -40,6 +40,8 @@ class PartnerSchools extends Component {
             GI="No"
             fullTime="Self-Driven"
             hardware="No"
+            target="_blank"
+            rel="noopener noreferrer"
           />
           <SchoolCard
             alt="Coder Camps Logo"
@@ -50,6 +52,8 @@ class PartnerSchools extends Component {
             GI="No"
             fullTime="Full-Time"
             hardware="No"
+            target="_blank"
+            rel="noopener noreferrer"
           />
           <SchoolCard
             alt="Code Platoon Logo"
@@ -60,6 +64,8 @@ class PartnerSchools extends Component {
             GI="No"
             fullTime="Full-Time"
             hardware="No"
+            target="_blank"
+            rel="noopener noreferrer"
           />
           <SchoolCard
             alt="Flatiron Logo"
@@ -72,6 +78,8 @@ class PartnerSchools extends Component {
             GI="No"
             fullTime="Full-Time"
             hardware="No"
+            target="_blank"
+            rel="noopener noreferrer"
           />
           <SchoolCard
             alt="Fullstack Academy Logo"
@@ -82,6 +90,8 @@ class PartnerSchools extends Component {
             GI="No"
             fullTime="Full-Time"
             hardware="No"
+            target="_blank"
+            rel="noopener noreferrer"
           />
           <SchoolCard
             alt="Launch School Logo"
@@ -92,6 +102,8 @@ class PartnerSchools extends Component {
             GI="No"
             fullTime="Self-Driven"
             hardware="No"
+            target="_blank"
+            rel="noopener noreferrer"
           />
           <SchoolCard
             alt="Sabio Logo"
@@ -104,6 +116,8 @@ class PartnerSchools extends Component {
             GI="Yes"
             fullTime="Full-Time"
             hardware="No"
+            target="_blank"
+            rel="noopener noreferrer"
           />
           <SchoolCard
             alt="Startup Institute Logo"
@@ -116,6 +130,8 @@ class PartnerSchools extends Component {
             GI="No"
             fullTime="Full-Time"
             hardware="No"
+            target="_blank"
+            rel="noopener noreferrer"
           />
           <SchoolCard
             alt="Thinkful Logo"
@@ -126,6 +142,8 @@ class PartnerSchools extends Component {
             GI="No"
             fullTime="Self-Driven"
             hardware="No"
+            target="_blank"
+            rel="noopener noreferrer"
           />
         </div>
 
@@ -133,7 +151,7 @@ class PartnerSchools extends Component {
           <p>
             Are you a code school seeking a partnership with Operation Code?
             <br />
-            <a href="mailto:staff@operationcode.org">
+            <a href="mailto:staff@operationcode.org" target="_blank" rel="noopener noreferrer">
               Reach out to us!
             </a>
           </p>

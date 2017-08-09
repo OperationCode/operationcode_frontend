@@ -14,12 +14,10 @@ app.use((req, res, next) => {
 });
 
 app.use('/public', express.static(__dirname + '/public'));
-app.use('/public/images', express.static(__dirname + '/public/images'));
 app.use('/build', express.static(__dirname + '/build'));
 app.use('/build/static', express.static(__dirname + '/build/static'));
-// app.use('/build/static/js', express.static(__dirname + '/build/static/js'));
-// app.use('/build/static/css', express.static(__dirname + '/build/static/css'));
-// app.use('/build/static/media', express.static(__dirname + '/build/static/media'));
+app.use('/build/static/media', express.static(__dirname + '/build/static/media'));
+app.use('/build/static/media', express.static(__dirname + '/build/static/images'));
 
 app.use(express.static('./build'));
 app.get('/*', (req, res) => {

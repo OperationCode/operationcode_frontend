@@ -10,21 +10,21 @@ class Footer extends Component {
     return (
       <div className={styles.footer}>
         <div className={styles.footerContent}>
-          <div className={styles.footerOuterFooterGroups}>
+          <div className={styles.outerFooterGroups}>
             <div className={styles.footerEmail} >
               <a href="mailto:contact@operationcode.org" target="_blank" rel="noopener noreferrer">contact@operationcode.org</a>
             </div>
             <SocialMedia />
           </div>
-          <div className={styles.footerOuterFooterGroups}>
+          <div className={styles.outerFooterGroups}>
             <img className={styles.footerImg} src={centerLogo} alt="Operation Code Logo" />
-            <p className={styles.footerLogoCopyright}>
+            <p className={styles.footerCopyright}>
               Copyright 2017 {' '}
-              <br className={styles.footerLogoCopyrightLineBreak} />
+              <br className={styles.footerCopyrightLineBreak} />
               Operation Code™
             </p>
           </div>
-          <div className={styles.footerOuterFooterGroups}>
+          <div className={styles.outerFooterGroups}>
             <div className={styles.footerBlockGroup} >
               <Link to="/about">About</Link>
               <Link to="/press">Press</Link>
