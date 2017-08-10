@@ -21,7 +21,7 @@ import Gala from './gala/gala';
 import FAQ from './faq/faq';
 import Contact from './contact/contact';
 import History from './history/history';
-import ScholarshipList from './scholarship/scholarshipList';
+import Scholarships from './scholarship/scholarships';
 import ScholarshipApplication from './scholarshipApplication/scholarshipApplication';
 import FinancialStatements from './about/financialStatements/financialStatements';
 import Header from './header/header';
@@ -180,10 +180,8 @@ class Home extends Component {
               )}
             />
             <Route
-              path="/scholarship-list"
-              render={() => (
-                <ScholarshipList />
-              )}
+              path="/scholarships"
+              component={Scholarships}
             />
             <Route
               path="/mentor-request"

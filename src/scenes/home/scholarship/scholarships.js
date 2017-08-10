@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Scholarship from './scholarship';
 
-class ScholarshipList extends Component {
+class Scholarships extends Component {
   constructor() {
     super();
     this.state = {
@@ -29,6 +29,7 @@ class ScholarshipList extends Component {
   }
 
   render() {
+    console.log(this.props);
     const scholarships = this.state.scholarships.map(scholarship => <Scholarship key={scholarship.id} scholarship={scholarship} />);
     return (
       <div>
@@ -38,4 +39,4 @@ class ScholarshipList extends Component {
   }
 }
 
-export default ScholarshipList;
+export default Scholarships;
