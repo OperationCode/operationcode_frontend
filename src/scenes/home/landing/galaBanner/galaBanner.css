@@ -1,0 +1,16 @@
+.galaBannerWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F0F2F2;
+  width: 100%;
+}
+
+.galaBannerContent {
+  padding: 40px 0 0 0;
+}
+
+.galaImage {
+  width: 100%;
+  max-width: 100%;
+}
