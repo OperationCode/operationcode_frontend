@@ -16,8 +16,9 @@
     "import/no-extraneous-dependencies": 0,
     "linebreak-style": 0,
     "max-len": 0,
-    "react/jsx-max-props-per-line": 0,
-    "settings": {
+    "react/jsx-max-props-per-line": 0
+   },
+   "settings": {
      "import/resolver": {
        "webpack": {
          "config": "./config/webpack.config.dev.js"
