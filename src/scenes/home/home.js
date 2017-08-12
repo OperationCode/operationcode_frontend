@@ -21,6 +21,7 @@ import Gala from './gala/gala';
 import FAQ from './faq/faq';
 import Contact from './contact/contact';
 import History from './history/history';
+import Scholarship from './scholarship/scholarship';
 import Scholarships from './scholarship/scholarships';
 import ScholarshipApplication from './scholarshipApplication/scholarshipApplication';
 import FinancialStatements from './about/financialStatements/financialStatements';
@@ -180,8 +181,14 @@ class Home extends Component {
               )}
             />
             <Route
+              exact
               path="/scholarships"
               component={Scholarships}
+            />
+            <Route
+              exact
+              path="/scholarships/:id"
+              component={Scholarship}
             />
             <Route
               path="/mentor-request"
@@ -230,7 +237,7 @@ class Home extends Component {
               )}
             />
             <AuthenticatedRoute
-              exact path="/scholarship-application"
+              exact path="/scholarships/:id/apply"
               isLoggedIn={CookieHelpers.getUserStatus().signedIn}
               component={ScholarshipApplication}
             />

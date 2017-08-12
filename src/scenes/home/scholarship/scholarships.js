@@ -1,39 +1,38 @@
 import React, { Component } from 'react';
-import Scholarship from './scholarship';
+import axios from 'axios';
+import config from 'config/environment.js';
+import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 class Scholarships extends Component {
   constructor() {
     super();
     this.state = {
-      scholarships: [
-        {
-          id: 1,
-          name: 'War Heroes',
-          description: '$20,000 for bootcamp of your choice',
-          location: 'Austin, TX',
-        },
-        {
-          id: 2,
-          name: 'Vetinarians for Veterans',
-          description: '$15,000 for bootcamp of your choice',
-          location: 'San Francisco, CA',
-        },
-        {
-          id: 3,
-          name: 'Generic Name',
-          description: '$17,000 for bootcamp of your choice',
-          location: 'New York, New York',
-        }
-      ]
+      scholarships: []
     };
   }
 
+  componentWillMount() {
+    this.getScholarships();
+  }
+
+  getScholarships = () => {
+    axios.get(`${config.backendUrl}/scholarships`)
+      .then((response) => {
+        this.setState({ scholarships: response.data });
+      }).catch((error) => {
+        console.log(error);
+      });
+  }
+
   render() {
-    console.log(this.props);
-    const scholarships = this.state.scholarships.map(scholarship => <Scholarship key={scholarship.id} scholarship={scholarship} />);
+    let schlrshps;
+    if (this.state.scholarships.length > 0) {
+      schlrshps = this.state.scholarships.map(scholarship => <div key={scholarship.id}><Link to={`scholarships/${scholarship.id}`} >{scholarship.name}</Link></div>);
+    }
     return (
       <div>
-        {scholarships}
+        {schlrshps}
       </div>
     );
   }

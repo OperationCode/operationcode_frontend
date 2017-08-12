@@ -12,7 +12,7 @@ class Profile extends Component {
   render() {
     return (
       <div>
-        <Link to="/scholarship-list">Scholarship Opportunities</Link>
+        <Link to="/scholarships">Scholarship Opportunities</Link>
         <Section title="Operation Code Community" theme="white">
           <span className={styles.discourseText}>Visit the Operation Code Community by clicking below.</span>
           <a href="https://community.operationcode.org">

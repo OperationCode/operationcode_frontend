@@ -4,20 +4,24 @@ import { Link } from 'react-router-dom';
 
 class Scholarship extends Component {
   render() {
+    console.log(this.props);
     return (
       <div>
-        <Link to="/scholarship-application">{this.props.scholarship.name}</Link> : {this.props.scholarship.description}
+        <Link to={`/scholarships/${this.props.match.params.id}/apply`}>Apply</Link>
       </div>
     );
   }
 }
 
 Scholarship.propTypes = {
-  scholarship: PropTypes.arrayOf,
-};
-
-Scholarship.defaultProps = {
-  scholarship: false
+  match: PropTypes.shape({
+    isExact: PropTypes.bool,
+    params: PropTypes.shape({
+      id: PropTypes.string
+    }),
+    path: PropTypes.string,
+    url: PropTypes.string
+  }).isRequired,
 };
 
 export default Scholarship;
