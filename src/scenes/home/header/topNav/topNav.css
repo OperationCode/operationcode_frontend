@@ -23,6 +23,15 @@
   text-align: center;
 }
 
+.topNav__topNav___2W-uf {
+    display: -ms-flexbox;
+    -ms-flex-pack: unset;
+    text-align: right;
+    -ms-flex: 60%;
+    flex: none;
+    font-size: 20px;
+}
+
 @media screen and (max-width: 1000px) {
   .topNav {
     margin-right: 40px;

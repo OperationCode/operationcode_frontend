@@ -226,7 +226,8 @@ class Home extends Component {
             <AuthenticatedRoute
               exact path="/profile"
               isLoggedIn={CookieHelpers.getUserStatus().signedIn}
-              component={() => (<Profile {...authProps} />)}
+              component={Profile}
+              {...authProps}
             />
             <AuthenticatedRoute
               exact path="/profile/verify"

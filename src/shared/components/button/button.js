@@ -5,22 +5,25 @@ const Button = (props) => {
   const {
     handleClick,
     link,
+    target,
     ...otherProps
   } = props;
 
   return (
-    <button onSubmit={handleClick} {...otherProps} />
+    <button onSubmit={handleClick} {target} {...otherProps} />
   );
 };
 
 Button.propTypes = {
   handleClick: PropTypes.func,
-  link: PropTypes.string
+  link: PropTypes.string,
+  target: PropTypes.string
 };
 
 Button.defaultProps = {
   handleClick: null,
-  link: null
+  link: null,
+  target: null
 };
 
 export default Button;

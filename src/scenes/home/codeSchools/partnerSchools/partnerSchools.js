@@ -6,7 +6,6 @@ import styles from './partnerSchools.css';
 class PartnerSchools extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       partner_schools: {}
     };
@@ -29,7 +28,6 @@ class PartnerSchools extends Component {
           <br />
           <b>Apply for a scholarship with our partners now and get coding:</b>
         </p>
-
         <div className={styles.partnerSchools}>
           <SchoolCard
             alt="Bloc Logo"
@@ -133,7 +131,7 @@ class PartnerSchools extends Component {
           <p>
             Are you a code school seeking a partnership with Operation Code?
             <br />
-            <a href="mailto:staff@operationcode.org">
+            <a href="mailto:staff@operationcode.org" target="_blank" rel="noopener noreferrer" >
               Reach out to us!
             </a>
           </p>

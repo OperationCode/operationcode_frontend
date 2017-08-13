@@ -6,12 +6,14 @@ const SocialMediaItem = (props) => {
   const {
     smImage,
     smText,
-    link
+    link,
+    target,
+    rel,
   } = props;
 
   return (
     <div className={styles.socialMediaItem}>
-      <a href={link}><img src={smImage} alt={smText} /></a>
+      <a href={link} target={target} rel={rel}><img src={smImage} alt={smText} /></a>
     </div>
   );
 };
@@ -19,7 +21,9 @@ const SocialMediaItem = (props) => {
 SocialMediaItem.propTypes = {
   smImage: PropTypes.string.isRequired,
   smText: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired
+  link: PropTypes.string.isRequired,
+  target: PropTypes.string.isRequired,
+  rel: PropTypes.string.isRequired
 };
 
 export default SocialMediaItem;
