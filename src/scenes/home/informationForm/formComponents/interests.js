@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
 import { Line } from 'rc-progress';
+import { LANGUAGES, DISCIPLINES } from 'shared/constants/status';
 import Form from 'shared/components/form/form';
 import FormCheckBox from 'shared/components/form/formCheckBox/formCheckBox';
 import PropTypes from 'prop-types';
 import styles from './formComponents.css';
 
-const languageValues = ['Javascript', 'Ruby', 'Java', 'Python', 'C#', 'C', 'Swift', '.NET', 'HTML / CSS'];
-const disciplineValues = ['Web Developer', 'Web Designer', 'Front-End Developer', 'Back-End Developer', 'Full-Stack Developer', 'Mobile / IOS', 'Mobile / Android', 'I.T / SysAdmin', 'Cyber Security', 'Data Science'];
-
 class Interests extends Component {
 
   render() {
-    const languages = languageValues
+    const languages = LANGUAGES
       .map(language =>
         (
           <FormCheckBox
@@ -22,7 +20,7 @@ class Interests extends Component {
           />
       )
     );
-    const disciplines = disciplineValues
+    const disciplines = DISCIPLINES
       .map(discipline =>
         (
           <FormCheckBox

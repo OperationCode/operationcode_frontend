@@ -131,4 +131,8 @@ export const BRANCH = [
   },
 ];
 
+export const LANGUAGES = ['Javascript', 'Ruby', 'Java', 'Python', 'C#', 'C', 'Swift', '.NET', 'HTML / CSS'];
+
+export const DISCIPLINES = ['Web Developer', 'Web Designer', 'Front-End Developer', 'Back-End Developer', 'Full-Stack Developer', 'Mobile / IOS', 'Mobile / Android', 'I.T / SysAdmin', 'Cyber Security', 'Data Science'];
+
 export default REQUEST_STATUSES;
