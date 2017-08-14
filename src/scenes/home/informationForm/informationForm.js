@@ -44,14 +44,14 @@ class SignupInformation extends Component {
     patchBackend('users', {
       user: {
         education_level: this.state.schoolLevel,
-        scholarships: this.state.scholarships,
+        scholarship_info: this.state.scholarships,
         employment_status: this.state.workInfo,
         company_name: this.state.company,
         company_role: this.state.role,
         volunteer: this.state.identifier,
         branch_of_service: this.state.branch,
-        interests: [...this.state.interests]
-      }
+        interests: Array.from(this.state.interests)
+      },
     });
     this.setState({ step: this.state.step += 1 });
   }
