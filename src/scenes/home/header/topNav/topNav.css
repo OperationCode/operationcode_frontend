@@ -9,20 +9,6 @@
   margin: 1rem;
 }
 
-.topNav button {
-  border: none;
-  color: white;
-  background: transparent;
-  font-size: 1.3rem;
-  position: relative;
-  top: 0.1rem;
-}
-
-.topNav span a {
-  flex: 0 1 auto;
-  text-align: center;
-}
-
 @media screen and (max-width: 1000px) {
   .topNav {
     margin-right: 40px;
@@ -33,7 +19,7 @@
   }
 }
 
-@media screen and (max-width: 760px) /* Tablet */ {
+@media screen and (max-width: 779px) /* Tablet */ {
   .topNav {
     display: none;
   }
