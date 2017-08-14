@@ -218,10 +218,10 @@ class Home extends Component {
                 <Gala {...authProps} />
               )}
             />
-            <Route
+            {/* <Route
               path="/newgibill"
               component={() => (window.location = 'http://www.benefits.va.gov/gibill/post911_gibill.asp')}
-            />
+            /> */}
             <Route
               path="/login"
               render={() => (
@@ -231,7 +231,8 @@ class Home extends Component {
             <AuthenticatedRoute
               exact path="/profile"
               isLoggedIn={CookieHelpers.getUserStatus().signedIn}
-              component={() => (<Profile {...authProps} />)}
+              component={Profile}
+              {...authProps}
             />
             <AuthenticatedRoute
               exact path="/profile/verify"
