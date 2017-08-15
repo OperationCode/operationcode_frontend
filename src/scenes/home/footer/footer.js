@@ -18,7 +18,7 @@ class Footer extends Component {
           <div className={styles.logo}>
             <img src={centerLogo} alt="Operation Code Logo" />
             <p className={styles.copyright}>
-              Copyright 2017 {' '}
+              © Copyright 2017 {' '}
               <br className={styles.copyrightLineBreak} />
               Operation Code™
             </p>
