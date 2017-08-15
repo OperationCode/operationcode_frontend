@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Scholarship from 'scenes/home/scholarship/scholarship';
+import { getScholarship } from 'shared/utils/apiHelper';
 import Form from 'shared/components/form/form';
-// import FormInput from 'shared/components/form/formInput/formInput';
 import FormTextArea from 'shared/components/form/formTextArea/formTextArea';
 import FormCheckbox from 'shared/components/form/formCheckbox/formCheckbox';
 import FormButton from 'shared/components/form/formButton/formButton';
@@ -14,13 +13,16 @@ class ScholarshipApplication extends Component {
       checked: false,
       reason: '',
       reasonValid: false,
-      scholarshipId: ''
+      scholarship: {}
     };
   }
 
   componentWillMount() {
     const id = this.props.match.params.id;
-    this.setState({ scholarshipId: id });
+    getScholarship(id).then((data) => {
+      this.setState({ scholarship: data });
+      console.log(this.state.scholarship);
+    });
   }
 
   onTextAreaChange = (value) => {
@@ -44,9 +46,12 @@ class ScholarshipApplication extends Component {
   render() {
     return (
       <div>
-        <Scholarship />
+        <strong>{this.state.scholarship.name}</strong><br />
+        {this.state.scholarship.description}<br />
+        {this.state.scholarship.location}
         <Form>
           <FormTextArea onChange={this.onTextAreaChange} />
+          {this.state.scholarship.terms}
           <FormCheckbox onChange={this.onCheckboxChange} />
           {this.isFormValid() && <FormButton text="Submit Application" />}
         </Form>
