@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-// import * as CookieHelpers from 'shared/utils/cookieHelper';
+import PropTypes from 'prop-types';
+import Scholarship from 'scenes/home/scholarship/scholarship';
 import Form from 'shared/components/form/form';
 // import FormInput from 'shared/components/form/formInput/formInput';
 import FormTextArea from 'shared/components/form/formTextArea/formTextArea';
@@ -10,8 +11,24 @@ class ScholarshipApplication extends Component {
   constructor() {
     super();
     this.state = {
-      checked: false
+      checked: false,
+      reason: '',
+      reasonValid: false,
+      scholarshipId: ''
     };
+  }
+
+  componentWillMount() {
+    const id = this.props.match.params.id;
+    this.setState({ scholarshipId: id });
+  }
+
+  onTextAreaChange = (value) => {
+    const valid = value !== '';
+    this.setState({
+      reason: value,
+      reasonValid: valid
+    });
   }
 
   onCheckboxChange = (value) => {
@@ -21,14 +38,15 @@ class ScholarshipApplication extends Component {
   }
 
   isFormValid = () =>
-    this.state.checked;
+    this.state.checked
+    && this.state.reasonValid;
 
   render() {
-    // console.log(CookieHelpers.getUserId());
     return (
       <div>
+        <Scholarship />
         <Form>
-          <FormTextArea />
+          <FormTextArea onChange={this.onTextAreaChange} />
           <FormCheckbox onChange={this.onCheckboxChange} />
           {this.isFormValid() && <FormButton text="Submit Application" />}
         </Form>
@@ -36,5 +54,16 @@ class ScholarshipApplication extends Component {
     );
   }
 }
+
+ScholarshipApplication.propTypes = {
+  match: PropTypes.shape({
+    isExact: PropTypes.bool,
+    params: PropTypes.shape({
+      id: PropTypes.string
+    }),
+    path: PropTypes.string,
+    url: PropTypes.string
+  }).isRequired,
+};
 
 export default ScholarshipApplication;

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import config from 'config/environment.js';
+import { getScholarships } from 'shared/utils/apiHelper';
 import { Link } from 'react-router-dom';
 // import { Link } from 'react-router-dom';
 
@@ -13,22 +12,15 @@ class Scholarships extends Component {
   }
 
   componentWillMount() {
-    this.getScholarships();
-  }
-
-  getScholarships = () => {
-    axios.get(`${config.backendUrl}/scholarships`)
-      .then((response) => {
-        this.setState({ scholarships: response.data });
-      }).catch((error) => {
-        console.log(error);
-      });
+    getScholarships().then((data) => {
+      this.setState({ scholarships: data });
+    });
   }
 
   render() {
     let schlrshps;
     if (this.state.scholarships.length > 0) {
-      schlrshps = this.state.scholarships.map(scholarship => <div key={scholarship.id}><Link to={`scholarships/${scholarship.id}`} >{scholarship.name}</Link></div>);
+      schlrshps = this.state.scholarships.map(scholarship => <div key={scholarship.id}><Link to={`scholarships/${scholarship.id}/apply`} >{scholarship.name}</Link></div>);
     }
     return (
       <div>
