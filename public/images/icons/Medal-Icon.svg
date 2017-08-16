@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="121px" height="163px" viewBox="0 0 121 163" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon/Medal</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.5">
+        <g id="Icon/Medal" stroke="#979797" fill="#FFFFFF">
+            <path d="M60.5,163 C27.0867726,163 0,135.913227 0,102.5 C0,69.0867726 27.0867726,42 60.5,42 C93.9132274,42 121,69.0867726 121,102.5 C121,135.913227 93.9132274,163 60.5,163 Z M60,123.25 L82.3358396,134.220103 L78.0700738,110.985052 L96.1401476,94.5298967 L71.1679198,91.1399483 L60,70 L48.8320802,91.1399483 L23.8598524,94.5298967 L41.9299262,110.985052 L37.6641604,134.220103 L60,123.25 Z M26,0 L95,0 L95,29.4 L60.5,42 L26,29.4 L26,0 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>
