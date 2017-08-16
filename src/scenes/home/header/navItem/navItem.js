@@ -21,12 +21,18 @@ class NavItem extends PureComponent {
   }
 
   render() {
-    const disabledClass = this.props.notClickable ? styles.disabledNavItem : '';
-    const classes = `${styles.navItem} ${disabledClass} ${styles[this.props.className]}`;
+    const classes = `${styles.navItem} ${styles[this.props.className]}`;
+    if (this.props.to) {
+      return (
+        <Link className={classes} to={this.props.to} onClick={this.handleClick}>
+          {this.props.text}
+        </Link>
+      );
+    }
     return (
-      <Link className={classes} to={this.props.to} onClick={this.handleClick}>
+      <a className={classes}>
         {this.props.text}
-      </Link>
+      </a>
     );
   }
 }
@@ -34,20 +40,16 @@ class NavItem extends PureComponent {
 NavItem.propTypes = {
   className: PropTypes.string,
   isExternal: PropTypes.bool,
-  notClickable: PropTypes.bool,
   onClick: PropTypes.func,
-  to: PropTypes.string.isRequired,
+  to: PropTypes.string,
   text: PropTypes.string.isRequired
 };
 
 NavItem.defaultProps = {
   className: null,
   isExternal: false,
-  notClickable: false,
-  onClick: null
+  onClick: null,
+  to: ''
 };
-
-// TODO: When all routes complete, remove all references to notClickable and disabledClass (js/css)
-// NOTE: For the usage of disabledClass within the classes const, ask jjhampton if there are issues
 
 export default NavItem;

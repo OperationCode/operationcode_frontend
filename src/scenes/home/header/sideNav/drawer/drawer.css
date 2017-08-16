@@ -20,12 +20,11 @@
 }
 
 .content {
-
   height: 100%;
   width: 100%;
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 779px) {
   .body {
     display: block;
   }
