@@ -74,24 +74,16 @@ class SignupInformation extends Component {
   showStep = () => {
     const step = this.state.step + this.state.identifier;
     switch (step) {
-<<<<<<< HEAD
-      case '1true':
-=======
       // Military STEP 2
       case '1false':
->>>>>>> d012913... Change various elements per code review
         return (
           <MilitaryInfo
             update={this.onIdentifierStatusChange}
             percent={'20'}
           />
         );
-<<<<<<< HEAD
-      case '1false':
-=======
       // Civillian STEP 2
       case '1true':
->>>>>>> d012913... Change various elements per code review
         return (
           <WorkInfo
             role={this.state.role}
@@ -100,33 +92,21 @@ class SignupInformation extends Component {
             percent={'33'}
           />
         );
-<<<<<<< HEAD
-      case '2false':
-=======
       // Civillian STEP 3
       case '2true':
->>>>>>> d012913... Change various elements per code review
         return (
           <Interests
             update={this.onCheckBoxChange}
             percent={'66'}
           />
         );
-<<<<<<< HEAD
-      case '3false':
-=======
       // Civillian COMPLETE
       case '3true':
->>>>>>> d012913... Change various elements per code review
         return (
           <Redirect to="/profile" />
         );
-<<<<<<< HEAD
-      case '2true':
-=======
       // Military STEP 3
       case '2false':
->>>>>>> d012913... Change various elements per code review
         return (
           <WorkInfo
             role={this.state.role}
@@ -135,36 +115,24 @@ class SignupInformation extends Component {
             percent={'40'}
           />
         );
-<<<<<<< HEAD
-      case '3true':
-=======
       // Military STEP 4
       case '3false':
->>>>>>> d012913... Change various elements per code review
         return (
           <SchoolInfo
             update={this.onIdentifierStatusChange}
             percent={'60'}
           />
         );
-<<<<<<< HEAD
-      case '4true':
-=======
       // Military STEP 5
       case '4false':
->>>>>>> d012913... Change various elements per code review
         return (
           <Interests
             update={this.onCheckBoxChange}
             percent={'80'}
           />
         );
-<<<<<<< HEAD
-      case '5true':
-=======
       // Military COMPLETE
       case '5false':
->>>>>>> d012913... Change various elements per code review
         return (
           <Redirect to="/profile" />
         );
