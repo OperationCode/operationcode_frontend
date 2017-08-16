@@ -131,11 +131,8 @@ class SignUp extends Component {
           {this.state.error ? <ul className={styles.errorList}>There was an error joining Operation Code:
             <li className={styles.errorMessage}>{this.state.error}</li>
           </ul> : null }
-          {this.state.success && <Redirect to="/thanks" />}
-          {this.state.isLoading ? <FormButton className={styles.joinButton} text="Loading..." disabled theme="grey" /> : <FormButton className={styles.joinButton} text="Join" onClick={this.handleOnClick} theme="red" />}
           {this.state.success && <Redirect to="/signup-info" />}
-          <FormButton className={styles.joinButton} text="Join" onClick={this.handleOnClick} theme="red" />
-
+          {this.state.isLoading ? <FormButton className={styles.joinButton} text="Loading..." disabled theme="grey" /> : <FormButton className={styles.joinButton} text="Join" onClick={this.handleOnClick} theme="red" />}
         </Form>
       </Section>
     );
