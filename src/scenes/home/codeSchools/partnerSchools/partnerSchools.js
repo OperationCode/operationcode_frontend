@@ -44,7 +44,7 @@ class PartnerSchools extends Component {
           <SchoolCard
             alt="Coder Camps Logo"
             schoolName="Coder Camps"
-            link="https://www.codeplatoon.org/"
+            link="https://www.codercamps.com/"
             schoolAddress="Online, Pheonix, Seattle"
             logo="https://raw.githubusercontent.com/OperationCode/operationcode_frontend/master/src/images/codeSchoolLogos/coder_camps.jpg"
             GI="No"

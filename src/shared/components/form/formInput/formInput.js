@@ -31,6 +31,15 @@ class FormInput extends Component {
     return true;
   }
 
+  revalidate() {
+    const valid = this.validate(this.state.text);
+    this.setState({ isValid: valid });
+  }
+
+  componentWillReceiveProps(nextProps){
+    this.revalidate();
+  }
+
   render() {
     return (
       <div className={styles.formInput}>
