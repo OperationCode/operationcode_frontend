@@ -21,60 +21,8 @@ class SignUp extends Component {
       emailValid: true,
       error: false,
       isValid: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       isLoading: false,
       mentor: false,
-=======
-      identifier: '',
->>>>>>> d0fbeba... Add informaitonForm master component, remove form select from original signup form
-=======
-      identifier: '',
->>>>>>> d0fbeba... Add informaitonForm master component, remove form select from original signup form
-=======
-      identifier: '',
->>>>>>> d0fbeba... Add informaitonForm master component, remove form select from original signup form
-=======
-      identifier: '',
->>>>>>> d0fbeba... Add informaitonForm master component, remove form select from original signup form
-=======
-      identifier: '',
->>>>>>> d0fbeba... Add informaitonForm master component, remove form select from original signup form
-=======
-      identifier: '',
->>>>>>> d0fbeba... Add informaitonForm master component, remove form select from original signup form
-=======
-      identifier: '',
->>>>>>> d0fbeba... Add informaitonForm master component, remove form select from original signup form
-=======
-      identifier: '',
->>>>>>> d0fbeba... Add informaitonForm master component, remove form select from original signup form
-=======
-      identifier: '',
->>>>>>> d0fbeba... Add informaitonForm master component, remove form select from original signup form
-=======
-      identifier: '',
->>>>>>> d0fbeba... Add informaitonForm master component, remove form select from original signup form
-=======
-      identifier: '',
->>>>>>> d0fbeba... Add informaitonForm master component, remove form select from original signup form
-=======
-      identifier: '',
->>>>>>> d0fbeba... Add informaitonForm master component, remove form select from original signup form
-=======
-      identifier: '',
->>>>>>> d0fbeba... Add informaitonForm master component, remove form select from original signup form
       password: '',
       passwordConfirm: '',
       passwordValid: true,
@@ -183,22 +131,11 @@ class SignUp extends Component {
           {this.state.error ? <ul className={styles.errorList}>There was an error joining Operation Code:
             <li className={styles.errorMessage}>{this.state.error}</li>
           </ul> : null }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           {this.state.success && <Redirect to="/thanks" />}
           {this.state.isLoading ? <FormButton className={styles.joinButton} text="Loading..." disabled theme="grey" /> : <FormButton className={styles.joinButton} text="Join" onClick={this.handleOnClick} theme="red" />}
-=======
-=======
->>>>>>> 0558b78... Fix redirect from signup for flow
-=======
->>>>>>> 0558b78... Fix redirect from signup for flow
-=======
->>>>>>> 0558b78... Fix redirect from signup for flow
           {this.state.success && <Redirect to="/signup-info" />}
           <FormButton className={styles.joinButton} text="Join" onClick={this.handleOnClick} theme="red" />
->>>>>>> 0558b78... Fix redirect from signup for flow
+
         </Form>
       </Section>
     );
