@@ -38,12 +38,12 @@ export const MENTOR_ANSWERS = [
 
 export const IDENTIFIERS = [
   {
-    value: true,
-    label: 'Volunteer'
+    value: false,
+    label: 'Active Duty Veteran / Spouse'
   },
   {
-    value: false,
-    label: 'Mil / Vet / Spouse'
+    value: true,
+    label: 'Volunteer'
   }
 ];
 
@@ -63,6 +63,10 @@ export const WORKINFO = [
 ];
 
 export const SCHOOLINFO = [
+  {
+    value: 'none',
+    label: 'None'
+  },
   {
     value: 'online',
     label: 'Self-Taught (MOOCS, Etc.)'
