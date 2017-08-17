@@ -19,10 +19,7 @@ class Scholarships extends Component {
   }
 
   render() {
-    let schlrshps;
-    if (this.state.scholarships.length > 0) {
-      schlrshps = this.state.scholarships.map(scholarship => <div key={scholarship.id} ><Link to={`scholarships/${scholarship.id}/apply`} className={styles.link} >{scholarship.name}</Link></div>);
-    }
+    const schlrshps = this.state.scholarships.map(scholarship => <Link to={`scholarships/${scholarship.id}/apply`} key={scholarship.id} className={styles.link} >{scholarship.name}</Link>);
     return (
       <Section>
         <h3>Scholarships</h3>
