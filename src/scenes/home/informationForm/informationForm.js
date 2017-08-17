@@ -59,7 +59,8 @@ class SignupInformation extends Component {
         employment_status: this.state.workInfo,
         company_name: this.state.company,
         company_role: this.state.role,
-        volunteer: this.state.identifier,
+        // Convert string to boolean for DB
+        volunteer: this.state.identifier === 'true',
         branch_of_service: this.state.branch,
         // Necessary to convert Set to Array for storage in DB
         interests: Array.from(this.state.interests)
