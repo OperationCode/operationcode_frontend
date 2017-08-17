@@ -16,6 +16,7 @@ import SquadsTable from './squads/squadsTable/squadsTable';
 import Dashboard from './dashboard/dashboard';
 import MentorsTable from './mentor/mentorsTable/mentorsTable';
 import Thanks from './thanks/thanks';
+import Success from './success/success';
 import Team from './team/team';
 import Gala from './gala/gala';
 import FAQ from './faq/faq';
@@ -138,6 +139,10 @@ class Home extends Component {
             <Route
               path="/thanks"
               component={Thanks}
+            />
+            <Route
+              path="/success"
+              component={Success}
             />
             <Route
               path="/team"

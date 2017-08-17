@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { getScholarship } from 'shared/utils/apiHelper';
+import { getScholarship, postBackend } from 'shared/utils/apiHelper';
+import { Redirect } from 'react-router-dom';
 import Section from 'shared/components/section/section';
 import Form from 'shared/components/form/form';
 import FormTextArea from 'shared/components/form/formTextArea/formTextArea';
@@ -12,10 +13,12 @@ class ScholarshipApplication extends Component {
   constructor() {
     super();
     this.state = {
-      checked: false,
+      terms_accepted: false,
       reason: '',
       reasonValid: false,
-      scholarship: {}
+      scholarship: {},
+      success: false,
+      error: null
     };
   }
 
@@ -37,12 +40,26 @@ class ScholarshipApplication extends Component {
 
   onCheckboxChange = (value) => {
     this.setState({
-      checked: value
+      terms_accepted: value
+    });
+  }
+
+  handleOnClick = (e) => {
+    e.preventDefault();
+    const body = {
+      reason: this.state.reason,
+      terms_accepted: this.state.terms_accepted,
+      scholarship_id: this.state.scholarship.id
+    };
+    postBackend('scholarship_applications', body).then(() => {
+      this.setState({ success: true });
+    }).catch((error) => {
+      this.setState({ error });
     });
   }
 
   isFormValid = () =>
-    this.state.checked
+    this.state.terms_accepted
     && this.state.reasonValid;
 
   render() {
@@ -58,7 +75,9 @@ class ScholarshipApplication extends Component {
           <div className={styles.title}>Conditions for Acceptance<span className={styles.red}>*</span></div>
           <div className={styles.terms}> {this.state.scholarship.terms} </div>
           <FormCheckbox onChange={this.onCheckboxChange} /><br />
-          {this.isFormValid() ? <FormButton text="Submit Application" /> : <FormButton className={styles.grey_button} text="Submit Application" disabled />}
+          {this.isFormValid() ? <FormButton text="Submit Application" onClick={this.handleOnClick} /> : <FormButton className={styles.grey_button} text="Submit Application" disabled />}
+          {this.state.success && <Redirect to="/success" />}
+          {this.state.error}
         </Form>
       </Section>
     );
