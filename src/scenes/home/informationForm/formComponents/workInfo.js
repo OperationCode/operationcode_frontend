@@ -3,7 +3,7 @@ import { Line } from 'rc-progress';
 import Form from 'shared/components/form/form';
 import PropTypes from 'prop-types';
 import FormSelect from 'shared/components/form/formSelect/formSelect';
-import { WORKINFO } from 'shared/constants/status';
+import { WORKINFO, MENTOR_ANSWERS } from 'shared/constants/status';
 import styles from './formComponents.css';
 
 class WorkInfo extends Component {
@@ -14,6 +14,14 @@ class WorkInfo extends Component {
         <h3>Progress = {this.props.percent}%</h3>
         <Line percent={this.props.percent} strokeWidth="4" strokeColor="green" />
         &nbsp;
+        {this.props.identifier &&
+          <FormSelect
+            id="mentor"
+            options={MENTOR_ANSWERS}
+            prompt="Would you like to be a mentor?"
+            onChange={e => this.props.update(e, e.target.value)}
+          />
+        }
         <FormSelect
           id="workInfo"
           options={WORKINFO}
@@ -43,14 +51,16 @@ WorkInfo.propTypes = {
   update: PropTypes.func,
   role: PropTypes.string,
   company: PropTypes.string,
-  percent: PropTypes.string
+  percent: PropTypes.string,
+  identifier: PropTypes.string
 };
 
 WorkInfo.defaultProps = {
   update: null,
   role: 'Your Role / Title at Work',
   company: 'Company Name',
-  percent: '0'
+  percent: '0',
+  identifier: 'false'
 };
 
 export default WorkInfo;

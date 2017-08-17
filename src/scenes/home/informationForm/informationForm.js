@@ -54,6 +54,7 @@ class SignupInformation extends Component {
     patchBackend('users', {
       user: {
         education_level: this.state.schoolLevel,
+        mentor: this.state.mentor,
         scholarship_info: this.state.scholarships,
         employment_status: this.state.workInfo,
         company_name: this.state.company,
@@ -94,6 +95,7 @@ class SignupInformation extends Component {
             company={this.state.company}
             update={this.onIdentifierStatusChange}
             percent={'33'}
+            identifier={this.state.identifier}
           />
         );
       // Civillian STEP 3
