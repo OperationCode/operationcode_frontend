@@ -63,8 +63,12 @@ class SignupInformation extends Component {
         // Necessary to convert Set to Array for storage in DB
         interests: Array.from(this.state.interests)
       },
+    })
+    .then(() => {
+      this.setState({ step: this.state.step += 1 });
+    }).catch(() => {
+      this.setState({ error: true });
     });
-    this.setState({ step: this.state.step += 1 });
   }
   // Showstep renders each consecutive 'page' (component) based on user input
   // The form splits based on identifier, which determines whether or not
@@ -151,6 +155,8 @@ class SignupInformation extends Component {
         <div className={styles.buttonContainer}>
           <FormButton text="Go Back" onClick={this.previousPage} theme="blue" />
           <FormButton text="Save and Continue" onClick={this.saveAndContinue} theme="red" />
+          {this.state.error ? <ul className={styles.errorList}>There was an error saving your information, please try again.
+          </ul> : null }
         </div>
       </Section>
     );
