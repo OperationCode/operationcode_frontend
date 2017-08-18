@@ -83,10 +83,9 @@ class SignUp extends Component {
           identifier
         }
       }).then(({ data }) => {
+        window.location = '/signup-info';
         CookieHelpers.setUserAuthCookie(data);
-        this.setState({ authenticated: true });
-      }).then(() => {
-        this.setState({ success: true, error: null });
+        this.setState({ isLoading: false });
       }).catch((error) => {
         const data = _.get(error, 'response.data');
         let errorMessage = '';
