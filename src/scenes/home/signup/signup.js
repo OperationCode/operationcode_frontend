@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
 import _ from 'lodash';
+import * as CookieHelpers from 'shared/utils/cookieHelper';
+import PropTypes from 'prop-types';
 import Form from 'shared/components/form/form';
 import FormEmail from 'shared/components/form/formEmail/formEmail';
 import FormZipCode from 'shared/components/form/formZipCode/formZipCode';
@@ -20,6 +22,7 @@ class SignUp extends Component {
       email: '',
       emailValid: true,
       error: false,
+      authenticated: false,
       isValid: true,
       isLoading: false,
       mentor: false,
@@ -79,8 +82,11 @@ class SignUp extends Component {
           password,
           identifier
         }
+      }).then(({ data }) => {
+        CookieHelpers.setUserAuthCookie(data);
+        this.setState({ authenticated: true });
       }).then(() => {
-        this.setState({ success: true, error: null, isLoading: false });
+        this.setState({ success: true, error: null });
       }).catch((error) => {
         const data = _.get(error, 'response.data');
         let errorMessage = '';
@@ -138,5 +144,13 @@ class SignUp extends Component {
     );
   }
 }
+
+SignUp.propTypes = {
+  updateRootAuthState: PropTypes.func
+};
+
+SignUp.defaultProps = {
+  updateRootAuthState: () => {}
+};
 
 export default SignUp;

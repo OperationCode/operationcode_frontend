@@ -120,19 +120,13 @@ class Home extends Component {
             />
             <Route
               path="/signup"
-              component={SignUp}
-            />
-            <Route
-              path="/join"
-              component={SignUp}
+              render={() => (
+                <SignUp updateRootAuthState={this.updateRootAuthState} isLoggedIn={this.state.signedIn} {...authProps} />
+              )}
             />
             <Route
               path="/history"
               component={History}
-            />
-            <Route
-              path="/sign-up"
-              component={SignUp}
             />
             <Route
               path="/thanks"
