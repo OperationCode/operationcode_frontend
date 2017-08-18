@@ -15,7 +15,6 @@ import MentorRequestsTable from './mentor/mentorRequestsTable/mentorRequestsTabl
 import SquadsTable from './squads/squadsTable/squadsTable';
 import Dashboard from './dashboard/dashboard';
 import MentorsTable from './mentor/mentorsTable/mentorsTable';
-import Thanks from './thanks/thanks';
 import Team from './team/team';
 import Gala from './gala/gala';
 import FAQ from './faq/faq';
@@ -135,10 +134,6 @@ class Home extends Component {
               component={SignUp}
             />
             <Route
-              path="/thanks"
-              component={Thanks}
-            />
-            <Route
               path="/team"
               component={Team}
             />
@@ -217,6 +212,10 @@ class Home extends Component {
               render={() => (
                 <Gala {...authProps} />
               )}
+            />
+            <Route
+              path="/newgibill"
+              component={() => (window.location = 'http://www.benefits.va.gov/gibill/post911_gibill.asp')}
             />
             <Route
               path="/login"
