@@ -26,7 +26,6 @@ class ScholarshipApplication extends Component {
     const id = this.props.match.params.id;
     getScholarship(id).then((data) => {
       this.setState({ scholarship: data });
-      console.log(this.state.scholarship);
     });
   }
 
@@ -54,7 +53,12 @@ class ScholarshipApplication extends Component {
     postBackend('scholarship_applications', body).then(() => {
       this.setState({ success: true });
     }).catch((error) => {
-      this.setState({ error });
+      const errors = error.response.data.errors;
+      let errorMessages = '';
+      errors.forEach((message) => {
+        errorMessages += `\n${message}`;
+      });
+      this.setState({ error: errorMessages });
     });
   }
 
@@ -77,7 +81,7 @@ class ScholarshipApplication extends Component {
           <FormCheckbox onChange={this.onCheckboxChange} /><br />
           {this.isFormValid() ? <FormButton text="Submit Application" onClick={this.handleOnClick} /> : <FormButton className={styles.grey_button} text="Submit Application" disabled />}
           {this.state.success && <Redirect to="/success" />}
-          {this.state.error}
+          <div className={styles.red}>{this.state.error}</div>
         </Form>
       </Section>
     );
