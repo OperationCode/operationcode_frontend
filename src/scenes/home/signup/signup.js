@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Redirect } from 'react-router-dom';
 import _ from 'lodash';
+import * as CookieHelpers from 'shared/utils/cookieHelper';
 import Form from 'shared/components/form/form';
 import FormEmail from 'shared/components/form/formEmail/formEmail';
 import FormZipCode from 'shared/components/form/formZipCode/formZipCode';
@@ -79,8 +79,10 @@ class SignUp extends Component {
           password,
           identifier
         }
-      }).then(() => {
-        this.setState({ success: true, error: null, isLoading: false });
+      }).then(({ data }) => {
+        window.location = '/signup-info';
+        CookieHelpers.setUserAuthCookie(data);
+        this.setState({ isLoading: false });
       }).catch((error) => {
         const data = _.get(error, 'response.data');
         let errorMessage = '';
@@ -131,7 +133,6 @@ class SignUp extends Component {
           {this.state.error ? <ul className={styles.errorList}>There was an error joining Operation Code:
             <li className={styles.errorMessage}>{this.state.error}</li>
           </ul> : null }
-          {this.state.success && <Redirect to="/signup-info" />}
           {this.state.isLoading ? <FormButton className={styles.joinButton} text="Loading..." disabled theme="grey" /> : <FormButton className={styles.joinButton} text="Join" onClick={this.handleOnClick} theme="red" />}
         </Form>
       </Section>
