@@ -11,7 +11,7 @@ const SocialMediaItem = (props) => {
 
   return (
     <div className={styles.socialMediaItem}>
-      <a href={link}><img src={smImage} alt={smText} /></a>
+      <a href={link} target="_blank" rel="noopener noreferrer"><img src={smImage} alt={smText} /></a>
     </div>
   );
 };

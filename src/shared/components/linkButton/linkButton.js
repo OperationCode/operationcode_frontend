@@ -33,7 +33,7 @@ const LinkButton = (props) => {
 
   if (isExternalLink(link)) {
     return (
-      <a href={link} className={`${styles.linkButton} ${styles[theme]}`}>{text}</a>
+      <a href={link} target="_blank" rel="noopener noreferrer" className={`${styles.linkButton} ${styles[theme]}`}>{text}</a>
     );
   }
 

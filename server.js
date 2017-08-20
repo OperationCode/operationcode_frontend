@@ -12,6 +12,13 @@ app.use((req, res, next) => {
   return next();
 });
 
+app.use('/public', express.static(__dirname + '/public'));
+app.use('/public/media/images', express.static(__dirname + '/public/media/images'));
+app.use('/build', express.static(__dirname + '/build'));
+app.use('/build/static', express.static(__dirname + '/build/static'));
+app.use('/build/static/media', express.static(__dirname + '/build/static/media'));
+app.use('/build/static/media/images', express.static(__dirname + '/build/static/media/images'));
+
 app.use(express.static('./build'));
 app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, './build', 'index.html'));

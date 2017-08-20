@@ -1,23 +1,23 @@
 .footer {
   background-color: #4A4A4A;
-  height: 250px;
+  height: auto;
   padding: 0 20px;
   position: relative;
 }
 
 .content {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   justify-content: space-around;
-  height: 100%;
+  height: auto;
 }
 
 /* outerFooterGroups class represents the NON logo columns of the footer flex container */
 .outerFooterGroups {
   display: flex;
-  flex: 1 0 30%;
-  flex-flow: column wrap;
-  padding: 64px 0;
+  flex: 0 0 30%;
+  flex-flow: column;
+  padding: 30px 0 25px;
   justify-content: space-around;
   align-items: center;
   overflow: hidden;
@@ -32,6 +32,11 @@
   color: #F7F7F7;
   text-align: center;
   text-decoration: none;
+}
+
+.email a:hover {
+  font-weight: bold;
+  transition-duration: 0.1s;
 }
 
 .logo {
@@ -67,7 +72,8 @@
 
 .copyright {
   color:#F7F7F7;
-  font-size: 1rem;
+  font-family: 'PF Din Display';
+  font-size: medium;
   text-align: center;
   min-width: 100%;
 }
