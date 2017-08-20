@@ -217,10 +217,13 @@ class Home extends Component {
                 <Gala {...authProps} />
               )}
             />
-            <Route
-              path="/newgibill"
-              component={() => (window.location = 'http://www.benefits.va.gov/gibill/post911_gibill.asp')}
-            />
+            { // eslint-disable
+              <Route
+                path="/newgibill"
+                component={() => (window.location = 'http://www.benefits.va.gov/gibill/post911_gibill.asp')}
+              />
+            // eslint-enable
+            }
             <Route
               path="/login"
               render={() => (
