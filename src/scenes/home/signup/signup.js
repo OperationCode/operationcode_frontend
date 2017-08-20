@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Redirect } from 'react-router-dom';
 import _ from 'lodash';
-import { MENTOR_ANSWERS } from 'shared/constants/status';
+import * as CookieHelpers from 'shared/utils/cookieHelper';
 import Form from 'shared/components/form/form';
 import FormEmail from 'shared/components/form/formEmail/formEmail';
 import FormZipCode from 'shared/components/form/formZipCode/formZipCode';
 import FormPassword from 'shared/components/form/formPassword/formPassword';
 import FormButton from 'shared/components/form/formButton/formButton';
 import FormInput from 'shared/components/form/formInput/formInput';
-import FormSelect from 'shared/components/form/formSelect/formSelect';
 import Section from 'shared/components/section/section';
 import config from 'config/environment';
 import styles from './signup.css';
@@ -42,8 +40,8 @@ class SignUp extends Component {
     this.setState({ lastName: value });
   }
 
-  onMentorStatusChange = (value) => {
-    this.setState({ mentor: value });
+  onIdentifierStatusChange = (value) => {
+    this.setState({ identifier: value });
   }
 
   onEmailChange = (value, valid) => {
@@ -71,7 +69,7 @@ class SignUp extends Component {
     this.setState({ isLoading: true });
 
     if (this.isFormValid()) {
-      const { email, zip, password, firstName, lastName, mentor } = this.state;
+      const { email, zip, password, firstName, lastName, identifier } = this.state;
       axios.post(`${config.backendUrl}/users`, {
         user: {
           first_name: firstName,
@@ -79,10 +77,12 @@ class SignUp extends Component {
           email,
           zip,
           password,
-          mentor
+          identifier
         }
-      }).then(() => {
-        this.setState({ success: true, error: null, isLoading: false });
+      }).then(({ data }) => {
+        window.location = '/signup-info';
+        CookieHelpers.setUserAuthCookie(data);
+        this.setState({ isLoading: false });
       }).catch((error) => {
         const data = _.get(error, 'response.data');
         let errorMessage = '';
@@ -116,12 +116,6 @@ class SignUp extends Component {
             Once you complete the form below you&#8217;ll be invited
             to join our Slack team.  Make sure you stop in and say hi!
           </span>
-          <FormSelect
-            id="mentor"
-            options={MENTOR_ANSWERS}
-            prompt="Would you like to be a mentor?"
-            onChange={e => this.onMentorStatusChange(e.target.value)}
-          />
           <FormEmail id="email" placeholder="Email" onChange={this.onEmailChange} />
           <FormInput id="firstName" placeholder="First Name" onChange={this.onFirstNameChange} />
           <FormInput id="lastName" placeholder="Last Name" onChange={this.onLastNameChange} />
@@ -139,7 +133,6 @@ class SignUp extends Component {
           {this.state.error ? <ul className={styles.errorList}>There was an error joining Operation Code:
             <li className={styles.errorMessage}>{this.state.error}</li>
           </ul> : null }
-          {this.state.success && <Redirect to="/thanks" />}
           {this.state.isLoading ? <FormButton className={styles.joinButton} text="Loading..." disabled theme="grey" /> : <FormButton className={styles.joinButton} text="Join" onClick={this.handleOnClick} theme="red" />}
         </Form>
       </Section>

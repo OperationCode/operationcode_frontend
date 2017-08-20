@@ -21,6 +21,11 @@ export function postBackend(path, body) {
   return axios.post(`${config.backendUrl}/${path}`, body, { headers: authHeader });
 }
 
+export function patchBackend(path, body) {
+  const authHeader = setAuthorizationHeader();
+  return axios.patch(`${config.backendUrl}/${path}`, body, { headers: authHeader });
+}
+
 export function joinSquad(id) {
   const authHeader = setAuthorizationHeader();
   return axios.post(`${config.backendUrl}/squads/${id}/join`, {

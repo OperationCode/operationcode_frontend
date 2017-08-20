@@ -15,7 +15,6 @@ import MentorRequestsTable from './mentor/mentorRequestsTable/mentorRequestsTabl
 import SquadsTable from './squads/squadsTable/squadsTable';
 import Dashboard from './dashboard/dashboard';
 import MentorsTable from './mentor/mentorsTable/mentorsTable';
-import Thanks from './thanks/thanks';
 import Team from './team/team';
 import Gala from './gala/gala';
 import FAQ from './faq/faq';
@@ -33,6 +32,7 @@ import About from './about/about';
 import Press from './press/press';
 import ResetPassword from './resetPassword/resetPassword';
 import Challenge from './challenge/challenge';
+import SignupInformation from './informationForm/informationForm';
 import styles from './home.css';
 
 class Home extends Component {
@@ -119,11 +119,15 @@ class Home extends Component {
             />
             <Route
               path="/signup"
-              component={SignUp}
+              render={() => (
+                <SignUp updateRootAuthState={this.updateRootAuthState} isLoggedIn={this.state.signedIn} {...authProps} />
+              )}
             />
             <Route
               path="/join"
-              component={SignUp}
+              render={() => (
+                <SignUp updateRootAuthState={this.updateRootAuthState} isLoggedIn={this.state.signedIn} {...authProps} />
+              )}
             />
             <Route
               path="/history"
@@ -132,10 +136,6 @@ class Home extends Component {
             <Route
               path="/sign-up"
               component={SignUp}
-            />
-            <Route
-              path="/thanks"
-              component={Thanks}
             />
             <Route
               path="/team"
@@ -165,6 +165,10 @@ class Home extends Component {
             <Route
               path="/media"
               component={Press}
+            />
+            <Route
+              path="/signup-info"
+              component={SignupInformation}
             />
             <Route
               path="/challenge"
