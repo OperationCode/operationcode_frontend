@@ -26,6 +26,9 @@ class ScholarshipApplication extends Component {
     const id = this.props.match.params.id;
     getScholarship(id).then((data) => {
       this.setState({ scholarship: data });
+    }).catch((failed) => {
+      const error = failed.response.data.error;
+      this.setState({ error });
     });
   }
 
@@ -52,13 +55,9 @@ class ScholarshipApplication extends Component {
     };
     postBackend('scholarship_applications', body).then(() => {
       this.setState({ success: true });
-    }).catch((error) => {
-      const errors = error.response.data.errors;
-      let errorMessages = '';
-      errors.forEach((message) => {
-        errorMessages += `\n${message}`;
-      });
-      this.setState({ error: errorMessages });
+    }).catch((failed) => {
+      const error = failed.response.data.error;
+      this.setState({ error });
     });
   }
 
