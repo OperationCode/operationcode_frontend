@@ -7,11 +7,9 @@ class GalaBanner extends Component {
   render() {
     return (
       <div className={styles.galaBannerWrapper}>
-        <div className={styles.galaBannerContent}>
-          <Link to={'/gala'}>
-            <img className={styles.galaImage} src={image} alt="gala banner" />
-          </Link>
-        </div>
+        <Link to={'/gala'}>
+          <img className={styles.galaImage} src={image} alt="gala banner" />
+        </Link>
       </div>
     );
   }
