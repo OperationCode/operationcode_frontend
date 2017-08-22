@@ -13,14 +13,14 @@ class Profile extends Component {
       <div>
         <Section title="Operation Code Community" theme="white">
           <span className={styles.discourseText}>Visit the Operation Code Community by clicking below.</span>
-          <a href="https://community.operationcode.org">
+          <a href="https://community.operationcode.org" target="_blank" rel="noopener noreferrer">
             <img className={styles.discourseImage} src={discourseImage} alt="Visit the Operation Code Community" />
           </a>
         </Section>
 
         <Section title="Sign-in with Slack" theme="white">
           <span className={styles.discourseText}>Visit the Operation Code Slack Channel by clicking below.</span>
-          <a href="https://operation-code.slack.com">
+          <a href="https://operation-code.slack.com" target="_blank" rel="noopener noreferrer">
             <img className={styles.discourseImage} alt="Sign in with Slack" src={slackImage} />
           </a>
         </Section>

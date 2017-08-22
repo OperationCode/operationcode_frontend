@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif');
 
 @font-face {
@@ -67,6 +66,16 @@ h6 {
   min-height: 100%;
 }
 
+.ScrollUpButton {
+  position: fixed;
+  bottom: 50;
+  right: 30;
+  cursor: pointer;
+  transitionDuration: 0.2s;
+  transitionTimingFunction: linear;
+  transitionDelay: 0s;
+}
+
 @media screen and (max-width: 480px) {
   html {
     font-size: 14px;
@@ -76,5 +85,11 @@ h6 {
 @media screen and (min-width: 481px) and (max-width: 960px) {
   html {
     font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 568px) {
+  html {
+    font-size: 12.25px;
   }
 }

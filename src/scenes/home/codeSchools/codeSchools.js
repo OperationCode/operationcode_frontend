@@ -40,7 +40,7 @@ class CodeSchools extends Component {
             <br />
             <br />
             We encourage you to check out the schools below, do your research, and ask fellow
-            software developers in <a href="https://operation-code.slack.com/">Slack</a>.
+            software developers in <a href="https://operation-code.slack.com/" target="_blank" rel="noopener noreferrer">Slack</a>.
           </p>
 
           <div className={styles.filterButtonDiv}>
@@ -48,25 +48,21 @@ class CodeSchools extends Component {
               link="approvedSchools"
               text="Code Schools with VA Approval"
               theme="blue"
-              scrollLink
             />
             <LinkButton
               link="partnerSchools"
               text="Partner Schools with Scholarships"
               theme="blue"
-              scrollLink
             />
             <LinkButton
               link="onlineSchools"
               text="Online Schools"
               theme="blue"
-              scrollLink
             />
             <LinkButton
               link="schoolsByState"
               text="Search by State"
               theme="blue"
-              scrollLink
             />
           </div>
         </Section>

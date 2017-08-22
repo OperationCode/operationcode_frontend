@@ -13,7 +13,7 @@ class Contact extends Component {
             We are a decentralized community of hard-working volunteers, and we love hearing feedback, comments, and suggestions!
             <br />
             <br />
-            The best way to reach our staff and our members is by <Link to="join">joining Operation Code</Link> to receive an invite to our Slack team. You can also reach us via email, physical mail, or via <a href="twitter.com/operation_code">Twitter.</a>
+            The best way to reach our staff and our members is by <Link to="join">joining Operation Code</Link> to receive an invite to our Slack team. You can also reach us via email, physical mail, or via <a href="twitter.com/operation_code" target="_blank" rel="noopener noreferrer">Twitter.</a>
           </p>
         </Section>
 
@@ -22,21 +22,21 @@ class Contact extends Component {
             {/* Columns */}
             <div className={styles.centerText}>
               <h3>Email</h3>
-              <a href="mailto:staff@operationcode.org">
+              <a href="mailto:staff@operationcode.org" target="_blank" rel="noopener noreferrer">
                 <FaEnvelope className={styles.mailIcon} size={200} />
               </a>
               <p>
-                <a href="mailto:staff@operationcode.org">staff@operationcode.org</a>
+                <a href="mailto:staff@operationcode.org" target="_blank" rel="noopener noreferrer">staff@operationcode.org</a>
               </p>
             </div>
 
             <div className={styles.centerText}>
               <h3>Slack Team</h3>
-              <a href="https://operation-code.slack.com">
+              <a href="https://operation-code.slack.com" target="_blank" rel="noopener noreferrer">
                 <FaSlack className={styles.slackIcon} size={170} />
               </a>
               <p>
-                <a href="https://operation-code.slack.com">https://operation-code.slack.com</a>
+                <a href="https://operation-code.slack.com" target="_blank" rel="noopener noreferrer">https://operation-code.slack.com</a>
               </p>
             </div>
 

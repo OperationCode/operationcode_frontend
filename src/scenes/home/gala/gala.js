@@ -17,7 +17,7 @@ class Gala extends Component {
             <p>In becoming a Deploy the Future sponsor, you will have a front row seat to supporting a great cause and promoting your organization to civic and military officials; business, tech and community leaders; and our global community of military veterans who are bettering themselves with educational opportunities through Operation Code.</p>
             <p>Please join this incredibly dedicated team of individuals known as Operation Code as we expand our services, educate our veterans, and Deploy the Future.</p>
             <p className={styles.cta}>
-              <LinkButton text="Join us!" theme="red-large" link="https://operationcode.ejoinme.org/MyEvents/DeploytheFutureGala2017/DeploytheFutureTicketTableRegistration/tabid/892109/Default.aspx" />
+              <LinkButton text="Join us!" theme="red-large" link="https://operationcode.ejoinme.org/MyEvents/DeploytheFutureGala2017/DeploytheFutureTicketTableRegistration/tabid/892109/Default.aspx" target="_blank" rel="noopener noreferrer" />
             </p>
           </div>
         </Section>
@@ -91,7 +91,7 @@ class Gala extends Component {
             <div />
           </div>
           <div>
-            <LinkButton text="Buy now!" theme="red-large" link="https://operationcode.ejoinme.org/MyEvents/DeploytheFutureGala2017/DeploytheFutureTicketTableRegistration/tabid/892109/Default.aspx" />
+            <LinkButton text="Buy now!" theme="red-large" link="https://operationcode.ejoinme.org/MyEvents/DeploytheFutureGala2017/DeploytheFutureTicketTableRegistration/tabid/892109/Default.aspx" target="_blank" rel="noopener noreferrer" />
           </div>
         </Section>
         <Section title="Event Information" theme="white">

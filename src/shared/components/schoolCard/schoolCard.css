@@ -2,10 +2,10 @@
   display: flex;
   border-radius: 4px;
   align-items: center;
-  margin: 20px 10px;
+  margin: 25px 10px;
   padding: 10px;
-  width: 360px;
-  height: 150px;
+  width: 375px;
+  height: auto;
   background: #fff;
   box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.1);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
@@ -29,7 +29,7 @@
 
 .logo {
   width: 150px;
-  height: 150px;
+  height: auto;
   top: 50%;
   left: 50%;
   margin-right: -50%;
@@ -37,25 +37,35 @@
 
 .schoolText {
   line-height: 1;
-  padding-left: 10px;
+  padding-left: 15px;
+  align-items: center;
 }
 
 .schoolName {
   font-weight: 800;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  line-height: .15;
 }
 
 .schoolName a {
   text-decoration: none;
+  line-height: 1.1;
 }
 
 .schoolLocation {
   font-style: italic;
+  font-size: 1.0rem;
+  line-height: 1.1;
+}
+
+.schoolLocation a {
+  text-decoration: none;
 }
 
 .schoolInfo {
   font-size: 0.8rem;
   line-height: 1.1;
+  align-items: center;
 }
 
 @media screen and (max-width: 650px) {
