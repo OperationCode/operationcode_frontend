@@ -46,7 +46,7 @@ class FAQ extends Component {
           </div>
           <br />
           <LinkButton
-            link="top"
+            link="root"
             text="Scroll to Top"
             theme="blue"
             scrollLink
@@ -59,7 +59,7 @@ class FAQ extends Component {
           </div>
           <br />
           <LinkButton
-            link="top"
+            link="root"
             text="Scroll to Top"
             theme="blue"
             scrollLink
