@@ -63,7 +63,7 @@
 }
 
 .schoolInfo {
-  font-size: 0.8rem;
+  font-size: 0.99rem;
   line-height: 1.1;
   align-items: center;
 }
@@ -71,23 +71,29 @@
 @media screen and (max-width: 650px) {
   .schoolCard {
     width: 250px;
-    height: 100px;
+    height: auto;
   }
   .schoolCardImage {
     height: 75px;
     width: 75px;
   }
   .schoolName {
-    font-size: 1em;
+    font-size: .67em;
   }
   .logo {
     height: 75px;
     width: 75px;
   }
   .schoolLocation {
-    font-size: 0.8em;
+    font-size: 0.59em;
   }
   .schoolInfo {
-    font-size: 0.7em;
+    font-size: 0.79em;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .schoolCard > body {
+    line-height: .45;
   }
 }
