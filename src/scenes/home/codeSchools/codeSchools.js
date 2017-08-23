@@ -48,21 +48,25 @@ class CodeSchools extends Component {
               link="approvedSchools"
               text="Code Schools with VA Approval"
               theme="blue"
+              scrollLink
             />
             <LinkButton
               link="partnerSchools"
               text="Partner Schools with Scholarships"
               theme="blue"
+              scrollLink
             />
             <LinkButton
               link="onlineSchools"
               text="Online Schools"
               theme="blue"
+              scrollLink
             />
             <LinkButton
               link="schoolsByState"
               text="Search by State"
               theme="blue"
+              scrollLink
             />
           </div>
         </Section>
