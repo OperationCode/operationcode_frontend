@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif');
-
 @font-face {
   font-family: 'PF Din Display';
   font-weight: normal;
@@ -18,7 +17,7 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6, a, button {
-  font-family: 'PF Din Display'
+  font-family: 'PF Din Display';
 }
 
 *, *:before, *:after {
@@ -28,8 +27,8 @@ h1, h2, h3, h4, h5, h6, a, button {
 h1, h2, h3, h4, h5, h6 {
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -37,7 +36,9 @@ body {
   hyphens: none;
 }
 
+
 /*40px*/
+
 h1 {
   font-size: 2.5rem;
 }
@@ -91,5 +92,17 @@ h6 {
 @media screen and (min-width: 320px) and (max-width: 568px) {
   html {
     font-size: 12.25px;
+  }
+}
+
+@media (min-width: 700px) {
+  .box:nth-child(odd) {
+    margin-right: 6%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .box:nth-child(3n+3) {
+    margin-right: 0;
   }
 }
