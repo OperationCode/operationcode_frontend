@@ -22,11 +22,11 @@ class Contact extends Component {
             {/* Columns */}
             <div className={styles.centerText}>
               <h3>Email</h3>
-              <a href="mailto:staff@operationcode.org" target="_blank" rel="noopener noreferrer">
+              <a href="mailto:staff@@operationcode.org">
                 <FaEnvelope className={styles.mailIcon} size={200} />
               </a>
               <p>
-                <a href="mailto:staff@operationcode.org" target="_blank" rel="noopener noreferrer">staff@operationcode.org</a>
+                <a href="mailto:staff@@operationcode.org">staff@operationcode.org</a>
               </p>
             </div>
 

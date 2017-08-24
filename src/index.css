@@ -94,15 +94,3 @@ h6 {
     font-size: 12.25px;
   }
 }
-
-@media (min-width: 700px) {
-  .box:nth-child(odd) {
-    margin-right: 6%;
-  }
-}
-
-@media (min-width: 1024px) {
-  .box:nth-child(3n+3) {
-    margin-right: 0;
-  }
-}

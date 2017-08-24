@@ -12,7 +12,7 @@ class Footer extends Component {
         <div className={styles.content}>
           <div className={styles.outerFooterGroups}>
             <div className={styles.email} >
-              <a href="mailto:contact@operationcode.org" target="_blank" rel="noopener noreferrer">contact@operationcode.org</a>
+              <a href="mailto:contact@operationcode.org">contact@operationcode.org</a>
             </div>
             <SocialMedia />
           </div>
