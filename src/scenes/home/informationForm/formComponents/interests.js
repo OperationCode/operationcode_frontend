@@ -15,7 +15,7 @@ class Interests extends Component {
           <FormCheckBox
             name={'languages'}
             value={language}
-            onChange={e => this.props.update(e.target.value)}
+            onChange={e => this.props.update(e)}
             key={language}
           />
       )
@@ -26,7 +26,7 @@ class Interests extends Component {
           <FormCheckBox
             name={'disciplines'}
             value={discipline}
-            onChange={e => this.props.update(e.target.value)}
+            onChange={e => this.props.update(e)}
             key={discipline}
           />
       )

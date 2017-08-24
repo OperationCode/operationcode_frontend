@@ -36,8 +36,16 @@ class SignupInformation extends Component {
   }
 
   // Adds values from checkboxes to a set, eliminating possible repeat values
-  onCheckBoxChange = (value) => {
-    this.setState({ interests: this.state.interests.add(value) });
+  onCheckBoxChange = (e) => {
+    const interests = new Set(this.state.interests);
+    const value = e.target.value;
+    if (e.target.checked) {
+      interests.add(value);
+    } else {
+      interests.delete(value);
+    }
+
+    this.setState({ interests });
   }
 
   // Reduces 'step' value by 1, going back one page in the form
