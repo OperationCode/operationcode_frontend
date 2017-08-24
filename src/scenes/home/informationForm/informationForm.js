@@ -55,6 +55,7 @@ class SignupInformation extends Component {
       return;
     }
 
+    // Clear the interests if we go back from the interests page
     const interests = new Set(this.state.interests);
     if (this.state.identifier === 'false') {
       if (this.state.step === 4) {
