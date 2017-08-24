@@ -16,6 +16,7 @@ class SignupInformation extends Component {
     super(props);
     this.onIdentifierStatusChange = this.onIdentifierStatusChange.bind(this);
     this.onCheckBoxChange = this.onCheckBoxChange.bind(this);
+    this.previousPage = this.previousPage.bind(this);
     this.state = {
       error: false,
       isValid: true,
