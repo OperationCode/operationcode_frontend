@@ -54,7 +54,17 @@ class SignupInformation extends Component {
     if (this.state.step < 1) {
       return;
     }
-    this.setState({ step: this.state.step -= 1 });
+
+    const interests = new Set(this.state.interests);
+    if (this.state.identifier === 'false') {
+      if (this.state.step === 4) {
+        interests.clear();
+      }
+    } else if (this.state.step === 2) {
+      interests.clear();
+    }
+
+    this.setState({ step: this.state.step -= 1, interests });
   }
 
   // Patches whatever values that have been captured so far to the DB
