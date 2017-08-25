@@ -22,7 +22,7 @@ class Donate extends Component {
             enter the tech industry, and code the future.
           </p>
           <p>Thank you for supporting our mission!</p>
-          <LinkButton text="Donate Now" link="https://donorbox.org/operationcode" target="_blank" rel="noopener noreferrer" />
+          <LinkButton text="Donate Now" link="https://donorbox.org/operationcode" isExternal />
         </div>
       </Section>
     );
