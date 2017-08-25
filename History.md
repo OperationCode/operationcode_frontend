@@ -799,21 +799,3 @@ v1 / 2017-06-24
   * Adding file structure, scss partials, and logos
   * Add Yarn package
   * Initial commit
-
-1 / 2017-08-25
-==============
-
-  * added config for sentry
-  * deleted analytics folder
-  * Merge branch 'master' of https://github.com/OperationCode/operationcode_frontend
-  * Merge pull request #424 from OperationCode/#418
-  * #418 added toLowerCase on email input
-
-1.0.2 / 2017-08-25
-==================
-
-  * added config for sentry
-  * deleted analytics folder
-  * Merge branch 'master' of https://github.com/OperationCode/operationcode_frontend
-  * Merge pull request #424 from OperationCode/#418
-  * #418 added toLowerCase on email input
