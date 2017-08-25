@@ -4,7 +4,7 @@ const Raven = require('raven');
 const app = express();
 
 // Must configure Raven before doing anything else with it
-Raven.config('__DSN__').install();
+Raven.config('https://23e9c0c37a3841b8a692c98b8978f515@sentry.io/147247').install();
 
 // The request handler must be the first middleware on the app
 app.use(Raven.requestHandler() {
