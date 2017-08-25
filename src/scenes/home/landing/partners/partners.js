@@ -67,9 +67,12 @@ class Partners extends Component {
           <p className={styles.contactUs}>
             We are always looking for organizations who are interested in working with us!
           </p>
-          <LinkButton text="Contact Us" link="mailto:partnerships@operationcode.org" />
+          <LinkButton
+            text="Contact Us"
+            link="mailto:partnerships@operationcode.org"
+            isExternal
+          />
         </div>
-
       </Section>
     );
   }
