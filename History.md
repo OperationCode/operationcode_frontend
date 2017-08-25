@@ -1,19 +1,19 @@
-# Commit Log
-[![Build Status](https://travis-ci.org/OperationCode/operationcode_frontend.svg?branch=master)](https://travis-ci.org/OperationCode/operationcode_frontend)
-
-----
-
 ### [generated with git-extras](https://github.com/tj/git-extras/blob/master/Readme.md)
 
 ### [Example Commands](https://github.com/tj/git-extras/blob/master/Commands.md#examples)
 
 ```git changelog -h
 ```
-
 logs / 2017-08-25
 ==================
 
-  * added config for sentry Pull Request [#486]
+  * updated raven / sentry config and added History.md
+  * Signed-off-by: Seth Bergman <seth.atxwebs@gmail.com>
+  * added config for sentry
+  * deleted analytics folder
+  * Merge branch 'master' of https://github.com/OperationCode/operationcode_frontend
+  * Merge pull request #424 from OperationCode/#418
+  * #418 added toLowerCase on email input# Commit Log
   * Merge pull request #424 from OperationCode/#418
   * #418 added toLowerCase on email input
 
