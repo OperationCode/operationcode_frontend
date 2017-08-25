@@ -7,31 +7,40 @@ class SchoolCard extends Component {
     return (
       <div className={styles.schoolCard}>
         <div className={styles.schoolCardImage}>
-          <img src={this.props.logo} alt={this.props.alt} className={styles.logo} />
+          <a href={this.props.link} target={this.props.target} rel={this.props.rel}>
+            <img src={this.props.logo} alt={this.props.alt} className={styles.logo} />
+          </a>
         </div>
 
         <div className={styles.schoolText}>
           <p>
             <span className={styles.schoolName}>
-              <a href={this.props.link}>{this.props.schoolName}</a>
+              <a href={this.props.link} target={this.props.target} rel={this.props.rel}>{this.props.schoolName}</a>
             </span>
             <br />
             <span className={styles.schoolLocation}>
-              {this.props.schoolAddress}{this.props.schoolAddress.includes('Online') ? null : ','}
+              <a href={this.props.link} target={this.props.target} rel={this.props.rel}>
+                {this.props.schoolAddress}{this.props.schoolAddress.includes('Online') ? null : ','}
+              </a>
               <br />
-              {this.props.schoolCity}{this.props.schoolCity ? ', ' : null}
-              {this.props.schoolState}{this.props.schoolState ? <br /> : null}
+              <a href={this.props.link} target={this.props.target} rel={this.props.rel}>
+                {this.props.schoolCity}{this.props.schoolCity ? ', ' : null}
+                {this.props.schoolState}{this.props.schoolState ? <br /> : null}
+              </a>
               <br />
             </span>
           </p>
 
-          <p className={styles.schoolInfo}>
-            GI Bill Accepted: <b>{this.props.GI}</b>
-            <br />
-            Commitment: <b>{this.props.fullTime}</b>
-            <br />
-            Hardware Included: <b>{this.props.hardware}</b>
-          </p>
+          {/* <p className={styles.schoolInfo}> */}
+          <a href={this.props.link} target={this.props.target} rel={this.props.rel}>
+            <p className={styles.schoolInfo}>
+              GI Bill Accepted: <b>{this.props.GI}</b>
+              <br />
+              Commitment: <b>{this.props.fullTime}</b>
+              <br />
+              Hardware Included: <b>{this.props.hardware}</b>
+            </p>
+          </a>
         </div>
       </div>
     );
@@ -41,6 +50,8 @@ class SchoolCard extends Component {
 SchoolCard.propTypes = {
   alt: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
+  target: PropTypes.string,
+  rel: PropTypes.string,
   schoolName: PropTypes.string.isRequired,
   schoolAddress: PropTypes.string.isRequired,
   schoolCity: PropTypes.string,
@@ -53,7 +64,9 @@ SchoolCard.propTypes = {
 
 SchoolCard.defaultProps = {
   schoolCity: null,
-  schoolState: null
+  schoolState: null,
+  target: '_blank',
+  rel: 'noopener noreferrer'
 };
 
 export default SchoolCard;

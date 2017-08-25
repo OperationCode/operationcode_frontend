@@ -47,7 +47,7 @@ NavItem.propTypes = {
 
 NavItem.defaultProps = {
   className: null,
-  isExternal: false,
+  isExternal: true,
   onClick: null,
   to: ''
 };

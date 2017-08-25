@@ -12,6 +12,8 @@ const LinkButton = (props) => {
 
   const {
     link,
+    target,
+    rel,
     text,
     theme,
     scrollLink,
@@ -33,7 +35,7 @@ const LinkButton = (props) => {
 
   if (isExternalLink(link)) {
     return (
-      <a href={link} className={`${styles.linkButton} ${styles[theme]}`}>{text}</a>
+      <a href={link} target={target} rel={rel} className={`${styles.linkButton} ${styles[theme]}`}>{text}</a>
     );
   }
 
@@ -52,12 +54,16 @@ LinkButton.propTypes = {
   link: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   theme: PropTypes.string,
-  scrollLink: PropTypes.bool
+  scrollLink: PropTypes.bool,
+  target: PropTypes.string,
+  rel: PropTypes.string
 };
 
 LinkButton.defaultProps = {
   theme: 'blue',
-  scrollLink: false
+  scrollLink: false,
+  target: '_blank',
+  rel: 'noopener noreferrer'
 };
 
 export default LinkButton;

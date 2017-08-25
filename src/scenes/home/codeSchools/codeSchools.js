@@ -40,7 +40,7 @@ class CodeSchools extends Component {
             <br />
             <br />
             We encourage you to check out the schools below, do your research, and ask fellow
-            software developers in <a href="https://operation-code.slack.com/">Slack</a>.
+            software developers in <a href="https://operation-code.slack.com/" target="_blank" rel="noopener noreferrer">Slack</a>.
           </p>
 
           <div className={styles.filterButtonDiv}>
