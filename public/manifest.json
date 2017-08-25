@@ -1,5 +1,12 @@
 {
- "name": "App",
+ "name": "Operation Code",
+ "short_name": "Operation Code",
+ "start_url": "/",
+ "display": "standalone",
+ "fallback": "index.html",
+ "theme_color": "#47566B",
+ "background_color": "#fff",
+ "orientation": "any",
  "icons": [
   {
    "src": "\/android-icon-36x36.png",

@@ -5,16 +5,12 @@ import { Link as ScrollLink } from 'react-scroll';
 import styles from './linkButton.css';
 
 const LinkButton = (props) => {
-  function isExternalLink(link) {
-    if (link.startsWith('http://') || link.startsWith('https://') || link.startsWith('mailto:')) { return true; }
-    return false;
-  }
-
   const {
     link,
     text,
     theme,
     scrollLink,
+    isExternal,
     ...otherProps
   } = props;
 
@@ -31,9 +27,16 @@ const LinkButton = (props) => {
     );
   }
 
-  if (isExternalLink(link)) {
+  if (isExternal) {
     return (
-      <a href={link} className={`${styles.linkButton} ${styles[theme]}`}>{text}</a>
+      <a
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`${styles.linkButton} ${styles[theme]}`}
+      >
+        {text}
+      </a>
     );
   }
 
@@ -52,12 +55,14 @@ LinkButton.propTypes = {
   link: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   theme: PropTypes.string,
-  scrollLink: PropTypes.bool
+  scrollLink: PropTypes.bool,
+  isExternal: PropTypes.bool,
 };
 
 LinkButton.defaultProps = {
   theme: 'blue',
-  scrollLink: false
+  scrollLink: false,
+  isExternal: false,
 };
 
 export default LinkButton;

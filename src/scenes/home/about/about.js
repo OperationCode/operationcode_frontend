@@ -42,14 +42,14 @@ class About extends Component {
           <br />
           <div className={styles.serviceSealWrapper}>
             <img className={styles.serviceSeal} src={armySeal} alt="Army Seal" />
-            <img className={styles.serviceSeal} src={navySeal} alt="Army Seal" />
-            <img className={styles.serviceSeal} src={marineSeal} alt="Army Seal" />
-            <img className={styles.serviceSeal} src={marineReserveSeal} alt="Army Seal" />
-            <img className={styles.serviceSeal} src={coastGuardSeal} alt="Army Seal" />
-            <img className={styles.serviceSeal} src={airForceSeal} alt="Army Seal" />
-            <img className={styles.serviceSeal} src={airForceReserveSeal} alt="Army Seal" />
-            <img className={styles.serviceSeal} src={armyReserveSeal} alt="Army Seal" />
-            <img className={styles.serviceSeal} src={navyReserveSeal} alt="Army Seal" />
+            <img className={styles.serviceSeal} src={navySeal} alt="Navy Seal" />
+            <img className={styles.serviceSeal} src={marineSeal} alt="Marine Seal" />
+            <img className={styles.serviceSeal} src={marineReserveSeal} alt="Marine Reserve Seal" />
+            <img className={styles.serviceSeal} src={coastGuardSeal} alt="Coast Guard Seal" />
+            <img className={styles.serviceSeal} src={airForceSeal} alt="Air Force Seal" />
+            <img className={styles.serviceSeal} src={airForceReserveSeal} alt="Air Force Reserve Seal" />
+            <img className={styles.serviceSeal} src={armyReserveSeal} alt="Army Reserve Seal" />
+            <img className={styles.serviceSeal} src={navyReserveSeal} alt="Navy Reserve Seal" />
           </div>
         </Section>
 

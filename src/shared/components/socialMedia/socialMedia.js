@@ -10,10 +10,26 @@ class SocialMedia extends Component {
   render() {
     return (
       <SocialMediaContainer>
-        <SocialMediaItem smImage={fbImage} smText="Facebook" link="https://facebook.com/operationcode.org" />
-        <SocialMediaItem smImage={ghImage} smText="Github" link="https://github.com/operationcode" />
-        <SocialMediaItem smImage={twtImage} smText="Twitter" link="https://twitter.com/operation_code" />
-        <SocialMediaItem smImage={liImage} smText="LinkedIn" link="https://www.linkedin.com/groups/13400924" />
+        <SocialMediaItem
+          smImage={fbImage}
+          smText="Facebook"
+          link="https://facebook.com/operationcode.org"
+        />
+        <SocialMediaItem
+          smImage={ghImage}
+          smText="Github"
+          link="https://github.com/operationcode"
+        />
+        <SocialMediaItem
+          smImage={twtImage}
+          smText="Twitter"
+          link="https://twitter.com/operation_code"
+        />
+        <SocialMediaItem
+          smImage={liImage}
+          smText="LinkedIn"
+          link="https://www.linkedin.com/groups/13400924"
+        />
       </SocialMediaContainer>
     );
   }

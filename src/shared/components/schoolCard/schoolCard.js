@@ -7,13 +7,17 @@ class SchoolCard extends Component {
     return (
       <div className={styles.schoolCard}>
         <div className={styles.schoolCardImage}>
-          <img src={this.props.logo} alt={this.props.alt} className={styles.logo} />
+          <a href={this.props.link} target="_blank" rel="noopener noreferrer">
+            <img src={this.props.logo} alt={this.props.alt} className={styles.logo} />
+          </a>
         </div>
 
         <div className={styles.schoolText}>
           <p>
             <span className={styles.schoolName}>
-              <a href={this.props.link}>{this.props.schoolName}</a>
+              <a href={this.props.link} target="_blank" rel="noopener noreferrer">
+                {this.props.schoolName}
+              </a>
             </span>
             <br />
             <span className={styles.schoolLocation}>
@@ -48,12 +52,12 @@ SchoolCard.propTypes = {
   logo: PropTypes.string.isRequired,
   GI: PropTypes.string.isRequired,
   fullTime: PropTypes.string.isRequired,
-  hardware: PropTypes.string.isRequired
+  hardware: PropTypes.string.isRequired,
 };
 
 SchoolCard.defaultProps = {
   schoolCity: null,
-  schoolState: null
+  schoolState: null,
 };
 
 export default SchoolCard;

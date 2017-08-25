@@ -4,17 +4,12 @@ import PropTypes from 'prop-types';
 import styles from './navItem.css';
 
 class NavItem extends PureComponent {
-
   constructor() {
     super();
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick() {
-    if (this.props.isExternal) {
-      window.location(this.props.to);
-    }
-
     if (this.props.onClick) {
       this.props.onClick();
     }
@@ -22,17 +17,18 @@ class NavItem extends PureComponent {
 
   render() {
     const classes = `${styles.navItem} ${styles[this.props.className]}`;
-    if (this.props.to) {
+    if (this.props.isExternal) {
       return (
-        <Link className={classes} to={this.props.to} onClick={this.handleClick}>
+        <a className={classes} href={this.props.to} target="_blank" rel="noopener noreferrer">
           {this.props.text}
-        </Link>
+        </a>
       );
     }
+
     return (
-      <a className={classes}>
+      <Link className={classes} to={this.props.to} onClick={this.handleClick}>
         {this.props.text}
-      </a>
+      </Link>
     );
   }
 }
