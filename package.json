@@ -78,7 +78,8 @@
     "lint": "eslint src",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "backend": "./bin/run_backend.sh"
+    "backend": "./bin/run_backend.sh",
+    "review": "./bin/checkout_pr.sh"
   },
   "jest": {
     "moduleDirectories": [
