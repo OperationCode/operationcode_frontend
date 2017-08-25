@@ -9,6 +9,11 @@
   background: #fff;
   box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.1);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  a:-webkit-any-link {
+      color: unset;
+      cursor: pointer;
+      text-decoration: none;
+  }
 }
 
 .schoolCard p {
@@ -81,10 +86,4 @@
   .schoolInfo {
     font-size: 0.7em;
   }
-}
-
-a:-webkit-any-link {
-    color: unset;
-    cursor: pointer;
-    text-decoration: none;
 }
