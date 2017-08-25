@@ -22,21 +22,31 @@ class Contact extends Component {
             {/* Columns */}
             <div className={styles.centerText}>
               <h3>Email</h3>
-              <a href="mailto:staff@@operationcode.org">
+              <a href="mailto:staff@operationcode.org">
                 <FaEnvelope className={styles.mailIcon} size={200} />
               </a>
               <p>
-                <a href="mailto:staff@@operationcode.org">staff@operationcode.org</a>
+                <a href="mailto:staff@operationcode.org">staff@operationcode.org</a>
               </p>
             </div>
 
             <div className={styles.centerText}>
               <h3>Slack Team</h3>
-              <a href="https://operation-code.slack.com" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://operation-code.slack.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaSlack className={styles.slackIcon} size={170} />
               </a>
               <p>
-                <a href="https://operation-code.slack.com" target="_blank" rel="noopener noreferrer">https://operation-code.slack.com</a>
+                <a
+                  href="https://operation-code.slack.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  https://operation-code.slack.com
+                </a>
               </p>
             </div>
 
