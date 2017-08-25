@@ -2,7 +2,7 @@
   display: flex;
   justify-content: flex-end;
   flex: 1 0 60%;
-  font-size: larger;
+  font-size: 20px;
 }
 
 .topNav a {
