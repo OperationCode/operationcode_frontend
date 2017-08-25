@@ -45,7 +45,7 @@ class SignUp extends Component {
   }
 
   onEmailChange = (value, valid) => {
-    this.setState({ email: value, emailValid: valid });
+    this.setState({ email: value.toLowerCase(), emailValid: valid });
   }
 
   onZipChange = (value, valid) => {
