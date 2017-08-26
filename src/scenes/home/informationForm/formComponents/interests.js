@@ -8,6 +8,12 @@ import styles from './formComponents.css';
 
 class Interests extends Component {
 
+  componentDidMount() {
+    if (this.props.onLoad) {
+      this.props.onLoad();
+    }
+  }
+
   render() {
     const languages = LANGUAGES
       .map(language =>
@@ -59,12 +65,14 @@ class Interests extends Component {
 
 Interests.propTypes = {
   percent: PropTypes.string,
-  update: PropTypes.func
+  update: PropTypes.func,
+  onLoad: PropTypes.func
 };
 
 Interests.defaultProps = {
   percent: '0',
   update: null,
+  onLoad: null
 };
 
 export default Interests;
