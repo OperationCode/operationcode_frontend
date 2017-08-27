@@ -14,6 +14,7 @@ class App extends Component {
   componentDidMount() {
     if (process.env.NODE_ENV === 'production') {
       ReactGA.initialize('UA-75642413-1', { debug: false });
+      ReactGA.plugin.require('GTM-KZJ32DG');
       this.history.listen((location) => {
         ReactGA.set({ page: location.pathname });
         ReactGA.pageview(location.pathname);
