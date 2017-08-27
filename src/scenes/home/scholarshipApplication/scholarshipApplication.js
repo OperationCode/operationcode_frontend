@@ -5,7 +5,7 @@ import { Redirect } from 'react-router-dom';
 import Section from 'shared/components/section/section';
 import Form from 'shared/components/form/form';
 import FormTextArea from 'shared/components/form/formTextArea/formTextArea';
-import FormCheckbox from 'shared/components/form/formCheckBox/formCheckBox';
+import FormCheckbox from 'shared/components/form/formCheckbox/formCheckbox';
 import FormButton from 'shared/components/form/formButton/formButton';
 import styles from './scholarshipApplication.css';
 
