@@ -15,11 +15,7 @@ import MentorRequestsTable from './mentor/mentorRequestsTable/mentorRequestsTabl
 import SquadsTable from './squads/squadsTable/squadsTable';
 import Dashboard from './dashboard/dashboard';
 import MentorsTable from './mentor/mentorsTable/mentorsTable';
-<<<<<<< HEAD
-import Thanks from './thanks/thanks';
 import Success from './success/success';
-=======
->>>>>>> 4d635d3dbf874a8e7e6700e4c1eccea5c75d38e7
 import Team from './team/team';
 import Gala from './gala/gala';
 import FAQ from './faq/faq';
