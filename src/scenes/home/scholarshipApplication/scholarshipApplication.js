@@ -5,7 +5,7 @@ import { Redirect } from 'react-router-dom';
 import Section from 'shared/components/section/section';
 import Form from 'shared/components/form/form';
 import FormTextArea from 'shared/components/form/formTextArea/formTextArea';
-import FormCheckbox from 'shared/components/form/formCheckbox/formCheckbox';
+import FormCheckBox from 'shared/components/form/formCheckBox/formCheckBox';
 import FormButton from 'shared/components/form/formButton/formButton';
 import styles from './scholarshipApplication.css';
 
@@ -77,7 +77,7 @@ class ScholarshipApplication extends Component {
           <FormTextArea onChange={this.onTextAreaChange} />
           <div className={styles.title}>Conditions for Acceptance<span className={styles.red}>*</span></div>
           <div className={styles.terms}> {this.state.scholarship.terms} </div>
-          <FormCheckbox onChange={this.onCheckboxChange} /><br />
+          <FormCheckBox onChange={this.onCheckboxChange} /><br />
           {this.isFormValid() ? <FormButton text="Submit Application" onClick={this.handleOnClick} /> : <FormButton className={styles.grey_button} text="Submit Application" disabled />}
           {this.state.success && <Redirect to="/success" />}
           <div className={styles.red}>{this.state.error}</div>
