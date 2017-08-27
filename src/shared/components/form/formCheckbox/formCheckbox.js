@@ -1,38 +1,37 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import styles from './formCheckBox.css';
 
-export default class FormCheckbox extends Component {
-  constructor() {
-    super();
-    this.state = {
-      checked: false
-    };
-  }
-
-  handleChange = (event) => {
-    this.setState({ checked: event.target.checked }, () => {
-      if (this.props.onChange) {
-        this.props.onChange(this.state.checked);
-      }
-    });
-  }
+class FormCheckBox extends Component {
 
   render() {
     return (
-      <div>
+      <div className={styles.checkBox}>
         <input
-          onChange={this.handleChange}
           type="checkbox"
+          name={this.props.name}
+          id={this.props.value}
+          value={this.props.value}
+          onChange={this.props.onChange}
+          className={styles.input}
         />
+        <label className={styles.label} htmlFor={this.props.name}>
+          {this.props.value}
+        </label>
       </div>
     );
   }
 }
 
-FormCheckbox.propTypes = {
+FormCheckBox.propTypes = {
+  name: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
   onChange: PropTypes.func
 };
 
-FormCheckbox.defaultProps = {
+FormCheckBox.defaultProps = {
+  checked: false,
   onChange: null
 };
+
+export default FormCheckBox;

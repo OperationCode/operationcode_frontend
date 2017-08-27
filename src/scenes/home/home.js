@@ -15,8 +15,11 @@ import MentorRequestsTable from './mentor/mentorRequestsTable/mentorRequestsTabl
 import SquadsTable from './squads/squadsTable/squadsTable';
 import Dashboard from './dashboard/dashboard';
 import MentorsTable from './mentor/mentorsTable/mentorsTable';
+<<<<<<< HEAD
 import Thanks from './thanks/thanks';
 import Success from './success/success';
+=======
+>>>>>>> 4d635d3dbf874a8e7e6700e4c1eccea5c75d38e7
 import Team from './team/team';
 import Gala from './gala/gala';
 import FAQ from './faq/faq';
@@ -36,6 +39,7 @@ import About from './about/about';
 import Press from './press/press';
 import ResetPassword from './resetPassword/resetPassword';
 import Challenge from './challenge/challenge';
+import SignupInformation from './informationForm/informationForm';
 import styles from './home.css';
 
 class Home extends Component {
@@ -122,11 +126,15 @@ class Home extends Component {
             />
             <Route
               path="/signup"
-              component={SignUp}
+              render={() => (
+                <SignUp updateRootAuthState={this.updateRootAuthState} isLoggedIn={this.state.signedIn} {...authProps} />
+              )}
             />
             <Route
               path="/join"
-              component={SignUp}
+              render={() => (
+                <SignUp updateRootAuthState={this.updateRootAuthState} isLoggedIn={this.state.signedIn} {...authProps} />
+              )}
             />
             <Route
               path="/history"
@@ -172,6 +180,10 @@ class Home extends Component {
             <Route
               path="/media"
               component={Press}
+            />
+            <Route
+              path="/signup-info"
+              component={SignupInformation}
             />
             <Route
               path="/challenge"
@@ -225,10 +237,13 @@ class Home extends Component {
                 <Gala {...authProps} />
               )}
             />
-            <Route
-              path="/newgibill"
-              component={() => (window.location = 'http://www.benefits.va.gov/gibill/post911_gibill.asp')}
-            />
+            { // eslint-disable
+              <Route
+                path="/newgibill"
+                component={() => (window.location = 'http://www.benefits.va.gov/gibill/post911_gibill.asp')}
+              />
+            // eslint-enable
+            }
             <Route
               path="/login"
               render={() => (

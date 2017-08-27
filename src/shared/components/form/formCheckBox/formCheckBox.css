@@ -1,0 +1,14 @@
+.checkBox {
+  display: block;
+  margin: 20px;
+}
+
+input[type=checkbox] {
+  transform: scale(1.5);
+}
+
+.label {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: 15px;
+}
