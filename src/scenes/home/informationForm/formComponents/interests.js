@@ -8,6 +8,12 @@ import styles from './formComponents.css';
 
 class Interests extends Component {
 
+  componentDidMount() {
+    if (this.props.onLoad) {
+      this.props.onLoad();
+    }
+  }
+
   render() {
     const languages = LANGUAGES
       .map(language =>
@@ -15,7 +21,7 @@ class Interests extends Component {
           <FormCheckBox
             name={'languages'}
             value={language}
-            onChange={e => this.props.update(e.target.value)}
+            onChange={e => this.props.update(e)}
             key={language}
           />
       )
@@ -26,7 +32,7 @@ class Interests extends Component {
           <FormCheckBox
             name={'disciplines'}
             value={discipline}
-            onChange={e => this.props.update(e.target.value)}
+            onChange={e => this.props.update(e)}
             key={discipline}
           />
       )
@@ -59,12 +65,14 @@ class Interests extends Component {
 
 Interests.propTypes = {
   percent: PropTypes.string,
-  update: PropTypes.func
+  update: PropTypes.func,
+  onLoad: PropTypes.func
 };
 
 Interests.defaultProps = {
   percent: '0',
   update: null,
+  onLoad: null
 };
 
 export default Interests;

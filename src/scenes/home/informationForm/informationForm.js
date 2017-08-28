@@ -16,6 +16,8 @@ class SignupInformation extends Component {
     super(props);
     this.onIdentifierStatusChange = this.onIdentifierStatusChange.bind(this);
     this.onCheckBoxChange = this.onCheckBoxChange.bind(this);
+    this.previousPage = this.previousPage.bind(this);
+    this.onCheckboxLoad = this.onCheckboxLoad.bind(this);
     this.state = {
       error: false,
       isValid: true,
@@ -24,6 +26,15 @@ class SignupInformation extends Component {
       interests: new Set(),
       step: 0
     };
+  }
+
+  onCheckboxLoad = () => {
+    // Clear the interests once we get to the interests page
+    if (this.state.interests.size) {
+      const interests = new Set(this.state.interests);
+      interests.clear();
+      this.setState({ interests });
+    }
   }
 
   // On-Change handler dynamically creates state named after the
@@ -35,8 +46,16 @@ class SignupInformation extends Component {
   }
 
   // Adds values from checkboxes to a set, eliminating possible repeat values
-  onCheckBoxChange = (value) => {
-    this.setState({ interests: this.state.interests.add(value) });
+  onCheckBoxChange = (e) => {
+    const interests = new Set(this.state.interests);
+    const value = e.target.value;
+    if (e.target.checked) {
+      interests.add(value);
+    } else {
+      interests.delete(value);
+    }
+
+    this.setState({ interests });
   }
 
   // Reduces 'step' value by 1, going back one page in the form
@@ -45,6 +64,7 @@ class SignupInformation extends Component {
     if (this.state.step < 1) {
       return;
     }
+
     this.setState({ step: this.state.step -= 1 });
   }
 
@@ -105,6 +125,7 @@ class SignupInformation extends Component {
           <Interests
             update={this.onCheckBoxChange}
             percent={'66'}
+            onLoad={this.onCheckboxLoad}
           />
         );
       // Civillian COMPLETE
