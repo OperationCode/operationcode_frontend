@@ -21,7 +21,7 @@ class Timeline extends Component {
           <div className={styles.timelineEvent}>
             <TimelineEvent
               title="It All Started With A Hackathon..."
-              content={['Operation Code\'s founder, and retired U.S. Army Captain, David Molina, attends his first hackathon in New York City. After a weekend learning at ', <a href="https://angelhack.com" rel="noopener noreferrer">AngelHack</a>, ', he is inspired to pursue software engineering as a post-military occupation. He submits an application to The Flatiron School while on active-duty, only to discover that the program did not accept the "New GI Bill" as payment.']}
+              content={['Operation Code\'s founder, and retired U.S. Army Captain, David Molina, attends his first hackathon in New York City. After a weekend learning at ', <a href="//angelhack.com" target="_blank" rel="noopener noreferrer">AngelHack</a>, ', he is inspired to pursue software engineering as a post-military occupation. He submits an application to The Flatiron School while on active-duty, only to discover that the program did not accept the "New GI Bill" as payment.']}
             />
           </div>
         </div>
@@ -39,15 +39,15 @@ class Timeline extends Component {
           <div className={styles.timelineEvent}>
             <TimelineEvent
               title="One Month Rails"
-              content={['Molina exits military service in early 2013 and begins to self-teach Ruby on Rails, a full-stack web development platform for building comprehensive web applications. He also starts attending meetups with ', <a href="https://bmoreonrails.org" rel="noopener noreferrer">&quot;Bmore on Rails&quot;</a>, ' while finishing ', <a href="https://onemonth.com" rel="noopener noreferrer">One Month&apos;s Rails online course.</a>]}
+              content={['Molina exits military service in early 2013 and begins to self-teach Ruby on Rails, a full-stack web development platform for building comprehensive web applications. He also starts attending meetups with ', <a href="//bmoreonrails.org" target="_blank" rel="noopener noreferrer">&quot;Bmore on Rails&quot;</a>, ' while finishing ', <a href="//onemonth.com" target="_blank" rel="noopener noreferrer">One Month&apos;s Rails online course.</a>]}
             />
             <TimelineEvent
               title="The Vision Forms"
-              content={['Molina attended ', <a href="https://railsconf.com" rel="noopener noreferrer">RailsConf</a>, ' as a scholarship fellow. After meeting Rubyists from around the world, he is introduced to the Portland Ruby group.']}
+              content={['Molina attended ', <a href="//railsconf.com" target="_blank" rel="noopener noreferrer">RailsConf</a>, ' as a scholarship fellow. After meeting Rubyists from around the world, he is introduced to the Portland Ruby group.']}
             />
             <TimelineEvent
               title="Patriot Boot Camp"
-              content={['Molina joins ', <a href="https://techstars.com/patriotbootcamp" rel="noopener noreferrer">Techstar&apos;s Patriot Boot Camp (PBC)</a>, ' at George Washington University. During this time, Molina tells Virginia Senator, Tim Kaine, of the inability to use the New GI Bill for coding bootcamps. Before departing D.C., Molina receives advice from U.S. Army Congressional Fellow, Ben Culver, on gathering data to address the problem.']}
+              content={['Molina joins ', <a href="//techstars.com/patriotbootcamp" target="_blank" rel="noopener noreferrer">Techstar&apos;s Patriot Boot Camp (PBC)</a>, ' at George Washington University. During this time, Molina tells Virginia Senator, Tim Kaine, of the inability to use the New GI Bill for coding bootcamps. Before departing D.C., Molina receives advice from U.S. Army Congressional Fellow, Ben Culver, on gathering data to address the problem.']}
             />
             <TimelineEvent
               title="First Draft"
@@ -69,7 +69,8 @@ class Timeline extends Component {
           <div className={styles.timelineEvent}>
             <TimelineEvent
               title="Operation Code Is A Go"
-              content={['At ', <a href="https://cascadiarubyconf.com" rel="noopener noreferrer">Cascadia Ruby</a>, ' Molina receives encouragement from fellow Rubyist, Whitney Rose, to launch Operation Code\'s petition using "Launchrock". After lengthy discussions with Kristin Smith, Adam Enbar (representing The Flatiron School), and ', <a href="https://www.codefellows.org" rel="noopener noreferrer">Code Fellows</a>, ', the first line of code is ', <a href="https://github.com/OperationCode/operationcode" rel="noopener noreferrer">committed to GitHub</a>, '.']}
+              content={['At ', <a href="//cascadiarubyconf.com" target="_blank" rel="noopener noreferrer">Cascadia Ruby</a>, ' Molina receives encouragement from fellow Rubyist, Whitney Rose, to launch Operation Code\'s petition using "Launchrock". After lengthy discussions with Kristin Smith, Adam Enbar (representing The Flatiron School), and ', <a href="//www.codefellows.org" target="_blank" rel="noopener noreferrer">Code Fellows</a>, ', the first line of code is ',
+                <a href="//github.com/OperationCode/operationcode" target="_blank" rel="noopener noreferrer">committed to GitHub</a>, '.']}
             />
             <TimelineEvent
               title="Dr. Davis Joins The Team"
@@ -81,19 +82,19 @@ class Timeline extends Component {
             />
             <TimelineEvent
               title="First Donor"
-              content={['Web developer, teacher, entrepreneur and co-founder of ', <a href="https://www.codefellows.org">Code Fellows</a>, ', Ivan Storck, purchases the domain \'', <a href="https://operationcode.org">operationcode.org</a>, '\' becoming our first donor in the process.']}
+              content={['Web developer, teacher, entrepreneur and co-founder of ', <a href="//www.codefellows.org" target="_blank" rel="noopener noreferrer">Code Fellows</a>, ', Ivan Storck, purchases the domain \'', <a href="//operationcode.org" target="_blank" rel="noopener noreferrer">operationcode.org</a>, '\' becoming our first donor in the process.']}
             />
             <TimelineEvent
               title="DNSimple Joins The Operation"
-              content={[<a href="https://dnsimple.com" rel="noopener noreferrer"> DNSimple</a>, ' joined Operation Code as the sole domain management service provider, ensuring maximum uptime.']}
+              content={[<a href="//dnsimple.com" target="_blank" rel="noopener noreferrer"> DNSimple</a>, ' joined Operation Code as the sole domain management service provider, ensuring maximum uptime.']}
             />
             <TimelineEvent
               title="Charles Sipe's Article"
-              content={['Army veteran and aspiring software developer, Charles Sipe, writes a viral, Veteran\'s Day article called ', <a href="https://www.switchup.org/blog/why-veterans-will-make-excellent-programmers" rel="noopener noreferrer">&apos;Why Will Make Excellent Programmers&apos;</a>, '.']}
+              content={['Army veteran and aspiring software developer, Charles Sipe, writes a viral, Veteran\'s Day article called ', <a href="//www.switchup.org/blog/why-veterans-will-make-excellent-programmers" target="_blank" rel="noopener noreferrer">&apos;Why Will Make Excellent Programmers&apos;</a>, '.']}
             />
             <TimelineEvent
               title="HackHands Co-Founders And The Logo"
-              content={['HackHands co-founders, Forest Good and Geraldo Ramos, join Operation Code, designing our logo and providing veterans free access to ', <a href="https://hacksummit.org" rel="noopener noreferrer">hack.summit()</a>, ' a virtual conference to learn from the world\'s most renowned programmers.']}
+              content={['HackHands co-founders, Forest Good and Geraldo Ramos, join Operation Code, designing our logo and providing veterans free access to ', <a href="//hacksummit.org" target="_blank" rel="noopener noreferrer">hack.summit()</a>, ' a virtual conference to learn from the world\'s most renowned programmers.']}
             />
           </div>
         </div>
@@ -119,7 +120,7 @@ class Timeline extends Component {
             />
             <TimelineEvent
               title="Ruby On Ales"
-              content={[<a href="https://ruby.onales.com" rel="noopener noreferrer">Ruby on Ales</a>, ' - located in Bend, Oregon - becomes the first software developer industry conference to support veterans with Ruby development classes.']}
+              content={[<a href="//ruby.onales.com" target="_blank" rel="noopener noreferrer">Ruby on Ales</a>, ' - located in Bend, Oregon - becomes the first software developer industry conference to support veterans with Ruby development classes.']}
             />
             <TimelineEvent
               title="Teresa Mahoney Joins The Operation"
@@ -127,27 +128,27 @@ class Timeline extends Component {
             />
             <TimelineEvent
               title="Social Media Engagement"
-              content={['Operation Code changes it\'s Twitter handle to ', <a href="https://twitter.com/operation_code" rel="noopener noreferrer"> @operation_code</a>, ' for more effective branding. ', <a href="https://instagram.com/operation_code" rel="noopener noreferrer"> Instagram</a>, ' and ', <a href="https://facebook.com/operationcode.org" rel="noopener noreferrer"> Facebook</a>, ' accounts are created.']}
+              content={['Operation Code changes it\'s Twitter handle to ', <a href="//twitter.com/operation_code" target="_blank" rel="noopener noreferrer"> @operation_code</a>, ' for more effective branding. ', <a href="//instagram.com/operation_code" target="_blank" rel="noopener noreferrer"> Instagram</a>, ' and ', <a href="//facebook.com/operationcode.org" target="_blank" rel="noopener noreferrer"> Facebook</a>, ' accounts are created.']}
             />
             <TimelineEvent
               title="Launch Party"
-              content={[<a href="https://calagator.org/events/1250468219" rel="noopener noreferrer">Formal launch of Operation Code</a>, '. The event hosts dozens of veterans, software developers, media representatives, and staff members from U.S. Senator Ron Wyden and Congressman Blumenauer\'s offices.']}
+              content={[<a href="//calagator.org/events/1250468219" target="_blank" rel="noopener noreferrer">Formal launch of Operation Code</a>, '. The event hosts dozens of veterans, software developers, media representatives, and staff members from U.S. Senator Ron Wyden and Congressman Blumenauer\'s offices.']}
             />
             <TimelineEvent
               title="Slack Team Founded"
-              content={['Army veteran and software engineer, Fernando Paredes, joins Operation Code, expanding the Software Mentor Protégé Program using ', <a href="https://operation-code.slack.com/" rel="noopener noreferrer">our newly created Slack Team</a>, '. Veterans now have real-time access to a helpful coding community and one-on-one software mentorship at their fingertips.']}
+              content={['Army veteran and software engineer, Fernando Paredes, joins Operation Code, expanding the Software Mentor Protégé Program using ', <a href="//operation-code.slack.com/" target="_blank" rel="noopener noreferrer">our newly created Slack Team</a>, '. Veterans now have real-time access to a helpful coding community and one-on-one software mentorship at their fingertips.']}
             />
             <TimelineEvent
               title="Contributing Guide Created"
-              content={['Fernando Paredes, Nell Shamrell, and Eric McKenna improve Operation Code\'s participation in open source development with our first ', <a href="https://github.com/OperationCode/operationcode/blob/master/CONTRIBUTING.md" rel="noopener noreferrer">contributing guide</a>, '.']}
+              content={['Fernando Paredes, Nell Shamrell, and Eric McKenna improve Operation Code\'s participation in open source development with our first ', <a href="//github.com/OperationCode/operationcode/blob/master/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer">contributing guide</a>, '.']}
             />
             <TimelineEvent
               title="AirBnB Sponsorship"
-              content={['Global hospitality provider, ', <a href="https://www.airbnb.com/" rel="noopener noreferrer">Airbnb</a>, ' sponsors lodging for Operation Code members attending SignalConf in San Francisco. ', <a href="https://www.instagram.com/p/21p5bFxUjd/?taken-by=davidcmolina" rel="noopener noreferrer">They also invited our members to tour their headquarters</a>, '! Airbnb forges their partnership with Operation Code in steel by offering sponsored lodgings for veterans interviewing for a career in tech.']}
+              content={['Global hospitality provider, ', <a href="//www.airbnb.com/" target="_blank" rel="noopener noreferrer">Airbnb</a>, ' sponsors lodging for Operation Code members attending SignalConf in San Francisco. ', <a href="//www.instagram.com/p/21p5bFxUjd/?taken-by=davidcmolina" target="_blank" rel="noopener noreferrer">They also invited our members to tour their headquarters</a>, '! Airbnb forges their partnership with Operation Code in steel by offering sponsored lodgings for veterans interviewing for a career in tech.']}
             />
             <TimelineEvent
               title="SignalConf Sponsorship"
-              content={[<a href="https://www.twilio.com/signal/2015" rel="noopener noreferrer">SignalConf</a>, ' provides multiple Operation Code members with sponsored tickets. ', <a href="https://www.twilio.com/" rel="noopener noreferrer">Twilio</a>, ' - the conference\'s main sponsor - hosts an insightful tour of their headquarters.']}
+              content={[<a href="//www.twilio.com/signal/2015" target="_blank" rel="noopener noreferrer">SignalConf</a>, ' provides multiple Operation Code members with sponsored tickets. ', <a href="//www.twilio.com/" target="_blank" rel="noopener noreferrer">Twilio</a>, ' - the conference\'s main sponsor - hosts an insightful tour of their headquarters.']}
             />
             <TimelineEvent
               title="21st Amendment Meetup"
@@ -155,11 +156,11 @@ class Timeline extends Component {
             />
             <TimelineEvent
               title="Board Of Directors Formed"
-              content={['To meet growth demands, Operation Code ', <a href="https://twitter.com/operation_code/status/614443994769027072" rel="noopener noreferrer">separates from its financial supporter</a>, '. The Cogostar Foundation - Operation Code\'s current sponsor - helps to reorganize a new governing Board of Directors, comprised of Josh Carter, Aimee Knight, Nick Frost, Pete Runyon, Laura Gómez, Fernando Paredes, and Elmer Thomas. Operation Code incorporates as an Oregon non-profit organization.']}
+              content={['To meet growth demands, Operation Code ', <a href="//twitter.com/operation_code/status/614443994769027072" target="_blank" rel="noopener noreferrer">separates from its financial supporter</a>, '. The Cogostar Foundation - Operation Code\'s current sponsor - helps to reorganize a new governing Board of Directors, comprised of Josh Carter, Aimee Knight, Nick Frost, Pete Runyon, Laura Gómez, Fernando Paredes, and Elmer Thomas. Operation Code incorporates as an Oregon non-profit organization.']}
             />
             <TimelineEvent
               title="Stickers Distributed"
-              content={[<a href="https://www.stickermule.com/" rel="noopener noreferrer"> Sticker Mule</a>, ' provides free stickers to all members! Laptops around the nation equip our logo.']}
+              content={[<a href="//www.stickermule.com/" target="_blank" rel="noopener noreferrer"> Sticker Mule</a>, ' provides free stickers to all members! Laptops around the nation equip our logo.']}
             />
             <TimelineEvent
               title="Open For Donations"
@@ -167,7 +168,7 @@ class Timeline extends Component {
             />
             <TimelineEvent
               title="Jared Zoneraich And Mark Kerr Join The Operation"
-              content={['Jared Zoneraich, founder of ', <a href="https://www.hackbca.com/hackBCA" rel="noopener noreferrer">hackBCA</a>, ' joins the Operation Code advisory team. Mark Kerr - attorney, entrepreneur, and ex-Army Captain - joins the Operation Code board of directors. He is elected chair of the board, and the board begins having regular conference calls focusing on infrastructure, processes/procedures, and fundraising strategy.']}
+              content={['Jared Zoneraich, founder of ', <a href="//www.hackbca.com/hackBCA" target="_blank" rel="noopener noreferrer">hackBCA</a>, ' joins the Operation Code advisory team. Mark Kerr - attorney, entrepreneur, and ex-Army Captain - joins the Operation Code board of directors. He is elected chair of the board, and the board begins having regular conference calls focusing on infrastructure, processes/procedures, and fundraising strategy.']}
             />
           </div>
         </div>
@@ -185,11 +186,11 @@ class Timeline extends Component {
           <div className={styles.timelineEvent}>
             <TimelineEvent
               title="Hack Summit"
-              content={[<a href="https://hacksummit.org/" rel="noopener noreferrer">hack.summit()</a>, ' adds Operation Code to its list of coding non-profits.']}
+              content={[<a href="//hacksummit.org/" target="_blank" rel="noopener noreferrer">hack.summit()</a>, ' adds Operation Code to its list of coding non-profits.']}
             />
             <TimelineEvent
               title="Speakeasy"
-              content={[<a href="https://speakeasy.co/" rel="noopener noreferrer">Speakeasy</a>, ' joins as the Operation Code conference sponsor.']}
+              content={[<a href="//speakeasy.com/" target="_blank" rel="noopener noreferrer">Speakeasy</a>, ' joins as the Operation Code conference sponsor.']}
             />
             <TimelineEvent
               title="501(c)(3) Application Approved"
@@ -219,7 +220,7 @@ class Timeline extends Component {
             />
             <TimelineEvent
               title="2000th Slack Member"
-              content={['On Independence Day, the ', <a href="https://twitter.com/operation_code/status/882280600920616960" rel="noopener noreferrer">2000th Operation Code member joined our Slack Team</a>, '.']}
+              content={['On Independence Day, the ', <a href="//twitter.com/operation_code/status/882280600920616960" target="_blank" rel="noopener noreferrer">2000th Operation Code member joined our Slack Team</a>, '.']}
             />
           </div>
         </div>

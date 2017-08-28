@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import ScrollUpButton from 'react-scroll-up-button';
 import SocialMedia from 'shared/components/socialMedia/socialMedia';
 import centerLogo from 'images/icons/Medal-Icon.svg';
 import styles from './footer.css';
@@ -36,6 +37,7 @@ class Footer extends Component {
               <Link to="/contact">Contact</Link>
               <a href="https://www.iubenda.com/privacy-policy/8174861" target="_blank" rel="noopener noreferrer">Privacy</a>
             </div>
+            <ScrollUpButton />
           </div>
         </div>
       </div>
