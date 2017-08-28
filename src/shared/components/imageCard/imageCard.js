@@ -16,8 +16,7 @@ class ImageCard extends Component {
           <LinkButton
             text={this.props.buttonText}
             link={this.props.link}
-            target="_blank"
-            rel="noopener noreferrer"
+            isExternal
           />}
         </div>
       </div>
