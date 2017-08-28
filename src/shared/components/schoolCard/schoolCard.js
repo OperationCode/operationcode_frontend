@@ -21,8 +21,7 @@ class SchoolCard extends Component {
             </span>
             <br />
             <span className={styles.schoolLocation}>
-              {this.props.schoolAddress}{this.props.schoolAddress.includes('Online') ? null : ','}
-              <br />
+              {this.props.schoolAddress.includes('Online') ? <p>Online Available<br /></p> : null}
               {this.props.schoolCity}{this.props.schoolCity ? ', ' : null}
               {this.props.schoolState}{this.props.schoolState ? <br /> : null}
               <br />
