@@ -1,3 +1,4 @@
+/* TODO: Move <code> styles to global stylesheet */
 code {
   background-color: #F0F2F2;
   border-radius: 4px;
@@ -5,19 +6,10 @@ code {
   border-color: #F0F2F2;
 }
 
-img {
+.instructionList img {
   max-width: 100%;
   height: auto;
   padding: 0 10px; /* On this component, all non-classed images are inline */
-}
-
-a {
-  word-wrap: break-word;
-}
-
-ol {
-  padding: 0 0 0 5px;
-  margin: 0;
 }
 
 .displayLinebreak {
@@ -31,6 +23,8 @@ ol {
 
 .instructionList {
   line-height: 1.5;
+  padding: 0 0 0 5px;
+  margin: 0;
 }
 
 .instructionList li {
