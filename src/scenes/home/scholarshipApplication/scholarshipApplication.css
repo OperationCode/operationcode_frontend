@@ -1,0 +1,44 @@
+.red {
+  color: red;
+}
+
+.grey_button {
+  background-color: #ABABAB;
+  border-color: #999;
+  color: #fff;
+}
+
+.grey_button:hover {
+  cursor: not-allowed;
+}
+
+.terms {
+  white-space: pre-wrap;
+  font-size: 14px;
+}
+
+.applicationForm {
+  display:flex;
+  flex-direction: column;
+  max-width:500px;
+  margin:auto;
+  padding: 10px;
+  width: 100%;
+}
+
+.title {
+  font-size: 18px;
+  margin-bottom: 12px;
+  margin-top: 12px;
+  line-height: 22px;
+}
+
+.small_title {
+  font-size: 16px;
+  margin-bottom: 12px;
+  white-space: pre-wrap;
+}
+
+.deadline {
+  border-bottom: #289CBC solid 1px;
+}
