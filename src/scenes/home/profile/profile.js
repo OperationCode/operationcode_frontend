@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Section from 'shared/components/section/section';
 import Idme from 'shared/components/idme/idme';
+import { Link } from 'react-router-dom';
 import discourseImage from '../../../images/Discourse_logo.png';
 import slackImage from '../../../images/slack.png';
 import styles from './profile.css';
@@ -11,6 +12,10 @@ class Profile extends Component {
   render() {
     return (
       <div>
+        <Section title="Scholarship Opportunities" theme="white">
+          <span className={styles.discourseText}>Browse Scholarship Opportunities</span>
+          <Link to="/scholarships">Scholarship Opportunities</Link>
+        </Section>
         <Section title="Operation Code Community" theme="white">
           <span className={styles.discourseText}>Visit the Operation Code Community by clicking below.</span>
           <a href="https://community.operationcode.org" target="_blank" rel="noopener noreferrer">
