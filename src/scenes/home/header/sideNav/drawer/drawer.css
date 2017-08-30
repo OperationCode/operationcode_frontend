@@ -1,10 +1,10 @@
 .body {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   overflow: hidden;
-  width: 320px;
+  width: 100%;
   z-index: 2;
   transition: left .25s ease-in-out;
 }
