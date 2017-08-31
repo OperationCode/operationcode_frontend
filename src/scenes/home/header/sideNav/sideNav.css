@@ -6,8 +6,17 @@
 }
 
 .header {
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  height: 80px;
+}
+
+.logo {
+  position: relative;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 40px;
+  max-width: 75%;
 }
 
 .close {
@@ -16,27 +25,12 @@
   font-size: 40px;
   position: absolute;
   right: 5%;
-  top: 22px;
+  top: 20px;
   padding-right: 10px;
   line-height: 1;
 }
 
-.logoWrapper {
-  text-align: center;
-}
-
-.logo {
-  max-width: 75%;
-  max-height: 40px;
-  position: absolute;
-  top: 20px;
-  left: 5%;
-}
-
 .list {
-  display: flex;
-  flex-direction: column;
-  margin-top: 80px;
   padding: 30px 5%;
   border-top: 1px solid #fafafa;
   font-size: 2.5em;
