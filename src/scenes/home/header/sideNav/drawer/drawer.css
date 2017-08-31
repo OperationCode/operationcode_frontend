@@ -29,3 +29,9 @@
     display: block;
   }
 }
+
+@media screen and (orientation: landscape) {
+  .body {
+    width: 320px;
+  }
+}
