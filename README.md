@@ -1,6 +1,7 @@
 # OperationCode Frontend
 
 ![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=<badge_key>)
+[![Build Status](https://travis-ci.org/OperationCode/operationcode_frontend.svg?branch=master)](https://travis-ci.org/OperationCode/operationcode_frontend)
 
 This is the repository for the front-end portion of https://operationcode.org.
 
@@ -20,6 +21,8 @@ In another shell tab:
 ```
 yarn start
 ```
+
+[Change Log](History.md)
 
 If you're an experienced developer, please navigate to our [Quick Start Guide](https://github.com/OperationCode/operationcode_frontend/blob/master/CONTRIBUTING.md#quick-start-guide).
 
