@@ -25,9 +25,8 @@
   font-size: 40px;
   position: absolute;
   right: 5%;
-  top: 20px;
-  padding-right: 10px;
-  line-height: 1;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .list {
