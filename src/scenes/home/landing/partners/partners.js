@@ -32,32 +32,32 @@ class Partners extends Component {
 
         <div className={styles.partnerLogos}>
           <div>
-            <a href="https://apexsystems.com/">
+            <a href="https://apexsystems.com/" target="_blank" rel="noopener noreferrer">
               <img src={apexLogo} alt="Apex Systems" />
             </a>
           </div>
           <div>
-            <a href="https://github.com/">
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
               <img src={githubLogo} alt="GitHub" />
             </a>
           </div>
           <div>
-            <a href="https://docker.com/">
+            <a href="https://docker.com/" target="_blank" rel="noopener noreferrer">
               <img src={dockerLogo} alt="Docker" />
             </a>
           </div>
           <div>
-            <a href="https://oreilly.com/">
+            <a href="https://oreilly.com/" target="_blank" rel="noopener noreferrer">
               <img src={oreillyLogo} alt="O&apos;Reilly Media" />
             </a>
           </div>
           <div>
-            <a href="https://hackerrank.com/">
+            <a href="https://hackerrank.com/" target="_blank" rel="noopener noreferrer">
               <img src={hackerrankLogo} alt="HackerRank" />
             </a>
           </div>
           <div>
-            <a href="https://oracle.com/">
+            <a href="https://oracle.com/" target="_blank" rel="noopener noreferrer">
               <img src={oracleLogo} alt="Oracle" />
             </a>
           </div>
@@ -67,9 +67,12 @@ class Partners extends Component {
           <p className={styles.contactUs}>
             We are always looking for organizations who are interested in working with us!
           </p>
-          <LinkButton text="Contact Us" link="mailto:partnerships@operationcode.org" />
+          <LinkButton
+            text="Contact Us"
+            link="mailto:partnerships@operationcode.org"
+            isExternal
+          />
         </div>
-
       </Section>
     );
   }

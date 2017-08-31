@@ -12,7 +12,12 @@ class ImageCard extends Component {
         <div className={styles.cardText}>
           <h6>{this.props.title}</h6>
           <p>{this.props.cardText}</p>
-          {this.props.link && <LinkButton text={this.props.buttonText} link={this.props.link} />}
+          {this.props.link &&
+          <LinkButton
+            text={this.props.buttonText}
+            link={this.props.link}
+            isExternal
+          />}
         </div>
       </div>
     );
@@ -24,12 +29,12 @@ ImageCard.propTypes = {
   title: PropTypes.string.isRequired,
   cardText: PropTypes.string.isRequired,
   buttonText: PropTypes.string,
-  link: PropTypes.string
+  link: PropTypes.string,
 };
 
 ImageCard.defaultProps = {
   link: null,
-  buttonText: null
+  buttonText: null,
 };
 
 export default ImageCard;

@@ -1,6 +1,4 @@
-
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif');
-
 @font-face {
   font-family: 'PF Din Display';
   font-weight: normal;
@@ -19,7 +17,7 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6, a, button {
-  font-family: 'PF Din Display'
+  font-family: 'PF Din Display';
 }
 
 *, *:before, *:after {
@@ -29,8 +27,8 @@ h1, h2, h3, h4, h5, h6, a, button {
 h1, h2, h3, h4, h5, h6 {
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -38,7 +36,9 @@ body {
   hyphens: none;
 }
 
+
 /*40px*/
+
 h1 {
   font-size: 2.5rem;
 }
@@ -67,9 +67,19 @@ h6 {
   min-height: 100%;
 }
 
+.ScrollUpButton {
+  position: fixed;
+  bottom: 50;
+  right: 30;
+  cursor: pointer;
+  transitionDuration: 0.2s;
+  transitionTimingFunction: linear;
+  transitionDelay: 0s;
+}
+
 @media screen and (max-width: 480px) {
   html {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 

@@ -1,3 +1,4 @@
+/* TODO: Move <code> styles to global stylesheet */
 code {
   background-color: #F0F2F2;
   border-radius: 4px;
@@ -5,14 +6,35 @@ code {
   border-color: #F0F2F2;
 }
 
-.displayLinebreak {
-  white-space: pre-line;
+.instructionList img {
+  max-width: 100%;
+  height: auto;
+  padding: 0 10px; /* On this component, all non-classed images are inline */
 }
 
-a {
-  word-wrap: break-word;
+.displayLinebreak {
+  white-space: pre-line;
+  text-align: center;
 }
 
 .displayBlock > div {
   display: block;
+}
+
+.instructionList {
+  line-height: 1.5;
+  padding: 0 0 0 5px;
+  margin: 0;
+}
+
+.instructionList li {
+  padding: 0 0 25px 0;
+}
+
+.blockImage {
+  padding: 0 !important;
+}
+
+.centerText {
+  text-align: center;
 }
