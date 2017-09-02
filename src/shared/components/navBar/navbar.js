@@ -1,37 +1,56 @@
-import React, {
-  Component,
-  PropTypes,
-} from 'react';
+import React from 'react';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import { Routes, ... /* incomplete */ } from './scenes/home/home';
 
-import styles from './navbar.css';
-
-import {
-  View,
-} from 'react-native';
-
-const propTypes = {};
-
-const defaultProps = {};
-
-export default class NavigationBar extends Component {
-
+export default class NavBar extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.toggle = this.toggle.bind(this);
+    
+    this.state = {
+      isOpen: false
+    };
   }
-
+  
+  toggle() {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  }
+  
   render() {
     return (
       <div>
-				<NavigationBar
-			    leftComponent={<TouchableOpacity><Icon name="sidebar" /></TouchableOpacity>}
-			    centerComponent={<Title>{props.title}</Title>}
-			    />
+        <Navbar color="faded" light toggleable>
+          <NavbarToggler right onClick={this.toggle} />
+          <NavbarBrand href="/">{styles.logo}</NavbarBrand>
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav className="ml-auto" navbar>
+              <NavItem>
+                <NavLink href="/" component={...Routes}></NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/donate" isExternal>Donate</NavLink>
+              </NavItem>
+            </Nav>
+          </Collapse>
+        </Navbar>
       </div>
     );
   }
-
 }
 
-NavigationBar.propTypes = propTypes;
-NavigationBar.defaultProps = defaultProps;
+Navbar.propTypes = {
+  light: PropTypes.bool,
+  inverse: PropTypes.bool,
+  full: PropTypes.bool,
+  fixed: PropTypes.string,
+  color: PropTypes.string,
+  role: PropTypes.string,
+  toggleable: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string])
+}
+
+NavbarBrand.propTypes = {
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string])
+}
