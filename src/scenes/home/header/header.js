@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import styles from './header.css';
+import { styles, navbarCustom } from './header.css';
 import NavItem from './navItem/navItem';
 import TopNav from './topNav/topNav';
 import SideNav from './sideNav/sideNav';
@@ -24,19 +24,21 @@ class Header extends Component {
 
   renderNavContents(signedIn, mentor, onClick) {
     return (
-      <span>
-        <NavItem to="/about" text="About" onClick={this.bind} />
-        <NavItem to="/code_schools" text="Code Schools" onClick={onClick} />
-        <NavItem to="https://donorbox.org/operationcode" text="Donate" onClick={onClick} isExternal />
-        {signedIn && <NavItem to="/mentor-request" text="Request Help" onClick={onClick} />}
-        {signedIn && <NavItem to="/mentors" text="Mentors" onClick={onClick} />}
-        {mentor && <NavItem to="/requests" text="Requests" onClick={onClick} />}
-        {signedIn && <NavItem to="/squads" text="Squads" onClick={onClick} />}
-        {signedIn ? <NavItem to="/profile" text="Profile" onClick={onClick} />
-                  : <NavItem to="/join" text="Join" onClick={onClick} />}
-        {signedIn ? <NavItem to="/" text="Logout" onClick={this.props.logOut} />
-                  : <NavItem to="/login" text="Login" onClick={onClick} />}
-      </span>
+      <div>
+        <navbarCustom className={navbarCustom}>
+          <NavItem to="/about" text="About" onClick={this.bind} />
+          <NavItem to="/code_schools" text="Code Schools" onClick={onClick} />
+          <NavItem to="https://donorbox.org/operationcode" text="Donate" onClick={onClick} isExternal />
+          {signedIn && <NavItem to="/mentor-request" text="Request Help" onClick={onClick} />}
+          {signedIn && <NavItem to="/mentors" text="Mentors" onClick={onClick} />}
+          {mentor && <NavItem to="/requests" text="Requests" onClick={onClick} />}
+          {signedIn && <NavItem to="/squads" text="Squads" onClick={onClick} />}
+          {signedIn ? <NavItem to="/profile" text="Profile" onClick={onClick} />
+                    : <NavItem to="/join" text="Join" onClick={onClick} />}
+          {signedIn ? <NavItem to="/" text="Logout" onClick={this.props.logOut} />
+                    : <NavItem to="/login" text="Login" onClick={onClick} />}
+        </navbarCustom>
+      </div>
     );
   }
 

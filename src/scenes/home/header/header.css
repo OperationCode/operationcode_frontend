@@ -19,7 +19,7 @@
 
 .logo img {
   height: 50px;
-  padding: 1rem, 1rem;
+  padding: 40px;
   align-self: left;
 }
 
@@ -34,7 +34,8 @@
 
 .burger img {
   width: 1em;
-  margin: 1rem, 1rem;
+  margin-bottom: 40px;
+  margin-left: 40px;
   background-color: #fafafa;
   padding: 10px;
   border-radius: 5px;
@@ -44,6 +45,63 @@
   transition-delay: 0.2s;
   box-shadow: 0 2px 5px 0 grey;
  }
+
+ .navbar-custom {
+	border: 0;
+	border-radius: 0;
+	margin: 0;
+	text-transform: uppercase;
+	font-family: Raleway, sans-serif;
+}
+
+.navbar-custom,
+.navbar-custom .dropdown-menu {
+	background: #fff;
+	padding: 0;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-nav > li > a,
+.navbar-custom .navbar-nav .dropdown-menu > li > a {
+	font-size: 11px;
+	/*letter-spacing: 3px;*/
+	color: #222;
+}
+
+.navbar-custom .nav li.active,
+.navbar-custom .nav li a:hover,
+.navbar-custom .nav li a:focus,
+.navbar-custom .navbar-nav > li.active a {
+	background: none;
+	outline: 0;
+	color: #E7746F;
+}
+
+.navbar-custom .navbar-brand {
+	font-weight: 700;
+	font-size: 22px;
+        font-family: Open Sans-serif;
+}
+
+.navbar-custom .dropdown-menu {
+	border: 0;
+	/*border-top: 2px solid #E7746F;*/
+	border-radius: 0;
+}
+
+.navbar-custom .dropdown-menu > li > a {
+	/*padding: 10px 20px;*/
+}
+
+.navbar-custom .nav .open > a,
+.navbar-custom .dropdown-menu > li > a:hover,
+.navbar-custom .dropdown-menu > li > a:focus {
+	background: #f5f5f5;
+}
+
+.navbar-custom .navbar-toggle .icon-bar {
+	background: #222;
+}
 
  @media screen and (max-width: 779px) {
   .burger {
