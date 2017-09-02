@@ -1,12 +1,10 @@
 .header {
   display: flex;
   align-items: center;
-  height: 80px;
+  height: fit-content;
   background-color: rgb(117,129,143);
-  padding: 0 .5rem;
-  border-bottom: 1.55px solid #f5f5f5;
+  padding: 0.5rem, .5rem;
   position: fixed;
-   /*width: 100%; */
   z-index: 998;
 }
 
@@ -25,53 +23,13 @@
 .transparent {
   background-color: rgba(0, 0, 0, 0.52);
   position: relative;
-  -webkit-transition: opacity 0.5s ease-in-out, top;
-  -o-transition: opacity 0.5s ease-in-out, top;
   transition: opacity 0.5s ease-in-out, top;
-  -webkit-transition: -webkit-box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  -o-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  -webkit-transition-delay: 0.2s;
-  -o-transition-delay: 0.2s;
   transition-delay: 0.2s;
   transition: -webkit-box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   width: stretch;
 }
-/*.transparent > .transition-delay {
-background-color: rgba(0, 0, 0, 0.52);
-padding: 10px;
-border-radius: 5px;
--webkit-transition: -webkit-box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-transition: -webkit-box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
--o-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
--webkit-transition-delay: 0.2s;
-     -o-transition-delay: 0.2s;
-        transition-delay: 0.2s;
--webkit-box-shadow: 0 2px 5px 0 grey;
-        box-shadow: 0 2px 5px 0 grey;
-}
 
-.style {
-    background-color: rgba(50, 50, 50, 0.5);
-    height: 50px;
-    position: fixed;
-    border-radius: inherit;
-    -webkit-border-horizontal-spacing: unset;
-    transition: opacity 0.5s cubic-bezier(0.4, 0, 1, 1), right;
-    flex-flow: column;
-    width: -webkit-fill-available;
-    transition-delay: -1.5sec;
-    align-self: center;
-    text-align: -webkit-right;
-}
-
-.burger {
-  display: none;
-}
-*/
 .burger img {
   width: 1em;
   margin: 0;
@@ -80,16 +38,9 @@ transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 0.2
   border-radius: 5px;
   align-self: left;
   opacity: 0.5;
-  -webkit-transition: -webkit-box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  -o-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  -webkit-transition-delay: 0.2s;
-       -o-transition-delay: 0.2s;
-          transition-delay: 0.2s;
-  -webkit-box-shadow: 0 2px 5px 0 grey;
-          box-shadow: 0 2px 5px 0 grey;
+  transition-delay: 0.2s;
+  box-shadow: 0 2px 5px 0 grey;
  }
 
  @media screen and (max-width: 779px) {
@@ -99,158 +50,4 @@ transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 0.2
     right: 5%;
     top: 20px;
   }
-}
-/* ---------------------------------------------- /*
- * Footer
-/* ---------------------------------------------- */
-
-#footer {
-    background: #222;
-    text-align: center;
-    font-size: small;
-    padding: 40px 0;
-    color: #FFF;
-}
-
-.copyright {
-	margin: 0;
-}
-
-.copyright a{
-    border-bottom: 1px dotted #fff;
-}
-
-#footer {
-    animation-iteration-count: infinite;
-    -webkit-animation-iteration-count: infinite;
-    color: #ff5252;
-}
-
-.social-links {
-	list-style: none;
-	padding: 0;
-	margin: 0 0 20px;
-}
-
-.social-links li {
-	display: inline-block;
-	margin: 5px;
-}
-
-.social-links a {
-	width: 36px;
-	height: 36px;
-	display: block;
-	line-height: 35px;
-	text-align: center;
-	border: 1px solid rgba(255, 255, 255, .1);
-	-webkit-border-radius: 3px;
-	   -moz-border-radius: 3px;
-			border-radius: 3px;
-	font-size: 14px;
-	color: rgba(255, 255, 255, .2);
-}
-
-.social-links a:hover {
-	border: 1px solid rgba(255, 255, 255, .5);
-	color: rgba(255, 255, 255, .8);
-}
-
-/* ---------------------------------------------- /*
- * Navigation
-/* ---------------------------------------------- */
-
-.header {
-	/*border-bottom: 1px solid #f5f5f5;*/
-	position: relative;
-	/*width: 100%;*/
-	z-index: 998;
-}
-
-.navbar-custom {
-	border: 0;
-	border-radius: 0;
-	margin: 0;
-	text-transform: uppercase;
-	font-family: Raleway, sans-serif;
-}
-
-.navbar-custom,
-.navbar-custom .dropdown-menu {
-	background: #fff;
-	padding: 0;
-}
-
-.navbar-custom .navbar-brand,
-.navbar-custom .navbar-nav > li > a,
-.navbar-custom .navbar-nav .dropdown-menu > li > a {
-	font-size: 11px;
-	/*letter-spacing: 3px;*/
-	color: #222;
-}
-
-.navbar-custom .nav li.active,
-.navbar-custom .nav li a:hover,
-.navbar-custom .nav li a:focus,
-.navbar-custom .navbar-nav > li.active a {
-	background: none;
-	outline: 0;
-	color: #E7746F;
-}
-
-.navbar-custom .navbar-brand {
-	font-weight: 700;
-	font-size: 22px;
-        font-family: Open Sans-serif;
-}
-
-.navbar-custom .dropdown-menu {
-	border: 0;
-	/*border-top: 2px solid #E7746F;*/
-	border-radius: 0;
-}
-
-.navbar-custom .dropdown-menu > li > a {
-	/*padding: 10px 20px;*/
-}
-
-.navbar-custom .nav .open > a,
-.navbar-custom .dropdown-menu > li > a:hover,
-.navbar-custom .dropdown-menu > li > a:focus {
-	background: #f5f5f5;
-}
-
-.navbar-custom .navbar-toggle .icon-bar {
-	background: #222;
-}
-
-/* ---------------------------------------------- /*
- * Scroll to top
-/* ---------------------------------------------- */
-
-.scroll-up {
-    /* position: relative; */
-    display: none;
-    z-index: 999;
-    bottom: 0em;
-    right: 2em;
-    float: right;
-    margin-right: 1em;
-}
-
-.scroll-up a {
-	background-color: rgba(135, 135, 135, 0.5);
-	display: block;
-	width: 35px;
-	height: 35px;
-	text-align: center;
-	color: #fff;
-	font-size: 15px;
-	line-height: 30px;
-}
-
-.scroll-up a:hover,
-.scroll-up a:active {
-	background-color: rgba(235, 235, 235, .8);
-	color: #e7746f;
 }
