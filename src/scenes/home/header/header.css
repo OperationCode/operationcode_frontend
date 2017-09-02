@@ -46,7 +46,7 @@
   box-shadow: 0 2px 5px 0 grey;
  }
 
- .navbar-custom {
+ .navbarCustom {
 	border: 0;
 	border-radius: 0;
 	margin: 0;
@@ -54,7 +54,7 @@
 	font-family: Raleway, sans-serif;
 }
 
-.navbar-custom,
+.navbarCustom,
 .navbar-custom .dropdown-menu {
 	background: #fff;
 	padding: 0;

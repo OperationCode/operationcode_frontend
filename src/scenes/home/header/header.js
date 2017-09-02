@@ -22,10 +22,10 @@ class Header extends Component {
     this.setState({ isSideNavVisible: !this.state.isSideNavVisible });
   }
 
-  renderNavContents(signedIn, mentor, onClick) {
+  renderNavContents(signedIn, mentor, onClick, navbarCustom) {
     return (
       <div>
-        <navbarCustom className={navbarCustom}>
+        <navbarCustom>
           <NavItem to="/about" text="About" onClick={this.bind} />
           <NavItem to="/code_schools" text="Code Schools" onClick={onClick} />
           <NavItem to="https://donorbox.org/operationcode" text="Donate" onClick={onClick} isExternal />
@@ -46,21 +46,24 @@ class Header extends Component {
     const { mentor, signedIn } = this.props;
     const classes = classNames({
       [`${styles.header}`]: true,
+      [`${styles.navbarCustom}`]: true,
       [`${styles.transparent}`]: this.props.transparent
     });
     return (
       <div className={classes} >
-        <Logo />
-        <Burger onClick={this.handleToggleDrawer} />
-        <TopNav>
-          {this.renderNavContents(signedIn, mentor)}
-        </TopNav>
-        <SideNav
-          isVisible={this.state.isSideNavVisible}
-          onClose={this.handleToggleDrawer}
-        >
-          {this.renderNavContents(signedIn, mentor, this.handleToggleDrawer)}
-        </SideNav>
+        <navbarCustom>
+          <Logo />
+          <Burger onClick={this.handleToggleDrawer} />
+          <TopNav>
+            {this.renderNavContents(signedIn, mentor)}
+          </TopNav>
+          <SideNav
+            isVisible={this.state.isSideNavVisible}
+            onClose={this.handleToggleDrawer}
+          >
+            {this.renderNavContents(signedIn, mentor, this.handleToggleDrawer)}
+          </SideNav>
+        </navbarCustom>
       </div>
     );
   }
@@ -70,14 +73,16 @@ Header.propTypes = {
   transparent: PropTypes.bool,
   logOut: PropTypes.func,
   signedIn: PropTypes.bool,
-  mentor: PropTypes.bool
+  mentor: PropTypes.bool,
+  navbarCustom: PropTypes.bool
 };
 
 Header.defaultProps = {
   transparent: false,
   logOut: () => {},
   signedIn: false,
-  mentor: false
+  mentor: false,
+  navbarCustom: true
 };
 
 export default Header;
