@@ -41,9 +41,37 @@ const postCSSLoaderOptions = {
 // It is focused on developer experience and fast rebuilds.
 // The production configuration is different and lives in a separate file.
 module.exports = {
+
+  // alias : (function() {
+  //
+  // 	var o = {},
+  // 		root = __dirname + '/components/';
+  //
+  // 	function parse(nodes, parent) {
+  //
+  // 		if (parent && nodes.indexOf(path.basename(parent) + '.js') > -1)
+  // 			o['components/' + parent] = __dirname + '/components/' + parent + '/' + path.basename(parent) + '.js';
+  // 		else
+  // 			nodes.forEach(function(node) {
+  // 				var path = root + (parent
+  // 					? parent + '/'
+  // 					: '') + node;
+  // 				if (fs.statSync(path).isDirectory())
+  // 					parse(fs.readdirSync(path), (parent
+  // 						? parent + '/'
+  // 						: '') + node);
+  // 				}
+  // 			);
+  // 		}
+  //
+  // 	parse(fs.readdirSync(root));
+  //
+  // 	return o;
+  // })(),
+
   // You may want 'eval' instead if you prefer to see the compiled output in DevTools.
   // See the discussion in https://github.com/facebookincubator/create-react-app/issues/343.
-  devtool: 'cheap-module-source-map',
+  devtool: 'eval',
   // These are the "entry points" to our application.
   // This means they will be the "root" imports that are included in JS bundle.
   // The first two entry points enable "hot" CSS and auto-refreshes for JS.

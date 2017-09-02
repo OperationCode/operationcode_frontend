@@ -32,6 +32,7 @@ import About from './about/about';
 import Press from './press/press';
 import ResetPassword from './resetPassword/resetPassword';
 import Challenge from './challenge/challenge';
+// import CanvasAnimation from './canvas/animation';
 import SignupInformation from './informationForm/informationForm';
 import styles from './home.css';
 
@@ -47,6 +48,7 @@ class Home extends Component {
 
     this.props.history.listen((location) => {
       this.setBgImage(location);
+      // this.setCanvasAnimation;
     });
   }
 
@@ -86,11 +88,12 @@ class Home extends Component {
   }
 
   render() {
-    const { mentor, signedIn, verified } = this.state;
+    const { mentor, signedIn, verified, data } = this.state;
     const authProps = {
       signedIn,
       mentor,
-      verified
+      verified,
+      data
     };
 
     const classes = classNames({
@@ -100,7 +103,7 @@ class Home extends Component {
     return (
       <div
         className={classes}
-        style={(this.state.bgImage) ? { backgroundImage: `url(${this.state.bgImageUrl})` } : {}}
+        style={(this.state.bgImage) ? { backgroundImage: `url(${this.state.bgImageUrl})` } : { }}
       >
         <Header transparent={this.state.bgImage} logOut={this.logOut} signedIn={signedIn} mentor={mentor} />
         <div className={styles.main} >
@@ -211,6 +214,12 @@ class Home extends Component {
                 <SquadsTable {...authProps} />
               )}
             />
+            {/* <Route
+              path="/canvas"
+              render={() => (
+                <CanvasAnimation />
+              )}
+            /> */}
             <Route
               path="/gala"
               render={() => (

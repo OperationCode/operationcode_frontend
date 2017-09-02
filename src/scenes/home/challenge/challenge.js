@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Section from 'shared/components/section/section';
+// import ReactTable from 'react-table';
 import namesFile from 'operationcode_challenge/names.txt';
 import ForkButton from '../../../images/GitHubForkButton.png';
 import ProposeButton from '../../../images/GitHubProposeButton.png';
@@ -132,9 +133,9 @@ class Challenge extends Component {
           <h6 className={styles.centerText}>
             Here is a list of the people that have completed this before you:
           </h6>
-          <p className={styles.displayLinebreak}>
-            {this.state.names}
-          </p>
+          <table className={styles.displayLinebreak} >
+            <tbody><tr><td>{this.state.names}</td></tr></tbody>
+          </table>
         </Section>
       </div>
     );

@@ -13,7 +13,10 @@ html {
   font-family: "Noto Serif", sans-serif;
   font-size: 16px;
   font-weight: normal;
-  color: #47566B;
+  /*background-color: rgba(1, 7, 10, 0.96);
+  padding: 0.3rem 0.3rem;
+  z-index: 998;
+  border-bottom: 1px solid rgb(65, 164, 192);*/
 }
 
 h1, h2, h3, h4, h5, h6, a, button {
@@ -87,4 +90,18 @@ h6 {
   html {
     font-size: 15px;
   }
+}
+
+@media (max-width: 700px) {
+    .site-header {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .site-nav-left {
+        padding-left: 4vw;
+        margin-right: 0;
+    }
+    .site-nav-right {
+        display: none;
+    }
 }

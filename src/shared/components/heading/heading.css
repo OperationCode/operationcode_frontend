@@ -10,13 +10,13 @@
   flex-grow: 1;
   height: 3px;
   content: '\a0';
-  background-color: rgb(65, 164, 192);
+  background-color: rgba(0, 0, 0, 0.91);
   align-self: center;
   margin: 0 10px 5px 10px;
 }
 
 .dark {
-  color: rgb(74,74,74);
+  color: rgba(0, 0, 0, 0.91);
 }
 
 .white {

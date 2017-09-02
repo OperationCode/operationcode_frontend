@@ -20,7 +20,7 @@ export default class IndexTable extends Component {
 
   state = {
     loggedIn: true,
-    data: []
+    data: [{}]
   };
 
   componentDidMount() {
@@ -56,7 +56,7 @@ export default class IndexTable extends Component {
           style={{ margin: '4rem auto', lineHeight: 0 }}
         />
         <ReactTable
-          data={this.state.data}
+          data={this.data}
           columns={this.props.columns}
           getTdProps={this.handleRowClick}
           minWidth={1000}

@@ -9,6 +9,62 @@
   margin: 1rem;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  background-color: rgba(1, 7, 10, 0.96);
+  padding: 0.3rem 0.3rem;
+  z-index: 998;
+  border-bottom: 1px solid rgb(65, 164, 192);
+  width: 100%;
+  z-index: 998;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  margin-left: 40px;
+}
+
+.logo img {
+  height: 50px;
+  align-self: left;
+}
+
+.transparent {
+  transition-delay: 0.2s;
+  background-color: rgba(0, 0, 0, 0.52);
+  position: relative;
+  transition: opacity 0.5s ease-in-out, top;
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  width: stretch;
+}
+
+.burger img {
+  width: 1em;
+  margin: 0;
+  background-color: #fafafa;
+  /*padding: 10px;*/
+  border-radius: 5px;
+  align-self: left;
+  opacity: 0.5;
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0.2s;
+  box-shadow: 0 2px 5px 0 grey;
+ }
+
+ @media screen and (max-width: 779px) {
+  .burger {
+    display: block;
+    position: absolute;
+    right: 5%;
+    top: 20px;
+  }
+}
+
+
 @media screen and (max-width: 1000px) {
   .topNav {
     margin-right: 40px;

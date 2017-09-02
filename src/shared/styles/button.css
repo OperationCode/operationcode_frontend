@@ -28,7 +28,8 @@
 }
 
 .grey {
-  background-color: #ABABAB;
+  background-color: rgba(1, 7, 10, 0.96);
+  border-bottom: 1px solid rgb(65, 164, 192);;
   border-color: #999;
   color: #fff;
 }

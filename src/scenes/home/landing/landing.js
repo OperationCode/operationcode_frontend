@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Reveal from 'react-reveal';
+import 'animate.css/animate.css';
 import LinkButton from 'shared/components/linkButton/linkButton';
 import Donate from 'shared/components/donate/donate';
 import Join from 'shared/components/join/join';
@@ -13,14 +15,19 @@ import styles from './landing.css';
 class Landing extends Component {
   render() {
     return (
-      <div className={styles.landing}>
-        <div className={styles.pageHeading}>
+      <div>
+        <Reveal className={styles.landing} effect="animated fadeInLeft" />
+        <Reveal className={styles.pageHeading} effect="animated zoomIn">
           <h1>The largest community dedicated to helping military veterans and
             families launch software development careers.</h1>
           <LinkButton text="Join" theme="red" link="/signup" />
-        </div>
-        <GalaBanner />
-        <WhatWeDo />
+        </Reveal>
+        <Reveal effect="animated fadeInLeft">
+          <GalaBanner />
+        </Reveal>
+        <Reveal effect="animated fadeInRight">
+          <WhatWeDo />
+        </Reveal>
         <Membership />
         <MoreInformation />
         <Partners />

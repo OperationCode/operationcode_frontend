@@ -24,9 +24,9 @@ const Section = (props) => {
   return (
     <div name={id} className={classes}>
       {title && <Heading text={title} id={id} headingLines={headingLines} theme={headingTheme} />}
-      <div className={styles.content}>
+      <span className={styles.content}>
         {children}
-      </div>
+      </span>
     </div>
   );
 };
@@ -41,16 +41,16 @@ Section.propTypes = {
   className: PropTypes.string,
   theme: PropTypes.string,
   headingLines: PropTypes.bool,
-  headingTheme: PropTypes.string
+  headingTheme: PropTypes.string,
 };
 
 Section.defaultProps = {
   id: null,
   title: null,
   className: null,
-  theme: 'gray',
+  theme: 'grey',
   headingLines: true,
-  headingTheme: 'dark'
+  headingTheme: 'dark',
 };
 
 export default Section;

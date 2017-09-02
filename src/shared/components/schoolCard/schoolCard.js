@@ -13,7 +13,7 @@ class SchoolCard extends Component {
         </div>
 
         <div className={styles.schoolText}>
-          <p>
+          <span>
             <span className={styles.schoolName}>
               <a href={this.props.link} target="_blank" rel="noopener noreferrer">
                 {this.props.schoolName}
@@ -26,15 +26,15 @@ class SchoolCard extends Component {
               {this.props.schoolState}{this.props.schoolState ? <br /> : null}
               <br />
             </span>
-          </p>
+          </span>
 
-          <p className={styles.schoolInfo}>
+          <span className={styles.schoolInfo}>
             GI Bill Accepted: <b>{this.props.GI}</b>
             <br />
             Commitment: <b>{this.props.fullTime}</b>
             <br />
             Hardware Included: <b>{this.props.hardware}</b>
-          </p>
+          </span>
         </div>
       </div>
     );
