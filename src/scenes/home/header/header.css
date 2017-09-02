@@ -1,9 +1,10 @@
 .header {
   display: flex;
   align-items: center;
-  height: fit-content;
+  height: auto;
+  width: 100%;
   background-color: rgb(117,129,143);
-  padding: 0.5rem, .5rem;
+  padding: 1rem, 1rem;
   position: fixed;
   z-index: 998;
 }
@@ -11,12 +12,14 @@
 .logo {
   display: flex;
   align-items: center;
+  padding: 1rem, 1rem;
   height: 60px;
-  margin-left: 40px;
+  margin: 4rem;
 }
 
 .logo img {
   height: 50px;
+  padding: 1rem, 1rem;
   align-self: left;
 }
 
@@ -26,15 +29,14 @@
   transition: opacity 0.5s ease-in-out, top;
   transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0.2s;
-  transition: -webkit-box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   width: stretch;
 }
 
 .burger img {
   width: 1em;
-  margin: 0;
+  margin: 1rem, 1rem;
   background-color: #fafafa;
-  /*padding: 10px;*/
+  padding: 10px;
   border-radius: 5px;
   align-self: left;
   opacity: 0.5;
