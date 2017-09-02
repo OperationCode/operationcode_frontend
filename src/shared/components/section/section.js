@@ -22,12 +22,12 @@ const Section = (props) => {
   });
 
   return (
-    <div name={id} className={classes}>
+    <navbarCustom name={id} className={classes}>
       {title && <Heading text={title} id={id} headingLines={headingLines} theme={headingTheme} />}
       <div className={styles.content}>
         {children}
       </div>
-    </div>
+    </navbarCustom>
   );
 };
 

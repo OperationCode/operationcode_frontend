@@ -12,14 +12,16 @@ class Header extends Component {
   constructor() {
     super();
     this.state = {
-      isSideNavVisible: false
+      isSideNavVisible: false,
     };
     this.handleToggleDrawer = this.handleToggleDrawer.bind(this);
+    this.navbarCustom = this.navbarCustom.bind(this);
   }
 
   handleToggleDrawer(e) {
     e.preventDefault();
     this.setState({ isSideNavVisible: !this.state.isSideNavVisible });
+    this.setState({ navbarCustom: this.state.navbarCustom });
   }
 
   renderNavContents(signedIn, mentor, onClick, navbarCustom) {
