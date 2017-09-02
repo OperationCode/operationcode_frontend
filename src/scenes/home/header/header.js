@@ -25,7 +25,7 @@ class Header extends Component {
   renderNavContents(signedIn, mentor, onClick) {
     return (
       <span>
-        <NavItem to="/about" text="About" onClick={onClick} />
+        <NavItem to="/about" text="About" onClick={this.bind} />
         <NavItem to="/code_schools" text="Code Schools" onClick={onClick} />
         <NavItem to="https://donorbox.org/operationcode" text="Donate" onClick={onClick} isExternal />
         {signedIn && <NavItem to="/mentor-request" text="Request Help" onClick={onClick} />}

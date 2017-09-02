@@ -9,9 +9,9 @@ class NavItem extends PureComponent {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
+  handleClick(e) {
     if (this.props.onClick) {
-      this.props.onClick();
+      this.props.onClick(e);
     }
   }
 
