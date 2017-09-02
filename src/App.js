@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Route, Router } from 'react-router';
 import ReactGA from 'react-ga';
 import createHistory from 'history/createBrowserHistory';
-import Scene from './scenes/home/home';
+import Home from './scenes/home/home';
 
 class App extends Component {
   constructor(props) {
@@ -22,8 +22,8 @@ class App extends Component {
 
   render() {
     return (
-      <Router navBar = {MainNavBar} history={this.history} >
-        <Scene key="home" component={Home} title ="Operation Code" initial={true} />
+      <Router history={this.history} >
+        <Route component={Home} />
       </Router>
     );
   }

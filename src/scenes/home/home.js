@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import * as CookieHelpers from 'shared/utils/cookieHelper';
 import Login from 'shared/components/login/login';
-import NavigationBar from 'shared/components/navBar/navBar';
+// import AppNavigation from 'shared/components/Navigation/AppNavigation';
 import IdmeVerify from 'shared/components/idme/idmeverify/idmeverify';
 import AuthenticatedRoute from 'shared/components/authenticatedRoute/authenticatedRoute';
 import familyImage from 'images/Family-2.jpg';
@@ -22,7 +22,7 @@ import FAQ from './faq/faq';
 import Contact from './contact/contact';
 import History from './history/history';
 import FinancialStatements from './about/financialStatements/financialStatements';
-import Header from './header/header';
+// import Header from './header/header';
 import Landing from './landing/landing';
 import Footer from './footer/footer';
 import FourOhFour from './404/fourOhFour';
@@ -103,7 +103,7 @@ class Home extends Component {
         className={classes}
         style={(this.state.bgImage) ? { backgroundImage: `url(${this.state.bgImageUrl})` } : {}}
       >
-        <Header transparent={this.state.bgImage} logOut={this.logOut} signedIn={signedIn} mentor={mentor} />
+        {/* <AppNavigation transparent={this.state.bgImage} logOut={this.logOut} signedIn={signedIn} mentor={mentor} /> */}
         <div className={styles.main} >
           <Switch>
             <Route
