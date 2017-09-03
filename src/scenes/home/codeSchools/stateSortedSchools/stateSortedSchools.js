@@ -1,41 +1,35 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Section from 'shared/components/section/section';
+import Select from 'react-select';
 import SchoolCard from 'shared/components/schoolCard/schoolCard';
-import FormInput from 'shared/components/form/formInput/formInput';
 import styles from './stateSortedSchools.css';
-import stateCodes from '../stateCodes.json';
+import states from './states';
 
 class StateSortedSchools extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      query: null,
       schoolsByState: null
     };
   }
 
-  onSearchChange = (value) => {
-    if (value.length > 1) {
+  handleSelectChange = (option) => {
+    if (option) {
       // Prevent query with just one character in search field
-      this.setState({ query: value });
-      this.setState({ schoolsByState: this.searchState(value) });
+      this.setState({ schoolsByState: this.searchState(option.value) });
     } else {
       // Clear results when search field is 1 char or blank
-      this.setState({ query: null });
       this.setState({ schoolsByState: null });
     }
   }
 
-  searchState = (string) => {
-    const userInput = string.replace(/\w\S*/g, txt => txt.toUpperCase());
+  searchState = (state) => {
     const matchingSchools = [];
 
-    // Return true if thisInput matches thisCampus's state code or name (ex: "CA or California")
-    function matchesState(thisInput, thisCampus) {
+    function matchesState(campus) {
       try {
-        const stateName = stateCodes[thisCampus.state].toUpperCase();
-        return thisCampus.state.includes(thisInput) || stateName.includes(thisInput);
+        return campus.state === state;
       } catch (e) {
         if (e instanceof TypeError) {
           /* eslint-disable no-console */
@@ -49,7 +43,7 @@ class StateSortedSchools extends Component {
     }
 
     this.props.schools.forEach((school) => {
-      school.locations.filter(location => matchesState(userInput, location)).forEach((campus) => {
+      school.locations.filter(location => matchesState(location)).forEach((campus) => {
         matchingSchools.push({
           name: school.name,
           url: school.url,
@@ -64,6 +58,7 @@ class StateSortedSchools extends Component {
         });
       });
     });
+
 
     return matchingSchools;
   };
@@ -96,11 +91,14 @@ class StateSortedSchools extends Component {
         headingLines={false}
         margin
       >
-        <FormInput
+
+        <Select
+          className={styles.select}
           placeholder="Start typing a state..."
-          onChange={this.onSearchChange}
-          id="search"
+          options={states}
+          onChange={this.handleSelectChange}
         />
+
         <div className={styles.stateSchools}>
           {stateSchools}
         </div>
