@@ -50,10 +50,10 @@ export function fetchRequest(url) {
   });
 }
 export function fetchRequest() {
-  return async dispatch => {
+  return async dispatch => ({
     dispatch({
       type: 'FETCH_REQUEST',
-      config.backendUrl.request
+      url: `/${config.backendUrl}/${request}`
     });
     try {
       const response = await axios.get(`${config.backendUrl}`, response => {
@@ -63,18 +63,17 @@ export function fetchRequest() {
       data = response.data;
       dispatch({
         type: 'FETCH_SUCCESS',
-        data
+        data: data.response.formBody();
       } catch (error) => {
       dispatch({
         type: 'FETCH_ERROR',
         error
       });
     })
-  };
-}
-
+  });
+})
 const retryTimes = config.get('timeouts');
-
+}
 const fetchData = options => new Promise((resolve, reject) => {
   request(`${config.backendUrl}`.options, (err, response, body) => {
     if (err) {
@@ -93,7 +92,6 @@ const fetchData = options => new Promise((resolve, reject) => {
     reject(err);
   });
 });
-
 const fetch = async (options, timeout = retryTimes) => {
   options.json = true;
   let err = null;

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import config from 'config/environment';
 import Cookies from 'universal-cookie';
-import * from './fetch';
+import './fetch';
 
 export const setAuthorizationHeader = () => {
   const cookies = new Cookies();
