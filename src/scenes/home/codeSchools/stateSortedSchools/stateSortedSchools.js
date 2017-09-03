@@ -10,7 +10,8 @@ class StateSortedSchools extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      schoolsByState: null
+      schoolsByState: null,
+      selectedState: null
     };
   }
 
@@ -18,9 +19,11 @@ class StateSortedSchools extends Component {
     if (option) {
       // Prevent query with just one character in search field
       this.setState({ schoolsByState: this.searchState(option.value) });
+      this.setState({ selectedState: option });
     } else {
       // Clear results when search field is 1 char or blank
       this.setState({ schoolsByState: null });
+      this.setState({ selectedState: null });
     }
   }
 
@@ -96,6 +99,7 @@ class StateSortedSchools extends Component {
           className={styles.select}
           placeholder="Start typing a state..."
           options={states}
+          value={this.state.selectedState}
           onChange={this.handleSelectChange}
         />
 
