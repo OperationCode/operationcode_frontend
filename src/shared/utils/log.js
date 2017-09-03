@@ -1,10 +1,8 @@
 import debug from 'debug';
-import config from 'config';
+import config from 'config/environment';
 
 const appName = config.get('appName');
-/**
- * wrap three log function based on 'debug' package.
- */
+
 export default {
   error: debug(`${appName}:error`),
   debug: debug(`${appName}:debug`),
