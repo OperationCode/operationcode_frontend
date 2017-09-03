@@ -13,7 +13,6 @@ class Interests extends Component {
       this.props.onLoad();
     }
   }
-
   render() {
     const languages = LANGUAGES
       .map(language =>
@@ -49,6 +48,13 @@ class Interests extends Component {
         </label>
         <div className={styles.info__tags}>
           {languages}
+        </div>
+        <div className={styles.info__tagsTitle}>
+          <input
+            type="text"
+            placeholder={'Your language here'}
+            onChange={e => this.props.update(e)}
+          />
         </div>
         <label htmlFor="disciplines">
           <span className={styles.info__tagsTitle}>
