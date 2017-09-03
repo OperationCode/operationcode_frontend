@@ -1,4 +1,4 @@
-import config from 'config/environment';
+import config from 'config';
 
 const app = config.get('app');
 const validateApps = Object.keys(app);

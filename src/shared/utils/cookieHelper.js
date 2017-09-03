@@ -1,5 +1,6 @@
 import Cookies from 'universal-cookie';
 import jwt_decode from 'jwt-decode'; // eslint-disable-line camelcase
+import * from './fetch';
 
 const cookieDomain = () => {
   if (process.env.NODE_ENV === 'development') {

@@ -189,7 +189,7 @@ export default class Parse extends Backend {
   async updateProfile(userId, data) {
     return await this._fetch({
       method: 'PUT',
-      url: `${config.backendUrl}'/users/' + userId`,
+      url: `'/${config.backendUrl}'/users/' + userId'`,
       body: data
     })
       .then(res => {
@@ -217,7 +217,7 @@ export default class Parse extends Backend {
     opts = _.extend(
       {
         method: 'GET',
-        url: `${config.backendUrl}`,
+        url: `'/${config.backendUrl}/${request.opts}'`,
         body: setAuthorizationHeader(),
         callback: getRequests()
       },

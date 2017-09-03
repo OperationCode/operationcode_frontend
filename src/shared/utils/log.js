@@ -1,5 +1,5 @@
 import debug from 'debug';
-import config from 'config/environment';
+import config from 'config';
 
 const appName = config.get('appName');
 
