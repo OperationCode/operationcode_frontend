@@ -1,3 +1,5 @@
 [submodule "backend"]
     ignore = all
 
+[submodule "aurelia"]
+    ignore = all
