@@ -27,8 +27,10 @@ class FormInput extends Component {
       return this.props.validateFunc(text);
     } else if (text.length > 0 && this.props.validationRegex) {
       return this.props.validationRegex.test(text);
+    } else if (text.length > 0) {
+      return true;
     }
-    return true;
+    return false;
   }
 
   revalidate() {
@@ -36,9 +38,9 @@ class FormInput extends Component {
     this.setState({ isValid: valid });
   }
 
-  componentWillReceiveProps(nextProps){
-    this.revalidate();
-  }
+  // componentWillReceiveProps(nextProps){
+  //   this.revalidate();
+  // }
 
   render() {
     return (

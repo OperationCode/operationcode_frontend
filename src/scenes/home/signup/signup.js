@@ -18,7 +18,7 @@ class SignUp extends Component {
     super(props);
     this.state = {
       email: '',
-      emailValid: true,
+      emailValid: false,
       error: false,
       isValid: true,
       isLoading: false,
@@ -97,6 +97,7 @@ class SignUp extends Component {
       });
     } else {
       this.setState({ error: 'Missing required field(s)', isLoading: false });
+      this.emailRef.inputRef.revalidate();
     }
   }
 
@@ -116,7 +117,11 @@ class SignUp extends Component {
             Once you complete the form below you&#8217;ll be invited
             to join our Slack team.  Make sure you stop in and say hi!
           </span>
-          <FormEmail id="email" placeholder="Email" onChange={this.onEmailChange} />
+          <FormEmail
+            id="email" placeholder="Email"
+            onChange={this.onEmailChange}
+            ref={(child) => { this.emailRef = child; }}
+          />
           <FormInput id="firstName" placeholder="First Name" onChange={this.onFirstNameChange} />
           <FormInput id="lastName" placeholder="Last Name" onChange={this.onLastNameChange} />
           <FormZipCode id="zip" placeholder="Zip Code" onChange={this.onZipChange} />
