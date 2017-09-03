@@ -1,6 +1,6 @@
 import CONFIG from './config/environment';
 import _ from 'underscore';
-import Backend from './../../../backend';
+import Backend from './backend';
 
 export default class Parse extends Backend {
   /**

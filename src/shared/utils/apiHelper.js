@@ -9,7 +9,7 @@ export const setAuthorizationHeader = () => {
   };
 };
 
-function makeGenericGet(endpoint) {
+export function makeGenericGet(endpoint) {
   const authHeader = setAuthorizationHeader();
   return axios.get(`${config.backendUrl}/${endpoint}`, {
     headers: authHeader

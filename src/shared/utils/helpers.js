@@ -1,6 +1,7 @@
+export class Helpers {
 const SPLIT_NUM = 20;
 const checkObject = obj =>
-  Object.prototype.toString.call(obj) === "[object Object]";
+  Object.prototype.toString.call(obj) === '[object Object]';
 const checkArray = array => Object.prototype.toString.call(array) === '[object Array]';
 
 /**
@@ -37,7 +38,7 @@ export const flatArray = arraies => {
 };
 
 export const flattenObject = object => {
-  let result = "";
+  let result = '';
   Object.keys(object).forEach(key => {
     const item = object[key];
     const value = checkObject(item)
@@ -45,5 +46,6 @@ export const flattenObject = object => {
       : `${key}=${item}`;
     result += `${value}&`;
   });
-  return result.replace(/&$/, "");
+  return result.replace(/&$/, '');
 };
+}

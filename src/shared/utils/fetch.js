@@ -2,61 +2,75 @@ import request from 'request';
 import config from 'config/environment';
 import axios from 'axios';
 import Cookies from 'universal-cookie';
+import * from './apiHelper';
+import React, { Component } from 'react';
 
-export const setAuthorizationHeader = () => {
-  const cookies = new Cookies();
-  return {
-    Authorization: `bearer ${cookies.get('token')}`
-  };
-  const opts = axios.method(`${config.backendUrl}/${reqOpts}`);
-};
+const store = (id) => ({ inc, dec, evolve });
+const decCount = evolve({ count: dec });
+const incCount = evolve({ count: inc });
 
-export function incrementCounter() {
-  return {
-    type: 'INCREMENT'
-  };
-}
+export function setState {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: this.id.setState;
+      })
+    };
+    this.increase = this.increase.bind(this);
+    this.decrease = this.decrease.bind(this);
+  }
 
-export function decrementCounter() {
-  return {
-    type: 'DECREMENT'
-  };
-}
+  increase() {
+    this.setState(incCount);
+  }
 
-export function request(url) {
+  decrease() {
+    this.setState(decCount);
+  }
+
+  render() {
+    return (
+			<div>
+        <button onClick={this.increase}>+</button>
+        <div>
+          {this.state.count}
+        </div>
+        <button onClick={this.decrease}>-</button>
+      </div>
+    );
+  }
+
+export function fetchRequest(url) {
   return new Promise(resolve => {
-    // This is an example of an http request, for example to fetch
-    // user data from an API.
-    // This module is being mocked in __mocks__/request.js
-    axios.method({path: url}, response => {
+    makeGenericGet({path: url}, response => {
       let data = '';
       response.on('data', _data => data += _data);
       response.on('end', () => resolve(data));
     });
   });
 }
-// export function fetchRequest() {
-//   return async dispatch => {
-//     dispatch({
-//       type: 'FETCH_REQUEST'
-//     });
-//     try {
-//       const response = await axios.get({ path: url }, response => {
-//         let data = '';
-//         response.on('data', _data => data += _data);
-//         response.on('end', () => resolve(data));
-//       data = response.data;
-//       dispatch({
-//         type: 'FETCH_SUCCESS',
-//         data),
-//       } catch (error) => {
-//       dispatch({
-//         type: 'FETCH_ERROR',
-//         error)
-//       });
-//     })
-//   };
-// }
+export function fetchRequest() {
+  return async dispatch => {
+    dispatch({
+      type: 'FETCH_REQUEST'
+    });
+    try {
+      const response = await axios.get({ path: url }, response => {
+        let data = '';
+        response.on('data', _data => data += _data);
+        response.on('end', () => resolve(data));
+      data = response.data;
+      dispatch({
+        type: 'FETCH_SUCCESS',
+        data
+      } catch (error) => {
+      dispatch({
+        type: 'FETCH_ERROR',
+        error
+      });
+    })
+  };
+}
 
 const retryTimes = config.get('timeouts');
 
@@ -96,9 +110,10 @@ const fetch = async (options, timeout = retryTimes) => {
     throw new Error(err);
   }
   return null;
-};
+  }
+}
 
-export default {
+export default fetch {
   get: (options, timeout) => {
     options.method = 'GET';
     return fetch(options, timeout);
