@@ -16,7 +16,7 @@ export default class Parse extends Backend {
       : token.sessionToken.sessionToken;
 
     this._applicationId = CONFIG.PARSE.appId;
-    this.API_BASE_URL = CONFIG.backend.parseLocal
+    this.config.backendUrl = CONFIG.backend.parseLocal
       ? CONFIG.PARSE.local.url
       : CONFIG.PARSE.remote.url;
   }
@@ -163,7 +163,7 @@ export default class Parse extends Backend {
    * if error, {code: xxx, error: 'message'}
    */
   async getProfile() {
-    return await this._fetch({ method: 'GET', url: `'/${API_BASE_URL}/users/userId'` })
+    return await this._fetch({ method: 'GET', url: `'/${config.backendUrl}/users/userId'` })
       .then(response => {
         return response.json().then(function(res) {
           if (response.status === 200 || response.status === 201) {
@@ -189,7 +189,7 @@ export default class Parse extends Backend {
   async updateProfile(userId, data) {
     return await this._fetch({
       method: 'PUT',
-      url: `${API_BASE_URL}'/users/' + userId`,
+      url: `${config.backendUrl}'/users/' + userId`,
       body: data
     })
       .then(res => {
@@ -217,7 +217,7 @@ export default class Parse extends Backend {
     opts = _.extend(
       {
         method: 'GET',
-        url: `${API_BASE_URL}`,
+        url: `${config.backendUrl}`,
         body: setAuthorizationHeader(),
         callback: getRequests()
       },

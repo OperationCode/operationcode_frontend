@@ -42,7 +42,7 @@ export function setState {
 
 export function fetchRequest(url) {
   return new Promise(resolve => {
-    makeGenericGet({path: url}, response => {
+    makeGenericGet(`${config.backendUrl}`, response => {
       let data = '';
       response.on('data', _data => data += _data);
       response.on('end', () => resolve(data));
@@ -52,10 +52,11 @@ export function fetchRequest(url) {
 export function fetchRequest() {
   return async dispatch => {
     dispatch({
-      type: 'FETCH_REQUEST'
+      type: 'FETCH_REQUEST',
+      config.backendUrl.request
     });
     try {
-      const response = await axios.get({ path: url }, response => {
+      const response = await axios.get(`${config.backendUrl}`, response => {
         let data = '';
         response.on('data', _data => data += _data);
         response.on('end', () => resolve(data));
@@ -75,7 +76,7 @@ export function fetchRequest() {
 const retryTimes = config.get('timeouts');
 
 const fetchData = options => new Promise((resolve, reject) => {
-  request(options, (err, response, body) => {
+  request(`${config.backendUrl}`.options, (err, response, body) => {
     if (err) {
       reject(err);
     }
@@ -88,7 +89,7 @@ const fetchData = options => new Promise((resolve, reject) => {
       } finally {
         resolve(result);
       }
-    }
+    })
     reject(err);
   });
 });
