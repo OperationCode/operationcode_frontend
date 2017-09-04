@@ -4,7 +4,7 @@ import Section from 'shared/components/section/section';
 import Select from 'react-select';
 import SchoolCard from 'shared/components/schoolCard/schoolCard';
 import styles from './stateSortedSchools.css';
-import stateChoices from './states';
+import stateOptions from './stateOptions';
 
 class StateSortedSchools extends Component {
   constructor(props) {
@@ -107,7 +107,7 @@ class StateSortedSchools extends Component {
         <Select
           className={styles.select}
           placeholder="Start typing a state..."
-          options={stateChoices}
+          options={stateOptions}
           value={this.state.selectedStates}
           multi
           onChange={this.handleSelectChange}

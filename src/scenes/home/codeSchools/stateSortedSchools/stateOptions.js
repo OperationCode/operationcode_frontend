@@ -1,5 +1,5 @@
 export default [
-  { value: 'AL', label: 'Alabama', disabled: true },
+  { value: 'AL', label: 'Alabama' },
   { value: 'AK', label: 'Alaska' },
   { value: 'AS', label: 'American Samoa' },
   { value: 'AZ', label: 'Arizona' },
