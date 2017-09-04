@@ -33,7 +33,18 @@ class StateSortedSchools extends Component {
 
     const campuses = this.props.schools.reduce((acc, school) => {
       school.locations.forEach((location) => {
-        acc.push(location);
+        acc.push({
+          name: school.name,
+          url: school.url,
+          address: location.address1,
+          city: location.city,
+          state: location.state,
+          zip: location.zip,
+          logo: school.logo,
+          va_accepted: location.va_accepted,
+          full_time: school.full_time,
+          hardware_included: school.hardware_included
+        });
       });
       return acc;
     }, []);
@@ -41,18 +52,7 @@ class StateSortedSchools extends Component {
     const matchingCampuses = campuses.reduce((acc, campus) => {
       const matchingState = selectedStates.some(state => matchesCampus(state, campus));
       if (matchingState) {
-        acc.push({
-          name: campus.name,
-          url: campus.url,
-          address: campus.address1,
-          city: campus.city,
-          state: campus.state,
-          zip: campus.zip,
-          logo: campus.logo,
-          va_accepted: campus.va_accepted,
-          full_time: campus.full_time,
-          hardware_included: campus.hardware_included
-        });
+        acc.push(campus);
       }
       return acc;
     }, []);
