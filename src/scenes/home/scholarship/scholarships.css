@@ -1,3 +1,7 @@
+.container {
+  width: 100%;
+}
+
 .link {
   text-decoration: none;
   size: 14px;
