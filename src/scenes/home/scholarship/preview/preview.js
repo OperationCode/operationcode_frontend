@@ -12,7 +12,7 @@ class Preview extends Component {
   render() {
     const scholarship = this.props.scholarship;
     return (
-      <div className={styles.cmon_man} >
+      <div className={styles.preview} >
         <h6><Link to={`scholarships/${scholarship.id}/apply`}>{scholarship.name}</Link></h6>
         <p> {this.snip(scholarship.description)} </p>
       </div>
