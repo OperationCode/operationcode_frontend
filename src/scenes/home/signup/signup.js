@@ -118,7 +118,7 @@ class SignUp extends Component {
             to join our Slack team.  Make sure you stop in and say hi!
           </span>
           <FormEmail
-            id="email" placeholder="Email"
+            id="email" placeholder="Email (Required)"
             onChange={this.onEmailChange}
             ref={(child) => { this.emailRef = child; }}
           />
