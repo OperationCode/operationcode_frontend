@@ -33,8 +33,10 @@ class Profile extends Component {
         </Section>
 
         <Section title="Veteran Status" theme="white">
-          {this.props.verified && <h2>Your profile is verified with id.me</h2>}
-          {!this.props.verified && <div className={styles.idmeButton}><Idme /></div>}
+          <div>
+            {this.props.verified && <h2>Your profile is verified with id.me</h2>}
+            {!this.props.verified && <div className={styles.idmeButton}><Idme /></div>}
+          </div>
         </Section>
       </div>
     );

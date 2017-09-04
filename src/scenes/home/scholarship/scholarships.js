@@ -27,8 +27,10 @@ class Scholarships extends Component {
     }
     return (
       <Section>
-        <h3>Open Scholarships</h3>
-        {schlrshps}
+        <div>
+          <h3>Open Scholarships</h3>
+          {schlrshps}
+        </div>
       </Section>
     );
   }
