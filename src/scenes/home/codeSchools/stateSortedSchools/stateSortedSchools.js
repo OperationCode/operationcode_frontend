@@ -4,35 +4,21 @@ import Section from 'shared/components/section/section';
 import Select from 'react-select';
 import SchoolCard from 'shared/components/schoolCard/schoolCard';
 import styles from './stateSortedSchools.css';
-import states from './states';
+import stateChoices from './states';
 
 class StateSortedSchools extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      schoolsByState: null,
-      selectedState: null
+      campusesByState: null,
+      selectedStates: null
     };
   }
 
-  handleSelectChange = (option) => {
-    if (option) {
-      // Prevent query with just one character in search field
-      this.setState({ schoolsByState: this.searchState(option.value) });
-      this.setState({ selectedState: option });
-    } else {
-      // Clear results when search field is 1 char or blank
-      this.setState({ schoolsByState: null });
-      this.setState({ selectedState: null });
-    }
-  }
-
-  searchState = (state) => {
-    const matchingSchools = [];
-
-    function matchesState(campus) {
+  getCampusesByState = (selectedStates) => {
+    function matchesCampus(state, campus) {
       try {
-        return campus.state === state;
+        return state.value === campus.state;
       } catch (e) {
         if (e instanceof TypeError) {
           /* eslint-disable no-console */
@@ -45,43 +31,63 @@ class StateSortedSchools extends Component {
       }
     }
 
-    this.props.schools.forEach((school) => {
-      school.locations.filter(location => matchesState(location)).forEach((campus) => {
-        matchingSchools.push({
-          name: school.name,
-          url: school.url,
+    const campuses = this.props.schools.reduce((acc, school) => {
+      school.locations.forEach((location) => {
+        acc.push(location);
+      });
+      return acc;
+    }, []);
+
+    const matchingCampuses = campuses.reduce((acc, campus) => {
+      const matchingState = selectedStates.some(state => matchesCampus(state, campus));
+      if (matchingState) {
+        acc.push({
+          name: campus.name,
+          url: campus.url,
           address: campus.address1,
           city: campus.city,
           state: campus.state,
           zip: campus.zip,
-          logo: school.logo,
+          logo: campus.logo,
           va_accepted: campus.va_accepted,
-          full_time: school.full_time,
-          hardware_included: school.hardware_included
+          full_time: campus.full_time,
+          hardware_included: campus.hardware_included
         });
-      });
-    });
+      }
+      return acc;
+    }, []);
 
-
-    return matchingSchools;
+    return matchingCampuses;
   };
 
+  handleSelectChange = (selectedStates) => {
+    if (selectedStates) {
+      // Prevent query with just one character in search field
+      this.setState({ campusesByState: this.getCampusesByState(selectedStates) });
+      this.setState({ selectedStates });
+    } else {
+      // Clear results when search field is 1 char or blank
+      this.setState({ campusesByState: null });
+      this.setState({ selectedStates: null });
+    }
+  }
+
   render() {
-    const stateSchools = !this.state.schoolsByState ? null : this.state.schoolsByState
-      .map(school =>
+    const stateSchools = !this.state.campusesByState ? null : this.state.campusesByState
+      .map(campus =>
         (
           <SchoolCard
-            key={`${Math.random()} + ${school.name} + ${school.address}`}
-            alt={school.name}
-            schoolName={school.name}
-            link={school.url}
-            schoolAddress={school.address}
-            schoolCity={school.city}
-            schoolState={school.state}
-            logo={school.logo}
-            GI={school.va_accepted ? 'Yes' : 'No'}
-            fullTime={school.full_time ? 'Full-Time' : 'Flexible'}
-            hardware={school.hardware_included ? 'Yes' : 'No'}
+            key={`${Math.random()} + ${campus.name} + ${campus.address}`}
+            alt={campus.name}
+            schoolName={campus.name}
+            link={campus.url}
+            schoolAddress={campus.address}
+            schoolCity={campus.city}
+            schoolState={campus.state}
+            logo={campus.logo}
+            GI={campus.va_accepted ? 'Yes' : 'No'}
+            fullTime={campus.full_time ? 'Full-Time' : 'Flexible'}
+            hardware={campus.hardware_included ? 'Yes' : 'No'}
           />
         )
       );
@@ -98,8 +104,9 @@ class StateSortedSchools extends Component {
         <Select
           className={styles.select}
           placeholder="Start typing a state..."
-          options={states}
-          value={this.state.selectedState}
+          options={stateChoices}
+          value={this.state.selectedStates}
+          multi
           onChange={this.handleSelectChange}
         />
 
