@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import dateFormat from 'dateformat';
 import PropTypes from 'prop-types';
 import { getScholarship, postBackend } from 'shared/utils/apiHelper';
 import { Redirect } from 'react-router-dom';
@@ -72,13 +73,13 @@ class ScholarshipApplication extends Component {
           <h3> {this.state.scholarship.name} </h3>
           <p> {this.state.scholarship.description} </p>
           <p> {this.state.scholarship.location} </p>
-          <p className={styles.deadline}> Deadline: {this.state.scholarship.close_time} </p>
+          <p className={styles.deadline}>Apply by {dateFormat(this.state.scholarship.close_time, 'fullDate')} </p>
           <div className={styles.title}>Reason for Attending<span className={styles.red}>*</span></div>
           <div className={styles.small_title}>Please write about why you want to attend this conference, and what you hope to get out of it. </div>
           <FormTextArea onChange={this.onTextAreaChange} />
           <div className={styles.title}>Conditions for Acceptance<span className={styles.red}>*</span></div>
           <div className={styles.terms}> {this.state.scholarship.terms} </div>
-          <FormCheckBox onChange={this.onCheckboxChange} /><br />
+          <FormCheckBox name="scholarship_application" value="I agree" onChange={this.onCheckboxChange} /><br />
           {this.isFormValid() ? <FormButton text="Submit Application" onClick={this.handleOnClick} /> : <FormButton className={styles.grey_button} text="Submit Application" disabled />}
           {this.state.success && <Redirect to="/success" />}
           <div className={styles.red}>{this.state.error}</div>
