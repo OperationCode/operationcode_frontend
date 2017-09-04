@@ -60,13 +60,16 @@ class StateSortedSchools extends Component {
     return matchingCampuses;
   };
 
+  sortCampuses = campuses => campuses.sort((a, b) => a.state.localeCompare(b.state));
+
   handleSelectChange = (selectedStates) => {
     if (selectedStates) {
-      // Prevent query with just one character in search field
-      this.setState({ campusesByState: this.getCampusesByState(selectedStates) });
+      const campusesByState = this.getCampusesByState(selectedStates);
+      const sortedCampusesByState = this.sortCampuses(campusesByState);
+      this.setState({ campusesByState: sortedCampusesByState });
       this.setState({ selectedStates });
     } else {
-      // Clear results when search field is 1 char or blank
+      // Clear results when search field is blank
       this.setState({ campusesByState: null });
       this.setState({ selectedStates: null });
     }
