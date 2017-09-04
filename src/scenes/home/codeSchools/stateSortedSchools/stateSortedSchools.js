@@ -73,7 +73,7 @@ class StateSortedSchools extends Component {
       this.setState({ campusesByState: null });
       this.setState({ selectedStates: null });
     }
-  }
+  };
 
   render() {
     const stateSchools = !this.state.campusesByState ? null : this.state.campusesByState
@@ -109,6 +109,8 @@ class StateSortedSchools extends Component {
           placeholder="Start typing a state..."
           options={stateOptions}
           value={this.state.selectedStates}
+          autoBlur
+          autosize
           multi
           onChange={this.handleSelectChange}
         />
