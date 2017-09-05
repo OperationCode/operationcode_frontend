@@ -28,7 +28,7 @@ class Header extends Component {
         <NavItem to="/about" text="About" onClick={onClick} />
         <NavItem to="/code_schools" text="Code Schools" onClick={onClick} />
         <NavItem to="https://donorbox.org/operationcode" text="Donate" onClick={onClick} isExternal />
-        {signedIn && <NavItem to="/mentor-request" text="Request Help" onClick={onClick} />}
+        {signedIn && <NavItem to="https://op.co.de/mentor-request" text="Request Help" onClick={onClick} isExternal />}
         {signedIn && <NavItem to="/mentors" text="Mentors" onClick={onClick} />}
         {mentor && <NavItem to="/requests" text="Requests" onClick={onClick} />}
         {signedIn && <NavItem to="/squads" text="Squads" onClick={onClick} />}
