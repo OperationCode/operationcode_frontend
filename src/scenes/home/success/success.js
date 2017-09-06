@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
-import Section from 'shared/components/section/section';
 import { Link } from 'react-router-dom';
-// import styles from './success.css';
+import { FaGraduationCap } from 'react-icons/lib/fa';
+import Section from 'shared/components/section/section';
+import styles from './success.css';
 
 class Success extends Component {
   render() {
     return (
       <Section title="Success!">
-        <h2>You have submitted your Scholarship Application. We will reach out to you to schedule a time to chat.</h2>
-        <Link to="scholarships">Back to Scholarships</Link>
+        <span className={styles.successText}>Your Scholarship Application has been submitted.</span>
+        <Link to="scholarships">
+          <FaGraduationCap className={styles.successImage} size={150} />
+        </Link>
       </Section>
     );
   }

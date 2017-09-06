@@ -41,9 +41,9 @@ class ScholarshipApplication extends Component {
     });
   }
 
-  onCheckboxChange = (value) => {
+  onCheckboxChange = (event) => {
     this.setState({
-      terms_accepted: value
+      terms_accepted: event.target.checked
     });
   }
 
@@ -79,7 +79,7 @@ class ScholarshipApplication extends Component {
           <FormTextArea onChange={this.onTextAreaChange} />
           <div className={styles.title}>Conditions for Acceptance<span className={styles.red}>*</span></div>
           <div className={styles.terms}> {this.state.scholarship.terms} </div>
-          <FormCheckBox name="scholarship_application" value="I agree" onChange={this.onCheckboxChange} /><br />
+          <FormCheckBox name="scholarship_application" value="I agree" checked={this.state.terms_accepted} onChange={this.onCheckboxChange} /><br />
           {this.isFormValid() ? <FormButton text="Submit Application" onClick={this.handleOnClick} /> : <FormButton className={styles.grey_button} text="Submit Application" disabled />}
           {this.state.success && <Redirect to="/success" />}
           <div className={styles.red}>{this.state.error}</div>
