@@ -9,6 +9,7 @@ class FormEmail extends Component {
         {...this.props}
         validationRegex={/\S+@\S+\.\S+/}
         validationErrorMessage="Must be a valid email"
+        ref={(child) => { this.inputRef = child; }}
       />
     );
   }
