@@ -25,10 +25,10 @@ class SignUp extends Component {
       mentor: false,
       password: '',
       passwordConfirm: '',
-      passwordValid: true,
+      passwordValid: false,
       success: false,
       zip: '',
-      zipValid: true
+      zipValid: false
     };
   }
 
@@ -61,7 +61,7 @@ class SignUp extends Component {
   }
 
   validatePasswordConfirm = value =>
-    value === '' || value === this.state.password;
+    value === this.state.password;
 
   handleOnClick = (e) => {
     e.preventDefault();
@@ -98,6 +98,11 @@ class SignUp extends Component {
     } else {
       this.setState({ error: 'Missing required field(s)', isLoading: false });
       this.emailRef.inputRef.revalidate();
+      this.firstNameRef.revalidate();
+      this.lastNameRef.revalidate();
+      this.zipRef.inputRef.revalidate();
+      this.passwordRef.inputRef.revalidate();
+      this.passwordConfirmRef.inputRef.revalidate();
     }
   }
 
@@ -122,18 +127,39 @@ class SignUp extends Component {
             onChange={this.onEmailChange}
             ref={(child) => { this.emailRef = child; }}
           />
-          <FormInput id="firstName" placeholder="First Name" onChange={this.onFirstNameChange} />
-          <FormInput id="lastName" placeholder="Last Name" onChange={this.onLastNameChange} />
-          <FormZipCode id="zip" placeholder="Zip Code" onChange={this.onZipChange} />
-          <FormPassword
-            id="password" placeholder="Password"
-            onChange={this.onPasswordChange} validationRegex={/^(?=.*[A-Z]).{6,}$/}
-            validationErrorMessage="Must be 6 characters long and include a capitalized letter"
+          <FormInput
+            id="firstName"
+            placeholder="First Name (Required)"
+            onChange={this.onFirstNameChange}
+            ref={(child) => { this.firstNameRef = child; }}
+          />
+          <FormInput
+            id="lastName"
+            placeholder="Last Name (Required)"
+            onChange={this.onLastNameChange}
+            ref={(child) => { this.lastNameRef = child; }}
+          />
+          <FormZipCode
+            id="zip"
+            placeholder="Zip Code (Required)"
+            onChange={this.onZipChange}
+            ref={(child) => { this.zipRef = child; }}
           />
           <FormPassword
-            id="passwordConfirm" placeholder="Confirm Password"
-            onChange={this.onConfirmPasswordChange} validateFunc={this.validatePasswordConfirm}
+            id="password"
+            placeholder="Password (Required)"
+            onChange={this.onPasswordChange}
+            validationRegex={/^(?=.*[A-Z]).{6,}$/}
+            validationErrorMessage="Must be 6 characters long and include a capitalized letter"
+            ref={(child) => { this.passwordRef = child; }}
+          />
+          <FormPassword
+            id="passwordConfirm"
+            placeholder="Confirm Password (Required)"
+            onChange={this.onConfirmPasswordChange}
+            validateFunc={this.validatePasswordConfirm}
             validationErrorMessage="Passwords must match"
+            ref={(child) => { this.passwordConfirmRef = child; }}
           />
           {this.state.error ? <ul className={styles.errorList}>There was an error joining Operation Code:
             <li className={styles.errorMessage}>{this.state.error}</li>
