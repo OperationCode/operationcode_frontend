@@ -7,6 +7,8 @@
 
 .select {
   min-width: 300px;
+  width: 100%;
+  max-width: 900px;
 }
 
 /* iPhone Safari-only media query to prevent zoom effect when the select is focused */
