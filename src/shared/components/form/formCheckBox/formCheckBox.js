@@ -6,7 +6,7 @@ class FormCheckBox extends Component {
 
   render() {
     return (
-      <div style={this.props.checkbox}>
+      <div style={this.props.checkBox}>
         <input
           type="checkbox"
           name={this.props.name}
@@ -27,7 +27,7 @@ FormCheckBox.propTypes = {
   name: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func,
-  checkbox: PropTypes.shape({
+  checkBox: PropTypes.shape({
     display: PropTypes.string,
     margin: PropTypes.string
   }),
@@ -41,7 +41,7 @@ FormCheckBox.propTypes = {
 FormCheckBox.defaultProps = {
   checked: false,
   onChange: null,
-  checkbox: null,
+  checkBox: null,
   label: null
 };
 
