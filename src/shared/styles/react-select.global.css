@@ -1,0 +1,40 @@
+@import '../../../node_modules/react-select/dist/react-select.css';
+
+/* Override react-select styles below */
+
+.Select-control {
+  height: 50px;
+}
+
+.Select-input {
+  height: 50px;
+}
+
+.Select-input > input {
+  line-height: 2.3em;
+}
+
+.Select-placeholder {
+  font-size: 1em;
+  line-height: 50px;
+}
+
+.Select--multi .Select-value {
+  font-size: 1em;
+  line-height: 2.0em;
+}
+
+.Select--multi .Select-value-icon {
+  padding: 3px 5px 3px;
+}
+
+@media screen and (max-width: 480px) {
+  .Select-placeholder {
+    font-size: 1.2em;
+    line-height: 50px;
+  }
+
+  .Select--multi .Select-value {
+    line-height: 2.4em;
+  }
+}
