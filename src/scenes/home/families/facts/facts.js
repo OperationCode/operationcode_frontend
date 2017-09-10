@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Heading from 'shared/components/heading/heading';
 import styles from './facts.css';
 import family3 from '../../../../images/Family-3.jpg';
 
@@ -8,7 +9,7 @@ class Facts extends Component {
       <div className={styles.facts}>
         <div className={styles.factsList}>
           <div className={styles.factsHeading}>
-            <h5>The Facts</h5>
+            <Heading text="The Facts" />
           </div>
           <ul>
             <li className={styles.factItem}>
@@ -28,10 +29,11 @@ class Facts extends Component {
               Only 19% of military spouses have adequate full-time employment.
             </li>
           </ul>
+          <div className={styles.footnote}>
+            <span>*Source </span><strong>pointsofflight.org</strong>
+          </div>
         </div>
-        <div className={styles.factsRight}>
-          <img className={styles.factsImage} src={family3} alt="" />
-        </div>
+        <div className={styles.factsRight} style={{ backgroundImage: `url(${family3})` }}>{null}</div>
       </div>
     );
   }

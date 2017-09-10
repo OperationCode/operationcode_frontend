@@ -5,7 +5,7 @@ import styles from './quoteBanner.css';
 class QuoteBanner extends Component {
   render() {
     return (
-      <div className={styles.quoteBanner}>
+      <div className={this.isHeadline ? styles.quoteBanner : ''}>
         <span className={styles.quoteLines} />
         <h2 className={styles.quoteText}>
           &quot;{this.props.quote}&quot;

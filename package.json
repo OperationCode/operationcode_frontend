@@ -20,7 +20,7 @@
     "react-error-overlay": "^1.0.7",
     "react-ga": "^2.2.0",
     "react-icons": "^2.2.5",
-    "react-modal": "^1.7.7",
+    "react-modal": "^2.3.2",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
     "react-scroll": "^1.5.4",

@@ -1,0 +1,44 @@
+.goals {
+  width: 100%;
+}
+
+.goalsHeading h2 {
+  width: 100%;
+}
+
+.goalsContent {
+  margin: 0 auto;
+  width: 80%;
+}
+
+@media screen and (max-width: 1024px) {
+  .goalsContent {
+    width: 95%;
+  }
+}
+
+.goalsContent p,
+.goalsContent ul li {
+  font-size: 1.5rem;
+}
+
+.goalsContent ul li {
+  background-image: url('../../../../images/logos/small-blue-medal.png');
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 60px;
+  list-style: none;
+  margin: 0;
+  padding: 36px 0 36px 97px;
+}
+
+@media screen and (max-width: 1024px) {
+  .goalsContent ul {
+    padding: 0;
+  }
+
+  .goalsContent ul li {
+    background-size: 40px;
+    padding: 16px 0 16px 67px;
+  }
+}

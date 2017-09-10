@@ -1,0 +1,10 @@
+.quoteSection {
+  margin-top: 50vh;
+  position: relative;
+}
+
+@media screen and (max-width: 800px) {
+  .quoteSection {
+    margin-top: 200px;
+  }
+}
