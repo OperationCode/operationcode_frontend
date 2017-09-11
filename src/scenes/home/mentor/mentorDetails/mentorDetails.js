@@ -47,10 +47,6 @@ export default class MentorDetails extends Component {
               <h2>Slack:</h2>
               <p>{mentor.slack_name}</p>
             </div>
-            <div className={styles.modalRow}>
-              <h2>Email:</h2>
-              <p>Email: {mentor.email}</p>
-            </div>
           </div>
         </div>
       </Modal>

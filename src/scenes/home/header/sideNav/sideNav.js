@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import logo from 'images/logos/small-white-logo.png';
-import Drawer from './drawer/drawer';
+import Drawer from 'shared/components/drawer/drawer';
 import styles from './sideNav.css';
 
 class SideNav extends Component {

@@ -1,41 +1,24 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Section from 'shared/components/section/section';
+import Select from 'react-select';
 import SchoolCard from 'shared/components/schoolCard/schoolCard';
-import FormInput from 'shared/components/form/formInput/formInput';
 import styles from './stateSortedSchools.css';
-import stateCodes from '../stateCodes.json';
+import stateOptions from './stateOptions';
 
 class StateSortedSchools extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      query: null,
-      schoolsByState: null
+      campusesByState: null,
+      selectedStates: null
     };
   }
 
-  onSearchChange = (value) => {
-    if (value.length > 1) {
-      // Prevent query with just one character in search field
-      this.setState({ query: value });
-      this.setState({ schoolsByState: this.searchState(value) });
-    } else {
-      // Clear results when search field is 1 char or blank
-      this.setState({ query: null });
-      this.setState({ schoolsByState: null });
-    }
-  }
-
-  searchState = (string) => {
-    const userInput = string.replace(/\w\S*/g, txt => txt.toUpperCase());
-    const matchingSchools = [];
-
-    // Return true if thisInput matches thisCampus's state code or name (ex: "CA or California")
-    function matchesState(thisInput, thisCampus) {
+  getCampusesByState = (selectedStates) => {
+    function matchesCampus(state, campus) {
       try {
-        const stateName = stateCodes[thisCampus.state].toUpperCase();
-        return thisCampus.state.includes(thisInput) || stateName.includes(thisInput);
+        return state.value === campus.state;
       } catch (e) {
         if (e instanceof TypeError) {
           /* eslint-disable no-console */
@@ -48,42 +31,66 @@ class StateSortedSchools extends Component {
       }
     }
 
-    this.props.schools.forEach((school) => {
-      school.locations.filter(location => matchesState(userInput, location)).forEach((campus) => {
-        matchingSchools.push({
+    const campuses = this.props.schools.reduce((acc, school) => {
+      school.locations.forEach((location) => {
+        acc.push({
           name: school.name,
           url: school.url,
-          address: campus.address1,
-          city: campus.city,
-          state: campus.state,
-          zip: campus.zip,
+          address: location.address1,
+          city: location.city,
+          state: location.state,
+          zip: location.zip,
           logo: school.logo,
-          va_accepted: campus.va_accepted,
+          va_accepted: location.va_accepted,
           full_time: school.full_time,
           hardware_included: school.hardware_included
         });
       });
-    });
+      return acc;
+    }, []);
 
-    return matchingSchools;
+    const matchingCampuses = campuses.reduce((acc, campus) => {
+      const matchingState = selectedStates.some(state => matchesCampus(state, campus));
+      if (matchingState) {
+        acc.push(campus);
+      }
+      return acc;
+    }, []);
+
+    return matchingCampuses;
+  };
+
+  sortCampuses = campuses => campuses.sort((a, b) => a.state.localeCompare(b.state));
+
+  handleSelectChange = (selectedStates) => {
+    if (selectedStates) {
+      const campusesByState = this.getCampusesByState(selectedStates);
+      const sortedCampusesByState = this.sortCampuses(campusesByState);
+      this.setState({ campusesByState: sortedCampusesByState });
+      this.setState({ selectedStates });
+    } else {
+      // Clear results when search field is blank
+      this.setState({ campusesByState: null });
+      this.setState({ selectedStates: null });
+    }
   };
 
   render() {
-    const stateSchools = !this.state.schoolsByState ? null : this.state.schoolsByState
-      .map(school =>
+    const stateSchools = !this.state.campusesByState ? null : this.state.campusesByState
+      .map(campus =>
         (
           <SchoolCard
-            key={`${Math.random()} + ${school.name} + ${school.address}`}
-            alt={school.name}
-            schoolName={school.name}
-            link={school.url}
-            schoolAddress={school.address}
-            schoolCity={school.city}
-            schoolState={school.state}
-            logo={school.logo}
-            GI={school.va_accepted ? 'Yes' : 'No'}
-            fullTime={school.full_time ? 'Full-Time' : 'Flexible'}
-            hardware={school.hardware_included ? 'Yes' : 'No'}
+            key={`${Math.random()} + ${campus.name} + ${campus.address}`}
+            alt={campus.name}
+            schoolName={campus.name}
+            link={campus.url}
+            schoolAddress={campus.address}
+            schoolCity={campus.city}
+            schoolState={campus.state}
+            logo={campus.logo}
+            GI={campus.va_accepted ? 'Yes' : 'No'}
+            fullTime={campus.full_time ? 'Full-Time' : 'Flexible'}
+            hardware={campus.hardware_included ? 'Yes' : 'No'}
           />
         )
       );
@@ -96,11 +103,18 @@ class StateSortedSchools extends Component {
         headingLines={false}
         margin
       >
-        <FormInput
+
+        <Select
+          className={styles.select}
           placeholder="Start typing a state..."
-          onChange={this.onSearchChange}
-          id="search"
+          options={stateOptions}
+          value={this.state.selectedStates}
+          autoBlur
+          autosize
+          multi
+          onChange={this.handleSelectChange}
         />
+
         <div className={styles.stateSchools}>
           {stateSchools}
         </div>
