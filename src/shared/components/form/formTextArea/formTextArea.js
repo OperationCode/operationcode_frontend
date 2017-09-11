@@ -6,14 +6,14 @@ export default class FormTextArea extends Component {
   constructor() {
     super();
     this.state = {
-      text: ''
+      value: ''
     };
   }
 
   handleChange = (event) => {
-    this.setState({ text: event.target.value }, () => {
+    this.setState({ value: event.target.value }, () => {
       if (this.props.onChange) {
-        this.props.onChange(this.state.text);
+        this.props.onChange(this.state.value);
       }
     });
   }
