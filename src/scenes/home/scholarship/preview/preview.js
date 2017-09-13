@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import styles from './preview.css';
 
 class Preview extends Component {
@@ -12,10 +11,12 @@ class Preview extends Component {
   render() {
     const scholarship = this.props.scholarship;
     return (
-      <div className={styles.preview} >
-        <h6><Link to={`scholarships/${scholarship.id}/apply`}>{scholarship.name}</Link></h6>
-        <p> {this.snip(scholarship.description)} </p>
-      </div>
+      <a href={`scholarships/${scholarship.id}/apply`}>
+        <div className={styles.preview} >
+          <h6>{scholarship.name}</h6>
+          <span> {this.snip(scholarship.description)} </span>
+        </div>
+      </a>
     );
   }
 }
