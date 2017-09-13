@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Section from 'shared/components/section/section';
 
-import styles from './jobs.css';
+import './jobs.css';
 
 const zipRecruiterScript = document.createElement('script');
 
@@ -35,7 +35,6 @@ class Jobs extends Component {
       <Section title="Open Positions" theme="white">
         <div
           id="zipsearch_container"
-          className={styles.zipContainer}
         />
       </Section>
     );
