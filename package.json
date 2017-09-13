@@ -25,6 +25,7 @@
     "react-router-dom": "^4.1.1",
     "react-scroll": "^1.5.4",
     "react-scroll-up-button": "^1.5.9",
+    "react-select": "^1.0.0-rc.5",
     "react-table": "^6.0.5",
     "sinon": "^2.3.2",
     "universal-cookie": "^2.0.7"
