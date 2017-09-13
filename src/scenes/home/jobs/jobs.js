@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Section from 'shared/components/section/section';
 
-import './jobs.css';
-
 const zipRecruiterScript = document.createElement('script');
 
 zipRecruiterScript.src = 'https://www.ziprecruiter.com/jobs-widget/pro/v2/63bjfya4arc58ywaxtvi8jkchvzymeep';
