@@ -1,0 +1,45 @@
+.zs_search_box {
+  height:33px;
+  border-color:#bdc1c3;
+}
+
+#zs_submit {
+  height:33px;
+  background-color:#249cbc;
+}
+
+#zs_submit:hover {
+  background-color:#1b758d;
+}
+
+select#zs_radius {
+  border-color:#aaaaaa;
+}
+
+select#zs_days {
+  color:#aaaaaa;
+  border-color:#aaaaaa;
+}
+
+#zr_pro_widget_filter .zs_down_arrow {
+  border-top-color:#aaaaaa;
+}
+
+.zr_job {
+  border:1px solid #eee;
+  padding:12px;margin-top:20px;
+  margin-bottom:20px;
+  box-shadow:1px 3px 4px 0 rgba(155, 155, 155, 0.2);
+}
+
+.zr_job_title a {
+  color:#47566b;
+}
+
+.zr_job_title a:hover {
+  color:#354150;
+}
+
+.zr_job_posted_time {
+  color:#d1665a;
+}
