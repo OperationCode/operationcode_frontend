@@ -43,3 +43,8 @@ select#zs_days {
 .zr_job_posted_time {
   color:#d1665a;
 }
+
+#zipsearch_container {
+  width: 90%!important;
+  margin: 0 auto;
+}

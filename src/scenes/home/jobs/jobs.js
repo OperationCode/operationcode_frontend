@@ -1,24 +1,13 @@
 import React, { Component } from 'react';
-// import Section from 'shared/components/section/section';
+import Section from 'shared/components/section/section';
 
 import styles from './jobs.css';
 
 const zipRecruiterScript = document.createElement('script');
+
 zipRecruiterScript.src = 'https://www.ziprecruiter.com/jobs-widget/pro/v2/63bjfya4arc58ywaxtvi8jkchvzymeep';
-// const script2 = document.createElement('script');
-// script2.innerHTML = `{
-//   const options = {
-//      container : "zipsearch_container",
-//      alerts_api_key : "mnsiawwpjgk5i4u42awbp5kdhs8gpy26",
-//      jobs_per_page : '10',
-//      days_ago: '30',
-//     font_family: 'Tahoma',
-//   };
-//   zipsearch.init(options);
-// }`;
-// script2.async = false;
+
 document.body.appendChild(zipRecruiterScript);
-// document.body.appendChild(script2);
 
 const initializeZipRecruiter = (zipsearch) => {
   const options = {
@@ -43,12 +32,12 @@ class Jobs extends Component {
   }
   render() {
     return (
-      <div>
+      <Section title="Open Positions" theme="white">
         <div
           id="zipsearch_container"
           className={styles.zipContainer}
         />
-      </div>
+      </Section>
     );
   }
 }
