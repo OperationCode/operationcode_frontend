@@ -16,7 +16,6 @@ import SquadsTable from './squads/squadsTable/squadsTable';
 import Dashboard from './dashboard/dashboard';
 import MentorsTable from './mentor/mentorsTable/mentorsTable';
 import Scholarships from './scholarship/scholarships';
-import Success from './success/success';
 import ScholarshipApplication from './scholarshipApplication/scholarshipApplication';
 import Team from './team/team';
 import Gala from './gala/gala';
@@ -212,10 +211,6 @@ class Home extends Component {
               exact
               path="/scholarships"
               component={Scholarships}
-            />
-            <Route
-              path="/success"
-              component={Success}
             />
             <Route
               path="/squads"

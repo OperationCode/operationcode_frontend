@@ -7,8 +7,8 @@ import styles from './success.css';
 class Success extends Component {
   render() {
     return (
-      <Section title="Success!">
-        <span className={styles.successText}>Your Scholarship Application has been submitted.</span>
+      <Section title="Success!" theme="white">
+        <span className={styles.successText}>We have recieved your application.</span>
         <Link to="scholarships">
           <FaGraduationCap className={styles.successImage} size={150} />
         </Link>

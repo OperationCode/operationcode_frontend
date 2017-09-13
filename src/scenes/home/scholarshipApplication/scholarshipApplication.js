@@ -1,25 +1,20 @@
 import React, { Component } from 'react';
-import dateFormat from 'dateformat';
 import PropTypes from 'prop-types';
-import { getScholarship, postBackend } from 'shared/utils/apiHelper';
-import { Redirect } from 'react-router-dom';
+import { getScholarship } from 'shared/utils/apiHelper';
 import Section from 'shared/components/section/section';
 import Form from 'shared/components/form/form';
-import FormTextArea from 'shared/components/form/formTextArea/formTextArea';
-import FormCheckBox from 'shared/components/form/formCheckBox/formCheckBox';
-import FormButton from 'shared/components/form/formButton/formButton';
+import Head from './head/head';
+import Body from './body/body';
+import Success from './success/success';
 import styles from './scholarshipApplication.css';
 
 class ScholarshipApplication extends Component {
   constructor() {
     super();
     this.state = {
-      terms_accepted: false,
-      reason: '',
-      reasonValid: false,
+      error: null,
       scholarship: {},
-      success: false,
-      error: null
+      success: false
     };
   }
 
@@ -33,54 +28,16 @@ class ScholarshipApplication extends Component {
     });
   }
 
-  onTextAreaChange = (value) => {
-    const valid = value !== '';
-    this.setState({
-      reason: value,
-      reasonValid: valid
-    });
+  onSuccess = () => {
+    this.setState({ success: true });
   }
-
-  onCheckboxChange = (event) => {
-    this.setState({
-      terms_accepted: event.target.checked
-    });
-  }
-
-  handleOnClick = (e) => {
-    e.preventDefault();
-    const body = {
-      reason: this.state.reason,
-      terms_accepted: this.state.terms_accepted,
-      scholarship_id: this.state.scholarship.id
-    };
-    postBackend('scholarship_applications', body).then(() => {
-      this.setState({ success: true });
-    }).catch((failed) => {
-      const error = failed.response.data.error;
-      this.setState({ error });
-    });
-  }
-
-  isFormValid = () =>
-    this.state.terms_accepted
-    && this.state.reasonValid;
 
   render() {
     return (
       <Section theme="white">
         <Form className={styles.applicationForm}>
-          <h3> {this.state.scholarship.name} </h3>
-          <p> {this.state.scholarship.description} </p>
-          <p> {this.state.scholarship.location} </p>
-          <p>Apply by {dateFormat(this.state.scholarship.close_time, 'fullDate')} </p>
-          <div className={styles.title}>Reason for Attending<span className={styles.red}> *</span></div>
-          <FormTextArea onChange={this.onTextAreaChange} placeHolder={'Please write about why you want to attend this conference, and what you hope to get out of it.'} />
-          <div className={styles.title}>Conditions for Acceptance<span className={styles.red}> *</span></div>
-          <div className={styles.terms}> {this.state.scholarship.terms} </div>
-          <FormCheckBox name="scholarship_application" value="I agree" checked={this.state.terms_accepted} onChange={this.onCheckboxChange} /><br />
-          {this.isFormValid() ? <FormButton text="Submit Application" onClick={this.handleOnClick} /> : <FormButton className={styles.grey_button} text="Submit Application" disabled />}
-          {this.state.success && <Redirect to="/success" />}
+          <Head scholarship={this.state.scholarship} />
+          { this.state.success ? <Success /> : <Body scholarship_id={this.state.scholarship.id} scholarship_terms={this.state.scholarship.terms} onSuccess={this.onSuccess} /> }
           <div className={styles.red}>{this.state.error}</div>
         </Form>
       </Section>
