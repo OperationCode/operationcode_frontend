@@ -11,6 +11,7 @@ const initializeZipRecruiter = (zipsearch) => {
   const options = {
     container: 'zipsearch_container',
     alerts_api_key: 'mnsiawwpjgk5i4u42awbp5kdhs8gpy26',
+    search: 'software engineer',
     jobs_per_page: '10',
     days_ago: '30',
     font_family: 'Tahoma',
