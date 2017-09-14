@@ -14,7 +14,7 @@
     },
     {
       "question": "Where is Operation Code based? Do you have a location near me?",
-      "answer": "Operation Code, much like software, is built from anywhere with an internet connection, and is not based in one location. While we're headquartered in Portland, the entire organization is decentralized, including the board of directors and the core team. This allows us to more effectively serve the entire military community, whether they're veterans or military spouses, whether they're OCONUS or in-country. We have chapters all over the nation. Use Slack and join the closest town to you!"
+      "answer": "Operation Code, much like software, is built from anywhere with an internet connection, and is not based in one location. While we're headquartered in Portland, the entire organization is decentralized, including the board of directors and the core team. This allows us to more effectively serve the entire military community, whether they're veterans or military spouses, whether they're OCONUS or in-country. We have chapters all over the nation. Use Slack or our forums, and join the closest town to you!"
     },
     {
       "question": "Who does Operation Code serve?",
@@ -26,7 +26,7 @@
     },
     {
       "question": "What is available to start learning to code today?",
-      "answer": "Our friends at the New York City-based, The Flatiron School created <a href=\"https://learn.co/\">Learn.co</a>, an online platform to get introduced to web development and the popular web framework, Ruby on Rails. Request an invite <a href=\"https://learn.co/join/operation-code\">here</a> and then join the #learn-dot-co channel in our Slack if you get stuck. Another resource is <a href=\"https://www.learnhowtoprogram.com/courses\">learnhowtoprogram.com</a>, a resource maintained by Epicodus."
+      "answer": "Our friends at the New York City-based, The Flatiron School created <a href=\"https://learn.co/\">Learn.co</a>, an online platform to get introduced to web development and the popular web framework, Ruby on Rails. Request an invite <a href=\"https://learn.co/join/operation-code\">here</a> and then join the #learn-dot-co channel in our Slack, or post to our forums if you get stuck. Another resource is <a href=\"https://www.learnhowtoprogram.com/courses\">learnhowtoprogram.com</a>, a resource maintained by Epicodus."
     },
     {
       "question": "What are the hours of operation for Operation Code?",
