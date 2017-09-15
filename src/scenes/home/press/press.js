@@ -21,7 +21,7 @@ class Press extends Component {
             <div className={styles.column}>
               <h4>Code Schools</h4>
               <p>
-                Firstly, if your code school&apos;s information is not listed on our directory, please contact us at <a href="mailto:staff@operationcode.org">staff@operationcode.org</a>. If your school has recently partnered with our organization and is seeking information to write about it a blog post, we recommend joining our Slack team to receive personal anecdotes from our members, many of whom have attended various coding schools - perhaps yours!
+                Firstly, if your code school&apos;s information is not listed on our directory, please contact us at <a href="mailto:staff@operationcode.org">staff@operationcode.org</a>. If your school has recently partnered with our organization and is seeking information to write about it a blog post, we recommend joining our Slack team to receive personal recommendations from our members, many of whom have attended various coding schools - perhaps yours!
               </p>
             </div>
 
