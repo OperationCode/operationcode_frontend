@@ -1,13 +1,4 @@
 .successText {
-  font-size: 1.5rem;
-}
-
-.successImage {
-  width: 220px;
-  margin-top: 50px;
-}
-
-.successImage:hover {
-  opacity: 0.5;
-  filter: alpha(opacity=50); /* For IE8 and earlier */
+  font-size: 1.3em;
+  margin: 0px 0px 20px 0px;
 }

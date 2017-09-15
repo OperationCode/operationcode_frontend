@@ -28,7 +28,7 @@ class Scholarships extends Component {
       schlrshps = this.state.scholarships.map(scholarship => <Preview key={scholarship.id} scholarship={scholarship} />);
     }
     return (
-      <Section title={`Scholarhips (${this.state.scholarships && this.state.scholarships.length})`}>
+      <Section title={'Scholarhips'}>
         <div className={styles.container}>
           {schlrshps}
         </div>
