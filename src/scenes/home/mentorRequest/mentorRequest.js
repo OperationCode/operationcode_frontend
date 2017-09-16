@@ -55,7 +55,7 @@ export default class MentorRequest extends Component {
     this.state.services.map(service => ({ value: service.id, label: service.name }))
 
   buildMentorOptions = () =>
-    this.state.mentors.map(mentor => ({ value: mentor.id, label: mentor.email }))
+    this.state.mentors.map(mentor => ({ value: mentor.id, label: `${mentor.last_name}, ${mentor.first_name}` }))
 
   buildLanguageOptions = () =>
     [
