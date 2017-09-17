@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import Section from 'shared/components/section/section';
 import FormButton from 'shared/components/form/formButton/formButton';
+import FormOptions from 'shared/components/form/formOptions/formOptions';
 import { patchBackend } from 'shared/utils/apiHelper';
 import Identifier from './formComponents/identifier';
-import Interests from './formComponents/interests';
+// import Interests from './formComponents/interests';
 import WorkInfo from './formComponents/workInfo';
 import SchoolInfo from './formComponents/schoolInfo';
 import MilitaryInfo from './formComponents/militaryInfo';
@@ -150,10 +151,10 @@ class SignupInformation extends Component {
       // Civillian STEP 3
       case '2true':
         return (
-          <Interests
-            update={this.onCheckBoxChange}
+          <FormOptions
+            update={this.onChange}
             percent={'66'}
-            onLoad={this.onCheckboxLoad}
+            onLoad={this.onLoad}
           />
         );
       // Civillian COMPLETE
@@ -182,8 +183,8 @@ class SignupInformation extends Component {
       // Military STEP 5
       case '4false':
         return (
-          <Interests
-            update={this.onCheckBoxChange}
+          <FormOptions
+            update={this.onChange}
             percent={'80'}
           />
         );
