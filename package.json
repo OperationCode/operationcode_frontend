@@ -63,6 +63,8 @@
     "postcss-loader": "2.0.5",
     "prettier-eslint": "^6.1.2",
     "promise": "7.1.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
     "react-dev-utils": "^3.0.0",
     "style-loader": "0.13.1",
     "sw-precache-webpack-plugin": "0.9.1",
