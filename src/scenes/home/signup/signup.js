@@ -120,7 +120,7 @@ class SignUp extends Component {
             Are you ready to deploy your future?  Join Operation Code
             today and launch your career in software development.
             Once you complete the form below you&#8217;ll be invited
-            to join our Slack team.  Make sure you stop in and say hi!
+            to join our team on Slack and the <a href="https://community.operationcode.org/" target="_blank" rel="noopener noreferrer">forums</a>.  Make sure you stop in and say hi!
           </span>
           <FormEmail
             id="email" placeholder="Email (Required)"

@@ -23,6 +23,8 @@ class Interests extends Component {
             value={language}
             onChange={e => this.props.update(e)}
             key={language}
+            checkBox={{ display: 'block', margin: '20px' }}
+            label={{ textTransform: 'uppercase', fontWeight: 'bold', marginLeft: '15px' }}
           />
       )
     );
@@ -34,6 +36,8 @@ class Interests extends Component {
             value={discipline}
             onChange={e => this.props.update(e)}
             key={discipline}
+            checkBox={{ display: 'block', margin: '20px' }}
+            label={{ textTransform: 'uppercase', fontWeight: 'bold', marginLeft: '15px' }}
           />
       )
     );

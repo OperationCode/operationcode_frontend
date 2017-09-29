@@ -46,6 +46,9 @@ export const getRequests = () => makeGenericGet('requests');
 
 export const getSquads = () => makeGenericGet('squads');
 
+export const getScholarships = () => makeGenericGet('scholarships');
+export const getScholarship = id => makeGenericGet(`scholarships/${id}`);
+
 export function postRequest({ language, additionalDetails, mentor, service }) {
   const authHeader = setAuthorizationHeader();
 

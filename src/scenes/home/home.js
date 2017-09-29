@@ -15,9 +15,12 @@ import MentorRequestsTable from './mentor/mentorRequestsTable/mentorRequestsTabl
 import SquadsTable from './squads/squadsTable/squadsTable';
 import Dashboard from './dashboard/dashboard';
 import MentorsTable from './mentor/mentorsTable/mentorsTable';
+import Scholarships from './scholarship/scholarships';
+import ScholarshipApplication from './scholarshipApplication/scholarshipApplication';
 import Team from './team/team';
 import Gala from './gala/gala';
 import FAQ from './faq/faq';
+import Jobs from './jobs/jobs';
 import Contact from './contact/contact';
 import History from './history/history';
 import FinancialStatements from './about/financialStatements/financialStatements';
@@ -163,6 +166,10 @@ class Home extends Component {
               component={Press}
             />
             <Route
+              path="/jobs"
+              component={Jobs}
+            />
+            <Route
               path="/media"
               component={Press}
             />
@@ -206,6 +213,11 @@ class Home extends Component {
               )}
             />
             <Route
+              exact
+              path="/scholarships"
+              component={Scholarships}
+            />
+            <Route
               path="/squads"
               render={() => (
                 <SquadsTable {...authProps} />
@@ -228,6 +240,11 @@ class Home extends Component {
               render={() => (
                 <Login updateRootAuthState={this.updateRootAuthState} isLoggedIn={this.state.signedIn} {...authProps} />
               )}
+            />
+            <AuthenticatedRoute
+              exact path="/scholarships/:id/apply"
+              isLoggedIn={CookieHelpers.getUserStatus().signedIn}
+              component={ScholarshipApplication}
             />
             <AuthenticatedRoute
               exact path="/profile"
