@@ -46,14 +46,14 @@ Lastly, if you run into any problems with the following instructions, please try
 
 1. Click on the 'Fork' button on the top right corner of the page. You'll have your own copy of the repository available on your Github account.
 2. Go to the forked repository page on your Github account.
-3. Click on the green 'Clone or download' button and copy the link.  
-Your link will look like `https://github.com/<your_username>/operationcode_frontend.git`.  
+3. Click on the green 'Clone or download' button and copy the link.
+Your link will look like `https://github.com/<your_username>/operationcode_frontend.git`.
 (Use the HTTPS link. Click [here](https://help.github.com/articles/which-remote-url-should-i-use/) for more info).
 4. Open a terminal on your system and move to the directory where the repository should be.
 5. Run `git clone <paste the link here>`. You'll now have a local copy of the repository.
 6. `cd` to the repository.
-7. Run `git remote add upstream https://github.com/OperationCode/operationcode_frontend.git`.  
-**Note:** You may replace 'upstream' with any nickname you'd like to give to the original repository.  
+7. Run `git remote add upstream https://github.com/OperationCode/operationcode_frontend.git`.
+**Note:** You may replace 'upstream' with any nickname you'd like to give to the original repository.
 Run `git remote -v` to check if both the repositories are listed.
 8. Now you may make changes, add and commit to the repository.
 
@@ -66,7 +66,7 @@ Run `git remote -v` to check if both the repositories are listed.
 6. Run `yarn install`
 
 #### Addressing An Issue
-Everytime you want to resolve an issue, you'll need to create a branch, code there, and then submit a pull request (PR) for review. Assuming you're already in the /operationcode_frontend directory...
+Every time you want to resolve an issue, you'll need to create a branch, code there, and then submit a pull request (PR) for review. Assuming you're already in the /operationcode_frontend directory...
 1. Run `git checkout -b "Name-of-branch-relevant-to-issue"`
 2. Run `yarn start` and now your development environment will load. Happy coding!
 
