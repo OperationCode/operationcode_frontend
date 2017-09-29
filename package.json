@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "axios": "^0.16.1",
+    "axios": "0.16.1",
     "classnames": "^2.2.5",
     "dateformat": "^2.0.0",
-    "express": "^4.15.2",
+    "express": "4.16.0",
     "font-awesome": "^4.7.0",
     "history": "^4.6.1",
     "jwt-decode": "^2.2.0",
@@ -17,7 +17,7 @@
     "rc-progress": "^2.2.2",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "react-error-overlay": "^1.0.7",
+    "react-error-overlay": "1.0.7",
     "react-ga": "^2.2.0",
     "react-icons": "^2.2.5",
     "react-modal": "^1.7.7",
@@ -28,6 +28,7 @@
     "react-select": "^1.0.0-rc.5",
     "react-table": "^6.0.5",
     "sinon": "^2.3.2",
+    "snyk": "1.41.1",
     "universal-cookie": "^2.0.7"
   },
   "devDependencies": {
@@ -76,11 +77,13 @@
     "start": "node scripts/start.js",
     "start:server": "node server",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom",
+    "test": "snyk test && node scripts/test.js --env=jsdom",
     "lint": "eslint src",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "backend": "./bin/run_backend.sh"
+    "backend": "./bin/run_backend.sh",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "jest": {
     "moduleDirectories": [
