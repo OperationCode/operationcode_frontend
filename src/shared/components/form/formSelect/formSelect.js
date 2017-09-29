@@ -2,6 +2,18 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 export default class FormSelect extends Component {
+  onChange(e) {
+    // make sure we have a valid value before propogating the on change call
+    let isValid = true;
+    if (this.props.validationFunc) {
+      isValid = this.props.validationFunc(e);
+    }
+
+    if (isValid && this.props.onChange) {
+      this.props.onChange(e);
+    }
+  }
+
   buildOptions = () => {
     const { prompt, options } = this.props;
     const opts = [];
@@ -15,9 +27,11 @@ export default class FormSelect extends Component {
 
   render() {
     return (
-      <select id={this.props.id} onChange={this.props.onChange}>
-        {this.buildOptions()}
-      </select>
+      <div>
+        <select id={this.props.id} onChange={e => this.onChange(e)}>
+          {this.buildOptions()}
+        </select>
+      </div>
     );
   }
 }
@@ -29,11 +43,13 @@ FormSelect.propTypes = {
     label: PropTypes.string.isRequired
   })).isRequired,
   onChange: PropTypes.func,
-  id: PropTypes.string
+  id: PropTypes.string,
+  validationFunc: PropTypes.func
 };
 
 FormSelect.defaultProps = {
   onChange: () => {},
   prompt: null,
-  id: null
+  id: null,
+  validationFunc: null
 };

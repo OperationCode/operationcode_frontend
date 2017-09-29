@@ -6,6 +6,12 @@ import { IDENTIFIERS } from 'shared/constants/status';
 import styles from './formComponents.css';
 
 class Identifier extends Component {
+  // call the init method upon component creation
+  componentDidMount() {
+    if (this.props.init) {
+      this.props.init();
+    }
+  }
 
   render() {
     return (
@@ -16,18 +22,28 @@ class Identifier extends Component {
           prompt="Which describes you"
           onChange={e => this.props.update(e, e.target.value)}
           className={styles.signup}
+          validationFunc={e => this.props.validationFunc(e)}
         />
+        { !this.props.isValid && this.props.validationErrorMessage }
       </Form>
     );
   }
 }
 
 Identifier.propTypes = {
-  update: PropTypes.func
+  update: PropTypes.func,
+  validationFunc: PropTypes.func,
+  isValid: PropTypes.bool,
+  validationErrorMessage: PropTypes.string,
+  init: PropTypes.func
 };
 
 Identifier.defaultProps = {
-  update: null
+  update: null,
+  validationFunc: null,
+  isValid: true,
+  validationErrorMessage: null,
+  init: null
 };
 
 export default Identifier;

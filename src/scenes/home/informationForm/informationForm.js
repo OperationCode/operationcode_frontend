@@ -21,6 +21,7 @@ class SignupInformation extends Component {
     this.state = {
       error: false,
       isValid: true,
+      isDescriptionValid: true,
       success: false,
       identifier: 'false',
       interests: new Set(),
@@ -58,6 +59,18 @@ class SignupInformation extends Component {
     this.setState({ interests });
   }
 
+  // make sure isDescriptionValid is false on initialization
+  onIdentifierInit = () => {
+    this.setState({ isDescriptionValid: false });
+  }
+
+  // check if an option was selected: volunteer / veteran
+  validateDescription = (value) => {
+    const isDescriptionValid = Boolean(value.length);
+    this.setState({ isDescriptionValid });
+    return isDescriptionValid;
+  }
+
   // Reduces 'step' value by 1, going back one page in the form
   // Unless you are at the first page
   previousPage = () => {
@@ -68,9 +81,24 @@ class SignupInformation extends Component {
     this.setState({ step: this.state.step -= 1 });
   }
 
+  isFormValid = () => {
+    let valid = true;
+    if (!this.state.isDescriptionValid) {
+      valid = false;
+    }
+
+    this.setState({ error: !valid });
+    return valid;
+  }
+
   // Patches whatever values that have been captured so far to the DB
   // Then adds 1 to step to progress to the next page.
   saveAndContinue = () => {
+    // check if the form is valid before submitting
+    if (!this.isFormValid()) {
+      return;
+    }
+
     patchBackend('users', {
       user: {
         education_level: this.state.schoolLevel,
@@ -166,7 +194,15 @@ class SignupInformation extends Component {
         );
       // STEP ONE
       default:
-        return <Identifier update={this.onIdentifierStatusChange} />;
+        return (
+          <Identifier
+            update={this.onIdentifierStatusChange}
+            validationFunc={e => this.validateDescription(e.target.value)}
+            validationErrorMessage="You have to select a value"
+            isValid={this.state.isDescriptionValid}
+            init={this.onIdentifierInit}
+          />
+        );
     }
   }
 

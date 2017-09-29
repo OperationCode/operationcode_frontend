@@ -2,11 +2,16 @@
   display:flex;
 }
 
-.discourseText {
+.profileText {
   font-size: 1.5rem;
 }
 
-.discourseImage {
+.profileImage {
   width: 220px;
   margin-top: 50px;
+}
+
+.profileImage:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
 }
