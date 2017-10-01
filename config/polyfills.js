@@ -1,4 +1,9 @@
+import 'core-js/es6/map';
+import 'core-js/es6/set';
 
+global.requestAnimationFrame = function(callback) {
+  setTimeout(callback, 0);
+};
 
 if (typeof Promise === 'undefined') {
   // Rejection tracking prevents a common issue where React gets into an
