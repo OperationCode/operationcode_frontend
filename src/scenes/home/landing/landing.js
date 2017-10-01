@@ -24,8 +24,8 @@ class Landing extends Component {
         <WhatWeDo />
         <Membership />
         <MoreInformation />
-        <Partners />
         <SuccessStories />
+        <Partners />
         <Donate />
         <Join />
       </div>

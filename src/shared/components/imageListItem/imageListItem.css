@@ -1,0 +1,49 @@
+.imageCard {
+  width: 1000px;
+  height: 200px;
+  margin: 15px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.cardImage {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+.cardTitle {
+  font-size: 1.7rem;
+}
+
+.cardText {
+  width: 800px;
+  height: 150px;
+  margin: 25px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+}
+
+.cardText > h6 {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.cardText > p {
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+/* Vertical space between cards for vertical layout */
+@media screen and (max-width: 667px) {
+  .imageCard {
+    height: 400px;
+    width: 300px;
+  }
+
+  .cardText > h6 {
+    font-size: 1.3rem;
+  }
+}
