@@ -20,6 +20,7 @@ import ScholarshipApplication from './scholarshipApplication/scholarshipApplicat
 import Team from './team/team';
 import Gala from './gala/gala';
 import FAQ from './faq/faq';
+import Jobs from './jobs/jobs';
 import Contact from './contact/contact';
 import History from './history/history';
 import FinancialStatements from './about/financialStatements/financialStatements';
@@ -163,6 +164,10 @@ class Home extends Component {
             <Route
               path="/press"
               component={Press}
+            />
+            <Route
+              path="/jobs"
+              component={Jobs}
             />
             <Route
               path="/media"

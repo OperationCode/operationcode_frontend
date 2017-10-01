@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Section from 'shared/components/section/section';
 import QuoteBanner from 'shared/components/quoteBanner/quoteBanner';
 import Timeline from './timeline/timeline';
-// import styles from './history.css';
 
 class History extends Component {
   render() {

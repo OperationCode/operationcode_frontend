@@ -22,7 +22,7 @@ class Donate extends Component {
             enter the tech industry, and code the future.
           </p>
           <p>Thank you for supporting our mission!</p>
-          <LinkButton text="Donate Now" link="https://donorbox.org/operationcode" isExternal />
+          <LinkButton text="Donate Now" link="https://opencollective.com/operationcode#support" isExternal />
         </div>
       </Section>
     );
