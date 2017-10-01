@@ -13,9 +13,9 @@ class MoreInformation extends Component {
       <Section title="More Information" theme="gray">
         <div className={styles.moreInformation}>
           <ClipPathImage
-            title="Military Families and Spouses"
+            title="Military Spouses"
             image={familyImage}
-            altText="Military Families and Spouses"
+            altText="Military Spouses"
           />
           <ClipPathImage
             title="Veterans, Active Duty, and Reservists"
