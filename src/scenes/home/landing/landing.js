@@ -8,6 +8,7 @@ import WhatWeDo from './whatWeDo/whatWeDo';
 import Membership from './membership/membership';
 import MoreInformation from './moreInformation/moreInformation';
 import Partners from './partners/partners';
+import SuccessStories from './successStories/successStories';
 import styles from './landing.css';
 
 class Landing extends Component {
@@ -24,6 +25,7 @@ class Landing extends Component {
         <Membership />
         <MoreInformation />
         <Partners />
+        <SuccessStories />
         <Donate />
         <Join />
       </div>
