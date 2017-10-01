@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import styles from './timelineEvent.css';
 
 class TimelineEvent extends Component {
-  // TODO: Force eventTitle to Title case with Regex
-
   render() {
     return (
       <div className={styles.eventContainer}>
