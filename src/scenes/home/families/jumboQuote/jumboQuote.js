@@ -13,8 +13,6 @@ class JumboQuote extends Component {
     };
   }
 
-  // TODO: Ditch bluebird promise for axios to drop a dependency
-  // TODO: Is there a need to move the quotes to a back-end API endpoint, or should we just bail on the promise-based API request idea for this data?
   componentDidMount() {
     Promise.try(
       () => quotes.quotes[Math.floor(Math.random() * quotes.quotes.length)]
