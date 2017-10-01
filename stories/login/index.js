@@ -1,9 +1,15 @@
 import React from 'react';
-import Login from '../../shared/components/login/login';
-import { storiesOf, action, linkTo } from '@kadira/storybook';
+import createHistory from 'history/createBrowserHistory';
+import { Router } from 'react-router';
 
+import Login from 'shared/components/login/login';
+import { storiesOf } from '@storybook/react';
+
+const history = createHistory();
 
 storiesOf('Login', module)
   .add('Basic', () => (
-    <Login />
+    <Router history={history}>
+      <Login />
+    </Router>
   ));
