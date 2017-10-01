@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Promise from 'bluebird';
 import { FaQuoteLeft, FaQuoteRight } from 'react-icons/lib/fa';
 import quotes from './quotes.json';
 import styles from './jumboQuote.css';
@@ -13,14 +12,14 @@ class JumboQuote extends Component {
     };
   }
 
-  // TODO: Ditch bluebird promise for axios to drop a dependency
-  // TODO: Is there a need to move the quotes to a back-end API endpoint, or should we just bail on the promise-based API request idea for this data?
   componentDidMount() {
-    Promise.try(
-      () => quotes.quotes[Math.floor(Math.random() * quotes.quotes.length)]
-    ).then((quote) => {
-      this.setState({ quote });
-    });
+    if (quotes.quotes.length > 0) {
+      const randomQuoteID = Math.floor(Math.random() * quotes.quotes.length)
+
+      this.setState({
+        quote: quotes.quotes[randomQuoteID]
+      });
+    }
   }
 
   render() {
