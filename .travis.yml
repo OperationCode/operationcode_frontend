@@ -7,4 +7,4 @@ services:
 
 script:
   - make travis
-  - if [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_BRANCH" == "master" ]; then make publish && make deploy; fi
+  - if [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_BRANCH" == "master" ]; then make clean && make publish && make deploy; fi
