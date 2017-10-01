@@ -1,0 +1,11 @@
+{
+  "items": [
+    {
+      "title": "John Doe",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lacus lectus. Morbi rhoncus ut risus id bibendum.",
+      "buttonText": "Read More",
+      "linkTo": "/success",
+      "imageUrl": "images/Family-3.png"
+    }
+  ]
+}
