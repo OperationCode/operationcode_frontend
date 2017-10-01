@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Promise from 'bluebird';
 import { FaQuoteLeft, FaQuoteRight } from 'react-icons/lib/fa';
 import quotes from './quotes.json';
 import styles from './jumboQuote.css';
@@ -14,11 +13,13 @@ class JumboQuote extends Component {
   }
 
   componentDidMount() {
-    Promise.try(
-      () => quotes.quotes[Math.floor(Math.random() * quotes.quotes.length)]
-    ).then((quote) => {
-      this.setState({ quote });
-    });
+    if (quotes.quotes.length > 0) {
+      const randomQuoteID = Math.floor(Math.random() * quotes.quotes.length)
+
+      this.setState({
+        quote: quotes.quotes[randomQuoteID]
+      });
+    }
   }
 
   render() {
