@@ -10,7 +10,7 @@ import styles from './moreInformation.css';
 class MoreInformation extends Component {
   render() {
     return (
-      <Section title="More Information" theme="gray">
+      <Section title="Who We Serve" theme="gray">
         <div className={styles.moreInformation}>
           <ClipPathImage
             title="Military Families and Spouses"
