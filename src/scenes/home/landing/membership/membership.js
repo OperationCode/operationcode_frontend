@@ -13,8 +13,7 @@ class Membership extends Component {
       <Section title="Membership" theme="white">
         <div className={styles.intro}>
           <p>
-            Joining Operation Code is easy - and free! Once you&#39;re signed up, you can join us on&nbsp;
-            <a href="https://operation-code.slack.com/" target="_blank" rel="noopener noreferrer">Slack</a> or our <a href="https://community.operationcode.org/" target="_blank" rel="noopener noreferrer">forums</a> and start enjoying the benefits of your membership:
+            Joining Op-Code is Free. If you are just starting out, a senior dev, just exploring tech, or miss your buddies, Operation Code is for you.
           </p>
         </div>
         <br />
