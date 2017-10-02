@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { FaGraduationCap, FaLifeBouy, FaBriefcase, FaSlack, FaUser } from 'react-icons/lib/fa';
+import {
+  FaGraduationCap,
+  FaLifeBouy,
+  FaBriefcase,
+  FaSlack,
+  FaUser,
+  FaCommentsO,
+} from 'react-icons/lib/fa';
 import Section from 'shared/components/section/section';
 import ProfileCard from 'shared/components/profileCard/profileCard';
 import Idme from 'shared/components/idme/idme';
@@ -25,7 +32,7 @@ class Profile extends Component {
               <FaSlack className={styles.profile__icon} />
             </ProfileCard>
             <ProfileCard url={'/about'} title={'Enter our Discourse Forums'}>
-              <FaGraduationCap className={styles.profile__icon} />
+              <FaCommentsO className={styles.profile__icon} />
             </ProfileCard>
             <ProfileCard url={'/about'} title={'Update My Info'}>
               <FaUser className={styles.profile__icon} />
