@@ -9,7 +9,7 @@ import {
   FaCommentsO,
 } from 'react-icons/lib/fa';
 import Section from 'shared/components/section/section';
-import ProfileCard from 'shared/components/profileCard/profileCard';
+import LinkedIconCard from 'shared/components/linkedIconCard/linkedIconCard';
 import Idme from 'shared/components/idme/idme';
 import styles from './profile.css';
 
@@ -19,24 +19,24 @@ class Profile extends Component {
       <Section title="My Profile" theme="gray">
         <div className={styles.profileContainer}>
           <div className={styles.profileContainer__cards}>
-            <ProfileCard url={'/about'} title={'Request a Mentor'}>
+            <LinkedIconCard url={'/about'} title={'Request a Mentor'}>
               <FaLifeBouy className={styles.profile__icon} />
-            </ProfileCard>
-            <ProfileCard url={'/about'} title={'Check for Scholarships'}>
+            </LinkedIconCard>
+            <LinkedIconCard url={'/about'} title={'Check for Scholarships'}>
               <FaGraduationCap className={styles.profile__icon} />
-            </ProfileCard>
-            <ProfileCard url={'/about'} title={'Check for Open Jobs'}>
+            </LinkedIconCard>
+            <LinkedIconCard url={'/about'} title={'Check for Open Jobs'}>
               <FaBriefcase className={styles.profile__icon} />
-            </ProfileCard>
-            <ProfileCard url={'/about'} title={'Enter our Slack Channel'}>
+            </LinkedIconCard>
+            <LinkedIconCard url={'/about'} title={'Enter our Slack Channel'}>
               <FaSlack className={styles.profile__icon} />
-            </ProfileCard>
-            <ProfileCard url={'/about'} title={'Enter our Discourse Forums'}>
+            </LinkedIconCard>
+            <LinkedIconCard url={'/about'} title={'Enter our Discourse Forums'}>
               <FaCommentsO className={styles.profile__icon} />
-            </ProfileCard>
-            <ProfileCard url={'/about'} title={'Update My Info'}>
+            </LinkedIconCard>
+            <LinkedIconCard url={'/about'} title={'Update My Info'}>
               <FaUser className={styles.profile__icon} />
-            </ProfileCard>
+            </LinkedIconCard>
           </div>
           <div className={styles.profileContainer__idMe}>
             {this.props.verified && <h2>Your profile is verified with id.me</h2>}
