@@ -7,12 +7,9 @@ ENV IN_DOCKER true
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-# Copy dependencies
+# Install app dependencies
 COPY package.json /usr/src/app/
 COPY yarn.lock /usr/src/app/
-# Remove node_modules
-RUN rm -rf node_modules
-# Install dependencies
 RUN yarn install --no-progress
 
 # Bundle app source
