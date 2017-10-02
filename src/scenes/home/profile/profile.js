@@ -9,7 +9,7 @@ import styles from './profile.css';
 class Profile extends Component {
   render() {
     return (
-      <Section title="My Profile" theme="white">
+      <Section title="My Profile" theme="gray">
         <div className={styles.profileContainer}>
           <div className={styles.profileContainer__cards}>
             <ProfileCard url={'/about'} title={'This is the Profile Card'}>
@@ -31,10 +31,13 @@ class Profile extends Component {
               <FaGraduationCap className={styles.profile__icon} />
             </ProfileCard>
           </div>
-          <Section title="Get Verified for Added Benefits" theme="white" headingLines={false}>
+          <div className={styles.profileContainer__idMe}>
             {this.props.verified && <h2>Your profile is verified with id.me</h2>}
             {!this.props.verified && (
-              <div className={styles.idmeButton}>
+              <div className={styles.profileContainer__idMe__btn}>
+                <span className={styles.profileContainer__idMe__title}>
+                  Get Verified for Added Benefits
+                </span>
                 <p>
                   In order to take advantage of resources such as Mentorship and Scholarships, we
                   require that you verify your military affiliation status. We use Id.Me for
@@ -45,7 +48,7 @@ class Profile extends Component {
                 <Idme />
               </div>
             )}
-          </Section>
+          </div>
         </div>
       </Section>
     );
