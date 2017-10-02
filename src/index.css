@@ -16,6 +16,10 @@ html {
   color: #47566B;
 }
 
+a {
+  color: #249bbb;
+}
+
 h1, h2, h3, h4, h5, h6, a, button {
   font-family: 'PF Din Display';
 }
