@@ -1,6 +1,6 @@
 NODE_CONTAINER := web
 
-# Remove temporary files, build artifacts, and vendor dependencies.
+# Remove temporary files, build artifacts, and vendor dependencies (node_modules).
 .PHONY: clean
 clean: clean
 	rm -rf node_modules
@@ -28,4 +28,3 @@ travis: build_site build test
 .PHONY: backend
 backend:
 	bin/run_backend.sh
-
