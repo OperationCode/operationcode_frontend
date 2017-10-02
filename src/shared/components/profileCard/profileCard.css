@@ -1,0 +1,23 @@
+.profileCard {
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.profileCard__title {
+  text-align: center;
+}
+
+@media screen and (max-width: 650px) {
+  .profileCard {
+    width: 75px;
+    height: 75px;
+  }
+  .profileCard__title {
+    font-size: 0.8rem;
+  }
+}
