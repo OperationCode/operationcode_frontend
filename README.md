@@ -1,6 +1,7 @@
 # OperationCode Frontend
 
 ![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=<badge_key>)
+[![Known Vulnerabilities](https://snyk.io/test/github/OperationCode/operationcode_frontend/badge.svg)](https://snyk.io/test/github/OperationCode/operationcode_frontend)
 
 This is the repository for the front-end portion of https://operationcode.org.
 
