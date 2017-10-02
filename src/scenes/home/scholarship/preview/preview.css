@@ -1,9 +1,3 @@
-a {
-  text-decoration: none;
-  font-family: "Noto Serif", sans-serif;
-  color: rgb(71, 86, 107);
-}
-
 .preview {
   position: relative;
   background: rgb(255, 255, 255);
@@ -12,6 +6,10 @@ a {
   padding: 1em 1em;
   border-radius: .28571429rem;
   border: 1px solid rgba(34,36,38,.15);
+  text-decoration: none;
+  font-family: "Noto Serif", sans-serif;
+  color: rgb(71, 86, 107);
+  display: block;
 }
 
 .preview:hover {
@@ -19,16 +17,15 @@ a {
   box-shadow: 0 14px 28px rgba(0,0,0,0.25);
 }
 
-.preview:hover > h6::after {
+.preview:hover h6::after {
   background-color: rgb(65, 164, 192);
 }
 
-h6 {
+.preview h6 {
   display: flex;
-  letter-spacing: .05em;
 }
 
-h6::after {
+.preview h6::after {
   flex-grow: 1;
   height: 3px;
   content: '\a0';
