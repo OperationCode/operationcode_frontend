@@ -12,6 +12,7 @@
     "comma-dangle": [1, "only-multiline"],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/prefer-stateless-function": 0,
+    "react/no-did-mount-set-state": 0,
     "import/extensions": 0,
     "import/no-extraneous-dependencies": 0,
     "linebreak-style": 0,
