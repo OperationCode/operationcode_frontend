@@ -14,7 +14,7 @@
   color: red;
 }
 
-button, html [type="button"], [type="reset"], [type="submit"] {
+.active_button, .grey_button {
   width: 100%;
 }
 
