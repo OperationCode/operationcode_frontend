@@ -19,22 +19,28 @@ class Profile extends Component {
       <Section title="My Profile" theme="gray">
         <div className={styles.profileContainer}>
           <div className={styles.profileContainer__cards}>
-            <LinkedIconCard url={'/about'} title={'Request a Mentor'}>
+            <LinkedIconCard url={'https://op.co.de/mentor-request'} title={'Request a Mentor'}>
               <FaLifeBouy className={styles.profile__icon} />
             </LinkedIconCard>
-            <LinkedIconCard url={'/about'} title={'Check for Scholarships'}>
+            <LinkedIconCard url={'/scholarships'} title={'Check for Scholarships'}>
               <FaGraduationCap className={styles.profile__icon} />
             </LinkedIconCard>
-            <LinkedIconCard url={'/about'} title={'Check for Open Jobs'}>
+            <LinkedIconCard url={'/jobs'} title={'Check for Open Jobs'}>
               <FaBriefcase className={styles.profile__icon} />
             </LinkedIconCard>
-            <LinkedIconCard url={'/about'} title={'Enter our Slack Channel'}>
+            <LinkedIconCard
+              url={'https://operation-code.slack.com/'}
+              title={'Enter our Slack Channel'}
+            >
               <FaSlack className={styles.profile__icon} />
             </LinkedIconCard>
-            <LinkedIconCard url={'/about'} title={'Enter our Discourse Forums'}>
+            <LinkedIconCard
+              url={'https://community.operationcode.org/'}
+              title={'Enter our Discourse Forums'}
+            >
               <FaCommentsO className={styles.profile__icon} />
             </LinkedIconCard>
-            <LinkedIconCard url={'/about'} title={'Update My Info'}>
+            <LinkedIconCard url={'/signup-info'} title={'Update My Info'}>
               <FaUser className={styles.profile__icon} />
             </LinkedIconCard>
           </div>
