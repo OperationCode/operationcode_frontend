@@ -1,6 +1,6 @@
 .profileContainer {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
 }
 
 .profileContainer__cards {
@@ -8,10 +8,17 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  width: 60%;
 }
 
 .profileContainer__cards > * {
   width: 25%;
+}
+
+.profileContainer__idMe {
+  width: 30%;
+  padding: 0 20px;
+  text-align: center;
 }
 
 .profile__icon {
@@ -19,9 +26,13 @@
   width: 100px;
 }
 
-.idmeButton {
+.profileContainer__idMe__btn {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+
+.profileContainer__idMe__title {
+  font-size: 1.5rem;
 }

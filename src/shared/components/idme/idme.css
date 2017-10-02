@@ -8,6 +8,9 @@
 
 .authbtn {
   display: block;
-  margin-top: 30px;
   cursor: pointer;
+}
+
+.authImage {
+  max-width: 250px;
 }
