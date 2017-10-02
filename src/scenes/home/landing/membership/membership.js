@@ -21,6 +21,7 @@ class Membership extends Component {
         <ul className={styles.list}>
           <li>
             <img className={styles.icon} src={sharedIcon} alt="" />
+            <p>Community</p>
             <span>
               Join our open community. Learn and grow with fellow veterans,
               servicemembers, and military spouses. Work with your peers to
@@ -29,6 +30,7 @@ class Membership extends Component {
           </li>
           <li>
             <img className={styles.icon} src={roadIcon} alt="" />
+            <p>Growth</p>
             <span>
               Find new opportunities in the tech industry through our
               scholarship program. Attend software development conferences
@@ -37,6 +39,7 @@ class Membership extends Component {
           </li>
           <li>
             <img className={styles.icon} src={flagIcon} alt="" />
+            <p>Connections</p>
             <span>
               Jumpstart your journey. Access our mentorship and coding
               channels, and learn from senior software engineers at
@@ -45,6 +48,7 @@ class Membership extends Component {
           </li>
           <li>
             <img className={styles.icon} src={suitcaseIcon} alt="" />
+            <p>Careers</p>
             <span>
               Launch your career in the tech industry on our job board.
               Find local and remote jobs all across the country.

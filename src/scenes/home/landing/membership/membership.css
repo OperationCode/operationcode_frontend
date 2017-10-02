@@ -27,6 +27,10 @@
   padding-bottom: 20px;
 }
 
+.list li p {
+  font-size: 25px;
+}
+
 .icon {
   height:100px;
   padding-bottom: 20px;
