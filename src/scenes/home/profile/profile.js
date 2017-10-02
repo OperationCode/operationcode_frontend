@@ -42,8 +42,7 @@ class Profile extends Component {
                   In order to take advantage of resources such as Mentorship and Scholarships, we
                   require that you verify your military affiliation status. We use Id.Me for
                   verification, a highly secure and specialized platform that will protect your
-                  information. Simply click the button, follow the steps, and you are all set. We
-                  will not store or transfer any of your sensitive information.
+                  information. We will not store or transfer any of your sensitive information.
                 </p>
                 <Idme />
               </div>

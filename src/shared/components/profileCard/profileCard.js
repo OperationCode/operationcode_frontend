@@ -3,9 +3,12 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import styles from './profileCard.css';
 
+// Stateless component that wraps a link around an icon / img and title
+// Image or Icon are passed as a child to allow more flexibility
+// Props = url, title, and at least one child
 const ProfileCard = props => (
   <Link to={props.url} className={styles.profileCard}>
-    <div className={styles.profileCard__icon}>{props.children}</div>
+    {props.children}
     <span className={styles.profileCard__title}>{props.title}</span>
   </Link>
 );
