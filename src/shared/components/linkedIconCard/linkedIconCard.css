@@ -12,3 +12,10 @@
 .linkedIconCard__title {
   text-align: center;
 }
+
+@media screen and (max-width: 650px) {
+  .linkedIconCard {
+    width: 100px;
+    height: 100px;
+  }
+}
