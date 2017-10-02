@@ -25,7 +25,7 @@
   display: flex;
   flex-flow: column;
   justify-content: space-around;
-  align-items: center;
+  align-items: left;
 }
 
 .cardText > h6 {
