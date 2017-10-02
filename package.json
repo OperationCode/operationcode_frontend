@@ -1,6 +1,6 @@
 {
   "name": "operationcode_frontend",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "axios": "^0.16.1",
@@ -118,5 +118,10 @@
       "react-app"
     ]
   },
-  "homepage": "http://frontend.operationcode.org/"
+  "homepage": "http://frontend.operationcode.org/",
+  "description": "Operation Code Frontend",
+  "main": "server.js",
+  "repository": "https://github.com/OperationCode/operationcode_frontend.git",
+  "author": "Operation Code Frontend Team",
+  "license": "MIT"
 }
