@@ -1,10 +1,5 @@
 NODE_CONTAINER := web
 
-# Remove temporary files, build artifacts, and vendor dependencies.
-.PHONY: clean
-clean: clean
-	rm -rf node_modules
-
 .PHONY: build
 build:
 	docker-compose build
