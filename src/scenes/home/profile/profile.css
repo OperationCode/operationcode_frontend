@@ -48,3 +48,10 @@
     width: 100%;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .profileContainer__cards > * {
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+}

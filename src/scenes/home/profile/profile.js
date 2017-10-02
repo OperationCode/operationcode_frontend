@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { FaGraduationCap } from 'react-icons/lib/fa';
+import { FaGraduationCap, FaLifeBouy, FaBriefcase, FaSlack, FaUser } from 'react-icons/lib/fa';
 import Section from 'shared/components/section/section';
 import ProfileCard from 'shared/components/profileCard/profileCard';
 import Idme from 'shared/components/idme/idme';
@@ -12,23 +12,23 @@ class Profile extends Component {
       <Section title="My Profile" theme="gray">
         <div className={styles.profileContainer}>
           <div className={styles.profileContainer__cards}>
-            <ProfileCard url={'/about'} title={'This is the Profile Card'}>
+            <ProfileCard url={'/about'} title={'Request a Mentor'}>
+              <FaLifeBouy className={styles.profile__icon} />
+            </ProfileCard>
+            <ProfileCard url={'/about'} title={'Check for Scholarships'}>
               <FaGraduationCap className={styles.profile__icon} />
             </ProfileCard>
-            <ProfileCard url={'/about'} title={'This is the Profile Card'}>
+            <ProfileCard url={'/about'} title={'Check for Open Jobs'}>
+              <FaBriefcase className={styles.profile__icon} />
+            </ProfileCard>
+            <ProfileCard url={'/about'} title={'Enter our Slack Channel'}>
+              <FaSlack className={styles.profile__icon} />
+            </ProfileCard>
+            <ProfileCard url={'/about'} title={'Enter our Discourse Forums'}>
               <FaGraduationCap className={styles.profile__icon} />
             </ProfileCard>
-            <ProfileCard url={'/about'} title={'This is the Profile Card'}>
-              <FaGraduationCap className={styles.profile__icon} />
-            </ProfileCard>
-            <ProfileCard url={'/about'} title={'This is the Profile Card'}>
-              <FaGraduationCap className={styles.profile__icon} />
-            </ProfileCard>
-            <ProfileCard url={'/about'} title={'This is the Profile Card'}>
-              <FaGraduationCap className={styles.profile__icon} />
-            </ProfileCard>
-            <ProfileCard url={'/about'} title={'This is the Profile Card'}>
-              <FaGraduationCap className={styles.profile__icon} />
+            <ProfileCard url={'/about'} title={'Update My Info'}>
+              <FaUser className={styles.profile__icon} />
             </ProfileCard>
           </div>
           <div className={styles.profileContainer__idMe}>
