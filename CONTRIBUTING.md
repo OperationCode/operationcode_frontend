@@ -26,7 +26,7 @@ This is OperationCode.org's repository for their new front-end implementation us
     - [Scenes / Component Structure](#scenes--component-structure)
       - [Components](#components)
       - [Styles](#styles)
-    - [Running the development Server](#running-the-development-server)
+    - [Running the development Server](#running-the-development-environment)
   - [Production Builds](#production-builds)
     - [Static Site](#static-site)
     - [Docker Container](#docker-container)
