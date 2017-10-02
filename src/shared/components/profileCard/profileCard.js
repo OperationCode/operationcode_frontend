@@ -5,7 +5,7 @@ import styles from './profileCard.css';
 
 const ProfileCard = props => (
   <Link to={props.url} className={styles.profileCard}>
-    {props.children}
+    <div className={styles.profileCard__icon}>{props.children}</div>
     <span className={styles.profileCard__title}>{props.title}</span>
   </Link>
 );

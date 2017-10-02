@@ -1,3 +1,27 @@
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.profileContainer__cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.profileContainer__cards > * {
+  width: 25%;
+}
+
+.profile__icon {
+  height: 100px;
+  width: 100px;
+}
+
 .idmeButton {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
