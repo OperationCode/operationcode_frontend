@@ -9,7 +9,7 @@ import Section from 'shared/components/section/section';
 import styles from './mentorRequest.css';
 
 
-export default class MentorRequest extends Component {
+class MentorRequest extends Component {
   state = {
     mentors: [],
     services: [],
@@ -149,3 +149,5 @@ export default class MentorRequest extends Component {
     );
   }
 }
+
+export default MentorRequest;

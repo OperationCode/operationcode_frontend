@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styles from './formTextArea.css';
 
-export default class FormTextArea extends Component {
+class FormTextArea extends Component {
   constructor() {
     super();
     this.state = {
@@ -36,3 +36,5 @@ FormTextArea.defaultProps = {
   onChange: null,
   placeHolder: ''
 };
+
+export default FormTextArea;
