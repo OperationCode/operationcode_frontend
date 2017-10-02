@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 
 import ClipPathImage from 'shared/components/clipPathImage/clipPathImage';
 
-import jamesBondJpg from './james-bond.jpg';
+import jamesBondJpg from '../../asset/james-bond.jpg';
 
 
 storiesOf('shared/components/clipPathImage', module)

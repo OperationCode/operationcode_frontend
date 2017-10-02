@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 
 import BoardCard from 'shared/components/boardCard/boardCard';
 
-import jamesBondJpg from './james-bond.jpg';
+import jamesBondJpg from '../../asset/james-bond.jpg';
 
 storiesOf('shared/components/boardCard', module)
   .add('Default', () => (
