@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Modal from 'shared/components/modal/modal';
 import styles from 'shared/components/modal/modal.css';
 
-export default class MentorDetails extends Component {
+class MentorDetails extends Component {
   static defaultProps = {
     isOpen: false,
     onRequestClose: () => {},
@@ -53,3 +53,5 @@ export default class MentorDetails extends Component {
     );
   }
 }
+
+export default MentorDetails;
