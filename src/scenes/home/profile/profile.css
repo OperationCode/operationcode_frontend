@@ -12,12 +12,12 @@
 }
 
 .profileContainer__cards > * {
-  width: 25%;
+  width: 20%;
 }
 
 .profileContainer__idMe {
   width: 30%;
-  padding: 0 20px;
+  padding: 0 10px;
   text-align: center;
 }
 
@@ -35,4 +35,16 @@
 
 .profileContainer__idMe__title {
   font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .profileContainer {
+    flex-direction: column;
+  }
+  .profileContainer__cards {
+    width: 100%;
+  }
+  .profileContainer__idMe {
+    width: 100%;
+  }
 }

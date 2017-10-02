@@ -12,13 +12,3 @@
 .profileCard__title {
   text-align: center;
 }
-
-@media screen and (max-width: 650px) {
-  .profileCard {
-    width: 75px;
-    height: 75px;
-  }
-  .profileCard__title {
-    font-size: 0.8rem;
-  }
-}
