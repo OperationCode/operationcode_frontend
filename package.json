@@ -7,6 +7,7 @@
     "@storybook/addon-links": "^3.2.10",
     "@storybook/cli": "^3.2.10",
     "@storybook/react": "^3.2.11",
+    "all-contributors-cli": "^4.5.0",
     "axios": "^0.16.1",
     "classnames": "^2.2.5",
     "dateformat": "^2.0.0",
@@ -83,7 +84,9 @@
     "lint": "eslint src",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "backend": "./bin/run_backend.sh"
+    "backend": "./bin/run_backend.sh",
+    "add-contributor": "all-contributors add",
+    "generate-contributors": "all-contributors generate"
   },
   "jest": {
     "moduleDirectories": [
