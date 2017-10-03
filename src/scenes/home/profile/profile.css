@@ -11,10 +11,6 @@
   width: 60%;
 }
 
-.profileContainer__cards > * {
-  width: 20%;
-}
-
 .profileContainer__idMe {
   width: 30%;
   padding: 0 10px;
@@ -49,9 +45,20 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
   .profileContainer__cards > * {
     margin-right: 25px;
     margin-left: 25px;
+  }
+  .profile__icon {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .profileContainer__cards > * {
+    margin-right: 10px;
+    margin-left: 10px;
   }
 }

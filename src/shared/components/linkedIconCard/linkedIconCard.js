@@ -2,12 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './linkedIconCard.css';
 
-// Stateless component that wraps a link around an icon / img and title
-// Image or Icon are passed as a child to allow more flexibility
-// Props = url, title, and at least one child
 const LinkedIconCard = props => (
   <a href={props.url} className={styles.linkedIconCard}>
-    {props.children}
+    <div className={styles.linkedIconCard__icon}>{props.children}</div>
     <span className={styles.linkedIconCard__title}>{props.title}</span>
   </a>
 );

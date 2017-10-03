@@ -1,12 +1,16 @@
 .linkedIconCard {
+  padding: 10px;
   width: 150px;
   height: 150px;
-  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   margin: 15px;
+}
+
+.linkedIconCard__icon {
+  flex: 2;
 }
 
 .linkedIconCard__title {
