@@ -49,7 +49,7 @@ export const getSquads = () => makeGenericGet('squads');
 export const getScholarships = () => makeGenericGet('scholarships');
 export const getScholarship = id => makeGenericGet(`scholarships/${id}`);
 
-export function postRequest({ language, additionalDetails, mentor, service }) {
+export function postRequest({ language, additionalDetails, mentor, service, slackName }) {
   const authHeader = setAuthorizationHeader();
 
   return axios.post(`${config.backendUrl}/requests`, {
@@ -57,7 +57,8 @@ export function postRequest({ language, additionalDetails, mentor, service }) {
       details: additionalDetails,
       requested_mentor_id: mentor,
       service_id: service,
-      language
+      language,
+      slack_name: slackName
     }
   }, {
     headers: authHeader
