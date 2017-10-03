@@ -58,7 +58,7 @@ class Body extends Component {
         <div className={styles.title}>Conditions for Acceptance<span className={styles.red}> *</span></div>
         <div className={styles.terms}> {this.props.scholarship_terms} </div>
         <FormCheckBox name="scholarship_application" value="I agree" checked={this.state.terms_accepted} onChange={this.onCheckboxChange} checkBox={{ display: 'block', margin: '20px 0px 20px 5px' }} label={{ textTransform: 'uppercase', fontWeight: 'bold', marginLeft: '15px' }} />
-        {this.isValid() ? <FormButton text="Submit Application" onClick={this.handleOnClick} /> : <FormButton className={styles.grey_button} text="Submit Application" disabled />}
+        {this.isValid() ? <FormButton className={styles.active_button} text="Submit Application" onClick={this.handleOnClick} /> : <FormButton className={styles.grey_button} text="Submit Application" disabled />}
         <div className={styles.red}>{this.state.error}</div>
       </div>
     );

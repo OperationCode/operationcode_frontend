@@ -13,14 +13,14 @@ class Membership extends Component {
       <Section title="Membership" theme="white">
         <div className={styles.intro}>
           <p>
-            Joining Operation Code is easy - and free! Once you&#39;re signed up, you can join us on
-            <a href="https://operation-code.slack.com/" target="_blank" rel="noopener noreferrer">Slack</a> or our <a href="https://community.operationcode.org/" target="_blank" rel="noopener noreferrer">forums</a> and start enjoying the benefits of your membership:
+            Joining Op-Code is Free. If you are just starting out, a senior dev, just exploring tech, or miss your buddies, Operation Code is for you.
           </p>
         </div>
         <br />
         <ul className={styles.list}>
           <li>
             <img className={styles.icon} src={sharedIcon} alt="" />
+            <h5>Community</h5>
             <span>
               Join our open community. Learn and grow with fellow veterans,
               servicemembers, and military spouses. Work with your peers to
@@ -29,6 +29,7 @@ class Membership extends Component {
           </li>
           <li>
             <img className={styles.icon} src={roadIcon} alt="" />
+            <h5>Growth</h5>
             <span>
               Find new opportunities in the tech industry through our
               scholarship program. Attend software development conferences
@@ -37,6 +38,7 @@ class Membership extends Component {
           </li>
           <li>
             <img className={styles.icon} src={flagIcon} alt="" />
+            <h5>Connections</h5>
             <span>
               Jumpstart your journey. Access our mentorship and coding
               channels, and learn from senior software engineers at
@@ -45,6 +47,7 @@ class Membership extends Component {
           </li>
           <li>
             <img className={styles.icon} src={suitcaseIcon} alt="" />
+            <h5>Careers</h5>
             <span>
               Launch your career in the tech industry on our job board.
               Find local and remote jobs all across the country.
