@@ -6,7 +6,7 @@ import * as ApiHelpers from 'shared/utils/apiHelper';
 import IndexTable from 'shared/components/indexTable/indexTable';
 import RequestModal from 'scenes/home/requestModal/requestModal';
 
-export default class MentorRequestsTable extends Component {
+class MentorRequestsTable extends Component {
 
   state = {
     requests: [],
@@ -68,3 +68,5 @@ MentorRequestsTable.propTypes = {
 MentorRequestsTable.defaultProps = {
   signedIn: true,
 };
+
+export default MentorRequestsTable;

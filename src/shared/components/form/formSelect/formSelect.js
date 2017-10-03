@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-export default class FormSelect extends Component {
+class FormSelect extends Component {
   onChange(e) {
     // make sure we have a valid value before propogating the on change call
     let isValid = true;
@@ -53,3 +53,5 @@ FormSelect.defaultProps = {
   id: null,
   validationFunc: null
 };
+
+export default FormSelect;

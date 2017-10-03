@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styles from './fourOhFour.css';
 
-export default class FourOhFour extends Component {
+class FourOhFour extends Component {
 
   render() {
     return (
@@ -15,3 +15,4 @@ export default class FourOhFour extends Component {
   }
 }
 
+export default FourOhFour;
