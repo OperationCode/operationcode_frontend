@@ -12,8 +12,8 @@ class Preview extends Component {
     const scholarship = this.props.scholarship;
     return (
       <a className={styles.scholarshipPreviewLink} href={`scholarships/${scholarship.id}/apply`}>
-        <div className={styles.preview} >
-          <h6 className="previewHeader6">{scholarship.name}</h6>
+        <div className={styles.preview}>
+          <h6 className={styles.previewHeader6}>{scholarship.name}</h6>
           <span> {this.snip(scholarship.description)} </span>
         </div>
       </a>
