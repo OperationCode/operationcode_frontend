@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import dateFormat from 'dateformat';
 import PropTypes from 'prop-types';
-import styles from './head.css'
+import styles from './head.css';
 
 class Head extends Component {
   render() {
