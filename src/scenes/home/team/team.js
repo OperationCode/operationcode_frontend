@@ -83,12 +83,15 @@ class Team extends Component {
       alt: 'Thomas Ciszec'
     };
 
+    const quoteProps = {
+      author: 'Abraham Lincoln',
+      quote: 'To care for him who shall have borne the battle and for his widow, and his orphan.',
+      isHeadline: true
+    };
+
     return (
       <div>
-        <QuoteBanner
-          author="Abraham Lincoln"
-          quote="To care for him who shall have borne the battle and for his widow, and his orphan."
-        />
+        <QuoteBanner {...quoteProps} />
 
         <Section title="Our Staff" theme="white">
           <p>

@@ -1,0 +1,22 @@
+.maskLeft,
+.maskRight {
+  bottom: 99.5%;
+  fill: #FFFFFF;
+  position: absolute;
+  width: 50%;
+}
+
+.maskLeft {
+  left: 0;
+}
+
+.maskRight {
+  right: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .maskLeft,
+  .maskRight {
+    display: none;
+  }
+}

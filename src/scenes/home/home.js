@@ -32,6 +32,7 @@ import MentorRequest from './mentorRequest/mentorRequest';
 import SquadsNew from './squads/squadsNew/squadsNew';
 import CodeSchools from './codeSchools/codeSchools';
 import About from './about/about';
+import Families from './families/families';
 import Press from './press/press';
 import ResetPassword from './resetPassword/resetPassword';
 import Challenge from './challenge/challenge';
@@ -59,7 +60,7 @@ class Home extends Component {
   }
 
   setBgImage(location) {
-    if (location.pathname === '/') {
+    if (location.pathname === '/' || location.pathname === '/families') {
       this.setState({ bgChanged: !(this.state.bgImage), bgImage: true, bgImageUrl: familyImage });
     } else {
       this.setState({ bgChanged: this.state.bgImage, bgImage: false, bgImageUrl: null });
@@ -160,6 +161,10 @@ class Home extends Component {
             <Route
               path="/about"
               component={About}
+            />
+            <Route
+              path="/families"
+              component={Families}
             />
             <Route
               path="/press"
