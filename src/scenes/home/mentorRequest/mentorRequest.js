@@ -151,8 +151,10 @@ class MentorRequest extends Component {
             <FormButton className={styles.joinButton} text="Request Mentor" onClick={this.handleOnClick} theme="red" />
           </div>
         </Form>
-        {success && <div className={styles.mentorRequestSuccess}>Your request was sent succeessfully</div>}
+        {success && <div className={styles.mentorRequestSuccess}>Your request was sent successfully</div>}
       </Section>
+
+
     );
   }
 }
