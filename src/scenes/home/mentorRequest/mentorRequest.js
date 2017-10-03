@@ -95,7 +95,6 @@ class MentorRequest extends Component {
     return (
       <Section className={styles.mentorRequest} title="Mentor Service Request">
         { error && <div className={styles.mentorRequestError}>{error}</div> }
-        {success && <div className={styles.mentorRequestSuccess}>Your request was sent succeessfully</div>}
         <Form className={styles.mentorRequestForm}>
           <span>
             Please use this form to schedule a mentorship session.
@@ -152,6 +151,7 @@ class MentorRequest extends Component {
             <FormButton className={styles.joinButton} text="Request Mentor" onClick={this.handleOnClick} theme="red" />
           </div>
         </Form>
+        {success && <div className={styles.mentorRequestSuccess}>Your request was sent succeessfully</div>}
       </Section>
     );
   }
