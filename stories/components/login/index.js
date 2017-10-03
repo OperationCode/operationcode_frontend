@@ -1,15 +1,15 @@
 import React from 'react';
-import { Router } from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
+import { Router } from 'react-router';
 import { storiesOf } from '@storybook/react';
 
-import Landing from 'scenes/home/landing/landing';
+import Login from 'shared/components/login/login';
 
 const history = createHistory();
 
-storiesOf('Landing', module)
+storiesOf('shared/components/login', module)
   .add('Basic', () => (
     <Router history={history}>
-      <Landing />
+      <Login />
     </Router>
   ));
