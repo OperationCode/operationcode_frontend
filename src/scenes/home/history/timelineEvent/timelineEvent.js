@@ -3,14 +3,13 @@ import PropTypes from 'prop-types';
 import styles from './timelineEvent.css';
 
 class TimelineEvent extends Component {
-  titleCase = title => title.toLowerCase().replace(/(^[a-z]| [a-z])/g, match => match.toUpperCase());
-
   render() {
     return (
       <div className={styles.eventContainer}>
         <h4 className={styles.eventTitle}>
-          {this.titleCase(this.props.title)}
+          {this.props.title}
         </h4>
+
         <div className={styles.eventContent}>
           <p>
             {this.props.content}
