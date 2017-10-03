@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Heading from 'shared/components/heading/heading';
 import ReactTable from 'react-table';
 
-export default class IndexTable extends Component {
+class IndexTable extends Component {
   static propTypes = {
     columns: PropTypes.arrayOf(PropTypes.object).isRequired,
     heading: PropTypes.string.isRequired,
@@ -66,3 +66,5 @@ export default class IndexTable extends Component {
     );
   }
 }
+
+export default IndexTable;
