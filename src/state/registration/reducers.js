@@ -1,4 +1,3 @@
-import { connect } from 'react-redux';
 import { ADD_EMAIL, ADD_PASSWORD, ADD_ZIP } from './actions'
 
 const intialState = {}
