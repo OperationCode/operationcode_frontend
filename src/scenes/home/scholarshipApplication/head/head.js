@@ -6,7 +6,7 @@ class Head extends Component {
   render() {
     return (
       <div>
-        <h3> {this.props.scholarship.name} </h3>
+        <h3 className="scholarshipHeadName"> {this.props.scholarship.name} </h3>
         <p> {this.props.scholarship.description} </p>
         <p> {this.props.scholarship.location} </p>
         <p>Apply by {dateFormat(this.props.scholarship.close_time, 'fullDate')} </p>

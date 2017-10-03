@@ -4,7 +4,7 @@ import { getMentors } from 'shared/utils/apiHelper';
 import IndexTable from 'shared/components/indexTable/indexTable';
 import MentorDetails from 'scenes/home/mentor/mentorDetails/mentorDetails';
 
-export default class MentorsTable extends Component {
+class MentorsTable extends Component {
   state = {
     activeMentor: null
   };
@@ -35,3 +35,5 @@ export default class MentorsTable extends Component {
     );
   }
 }
+
+export default MentorsTable;

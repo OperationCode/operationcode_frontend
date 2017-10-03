@@ -1,4 +1,4 @@
-a {
+.scholarshipPreviewLink {
   text-decoration: none;
   font-family: "Noto Serif", sans-serif;
   color: rgb(71, 86, 107);
@@ -23,12 +23,12 @@ a {
   background-color: rgb(65, 164, 192);
 }
 
-h6 {
+.previewHeader6 {
   display: flex;
   letter-spacing: .05em;
 }
 
-h6::after {
+.previewHeader6::after {
   flex-grow: 1;
   height: 3px;
   content: '\a0';
