@@ -1,0 +1,25 @@
+.linkedIconCard {
+  padding: 10px;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px;
+}
+
+.linkedIconCard__icon {
+  flex: 2;
+}
+
+.linkedIconCard__title {
+  text-align: center;
+}
+
+@media screen and (max-width: 650px) {
+  .linkedIconCard {
+    width: 100px;
+    height: 100px;
+  }
+}
