@@ -3,7 +3,10 @@ import TimelineEvent from '../timelineEvent/timelineEvent';
 import styles from './timeline.css';
 
 class Timeline extends Component {
-  // TODO: Create a timelineSegment component that accepts to make the code more readable (requires API endpoint for history content). Once that component is made, <Timeline>, <TimelineSegment>, and <TimelineSegment> can be moved as a group to /shared/components to be utilized in other faculties.
+  // TODO: Create a timelineSegment component that accepts to make the code more readable
+  // (requires API endpoint for history content).
+  // Once that component is made, <Timeline>, <TimelineSegment>, and <TimelineSegment>
+  // can be moved as a group to /shared/components to be utilized in other faculties.
 
   render() {
     return (
