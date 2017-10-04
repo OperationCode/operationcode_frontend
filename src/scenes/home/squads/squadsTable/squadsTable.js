@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { SQUAD_COLUMNS } from 'shared/constants/table';
-import { getSquads } from 'shared/utils/apiHelper';
+import { getSquads, makeGenericFetch } from 'shared/utils/apiHelper';
 import IndexTable from 'shared/components/indexTable/indexTable';
 import SquadsModal from './squadsModal';
 
@@ -15,10 +15,8 @@ class SquadsTable extends Component {
   }
 
   componentWillMount() {
-    return fetch('https://api.operationcode.org/api/v1/squads.json').then(response =>
-      response.json().then((data) => {
-        this.setState({ squads: data });
-      })
+    makeGenericFetch('squads').then(squads =>
+      this.setState({ squads })
     );
   }
   componentDidMount() {
@@ -31,10 +29,8 @@ class SquadsTable extends Component {
 
   fetchSquads = () => {
     getSquads()
-    .then((data) => {
-      this.setState({
-        squads: data
-      });
+    .then((squads) => {
+      this.setState({ squads });
     }).catch(this.setAuthFetchError);
   }
 

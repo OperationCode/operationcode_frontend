@@ -16,6 +16,10 @@ function makeGenericGet(endpoint) {
   }).then(({ data }) => data);
 }
 
+export function makeGenericFetch(endpoint) {
+  return axios.get(`${config.backendUrl}/${endpoint}`).then(({ data }) => data);
+}
+
 export function postBackend(path, body) {
   const authHeader = setAuthorizationHeader();
   return axios.post(`${config.backendUrl}/${path}`, body, { headers: authHeader });
