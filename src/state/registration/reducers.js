@@ -1,15 +1,25 @@
 import { ADD_EMAIL, ADD_PASSWORD, ADD_ZIP } from './actions';
 
-// const intialState = {};
+const initialState = {
+  email: '',
+  password: '',
+  zip: ''
+};
 
-export default function register(state = null, action) {
+export default function register(state = initialState, action) {
   switch (action.type) {
     case ADD_EMAIL:
-      return state;
+      return Object.assign({}, state, {
+        email: action.email
+      });
     case ADD_PASSWORD:
-      return state;
+      return Object.assign({}, state, {
+        password: action.password
+      });
     case ADD_ZIP:
-      return state;
+      return Object.assign({}, state, {
+        zip: action.zip
+      });
     default:
       return state;
   }
