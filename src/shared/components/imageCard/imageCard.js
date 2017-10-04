@@ -1,28 +1,30 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import LinkButton from 'shared/components/linkButton/linkButton';
 import styles from './imageCard.css';
 
-class ImageCard extends Component {
-  render() {
-    return (
-      <div className={styles.imageCard}>
-        <img className={styles.cardImage} src={this.props.image} alt={this.props.title} />
+const ImageCard = ({
+  buttonText,
+  cardText,
+  image,
+  link,
+  title
+}) => (
+  <div className={styles.imageCard}>
+    <img className={styles.cardImage} src={image} alt={title} />
 
-        <div className={styles.cardText}>
-          <h6>{this.props.title}</h6>
-          <p>{this.props.cardText}</p>
-          {this.props.link &&
-          <LinkButton
-            text={this.props.buttonText}
-            link={this.props.link}
-            isExternal
-          />}
-        </div>
-      </div>
-    );
-  }
-}
+    <div className={styles.cardText}>
+      <h6>{title}</h6>
+      <p>{cardText}</p>
+      {link &&
+      <LinkButton
+        text={buttonText}
+        link={link}
+        isExternal
+      />}
+    </div>
+  </div>
+);
 
 ImageCard.propTypes = {
   image: PropTypes.string.isRequired,
