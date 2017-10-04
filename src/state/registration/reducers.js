@@ -1,6 +1,6 @@
 import { ADD_EMAIL, ADD_PASSWORD, ADD_ZIP } from './actions';
 
-// const intialState = {};
+const intialState = null;
 
 export default function register(state = null, action) {
   switch (action.type) {
