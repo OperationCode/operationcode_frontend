@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import Section from 'shared/components/section/section';
-import LinkButton from 'shared/components/linkButton/linkButton';
-
-import styles from './gala.css';
 
 class Gala extends Component {
   render() {
@@ -10,6 +7,10 @@ class Gala extends Component {
       <div>
         <Section title="Operation Code Gala" theme="white">
           <div>
+            <p>The Operation Code Gala has been postponed. More information is forthcoming.</p>
+            <p> We appriciate your patience and continued support.</p>
+          </div>
+          {/* <div>
             <p>The Operation Code Board of Directors, all-volunteer staff, and more than 3,211 members cordially invite you to the Deploy the Future Gala November 10, 2017 in the Governor Ballroom at Portland’s historic Sentinel Hotel.</p>
             <p>At Operation Code, we have grown leaps and bounds since committing the first line of code in 2014. It was not that long ago computer coding schools were not accepting the New GI Bill to pay for tuition, room and board. Today, there are ten coding boot camps nationwide accepting U.S. Veterans and the New GI Bill. Lives have been transformed: from veterans attending code schools and building careers in the tech industry to those just being introduced to computer coding.</p>
             <p>Through this short and successful journey, we have come to learn that our challenge is significantly larger than we originally understood. The impact we have on these veterans and their families is much broader than we originally envisioned. Today, we are more motivated than ever to expand the bandwidth of Operation Code to provide this continuously growing community of veterans with a skill set that will allow them to become self-sustaining and contribute generously to our society.</p>
@@ -112,7 +113,7 @@ class Gala extends Component {
             <h3>Governor&#39;s Ballroom, Sentinel Hotel</h3>
             <h3>Portland, Oregon</h3>
             <iframe title="Sentinel Hotel" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11181.901436230051!2d-122.6826821!3d45.5206389!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x776c285f8c70615a!2sSentinel!5e0!3m2!1sen!2sus!4v1501714755964" width="600" height="450" allowFullScreen />
-          </div>
+          </div> */}
         </Section>
       </div>
     );
