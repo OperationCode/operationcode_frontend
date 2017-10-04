@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 const Button = (props) => {
   const {
     handleClick,
-    link,
     ...otherProps
   } = props;
 
@@ -14,13 +13,11 @@ const Button = (props) => {
 };
 
 Button.propTypes = {
-  handleClick: PropTypes.func,
-  link: PropTypes.string
+  handleClick: PropTypes.func
 };
 
 Button.defaultProps = {
-  handleClick: null,
-  link: null
+  handleClick: null
 };
 
 export default Button;
