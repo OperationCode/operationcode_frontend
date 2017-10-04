@@ -1,7 +1,6 @@
-import { createStore, combineReducers } from 'redux';
+import { createStore } from 'redux';
+import register from './reducers'
 
-const reducers = combineReducers({});
-
-const store = createStore(reducers);
+const store = createStore(register);
 
 export default store;

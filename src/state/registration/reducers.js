@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
 import { ADD_EMAIL, ADD_PASSWORD, ADD_ZIP } from './actions'
 
-const intialState = null
+const intialState = {}
 
-function register(state = initialState, action) {
+export default function register(state = initialState, action) {
   switch(action.type)
     case ADD_EMAIL:
       return state
