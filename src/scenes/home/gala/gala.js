@@ -8,7 +8,7 @@ class Gala extends Component {
         <Section title="Operation Code Gala" theme="white">
           <div>
             <p>The Operation Code Gala has been postponed. More information is forthcoming.</p>
-            <p> We appriciate your patience and continued support.</p>
+            <p> We appreciate your patience and continued support.</p>
           </div>
           {/* <div>
             <p>The Operation Code Board of Directors, all-volunteer staff, and more than 3,211 members cordially invite you to the Deploy the Future Gala November 10, 2017 in the Governor Ballroom at Portland’s historic Sentinel Hotel.</p>
