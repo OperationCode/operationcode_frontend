@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { FaEnvelope, FaSlack, FaHome } from 'react-icons/lib/fa';
 import Section from 'shared/components/section/section';
+import IconCard from 'shared/components/iconCard/iconCard';
 import styles from './contact.css';
 
 class Contact extends Component {
@@ -20,49 +20,24 @@ class Contact extends Component {
         <Section theme="white" headingLines={false} >
           <div className={styles.flexContainer}>
             {/* Columns */}
-            <div className={styles.centerText}>
-              <h3>Email</h3>
-              <a href="mailto:staff@operationcode.org">
-                <FaEnvelope className={styles.mailIcon} size={200} />
-              </a>
-              <p>
-                <a href="mailto:staff@operationcode.org">staff@operationcode.org</a>
-              </p>
-            </div>
+            <IconCard
+              title="Email" fontAwesomeIcon="FaEnvelope" iconSize={175} url="mailto:staff@operationcode.org"
+              subText="staff@operationcode.org"
+            />
 
-            <div className={styles.centerText}>
-              <h3>Slack Team</h3>
-              <a
-                href="https://operation-code.slack.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaSlack className={styles.slackIcon} size={170} />
-              </a>
-              <p>
-                <a
-                  href="https://operation-code.slack.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  https://operation-code.slack.com
-                </a>
-              </p>
-            </div>
+            <IconCard
+              title="Slack Team" fontAwesomeIcon="FaSlack" iconSize={175} url="https://operation-code.slack.com"
+              subText="https://operation-code.slack.com"
+            />
 
-            <div className={styles.centerText}>
-              <h3>Mailing Address</h3>
-              <FaHome size={217} />
-              <p className={styles.address}>
-                Operation Code
-                <br />
-                1220 SW Morrison St
-                <br />
-                Suite 437
-                <br />
-                Portland, OR 97205
-              </p>
-            </div>
+            <IconCard
+              title="Mailing Address" fontAwesomeIcon="FaHome" iconSize={175}
+              subText="Operation Code<br/>
+                1220 SW Morrison St<br/>
+                Suite 437<br/>
+                Portland, OR 97205"
+              usingHtml
+            />
           </div>
         </Section>
       </div>
