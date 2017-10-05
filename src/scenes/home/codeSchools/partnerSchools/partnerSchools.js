@@ -17,7 +17,6 @@ class PartnerSchools extends Component {
       <Section
         id="partnerSchools"
         title="Partnered Schools"
-        theme="white"
         headingLines={false}
         margin1
       >

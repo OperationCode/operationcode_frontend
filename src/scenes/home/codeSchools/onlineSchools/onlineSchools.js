@@ -57,6 +57,7 @@ class OnlineSchools extends Component {
           id="onlineSchools"
           title="Online Schools"
           headingLines={false}
+          theme="white"
         >
           <p>
             Many programs offer coding schools in a completely digital fashion. <br />Regardless of where
@@ -72,6 +73,7 @@ class OnlineSchools extends Component {
           id="moocSchools"
           title="MOOCs"
           headingLines={false}
+          theme="white"
         >
           <p>
             Massive, Open, Online Courses (or MOOCs) are course study programs made available over

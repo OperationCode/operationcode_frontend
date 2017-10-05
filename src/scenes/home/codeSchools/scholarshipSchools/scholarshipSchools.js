@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Section from 'shared/components/section/section';
 import SchoolCard from 'shared/components/schoolCard/schoolCard';
-import styles from './approvedSchools.css';
+import styles from './scholarshipSchools.css';
 
-class ApprovedSchools extends Component {
+class ScholarshipSchools extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -52,10 +52,9 @@ class ApprovedSchools extends Component {
 
     return (
       <Section
-        id="approvedSchools"
-        title="VA-Approved Schools"
+        id="scholarshipSchools"
+        title="Scholarship Schools"
         headingLines={false}
-        theme="white"
       >
         <div className={styles.vaSchools}>
           {vaSchools}
@@ -75,8 +74,8 @@ class ApprovedSchools extends Component {
   }
 }
 
-ApprovedSchools.propTypes = {
+ScholarshipSchools.propTypes = {
   schools: PropTypes.array.isRequired // eslint-disable-line
 };
 
-export default ApprovedSchools;
+export default ScholarshipSchools;

@@ -5,6 +5,7 @@ import ApprovedSchools from './approvedSchools/approvedSchools';
 import PartnerSchools from './partnerSchools/partnerSchools';
 import OnlineSchools from './onlineSchools/onlineSchools';
 import StateSortedSchools from './stateSortedSchools/stateSortedSchools';
+import ScholarshipSchools from './scholarshipSchools/scholarshipSchools';
 import styles from './codeSchools.css';
 
 class CodeSchools extends Component {
@@ -68,9 +69,16 @@ class CodeSchools extends Component {
               theme="blue"
               scrollLink
             />
+            <LinkButton
+              link="scholarshipSchools"
+              text="Scholarships"
+              theme="blue"
+              scrollLink
+            />
           </div>
         </Section>
 
+        {this.state.schools && <ScholarshipSchools schools={this.state.schools} />}
         {this.state.schools && <ApprovedSchools schools={this.state.schools} />}
         {this.state.schools && <PartnerSchools schools={this.state.schools} />}
         {this.state.schools && <OnlineSchools schools={this.state.schools} />}
