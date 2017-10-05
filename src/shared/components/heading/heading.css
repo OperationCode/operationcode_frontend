@@ -23,20 +23,15 @@
   color: #FFF;
 }
 
-@media screen and (max-width: 1000px) {
+
+@media screen and (max-width: 650px) {
   .heading {
     font-size: 1.8em;
   }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 500px) {
   .heading {
-    font-size: 1.3em;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .heading {
-    font-size: 1em;
+    font-size: 1.5em;
   }
 }
