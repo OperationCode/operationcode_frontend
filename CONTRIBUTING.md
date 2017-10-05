@@ -46,14 +46,14 @@ Lastly, if you run into any problems with the following instructions, please try
 
 1. Click on the 'Fork' button on the top right corner of the page. You'll have your own copy of the repository available on your Github account.
 2. Go to the forked repository page on your Github account.
-3. Click on the green 'Clone or download' button and copy the link.  
-Your link will look like `https://github.com/<your_username>/operationcode_frontend.git`.  
+3. Click on the green 'Clone or download' button and copy the link.
+Your link will look like `https://github.com/<your_username>/operationcode_frontend.git`.
 (Use the HTTPS link. Click [here](https://help.github.com/articles/which-remote-url-should-i-use/) for more info).
 4. Open a terminal on your system and move to the directory where the repository should be.
 5. Run `git clone <paste the link here>`. You'll now have a local copy of the repository.
 6. `cd` to the repository.
-7. Run `git remote add upstream https://github.com/OperationCode/operationcode_frontend.git`.  
-**Note:** You may replace 'upstream' with any nickname you'd like to give to the original repository.  
+7. Run `git remote add upstream https://github.com/OperationCode/operationcode_frontend.git`.
+**Note:** You may replace 'upstream' with any nickname you'd like to give to the original repository.
 Run `git remote -v` to check if both the repositories are listed.
 8. Now you may make changes, add and commit to the repository.
 
@@ -307,6 +307,43 @@ Now that you understand the technology and project structure, feel free to direc
 
 ## Contribute
 [Operation Code Contribution Guide](https://github.com/OperationCode/START_HERE)
+
+## Add yourself as a contributor
+
+This project follows the [all contributors][all-contributors] specification. To add yourself to the table of
+contributors on the README.md, please use the automated script as part of your PR:
+
+```console
+yarn run add-contributor <YOUR_GITHUB_USERNAME>
+```
+
+Follow the prompt. If you've already added yourself to the list and are making a new type of contribution, you can run
+it again and select the added contribution type.
+
+## Emoji key
+
+Emoji | Represents | Links to | Comment
+:---: | --- | --- | ---
+💬 | Answering Questions (in Issues, Stack Overflow, Gitter, Slack, etc.)
+🐛 | Bug reports | `https://github.com/${ownerName}/${repoName}/issues?q=author%3A${username}`
+📝 | Blogposts | the blogpost
+💻 | Code | `https://github.com/${ownerName}/${repoName}/commits?author=${username}`
+📖 | Documentation | `https://github.com/${ownerName}/${repoName}/commits?author=${username}`, Wiki, or other source of documentation
+🎨 | Design | the logo/iconography/visual design/etc.
+💡 | Examples | the examples
+📋 | Event Organizers | event page
+💵 | Financial Support | relevant page | people or orgs who provide financial support
+🔍 | Funding/Grant Finders | | people who help find financial support
+🤔 | Ideas & Planning |
+🚇 | Infrastructure (Hosting, Build-Tools, etc) | link to source file (like `travis.yml`) in repo, if applicable
+🔌 | Plugin/utility libraries | the repo home
+👀 | Reviewed Pull Requests
+🔧 | Tools | the repo home
+🌍 | Translation | the translated content
+⚠️ | Tests | `https://github.com/${ownerName}/${repoName}/commits?author=${username}`
+✅ | Tutorials | the tutorial
+📢 | Talks | the slides/recording/repo/etc.
+📹 | Videos | the video
 
 ## License
 [MIT](LICENSE) © OperationCode
