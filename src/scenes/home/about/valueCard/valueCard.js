@@ -1,17 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './valueCard.css';
 
-class ValueCard extends Component {
-  render() {
-    return (
-      <div className={styles.valueCard}>
-        <h4>{this.props.name}</h4>
-        <p>{this.props.description}</p>
-      </div>
-    );
-  }
-}
+const ValueCard = ({ name, description }) => (
+  <div className={styles.valueCard}>
+    <h4>{name}</h4>
+    <p>{description}</p>
+  </div>
+);
 
 ValueCard.propTypes = {
   name: PropTypes.string.isRequired,

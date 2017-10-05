@@ -11,6 +11,12 @@ If you're here looking for a place to contribute pull requests as part of GitHub
 ## Quick Start
 
 ### TLDR
+
+Prerequisites:
+
+- [Yarn](https://yarnpkg.com/en/)
+- [Docker](https://www.docker.com/)
+
 ```
 yarn
 ```
@@ -18,7 +24,7 @@ yarn
 ```
 yarn run backend
 ```
-If it doesn't work the first time, run it again.
+If the command doesn't work the first time, run it again.
 
 In another shell tab:
 ```
