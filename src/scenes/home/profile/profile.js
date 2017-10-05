@@ -1,15 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {
-  FaGraduationCap,
-  FaLifeBouy,
-  FaBriefcase,
-  FaSlack,
-  FaUser,
-  FaCommentsO,
-} from 'react-icons/lib/fa';
 import Section from 'shared/components/section/section';
-import LinkedIconCard from 'shared/components/linkedIconCard/linkedIconCard';
+import IconCard from 'shared/components/iconCard/iconCard';
 import Idme from 'shared/components/idme/idme';
 import styles from './profile.css';
 
@@ -19,30 +11,36 @@ class Profile extends Component {
       <Section title="My Profile" theme="gray">
         <div className={styles.profileContainer}>
           <div className={styles.profileContainer__cards}>
-            <LinkedIconCard url={'https://op.co.de/mentor-request'} title={'Request a Mentor'}>
-              <FaLifeBouy className={styles.profile__icon} />
-            </LinkedIconCard>
-            <LinkedIconCard url={'/scholarships'} title={'Check for Scholarships'}>
-              <FaGraduationCap className={styles.profile__icon} />
-            </LinkedIconCard>
-            <LinkedIconCard url={'/jobs'} title={'Check for Open Jobs'}>
-              <FaBriefcase className={styles.profile__icon} />
-            </LinkedIconCard>
-            <LinkedIconCard
-              url={'https://operation-code.slack.com/'}
-              title={'Enter our Slack Channel'}
-            >
-              <FaSlack className={styles.profile__icon} />
-            </LinkedIconCard>
-            <LinkedIconCard
-              url={'https://community.operationcode.org/'}
-              title={'Enter our Discourse Forums'}
-            >
-              <FaCommentsO className={styles.profile__icon} />
-            </LinkedIconCard>
-            <LinkedIconCard url={'/signup-info'} title={'Update My Info'}>
-              <FaUser className={styles.profile__icon} />
-            </LinkedIconCard>
+
+            <IconCard
+              title="Request a Mentor" fontAwesomeIcon="FaLifeBouy"
+              url="https://op.co.de/mentor-request"
+            />
+
+            <IconCard
+              title="Check for Scholarships" fontAwesomeIcon="FaGraduationCap"
+              url="/scholarships"
+            />
+
+            <IconCard
+              title="Check for Open Jobs" fontAwesomeIcon="FaBriefcase"
+              url="/jobs"
+            />
+
+            <IconCard
+              title="Enter our Slack Channel" fontAwesomeIcon="FaSlack"
+              url="https://operation-code.slack.com/"
+            />
+
+            <IconCard
+              title="Enter our Discourse Forums" fontAwesomeIcon="FaCommentsO"
+              url="https://community.operationcode.org/"
+            />
+
+            <IconCard
+              title="Update My Info" fontAwesomeIcon="FaUser"
+              url="/signup-info"
+            />
           </div>
           <div className={styles.profileContainer__idMe}>
             {this.props.verified && <h2>Your profile is verified with id.me</h2>}
