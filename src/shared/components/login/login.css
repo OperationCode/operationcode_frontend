@@ -19,3 +19,24 @@ input, select{
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
+
+.resetBtn{
+  text-align:right;
+  margin-top:.5em;
+}
+
+.grid_row{
+  display:flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width:780px){
+  .grid_row{
+    flex-direction:row;
+  }
+
+  .grid_row > div{
+    width:50%;
+    box-sizing: border-box;
+  }
+}

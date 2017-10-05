@@ -1,0 +1,27 @@
+
+.btnRed{
+    background-color: #d1665a;
+    border-color: #d1665a;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    width: 200px;
+    cursor: pointer;
+    text-decoration: none;
+    width:100%;
+    max-width:350px;
+    display:block;
+    margin:auto;
+    margin-top:2em;
+}

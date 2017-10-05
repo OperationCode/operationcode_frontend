@@ -155,16 +155,20 @@ class Login extends Component {
     }
 
     return (
-      <Section title="Login" theme="white">
-        <Form autoComplete>
-          <FormEmail id="email" displayName="Email" label="Email" onChange={this.onEmailChange} />
-          <FormInput id="password" displayName="Password" label="Password" inputType="password" onChange={this.onPasswordChange} />
-          {errorFeedback && <h2 className={styles.loginError}>{errorFeedback}</h2>}
-          <FormButton className={styles.Button} text="Login" onClick={this.handleOnClick} />
-        </Form>
-        <Link to="/reset_password">Reset Password</Link>
-        <SignUpLink />
-      </Section>
+      <div className={styles.grid_row}>
+        <Section title="Login" theme="white">
+          <Form autoComplete>
+            <FormEmail id="email" displayName="Email" label="Email" onChange={this.onEmailChange} />
+            <FormInput id="password" displayName="Password" label="Password" inputType="password" onChange={this.onPasswordChange} />
+            {errorFeedback && <h2 className={styles.loginError}>{errorFeedback}</h2>}
+            <FormButton className={styles.Button} text="Login" onClick={this.handleOnClick} />
+            <Link className={styles.resetBtn} to="/reset_password">Reset Password</Link>
+          </Form>
+        </Section>
+        <Section title="New to operationcode.org?">
+          <SignUpLink />
+        </Section>
+      </div>
     );
   }
 }
