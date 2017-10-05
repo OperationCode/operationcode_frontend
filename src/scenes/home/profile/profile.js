@@ -40,7 +40,7 @@ class Profile extends Component {
             >
               <FaCommentsO className={styles.profile__icon} />
             </LinkedIconCard>
-            <LinkedIconCard url={'/signup-info'} title={'Update My Info'}>
+            <LinkedIconCard url={'/signup-info'} title={'Update Info'}>
               <FaUser className={styles.profile__icon} />
             </LinkedIconCard>
           </div>
