@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './topNav.css';
 
-const TopNav = props => (
+const TopNav = ({ children }) => (
   <div className={styles.topNav} >
-    {props.children}
+    {children}
   </div>
 );
 
