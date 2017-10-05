@@ -10,11 +10,16 @@ import styles from './mentorRequest.css';
 
 
 class MentorRequest extends Component {
-  state = {
-    mentors: [],
-    services: [],
-    loggedIn: true
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      mentors: [],
+      services: [],
+      loggedIn: true
+    };
+
+    this.handleOnClick = this.handleOnClick.bind(this);
+  }
 
   componentDidMount() {
     Promise.all([ApiHelpers.getServices(), ApiHelpers.getMentors()]).then((values) => {
@@ -67,12 +72,14 @@ class MentorRequest extends Component {
       { value: 'htmlcss', label: 'HTML/CSS' }
     ]
 
-  handleOnClick = () => {
+  handleOnClick = (e) => {
+    e.preventDefault();
     ApiHelpers.postRequest({
       language: this.state.languageType,
       additionalDetails: this.state.additionalDetails,
       service: this.state.serviceType,
-      mentor: this.state.mentor
+      mentor: this.state.mentor,
+      slackName: this.state.slackName
     }).then(() => {
       this.setState({ success: true });
     }).catch(() => {
@@ -141,11 +148,13 @@ class MentorRequest extends Component {
             <h2>Additional Details</h2>
             <p>Please provide us with any more info that may help in us in assigning a mentor to this request.</p>
             <FormInput id="additionalDetails" onChange={this.onDetailsChange} />
-            <FormButton className={styles.joinButton} text="Request Mentor" onSubmit={this.handleOnClick} theme="red" />
-            {success && <Redirect to="/thanks" />}
+            <FormButton className={styles.joinButton} text="Request Mentor" onClick={this.handleOnClick} theme="red" />
           </div>
         </Form>
+        {success && <div className={styles.mentorRequestSuccess}>Your request was sent successfully</div>}
       </Section>
+
+
     );
   }
 }

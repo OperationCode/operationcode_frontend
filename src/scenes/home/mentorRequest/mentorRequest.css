@@ -70,6 +70,17 @@
   width: 100%;
 }
 
+.mentorRequestSuccess {
+  background-color: rgb(92, 184, 92);
+  border-radius: 0.25rem;
+  color: white;
+  margin-bottom: 1rem;
+  max-width: 500px;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
 @media screen and (max-width: 500px) {
   .mentorRequestForm {
     flex-direction: row;
