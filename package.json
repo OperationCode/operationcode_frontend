@@ -10,6 +10,7 @@
     "axios": "^0.16.1",
     "classnames": "^2.2.5",
     "dateformat": "^2.0.0",
+    "docsify": "^4.3.7",
     "express": "^4.15.2",
     "font-awesome": "^4.7.0",
     "history": "^4.6.1",
