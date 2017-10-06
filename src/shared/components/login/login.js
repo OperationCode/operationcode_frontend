@@ -1,17 +1,17 @@
-import Section from 'shared/components/section/section';
 import React, { Component } from 'react';
-import Form from 'shared/components/form/form';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import config from 'config/environment';
 import _ from 'lodash';
-import * as CookieHelpers from 'shared/utils/cookieHelper';
-import FormEmail from 'shared/components/form/formEmail/formEmail';
-import FormInput from 'shared/components/form/formInput/formInput';
-import FormButton from 'shared/components/form/formButton/formButton';
-import SignUpLink from 'shared/components/signUpLink/signUpLink';
 import styles from './login.css';
+import Form from '../form/form';
+import Section from '../section/section';
+import * as CookieHelpers from '../../utils/cookieHelper';
+import FormEmail from '../form/formEmail/formEmail';
+import FormInput from '../form/formInput/formInput';
+import FormButton from '../form/formButton/formButton';
+import SignUpLink from '../signUpLink/signUpLink';
 
 require('./login.css');
 const queryString = require('query-string');
