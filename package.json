@@ -37,7 +37,7 @@
   "devDependencies": {
     "autoprefixer": "7.1.0",
     "babel-core": "6.24.1",
-    "babel-eslint": "7.2.3",
+    "babel-eslint": "^8.0.1",
     "babel-jest": "20.0.3",
     "babel-loader": "7.0.0",
     "babel-preset-react-app": "^3.0.0",
