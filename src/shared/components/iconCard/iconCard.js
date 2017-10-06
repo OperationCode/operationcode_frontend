@@ -4,17 +4,7 @@ import PropTypes from 'prop-types';
 import * as faIcons from 'react-icons/lib/fa';
 import styles from './iconCard.css';
 
-const IconCard = (props) => {
-  const {
-    title,
-    subText,
-    url,
-    fontAwesomeIcon,
-    iconSize,
-    iconAboveHeading,
-    usingHtml
-  } = props;
-
+const IconCard = ({ fontAwesomeIcon, iconAboveHeading, iconSize, subText, title, url, usingHtml }) => {
   const Icon = faIcons[fontAwesomeIcon];
 
   let iconBefore = null;
