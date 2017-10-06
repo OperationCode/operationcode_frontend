@@ -11,7 +11,7 @@ import styles from './successStories.css';
 class SuccessStories extends Component {
   render() {
     return (
-      <Section title="Success Stories" theme="gray">
+      <Section title="Success Stories" theme="white">
         <div className={styles.successStoriesContent}>
           <ImageListItem
             image={image1}

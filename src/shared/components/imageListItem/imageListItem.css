@@ -1,34 +1,25 @@
-.imageCard {
-  width: 1000px;
-  height: 200px;
-  margin: 15px;
+.imageListItem {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
+  justify-content: center;
   align-items: center;
+  width: 100%;
+  margin: 15px;
 }
 
 .cardImage {
+  margin: 15px;
   border-radius: 50%;
+  border: 3px solid #41a4c0;
   width: 150px;
   height: 150px;
 }
 
-.cardTitle {
-  font-size: 1.7rem;
-}
-
 .cardText {
-  width: 800px;
-  height: 150px;
-  margin: 25px;
   display: flex;
-  flex-flow: column;
+  flex-flow: column nowrap;
   justify-content: space-around;
-}
-
-.cardText > h6 {
-  font-size: 1.2rem;
-  text-align: center;
+  margin: 15px;
 }
 
 .cardText > p {
@@ -36,14 +27,13 @@
   text-align: left;
 }
 
-/* Vertical space between cards for vertical layout */
-@media screen and (max-width: 667px) {
-  .imageCard {
-    height: 400px;
-    width: 300px;
-  }
+.cardTitle {
+  font-size: 1.7rem;
+}
 
-  .cardText > h6 {
-    font-size: 1.3rem;
+/* Vertical space between cards for vertical layout */
+@media screen and (max-width: 650px) {
+  .imageListItem {
+    flex-flow: row wrap;
   }
 }

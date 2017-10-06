@@ -15,7 +15,7 @@ class Partners extends Component {
     return (
       <Section
         title="Partners"
-        theme="white"
+        theme="gray"
       >
         <div className={styles.partners}>
           <p>

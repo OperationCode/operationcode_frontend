@@ -1,26 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './imageListItem.css';
 
-class ImageListItem extends Component {
-  render() {
-    return (
-      <div className={styles.imageCard}>
-        <img className={styles.cardImage} src={this.props.image} alt={this.props.title} />
+const ImageListItem = props => (
+  <div className={styles.imageListItem}>
+    <img className={styles.cardImage} src={props.image} alt={props.title} />
 
-        <div className={styles.cardText}>
-          <h3 className={styles.cardTitle}>{this.props.title}</h3>
-          <p>{this.props.cardText}</p>
-        </div>
-      </div>
-    );
-  }
-}
+    <div className={styles.cardText}>
+      <h3 className={styles.cardTitle}>{props.title}</h3>
+      <p>{props.cardText}</p>
+    </div>
+  </div>
+);
 
 ImageListItem.propTypes = {
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  cardText: PropTypes.string.isRequired,
+  cardText: PropTypes.string.isRequired
 };
 
 export default ImageListItem;
