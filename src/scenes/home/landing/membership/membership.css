@@ -8,13 +8,12 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  width: 80%;
+  width: 90%;
   margin: 0;
   padding: 0;
 }
 
 .list li {
-  width: 205px;
   list-style: none;
   margin: 0;
   font-size: 16px;
