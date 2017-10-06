@@ -19,16 +19,16 @@ const SchoolInfo = ({ percent, update }) => (
     <FormSelect
       id="scholarships"
       options={
-      [
-        {
-          value: true,
-          label: 'I would like updates on scholarships'
-        },
-        {
-          value: false,
-          label: 'I would not like to receive scholarships'
-        },
-      ]
+        [
+          {
+            value: true,
+            label: 'I would like updates on scholarships'
+          },
+          {
+            value: false,
+            label: 'I would not like to receive scholarships'
+          },
+        ]
       }
       prompt="Seeking Scholarship Information?"
       onChange={e => update(e, e.target.value)}

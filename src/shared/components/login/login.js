@@ -17,7 +17,6 @@ require('./login.css');
 const queryString = require('query-string');
 
 class Login extends Component {
-
   state = {
     email: '',
     emailValid: false,

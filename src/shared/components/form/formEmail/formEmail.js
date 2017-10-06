@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import FormInput from '../formInput/formInput';
 
 class FormEmail extends Component {
-
   render() {
     return (
       <FormInput
