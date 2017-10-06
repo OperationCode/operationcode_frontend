@@ -16,6 +16,7 @@ Prerequisites:
 
 - [Yarn](https://yarnpkg.com/en/)
 - [Docker](https://www.docker.com/)
+- OsX or Linux with a globally installed and available `git` (at the moment, all the tooling assumes this as a platform)
 
 ```
 yarn
