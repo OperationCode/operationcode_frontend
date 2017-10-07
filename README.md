@@ -17,7 +17,7 @@ Prerequisites:
 - [Yarn](https://yarnpkg.com/en/)
 - [Docker](https://www.docker.com/)
 - MacOS or Linux with a globally installed and available `git`
-  - If you are using Windows, we do not yet have documentation to safely install in a Powershell (or other Windows shell) environment. 
+- [For Windows User quick start installation](https://github.com/OperationCode/operationcode_frontend/blob/master/CONTRIBUTING.md#windows)
 
 ```
 yarn
