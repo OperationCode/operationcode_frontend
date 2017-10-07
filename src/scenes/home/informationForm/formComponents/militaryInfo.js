@@ -9,7 +9,6 @@ import styles from './formComponents.css';
 class MilitaryInfo extends Component {
   constructor(props) {
     super(props);
-    this.onChange = this.onChange.bind(this);
     this.state = { branchPrompt: BRANCH_PROMPT.other };
   }
 
