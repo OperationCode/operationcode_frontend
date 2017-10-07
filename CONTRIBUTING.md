@@ -73,7 +73,7 @@ Everytime you want to resolve an issue, you'll need to create a branch, code the
 When finished, [create a PR on GitHub](https://help.github.com/articles/creating-a-pull-request/).
 
 #### Returning To Work After A Break
-Some issues take awhile to code a solution for. Just because you're working on an issue doesn't mean everybody puts there work on hold for you! You'll want to continually rebase your branch to ensure that your PR will have a seamless merge. Assuming you're ready to code again and you're already in the /operationcode_frontend directory...
+Some issues take awhile to code a solution for. Just because you're working on an issue doesn't mean everybody puts their work on hold for you! You'll want to continually rebase your branch to ensure that your PR will have a seamless merge. Assuming you're ready to code again and you're already in the /operationcode_frontend directory...
 1. [Keep your fork in sync with Operation Code's master branch.](https://help.github.com/articles/syncing-a-fork/)
 2. Run `yarn install`
 3. Run `yarn start`
@@ -81,7 +81,7 @@ Some issues take awhile to code a solution for. Just because you're working on a
 
 ## Technologies
 Here is a breakdown and summary of the main technologies our project utilizes:
-- [NodeJS](https://www.nodejs.org/) - Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. React utilizes a tiny Node/Express server for it's development environmen.t
+- [NodeJS](https://www.nodejs.org/) - Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. React utilizes a tiny Node/Express server for it's development environment.
 - [React.js](https://facebook.github.io/react/) - Facebook's popular JavaScript front-end framework.
 - [Create-React-App](https://github.com/facebookincubator/create-react-app) - Create React App was initially used to handle boilerplate. We have since ejected and customized some of the scripts.
 - [Webpack](https://webpack.js.org/) - Webpack acts as a module bundler and almost entirely dispenses with the need for a task runner, like Grunt or Gulp.
@@ -193,7 +193,7 @@ To test the installation open up a Command Prompt or Git Bash and enter the foll
 node --version
 npm --version
 ```
-If your installation was sucessful you will get the versions of node and npm that were installed.
+If your installation was successful you will get the versions of node and npm that were installed.
 
 ### Developing Operation Code Frontend
 #### File Structure
