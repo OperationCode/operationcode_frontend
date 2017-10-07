@@ -5,6 +5,7 @@
   align-self: center;
   margin-top: 2rem;
   width: 100%;
+  font-size: 1.5rem!important;
 }
 
 .loginError {
@@ -21,7 +22,7 @@ input, select{
 }
 
 .resetBtn{
-  text-align:right;
+  text-align:center;
   margin-top:.5em;
 }
 

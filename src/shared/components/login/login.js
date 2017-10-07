@@ -11,7 +11,7 @@ import * as CookieHelpers from '../../utils/cookieHelper';
 import FormEmail from '../form/formEmail/formEmail';
 import FormInput from '../form/formInput/formInput';
 import FormButton from '../form/formButton/formButton';
-import SignUpLink from '../signUpLink/signUpLink';
+import SignUpSection from './signUpSection/signUpSection';
 
 require('./login.css');
 const queryString = require('query-string');
@@ -160,12 +160,12 @@ class Login extends Component {
             <FormEmail id="email" displayName="Email" label="Email" onChange={this.onEmailChange} />
             <FormInput id="password" displayName="Password" label="Password" inputType="password" onChange={this.onPasswordChange} />
             {errorFeedback && <h2 className={styles.loginError}>{errorFeedback}</h2>}
-            <FormButton className={styles.Button} text="Login" onClick={this.handleOnClick} />
             <Link className={styles.resetBtn} to="/reset_password">Reset Password</Link>
+            <FormButton className={styles.Button} text="Login" onClick={this.handleOnClick} />
           </Form>
         </Section>
-        <Section title="New to operationcode.org?">
-          <SignUpLink />
+        <Section title="New to operationcode.org?" theme="white">
+          <SignUpSection />
         </Section>
       </div>
     );
