@@ -1,18 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './accordianItem.css';
 
-class AccordianItem extends Component {
-  render() {
-    return (
-      <dt className={styles.accordianItem}>
-        <a className={styles.accordianItemHeading} aria-expanded="false" aria-controls="accordion1">
-          First Accordion heading
-        </a>
-      </dt>
-    );
-  }
-}
+const AccordianItem = () => (
+  <dt className={styles.accordianItem}>
+    <a className={styles.accordianItemHeading} aria-expanded="false" aria-controls="accordion1">
+      First Accordion heading
+    </a>
+  </dt>
+);
 
 AccordianItem.PropTypes = {
   children: PropTypes.oneOfType([

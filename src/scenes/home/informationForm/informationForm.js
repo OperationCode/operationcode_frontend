@@ -11,7 +11,6 @@ import MilitaryInfo from './formComponents/militaryInfo';
 import styles from './informationForm.css';
 
 class SignupInformation extends Component {
-
   constructor(props) {
     super(props);
     this.onIdentifierStatusChange = this.onIdentifierStatusChange.bind(this);
@@ -114,11 +113,11 @@ class SignupInformation extends Component {
         interests: Array.from(this.state.interests)
       },
     })
-    .then(() => {
-      this.setState({ step: this.state.step += 1 });
-    }).catch(() => {
-      this.setState({ error: true });
-    });
+      .then(() => {
+        this.setState({ step: this.state.step += 1 });
+      }).catch(() => {
+        this.setState({ error: true });
+      });
   }
   // Showstep renders each consecutive 'page' (component) based on user input
   // The form splits based on identifier, which determines whether or not

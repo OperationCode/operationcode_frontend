@@ -9,7 +9,6 @@ import config from 'config/environment';
 import styles from './setPassword.css';
 
 class RequestToken extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
