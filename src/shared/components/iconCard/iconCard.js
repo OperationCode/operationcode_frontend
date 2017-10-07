@@ -1,71 +1,11 @@
 /* eslint-disable react/no-danger */
-import React from 'react';
+import React, { ReactPropTypeLocationNames } from 'react';
 import PropTypes from 'prop-types';
-import ReactPropTypeLocationNames from 'react/lib/ReactPropTypeLocationNames';
-// fails :(  (as does attempting to use 'react-icons/lib/fa/index')
-// import AllIcons from 'react-icons/fa/index';
-// we should be more performant if we limit the available icons to a predefined list anyway
-import { FaGroup, FaRoad, FaFlagCheckered, FaSuitcase, FaQuestion,
-  FaEnvelope, FaSlack, FaHome,
-  FaGraduationCap, FaLifeBouy, FaBriefcase, FaUser, FaCommentsO } from 'react-icons/lib/fa';
+import * as faIcons from 'react-icons/lib/fa';
 import styles from './iconCard.css';
 
-const IconCard = (props) => {
-  const {
-    title,
-    subText,
-    url,
-    fontAwesomeIcon,
-    iconSize,
-    iconAboveHeading,
-    usingHtml
-  } = props;
-
-  // if we can get "import AllIcons" working above, it should be possible to do this instead:
-  // const Icon = AllIcons[fontAwesomeIcon];
-
-  let Icon;
-  switch (fontAwesomeIcon) {
-    case 'FaGroup':
-      Icon = FaGroup;
-      break;
-    case 'FaRoad':
-      Icon = FaRoad;
-      break;
-    case 'FaFlagCheckered':
-      Icon = FaFlagCheckered;
-      break;
-    case 'FaSuitcase':
-      Icon = FaSuitcase;
-      break;
-    case 'FaEnvelope':
-      Icon = FaEnvelope;
-      break;
-    case 'FaSlack':
-      Icon = FaSlack;
-      break;
-    case 'FaHome':
-      Icon = FaHome;
-      break;
-    case 'FaGraduationCap':
-      Icon = FaGraduationCap;
-      break;
-    case 'FaLifeBouy':
-      Icon = FaLifeBouy;
-      break;
-    case 'FaBriefcase':
-      Icon = FaBriefcase;
-      break;
-    case 'FaUser':
-      Icon = FaUser;
-      break;
-    case 'FaCommentsO':
-      Icon = FaCommentsO;
-      break;
-    default:
-      Icon = FaQuestion;
-      break;
-  }
+const IconCard = ({ fontAwesomeIcon, iconAboveHeading, iconSize, subText, title, url, usingHtml }) => {
+  const Icon = faIcons[fontAwesomeIcon];
 
   let iconBefore = null;
   let iconAfter = null;
