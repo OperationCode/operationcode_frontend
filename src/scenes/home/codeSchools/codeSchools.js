@@ -20,8 +20,7 @@ class CodeSchools extends Component {
     return fetch('https://api.operationcode.org/api/v1/code_schools.json').then(response =>
       response.json().then((data) => {
         this.setState({ schools: data });
-      })
-    );
+      }));
   }
 
   render() {

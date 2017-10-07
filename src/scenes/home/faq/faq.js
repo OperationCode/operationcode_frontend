@@ -13,8 +13,7 @@ const FAQ = () => {
           a={question.answer}
           key={Math.random + question.question}
         />
-      )
-    );
+      ));
   const donationQuestions = Data.donation
     .map(question =>
       (
@@ -23,8 +22,7 @@ const FAQ = () => {
           a={question.answer}
           key={Math.random + question.question}
         />
-      )
-    );
+      ));
   const volunteerQuestions = Data.volunteer
     .map(question =>
       (
@@ -33,8 +31,7 @@ const FAQ = () => {
           a={question.answer}
           key={Math.random + question.question}
         />
-      )
-    );
+      ));
 
   return (
     <Section title="General Questions" theme="white">

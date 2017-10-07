@@ -68,7 +68,9 @@ class SignUp extends Component {
     this.setState({ isLoading: true });
 
     if (this.isFormValid()) {
-      const { email, zip, password, firstName, lastName, identifier } = this.state;
+      const {
+        email, zip, password, firstName, lastName, identifier
+      } = this.state;
       axios.post(`${config.backendUrl}/users`, {
         user: {
           first_name: firstName,
@@ -160,9 +162,10 @@ class SignUp extends Component {
             validationErrorMessage="Passwords must match"
             ref={(child) => { this.passwordConfirmRef = child; }}
           />
-          {this.state.error ? <ul className={styles.errorList}>There was an error joining Operation Code:
+          {this.state.error &&
+          <ul className={styles.errorList}>There was an error joining Operation Code:
             <li className={styles.errorMessage}>{this.state.error}</li>
-          </ul> : null }
+          </ul>}
           {this.state.isLoading ? <FormButton className={styles.joinButton} text="Loading..." disabled theme="grey" /> : <FormButton className={styles.joinButton} text="Join" onClick={this.handleOnClick} theme="red" />}
         </Form>
       </Section>

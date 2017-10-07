@@ -10,9 +10,21 @@
   "parser": "babel-eslint",
   "rules": {
     "comma-dangle": [1, "only-multiline"],
+    "jsx-a11y/anchor-is-valid": 0,
+    "jsx-a11y/click-events-have-key-events": 1,
+    "jsx-a11y/label-has-for": [ 2, {
+      "components": [ "Label" ],
+      "required": {
+        "some": [ "nesting", "id" ]
+      },
+      "allowChildren": false,
+    }],
+    "object-curly-newline": 0,
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-curly-brace-presence": [2, { "props": "never", "children": "never" }],
     "react/prefer-stateless-function": 0,
     "react/no-did-mount-set-state": 0,
+    "react/no-unused-state": 1,
     "react/forbid-prop-types": 1,
     "import/extensions": 0,
     "import/no-extraneous-dependencies": 0,
