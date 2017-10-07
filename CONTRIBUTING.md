@@ -188,6 +188,10 @@ To add them in your path, you can go to your Control Panel by clicking on the `S
 
 Now add those paths one at a time that are listed above into your user environment path if they are not already there. This is assuming you are installing in the default folders during the installation of the programs used on the front-end.
 
+You can also install Github Desktop for a GUI Interface to Github.  If you do this you don't want to install the Command Line tools, as CMDER and Git For Windows are more recent versions.
+
+- [Github for Desktop](https://desktop.github.com/)
+
 #### NodeJS
 There are many ways and guides to install NodeJS on Windows.  The resources below are from Microsoft.
 - [NodeJS On Windows Guidelines](https://github.com/Microsoft/nodejs-guidelines)
