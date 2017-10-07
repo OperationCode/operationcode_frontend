@@ -12,7 +12,7 @@ import styles from './partners.css';
 const Partners = () => (
   <Section
     title="Partners"
-    theme="white"
+    theme="gray"
   >
     <div className={styles.partners}>
       <p>
