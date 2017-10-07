@@ -1,23 +1,22 @@
-import Section from 'shared/components/section/section';
 import React, { Component } from 'react';
-import Form from 'shared/components/form/form';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import config from 'config/environment';
 import _ from 'lodash';
-import * as CookieHelpers from 'shared/utils/cookieHelper';
-import FormEmail from 'shared/components/form/formEmail/formEmail';
-import FormInput from 'shared/components/form/formInput/formInput';
-import FormButton from 'shared/components/form/formButton/formButton';
-import SignUpLink from 'shared/components/signUpLink/signUpLink';
 import styles from './login.css';
+import Form from '../form/form';
+import Section from '../section/section';
+import * as CookieHelpers from '../../utils/cookieHelper';
+import FormEmail from '../form/formEmail/formEmail';
+import FormInput from '../form/formInput/formInput';
+import FormButton from '../form/formButton/formButton';
+import SignUpSection from './signUpSection/signUpSection';
 
 require('./login.css');
 const queryString = require('query-string');
 
 class Login extends Component {
-
   state = {
     email: '',
     emailValid: false,
@@ -155,16 +154,20 @@ class Login extends Component {
     }
 
     return (
-      <Section title="Login" theme="white">
-        <Form autoComplete>
-          <FormEmail id="email" displayName="Email" label="Email" onChange={this.onEmailChange} />
-          <FormInput id="password" displayName="Password" label="Password" inputType="password" onChange={this.onPasswordChange} />
-          {errorFeedback && <h2 className={styles.loginError}>{errorFeedback}</h2>}
-          <FormButton className={styles.Button} text="Login" onClick={this.handleOnClick} />
-        </Form>
-        <Link to="/reset_password">Reset Password</Link>
-        <SignUpLink />
-      </Section>
+      <div className={styles.gridRow}>
+        <Section title="Login" theme="white">
+          <Form autoComplete>
+            <FormEmail id="email" displayName="Email" label="Email" onChange={this.onEmailChange} />
+            <FormInput id="password" displayName="Password" label="Password" inputType="password" onChange={this.onPasswordChange} />
+            {errorFeedback && <h2 className={styles.loginError}>{errorFeedback}</h2>}
+            <Link className={styles.resetBtn} to="/reset_password">Reset Password</Link>
+            <FormButton className={styles.Button} text="Login" onClick={this.handleOnClick} />
+          </Form>
+        </Section>
+        <Section title="New to operationcode.org?" theme="white">
+          <SignUpSection />
+        </Section>
+      </div>
     );
   }
 }

@@ -13,7 +13,6 @@ import config from 'config/environment';
 import styles from './signup.css';
 
 class SignUp extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -116,12 +115,6 @@ class SignUp extends Component {
     return (
       <Section className={styles.signup} title="Join Operation Code">
         <Form className={styles.signupForm}>
-          <span>
-            Are you ready to deploy your future?  Join Operation Code
-            today and launch your career in software development.
-            Once you complete the form below you&#8217;ll be invited
-            to join our team on Slack and the <a href="https://community.operationcode.org/" target="_blank" rel="noopener noreferrer">forums</a>.  Make sure you stop in and say hi!
-          </span>
           <FormEmail
             id="email" placeholder="Email (Required)"
             onChange={this.onEmailChange}

@@ -31,11 +31,11 @@ class SquadsTable extends Component {
 
   fetchSquads = () => {
     getSquads()
-    .then((data) => {
-      this.setState({
-        squads: data
-      });
-    }).catch(this.setAuthFetchError);
+      .then((data) => {
+        this.setState({
+          squads: data
+        });
+      }).catch(this.setAuthFetchError);
   }
 
   rowClickHandler = (squad) => {

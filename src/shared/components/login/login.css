@@ -5,6 +5,7 @@
   align-self: center;
   margin-top: 2rem;
   width: 100%;
+  font-size: 1.5rem!important;
 }
 
 .loginError {
@@ -18,4 +19,25 @@ input, select{
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+}
+
+.resetBtn{
+  text-align:center;
+  margin-top:.5em;
+}
+
+.gridRow{
+  display:flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width:780px){
+  .gridRow{
+    flex-direction:row;
+  }
+
+  .gridRow > div{
+    width:50%;
+    box-sizing: border-box;
+  }
 }
