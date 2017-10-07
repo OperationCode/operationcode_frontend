@@ -155,7 +155,7 @@ class Login extends Component {
     }
 
     return (
-      <div className={styles.grid_row}>
+      <div className={styles.gridRow}>
         <Section title="Login" theme="white">
           <Form autoComplete>
             <FormEmail id="email" displayName="Email" label="Email" onChange={this.onEmailChange} />
