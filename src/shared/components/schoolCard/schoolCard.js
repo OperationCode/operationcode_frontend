@@ -1,45 +1,52 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './schoolCard.css';
 
-class SchoolCard extends Component {
-  render() {
-    return (
-      <div className={styles.schoolCard}>
-        <div className={styles.schoolCardImage}>
-          <a href={this.props.link} target="_blank" rel="noopener noreferrer">
-            <img src={this.props.logo} alt={this.props.alt} className={styles.logo} />
+const SchoolCard = ({
+  alt,
+  GI,
+  fullTime,
+  hardware,
+  link,
+  logo,
+  schoolAddress,
+  schoolCity,
+  schoolName,
+  schoolState
+}) => (
+  <div className={styles.schoolCard}>
+    <div className={styles.schoolCardImage}>
+      <a href={link} target="_blank" rel="noopener noreferrer">
+        <img src={logo} alt={alt} className={styles.logo} />
+      </a>
+    </div>
+
+    <div className={styles.schoolText}>
+      <p>
+        <span className={styles.schoolName}>
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            {schoolName}
           </a>
-        </div>
+        </span>
+        <br />
+        <span className={styles.schoolLocation}>
+          {schoolAddress.includes('Online') ? <p>Online Available<br /></p> : null}
+          {schoolCity}{schoolCity ? ', ' : null}
+          {schoolState}{schoolState ? <br /> : null}
+          <br />
+        </span>
+      </p>
 
-        <div className={styles.schoolText}>
-          <p>
-            <span className={styles.schoolName}>
-              <a href={this.props.link} target="_blank" rel="noopener noreferrer">
-                {this.props.schoolName}
-              </a>
-            </span>
-            <br />
-            <span className={styles.schoolLocation}>
-              {this.props.schoolAddress.includes('Online') ? <p>Online Available<br /></p> : null}
-              {this.props.schoolCity}{this.props.schoolCity ? ', ' : null}
-              {this.props.schoolState}{this.props.schoolState ? <br /> : null}
-              <br />
-            </span>
-          </p>
-
-          <p className={styles.schoolInfo}>
-            GI Bill Accepted: <b>{this.props.GI}</b>
-            <br />
-            Commitment: <b>{this.props.fullTime}</b>
-            <br />
-            Hardware Included: <b>{this.props.hardware}</b>
-          </p>
-        </div>
-      </div>
-    );
-  }
-}
+      <p className={styles.schoolInfo}>
+        GI Bill Accepted: <b>{GI}</b>
+        <br />
+        Commitment: <b>{fullTime}</b>
+        <br />
+        Hardware Included: <b>{hardware}</b>
+      </p>
+    </div>
+  </div>
+);
 
 SchoolCard.propTypes = {
   alt: PropTypes.string.isRequired,

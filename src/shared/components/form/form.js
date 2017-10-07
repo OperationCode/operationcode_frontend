@@ -1,22 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import styles from './form.css';
 
-class Form extends Component {
-
-  render() {
-    const classes = classNames({
-      [`${styles.form}`]: true,
-      [`${this.props.className}`]: this.props.className
-    });
-    return (
-      <form className={classes}>
-        {this.props.children}
-      </form>
-    );
-  }
-}
+const Form = ({ className, children }) => {
+  const classes = classNames({
+    [`${styles.form}`]: true,
+    [`${className}`]: className
+  });
+  return (
+    <form className={classes}>
+      {children}
+    </form>
+  );
+};
 
 Form.propTypes = {
   children: PropTypes.oneOfType([
