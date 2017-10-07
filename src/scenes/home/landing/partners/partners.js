@@ -26,7 +26,7 @@ const Partners = () => (
         organizations that are supporting our mission.
       </p>
     </div>
-  
+
     <div className={styles.partnerLogos}>
       <div>
         <a href="https://apexsystems.com/" target="_blank" rel="noopener noreferrer">
