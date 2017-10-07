@@ -2,10 +2,6 @@
   color: red;
 }
 
-h3 {
-  letter-spacing: .05em;
-}
-
 .applicationForm {
   display:flex;
   flex-direction: column;

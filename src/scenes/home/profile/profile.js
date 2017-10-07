@@ -1,55 +1,71 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-import { FaGraduationCap } from 'react-icons/lib/fa';
 import Section from 'shared/components/section/section';
+import IconCard from 'shared/components/iconCard/iconCard';
 import Idme from 'shared/components/idme/idme';
-import discourseImage from '../../../images/Discourse_logo.png';
-import slackImage from '../../../images/slack.png';
 import styles from './profile.css';
 
-class Profile extends Component {
+const Profile = ({ verified }) => (
+  <Section title="My Profile" theme="gray">
+    <div className={styles.profileContainer}>
+      <div className={styles.profileContainer__cards}>
+        <IconCard
+          title="Request a Mentor" fontAwesomeIcon="FaLifeBouy"
+          url="https://op.co.de/mentor-request"
+        />
 
-  render() {
-    return (
-      <div>
-        <Section title="Scholarship Opportunities" theme="white">
-          <span className={styles.profileText}>Scholarships to attend tech conferences for the military community!</span>
-          <Link to="/scholarships">
-            <FaGraduationCap className={styles.profileImage} size={150} />
-          </Link>
-        </Section>
-        <Section title="Operation Code Community" theme="white">
-          <span className={styles.profileText}>Visit the Operation Code Community by clicking below.</span>
-          <a href="https://community.operationcode.org" target="_blank" rel="noopener noreferrer">
-            <img className={styles.profileImage} src={discourseImage} alt="Visit the Operation Code Community" />
-          </a>
-        </Section>
+        <IconCard
+          title="Check for Scholarships" fontAwesomeIcon="FaGraduationCap"
+          url="/scholarships"
+        />
 
-        <Section title="Sign-in with Slack" theme="white">
-          <span className={styles.profileText}>Visit the Operation Code Slack Channel by clicking below.</span>
-          <a href="https://operation-code.slack.com" target="_blank" rel="noopener noreferrer">
-            <img className={styles.profileImage} alt="Sign in with Slack" src={slackImage} />
-          </a>
-        </Section>
+        <IconCard
+          title="Check for Open Jobs" fontAwesomeIcon="FaBriefcase"
+          url="/jobs"
+        />
 
-        <Section title="Veteran Status" theme="white">
-          <div>
-            {this.props.verified && <h2>Your profile is verified with id.me</h2>}
-            {!this.props.verified && <div className={styles.idmeButton}><Idme /></div>}
-          </div>
-        </Section>
+        <IconCard
+          title="Enter our Slack Channel" fontAwesomeIcon="FaSlack"
+          url="https://operation-code.slack.com/"
+        />
+
+        <IconCard
+          title="Enter our Discourse Forums" fontAwesomeIcon="FaCommentsO"
+          url="https://community.operationcode.org/"
+        />
+
+        <IconCard
+          title="Update My Info" fontAwesomeIcon="FaUser"
+          url="/signup-info"
+        />
       </div>
-    );
-  }
-}
+      <div className={styles.profileContainer__idMe}>
+        {verified && <h2>Your profile is verified with id.me</h2>}
+        {!verified && (
+          <div className={styles.profileContainer__idMe__btn}>
+            <span className={styles.profileContainer__idMe__title}>
+              Get Verified for Added Benefits
+            </span>
+            <p>
+              In order to take advantage of resources such as Mentorship and Scholarships, we
+              require that you verify your military affiliation status. We use Id.Me for
+              verification, a highly secure and specialized platform that will protect your
+              information. We will not store or transfer any of your sensitive information.
+            </p>
+            <Idme />
+          </div>
+        )}
+      </div>
+    </div>
+  </Section>
+);
 
 Profile.propTypes = {
-  verified: PropTypes.bool
+  verified: PropTypes.bool,
 };
 
 Profile.defaultProps = {
-  verified: false
+  verified: false,
 };
 
 export default Profile;

@@ -6,8 +6,7 @@ import * as ApiHelpers from 'shared/utils/apiHelper';
 import IndexTable from 'shared/components/indexTable/indexTable';
 import RequestModal from 'scenes/home/requestModal/requestModal';
 
-export default class MentorRequestsTable extends Component {
-
+class MentorRequestsTable extends Component {
   state = {
     requests: [],
     mentors: [],
@@ -16,12 +15,12 @@ export default class MentorRequestsTable extends Component {
 
   componentDidMount() {
     Promise.all([ApiHelpers.getRequests(), ApiHelpers.getMentors()])
-    .then((data) => {
-      this.setState({
-        requests: data[0],
-        mentors: data[1]
+      .then((data) => {
+        this.setState({
+          requests: data[0],
+          mentors: data[1]
+        });
       });
-    });
   }
 
   buildMentorOptions = () =>
@@ -29,7 +28,7 @@ export default class MentorRequestsTable extends Component {
       value: mentor.id,
       label: `${mentor.first_name} ${mentor.last_name}`
     })
-  );
+    );
 
   handleModalClose = () => this.setState({ activeRequest: null });
 
@@ -68,3 +67,5 @@ MentorRequestsTable.propTypes = {
 MentorRequestsTable.defaultProps = {
   signedIn: true,
 };
+
+export default MentorRequestsTable;

@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@storybook/addon-actions": "^3.2.11",
+    "@storybook/addon-links": "^3.2.10",
+    "@storybook/cli": "^3.2.10",
+    "@storybook/react": "^3.2.11",
     "axios": "^0.16.1",
     "classnames": "^2.2.5",
     "dateformat": "^2.0.0",
@@ -15,14 +19,14 @@
     "prop-types": "^15.5.8",
     "query-string": "^4.3.4",
     "rc-progress": "^2.2.2",
-    "react": "^15.5.4",
+    "react": "15.6.2",
     "react-dom": "^15.5.4",
     "react-error-overlay": "^1.0.7",
     "react-ga": "^2.2.0",
     "react-icons": "^2.2.5",
-    "react-modal": "^1.7.7",
+    "react-modal": "^2.3.3",
     "react-router": "^4.1.1",
-    "react-router-dom": "^4.1.1",
+    "react-router-dom": "^4.2.2",
     "react-scroll": "^1.5.4",
     "react-scroll-up-button": "^1.5.9",
     "react-select": "^1.0.0-rc.5",
@@ -31,10 +35,9 @@
     "universal-cookie": "^2.0.7"
   },
   "devDependencies": {
-    "@kadira/storybook": "^2.21.0",
     "autoprefixer": "7.1.0",
     "babel-core": "6.24.1",
-    "babel-eslint": "7.2.3",
+    "babel-eslint": "^8.0.1",
     "babel-jest": "20.0.3",
     "babel-loader": "7.0.0",
     "babel-preset-react-app": "^3.0.0",
@@ -45,8 +48,8 @@
     "css-loader": "0.28.1",
     "detect-port": "1.1.0",
     "dotenv": "2.0.0",
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb": "^15.0.1",
+    "eslint": "^4.8.0",
+    "eslint-config-airbnb": "^15.1.0",
     "eslint-import-resolver-webpack": "^0.8.1",
     "eslint-loader": "1.7.1",
     "eslint-plugin-flowtype": "2.33.0",
@@ -61,7 +64,9 @@
     "jest": "20.0.3",
     "object-assign": "4.1.1",
     "postcss-loader": "2.0.5",
-    "prettier-eslint": "^6.1.2",
+    "precommit-hook": "^3.0.0",
+    "prettier-eslint": "^8.2.0",
+    "prettier-eslint-cli": "^4.4.0",
     "promise": "7.1.1",
     "react-dev-utils": "^3.0.0",
     "style-loader": "0.13.1",
@@ -76,11 +81,14 @@
     "start": "node scripts/start.js",
     "start:server": "node server",
     "build": "node scripts/build.js",
+    "fix": "eslint --fix \"src/**/*.js\"",
+    "format": "prettier-eslint \"src/**/*.js\"",
     "test": "node scripts/test.js --env=jsdom",
-    "lint": "eslint src",
+    "lint": "eslint \"src/**/*.js\"",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "backend": "./bin/run_backend.sh"
+    "backend": "./bin/run_backend.sh",
+    "validate": "npm ls"
   },
   "jest": {
     "moduleDirectories": [
@@ -116,5 +124,10 @@
       "react-app"
     ]
   },
-  "homepage": "http://frontend.operationcode.org/"
+  "homepage": "http://frontend.operationcode.org/",
+  "pre-commit": [
+    "fix",
+    "format",
+    "lint"
+  ]
 }

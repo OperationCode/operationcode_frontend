@@ -4,7 +4,7 @@ import { getSquads } from 'shared/utils/apiHelper';
 import IndexTable from 'shared/components/indexTable/indexTable';
 import SquadsModal from './squadsModal';
 
-export default class SquadsTable extends Component {
+class SquadsTable extends Component {
   constructor(props) {
     super(props);
 
@@ -31,11 +31,11 @@ export default class SquadsTable extends Component {
 
   fetchSquads = () => {
     getSquads()
-    .then((data) => {
-      this.setState({
-        squads: data
-      });
-    }).catch(this.setAuthFetchError);
+      .then((data) => {
+        this.setState({
+          squads: data
+        });
+      }).catch(this.setAuthFetchError);
   }
 
   rowClickHandler = (squad) => {
@@ -63,3 +63,5 @@ export default class SquadsTable extends Component {
     );
   }
 }
+
+export default SquadsTable;

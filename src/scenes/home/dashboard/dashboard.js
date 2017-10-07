@@ -5,7 +5,6 @@ import Section from 'shared/components/section/section';
 import styles from './dashboard.css';
 
 class Dashboard extends Component {
-
   state = {
     mentor: null
   }
@@ -18,34 +17,34 @@ class Dashboard extends Component {
   renderLinks = () => {
     const { mentor } = this.state;
     return mentor === 'true'
-    ? (
-      <div>
-        <h1 className={styles.link}>
-          <Link to="/mentor/requests">View Requests</Link>
-        </h1>
-        <h1 className={styles.link}>
-          <Link to="/squads/new-squad">Create a Squad</Link>
-        </h1>
-        <h1 className={styles.link}>
-          <Link to="/squads">View Squads</Link>
-        </h1>
-        <h1 className={styles.link}>
-          <Link to="/mentors">View Mentors</Link>
-        </h1>
-      </div>
-    ) : (
-      <div>
-        <h1 className={styles.link}>
-          <Link to="/mentor-request">Request Help</Link>
-        </h1>
-        <h1 className={styles.link}>
-          <Link to="/squads">Join a Squad</Link>
-        </h1>
-        <h1 className={styles.link}>
-          <Link to="/mentors">View Mentors</Link>
-        </h1>
-      </div>
-    );
+      ? (
+        <div>
+          <h1 className={styles.link}>
+            <Link to="/mentor/requests">View Requests</Link>
+          </h1>
+          <h1 className={styles.link}>
+            <Link to="/squads/new-squad">Create a Squad</Link>
+          </h1>
+          <h1 className={styles.link}>
+            <Link to="/squads">View Squads</Link>
+          </h1>
+          <h1 className={styles.link}>
+            <Link to="/mentors">View Mentors</Link>
+          </h1>
+        </div>
+      ) : (
+        <div>
+          <h1 className={styles.link}>
+            <Link to="/mentor-request">Request Help</Link>
+          </h1>
+          <h1 className={styles.link}>
+            <Link to="/squads">Join a Squad</Link>
+          </h1>
+          <h1 className={styles.link}>
+            <Link to="/mentors">View Mentors</Link>
+          </h1>
+        </div>
+      );
   }
   render() {
     return (

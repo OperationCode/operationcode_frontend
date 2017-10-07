@@ -1,17 +1,64 @@
-.idmeButton {
-  display:flex;
+.profileContainer {
+  display: flex;
+  justify-content: space-between;
 }
 
-.profileText {
+.profileContainer__cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 60%;
+}
+
+.profileContainer__idMe {
+  width: 30%;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.profile__icon {
+  height: 100px;
+  width: 100px;
+}
+
+.profileContainer__idMe__btn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileContainer__idMe__title {
   font-size: 1.5rem;
 }
 
-.profileImage {
-  width: 220px;
-  margin-top: 50px;
+@media screen and (max-width: 1000px) {
+  .profileContainer {
+    flex-direction: column;
+  }
+  .profileContainer__cards {
+    width: 100%;
+  }
+  .profileContainer__idMe {
+    width: 100%;
+  }
 }
 
-.profileImage:hover {
-  opacity: 0.5;
-  filter: alpha(opacity=50); /* For IE8 and earlier */
+@media screen and (max-width: 650px) {
+  .profileContainer__cards > * {
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+  .profile__icon {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .profileContainer__cards > * {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
 }

@@ -10,7 +10,6 @@ import FormSelect from 'shared/components/form/formSelect/formSelect';
 import styles from 'shared/components/modal/modal.css';
 
 class RequestModal extends Component {
-
   state = {
     services: [],
     error: false,
