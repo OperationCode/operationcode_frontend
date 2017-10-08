@@ -13,6 +13,7 @@
   border: 3px solid #41a4c0;
   width: 150px;
   height: 150px;
+  max-height: 150px;
 }
 
 .cardText {
