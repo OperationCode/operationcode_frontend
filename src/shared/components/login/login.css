@@ -1,6 +1,7 @@
-.login Section {
+.login section {
   align-self: center;
 }
+
 .Button {
   align-self: center;
   margin-top: 2rem;
@@ -8,14 +9,38 @@
 }
 
 .loginError {
-  color:red;
+  color: red;
 }
+
 select {
-    border:1px solid #ccc;
-    vertical-align:top;
+  border: 1px solid #ccc;
+  vertical-align: top;
 }
-input, select{
+
+input,
+select {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+}
+
+.resetBtn {
+  text-align: center;
+  margin-top: 0.5em;
+}
+
+.gridRow {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 780px) {
+  .gridRow {
+    flex-direction: row;
+  }
+
+  .gridRow > div {
+    width: 50%;
+    box-sizing: border-box;
+  }
 }
