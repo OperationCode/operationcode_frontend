@@ -18,7 +18,7 @@ class MentorsTable extends Component {
   render() {
     const { activeMentor } = this.state;
     return (
-      <div style={{ width: '100%' }}>
+      <div style={{ width: '96%', padding: '2%' }}>
         <IndexTable
           heading="Mentors"
           columns={MENTOR_COLUMNS}
