@@ -28,7 +28,8 @@ class Login extends Component {
     error: '',
     sso: null,
     sig: null,
-    ssoParamsPresent: false
+    ssoParamsPresent: false,
+    submitted: false
   }
 
   componentDidMount = () => {
@@ -119,7 +120,7 @@ class Login extends Component {
 
   handleOnClick = (e) => {
     e.preventDefault();
-
+    this.setState({ submitted: true });
     if (this.isFormValid()) {
       axios.post(`${config.backendUrl}/sessions`, {
         user: {
@@ -149,14 +150,14 @@ class Login extends Component {
     let errorFeedback;
     if (errorStatus === 401) {
       errorFeedback = 'Sorry, you entered an invalid email or password.';
-    } else if (errorMessage) {
+    } else if (errorMessage && (this.state.submitted === true)) {
       errorFeedback = `Login error: ${errorMessage}.`;
     }
 
     return (
       <Section title="Login" theme="white">
         <Form autoComplete>
-          <FormEmail id="email" displayName="Email" label="Email" onChange={this.onEmailChange} />
+          <FormEmail id="email" displayName="Email" label="Email" onChange={this.onEmailChange} submitted={this.state.submitted} />
           <FormInput id="password" displayName="Password" label="Password" inputType="password" onChange={this.onPasswordChange} />
           {errorFeedback && <h2 className={styles.loginError}>{errorFeedback}</h2>}
           <FormButton className={styles.Button} text="Login" onClick={this.handleOnClick} />
