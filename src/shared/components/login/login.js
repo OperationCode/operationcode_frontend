@@ -121,6 +121,8 @@ class Login extends Component {
   handleOnClick = (e) => {
     e.preventDefault();
 
+    this.setState({ submitted: true });
+
     if (this.isFormValid()) {
       axios.post(`${config.backendUrl}/sessions`, {
         user: {
@@ -142,8 +144,6 @@ class Login extends Component {
       }).catch((error) => {
         this.setErrorMessage(error);
       });
-    } else {
-      this.setState({ submitted: true });
     }
   }
 
