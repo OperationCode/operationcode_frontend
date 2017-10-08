@@ -4,7 +4,7 @@ import styles from './galaBanner.css';
 
 const GalaBanner = () => (
   <div className={styles.galaBannerWrapper}>
-    <Link to={'/gala'}>
+    <Link to="/gala">
       <img className={styles.galaImage} alt="gala banner" />
     </Link>
   </div>

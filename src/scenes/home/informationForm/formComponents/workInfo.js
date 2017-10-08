@@ -6,7 +6,9 @@ import FormSelect from 'shared/components/form/formSelect/formSelect';
 import { WORKINFO, MENTOR_ANSWERS } from 'shared/constants/status';
 import styles from './formComponents.css';
 
-const WorkInfo = ({ percent, identifier, update, role, company }) => (
+const WorkInfo = ({
+  percent, identifier, update, role, company
+}) => (
   <Form className={styles.signup}>
     <h3>Progress = {percent}%</h3>
     <Line percent={percent} strokeWidth="4" strokeColor="green" />
