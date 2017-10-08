@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { makeGenericFetch } from 'shared/utils/apiHelper';
 import LinkButton from 'shared/components/linkButton/linkButton';
 import Section from 'shared/components/section/section';
 import ApprovedSchools from './approvedSchools/approvedSchools';
@@ -12,15 +13,13 @@ class CodeSchools extends Component {
     super(props);
 
     this.state = {
-      schools: null
+      schools: []
     };
   }
 
   componentWillMount() {
-    return fetch('https://api.operationcode.org/api/v1/code_schools.json').then(response =>
-      response.json().then((data) => {
-        this.setState({ schools: data });
-      })
+    makeGenericFetch('code_schools').then(schools =>
+      this.setState({ schools })
     );
   }
 
