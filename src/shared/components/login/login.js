@@ -158,7 +158,7 @@ class Login extends Component {
         <Form autoComplete>
           <FormEmail id="email" displayName="Email" label="Email" onChange={this.onEmailChange} />
           <FormInput id="password" displayName="Password" label="Password" inputType="password" onChange={this.onPasswordChange} />
-          {errorFeedback && <h2 className={styles.loginError}>{errorFeedback}</h2>}
+          {errorFeedback && <p className={styles.loginError}>{errorFeedback}</p>}
           <FormButton className={styles.Button} text="Login" onClick={this.handleOnClick} />
         </Form>
         <Link to="/reset_password">Reset Password</Link>
