@@ -23,6 +23,7 @@ class Login extends Component {
     password: '',
     passwordValid: false,
     authenticated: false,
+    submitted: false,
     errorStatus: -1,
     errorMessage: '',
     error: '',
@@ -141,6 +142,8 @@ class Login extends Component {
       }).catch((error) => {
         this.setErrorMessage(error);
       });
+    } else {
+      this.setState({ submitted: true });
     }
   }
 
@@ -156,7 +159,7 @@ class Login extends Component {
     return (
       <Section title="Login" theme="white">
         <Form autoComplete>
-          <FormEmail id="email" displayName="Email" label="Email" onChange={this.onEmailChange} />
+          <FormEmail id="email" displayName="Email" label="Email" onChange={this.onEmailChange} submitted={this.state.submitted} />
           <FormInput id="password" displayName="Password" label="Password" inputType="password" onChange={this.onPasswordChange} />
           {errorFeedback && <h2 className={styles.loginError}>{errorFeedback}</h2>}
           <FormButton className={styles.Button} text="Login" onClick={this.handleOnClick} />
