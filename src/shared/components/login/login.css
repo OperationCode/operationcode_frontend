@@ -26,17 +26,17 @@ input, select{
   margin-top:.5em;
 }
 
-.gridRow{
+.grid_row{
   display:flex;
   flex-direction: column;
 }
 
 @media screen and (min-width:780px){
-  .gridRow{
+  .grid_row{
     flex-direction:row;
   }
 
-  .gridRow > div{
+  .grid_row > div{
     width:50%;
     box-sizing: border-box;
   }
