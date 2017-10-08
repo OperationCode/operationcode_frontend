@@ -22,9 +22,9 @@
 }
 
 .blue {
-  background-color: #249CBC;
-  border-color:#249CBC;
-  color: #fff;
+  background-color: #249CBC !important;
+  border-color:#249CBC !important;
+  color: #fff !important;
 }
 
 .grey {
