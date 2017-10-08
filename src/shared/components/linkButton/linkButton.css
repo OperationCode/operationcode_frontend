@@ -31,18 +31,6 @@
   cursor: pointer;
 }
 
-.red-large-centered{
-  background-color: #D1665A;
-  border-color: #D1665A;
-  color: #FFF;
-  font-size: 1.5rem;
-  padding: 10px 40px;
-  cursor: pointer;
-  display:block;
-  margin:auto;
-  margin-top: 2rem;
-}
-
 .red:hover {
   background-color: #F1665A;
   border-color: #F1665A;
