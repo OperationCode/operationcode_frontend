@@ -1,6 +1,7 @@
-.login Section {
+.login section {
   align-self: center;
 }
+
 .Button {
   align-self: center;
   margin-top: 2rem;
@@ -8,38 +9,38 @@
 }
 
 .loginError {
-  color:red;
+  color: red;
 }
+
 select {
-    border:1px solid #ccc;
-    vertical-align:top;
+  border: 1px solid #ccc;
+  vertical-align: top;
 }
-input, select{
+
+input,
+select {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
-<<<<<<< HEAD
 
-.resetBtn{
-  text-align:right;
-  margin-top:.5em;
+.resetBtn {
+  text-align: center;
+  margin-top: 0.5em;
 }
 
-.grid_row{
-  display:flex;
+.gridRow {
+  display: flex;
   flex-direction: column;
 }
 
-@media screen and (min-width:780px){
-  .grid_row{
-    flex-direction:row;
+@media screen and (min-width: 780px) {
+  .gridRow {
+    flex-direction: row;
   }
 
-  .grid_row > div{
-    width:50%;
+  .gridRow > div {
+    width: 50%;
     box-sizing: border-box;
   }
 }
-=======
->>>>>>> parent of 4d786c4... update singUpLink to convert it into a Prominent Sign In section into Login, delete sign in introduction text, add some styles to login and signInLin
