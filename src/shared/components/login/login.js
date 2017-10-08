@@ -154,6 +154,7 @@ class Login extends Component {
     }
 
     return (
+<<<<<<< HEAD
       <div className={styles.grid_row}>
         <Section title="Login" theme="white">
           <Form autoComplete>
@@ -168,6 +169,18 @@ class Login extends Component {
           <SignUpSection />
         </Section>
       </div>
+=======
+      <Section title="Login" theme="white">
+        <Form autoComplete>
+          <FormEmail id="email" displayName="Email" label="Email" onChange={this.onEmailChange} />
+          <FormInput id="password" displayName="Password" label="Password" inputType="password" onChange={this.onPasswordChange} />
+          {errorFeedback && <h2 className={styles.loginError}>{errorFeedback}</h2>}
+          <FormButton className={styles.Button} text="Login" onClick={this.handleOnClick} />
+        </Form>
+        <Link to="/reset_password">Reset Password</Link>
+        <SignUpLink />
+      </Section>
+>>>>>>> parent of 4d786c4... update singUpLink to convert it into a Prominent Sign In section into Login, delete sign in introduction text, add some styles to login and signInLin
     );
   }
 }

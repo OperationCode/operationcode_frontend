@@ -20,6 +20,7 @@ input, select{
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
+<<<<<<< HEAD
 
 .resetBtn{
   text-align:center;
@@ -41,3 +42,5 @@ input, select{
     box-sizing: border-box;
   }
 }
+=======
+>>>>>>> parent of 4d786c4... update singUpLink to convert it into a Prominent Sign In section into Login, delete sign in introduction text, add some styles to login and signInLin
