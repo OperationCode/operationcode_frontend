@@ -4,7 +4,9 @@ import PropTypes from 'prop-types';
 import * as faIcons from 'react-icons/lib/fa';
 import styles from './iconCard.css';
 
-const IconCard = ({ fontAwesomeIcon, iconAboveHeading, iconSize, subText, title, url, usingHtml }) => {
+const IconCard = ({
+  fontAwesomeIcon, iconAboveHeading, iconSize, subText, title, url, usingHtml
+}) => {
   const Icon = faIcons[fontAwesomeIcon];
 
   let iconBefore = null;
@@ -86,9 +88,7 @@ function createChainableTypeChecker(validate) {
     if (props[propName] === null) {
       const locationName = ReactPropTypeLocationNames[location];
       if (isRequired) {
-        return new Error(
-          (`Required ${locationName} ${propName} was not specified in ${componentName}.`)
-        );
+        return new Error((`Required ${locationName} ${propName} was not specified in ${componentName}.`));
       }
       return null;
     }

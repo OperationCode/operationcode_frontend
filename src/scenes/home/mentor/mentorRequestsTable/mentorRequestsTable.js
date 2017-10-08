@@ -27,8 +27,7 @@ class MentorRequestsTable extends Component {
     this.state.mentors.map(mentor => ({
       value: mentor.id,
       label: `${mentor.first_name} ${mentor.last_name}`
-    })
-    );
+    }));
 
   handleModalClose = () => this.setState({ activeRequest: null });
 

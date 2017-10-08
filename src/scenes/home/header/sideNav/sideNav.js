@@ -23,7 +23,7 @@ const SideNav = ({ children, isVisible, onClose }) => (
 SideNav.propTypes = {
   children: PropTypes.node.isRequired,
   isVisible: PropTypes.bool,
-  onClose: PropTypes.func.isRequired
+  onClose: PropTypes.func
 };
 
 SideNav.defaultProps = {
