@@ -51,7 +51,12 @@ class FormInput extends Component {
           placeholder={this.props.placeholder}
           onChange={this.handleChange}
         />
-        {!this.state.isValid && <span>{this.props.validationErrorMessage}</span>}
+        {(this.props.submitted !== null) ? (
+            this.props.submitted && !this.state.isValid && <span>{this.props.validationErrorMessage}</span>
+          ) : (
+            !this.state.isValid && <span>{this.props.validationErrorMessage}</span>
+          )
+        }
       </div>
     );
   }
@@ -65,7 +70,8 @@ FormInput.propTypes = {
   validationErrorMessage: PropTypes.string,
   validateFunc: PropTypes.func,
   onChange: PropTypes.func,
-  inputType: PropTypes.string
+  inputType: PropTypes.string,
+  submitted: PropTypes.bool
 };
 
 FormInput.defaultProps = {
@@ -75,7 +81,8 @@ FormInput.defaultProps = {
   validationErrorMessage: null,
   validateFunc: null,
   onChange: null,
-  inputType: "text"
+  inputType: "text",
+  submitted: null
 };
 
 export default FormInput;

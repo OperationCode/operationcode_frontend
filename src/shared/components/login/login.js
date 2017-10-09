@@ -23,6 +23,7 @@ class Login extends Component {
     password: '',
     passwordValid: false,
     authenticated: false,
+    submitted: false,
     errorStatus: -1,
     errorMessage: '',
     error: '',
@@ -120,6 +121,8 @@ class Login extends Component {
   handleOnClick = (e) => {
     e.preventDefault();
 
+    this.setState({ submitted: true });
+
     if (this.isFormValid()) {
       axios.post(`${config.backendUrl}/sessions`, {
         user: {
@@ -156,7 +159,7 @@ class Login extends Component {
     return (
       <Section title="Login" theme="white">
         <Form autoComplete>
-          <FormEmail id="email" displayName="Email" label="Email" onChange={this.onEmailChange} />
+          <FormEmail id="email" displayName="Email" label="Email" onChange={this.onEmailChange} submitted={this.state.submitted} />
           <FormInput id="password" displayName="Password" label="Password" inputType="password" onChange={this.onPasswordChange} />
           {errorFeedback && <p className={styles.loginError}>{errorFeedback}</p>}
           <FormButton className={styles.Button} text="Login" onClick={this.handleOnClick} />
