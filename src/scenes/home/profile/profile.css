@@ -9,6 +9,7 @@
   align-items: center;
   flex-wrap: wrap;
   width: 60%;
+  max-width: 900px;
 }
 
 .profileContainer__idMe {
@@ -63,8 +64,8 @@
   }
 }
 
-@media screen and (min-width: 1000px) {
-  .profileContainer__cards > a {
-    width: 25%;
+@media screen and (max-width: 2875px) {
+  .profileContainer__cards {
+    max-width: 900px;
   }
 }
