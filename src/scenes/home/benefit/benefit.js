@@ -38,6 +38,7 @@ const Benefit = () => (
         <br />
         <h5>Buy Tickets Now!</h5>
         <p>Individual tickets start at $85.</p>
+        <br />
         <p className={styles.cta}>
           <LinkButton
             text="Purchase Tickets"
