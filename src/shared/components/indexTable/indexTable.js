@@ -3,6 +3,27 @@ import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Heading from 'shared/components/heading/heading';
 import ReactTable from 'react-table';
+import buttonStyles from 'shared/styles/button.css';
+
+/* eslint-disable react/prop-types */
+function defaultButton(props) {
+  const className = [
+    '-btn',
+    buttonStyles.blue
+  ];
+
+  return (
+    <button type="button" {...props} className={className.join(' ')}>{ props.children }</button>
+  );
+}
+/* eslint-enable */
+
+function paginationProps() {
+  return {
+    PreviousComponent: defaultButton,
+    NextComponent: defaultButton
+  };
+}
 
 class IndexTable extends Component {
   static propTypes = {
@@ -10,12 +31,12 @@ class IndexTable extends Component {
     heading: PropTypes.string.isRequired,
     onRowClick: PropTypes.func,
     fetchRecords: PropTypes.func.isRequired,
-    showPagination: PropTypes.bool
+    showPagination: PropTypes.bool,
   };
 
   static defaultProps = {
     onRowClick: () => {},
-    showPagination: true
+    showPagination: true,
   };
 
   state = {
@@ -59,6 +80,7 @@ class IndexTable extends Component {
           data={this.state.data}
           columns={this.props.columns}
           getTdProps={this.handleRowClick}
+          getPaginationProps={paginationProps}
           minWidth={1000}
           showPagination={this.props.showPagination}
         />
