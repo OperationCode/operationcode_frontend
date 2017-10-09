@@ -34,9 +34,9 @@ class Header extends Component {
         {mentor && <NavItem to="/requests" text="Requests" onClick={onClick} />}
         {signedIn && <NavItem to="/squads" text="Squads" onClick={onClick} />}
         {signedIn ? <NavItem to="/profile" text="Profile" onClick={onClick} />
-                  : <NavItem to="/join" text="Join" onClick={onClick} />}
+          : <NavItem to="/join" text="Join" onClick={onClick} />}
         {signedIn ? <NavItem to="/" text="Logout" onClick={this.props.logOut} />
-                  : <NavItem to="/login" text="Login" onClick={onClick} />}
+          : <NavItem to="/login" text="Login" onClick={onClick} />}
       </span>
     );
   }

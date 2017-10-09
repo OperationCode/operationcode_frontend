@@ -20,8 +20,7 @@ class CodeSchools extends Component {
     return fetch('https://api.operationcode.org/api/v1/code_schools.json').then(response =>
       response.json().then((data) => {
         this.setState({ schools: data });
-      })
-    );
+      }));
   }
 
   render() {
@@ -46,13 +45,13 @@ class CodeSchools extends Component {
           <div className={styles.filterButtonDiv}>
             <LinkButton
               link="approvedSchools"
-              text="Code Schools with VA Approval"
+              text="VA-Approved Schools"
               theme="blue"
               scrollLink
             />
             <LinkButton
               link="partnerSchools"
-              text="Partner Schools with Scholarships"
+              text="Partnered Schools"
               theme="blue"
               scrollLink
             />

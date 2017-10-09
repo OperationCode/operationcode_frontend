@@ -9,6 +9,7 @@
 
 .loginError {
   color:red;
+  font-weight: bold;
 }
 select {
     border:1px solid #ccc;

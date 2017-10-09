@@ -1,29 +1,27 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './staffCard.css';
 
-class StaffCard extends Component {
-  render() {
-    return (
-      <div className={styles.staffCard}>
-        <img className={styles.img} src={this.props.src} alt={this.props.alt} />
-        <span className={styles.name}>
-          {this.props.name}
-        </span>
-        <hr className={styles.hr} />
-        <span className={styles.item}>
-          <span className={styles.upper}>Role: </span> {this.props.role}
-        </span>
-        <span className={styles.item}>
-          <span className={styles.upper}>Twitter: </span> {this.props.twitter}
-        </span>
-        <span className={styles.item}>
-          <span className={styles.upper}>Email: </span> {this.props.email}
-        </span>
-      </div>
-    );
-  }
-}
+const StaffCard = ({
+  src, alt, name, role, twitter, email
+}) => (
+  <div className={styles.staffCard}>
+    <img className={styles.img} src={src} alt={alt} />
+    <span className={styles.name}>
+      {name}
+    </span>
+    <hr className={styles.hr} />
+    <span className={styles.item}>
+      <span className={styles.upper}>Role: </span> {role}
+    </span>
+    <span className={styles.item}>
+      <span className={styles.upper}>Twitter: </span> {twitter}
+    </span>
+    <span className={styles.item}>
+      <span className={styles.upper}>Email: </span> {email}
+    </span>
+  </div>
+);
 
 StaffCard.propTypes = {
   name: PropTypes.string.isRequired,
