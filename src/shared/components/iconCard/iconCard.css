@@ -20,7 +20,7 @@ a.iconCard:hover {
 }
 
 .iconCardWithSubText {
-  height: 425px;
+  min-height: 350px;
 }
 
 .iconCard__icon {
