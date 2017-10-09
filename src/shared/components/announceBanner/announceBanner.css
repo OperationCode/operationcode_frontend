@@ -1,0 +1,24 @@
+.announceBannerImage,
+.announceBannerImageFallback {
+  width: 100%;
+  border-top: 3px solid #41a4c0;
+  border-bottom: 3px solid #41a4c0;
+}
+
+.announceBannerImage {
+  display: block;
+}
+
+.announceBannerImageFallback {
+  display: none;
+}
+
+@media screen and (max-width: 450px) {
+  .announceBannerImage {
+    display: none;
+  }
+
+  .announceBannerImageFallback {
+    display: block;
+  }
+}
