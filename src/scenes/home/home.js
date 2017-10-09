@@ -11,10 +11,8 @@ import AuthenticatedRoute from 'shared/components/authenticatedRoute/authenticat
 import familyImage from 'images/Family-2.jpg';
 import Profile from './profile/profile';
 import SignUp from './signup/signup';
-import MentorRequestsTable from './mentor/mentorRequestsTable/mentorRequestsTable';
 import SquadsTable from './squads/squadsTable/squadsTable';
 import Dashboard from './dashboard/dashboard';
-import MentorsTable from './mentor/mentorsTable/mentorsTable';
 import Scholarships from './scholarship/scholarships';
 import ScholarshipApplication from './scholarshipApplication/scholarshipApplication';
 import Team from './team/team';
@@ -195,21 +193,9 @@ class Home extends Component {
               )}
             />
             <Route
-              path="/requests"
-              render={() => (
-                <MentorRequestsTable {...authProps} />
-              )}
-            />
-            <Route
               path="/squads/new-squad"
               render={() => (
                 <SquadsNew {...authProps} />
-              )}
-            />
-            <Route
-              exact path="/mentors"
-              render={() => (
-                <MentorsTable {...authProps} />
               )}
             />
             <Route
