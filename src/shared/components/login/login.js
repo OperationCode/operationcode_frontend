@@ -50,7 +50,7 @@ class Login extends Component {
   };
 
   setSsoParams = () => {
-    const parsed = queryString.parse(location.search);
+    const parsed = queryString.parse(location.search); //eslint-disable-line
 
     if (this.state.ssoParamsPresent) {
       this.setState(
@@ -81,7 +81,7 @@ class Login extends Component {
   //       to discourse with our payload and sig
   //     * These values are provided by the backend
   checkForSsoParams = () => {
-    const parsed = queryString.parse(location.search);
+    const parsed = queryString.parse(location.search); //eslint-disable-line
 
     if (parsed.sso && parsed.sig) {
       this.setState({ ssoParamsPresent: true }, this.setSsoParams);
