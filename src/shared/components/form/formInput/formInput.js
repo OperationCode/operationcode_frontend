@@ -44,14 +44,14 @@ class FormInput extends Component {
         {this.props.label && <Label htmlFor={this.props.id}>{this.props.label}</Label>}
 
         <input
-          className={!this.state.isValid && styles.error}
+          className={(!this.state.isValid && this.props.submitted) && styles.error}
           id={this.props.id}
           type={this.props.inputType}
           value={this.state.text}
           placeholder={this.props.placeholder}
           onChange={this.handleChange}
         />
-        {!this.state.isValid && <span>{this.props.validationErrorMessage}</span>}
+        {(!this.state.isValid && this.props.submitted) && <span>{this.props.validationErrorMessage}</span>}
       </div>
     );
   }
@@ -65,7 +65,8 @@ FormInput.propTypes = {
   validationErrorMessage: PropTypes.string,
   validateFunc: PropTypes.func,
   onChange: PropTypes.func,
-  inputType: PropTypes.string
+  inputType: PropTypes.string,
+  submitted: PropTypes.bool
 };
 
 FormInput.defaultProps = {
@@ -75,7 +76,8 @@ FormInput.defaultProps = {
   validationErrorMessage: null,
   validateFunc: null,
   onChange: null,
-  inputType: "text"
+  inputType: "text",
+  submitted: false
 };
 
 export default FormInput;
