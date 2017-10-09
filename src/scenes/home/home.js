@@ -229,6 +229,12 @@ class Home extends Component {
                 <Benefit {...authProps} />
               )}
             />
+            <Route
+              path="/gala"
+              render={() => (
+                <Benefit {...authProps} />
+              )}
+            />
             {/* eslint-disable */}
             <Route
               path="/newgibill"
