@@ -62,3 +62,9 @@
     margin-left: 10px;
   }
 }
+
+@media screen and (min-width: 1000px) {
+  .profileContainer__cards > a {
+    width: 25%;
+  }
+}
