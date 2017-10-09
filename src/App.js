@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Route, Router } from 'react-router';
 import ReactGA from 'react-ga';
 import createHistory from 'history/createBrowserHistory';
-import scrollToTop from 'shared/components/scrollToTop/scrollToTop';
+import ScrollToTop from 'shared/components/scrollToTop/scrollToTop';
 import Home from './scenes/home/home';
 
 class App extends Component {
@@ -24,9 +24,9 @@ class App extends Component {
   render() {
     return (
       <Router history={this.history} >
-        <scrollToTop>
+        <ScrollToTop>
           <Route path="/" component={Home} />
-        </scrollToTop>
+        </ScrollToTop>
       </Router>
     );
   }

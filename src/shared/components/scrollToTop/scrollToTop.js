@@ -2,7 +2,7 @@ import { Component } from 'react';
 import { withRouter } from 'react-router';
 import PropTypes from 'prop-types';
 
-class scrollToTop extends Component {
+class ScrollToTop extends Component {
   componentDidUpdate(prevProps) {
     if (this.props.location !== prevProps.location) {
       window.scrollTo(0, 0);
@@ -14,9 +14,9 @@ class scrollToTop extends Component {
   }
 }
 
-scrollToTop.propTypes = {
+ScrollToTop.propTypes = {
   children: PropTypes.object.isRequired, // eslint-disable-line
   location: PropTypes.object.isRequired, // eslint-disable-line
 };
 
-export default withRouter(scrollToTop);
+export default withRouter(ScrollToTop);
