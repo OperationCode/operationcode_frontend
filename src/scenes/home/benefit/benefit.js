@@ -14,10 +14,10 @@ const Benefit = () => (
       <p>
         The Operation Code Board of Directors, all-volunteer staff, and 3,000+ members cordially
         invite you to the <b>Operation Code Veteran’s Day Benefit Dinner & Silent Auction</b> on
-        November 11, 2017 in the Governor Ballroom at Portland’s historic Sentinel Hotel.
+        November 10, 2017 in the Governor Ballroom at Portland’s historic Sentinel Hotel.
       </p>
       <div className={styles.center}>
-        <h5>Nov 11, 2017 at 5:30 PM</h5>
+        <h5>Nov 10, 2017 at 5:30 PM</h5>
         <h5>Governor&#39;s Ballroom, Sentinel Hotel</h5>
         <h5>Portland, Oregon</h5>
         <p>

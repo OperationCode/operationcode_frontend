@@ -25,7 +25,7 @@ const Landing = () => (
       link="/benefit"
       imageSource={BenefitBanner}
       fallbackImage450pxWideSource={MobileBenefitBanner}
-      altText="Click here to find more information about our Benefit Dinner and Silent Auction on November 11th"
+      altText="Click here to find more information about our Benefit Dinner and Silent Auction on November 10th"
     />
     <WhatWeDo />
     <Membership />
