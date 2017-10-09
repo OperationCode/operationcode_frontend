@@ -13,7 +13,7 @@ class ResetPassword extends Component {
   }
 
   componentDidMount = () => {
-    const parsed = queryString.parse(location.search);
+    const parsed = queryString.parse(window.location.search);
     this.setState({ resetPasswordToken: parsed.reset_password_token });
   }
 

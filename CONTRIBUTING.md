@@ -46,14 +46,14 @@ Lastly, if you run into any problems with the following instructions, please try
 
 1. Click on the 'Fork' button on the top right corner of the page. You'll have your own copy of the repository available on your Github account.
 2. Go to the forked repository page on your Github account.
-3. Click on the green 'Clone or download' button and copy the link.  
-Your link will look like `https://github.com/<your_username>/operationcode_frontend.git`.  
+3. Click on the green 'Clone or download' button and copy the link.
+Your link will look like `https://github.com/<your_username>/operationcode_frontend.git`.
 (Use the HTTPS link. Click [here](https://help.github.com/articles/which-remote-url-should-i-use/) for more info).
 4. Open a terminal on your system and move to the directory where the repository should be.
 5. Run `git clone <paste the link here>`. You'll now have a local copy of the repository.
 6. `cd` to the repository.
-7. Run `git remote add upstream https://github.com/OperationCode/operationcode_frontend.git`.  
-**Note:** You may replace 'upstream' with any nickname you'd like to give to the original repository.  
+7. Run `git remote add upstream https://github.com/OperationCode/operationcode_frontend.git`.
+**Note:** You may replace 'upstream' with any nickname you'd like to give to the original repository.
 Run `git remote -v` to check if both the repositories are listed.
 8. Now you may make changes, add and commit to the repository.
 
@@ -73,7 +73,7 @@ Everytime you want to resolve an issue, you'll need to create a branch, code the
 When finished, [create a PR on GitHub](https://help.github.com/articles/creating-a-pull-request/).
 
 #### Returning To Work After A Break
-Some issues take awhile to code a solution for. Just because you're working on an issue doesn't mean everybody puts there work on hold for you! You'll want to continually rebase your branch to ensure that your PR will have a seamless merge. Assuming you're ready to code again and you're already in the /operationcode_frontend directory...
+Some issues take awhile to code a solution for. Just because you're working on an issue doesn't mean everybody puts their work on hold for you! You'll want to continually rebase your branch to ensure that your PR will have a seamless merge. Assuming you're ready to code again and you're already in the /operationcode_frontend directory...
 1. [Keep your fork in sync with Operation Code's master branch.](https://help.github.com/articles/syncing-a-fork/)
 2. Run `yarn install`
 3. Run `yarn start`
@@ -81,7 +81,7 @@ Some issues take awhile to code a solution for. Just because you're working on a
 
 ## Technologies
 Here is a breakdown and summary of the main technologies our project utilizes:
-- [NodeJS](https://www.nodejs.org/) - Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. React utilizes a tiny Node/Express server for it's development environmen.t
+- [NodeJS](https://www.nodejs.org/) - Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. React utilizes a tiny Node/Express server for it's development environment.
 - [React.js](https://facebook.github.io/react/) - Facebook's popular JavaScript front-end framework.
 - [Create-React-App](https://github.com/facebookincubator/create-react-app) - Create React App was initially used to handle boilerplate. We have since ejected and customized some of the scripts.
 - [Webpack](https://webpack.js.org/) - Webpack acts as a module bundler and almost entirely dispenses with the need for a task runner, like Grunt or Gulp.
@@ -170,13 +170,25 @@ The other option is to install the nodejs package from the official website
 
 ### Windows
 #### Git
-You have many options for getting Git on Windows.  We recommend using Git for Windows as it gives you a bash shell which can be very powerful and help you start to learn linux commands.
+- Install the full version of [CMDER](http://cmder.net/). This is a versatile terminal that wraps bash-like commands around Command Prompt by using Git for Windows. You have many options for getting Git on Windows.  We recommend using Git for Windows as it gives you a bash shell which can be very powerful and help you start to learn linux commands.
 
-- [Git For Windows](https://git-scm.com/download/win)
+Install the LTS version [Node.js](https://nodejs.org/en/download/).
 
-Execute the Installer and follow the prompts.  Run Git and included tools from Windows Command Prompt is handy, but beware you will be replacing a few windows commands that you probably don't use anyways.
+Follow the steps found in the [Quick Start Guide](https://github.com/OperationCode/operationcode_frontend/blob/master/CONTRIBUTING.md#quick-start-guide)
 
-You can also install Github Desktop for a GUI Interface to Github.  If you do this you don't want to install the Command Line tools, as Git For Windows is a more recent version.
+If you have any errors, make sure Node, npm, and Yarn is in your environment path by typing `PATH` in CMDER.
+Look for any path like the ones listed below. `{USER}` is your username you used to login into the computer.
+- `C:\Program Files\nodejs\`
+- `C:\Program Files (x86)\Yarn\bin`
+- `C:\Users\{USER}\AppData\Roaming\npm`
+- `C:\Users\{USER}\AppData\Local\Yarn\bin`
+- `C:\Program Files\Git\usr\bin`
+
+To add them in your path, you can go to your Control Panel by clicking on the `Start` > type in: `Control Panel` > click on `System and Security` > click on `System` > on the left hand side, click on `Advanced System Settings` > near the bottom of the window, click on the `Environment Variables` and then under the `User variables for {USER}` click on the `Path` table and click on `Edit..`.
+
+Now add those paths one at a time that are listed above into your user environment path if they are not already there. This is assuming you are installing in the default folders during the installation of the programs used on the front-end.
+
+You can also install Github Desktop for a GUI Interface to Github.  If you do this you don't want to install the Command Line tools, as CMDER and Git For Windows are more recent versions.
 
 - [Github for Desktop](https://desktop.github.com/)
 
@@ -193,7 +205,7 @@ To test the installation open up a Command Prompt or Git Bash and enter the foll
 node --version
 npm --version
 ```
-If your installation was sucessful you will get the versions of node and npm that were installed.
+If your installation was successful you will get the versions of node and npm that were installed.
 
 ### Developing Operation Code Frontend
 #### File Structure

@@ -47,8 +47,7 @@ class ApprovedSchools extends Component {
             fullTime={school.full_time ? 'Full-Time' : 'Flexible'}
             hardware={school.hardware_included ? 'Yes' : 'No'}
           />
-        )
-      );
+        ));
 
     return (
       <Section
