@@ -28,13 +28,13 @@ const Profile = ({ verified }) => (
         />
 
         <IconCard
-          title="Enter our Slack Channel" 
+          title="Enter our Slack Team" 
           fontAwesomeIcon="FaSlack"
           url="https://operation-code.slack.com/"
         />
 
         <IconCard
-          title="Enter our Discourse Forums" 
+          title="Enter our Discourse Forum" 
           fontAwesomeIcon="FaCommentsO"
           url="https://community.operationcode.org/"
         />
