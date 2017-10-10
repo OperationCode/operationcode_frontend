@@ -20,16 +20,10 @@ class Dashboard extends Component {
       ? (
         <div>
           <h1 className={styles.link}>
-            <Link to="/mentor/requests">View Requests</Link>
-          </h1>
-          <h1 className={styles.link}>
             <Link to="/squads/new-squad">Create a Squad</Link>
           </h1>
           <h1 className={styles.link}>
             <Link to="/squads">View Squads</Link>
-          </h1>
-          <h1 className={styles.link}>
-            <Link to="/mentors">View Mentors</Link>
           </h1>
         </div>
       ) : (
@@ -39,9 +33,6 @@ class Dashboard extends Component {
           </h1>
           <h1 className={styles.link}>
             <Link to="/squads">Join a Squad</Link>
-          </h1>
-          <h1 className={styles.link}>
-            <Link to="/mentors">View Mentors</Link>
           </h1>
         </div>
       );
