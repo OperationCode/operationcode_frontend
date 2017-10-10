@@ -13,17 +13,17 @@ const OurPrograms = () => (
       author="The Smart Guy"
       quote="Here is a quote about the awesome stuff."
     />
-    <Section title={'Mentorship Program'}>
+    <Section title="Mentorship Program">
       <div className={styles.container}>
         <ProgramFeatures />
       </div>
     </Section>
-    <Section title={'Our Mentor Volunteers'}>
+    <Section title="Our Mentor Volunteers">
       <div className={styles.container}>
         <VolunteerChars />
       </div>
     </Section>
-    <Section title={'Getting Started'}>
+    <Section title="Getting Started">
       <div className={styles.container}>
         <Steps />
       </div>
