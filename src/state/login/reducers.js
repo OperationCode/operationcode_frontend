@@ -1,9 +1,9 @@
 import { ADD_EMAIL, ADD_PASSWORD } from './actions';
 
-const intialState = {
+const initialState = {
   email: '',
   password: ''
-}
+};
 
 export default function login(state = initialState, action) {
   switch (action.type) {
