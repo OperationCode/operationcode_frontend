@@ -18,7 +18,7 @@ const Benefit = () => (
       </p>
       <div className={styles.center}>
         <h5>Nov 10, 2017 at 5:30 PM</h5>
-        <h5>Governor&#39;s Ballroom, Sentinel Hotel</h5>
+        <h5><span>Governor&#39;s Ballroom,</span> <span>Sentinel Hotel</span></h5>
         <h5>Portland, Oregon</h5>
         <p>
           <b>Hors d’oeuvres and Silent Auction</b> at 5:30 PM
