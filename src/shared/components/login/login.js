@@ -37,7 +37,8 @@ class Login extends Component {
   }
 
   onEmailChange = (value, valid) => {
-    this.setState({ email: value, emailValid: valid });
+    this.props.addEmail(value);
+    this.setState({ emailValid: valid });
   }
 
   onPasswordChange = (value, valid) => {
@@ -172,12 +173,14 @@ class Login extends Component {
 
 Login.propTypes = {
   updateRootAuthState: PropTypes.func,
-  isLoggedIn: PropTypes.bool
+  isLoggedIn: PropTypes.bool,
+  addEmail: PropTypes.func.isRequired
 };
 
 Login.defaultProps = {
   updateRootAuthState: () => {},
-  isLoggedIn: false
+  isLoggedIn: false,
+  // addEmail: () => {}
 };
 
 export default Login;
