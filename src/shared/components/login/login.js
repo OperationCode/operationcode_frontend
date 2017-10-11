@@ -191,7 +191,7 @@ class Login extends Component {
 Login.propTypes = {
   updateRootAuthState: PropTypes.func,
   isLoggedIn: PropTypes.bool,
-  addEmail: PropTypes.func.isRequired
+  // addEmail: PropTypes.func.isRequired
 };
 
 Login.defaultProps = {
