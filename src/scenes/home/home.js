@@ -47,11 +47,11 @@ class Home extends Component {
     bgImageUrl: null,
     bgImageStyle: null,
     signedIn: false,
-    mentor: false
-  }
+    mentor: false,
+  };
 
   componentWillMount() {
-    this.props.history.listen((location) => {
+    this.props.history.listen(location => {
       this.setBgImage(location);
     });
     this.setBgImage(this.props.location);
@@ -61,69 +61,71 @@ class Home extends Component {
   setBgImage(location) {
     if (location.pathname === '/') {
       this.setState({
-        bgChanged: !(this.state.bgImage),
+        bgChanged: !this.state.bgImage,
         bgImage: true,
         bgImageUrl: familyImage,
-        bgImageStyle: "backgroundImageHome"
+        bgImageStyle: 'backgroundImageHome',
       });
     } else if (location.pathname === '/team') {
       this.setState({
-        bgChanged: !(this.state.bgImage),
+        bgChanged: !this.state.bgImage,
         bgImage: true,
         bgImageUrl: lincolnImage,
-        bgImageStyle: "backgroundImageTeam"
+        bgImageStyle: 'backgroundImageTeam',
       });
     } else if (location.pathname === '/history') {
       this.setState({
-        bgChanged: !(this.state.bgImage),
+        bgChanged: !this.state.bgImage,
         bgImage: true,
         bgImageUrl: colinPowellImage,
-        bgImageStyle: "backgroundImageTeam"
+        bgImageStyle: 'backgroundImageTeam',
       });
     } else {
       this.setState({
         bgChanged: this.state.bgImage,
         bgImage: false,
         bgImageUrl: null,
-        bgImageStyle: null
+        bgImageStyle: null,
       });
     }
   }
 
-  updateRootAuthState = (cb) => {
+  updateRootAuthState = cb => {
     const cookies = CookieHelpers.getUserStatus();
-    this.setState({
-      signedIn: cookies.signedIn,
-      mentor: cookies.mentor,
-      verified: cookies.verified,
-    }, () => {
-      if (cb) {
-        cb(this.props.history);
+    this.setState(
+      {
+        signedIn: cookies.signedIn,
+        mentor: cookies.mentor,
+        verified: cookies.verified,
+      },
+      () => {
+        if (cb) {
+          cb(this.props.history);
+        }
       }
-    });
-  }
+    );
+  };
 
   logOut = () => {
     CookieHelpers.clearAuthCookies();
-    this.setState({
-      signedIn: false,
-      mentor: false,
-      verified: false,
-    }, () => {
-      this.props.history.push('/');
-    });
-  }
+    this.setState(
+      {
+        signedIn: false,
+        mentor: false,
+        verified: false,
+      },
+      () => {
+        this.props.history.push('/');
+      }
+    );
+  };
 
   sendNotification = (type, title, subtitle) => {
-    this.container[type](
-      subtitle,
-      title,
-      {
-        timeOut: 3000,
-        extendedTimeOut: 3000,
-      },
-    );
-  }
+    this.container[type](subtitle, title, {
+      timeOut: 3000,
+      extendedTimeOut: 3000,
+    });
+  };
 
   render() {
     const { mentor, signedIn, verified } = this.state;
@@ -135,35 +137,30 @@ class Home extends Component {
 
     const classes = classNames({
       [`${styles.home}`]: true,
-      [`${styles[this.state.bgImageStyle]}`]: this.state.bgImage
+      [`${styles[this.state.bgImageStyle]}`]: this.state.bgImage,
     });
     return (
       <div
         className={classes}
-        style={(this.state.bgImage)
-          ? { backgroundImage: `url(${this.state.bgImageUrl})` }
-          : {}}
+        style={this.state.bgImage ? { backgroundImage: `url(${this.state.bgImageUrl})` } : {}}
       >
         <Header
-          transparent={this.state.bgImage} logOut={this.logOut}
-          signedIn={signedIn} mentor={mentor}
+          transparent={this.state.bgImage}
+          logOut={this.logOut}
+          signedIn={signedIn}
+          mentor={mentor}
         />
         <div className={styles.main}>
           <Switch>
-            <Route
-              path="/code-schools"
-              component={CodeSchools}
-            />
-            <Route
-              path="/code_schools"
-              component={CodeSchools}
-            />
+            <Route path="/code-schools" component={CodeSchools} />
+            <Route path="/code_schools" component={CodeSchools} />
             <Route
               path="/signup"
               render={() => (
                 <SignUp
                   updateRootAuthState={this.updateRootAuthState}
-                  isLoggedIn={this.state.signedIn} {...authProps}
+                  isLoggedIn={this.state.signedIn}
+                  {...authProps}
                   sendNotification={this.sendNotification}
                 />
               )}
@@ -173,98 +170,35 @@ class Home extends Component {
               render={() => (
                 <SignUp
                   updateRootAuthState={this.updateRootAuthState}
-                  isLoggedIn={this.state.signedIn} {...authProps}
+                  isLoggedIn={this.state.signedIn}
+                  {...authProps}
                   sendNotification={this.sendNotification}
                 />
               )}
             />
-            <Route
-              path="/history"
-              component={History}
-            />
-            <Route
-              path="/sign-up"
-              component={SignUp}
-            />
-            <Route
-              path="/team"
-              component={Team}
-            />
-            <Route
-              path="/faq"
-              component={FAQ}
-            />
-            <Route
-              path="/contact"
-              component={Contact}
-            />
-            <Route
-              exact
-              path="/about/financial-statements"
-              component={FinancialStatements}
-            />
-            <Route
-              path="/about"
-              component={About}
-            />
-            <Route
-              path="/press"
-              component={Press}
-            />
-            <Route
-              path="/jobs"
-              component={Jobs}
-            />
-            <Route
-              path="/media"
-              component={Press}
-            />
-            <Route
-              path="/signup-info"
-              component={SignupInformation}
-            />
-            <Route
-              path="/challenge"
-              component={Challenge}
-            />
-            <Route
-              path="/terms"
-              component={Terms}
-            />
-            <Route
-              exact
-              path="/"
-              render={props => (
-                <Landing {...props} />
-              )}
-            />
-            <Route
-              path="/mentor-request"
-              render={() => (
-                <MentorRequest {...authProps} />
-              )}
-            />
-            <Route
-              exact
-              path="/scholarships"
-              component={Scholarships}
-            />
-            <Route
-              path="/benefit"
-              render={() => (
-                <Benefit {...authProps} />
-              )}
-            />
-            <Route
-              path="/gala"
-              render={() => (
-                <Benefit {...authProps} />
-              )}
-            />
+            <Route path="/history" component={History} />
+            <Route path="/sign-up" component={SignUp} />
+            <Route path="/team" component={Team} />
+            <Route path="/faq" component={FAQ} />
+            <Route path="/contact" component={Contact} />
+            <Route exact path="/about/financial-statements" component={FinancialStatements} />
+            <Route path="/about" component={About} />
+            <Route path="/press" component={Press} />
+            <Route path="/jobs" component={Jobs} />
+            <Route path="/media" component={Press} />
+            <Route path="/signup-info" component={SignupInformation} />
+            <Route path="/challenge" component={Challenge} />
+            <Route path="/terms" component={Terms} />
+            <Route exact path="/" render={props => <Landing {...props} />} />
+            <Route path="/mentor-request" render={() => <MentorRequest {...authProps} />} />
+            <Route exact path="/scholarships" component={Scholarships} />
+            <Route path="/benefit" render={() => <Benefit {...authProps} />} />
+            <Route path="/gala" render={() => <Benefit {...authProps} />} />
             {/* eslint-disable */}
             <Route
               path="/newgibill"
-              component={() => window.location = 'http://www.benefits.va.gov/gibill/post911_gibill.asp'}
+              component={() =>
+                (window.location = 'http://www.benefits.va.gov/gibill/post911_gibill.asp')}
             />
             {/* eslint-enable */}
             <Route
@@ -272,36 +206,40 @@ class Home extends Component {
               render={() => (
                 <Login
                   updateRootAuthState={this.updateRootAuthState}
-                  isLoggedIn={this.state.signedIn}{...authProps}
+                  isLoggedIn={this.state.signedIn}
+                  {...authProps}
                   sendNotification={this.sendNotification}
                 />
               )}
             />
             <AuthenticatedRoute
-              exact path="/scholarships/:id/apply"
+              exact
+              path="/scholarships/:id/apply"
               isLoggedIn={CookieHelpers.getUserStatus().signedIn}
               component={ScholarshipApplication}
             />
             <AuthenticatedRoute
-              exact path="/profile"
+              exact
+              path="/profile"
               isLoggedIn={CookieHelpers.getUserStatus().signedIn}
-              component={() => (<Profile {...authProps} />)}
+              component={() => <Profile {...authProps} />}
             />
             <AuthenticatedRoute
-              exact path="/profile/verify"
+              exact
+              path="/profile/verify"
               isLoggedIn={CookieHelpers.getUserStatus().signedIn}
               component={IdmeVerify}
               updateRootAuthState={this.updateRootAuthState}
               {...authProps}
             />
             <Route exact path="/reset_password" component={ResetPassword} />
-            <Route
-              path="*" component={FourOhFour}
-            />
+            <Route path="*" component={FourOhFour} />
           </Switch>
         </div>
         <ToastContainer
-          ref={(input) => { this.container = input; }}
+          ref={input => {
+            this.container = input;
+          }}
           toastMessageFactory={ToastMessageFactory}
           className="toast-top-right"
         />
@@ -312,10 +250,6 @@ class Home extends Component {
 }
 
 Home.propTypes = {
-<<<<<<< HEAD
-  history: PropTypes.object.isRequired,
-  location: PropTypes.object.isRequired,
-=======
   history: PropTypes.shape({
     action: PropTypes.string,
     block: PropTypes.func,
@@ -339,8 +273,7 @@ Home.propTypes = {
     key: PropTypes.string,
     pathname: PropTypes.string,
     search: PropTypes.string,
-  }).isRequired
->>>>>>> Add more explicit typing on all instances of Object and Array proptypes
+  }).isRequired,
 };
 
 export default withRouter(Home);
