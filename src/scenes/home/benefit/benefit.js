@@ -19,7 +19,7 @@ const Benefit = () => (
           rel="noopener noreferrer"
         >
       Sentinel Hotel
-        </a>. 
+        </a>.
       The evening is a fundraiser to create our Scholarship Endowment and support our education programs.
       </p>
       <div className={styles.center}>
