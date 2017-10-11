@@ -123,7 +123,19 @@ class StateSortedSchools extends Component {
 }
 
 StateSortedSchools.propTypes = {
-  schools: PropTypes.array.isRequired // eslint-disable-line
+  schools: PropTypes.arrayOf(PropTypes.shape({
+    created_at: PropTypes.string,
+    full_time: PropTypes.bool,
+    hardware_included: PropTypes.bool,
+    has_onlin: PropTypes.bool,
+    id: PropTypes.number,
+    logo: PropTypes.string,
+    name: PropTypes.string,
+    notes: PropTypes.string,
+    online_only: PropTypes.bool,
+    updated_at: PropTypes.string,
+    url: PropTypes.string,
+  })).isRequired
 };
 
 export default StateSortedSchools;
