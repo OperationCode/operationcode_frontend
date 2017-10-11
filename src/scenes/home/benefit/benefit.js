@@ -7,21 +7,25 @@ import styles from './benefit.css';
 
 const Benefit = () => (
   <div>
-    <Section title="You're Invited!" theme="white">
+    <Section title="Veteran’s Day Benefit Dinner & Silent Auction" theme="white">
       <br />
       <img src={OCLogo} alt="Operation Code" />
       <br />
       <p>
-        The Operation Code Board of Directors, all-volunteer staff, and 3,000+ members cordially
-        invite you to the <b>Operation Code Veteran’s Day Benefit Dinner & Silent Auction</b> on
-        November 10, 2017 in the Governor Ballroom at Portland’s historic Sentinel Hotel.
+        We’re pleased to invite you to join us at our first Veteran’s Day Benefit Dinner & Silent Auction on November 10, 2017 at the Governor Ballroom in the historic {' '}
+        <a
+          href="https://www.sentinelhotel.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+      Sentinel Hotel</a>. The evening is a fundraiser to create our Scholarship Endowment and support our education programs.
       </p>
       <div className={styles.center}>
-        <h5>Nov 10, 2017 at 5:30 PM</h5>
-        <h5><span>Governor&#39;s Ballroom,</span> <span>Sentinel Hotel</span></h5>
+        <h5>The Sentinel Hotel</h5>
+        <h5>614 SW 11th Ave.</h5>
         <h5>Portland, Oregon</h5>
         <p>
-          <b>Hors d’oeuvres and Silent Auction</b> at 5:30 PM
+          <b>Hosted bar, hors d’oeuvres and Silent Auction</b> at 5:30 PM
         </p>
         <p>
           <b>Dinner</b> at 6:30 PM
