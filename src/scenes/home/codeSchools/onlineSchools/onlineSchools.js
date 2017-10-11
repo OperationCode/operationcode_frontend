@@ -49,8 +49,7 @@ class OnlineSchools extends Component {
           fullTime={school.full_time ? 'Full-Time' : 'Flexible'}
           hardware={school.hardware_included ? 'Yes' : 'No'}
         />
-      )
-    );
+      ));
     return (
       <div>
         <Section
@@ -87,24 +86,24 @@ class OnlineSchools extends Component {
           <div className={styles.moocCards}>
             <ImageCard
               image={edxLogo}
-              title={'edX'}
-              cardText={'Offers free courses with the option to pay for certificates/grading.'}
-              buttonText={'Website'}
-              link={'https://edx.org/'}
+              title="edX"
+              cardText="Offers free courses with the option to pay for certificates/grading."
+              buttonText="Website"
+              link="https://edx.org/"
             />
             <ImageCard
               image={treehouseLogo}
-              title={'Team Treehouse'}
-              cardText={'Offers only paid programs, but we have licenses available.'}
-              buttonText={'Website'}
-              link={'https://teamtreehouse.com/'}
+              title="Team Treehouse"
+              cardText="Offers only paid programs, but we have licenses available."
+              buttonText="Website"
+              link="https://teamtreehouse.com/"
             />
             <ImageCard
               image={udacityLogo}
-              title={'Udacity'}
-              cardText={'Offers free courses with the option to pay for certificates/grading.'}
-              buttonText={'Website'}
-              link={'https://udacity.com/'}
+              title="Udacity"
+              cardText="Offers free courses with the option to pay for certificates/grading."
+              buttonText="Website"
+              link="https://udacity.com/"
             />
           </div>
         </Section>

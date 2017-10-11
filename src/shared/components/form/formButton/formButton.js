@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import styles from './formButton.css';
 
-const FormButton = ({ theme, className, onClick, disabled, text }) => {
+const FormButton = ({
+  theme, className, onClick, disabled, text
+}) => {
   const classes = classNames({
     [`${styles.formButton}`]: true,
     [`${styles[theme]}`]: true,

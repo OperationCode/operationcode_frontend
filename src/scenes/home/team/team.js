@@ -19,8 +19,7 @@ class Team extends Component {
     return fetch('https://api.operationcode.org/api/v1/team_members.json').then(response =>
       response.json().then((data) => {
         this.setState({ members: data });
-      })
-    );
+      }));
   }
 
   render() {
@@ -31,8 +30,7 @@ class Team extends Component {
           name={member.name}
           role={member.role}
         />
-      )
-    );
+      ));
     const ceo = {
       name: 'David Molina',
       role: 'Founder / CEO',

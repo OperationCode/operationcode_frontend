@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './staffCard.css';
 
-const StaffCard = ({ src, alt, name, role, twitter, email }) => (
+const StaffCard = ({
+  src, alt, name, role, twitter, email
+}) => (
   <div className={styles.staffCard}>
     <img className={styles.img} src={src} alt={alt} />
     <span className={styles.name}>

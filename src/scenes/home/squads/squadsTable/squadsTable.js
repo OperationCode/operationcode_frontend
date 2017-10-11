@@ -18,8 +18,7 @@ class SquadsTable extends Component {
     return fetch('https://api.operationcode.org/api/v1/squads.json').then(response =>
       response.json().then((data) => {
         this.setState({ squads: data });
-      })
-    );
+      }));
   }
   componentDidMount() {
     this.fetchSquads();
@@ -31,11 +30,11 @@ class SquadsTable extends Component {
 
   fetchSquads = () => {
     getSquads()
-    .then((data) => {
-      this.setState({
-        squads: data
-      });
-    }).catch(this.setAuthFetchError);
+      .then((data) => {
+        this.setState({
+          squads: data
+        });
+      }).catch(this.setAuthFetchError);
   }
 
   rowClickHandler = (squad) => {

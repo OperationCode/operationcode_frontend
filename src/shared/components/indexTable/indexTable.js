@@ -30,7 +30,7 @@ class IndexTable extends Component {
   }
 
   setFetchError = (err) => {
-    const response = err.response;
+    const { response } = err;
     // The 500 means you the user is not a mentor, should
     // update that later
     if (response.status === 401 || response.status === 500) {
