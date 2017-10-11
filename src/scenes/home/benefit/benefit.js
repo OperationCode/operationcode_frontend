@@ -7,7 +7,7 @@ import styles from './benefit.css';
 
 const Benefit = () => (
   <div>
-    <Section title="Veteran’s Day Benefit Dinner & Silent Auction" theme="white">
+    <Section title="Benefit Dinner & Silent Auction" theme="white">
       <br />
       <img src={OCLogo} alt="Operation Code" />
       <br />
