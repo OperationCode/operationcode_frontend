@@ -312,8 +312,35 @@ class Home extends Component {
 }
 
 Home.propTypes = {
+<<<<<<< HEAD
   history: PropTypes.object.isRequired,
   location: PropTypes.object.isRequired,
+=======
+  history: PropTypes.shape({
+    action: PropTypes.string,
+    block: PropTypes.func,
+    createHref: PropTypes.func,
+    go: PropTypes.func,
+    goBack: PropTypes.func,
+    goForward: PropTypes.func,
+    length: PropTypes.number,
+    listen: PropTypes.func,
+    location: PropTypes.shape({
+      key: PropTypes.string,
+      pathname: PropTypes.string,
+      search: PropTypes.string,
+    }),
+    push: PropTypes.func,
+    replace: PropTypes.func,
+  }).isRequired,
+
+  location: PropTypes.shape({
+    hash: PropTypes.string,
+    key: PropTypes.string,
+    pathname: PropTypes.string,
+    search: PropTypes.string,
+  }).isRequired
+>>>>>>> Add more explicit typing on all instances of Object and Array proptypes
 };
 
 export default withRouter(Home);

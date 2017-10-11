@@ -5,19 +5,6 @@ import Heading from 'shared/components/heading/heading';
 import ReactTable from 'react-table';
 
 class IndexTable extends Component {
-  static propTypes = {
-    columns: PropTypes.arrayOf(PropTypes.object).isRequired,
-    heading: PropTypes.string.isRequired,
-    onRowClick: PropTypes.func,
-    fetchRecords: PropTypes.func.isRequired,
-    showPagination: PropTypes.bool
-  };
-
-  static defaultProps = {
-    onRowClick: () => {},
-    showPagination: true
-  };
-
   state = {
     loggedIn: true,
     data: []
@@ -66,5 +53,21 @@ class IndexTable extends Component {
     );
   }
 }
+
+IndexTable.defaultProps = {
+  onRowClick: () => {},
+  showPagination: true
+};
+
+
+IndexTable.propTypes = {
+  columns: PropTypes.arrayOf(PropTypes.shape({
+    Header: PropTypes.string, accessor: PropTypes.oneOfType([PropTypes.string, PropTypes.func])
+  })).isRequired,
+  heading: PropTypes.string.isRequired,
+  onRowClick: PropTypes.func,
+  fetchRecords: PropTypes.func.isRequired,
+  showPagination: PropTypes.bool
+};
 
 export default IndexTable;
