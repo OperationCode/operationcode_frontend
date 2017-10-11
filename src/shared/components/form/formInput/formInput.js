@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Label from 'shared/components/label/label';
@@ -57,6 +56,16 @@ class FormInput extends Component {
   }
 }
 
+FormInput.defaultProps = {
+  label: null,
+  placeholder: null,
+  validationRegex: null,
+  validationErrorMessage: null,
+  validateFunc: null,
+  onChange: null,
+  inputType: 'text'
+};
+
 FormInput.propTypes = {
   label: PropTypes.string,
   placeholder: PropTypes.string,
@@ -66,16 +75,6 @@ FormInput.propTypes = {
   validateFunc: PropTypes.func,
   onChange: PropTypes.func,
   inputType: PropTypes.string
-};
-
-FormInput.defaultProps = {
-  label: null,
-  placeholder: null,
-  validationRegex: null,
-  validationErrorMessage: null,
-  validateFunc: null,
-  onChange: null,
-  inputType: "text"
 };
 
 export default FormInput;
