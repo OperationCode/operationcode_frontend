@@ -8,14 +8,14 @@ const initialState = {
 export default function login(state = initialState, action) {
   switch (action.type) {
     case ADD_EMAIL:
-      return state;
-    case ADD_PASSWORD:
       return Object.assign({}, state, {
         email: action.email
       });
-    default:
+    case ADD_PASSWORD:
       return Object.assign({}, state, {
-        password: action.password
+        email: action.password
       });
+    default:
+      return state;
   }
 }
