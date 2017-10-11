@@ -18,14 +18,16 @@ const Benefit = () => (
           target="_blank"
           rel="noopener noreferrer"
         >
-      Sentinel Hotel</a>. The evening is a fundraiser to create our Scholarship Endowment and support our education programs.
+      Sentinel Hotel
+        </a>. 
+      The evening is a fundraiser to create our Scholarship Endowment and support our education programs.
       </p>
       <div className={styles.center}>
         <h5>The Sentinel Hotel</h5>
         <h5>614 SW 11th Ave.</h5>
         <h5>Portland, Oregon</h5>
         <p>
-          <b>Hosted bar, hors d’oeuvres and Silent Auction</b> at 5:30 PM
+          <b><span>Hosted bar, hors d’oeuvres and</span> <span>Silent Auction</span></b> at 5:30 PM
         </p>
         <p>
           <b>Dinner</b> at 6:30 PM
