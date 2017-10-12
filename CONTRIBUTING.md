@@ -311,7 +311,6 @@ The following process should be used to prepare a code school logo for use:
 5. Ensure that there is at least a 15 pixel margin between every edge and the logo
 6. Save the file as a JPEG (.jpg) in the above directory
 
-
 #### Running the development environment
 Now that you understand the technology and project structure, feel free to direct yourself to the [Quick-Start Guide](#quick-start-guide).
 
