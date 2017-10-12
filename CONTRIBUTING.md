@@ -298,10 +298,11 @@ Example...
 ##### Code School Images
 Code school logos belong in the following directory:
 ```
-├── public
-│   └── images
-│       ├── codeSchoolLogos
-│       │   └── LOGOS.jpg...
+├── src
+│   └── public
+|         └── images
+│               └── codeSchoolLogos
+│                       └── LOGOS.jpg...
 ```
 The following process should be used to prepare a code school logo for use:
 1. Find the highest-quality image file of the code school's logo possible
