@@ -59,6 +59,7 @@
     "extract-text-webpack-plugin": "2.1.0",
     "file-loader": "0.11.1",
     "fs-extra": "3.0.1",
+    "globby": "^6.1.0",
     "html-webpack-plugin": "2.28.0",
     "http-proxy-middleware": "0.17.3",
     "jest": "20.0.3",
@@ -88,7 +89,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "backend": "./bin/run_backend.sh",
-    "validate": "npm ls"
+    "validate": "npm ls",
+    "image-size-check": "node scripts/image-size-check.js"
   },
   "jest": {
     "moduleDirectories": [
@@ -128,6 +130,7 @@
   "pre-commit": [
     "fix",
     "format",
-    "lint"
+    "lint",
+    "image-size-check"
   ]
 }
