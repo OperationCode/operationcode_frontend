@@ -67,7 +67,8 @@
 
 .copyright {
   color:#F7F7F7;
-  font-size: 1rem;
+  font-size: inherit;
+  font-family: 'PF Din Display';
   text-align: center;
   min-width: 100%;
 }

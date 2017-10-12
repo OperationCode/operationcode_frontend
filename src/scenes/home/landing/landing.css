@@ -24,18 +24,18 @@
 
 @media screen and (max-width: 900px) {
   .pageHeading {
-    margin-top:5vw;
+    margin-top: 0;
   }
   .pageHeading h1 {
-    font-size:20px;
+    font-size: 20px;
   }
 }
 
 @media screen and (max-width: 500px) {
   .pageHeading {
-    margin-top:3vw;
+    margin-top: 0;
   }
   .pageHeading h1 {
-    font-size:18px;
+    font-size: 18px;
   }
 }

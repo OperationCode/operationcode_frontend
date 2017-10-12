@@ -7,20 +7,15 @@ import BoardCard from 'shared/components/boardCard/boardCard';
 import styles from './team.css';
 
 class Team extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      members: []
-    };
-  }
+  state = {
+    members: []
+  };
 
   componentWillMount() {
     return fetch('https://api.operationcode.org/api/v1/team_members.json').then(response =>
       response.json().then((data) => {
         this.setState({ members: data });
-      })
-    );
+      }));
   }
 
   render() {
@@ -31,12 +26,11 @@ class Team extends Component {
           name={member.name}
           role={member.role}
         />
-      )
-    );
+      ));
     const ceo = {
       name: 'David Molina',
       role: 'Founder / CEO',
-      src: 'https://pbs.twimg.com/profile_images/875514479202639873/vFr09yW4_400x400.jpg',
+      src: './images/DavidMolina.jpg',
       alt: 'David Molina',
       twitter: '@davidcmolina',
       email: 'david@operationcode.org'
@@ -44,7 +38,7 @@ class Team extends Component {
     const coo = {
       name: 'Conrad Hollomon',
       role: 'COO',
-      src: 'https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAP6AAAAJDk2MTJkMDc3LTdiZDYtNGNkZi1hOTgxLWE3YmI0OWFjYzQ4Nw.jpg',
+      src: './images/ConradHollomon.jpg',
       alt: 'Conrad Hollomon',
       twitter: '@hollomancer',
       email: 'conrad@operationcode.org'
@@ -52,7 +46,7 @@ class Team extends Component {
     const cto = {
       name: 'Rick Rein',
       role: 'CTO',
-      src: 'https://raw.githubusercontent.com/OperationCode/operationcode_frontend/master/src/images/RickRein.jpg',
+      src: './images/RickRein.jpg',
       alt: 'Rick Rein',
       twitter: '@rickrrrrrr',
       email: 'rick@operationcode.org'
@@ -61,25 +55,25 @@ class Team extends Component {
     const chair = {
       name: 'Dr. James Davis',
       role: 'Chair',
-      src: 'https://raw.githubusercontent.com/OperationCode/operationcode_frontend/master/src/images/james.jpg',
+      src: './images/james.jpg',
       alt: 'Dr. James Davis'
     };
     const vicechair = {
       name: 'Dr. Tyrone Grandison',
       role: 'Vice Chair',
-      src: 'https://raw.githubusercontent.com/OperationCode/operationcode_frontend/master/src/images/tyrone.png',
+      src: './images/tyrone.png',
       alt: 'Dr. Tyrone Grandison'
     };
     const treasurer = {
       name: 'Elmer Thomas',
       role: 'Treasurer',
-      src: 'https://raw.githubusercontent.com/OperationCode/operationcode_frontend/master/src/images/elmer.png',
+      src: './images/elmer.png',
       alt: 'Elmer Thomas'
     };
     const secretary = {
       name: 'Thomas Ciszec',
       role: 'Secretary',
-      src: 'https://raw.githubusercontent.com/OperationCode/operationcode_frontend/master/src/images/thomas.jpg',
+      src: './images/thomas.jpg',
       alt: 'Thomas Ciszec'
     };
 

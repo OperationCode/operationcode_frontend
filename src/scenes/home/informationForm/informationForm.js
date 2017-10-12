@@ -11,19 +11,30 @@ import MilitaryInfo from './formComponents/militaryInfo';
 import styles from './informationForm.css';
 
 class SignupInformation extends Component {
-
   constructor(props) {
     super(props);
     this.onIdentifierStatusChange = this.onIdentifierStatusChange.bind(this);
     this.onCheckBoxChange = this.onCheckBoxChange.bind(this);
+    this.previousPage = this.previousPage.bind(this);
+    this.onCheckboxLoad = this.onCheckboxLoad.bind(this);
     this.state = {
       error: false,
       isValid: true,
+      isDescriptionValid: true,
       success: false,
       identifier: 'false',
       interests: new Set(),
       step: 0
     };
+  }
+
+  onCheckboxLoad = () => {
+    // Clear the interests once we get to the interests page
+    if (this.state.interests.size) {
+      const interests = new Set(this.state.interests);
+      interests.clear();
+      this.setState({ interests });
+    }
   }
 
   // On-Change handler dynamically creates state named after the
@@ -35,8 +46,28 @@ class SignupInformation extends Component {
   }
 
   // Adds values from checkboxes to a set, eliminating possible repeat values
-  onCheckBoxChange = (value) => {
-    this.setState({ interests: this.state.interests.add(value) });
+  onCheckBoxChange = (e) => {
+    const interests = new Set(this.state.interests);
+    const { value } = e.target;
+    if (e.target.checked) {
+      interests.add(value);
+    } else {
+      interests.delete(value);
+    }
+
+    this.setState({ interests });
+  }
+
+  // make sure isDescriptionValid is false on initialization
+  onIdentifierInit = () => {
+    this.setState({ isDescriptionValid: false });
+  }
+
+  // check if an option was selected: volunteer / veteran
+  validateDescription = (value) => {
+    const isDescriptionValid = Boolean(value.length);
+    this.setState({ isDescriptionValid });
+    return isDescriptionValid;
   }
 
   // Reduces 'step' value by 1, going back one page in the form
@@ -45,12 +76,28 @@ class SignupInformation extends Component {
     if (this.state.step < 1) {
       return;
     }
+
     this.setState({ step: this.state.step -= 1 });
+  }
+
+  isFormValid = () => {
+    let valid = true;
+    if (!this.state.isDescriptionValid) {
+      valid = false;
+    }
+
+    this.setState({ error: !valid });
+    return valid;
   }
 
   // Patches whatever values that have been captured so far to the DB
   // Then adds 1 to step to progress to the next page.
   saveAndContinue = () => {
+    // check if the form is valid before submitting
+    if (!this.isFormValid()) {
+      return;
+    }
+
     patchBackend('users', {
       user: {
         education_level: this.state.schoolLevel,
@@ -66,11 +113,11 @@ class SignupInformation extends Component {
         interests: Array.from(this.state.interests)
       },
     })
-    .then(() => {
-      this.setState({ step: this.state.step += 1 });
-    }).catch(() => {
-      this.setState({ error: true });
-    });
+      .then(() => {
+        this.setState({ step: this.state.step += 1 });
+      }).catch(() => {
+        this.setState({ error: true });
+      });
   }
   // Showstep renders each consecutive 'page' (component) based on user input
   // The form splits based on identifier, which determines whether or not
@@ -85,7 +132,7 @@ class SignupInformation extends Component {
         return (
           <MilitaryInfo
             update={this.onIdentifierStatusChange}
-            percent={'20'}
+            percent="20"
           />
         );
       // Civillian STEP 2
@@ -95,7 +142,7 @@ class SignupInformation extends Component {
             role={this.state.role}
             company={this.state.company}
             update={this.onIdentifierStatusChange}
-            percent={'33'}
+            percent="33"
             identifier={this.state.identifier}
           />
         );
@@ -104,7 +151,8 @@ class SignupInformation extends Component {
         return (
           <Interests
             update={this.onCheckBoxChange}
-            percent={'66'}
+            percent="66"
+            onLoad={this.onCheckboxLoad}
           />
         );
       // Civillian COMPLETE
@@ -119,7 +167,7 @@ class SignupInformation extends Component {
             role={this.state.role}
             company={this.state.company}
             update={this.onIdentifierStatusChange}
-            percent={'40'}
+            percent="40"
           />
         );
       // Military STEP 4
@@ -127,7 +175,7 @@ class SignupInformation extends Component {
         return (
           <SchoolInfo
             update={this.onIdentifierStatusChange}
-            percent={'60'}
+            percent="60"
           />
         );
       // Military STEP 5
@@ -135,7 +183,7 @@ class SignupInformation extends Component {
         return (
           <Interests
             update={this.onCheckBoxChange}
-            percent={'80'}
+            percent="80"
           />
         );
       // Military COMPLETE
@@ -145,7 +193,15 @@ class SignupInformation extends Component {
         );
       // STEP ONE
       default:
-        return <Identifier update={this.onIdentifierStatusChange} />;
+        return (
+          <Identifier
+            update={this.onIdentifierStatusChange}
+            validationFunc={e => this.validateDescription(e.target.value)}
+            validationErrorMessage="You have to select a value"
+            isValid={this.state.isDescriptionValid}
+            init={this.onIdentifierInit}
+          />
+        );
     }
   }
 
@@ -159,7 +215,7 @@ class SignupInformation extends Component {
           <FormButton text="Go Back" onClick={this.previousPage} theme="blue" />
           <FormButton text="Save and Continue" onClick={this.saveAndContinue} theme="red" />
           {this.state.error ? <ul className={styles.errorList}>There was an error saving your information, please try again.
-          </ul> : null }
+                              </ul> : null }
         </div>
       </Section>
     );

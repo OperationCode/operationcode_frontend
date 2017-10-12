@@ -4,13 +4,22 @@ import { getSquads } from 'shared/utils/apiHelper';
 import IndexTable from 'shared/components/indexTable/indexTable';
 import SquadsModal from './squadsModal';
 
-export default class SquadsTable extends Component {
+class SquadsTable extends Component {
+  constructor(props) {
+    super(props);
 
-  state = {
-    activeSquad: null,
-    squads: []
+    this.state = {
+      activeSquad: null,
+      squads: []
+    };
   }
 
+  componentWillMount() {
+    return fetch('https://api.operationcode.org/api/v1/squads.json').then(response =>
+      response.json().then((data) => {
+        this.setState({ squads: data });
+      }));
+  }
   componentDidMount() {
     this.fetchSquads();
   }
@@ -21,11 +30,11 @@ export default class SquadsTable extends Component {
 
   fetchSquads = () => {
     getSquads()
-    .then((data) => {
-      this.setState({
-        squads: data
-      });
-    }).catch(this.setAuthFetchError);
+      .then((data) => {
+        this.setState({
+          squads: data
+        });
+      }).catch(this.setAuthFetchError);
   }
 
   rowClickHandler = (squad) => {
@@ -53,3 +62,5 @@ export default class SquadsTable extends Component {
     );
   }
 }
+
+export default SquadsTable;

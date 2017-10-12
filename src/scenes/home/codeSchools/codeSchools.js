@@ -20,8 +20,7 @@ class CodeSchools extends Component {
     return fetch('https://api.operationcode.org/api/v1/code_schools.json').then(response =>
       response.json().then((data) => {
         this.setState({ schools: data });
-      })
-    );
+      }));
   }
 
   render() {
@@ -40,19 +39,19 @@ class CodeSchools extends Component {
             <br />
             <br />
             We encourage you to check out the schools below, do your research, and ask fellow
-            software developers in <a href="https://operation-code.slack.com/">Slack</a>.
+            software developers in Slack or our <a href="https://community.operationcode.org/" target="_blank" rel="noopener noreferrer">forums</a>.
           </p>
 
           <div className={styles.filterButtonDiv}>
             <LinkButton
               link="approvedSchools"
-              text="Code Schools with VA Approval"
+              text="VA-Approved Schools"
               theme="blue"
               scrollLink
             />
             <LinkButton
               link="partnerSchools"
-              text="Partner Schools with Scholarships"
+              text="Partnered Schools"
               theme="blue"
               scrollLink
             />

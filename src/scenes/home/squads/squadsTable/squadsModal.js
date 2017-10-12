@@ -7,7 +7,6 @@ import Modal from 'shared/components/modal/modal';
 import styles from 'shared/components/modal/modal.css';
 
 class SquadsModal extends Component {
-
   handleButtonClick = () => {
     joinSquad(this.props.squad.id);
     this.props.handleFormUpdate();

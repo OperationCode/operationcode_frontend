@@ -7,30 +7,37 @@ import PropTypes from 'prop-types';
 import styles from './formComponents.css';
 
 class Interests extends Component {
+  componentDidMount() {
+    if (this.props.onLoad) {
+      this.props.onLoad();
+    }
+  }
 
   render() {
     const languages = LANGUAGES
       .map(language =>
         (
           <FormCheckBox
-            name={'languages'}
+            name="languages"
             value={language}
-            onChange={e => this.props.update(e.target.value)}
+            onChange={e => this.props.update(e)}
             key={language}
+            checkBox={{ display: 'block', margin: '20px' }}
+            label={{ textTransform: 'uppercase', fontWeight: 'bold', marginLeft: '15px' }}
           />
-      )
-    );
+        ));
     const disciplines = DISCIPLINES
       .map(discipline =>
         (
           <FormCheckBox
-            name={'disciplines'}
+            name="disciplines"
             value={discipline}
-            onChange={e => this.props.update(e.target.value)}
+            onChange={e => this.props.update(e)}
             key={discipline}
+            checkBox={{ display: 'block', margin: '20px' }}
+            label={{ textTransform: 'uppercase', fontWeight: 'bold', marginLeft: '15px' }}
           />
-      )
-    );
+        ));
     return (
       <Form className={styles.signup}>
         <h3>Progress = {this.props.percent}%</h3>
@@ -59,12 +66,14 @@ class Interests extends Component {
 
 Interests.propTypes = {
   percent: PropTypes.string,
-  update: PropTypes.func
+  update: PropTypes.func,
+  onLoad: PropTypes.func
 };
 
 Interests.defaultProps = {
   percent: '0',
   update: null,
+  onLoad: null
 };
 
 export default Interests;

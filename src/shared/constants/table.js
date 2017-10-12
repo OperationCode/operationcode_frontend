@@ -70,9 +70,6 @@ export const MENTOR_COLUMNS = [{
   Header: 'Slack Name',
   accessor: 'slack_name'
 }, {
-  Header: 'Email',
-  accessor: 'email'
-}, {
   Header: 'Zip Code',
   accessor: 'zip'
 }];

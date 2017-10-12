@@ -46,7 +46,12 @@ export const getRequests = () => makeGenericGet('requests');
 
 export const getSquads = () => makeGenericGet('squads');
 
-export function postRequest({ language, additionalDetails, mentor, service }) {
+export const getScholarships = () => makeGenericGet('scholarships');
+export const getScholarship = id => makeGenericGet(`scholarships/${id}`);
+
+export function postRequest({
+  language, additionalDetails, mentor, service
+}) {
   const authHeader = setAuthorizationHeader();
 
   return axios.post(`${config.backendUrl}/requests`, {
@@ -61,7 +66,9 @@ export function postRequest({ language, additionalDetails, mentor, service }) {
   });
 }
 
-export function postSquads({ name, leaderId, description, minimum, maximum, skillLevel, activities, endCondition, mentorIds }) {
+export function postSquads({
+  name, leaderId, description, minimum, maximum, skillLevel, activities, endCondition, mentorIds
+}) {
   const authHeader = setAuthorizationHeader();
 
   return axios.post(`${config.backendUrl}/squads`, {

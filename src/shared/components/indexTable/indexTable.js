@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Heading from 'shared/components/heading/heading';
 import ReactTable from 'react-table';
 
-export default class IndexTable extends Component {
+class IndexTable extends Component {
   static propTypes = {
     columns: PropTypes.arrayOf(PropTypes.object).isRequired,
     heading: PropTypes.string.isRequired,
@@ -30,7 +30,7 @@ export default class IndexTable extends Component {
   }
 
   setFetchError = (err) => {
-    const response = err.response;
+    const { response } = err;
     // The 500 means you the user is not a mentor, should
     // update that later
     if (response.status === 401 || response.status === 500) {
@@ -66,3 +66,5 @@ export default class IndexTable extends Component {
     );
   }
 }
+
+export default IndexTable;

@@ -4,8 +4,8 @@
   vertical-align: middle;
   user-select: none;
   color: #ddd;
-  padding: 10px;
-  font-size: 14px;
+  padding: 8px;
+  font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.42857143;
   border: 1px solid transparent;
@@ -19,6 +19,7 @@
   background-color: #D1665A;
   border-color: #D1665A;
   color: #FFF;
+  cursor: pointer;
 }
 
 .red-large {
@@ -27,20 +28,24 @@
   color: #FFF;
   font-size: 1.5rem;
   padding: 20px 40px;
+  cursor: pointer;
 }
 
 .red:hover {
   background-color: #F1665A;
   border-color: #F1665A;
+  cursor: pointer;
 }
 
 .blue {
   background-color: #249CBC;
   border-color:#249CBC;
   color: #fff;
+  cursor: pointer;
 }
 
 .blue:hover {
   background-color: #249CDE;
   border-color: #249CDE;
+  cursor: pointer;
 }

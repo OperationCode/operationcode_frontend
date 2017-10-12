@@ -1,7 +1,7 @@
 .buttonContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .buttonContainer > * {
@@ -37,7 +37,6 @@
   list-style-position: inside;
   margin-bottom: 12px;
   margin-top: 12px;
-  padding: 0;
 }
 
 .errorMessage {

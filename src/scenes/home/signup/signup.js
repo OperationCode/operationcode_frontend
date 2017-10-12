@@ -13,22 +13,21 @@ import config from 'config/environment';
 import styles from './signup.css';
 
 class SignUp extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
       email: '',
-      emailValid: true,
+      emailValid: false,
       error: false,
       isValid: true,
       isLoading: false,
       mentor: false,
       password: '',
       passwordConfirm: '',
-      passwordValid: true,
+      passwordValid: false,
       success: false,
       zip: '',
-      zipValid: true
+      zipValid: false
     };
   }
 
@@ -45,7 +44,7 @@ class SignUp extends Component {
   }
 
   onEmailChange = (value, valid) => {
-    this.setState({ email: value, emailValid: valid });
+    this.setState({ email: value.toLowerCase(), emailValid: valid });
   }
 
   onZipChange = (value, valid) => {
@@ -61,7 +60,7 @@ class SignUp extends Component {
   }
 
   validatePasswordConfirm = value =>
-    value === '' || value === this.state.password;
+    value === this.state.password;
 
   handleOnClick = (e) => {
     e.preventDefault();
@@ -69,7 +68,9 @@ class SignUp extends Component {
     this.setState({ isLoading: true });
 
     if (this.isFormValid()) {
-      const { email, zip, password, firstName, lastName, identifier } = this.state;
+      const {
+        email, zip, password, firstName, lastName, identifier
+      } = this.state;
       axios.post(`${config.backendUrl}/users`, {
         user: {
           first_name: firstName,
@@ -97,6 +98,12 @@ class SignUp extends Component {
       });
     } else {
       this.setState({ error: 'Missing required field(s)', isLoading: false });
+      this.emailRef.inputRef.revalidate();
+      this.firstNameRef.revalidate();
+      this.lastNameRef.revalidate();
+      this.zipRef.inputRef.revalidate();
+      this.passwordRef.inputRef.revalidate();
+      this.passwordConfirmRef.inputRef.revalidate();
     }
   }
 
@@ -114,25 +121,51 @@ class SignUp extends Component {
             Are you ready to deploy your future?  Join Operation Code
             today and launch your career in software development.
             Once you complete the form below you&#8217;ll be invited
-            to join our Slack team.  Make sure you stop in and say hi!
+            to join our team on Slack and the <a href="https://community.operationcode.org/" target="_blank" rel="noopener noreferrer">forums</a>.  Make sure you stop in and say hi!
           </span>
-          <FormEmail id="email" placeholder="Email" onChange={this.onEmailChange} />
-          <FormInput id="firstName" placeholder="First Name" onChange={this.onFirstNameChange} />
-          <FormInput id="lastName" placeholder="Last Name" onChange={this.onLastNameChange} />
-          <FormZipCode id="zip" placeholder="Zip Code" onChange={this.onZipChange} />
+          <FormEmail
+            id="email" placeholder="Email (Required)"
+            onChange={this.onEmailChange}
+            ref={(child) => { this.emailRef = child; }}
+          />
+          <FormInput
+            id="firstName"
+            placeholder="First Name (Required)"
+            onChange={this.onFirstNameChange}
+            ref={(child) => { this.firstNameRef = child; }}
+          />
+          <FormInput
+            id="lastName"
+            placeholder="Last Name (Required)"
+            onChange={this.onLastNameChange}
+            ref={(child) => { this.lastNameRef = child; }}
+          />
+          <FormZipCode
+            id="zip"
+            placeholder="Zip Code (Required)"
+            onChange={this.onZipChange}
+            ref={(child) => { this.zipRef = child; }}
+          />
           <FormPassword
-            id="password" placeholder="Password"
-            onChange={this.onPasswordChange} validationRegex={/^(?=.*[A-Z]).{6,}$/}
+            id="password"
+            placeholder="Password (Required)"
+            onChange={this.onPasswordChange}
+            validationRegex={/^(?=.*[A-Z]).{6,}$/}
             validationErrorMessage="Must be 6 characters long and include a capitalized letter"
+            ref={(child) => { this.passwordRef = child; }}
           />
           <FormPassword
-            id="passwordConfirm" placeholder="Confirm Password"
-            onChange={this.onConfirmPasswordChange} validateFunc={this.validatePasswordConfirm}
+            id="passwordConfirm"
+            placeholder="Confirm Password (Required)"
+            onChange={this.onConfirmPasswordChange}
+            validateFunc={this.validatePasswordConfirm}
             validationErrorMessage="Passwords must match"
+            ref={(child) => { this.passwordConfirmRef = child; }}
           />
-          {this.state.error ? <ul className={styles.errorList}>There was an error joining Operation Code:
+          {this.state.error &&
+          <ul className={styles.errorList}>There was an error joining Operation Code:
             <li className={styles.errorMessage}>{this.state.error}</li>
-          </ul> : null }
+          </ul>}
           {this.state.isLoading ? <FormButton className={styles.joinButton} text="Loading..." disabled theme="grey" /> : <FormButton className={styles.joinButton} text="Join" onClick={this.handleOnClick} theme="red" />}
         </Form>
       </Section>

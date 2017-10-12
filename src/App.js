@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Route, Router } from 'react-router';
-import createHistory from 'history/createBrowserHistory';
 import ReactGA from 'react-ga';
+import createHistory from 'history/createBrowserHistory';
+import ScrollToTop from 'shared/components/scrollToTop/scrollToTop';
 import Home from './scenes/home/home';
-import ScrollToTop from './shared/components/ScrollToTop';
 
 class App extends Component {
   constructor(props) {

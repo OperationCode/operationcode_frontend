@@ -1,0 +1,29 @@
+.title {
+  font-size: 18px;
+  margin-bottom: 12px;
+  margin-top: 12px;
+  line-height: 22px;
+}
+
+.terms {
+  white-space: pre-line;
+  font-size: 14px;
+}
+
+.red {
+  color: red;
+}
+
+.active_button, .grey_button {
+  width: 100%;
+}
+
+.grey_button {
+  background-color: #ABABAB;
+  border-color: #999;
+  color: #fff;
+}
+
+.grey_button:hover {
+  cursor: not-allowed;
+}

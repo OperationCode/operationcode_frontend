@@ -201,6 +201,7 @@ build/Release
 
 # Dependency directory
 /node_modules
+package-lock.json
 
 # Optional npm cache directory
 .npm
@@ -225,10 +226,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
+# Visual Studio Code config
+.vscode
 
 backend

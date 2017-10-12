@@ -10,7 +10,6 @@ import FormSelect from 'shared/components/form/formSelect/formSelect';
 import styles from 'shared/components/modal/modal.css';
 
 class RequestModal extends Component {
-
   state = {
     services: [],
     error: false,
@@ -60,7 +59,9 @@ class RequestModal extends Component {
   render() {
     const { request } = this.props;
     if (!request) return null;
-    const { language, user, service, requested_mentor: mentor } = request;
+    const {
+      language, user, service, requested_mentor: mentor
+    } = request;
     const mentorName = mentor ? `${mentor.first_name} ${mentor.last_name}` : 'N/A';
     return (
       <Modal
