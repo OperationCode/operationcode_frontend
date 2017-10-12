@@ -27,7 +27,7 @@ const Benefit = () => (
         <h5>614 SW 11th Ave.</h5>
         <h5>Portland, Oregon</h5>
         <p>
-          <b><span>Hosted bar, hors d’oeuvres and</span> <span>Silent Auction</span></b> at 5:30 PM
+          <b><span className={styles.mobileBreak}>Hosted bar, hors d’oeuvres and</span> Silent Auction</b> at 5:30 PM
         </p>
         <p>
           <b>Dinner</b> at 6:30 PM
