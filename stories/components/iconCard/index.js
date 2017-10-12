@@ -1,9 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-
 import IconCard from 'shared/components/iconCard/iconCard';
-
 
 storiesOf('shared/components/iconCard', module)
   .add('Default', () => (
