@@ -37,16 +37,11 @@
   }
 }
 @media screen and (max-width: 400px) {
-    div span:last-of-type {
+    .mobileBreak {
         display: block;
     }
 }
 
-@media screen and (max-width: 350px) {
-    div span:nth-of-type(2) {
-        display: block;
-    }
-}
 
 iframe {
   border: 0;
