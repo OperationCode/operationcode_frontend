@@ -7,13 +7,9 @@ import BoardCard from 'shared/components/boardCard/boardCard';
 import styles from './team.css';
 
 class Team extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      members: []
-    };
-  }
+  state = {
+    members: []
+  };
 
   componentWillMount() {
     return fetch('https://api.operationcode.org/api/v1/team_members.json').then(response =>

@@ -37,21 +37,17 @@ import Benefit from './benefit/benefit';
 import styles from './home.css';
 
 class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      bgImage: false,
-      bgImageUrl: null,
-      signedIn: false,
-      mentor: false
-    };
-
-    this.props.history.listen((location) => {
-      this.setBgImage(location);
-    });
+  state = {
+    bgImage: false,
+    bgImageUrl: null,
+    signedIn: false,
+    mentor: false
   }
 
   componentWillMount() {
+    this.props.history.listen((location) => {
+      this.setBgImage(location);
+    });
     this.setBgImage(this.props.location);
     this.updateRootAuthState();
   }
