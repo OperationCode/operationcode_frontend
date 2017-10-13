@@ -6,7 +6,7 @@ import styles from './benefit.css';
 
 const Benefit = () => (
   <div>
-    <Section title="Benefit Dinner & Silent Auction" theme="white" headingLines={false}>
+    <Section title="Benefit Dinner & Auction" theme="white" headingLines={false}>
       <br />
       <p className={styles.cta}>
         <LinkButton
