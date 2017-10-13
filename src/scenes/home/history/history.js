@@ -6,7 +6,7 @@ import Timeline from './timeline/timeline';
 const History = () => (
   <div>
     <QuoteBanner
-      author="Collin Powell"
+      author="Colin Powell"
       quote="There are no secrets to success. It is the result of preparation, hard work, learning from failure."
     />
 
