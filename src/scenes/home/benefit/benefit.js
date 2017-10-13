@@ -1,23 +1,24 @@
 import React from 'react';
 import Section from 'shared/components/section/section';
 import LinkButton from 'shared/components/linkButton/linkButton';
-import NodeLogo from '../../../images/nodejs.png';
 import OCLogo from '../../../images/logos/small-logo.png';
 import styles from './benefit.css';
 
 const Benefit = () => (
   <div>
-    <Section title="Benefit Dinner & Silent Auction" theme="white">
+    <Section title="Benefit Dinner & Silent Auction" theme="white" headingLines={false}>
       <br />
       <p className={styles.cta}>
         <LinkButton
+          role="button"
           text="Donate"
-          className={styles.blueLarge}
+          theme="blue-large"
           link="https://opencollective.com/operationcode#support"
           isExternal
         />
-        &nbsp;
+        &#032;
         <LinkButton
+          role="button"
           text="Purchase Tickets"
           theme="red-large"
           link="https://operationcode.ejoinme.org/MyEvents/DeploytheFutureGala2017/VeteransDayBenefitDinnerSilentAuctionTicketTableRegistration/tabid/892109/Default.aspx"
@@ -42,80 +43,95 @@ const Benefit = () => (
       <p>
        On Friday, November 10, 2017, we will come together at the Sentinel Hotel’s Governor Ballroom to pause, reflect, toast and celebrate how far we’ve come. We will honor those who’ve served in uniform and how much they’ve learned through the communities generosity. With your support, we will continue to fund our education programs and seed our first scholarship endowment so we can go further, faster tomorrow.
       </p>
+      <p className={styles.cta}>To learn more about sponsorship, {' '}
+        <a
+          href="https://operationcode.ejoinme.org/MyEvents/DeploytheFutureGala2017/VeteransDayBenefitDinnerSilentAuctionTicketTableRegistration/tabid/892109/Default.aspx"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          click here
+        </a>.
+        <br />
+          Read the full press release{' '}
+        <a
+          href="https://s3-us-west-2.amazonaws.com/operationcode/veterans-day-benefit-dinner-auction+.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+        here
+        </a>.
+      </p>
     </Section>
     <Section title="You're Invited" theme="white">
-      <div className={styles.center}>
+      <div className={styles.cta}>
+        <h6>Who:</h6>
         <p>
-          <b>Who: </b>250+ guests joining forces to help America’s finest and their families get into tech
+        250+ guests joining forces to help America’s finest and their families get into tech
         </p>
+        <h6>What:</h6>
         <p>
-          <b>What: </b>Hosted bar, wine, hors d’oeuvres, auction, dinner, and program
+          Hosted bar, wine, hors d’oeuvres, auction, dinner, and program
         </p>
+
+        <h6>When:</h6>
         <p>
-          <b>When: </b>Friday, November 10, 2017<br />
-          5:30 PM Hosted Bar, Hors d’oeuvres, Silent Auction<br />
-          7:00 PM Dinner, Program and Live Auction<br />
+        Friday, November 10, 2017<br />
+        5:30 PM Hosted Bar, Hors d’oeuvres, Silent Auction<br />
+        7:00 PM Dinner, Program and Live Auction<br />
         </p>
+        <h6>Where:</h6>
         <p>
-          <b>Where: </b>The Sentinel Hotel<br />
-          Governor Ballroom<br />
-          614 SW 11th Ave<br />
-          Portland, OR 97205<br />
+        The Sentinel Hotel<br />
+        Governor Ballroom<br />
+        614 SW 11th Ave<br />
+        Portland, OR 97205<br />
         </p>
+        <h6>Why:</h6>
         <p>
-          <b>Why: </b>Fund Operation Code’s education programs and create a scholarship endowment
+        Fund Operation Code’s education programs and create a scholarship endowment
         </p>
+        <h6>Dress: </h6>
         <p>
-          <b>Dress: </b>Business Casual
+        Business Casual
         </p>
         <br />
-        <hr />
-        <br />
+        <h6>Event Chairs:</h6>
         <p>
-          <b>Event Chairs: </b>Chris Dawson & David Molina
-        </p>
-        <p>
-          <b>For Additional Information</b><br />
-          Please contact David Molina at:<br />
-          david@operationcode.org<br />
-          (971) 279-2586 (work)<br />
+        Chris Dawson & David Molina
         </p>
       </div>
     </Section>
     <Section title="Sponsors" theme="white">
-      <div className={styles.center}>
+      <div className={styles.cta}>
         <p>
-          This year’s major sponsors include NodeJS Foundation, Sabio, and Beneficial State Bank.
-        </p>
-        <p>
-          <a href="https://nodejs.org/en/foundation/" target="_blank" rel="noopener noreferrer">
-            <img src={NodeLogo} alt="NodeJS Foundation Logo" width="300px" />
-          </a>
-        </p>
-        <p>
-          Sponsorships still available! More info{' '}
+          This year’s major sponsors include{' '}
           <a
-            href="https://operationcode.ejoinme.org/MyEvents/DeploytheFutureGala2017/VeteransDayBenefitDinnerSilentAuctionTicketTableRegistration/tabid/892109/Default.aspx"
+            href="http://www.dshaw.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            here
-          </a>.
-        </p>
-        <p>
-          Read the full press release{' '}
+            Dan Shaw
+          </a>,
+           {' '}
           <a
-            href="https://s3-us-west-2.amazonaws.com/operationcode/veterans-day-benefit-dinner-auction+.pdf"
+            href="https://www.sabio.la"
             target="_blank"
             rel="noopener noreferrer"
           >
-            here
+           Sabio
+          </a>, and {' '}
+          <a
+            href="https://www.beneficialstatebank.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+           Beneficial State Bank
           </a>.
         </p>
       </div>
     </Section>
-    <Section title="The Sentinel" theme="white">
-      <div className={styles.center}>
+    <Section title="Location" theme="white">
+      <div className={styles.cta}>
         <iframe
           title="Sentinel Hotel"
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11181.901436230051!2d-122.6826821!3d45.5206389!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x776c285f8c70615a!2sSentinel!5e0!3m2!1sen!2sus!4v1501714755964"
@@ -123,10 +139,20 @@ const Benefit = () => (
           height="450"
           allowFullScreen
         />
+        <br />
+        <hr />
+        <br />
+        <p>
+          <b>For Additional Information</b><br />
+          Please contact David Molina at:<br />
+          david@operationcode.org<br />
+          (971) 279-2586 (work)<br />
+        </p>
+        <br />
         <p className={styles.cta}>
           <LinkButton
             text="Donate"
-            className={styles.blueLarge}
+            theme="blue-large"
             link="https://opencollective.com/operationcode#support"
             isExternal
           />
