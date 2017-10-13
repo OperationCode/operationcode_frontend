@@ -1,6 +1,19 @@
-# OperationCode Frontend
+# ✨ :us: OperationCode Frontend :us: ✨
 
-![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=<badge_key>)
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/dQ89RwBP6AkJqcTn3boQVxXA/OperationCode/operationcode_frontend'>
+  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/dQ89RwBP6AkJqcTn3boQVxXA/OperationCode/operationcode_frontend.svg' />
+</a>
+
+-------
+
+>
+[![Build Status](https://travis-ci.org/OperationCode/operationcode_frontend.svg?branch=master)](https://travis-ci.org/OperationCode/operationcode_frontend)
+
+[![PRs Welcome][prs-badge]][prs]
+
+[prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
+[prs]: http://makeapullrequest.com
+>
 
 This is the repository for the front-end portion of https://operationcode.org.
 
