@@ -1,7 +1,6 @@
 import React from 'react';
 import Section from 'shared/components/section/section';
 import LinkButton from 'shared/components/linkButton/linkButton';
-import OCLogo from '../../../images/logos/small-logo.png';
 import Sabio from '../../../images/codeSchoolLogos/Sabio_Logo_Wordmark_Square.png';
 import styles from './benefit.css';
 
@@ -26,9 +25,6 @@ const Benefit = () => (
           isExternal
         />
       </p>
-      <br />
-      <img src={OCLogo} alt="Operation Code" />
-      <br />
       <p>
        The 2017 Operation Code Benefit Dinner & Auction will celebrate the tens of hundreds of life-changing educational and mentorship opportunities provided throughout the country and across the globe since 2014 while aspiring to deliver more next year.
       </p>
