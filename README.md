@@ -1,6 +1,8 @@
 # OperationCode Frontend
 
-![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=<badge_key>)
+
+![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=<badge_key>)  
+[![Twitter Follow](https://img.shields.io/twitter/follow/operation_code.svg?style=social&label=Follow&style=plastic)](https://twitter.com/operation_code)
 
 This is the repository for the front-end portion of https://operationcode.org.
 
