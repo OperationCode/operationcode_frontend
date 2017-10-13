@@ -2,6 +2,7 @@ import React from 'react';
 import Section from 'shared/components/section/section';
 import LinkButton from 'shared/components/linkButton/linkButton';
 import OCLogo from '../../../images/logos/small-logo.png';
+import Sabio from '../../../images/codeSchoolLogos/Sabio_Logo_Wordmark_Square.png';
 import styles from './benefit.css';
 
 const Benefit = () => (
@@ -114,7 +115,7 @@ const Benefit = () => (
           </a>,
            {' '}
           <a
-            href="https://www.sabio.la"
+            href="https://www.sabio.la/gi"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -127,6 +128,15 @@ const Benefit = () => (
           >
            Beneficial State Bank
           </a>.
+        </p>
+        <p>
+          <a
+            href="https://www.sabio.la/gi"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={Sabio} alt="Sabio" />
+          </a>
         </p>
       </div>
     </Section>
