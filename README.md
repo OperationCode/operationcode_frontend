@@ -6,7 +6,6 @@
 
 -------
 
->
 [![Build Status](https://travis-ci.org/OperationCode/operationcode_frontend.svg?branch=master)](https://travis-ci.org/OperationCode/operationcode_frontend)
 [![PRs Welcome][prs-badge]][prs]
 
@@ -15,7 +14,6 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Twitter Follow](https://img.shields.io/twitter/follow/operation_code.svg?style=social&label=Follow&style=social)](https://twitter.com/operation_code)
->
 
 This is the repository for the front-end portion of https://operationcode.org.
 
@@ -23,11 +21,7 @@ This is the repository for the front-end portion of https://operationcode.org.
 
 If you're here looking for a place to contribute pull requests as part of GitHub's "Hacktoberfest", you're in the right place! Please look forward to an increased amount of documentation and tickets. We highly recommend joining our organization at operationcode.org to receive an invite to our Slack team. From there, you'll join the `#oc-projects` channel. You can get help from multiple professional developers and people who have worked on the application since day 1! Happy hacking!
 
-#### Quick Start
-
-**Join our Slack!**
-
-<a href="https://operationcode.org/join" rel="nofollow" target="_blank" title="Join this project's slack community"><img src="<img src="https://slack.operation-code.com/badge.svg">" alt="Slack community badge" /></a>
+### Quick Start
 
 ### TLDR
 
