@@ -18,9 +18,7 @@ const queryString = require('query-string');
 
 class Login extends Component {
   state = {
-    email: '',
     emailValid: false,
-    password: '',
     passwordValid: false,
     authenticated: false,
     errorStatus: -1,

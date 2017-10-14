@@ -13,7 +13,7 @@ export default function login(state = initialState, action) {
       });
     case ADD_PASSWORD:
       return Object.assign({}, state, {
-        email: action.password
+        password: action.password
       });
     default:
       return state;

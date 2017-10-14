@@ -3,7 +3,9 @@ import Login from './login'
 import { addEmail, addPassword } from '../../state/login/actions'
 
 const mapStatetoProps = state => {
-  return {}
+  return {
+    email: state.email
+  }
 };
 
 const mapDispatchToProps = dispatch => {
