@@ -1,0 +1,38 @@
+.header {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.cta {
+  text-align: center;
+}
+
+.tickets {
+  padding-top: 15px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.tickets > div {
+  margin-bottom: 20px;
+  display: inline-block;
+  width: 45%;
+  max-width: 560px;
+}
+
+@media screen and (min-width: 415px) and (max-width: 1280px) {
+  .tickets > div {
+    width: 375px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .tickets > div {
+    width: 300px;
+  }
+}
+
+iframe {
+  border: 0;
+}

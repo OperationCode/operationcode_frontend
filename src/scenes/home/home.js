@@ -11,14 +11,11 @@ import AuthenticatedRoute from 'shared/components/authenticatedRoute/authenticat
 import familyImage from 'images/Family-2.jpg';
 import Profile from './profile/profile';
 import SignUp from './signup/signup';
-import MentorRequestsTable from './mentor/mentorRequestsTable/mentorRequestsTable';
 import SquadsTable from './squads/squadsTable/squadsTable';
 import Dashboard from './dashboard/dashboard';
-import MentorsTable from './mentor/mentorsTable/mentorsTable';
 import Scholarships from './scholarship/scholarships';
 import ScholarshipApplication from './scholarshipApplication/scholarshipApplication';
 import Team from './team/team';
-import Gala from './gala/gala';
 import FAQ from './faq/faq';
 import Jobs from './jobs/jobs';
 import Contact from './contact/contact';
@@ -36,24 +33,21 @@ import Press from './press/press';
 import ResetPassword from './resetPassword/resetPassword';
 import Challenge from './challenge/challenge';
 import SignupInformation from './informationForm/informationForm';
+import Benefit from './benefit/benefit';
 import styles from './home.css';
 
 class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      bgImage: false,
-      bgImageUrl: null,
-      signedIn: false,
-      mentor: false
-    };
-
-    this.props.history.listen((location) => {
-      this.setBgImage(location);
-    });
+  state = {
+    bgImage: false,
+    bgImageUrl: null,
+    signedIn: false,
+    mentor: false
   }
 
   componentWillMount() {
+    this.props.history.listen((location) => {
+      this.setBgImage(location);
+    });
     this.setBgImage(this.props.location);
     this.updateRootAuthState();
   }
@@ -195,21 +189,9 @@ class Home extends Component {
               )}
             />
             <Route
-              path="/requests"
-              render={() => (
-                <MentorRequestsTable {...authProps} />
-              )}
-            />
-            <Route
               path="/squads/new-squad"
               render={() => (
                 <SquadsNew {...authProps} />
-              )}
-            />
-            <Route
-              exact path="/mentors"
-              render={() => (
-                <MentorsTable {...authProps} />
               )}
             />
             <Route
@@ -224,9 +206,15 @@ class Home extends Component {
               )}
             />
             <Route
+              path="/benefit"
+              render={() => (
+                <Benefit {...authProps} />
+              )}
+            />
+            <Route
               path="/gala"
               render={() => (
-                <Gala {...authProps} />
+                <Benefit {...authProps} />
               )}
             />
             {/* eslint-disable */}

@@ -10,32 +10,38 @@ const Profile = ({ verified }) => (
     <div className={styles.profileContainer}>
       <div className={styles.profileContainer__cards}>
         <IconCard
-          title="Request a Mentor" fontAwesomeIcon="FaLifeBouy"
+          title="Request a Mentor"
+          fontAwesomeIcon="FaLifeBouy"
           url="https://op.co.de/mentor-request"
         />
 
         <IconCard
-          title="Check for Scholarships" fontAwesomeIcon="FaGraduationCap"
+          title="Check for Scholarships"
+          fontAwesomeIcon="FaGraduationCap"
           url="/scholarships"
         />
 
         <IconCard
-          title="Check for Open Jobs" fontAwesomeIcon="FaBriefcase"
+          title="Check for Open Jobs"
+          fontAwesomeIcon="FaBriefcase"
           url="/jobs"
         />
 
         <IconCard
-          title="Enter our Slack Channel" fontAwesomeIcon="FaSlack"
+          title="Enter our Slack Team"
+          fontAwesomeIcon="FaSlack"
           url="https://operation-code.slack.com/"
         />
 
         <IconCard
-          title="Enter our Discourse Forums" fontAwesomeIcon="FaCommentsO"
+          title="Enter our Discourse Forum"
+          fontAwesomeIcon="FaCommentsO"
           url="https://community.operationcode.org/"
         />
 
         <IconCard
-          title="Update My Info" fontAwesomeIcon="FaUser"
+          title="Update Info"
+          fontAwesomeIcon="FaUser"
           url="/signup-info"
         />
       </div>
