@@ -76,18 +76,45 @@ class SquadsModal extends Component {
   }
 }
 
-SquadsModal.propTypes = {
-  isOpen: PropTypes.bool,
-  onRequestClose: PropTypes.func,
-  handleFormUpdate: PropTypes.func,
-  squad: PropTypes.object // eslint-disable-line react/forbid-prop-types
-};
-
 SquadsModal.defaultProps = {
   isOpen: false,
   onRequestClose: () => {},
   handleFormUpdate: () => {},
-  squad: {} // eslint-disable-line react/forbid-prop-types
+  squad: PropTypes.instanceOf(PropTypes.shape({
+    id: PropTypes.number,
+    name: PropTypes.string,
+    leader: PropTypes.shape({
+      first_name: PropTypes.string,
+      last_name: PropTypes.string,
+    }),
+  }))
+};
+
+SquadsModal.propTypes = {
+  isOpen: PropTypes.bool,
+  onRequestClose: PropTypes.func,
+  handleFormUpdate: PropTypes.func,
+  squad: PropTypes.shape({
+    id: PropTypes.number,
+    name: PropTypes.string,
+    leader: PropTypes.shape({
+      first_name: PropTypes.string,
+      last_name: PropTypes.string,
+    }),
+    mentors: PropTypes.arrayOf(PropTypes.shape({
+      first_name: PropTypes.string,
+      last_name: PropTypes.string,
+    })),
+    activities: PropTypes.string,
+    skill_level: PropTypes.string,
+    minimum: PropTypes.string,
+    maximum: PropTypes.string,
+    members: PropTypes.arrayOf(PropTypes.shape({
+      first_name: PropTypes.string,
+      last_name: PropTypes.string,
+    })),
+    description: PropTypes.string,
+  })
 };
 
 export default SquadsModal;
