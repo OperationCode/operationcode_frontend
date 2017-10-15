@@ -11,7 +11,6 @@ import AuthenticatedRoute from 'shared/components/authenticatedRoute/authenticat
 import familyImage from 'images/Family-2.jpg';
 import Profile from './profile/profile';
 import SignUp from './signup/signup';
-import SquadsTable from './squads/squadsTable/squadsTable';
 import Dashboard from './dashboard/dashboard';
 import Scholarships from './scholarship/scholarships';
 import ScholarshipApplication from './scholarshipApplication/scholarshipApplication';
@@ -26,7 +25,6 @@ import Landing from './landing/landing';
 import Footer from './footer/footer';
 import FourOhFour from './404/fourOhFour';
 import MentorRequest from './mentorRequest/mentorRequest';
-import SquadsNew from './squads/squadsNew/squadsNew';
 import CodeSchools from './codeSchools/codeSchools';
 import About from './about/about';
 import Press from './press/press';
@@ -189,21 +187,9 @@ class Home extends Component {
               )}
             />
             <Route
-              path="/squads/new-squad"
-              render={() => (
-                <SquadsNew {...authProps} />
-              )}
-            />
-            <Route
               exact
               path="/scholarships"
               component={Scholarships}
-            />
-            <Route
-              path="/squads"
-              render={() => (
-                <SquadsTable {...authProps} />
-              )}
             />
             <Route
               path="/benefit"

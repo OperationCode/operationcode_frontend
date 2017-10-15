@@ -30,7 +30,6 @@ class Header extends Component {
         <NavItem to="/jobs" text="Job Board" onClick={onClick} />
         <NavItem to="https://opencollective.com/operationcode#support" text="Donate" onClick={onClick} isExternal />
         {signedIn && <NavItem to="https://op.co.de/mentor-request" text="Request Help" onClick={onClick} isExternal />}
-        {signedIn && <NavItem to="/squads" text="Squads" onClick={onClick} />}
         {signedIn ? <NavItem to="/profile" text="Profile" onClick={onClick} />
           : <NavItem to="/join" text="Join" onClick={onClick} />}
         {signedIn ? <NavItem to="/" text="Logout" onClick={this.props.logOut} />

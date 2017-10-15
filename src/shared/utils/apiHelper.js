@@ -26,25 +26,12 @@ export function patchBackend(path, body) {
   return axios.patch(`${config.backendUrl}/${path}`, body, { headers: authHeader });
 }
 
-export function joinSquad(id) {
-  const authHeader = setAuthorizationHeader();
-  return axios.post(`${config.backendUrl}/squads/${id}/join`, {
-    request: {
-
-    }
-  }, {
-    headers: authHeader
-  }).then(({ data }) => data);
-}
-
 export const getServices = () => makeGenericGet('services');
 
 export const getMentors = () => makeGenericGet('mentors');
 export const getMentor = id => makeGenericGet(`mentors/${id}`);
 
 export const getRequests = () => makeGenericGet('requests');
-
-export const getSquads = () => makeGenericGet('squads');
 
 export const getScholarships = () => makeGenericGet('scholarships');
 export const getScholarship = id => makeGenericGet(`scholarships/${id}`);
@@ -60,28 +47,6 @@ export function postRequest({
       requested_mentor_id: mentor,
       service_id: service,
       language
-    }
-  }, {
-    headers: authHeader
-  });
-}
-
-export function postSquads({
-  name, leaderId, description, minimum, maximum, skillLevel, activities, endCondition, mentorIds
-}) {
-  const authHeader = setAuthorizationHeader();
-
-  return axios.post(`${config.backendUrl}/squads`, {
-    squad: {
-      name,
-      leader_id: leaderId,
-      description,
-      minimum,
-      maximum,
-      skill_level: skillLevel,
-      activities,
-      end_condition: endCondition,
-      mentor_ids: mentorIds
     }
   }, {
     headers: authHeader
