@@ -1,7 +1,7 @@
 import React from 'react';
 import Section from 'shared/components/section/section';
 import LinkButton from 'shared/components/linkButton/linkButton';
-import Sabio from '../../../images/codeSchoolLogos/Sabio_Logo_Wordmark_Square.png';
+import Sabio from '../../../images/codeSchoolLogos/sabio.png';
 import styles from './benefit.css';
 
 const Benefit = () => (

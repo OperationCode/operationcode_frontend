@@ -100,7 +100,7 @@ class PartnerSchools extends Component {
             schoolAddress="400 Corporate Pointe"
             schoolCity="Culver City"
             schoolState="CA"
-            logo="./images/codeSchoolLogos/sabio.jpg"
+            logo="./images/codeSchoolLogos/sabio.png"
             GI="Yes"
             fullTime="Full-Time"
             hardware="No"
