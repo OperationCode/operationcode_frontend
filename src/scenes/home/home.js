@@ -11,7 +11,6 @@ import AuthenticatedRoute from 'shared/components/authenticatedRoute/authenticat
 import familyImage from 'images/Family-2.jpg';
 import Profile from './profile/profile';
 import SignUp from './signup/signup';
-import Dashboard from './dashboard/dashboard';
 import Scholarships from './scholarship/scholarships';
 import ScholarshipApplication from './scholarshipApplication/scholarshipApplication';
 import Team from './team/team';
@@ -100,10 +99,6 @@ class Home extends Component {
         <Header transparent={this.state.bgImage} logOut={this.logOut} signedIn={signedIn} mentor={mentor} />
         <div className={styles.main} >
           <Switch>
-            <Route
-              path="/home"
-              component={Dashboard}
-            />
             <Route
               path="/code-schools"
               component={CodeSchools}
