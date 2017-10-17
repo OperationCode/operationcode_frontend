@@ -21,10 +21,6 @@
   max-width: 560px;
 }
 
-.center{
-  text-align:center;
-}
-
 @media screen and (min-width: 415px) and (max-width: 1280px) {
   .tickets > div {
     width: 375px;
@@ -36,12 +32,6 @@
     width: 300px;
   }
 }
-@media screen and (max-width: 400px) {
-    .mobileBreak {
-        display: block;
-    }
-}
-
 
 iframe {
   border: 0;

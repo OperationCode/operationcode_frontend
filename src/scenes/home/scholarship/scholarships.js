@@ -5,12 +5,9 @@ import Preview from './preview/preview.js';
 import styles from './scholarships.css';
 
 class Scholarships extends Component {
-  constructor() {
-    super();
-    this.state = {
-      scholarships: null
-    };
-  }
+  state = {
+    scholarships: null
+  };
 
   componentWillMount() {
     getScholarships().then((data) => {

@@ -11,8 +11,6 @@ import AuthenticatedRoute from 'shared/components/authenticatedRoute/authenticat
 import familyImage from 'images/Family-2.jpg';
 import Profile from './profile/profile';
 import SignUp from './signup/signup';
-import SquadsTable from './squads/squadsTable/squadsTable';
-import Dashboard from './dashboard/dashboard';
 import Scholarships from './scholarship/scholarships';
 import ScholarshipApplication from './scholarshipApplication/scholarshipApplication';
 import Team from './team/team';
@@ -26,7 +24,6 @@ import Landing from './landing/landing';
 import Footer from './footer/footer';
 import FourOhFour from './404/fourOhFour';
 import MentorRequest from './mentorRequest/mentorRequest';
-import SquadsNew from './squads/squadsNew/squadsNew';
 import CodeSchools from './codeSchools/codeSchools';
 import About from './about/about';
 import Press from './press/press';
@@ -37,21 +34,17 @@ import Benefit from './benefit/benefit';
 import styles from './home.css';
 
 class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      bgImage: false,
-      bgImageUrl: null,
-      signedIn: false,
-      mentor: false
-    };
-
-    this.props.history.listen((location) => {
-      this.setBgImage(location);
-    });
+  state = {
+    bgImage: false,
+    bgImageUrl: null,
+    signedIn: false,
+    mentor: false
   }
 
   componentWillMount() {
+    this.props.history.listen((location) => {
+      this.setBgImage(location);
+    });
     this.setBgImage(this.props.location);
     this.updateRootAuthState();
   }
@@ -106,10 +99,6 @@ class Home extends Component {
         <Header transparent={this.state.bgImage} logOut={this.logOut} signedIn={signedIn} mentor={mentor} />
         <div className={styles.main} >
           <Switch>
-            <Route
-              path="/home"
-              component={Dashboard}
-            />
             <Route
               path="/code-schools"
               component={CodeSchools}
@@ -193,21 +182,9 @@ class Home extends Component {
               )}
             />
             <Route
-              path="/squads/new-squad"
-              render={() => (
-                <SquadsNew {...authProps} />
-              )}
-            />
-            <Route
               exact
               path="/scholarships"
               component={Scholarships}
-            />
-            <Route
-              path="/squads"
-              render={() => (
-                <SquadsTable {...authProps} />
-              )}
             />
             <Route
               path="/benefit"

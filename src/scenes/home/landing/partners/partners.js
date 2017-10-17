@@ -7,6 +7,7 @@ import dockerLogo from 'images/partnerLogos/docker_logo.png';
 import oracleLogo from 'images/partnerLogos/oracle_logo.png';
 import oreillyLogo from 'images/partnerLogos/oreilly_logo.png';
 import hackerrankLogo from 'images/partnerLogos/hackerrank_logo.png';
+import zapierLogo from 'images/partnerLogos/zapier_logo.png';
 import styles from './partners.css';
 
 const Partners = () => (
@@ -56,6 +57,11 @@ const Partners = () => (
       <div>
         <a href="https://oracle.com/" target="_blank" rel="noopener noreferrer">
           <img src={oracleLogo} alt="Oracle" />
+        </a>
+      </div>
+      <div>
+        <a href="https://www.zapier.com/" target="_blank" rel="noopener noreferrer">
+          <img src={zapierLogo} alt="Zapier" />
         </a>
       </div>
     </div>

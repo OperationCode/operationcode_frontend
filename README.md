@@ -1,6 +1,8 @@
 # OperationCode Frontend
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=<badge_key>)
+[![Twitter Follow](https://img.shields.io/twitter/follow/operation_code.svg?style=social&label=Follow&style=plastic)](https://twitter.com/operation_code)
 
 This is the repository for the front-end portion of https://operationcode.org.
 

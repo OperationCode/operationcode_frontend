@@ -295,6 +295,24 @@ Example...
 │       └── home.js
 ```
 
+##### Code School Images
+Code school logos belong in the following directory:
+```
+├── src
+│   └── public
+|         └── images
+│               └── codeSchoolLogos
+│                       └── LOGOS.jpg...
+```
+The following process should be used to prepare a code school logo for use:
+1. Find the highest-quality image file of the code school's logo
+2. Open some photo manipulation software (e.g. Photoshop, pixlr.com, Paint)
+3. Create a 200x200 pixel white square
+4. Paste the logo centered into the square
+5. Ensure that there is at least a 15 pixel margin between every edge and the logo
+6. Re-ensure that your logo is centered in the square
+7. Save the file as a JPEG (.jpg) in the above directory
+
 #### Running the development environment
 Now that you understand the technology and project structure, feel free to direct yourself to the [Quick-Start Guide](#quick-start-guide).
 
