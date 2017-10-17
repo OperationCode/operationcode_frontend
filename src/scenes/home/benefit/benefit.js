@@ -21,7 +21,7 @@ const Benefit = () => (
           role="button"
           text="Purchase Tickets"
           theme="red-large"
-          link="http://buytickets.at/opcode/122463"
+          link="https://buytickets.at/opcode/122463"
           isExternal
         />
       </p>
@@ -166,7 +166,7 @@ const Benefit = () => (
           <LinkButton
             text="Purchase Tickets"
             theme="red-large"
-            link="http://buytickets.at/opcode/122463"
+            link="https://buytickets.at/opcode/122463"
             isExternal
           />
         </p>
