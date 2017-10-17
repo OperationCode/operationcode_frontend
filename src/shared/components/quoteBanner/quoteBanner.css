@@ -32,7 +32,7 @@
   text-align: right;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 995px) {
   .quoteBanner {
     background-size: auto 100%;
   }
