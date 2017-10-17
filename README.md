@@ -1,9 +1,5 @@
 # ✨ :us: OperationCode Frontend :us: ✨
 
-<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/dQ89RwBP6AkJqcTn3boQVxXA/OperationCode/operationcode_frontend'>
-  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/dQ89RwBP6AkJqcTn3boQVxXA/OperationCode/operationcode_frontend.svg' />
-</a>
-
 -------
 
 [![Build Status](https://travis-ci.org/OperationCode/operationcode_frontend.svg?branch=master)](https://travis-ci.org/OperationCode/operationcode_frontend)
