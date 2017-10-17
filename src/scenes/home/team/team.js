@@ -67,7 +67,6 @@ class Team extends Component {
           </div>
         </Section>
 
-
         <Section title="Our Board" theme="white">
           <div className={styles.board}>
             <BoardCard name={chair.name} role={chair.role} src={chair.src} alt={chair.alt} />
