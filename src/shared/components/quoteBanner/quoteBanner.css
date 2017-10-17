@@ -3,11 +3,14 @@
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  background: #75818F;
   margin: 0;
   text-align: center;
   color: white;
   height: 480px;
+  background-image: url(images/lincoln.jpg); 
+  background-size: 100%;
+  background-position: right top;
+  background-repeat: no-repeat;
 }
 
 .quoteLines {
