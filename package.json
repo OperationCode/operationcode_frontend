@@ -88,7 +88,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "backend": "./bin/run_backend.sh",
-    "validate": "npm ls"
+    "validate": "npm ls",
+    "image-size-check": "./bin/image-size-check"
   },
   "jest": {
     "moduleDirectories": [
@@ -128,6 +129,7 @@
   "pre-commit": [
     "fix",
     "format",
-    "lint"
+    "lint",
+    "image-size-check"
   ]
 }
