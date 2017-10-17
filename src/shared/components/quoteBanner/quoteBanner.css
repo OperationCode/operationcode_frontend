@@ -5,6 +5,7 @@
   align-items: center;
   margin: 0;
   text-align: center;
+  text-shadow: #000 1px 0 15px;
   color: white;
   height: 480px;
   background-image: url(images/lincoln.jpg); 
