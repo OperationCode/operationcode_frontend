@@ -21,7 +21,7 @@ const Benefit = () => (
           role="button"
           text="Purchase Tickets"
           theme="red-large"
-          link="https://operationcode.ejoinme.org/MyEvents/DeploytheFutureGala2017/VeteransDayBenefitDinnerSilentAuctionTicketTableRegistration/tabid/892109/Default.aspx"
+          link="http://buytickets.at/opcode/122463"
           isExternal
         />
       </p>
@@ -166,7 +166,7 @@ const Benefit = () => (
           <LinkButton
             text="Purchase Tickets"
             theme="red-large"
-            link="https://operationcode.ejoinme.org/MyEvents/DeploytheFutureGala2017/VeteransDayBenefitDinnerSilentAuctionTicketTableRegistration/tabid/892109/Default.aspx"
+            link="http://buytickets.at/opcode/122463"
             isExternal
           />
         </p>
