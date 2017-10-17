@@ -84,20 +84,12 @@ class Team extends Component {
           quote="To care for him who shall have borne the battle and for his widow, and his orphan."
         />
 
-        <Section title="Our Staff" theme="white">
+        <Section title="Our Team" theme="white">
           <p>
             Our all volunteer staff are dedicated individuals who come from a wide variety of backgrounds, including members of both the civilian and military community.
           </p>
           <div className={styles.team}>
             { team }
-          </div>
-        </Section>
-
-        <Section title="Our Team" theme="gray">
-          <div className={styles.board}>
-            <StaffCard name={ceo.name} role={ceo.role} src={ceo.src} twitter={ceo.twitter} email={ceo.email} alt={ceo.alt} />
-            <StaffCard name={coo.name} role={coo.role} src={coo.src} twitter={coo.twitter} email={coo.email} alt={coo.alt} />
-            <StaffCard name={cto.name} role={cto.role} src={cto.src} twitter={cto.twitter} email={cto.email} alt={cto.alt} />
           </div>
         </Section>
 
