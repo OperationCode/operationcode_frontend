@@ -3261,6 +3261,10 @@ electron-to-chromium@^1.3.18:
   version "1.3.24"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.24.tgz#9b7b88bb05ceb9fa016a177833cc2dde388f21b6"
 
+element-class@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/element-class/-/element-class-0.2.2.tgz#9d3bbd0767f9013ef8e1c8ebe722c1402a60050e"
+
 elliptic@^6.0.0:
   version "6.4.0"
   resolved "https://registry.yarnpkg.com/elliptic/-/elliptic-6.4.0.tgz#cac9af8762c85836187003c8dfe193e5e2eae5df"
@@ -4671,6 +4675,12 @@ ieee754@^1.1.4:
 ignore@^3.2.7, ignore@^3.3.3:
   version "3.3.5"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-3.3.5.tgz#c4e715455f6073a8d7e5dae72d2fc9d71663dba6"
+
+immutability-helper@^2.3.1:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/immutability-helper/-/immutability-helper-2.4.0.tgz#00d421e2957c17f0f0781475f05ffd837e73458d"
+  dependencies:
+    invariant "^2.2.0"
 
 immutable@^3.8.1:
   version "3.8.1"
@@ -7541,6 +7551,17 @@ react-table@^6.0.5:
   dependencies:
     classnames "^2.2.5"
     react-json-tree "^0.10.9"
+
+react-toastr@^2.9.5:
+  version "2.9.5"
+  resolved "https://registry.yarnpkg.com/react-toastr/-/react-toastr-2.9.5.tgz#f2263770c8ce13714625e7ce6d0908279353bb31"
+  dependencies:
+    classnames "^2.2.5"
+    create-react-class "^15.6.0"
+    element-class "^0.2.2"
+    immutability-helper "^2.3.1"
+    lodash "^4.17.4"
+    prop-types "^15.5.10"
 
 react-transition-group@^1.1.2:
   version "1.2.1"
