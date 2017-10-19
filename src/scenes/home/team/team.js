@@ -50,7 +50,24 @@ class Team extends Component {
       src: './images/thomas.jpg',
       alt: 'Thomas Ciszec'
     };
-
+    const board1 = {
+      name: 'Liza Rodewald',
+      role: 'Secretary',
+      src: './images/thomas.jpg',
+      alt: 'Thomas Ciszec'
+    };
+    const board2 = {
+      name: 'Stacy Chin',
+      role: 'Secretary',
+      src: './images/thomas.jpg',
+      alt: 'Thomas Ciszec'
+    };
+    const board3 = {
+      name: 'Conrad Hollomon',
+      role: 'Secretary',
+      src: './images/thomas.jpg',
+      alt: 'Thomas Ciszec'
+    };
     return (
       <div>
         <QuoteBanner
@@ -73,6 +90,9 @@ class Team extends Component {
             <BoardCard name={vicechair.name} role={vicechair.role} src={vicechair.src} alt={vicechair.alt} />
             <BoardCard name={treasurer.name} role={treasurer.role} src={treasurer.src} alt={treasurer.alt} />
             <BoardCard name={secretary.name} role={secretary.role} src={secretary.src} alt={secretary.alt} />
+            <BoardCard name={board1.name} role={board1.role} src={board1.src} alt={board1.alt} />
+            <BoardCard name={board2.name} role={board2.role} src={board2.src} alt={board2.alt} />
+            <BoardCard name={board3.name} role={board3.role} src={board3.src} alt={board3.alt} />
           </div>
         </Section>
       </div>
