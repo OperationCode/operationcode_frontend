@@ -44,25 +44,25 @@ class Team extends Component {
       src: './images/elmer.png',
       alt: 'Head shot of Elmer Thomas'
     };
-    const secretary1 = {
+    const secretary = {
       name: 'Thomas Ciszec',
       role: 'Secretary',
       src: './images/thomas.jpg',
       alt: 'Head shot of Thomas Ciszec'
     };
-    const secretary2 = {
+    const board1 = {
       name: 'Liza Rodewald',
       role: 'Secretary',
       src: './images/liza.jpg',
       alt: 'Head shot of Liza Rodewald'
     };
-    const secretary3 = {
+    const board2 = {
       name: 'Stacy Chin',
       role: 'Secretary',
       src: './images/stacy.jpg',
       alt: 'Head shot of Stacy Chin'
     };
-    const secretary4 = {
+    const board3 = {
       name: 'Conrad Hollomon',
       role: 'Secretary',
       src: './images/conrad.jpg',
@@ -89,10 +89,10 @@ class Team extends Component {
             <BoardCard name={chair.name} role={chair.role} src={chair.src} alt={chair.alt} />
             <BoardCard name={vicechair.name} role={vicechair.role} src={vicechair.src} alt={vicechair.alt} />
             <BoardCard name={treasurer.name} role={treasurer.role} src={treasurer.src} alt={treasurer.alt} />
-            <BoardCard name={secretary1.name} role={secretary1.role} src={secretary1.src} alt={secretary1.alt} />
-            <BoardCard name={secretary2.name} role={secretary2.role} src={secretary2.src} alt={secretary2.alt} />
-            <BoardCard name={secretary3.name} role={secretary3.role} src={secretary3.src} alt={secretary3.alt} />
-            <BoardCard name={secretary4.name} role={secretary4.role} src={secretary4.src} alt={secretary4.alt} />
+            <BoardCard name={secretary.name} role={secretary.role} src={secretary.src} alt={secretary.alt} />
+            <BoardCard name={board1.name} role={board1.role} src={board1.src} alt={board1.alt} />
+            <BoardCard name={board2.name} role={board2.role} src={board2.src} alt={board2.alt} />
+            <BoardCard name={board3.name} role={board3.role} src={board3.src} alt={board3.alt} />
           </div>
         </Section>
       </div>
