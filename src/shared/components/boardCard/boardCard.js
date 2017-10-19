@@ -16,6 +16,7 @@ const BoardCard = ({
     <hr className={styles.hr} />
     <span className={styles.item}>
       <span className={styles.upper}>Role: </span> {role}
+      <p />
     </span>
   </div>
 );
