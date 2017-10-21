@@ -18,32 +18,33 @@
     height:300px;
 }
 
-.backgroundImage {
+.backgroundImageHome {
     background-size: 100%;
     background-position: center top;
     background-repeat: no-repeat;
 }
 
 @media screen and (max-width: 1200px) {
-  .backgroundImage {
+  .backgroundImageHome {
     background-size: auto 17%;
   }
 }
 
 @media screen and (max-width: 1000px) {
-  .backgroundImage {
+  .backgroundImageHome {
     background-size: auto 15%;
   }
 }
 
 @media screen and (max-width: 800px) {
-  .backgroundImage {
+  .backgroundImageHome {
     background-size: auto 8%;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .backgroundImage {
+  .backgroundImageHome {
     background-size: auto 5%;
   }
 }
+
