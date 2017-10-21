@@ -42,6 +42,7 @@ class Home extends Component {
   state = {
     bgImage: false,
     bgImageUrl: null,
+    bgImageStyle: null,
     signedIn: false,
     mentor: false
   }
@@ -56,14 +57,9 @@ class Home extends Component {
 
   setBgImage(location) {
     if (location.pathname === '/') {
-      this.setState({
-        bgChanged: !(this.state.bgImage),
-        bgImage: true,
-        bgImageUrl: familyImage,
-      });
+      this.setState({ bgChanged: !(this.state.bgImage), bgImage: true, bgImageUrl: familyImage, bgImageStyle: "backgroundImageHome" });
     } else {
-      this.setState(
-        { bgChanged: this.state.bgImage, bgImage: false, bgImageUrl: null });
+      this.setState({ bgChanged: this.state.bgImage, bgImage: false, bgImageUrl: null, bgImageStyle: null });
     }
   }
 
@@ -112,7 +108,7 @@ class Home extends Component {
 
     const classes = classNames({
       [`${styles.home}`]: true,
-      [`${styles.backgroundImage}`]: this.state.bgImage,
+      [`${styles[this.state.bgImageStyle]}`]: this.state.bgImage
     });
     return (
       <div
