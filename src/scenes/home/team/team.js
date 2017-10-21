@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Section from 'shared/components/section/section';
 import QuoteBanner from 'shared/components/quoteBanner/quoteBanner';
 import TeamCard from 'shared/components/teamCard/teamCard';
-import StaffCard from 'shared/components/staffCard/staffCard';
 import BoardCard from 'shared/components/boardCard/boardCard';
 import styles from './team.css';
 
@@ -27,31 +26,6 @@ class Team extends Component {
           role={member.role}
         />
       ));
-    const ceo = {
-      name: 'David Molina',
-      role: 'Founder / CEO',
-      src: './images/DavidMolina.jpg',
-      alt: 'David Molina',
-      twitter: '@davidcmolina',
-      email: 'david@operationcode.org'
-    };
-    const coo = {
-      name: 'Conrad Hollomon',
-      role: 'COO',
-      src: './images/ConradHollomon.jpg',
-      alt: 'Conrad Hollomon',
-      twitter: '@hollomancer',
-      email: 'conrad@operationcode.org'
-    };
-    const cto = {
-      name: 'Rick Rein',
-      role: 'CTO',
-      src: './images/RickRein.jpg',
-      alt: 'Rick Rein',
-      twitter: '@rickrrrrrr',
-      email: 'rick@operationcode.org'
-    };
-
     const chair = {
       name: 'Dr. James Davis',
       role: 'Chair',
@@ -84,20 +58,12 @@ class Team extends Component {
           quote="To care for him who shall have borne the battle and for his widow, and his orphan."
         />
 
-        <Section title="Our Staff" theme="white">
+        <Section title="Our Team" theme="white">
           <p>
             Our all volunteer staff are dedicated individuals who come from a wide variety of backgrounds, including members of both the civilian and military community.
           </p>
           <div className={styles.team}>
             { team }
-          </div>
-        </Section>
-
-        <Section title="Our Team" theme="gray">
-          <div className={styles.board}>
-            <StaffCard name={ceo.name} role={ceo.role} src={ceo.src} twitter={ceo.twitter} email={ceo.email} alt={ceo.alt} />
-            <StaffCard name={coo.name} role={coo.role} src={coo.src} twitter={coo.twitter} email={coo.email} alt={coo.alt} />
-            <StaffCard name={cto.name} role={cto.role} src={cto.src} twitter={cto.twitter} email={cto.email} alt={cto.alt} />
           </div>
         </Section>
 
