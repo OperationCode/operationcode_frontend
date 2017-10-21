@@ -8,11 +8,6 @@
   text-shadow: #000 1px 0 15px;
   color: white;
   height: 480px;
-  background-image: url(images/lincoln.jpg); 
-  background-size: 100%;
-  background-position: right top;
-  background-repeat: no-repeat;
-  opacity: 0.8;
 }
 
 .quoteLines {
@@ -31,12 +26,6 @@
 .author {
   display: block;
   text-align: right;
-}
-
-@media screen and (max-width: 995px) {
-  .quoteBanner {
-    background-size: auto 100%;
-  }
 }
 
 @media screen and (max-width: 850px) {
