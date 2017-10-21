@@ -48,3 +48,39 @@
   }
 }
 
+.backgroundImageTeam {
+  background-size: 100%;
+  background-position: right top;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1160px) {
+  .backgroundImageTeam {
+    background-size: auto 9%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .backgroundImageTeam {
+    background-size: auto 7%;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .backgroundImageTeam {
+    background-size: auto 5%;
+    background-position: top right -55px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .backgroundImageTeam {
+    background-size: auto 6%;
+  }
+}
+
+@media screen and (max-width: 365px) {
+  .backgroundImageTeam {
+    background-size: auto 4%;
+  }
+}
