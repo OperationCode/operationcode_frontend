@@ -7,8 +7,12 @@ import styles from './profile.css';
 
 const Profile = ({ verified }) => (
   <Section title="My Profile" theme="gray">
-    <div className={styles.profileContainer}>
-      <div className={styles.profileContainer__cards}>
+    <div className={verified ? styles.profileContainer_verified : styles.profileContainer}>
+      <div
+        className={
+          verified ? styles.profileContainer__cards_verified : styles.profileContainer__cards
+        }
+      >
         <IconCard
           title="Request a Mentor"
           fontAwesomeIcon="FaLifeBouy"
@@ -21,11 +25,7 @@ const Profile = ({ verified }) => (
           url="/scholarships"
         />
 
-        <IconCard
-          title="Check for Open Jobs"
-          fontAwesomeIcon="FaBriefcase"
-          url="/jobs"
-        />
+        <IconCard title="Check for Open Jobs" fontAwesomeIcon="FaBriefcase" url="/jobs" />
 
         <IconCard
           title="Enter our Slack Team"
@@ -39,14 +39,14 @@ const Profile = ({ verified }) => (
           url="https://community.operationcode.org/"
         />
 
-        <IconCard
-          title="Update Info"
-          fontAwesomeIcon="FaUser"
-          url="/signup-info"
-        />
+        <IconCard title="Update Info" fontAwesomeIcon="FaUser" url="/signup-info" />
       </div>
-      <div className={styles.profileContainer__idMe}>
-        {verified && <h2>Your profile is verified with id.me</h2>}
+      <div
+        className={
+          verified ? styles.profileContainer__idMe_verified : styles.profileContainer__idMe
+        }
+      >
+        {verified && <h5>Your profile is verified with id.me</h5>}
         {!verified && (
           <div className={styles.profileContainer__idMe__btn}>
             <span className={styles.profileContainer__idMe__title}>
@@ -67,11 +67,11 @@ const Profile = ({ verified }) => (
 );
 
 Profile.propTypes = {
-  verified: PropTypes.bool,
+  verified: PropTypes.bool
 };
 
 Profile.defaultProps = {
-  verified: false,
+  verified: false
 };
 
 export default Profile;
