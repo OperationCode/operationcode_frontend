@@ -30,43 +30,43 @@ class Team extends Component {
       name: 'Dr. James Davis',
       role: 'Chair',
       src: './images/james.jpg',
-      alt: 'Dr. James Davis'
+      alt: 'Head shot of Dr. James Davis'
     };
     const vicechair = {
       name: 'Dr. Tyrone Grandison',
       role: 'Vice Chair',
       src: './images/tyrone.png',
-      alt: 'Dr. Tyrone Grandison'
+      alt: 'Head shot of Dr. Tyrone Grandison'
     };
     const treasurer = {
       name: 'Elmer Thomas',
       role: 'Treasurer',
       src: './images/elmer.png',
-      alt: 'Elmer Thomas'
+      alt: 'Head shot of Elmer Thomas'
     };
-    const secretary = {
+    const secretary1 = {
       name: 'Thomas Ciszec',
       role: 'Secretary',
       src: './images/thomas.jpg',
-      alt: 'Thomas Ciszec'
+      alt: 'Head shot of Thomas Ciszec'
     };
-    const board1 = {
+    const secretary2 = {
       name: 'Liza Rodewald',
       role: 'Secretary',
-      src: './images/thomas.jpg',
-      alt: 'Thomas Ciszec'
+      src: './images/liza.jpg',
+      alt: 'Head shot of Liza Rodewald'
     };
-    const board2 = {
+    const secretary3 = {
       name: 'Stacy Chin',
       role: 'Secretary',
-      src: './images/thomas.jpg',
-      alt: 'Thomas Ciszec'
+      src: './images/stacy.jpg',
+      alt: 'Head shot of Stacy Chin'
     };
-    const board3 = {
+    const secretary4 = {
       name: 'Conrad Hollomon',
       role: 'Secretary',
-      src: './images/thomas.jpg',
-      alt: 'Thomas Ciszec'
+      src: './images/conrad.jpg',
+      alt: 'Head shot of Conrad Hollomon'
     };
     return (
       <div>
@@ -89,10 +89,10 @@ class Team extends Component {
             <BoardCard name={chair.name} role={chair.role} src={chair.src} alt={chair.alt} />
             <BoardCard name={vicechair.name} role={vicechair.role} src={vicechair.src} alt={vicechair.alt} />
             <BoardCard name={treasurer.name} role={treasurer.role} src={treasurer.src} alt={treasurer.alt} />
-            <BoardCard name={secretary.name} role={secretary.role} src={secretary.src} alt={secretary.alt} />
-            <BoardCard name={board1.name} role={board1.role} src={board1.src} alt={board1.alt} />
-            <BoardCard name={board2.name} role={board2.role} src={board2.src} alt={board2.alt} />
-            <BoardCard name={board3.name} role={board3.role} src={board3.src} alt={board3.alt} />
+            <BoardCard name={secretary1.name} role={secretary1.role} src={secretary1.src} alt={secretary1.alt} />
+            <BoardCard name={secretary2.name} role={secretary2.role} src={secretary2.src} alt={secretary2.alt} />
+            <BoardCard name={secretary3.name} role={secretary3.role} src={secretary3.src} alt={secretary3.alt} />
+            <BoardCard name={secretary4.name} role={secretary4.role} src={secretary4.src} alt={secretary4.alt} />
           </div>
         </Section>
       </div>
