@@ -17,9 +17,7 @@ const BoardCard = ({
     <hr className={styles.hr} />
     <span className={styles.item}>
       <span className={styles.upper}>Role: </span> {role}
-      {description != null && description.length > 0 &&
-        <p>{description}</p>
-      }
+      {description !== null && <p>{description}</p>}
     </span>
   </div>
 );
@@ -29,7 +27,11 @@ BoardCard.propTypes = {
   src: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
   role: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired
+  description: PropTypes.string
+};
+
+BoardCard.defaultProps = {
+  description: null
 };
 
 export default BoardCard;
