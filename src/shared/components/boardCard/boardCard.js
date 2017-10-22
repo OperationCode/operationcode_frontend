@@ -17,7 +17,7 @@ const BoardCard = ({
     <hr className={styles.hr} />
     <span className={styles.item}>
       <span className={styles.upper}>Role: </span> {role}
-      {description !== null && <p>{description}</p>}
+      {description && <p>{description}</p>}
     </span>
   </div>
 );
