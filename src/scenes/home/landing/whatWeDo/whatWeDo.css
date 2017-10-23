@@ -4,3 +4,11 @@
   align-items: center;
   justify-content: space-around;
 }
+
+.whatWeDoContent a {
+  text-decoration: none;
+}
+
+.whatWeDoContent a:visited {
+  color: #47566B;
+}

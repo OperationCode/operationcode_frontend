@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Section from 'shared/components/section/section';
 import ImageCard from 'shared/components/imageCard/imageCard';
 import image1 from 'images/General-Couple-Computer.jpg';
@@ -21,15 +22,17 @@ const WhatWeDo = () => (
         title={content.items[1].title}
         cardText={content.items[1].body}
       />
+      <Link to="/code_schools">
+        <ImageCard
+          image={image4}
+          title={content.items[3].title}
+          cardText={content.items[3].body}
+        />
+      </Link>
       <ImageCard
         image={image3}
         title={content.items[2].title}
         cardText={content.items[2].body}
-      />
-      <ImageCard
-        image={image4}
-        title={content.items[3].title}
-        cardText={content.items[3].body}
       />
     </div>
   </Section>
