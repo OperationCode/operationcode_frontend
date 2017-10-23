@@ -139,7 +139,7 @@ class Login extends Component {
           CookieHelpers.setUserAuthCookie(data);
           this.setState({ authenticated: true });
           this.props.updateRootAuthState((history) => {
-            this.props.sendNotification('success', 'Success', 'You have logged in');
+            this.props.sendNotification('success', 'Success', 'You have logged in!');
             if (this.state.ssoParamsPresent) {
               window.location = data.redirect_to;
             } else {
@@ -148,7 +148,7 @@ class Login extends Component {
           });
         })
         .catch((error) => {
-          this.props.sendNotification('error', 'Error', error.response.data.error);
+          this.props.sendNotification('error', 'Error', 'We will investigate this issue!');
           this.setErrorMessage(error);
         });
     }
