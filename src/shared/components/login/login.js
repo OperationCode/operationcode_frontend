@@ -4,6 +4,7 @@ import axios from 'axios';
 import PropTypes from 'prop-types';
 import config from 'config/environment';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 import styles from './login.css';
 import Form from '../form/form';
 import Section from '../section/section';
@@ -12,15 +13,14 @@ import FormEmail from '../form/formEmail/formEmail';
 import FormInput from '../form/formInput/formInput';
 import FormButton from '../form/formButton/formButton';
 import SignUpSection from './signUpSection';
+import { addEmail, addPassword } from '../../../state/login/actions';
 
 require('./login.css');
 const queryString = require('query-string');
 
 class Login extends Component {
   state = {
-    email: '',
     emailValid: false,
-    password: '',
     passwordValid: false,
     authenticated: false,
     errorStatus: -1,
@@ -36,7 +36,8 @@ class Login extends Component {
   };
 
   onEmailChange = (value, valid) => {
-    this.setState({ email: value, emailValid: valid });
+    this.props.addEmail(value);
+    this.setState({ emailValid: valid });
   };
 
   onPasswordChange = (value, valid) => {
@@ -190,12 +191,26 @@ class Login extends Component {
 
 Login.propTypes = {
   updateRootAuthState: PropTypes.func,
-  isLoggedIn: PropTypes.bool
+  isLoggedIn: PropTypes.bool,
+  addEmail: PropTypes.func
 };
 
 Login.defaultProps = {
   updateRootAuthState: () => {},
-  isLoggedIn: false
+  addEmail: () => {},
+  isLoggedIn: false,
 };
 
-export default Login;
+export default connect(
+  state => ({
+    email: state.email
+  }),
+  dispatch => ({
+    addEmail(email) {
+      dispatch(addEmail(email));
+    },
+    addPassword(password) {
+      dispatch(addPassword(password));
+    }
+  })
+)(Login);
