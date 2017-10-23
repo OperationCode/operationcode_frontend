@@ -96,7 +96,7 @@ class SignUp extends Component {
             }
           });
         }
-        this.props.sendNotification('error', 'Error', errorMessage);
+        this.props.sendNotification('error', 'Error', 'Please try registering again. Contact one of our staff if this problem persists.');
         this.setState({ error: errorMessage, isLoading: false });
       });
     } else {
