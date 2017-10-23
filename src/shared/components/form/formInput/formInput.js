@@ -14,12 +14,18 @@ class FormInput extends Component {
   }
 
   handleChange = (event) => {
-    const valid = this.validate(event.target.value);
+    const valid = true;
+    // const valid = this.validate(event.target.value);
     this.setState({ text: event.target.value, isValid: valid }, () => {
       if (this.props.onChange) {
         this.props.onChange(this.state.text, this.state.isValid);
       }
     });
+  }
+
+  handleBlur = (event) => {
+    const valid = this.validate(event.target.value);
+    this.setState({ isValid: valid });
   }
 
   validate = (text) => {
@@ -50,6 +56,7 @@ class FormInput extends Component {
           value={this.state.text}
           placeholder={this.props.placeholder}
           onChange={this.handleChange}
+          onBlur={this.handleBlur}
         />
         {!this.state.isValid && <span>{this.props.validationErrorMessage}</span>}
       </div>
