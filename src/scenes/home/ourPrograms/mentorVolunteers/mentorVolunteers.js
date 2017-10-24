@@ -1,8 +1,8 @@
 import React from 'react';
 import { FaClockO, FaGroup, FaHandPeaceO } from 'react-icons/lib/fa';
-import styles from './volunteerChars.css';
+import styles from './mentorVolunteers.css';
 
-const VolunteerCharacteristics = () => (
+const MentorVolunteers = () => (
   <div>
     <p>
       All of our mentors possess <u>3 characteristics</u>:
@@ -44,4 +44,4 @@ const VolunteerCharacteristics = () => (
   </div>
 );
 
-export default VolunteerCharacteristics;
+export default MentorVolunteers;

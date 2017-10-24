@@ -2,7 +2,7 @@ import React from 'react';
 import Section from 'shared/components/section/section';
 import QuoteBanner from 'shared/components/quoteBanner/quoteBanner';
 import ProgramFeatures from './programFeatures/programFeatures';
-import VolunteerChars from './volunteerChars/volunteerChars';
+import MentorVolunteers from './mentorVolunteers/mentorVolunteers';
 import Steps from './steps/steps';
 
 import styles from './ourPrograms.css';
@@ -20,7 +20,7 @@ const OurPrograms = () => (
     </Section>
     <Section title="Our Mentor Volunteers">
       <div className={styles.container}>
-        <VolunteerChars />
+        <MentorVolunteers />
       </div>
     </Section>
     <Section title="Getting Started">
