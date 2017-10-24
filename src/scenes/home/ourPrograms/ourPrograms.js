@@ -5,8 +5,6 @@ import MentorshipProgram from './mentorshipProgram/mentorshipProgram';
 import MentorVolunteers from './mentorVolunteers/mentorVolunteers';
 import GettingStarted from './gettingStarted/gettingStarted';
 
-import styles from './ourPrograms.css';
-
 const OurPrograms = () => (
   <div>
     <QuoteBanner
@@ -14,19 +12,13 @@ const OurPrograms = () => (
       quote="Here is a quote about the awesome stuff."
     />
     <Section title="Mentorship Program">
-      <div className={styles.container}>
-        <MentorshipProgram />
-      </div>
+      <MentorshipProgram />
     </Section>
     <Section title="Our Mentor Volunteers">
-      <div className={styles.container}>
-        <MentorVolunteers />
-      </div>
+      <MentorVolunteers />
     </Section>
     <Section title="Getting Started">
-      <div className={styles.container}>
-        <GettingStarted />
-      </div>
+      <GettingStarted />
     </Section>
   </div>
 );
