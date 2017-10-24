@@ -3,7 +3,7 @@ import Section from 'shared/components/section/section';
 import QuoteBanner from 'shared/components/quoteBanner/quoteBanner';
 import MentorshipProgram from './mentorshipProgram/mentorshipProgram';
 import MentorVolunteers from './mentorVolunteers/mentorVolunteers';
-import Steps from './steps/steps';
+import GettingStarted from './gettingStarted/gettingStarted';
 
 import styles from './ourPrograms.css';
 
@@ -25,7 +25,7 @@ const OurPrograms = () => (
     </Section>
     <Section title="Getting Started">
       <div className={styles.container}>
-        <Steps />
+        <GettingStarted />
       </div>
     </Section>
   </div>
