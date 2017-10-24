@@ -1,8 +1,8 @@
 import React from 'react';
 import { FaCheck, FaBan } from 'react-icons/lib/fa';
-import styles from './programFeatures.css';
+import styles from './mentorshipProgram.css';
 
-const ProgramFeatures = () => (
+const MentorshipProgram = () => (
   <div>
     <div className={styles.flexContainer}>
       <div className={styles.featureHeading}>
@@ -31,4 +31,4 @@ const ProgramFeatures = () => (
   </div>
 );
 
-export default ProgramFeatures;
+export default MentorshipProgram;

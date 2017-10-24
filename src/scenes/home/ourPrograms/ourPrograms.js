@@ -1,7 +1,7 @@
 import React from 'react';
 import Section from 'shared/components/section/section';
 import QuoteBanner from 'shared/components/quoteBanner/quoteBanner';
-import ProgramFeatures from './programFeatures/programFeatures';
+import MentorshipProgram from './mentorshipProgram/mentorshipProgram';
 import MentorVolunteers from './mentorVolunteers/mentorVolunteers';
 import Steps from './steps/steps';
 
@@ -15,7 +15,7 @@ const OurPrograms = () => (
     />
     <Section title="Mentorship Program">
       <div className={styles.container}>
-        <ProgramFeatures />
+        <MentorshipProgram />
       </div>
     </Section>
     <Section title="Our Mentor Volunteers">
