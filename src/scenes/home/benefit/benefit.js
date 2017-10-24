@@ -2,6 +2,7 @@ import React from 'react';
 import Section from 'shared/components/section/section';
 import LinkButton from 'shared/components/linkButton/linkButton';
 import Sabio from '../../../images/codeSchoolLogos/sabio.png';
+import Nodejs from '../../../images/nodejs.png';
 import styles from './benefit.css';
 
 const Benefit = () => (
@@ -153,7 +154,14 @@ const Benefit = () => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={Sabio} alt="Sabio" />
+            <img className={styles.sabio} src={Sabio} alt="Sabio" />
+          </a>
+          <a
+            href="https://www.nodesummit.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className={styles.node} src={Nodejs} alt="Node Summit" />
           </a>
         </p>
       </div>
