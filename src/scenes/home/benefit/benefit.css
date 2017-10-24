@@ -21,6 +21,10 @@
   max-width: 560px;
 }
 
+.desc {
+  font-size: 0.8em;
+}
+
 @media screen and (min-width: 415px) and (max-width: 1280px) {
   .tickets > div {
     width: 375px;
