@@ -7,7 +7,7 @@ const MentorshipProgram = () => (
     <div className={styles.flexContainer}>
       <div className={styles.featureHeading}>
         <FaCheck size={36} style={styles.iconStyle} />
-        <p>What it is</p>
+        <p>What is it?</p>
       </div>
       <div className={styles.featureDescription}>
         <ul>
