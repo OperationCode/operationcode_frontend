@@ -3,7 +3,7 @@ import React from 'react';
 import TimelineEvent from '../../history/timelineEvent/timelineEvent';
 import styles from '../../history/timeline/timeline.css';
 
-const Steps = () => (
+const GettingStarted = () => (
   <div className={styles.timeline}>
     <div className={styles.segment}>
       <div className={styles.date}>
@@ -59,4 +59,4 @@ const Steps = () => (
   </div>
 );
 
-export default Steps;
+export default GettingStarted;
