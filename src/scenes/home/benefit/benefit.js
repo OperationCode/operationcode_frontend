@@ -1,7 +1,7 @@
 import React from 'react';
 import Section from 'shared/components/section/section';
 import LinkButton from 'shared/components/linkButton/linkButton';
-import Sabio from '../../../images/codeSchoolLogos/Sabio_Logo_Wordmark_Square.png';
+import Sabio from '../../../images/codeSchoolLogos/sabio.png';
 import styles from './benefit.css';
 
 const Benefit = () => (
@@ -21,7 +21,7 @@ const Benefit = () => (
           role="button"
           text="Purchase Tickets"
           theme="red-large"
-          link="https://operationcode.ejoinme.org/MyEvents/DeploytheFutureGala2017/VeteransDayBenefitDinnerSilentAuctionTicketTableRegistration/tabid/892109/Default.aspx"
+          link="https://buytickets.at/opcode/122463"
           isExternal
         />
       </p>
@@ -98,6 +98,28 @@ const Benefit = () => (
         </p>
       </div>
     </Section>
+    <Section title="Menu" theme="white">
+      <div className={styles.cta}>
+        <p>
+          <h6>Hors D’Oeuvres:</h6>
+          <i>(Served with Silent Auction)</i> <br />
+             Stuffed Baby Mushrooms <br />
+          <i className={styles.desc}>with Bacon, Cream Cheese & Jalapeno</i><br />
+             Grilled Prosciutto, Quince Paste, and Manchego Cheese on Baguette<br />
+             Smoked Salmon Mousse Tartlets<br />
+          <i className={styles.desc}>House Smoked Salmon with Cream Cheese, Chives & Lemon Zest</i><br />
+             Pierre Robert Cheese & Cherry Conserve Crostini<br />
+          <h6>Salad:</h6> Italian Kale and Romaine Salad<br />
+          <i className={styles.desc}>with Radicchio, Fennel, Feta Cheese, Dried Cranberries and Candied Walnuts with a Green Goddess Dressing</i><br />
+          <h6>Dinner:</h6> Mushroom Duxelle Stuffed Chicken<br />
+          <i className={styles.desc}>Panko-Crusted Boneless Chicken Breast Stuffed with Mushroom Duxelle, Served with Creamy Farro Risotto & Rosemary Sage Cream Sauce</i><br />
+          <b>Vegetarian Option:</b> Wild Mushrooms, Broccolini, Asparagus, and Fontina Cheese Served in an Acorn Squash with Butternut Squash Puree<br />
+        </p>
+        <p>
+          Dinner Served with Artisan Rolls & Butter, House Brewed Coffee & Tea
+        </p>
+      </div>
+    </Section>
     <Section title="Sponsors" theme="white">
       <div className={styles.cta}>
         <p>
@@ -166,7 +188,7 @@ const Benefit = () => (
           <LinkButton
             text="Purchase Tickets"
             theme="red-large"
-            link="https://operationcode.ejoinme.org/MyEvents/DeploytheFutureGala2017/VeteransDayBenefitDinnerSilentAuctionTicketTableRegistration/tabid/892109/Default.aspx"
+            link="https://buytickets.at/opcode/122463"
             isExternal
           />
         </p>

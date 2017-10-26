@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
 import * as CookieHelpers from 'shared/utils/cookieHelper';
 import Form from 'shared/components/form/form';
 import FormEmail from 'shared/components/form/formEmail/formEmail';
@@ -11,6 +12,7 @@ import FormInput from 'shared/components/form/formInput/formInput';
 import Section from 'shared/components/section/section';
 import config from 'config/environment';
 import styles from './signup.css';
+
 
 class SignUp extends Component {
   constructor(props) {
@@ -94,6 +96,7 @@ class SignUp extends Component {
             }
           });
         }
+        this.props.sendNotification('error', 'Error', 'Please try registering again. Contact one of our staff if this problem persists.');
         this.setState({ error: errorMessage, isLoading: false });
       });
     } else {
@@ -172,5 +175,9 @@ class SignUp extends Component {
     );
   }
 }
+
+SignUp.propTypes = {
+  sendNotification: PropTypes.func.isRequired
+};
 
 export default SignUp;

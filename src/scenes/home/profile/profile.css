@@ -3,17 +3,36 @@
   justify-content: space-between;
 }
 
+.profileContainer_verified {
+  flex-flow: column;
+}
+
 .profileContainer__cards {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 60%;
+  width: 70%;
+}
+
+.profileContainer__cards_verified {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  flex-wrap: wrap;
 }
 
 .profileContainer__idMe {
   width: 30%;
   padding: 0 10px;
+  text-align: center;
+}
+
+.profileContainer__idMe_verified {
+  width: 100%;
+  padding: 0 30px;
   text-align: center;
 }
 
