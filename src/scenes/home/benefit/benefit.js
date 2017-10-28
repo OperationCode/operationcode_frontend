@@ -155,14 +155,14 @@ const Benefit = () => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className={styles.sabio} src={Sabio} alt="Sabio" />
+            <img className={styles.sabioLogo} src={Sabio} alt="Sabio Logo" />
           </a>
           <a
             href="https://www.nodesummit.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className={styles.node} src={Nodejs} alt="Node Summit" />
+            <img className={styles.nodeLogo} src={Nodejs} alt="Node Foundation Logo" />
           </a>
           <a
             href="https://www.codefellows.org/"
