@@ -122,7 +122,7 @@ const Benefit = () => (
         </p>
       </div>
     </Section>
-    <Section title="See Who's Joining Us!" theme="white">
+    <Section title="This Year's Guests" theme="white">
       <div className={styles.cta}>
         <p>
           This year’s major sponsors include{' '}
