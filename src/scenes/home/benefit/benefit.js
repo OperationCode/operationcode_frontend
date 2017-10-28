@@ -2,6 +2,7 @@ import React from 'react';
 import Section from 'shared/components/section/section';
 import LinkButton from 'shared/components/linkButton/linkButton';
 import Sabio from '../../../images/codeSchoolLogos/sabio.png';
+import CFellows from '../../../images/codeSchoolLogos/cf-logo-horizontal-2-color-black.png';
 import Nodejs from '../../../images/nodejs.png';
 import styles from './benefit.css';
 
@@ -121,7 +122,7 @@ const Benefit = () => (
         </p>
       </div>
     </Section>
-    <Section title="Sponsors" theme="white">
+    <Section title="See Who's Joining Us!" theme="white">
       <div className={styles.cta}>
         <p>
           This year’s major sponsors include{' '}
@@ -162,6 +163,13 @@ const Benefit = () => (
             rel="noopener noreferrer"
           >
             <img className={styles.node} src={Nodejs} alt="Node Summit" />
+          </a>
+          <a
+            href="https://www.codefellows.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className={styles.cf} src={CFellows} alt="Code Fellows" />
           </a>
         </p>
       </div>
