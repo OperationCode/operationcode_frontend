@@ -10,7 +10,7 @@
 
 .cpImage img {
   width: 300px;
-  clip-path: polygon(0 0, 100% 0, 100% 60%, 0 70%);
+  clip-path: polygon(0 0, 100% 0, 100% 67%, 0 77%)
 }
 
 .cpImage h4 {
