@@ -2,7 +2,7 @@ import React from 'react';
 import Section from 'shared/components/section/section';
 import LinkButton from 'shared/components/linkButton/linkButton';
 import Sabio from '../../../images/codeSchoolLogos/sabio.png';
-import CFellows from '../../../images/codeSchoolLogos/cf-logo-horizontal-2-color-black.png';
+import CodeFellows from '../../../images/codeSchoolLogos/cf-logo-horizontal-2-color-black.png';
 import Nodejs from '../../../images/nodejs.png';
 import styles from './benefit.css';
 
@@ -169,7 +169,7 @@ const Benefit = () => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className={styles.cf} src={CFellows} alt="Code Fellows" />
+            <img className={styles.codeFellowsLogo} src={CodeFellows} alt="Code Fellows" />
           </a>
         </p>
       </div>
