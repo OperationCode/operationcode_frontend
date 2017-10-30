@@ -10,12 +10,12 @@
 
 .cpImage img {
   width: 300px;
-  clip-path: polygon(0 0, 100% 0, 100% 60%, 0 70%);
+  clip-path: polygon(0 0, 100% 0, 100% 67%, 0 77%)
 }
 
 .cpImage h4 {
   position: relative;
-  bottom: 70px;
+  bottom: 45px;
   text-align: center;
   display:block;
   font-size:16px;
