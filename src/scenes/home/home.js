@@ -35,6 +35,11 @@ import SignupInformation from './informationForm/informationForm';
 import Benefit from './benefit/benefit';
 import styles from './home.css';
 
+const ReactToastr = require('react-toastr');
+
+const { ToastContainer } = ReactToastr;
+const ToastMessageFactory = React.createFactory(ReactToastr.ToastMessage.animation);
+
 class Home extends Component {
   state = {
     bgImage: false,
@@ -54,13 +59,33 @@ class Home extends Component {
 
   setBgImage(location) {
     if (location.pathname === '/') {
-      this.setState({ bgChanged: !(this.state.bgImage), bgImage: true, bgImageUrl: familyImage, bgImageStyle: "backgroundImageHome" });
+      this.setState({ 
+        bgChanged: !(this.state.bgImage),
+        bgImage: true, 
+        bgImageUrl: familyImage, 
+        bgImageStyle: "backgroundImageHome" 
+      });
     } else if (location.pathname === '/team') {
-      this.setState({ bgChanged: !(this.state.bgImage), bgImage: true, bgImageUrl: lincolnImage, bgImageStyle: "backgroundImageTeam" });
+      this.setState({ 
+        bgChanged: !(this.state.bgImage), 
+        bgImage: true, 
+        bgImageUrl: lincolnImage, 
+        bgImageStyle: "backgroundImageTeam" 
+      });
     } else if (location.pathname === '/history') {
-      this.setState({ bgChanged: !(this.state.bgImage), bgImage: true, bgImageUrl: colinPowellImage, bgImageStyle: "backgroundImageTeam" });
-    }  else {
-      this.setState({ bgChanged: this.state.bgImage, bgImage: false, bgImageUrl: null, bgImageStyle: null });
+      this.setState({ 
+        bgChanged: !(this.state.bgImage), 
+        bgImage: true, 
+        bgImageUrl: colinPowellImage, 
+        bgImageStyle: "backgroundImageTeam" 
+      });
+    } else {
+      this.setState({ 
+        bgChanged: this.state.bgImage, 
+        bgImage: false, 
+        bgImageUrl: null, 
+        bgImageStyle: null
+      });
     }
   }
 
@@ -69,7 +94,7 @@ class Home extends Component {
     this.setState({
       signedIn: cookies.signedIn,
       mentor: cookies.mentor,
-      verified: cookies.verified
+      verified: cookies.verified,
     }, () => {
       if (cb) {
         cb(this.props.history);
@@ -82,8 +107,21 @@ class Home extends Component {
     this.setState({
       signedIn: false,
       mentor: false,
-      verified: false
-    }, () => this.props.history.push('/'));
+      verified: false,
+    }, () => {
+      this.props.history.push('/');
+    });
+  }
+
+  sendNotification = (type, title, subtitle) => {
+    this.container[type](
+      subtitle,
+      title,
+      {
+        timeOut: 3000,
+        extendedTimeOut: 3000,
+      },
+    );
   }
 
   render() {
@@ -91,7 +129,7 @@ class Home extends Component {
     const authProps = {
       signedIn,
       mentor,
-      verified
+      verified,
     };
 
     const classes = classNames({
@@ -101,10 +139,15 @@ class Home extends Component {
     return (
       <div
         className={classes}
-        style={(this.state.bgImage) ? { backgroundImage: `url(${this.state.bgImageUrl})` } : {}}
+        style={(this.state.bgImage)
+          ? { backgroundImage: `url(${this.state.bgImageUrl})` }
+          : {}}
       >
-        <Header transparent={this.state.bgImage} logOut={this.logOut} signedIn={signedIn} mentor={mentor} />
-        <div className={styles.main} >
+        <Header
+          transparent={this.state.bgImage} logOut={this.logOut}
+          signedIn={signedIn} mentor={mentor}
+        />
+        <div className={styles.main}>
           <Switch>
             <Route
               path="/code-schools"
@@ -117,13 +160,21 @@ class Home extends Component {
             <Route
               path="/signup"
               render={() => (
-                <SignUp updateRootAuthState={this.updateRootAuthState} isLoggedIn={this.state.signedIn} {...authProps} />
+                <SignUp
+                  updateRootAuthState={this.updateRootAuthState}
+                  isLoggedIn={this.state.signedIn} {...authProps}
+                  sendNotification={this.sendNotification}
+                />
               )}
             />
             <Route
               path="/join"
               render={() => (
-                <SignUp updateRootAuthState={this.updateRootAuthState} isLoggedIn={this.state.signedIn} {...authProps} />
+                <SignUp
+                  updateRootAuthState={this.updateRootAuthState}
+                  isLoggedIn={this.state.signedIn} {...authProps}
+                  sendNotification={this.sendNotification}
+                />
               )}
             />
             <Route
@@ -214,7 +265,11 @@ class Home extends Component {
             <Route
               path="/login"
               render={() => (
-                <Login updateRootAuthState={this.updateRootAuthState} isLoggedIn={this.state.signedIn} {...authProps} />
+                <Login
+                  updateRootAuthState={this.updateRootAuthState}
+                  isLoggedIn={this.state.signedIn}{...authProps}
+                  sendNotification={this.sendNotification}
+                />
               )}
             />
             <AuthenticatedRoute
@@ -240,6 +295,11 @@ class Home extends Component {
             />
           </Switch>
         </div>
+        <ToastContainer
+          ref={(input) => { this.container = input; }}
+          toastMessageFactory={ToastMessageFactory}
+          className="toast-top-right"
+        />
         <Footer />
       </div>
     );
@@ -248,7 +308,7 @@ class Home extends Component {
 
 Home.propTypes = {
   history: PropTypes.object.isRequired,
-  location: PropTypes.object.isRequired
+  location: PropTypes.object.isRequired,
 };
 
 export default withRouter(Home);
