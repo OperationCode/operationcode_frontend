@@ -12,9 +12,9 @@ const initializeZipRecruiter = (zipsearch) => {
     container: 'zipsearch_container',
     alerts_api_key: 'mnsiawwpjgk5i4u42awbp5kdhs8gpy26',
     search: 'software engineer',
-    jobs_per_page: '10',
+    jobs_per_page: '20',
     days_ago: '30',
-    font_family: 'Tahoma',
+    font_family: 'Tahoma'
   };
   zipsearch.init(options);
 };
@@ -32,9 +32,7 @@ class Jobs extends Component {
   render() {
     return (
       <Section title="Open Positions" theme="white">
-        <div
-          id="zipsearch_container"
-        />
+        <div id="zipsearch_container" />
       </Section>
     );
   }
