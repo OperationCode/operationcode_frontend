@@ -3,7 +3,7 @@ import Section from 'shared/components/section/section';
 import LinkButton from 'shared/components/linkButton/linkButton';
 import Sabio from '../../../images/codeSchoolLogos/sabio.png';
 import CodeFellows from '../../../images/codeSchoolLogos/cf-logo-horizontal-2-color-black.png';
-import Nodejs from '../../../images/nodejs.png';
+import Nodejs from '../../../images/NodeSummitSF_ColorLogoWeb.jpg';
 import styles from './benefit.css';
 
 const Benefit = () => (
