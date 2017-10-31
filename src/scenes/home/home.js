@@ -59,13 +59,33 @@ class Home extends Component {
 
   setBgImage(location) {
     if (location.pathname === '/') {
-      this.setState({ bgChanged: !(this.state.bgImage), bgImage: true, bgImageUrl: familyImage, bgImageStyle: "backgroundImageHome" });
+      this.setState({ 
+        bgChanged: !(this.state.bgImage),
+        bgImage: true, 
+        bgImageUrl: familyImage, 
+        bgImageStyle: "backgroundImageHome" 
+      });
     } else if (location.pathname === '/team') {
-      this.setState({ bgChanged: !(this.state.bgImage), bgImage: true, bgImageUrl: lincolnImage, bgImageStyle: "backgroundImageTeam" });
+      this.setState({ 
+        bgChanged: !(this.state.bgImage), 
+        bgImage: true, 
+        bgImageUrl: lincolnImage, 
+        bgImageStyle: "backgroundImageTeam" 
+      });
     } else if (location.pathname === '/history') {
-      this.setState({ bgChanged: !(this.state.bgImage), bgImage: true, bgImageUrl: colinPowellImage, bgImageStyle: "backgroundImageTeam" });
-    }  else {
-      this.setState({ bgChanged: this.state.bgImage, bgImage: false, bgImageUrl: null, bgImageStyle: null });
+      this.setState({ 
+        bgChanged: !(this.state.bgImage), 
+        bgImage: true, 
+        bgImageUrl: colinPowellImage, 
+        bgImageStyle: "backgroundImageTeam" 
+      });
+    } else {
+      this.setState({ 
+        bgChanged: this.state.bgImage, 
+        bgImage: false, 
+        bgImageUrl: null, 
+        bgImageStyle: null
+      });
     }
   }
 
