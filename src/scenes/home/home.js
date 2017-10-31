@@ -10,6 +10,7 @@ import IdmeVerify from 'shared/components/idme/idmeverify/idmeverify';
 import AuthenticatedRoute from 'shared/components/authenticatedRoute/authenticatedRoute';
 import familyImage from 'images/Family-2.jpg';
 import lincolnImage from 'images/lincoln.jpg';
+import colinPowellImage from 'images/colin-powell.jpg';
 import Profile from './profile/profile';
 import SignUp from './signup/signup';
 import Scholarships from './scholarship/scholarships';
@@ -61,7 +62,9 @@ class Home extends Component {
       this.setState({ bgChanged: !(this.state.bgImage), bgImage: true, bgImageUrl: familyImage, bgImageStyle: "backgroundImageHome" });
     } else if (location.pathname === '/team') {
       this.setState({ bgChanged: !(this.state.bgImage), bgImage: true, bgImageUrl: lincolnImage, bgImageStyle: "backgroundImageTeam" });
-    } else {
+    } else if (location.pathname === '/history') {
+      this.setState({ bgChanged: !(this.state.bgImage), bgImage: true, bgImageUrl: colinPowellImage, bgImageStyle: "backgroundImageTeam" });
+    }  else {
       this.setState({ bgChanged: this.state.bgImage, bgImage: false, bgImageUrl: null, bgImageStyle: null });
     }
   }
