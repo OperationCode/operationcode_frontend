@@ -8,6 +8,9 @@ import styles from './benefit.css';
 
 const Benefit = () => (
   <div>
+    <div className={styles.wrap}>
+     Registration Closes Tuesday, November 7th at Noon.
+    </div>
     <Section title="Benefit Dinner & Auction" theme="white" headingLines={false}>
       <br />
       <p className={styles.cta}>
