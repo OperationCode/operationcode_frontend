@@ -41,7 +41,7 @@ const Benefit = () => (
           role="button"
           text="Download/Print Flyer"
           theme="blue"
-          link="https://buytickets.at/opcode/122463"
+          link="https://www.operationcode.org/benefit/benefitdinner_auction_operationcode.pdf"
           isExternal
         />
       </p>
