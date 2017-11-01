@@ -4,6 +4,10 @@ import LinkButton from 'shared/components/linkButton/linkButton';
 import Sabio from '../../../images/codeSchoolLogos/sabio.png';
 import CodeFellows from '../../../images/codeSchoolLogos/cf-logo-horizontal-2-color-black.png';
 import Nodejs from '../../../images/NodeSummitSF_ColorLogoWeb.jpg';
+import srvd from '../../../images/srvd.png';
+import ebay from '../../../images/320px-EBay_logo.png';
+import secureSet from '../../../images/SecureSet.logoUSE.jpg';
+import PVA from '../../../images/pvaoregon.jpg';
 import styles from './benefit.css';
 
 const Benefit = () => (
@@ -74,7 +78,6 @@ const Benefit = () => (
         <p>
           Hosted bar, wine, hors d’oeuvres, auction, dinner, and program
         </p>
-
         <h6>When:</h6>
         <p>
         Friday, November 10, 2017<br />
@@ -97,7 +100,7 @@ const Benefit = () => (
         Business Casual
         </p>
         <br />
-        <h6>Event Chairs:</h6>
+        <h6>Event Co-Chairs:</h6>
         <p>
         Chris Dawson & David Molina
         </p>
@@ -158,27 +161,66 @@ const Benefit = () => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className={styles.sabioLogo} src={Sabio} alt="Sabio Logo" />
+            <img className={styles.logo} src={Sabio} alt="Sabio" />
           </a>
           <a
             href="https://www.nodesummit.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className={styles.nodeLogo} src={Nodejs} alt="Node Foundation Logo" />
+            <img className={styles.logo} src={Nodejs} alt="Node Summit" />
           </a>
           <a
             href="https://www.codefellows.org/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className={styles.codeFellowsLogo} src={CodeFellows} alt="Code Fellows" />
+            <img className={styles.logo} src={CodeFellows} alt="Code Fellows" />
+          </a>
+          <a
+            href="https://secureset.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className={styles.logo} src={secureSet} alt="Secure Set Cybersecurity Bootcamp" />
+          </a>
+          <a
+            href="https://www.ebay.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className={styles.logo} src={ebay} alt="eBay" />
+          </a>
+          <a
+            href="http://www.srvd.vet"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className={styles.srvdLogo} src={srvd} alt="SRVD" />
+          </a>
+          <a
+            href="http://www.oregonpva.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className={styles.pvaLogo} src={PVA} alt="Oregon PVA" />
           </a>
         </p>
       </div>
     </Section>
     <Section title="Location" theme="white">
       <div className={styles.cta}>
+        <h6>
+        To reserve one of our blocked rooms at the historic Sentinel Hotel, please contact:
+        </h6>
+        <p>
+        Shelley Phonharath<br />
+        shelley.phonharath@provenancehotels.com<br />
+        (503) 419-1620
+        </p>
+        <p>
+        Thank you to all of our guests coming from across the United Stated to join us!
+        </p>
         <iframe
           title="Sentinel Hotel"
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11181.901436230051!2d-122.6826821!3d45.5206389!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x776c285f8c70615a!2sSentinel!5e0!3m2!1sen!2sus!4v1501714755964"
@@ -191,9 +233,19 @@ const Benefit = () => (
         <br />
         <p>
           <b>For Additional Information</b><br />
-          Please contact David Molina at:<br />
+          David Molina:<br />
+          Co-Chair<br />
           david@operationcode.org<br />
-          (971) 279-2586 (work)<br />
+          (971) 279-2586 (work)
+        </p>
+        <p>
+          or
+        </p>
+        <p>
+          Chris Dawson:<br />
+          Co-Chair<br />
+          xrdawson@gmail.com<br />
+          (971) 533-8335
         </p>
         <br />
         <p className={styles.cta}>
