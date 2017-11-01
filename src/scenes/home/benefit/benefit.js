@@ -17,6 +17,9 @@ const Benefit = () => (
     </div>
     <Section title="Benefit Dinner & Auction" theme="white" headingLines={false}>
       <br />
+      <h3>
+        Open to the Public
+      </h3>
       <p className={styles.cta}>
         <LinkButton
           role="button"
@@ -30,6 +33,14 @@ const Benefit = () => (
           role="button"
           text="Purchase Tickets"
           theme="red-large"
+          link="https://buytickets.at/opcode/122463"
+          isExternal
+        />
+        <br />
+        <LinkButton
+          role="button"
+          text="Download/Print Flyer"
+          theme="blue"
           link="https://buytickets.at/opcode/122463"
           isExternal
         />
