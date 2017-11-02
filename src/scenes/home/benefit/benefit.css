@@ -25,22 +25,33 @@
   font-size: 0.8em;
 }
 
-.nodeLogo {
-  max-width: 25vw;
+.logo {
+  max-width: 25%;
   height: auto;
-  margin: 3vw;
+  margin: 2vw;
 }
-
-.codeFellowsLogo {
-  max-width: 30vw;
+.pvaLogo {
+  max-width: 25%;
   height: auto;
-  margin: 3vw;
+  margin: 2vw;
+}
+.srvdLogo {
+  height:auto;
+  max-width: 10%;
+  margin: 2vw;
 }
 
-.sabioLogo {
-  margin: 3vw;
+.wrap {
+  margin-top:1vh;
+  padding:5px;
+  width: 100%;
+  background: #F2CF7F;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+  border-top: 2px solid #E69F00;
+  border-bottom: 2px solid #E69F00;
 }
-
 
 @media screen and (min-width: 415px) and (max-width: 1280px) {
   .tickets > div {
@@ -51,6 +62,21 @@
 @media screen and (max-width: 414px) {
   .tickets > div {
     width: 300px;
+  }
+  .logo {
+    max-width: 50%;
+    height: auto;
+    margin: 2vw;
+  }
+  .srvdLogo {
+    height:auto;
+    max-width: 50%;
+    margin: 2vw;
+  }
+  .pvaLogo {
+    max-width: 75%;
+    height: auto;
+    margin: 2vw;
   }
 }
 
