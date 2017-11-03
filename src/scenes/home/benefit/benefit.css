@@ -65,18 +65,12 @@
   }
   .logo {
     max-width: 50%;
-    height: auto;
-    margin: 2vw;
   }
   .srvdLogo {
     height:auto;
-    max-width: 50%;
-    margin: 2vw;
   }
   .pvaLogo {
     max-width: 75%;
-    height: auto;
-    margin: 2vw;
   }
 }
 

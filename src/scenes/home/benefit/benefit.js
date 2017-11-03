@@ -41,7 +41,7 @@ const Benefit = () => (
           role="button"
           text="Download/Print Flyer"
           theme="blue"
-          link="https://www.operationcode.org/benefit/benefitdinner_auction_operationcode.pdf"
+          link="https://s3-us-west-2.amazonaws.com/operationcode/benefitdinner_auction_operationcode.pdf"
           isExternal
         />
       </p>
@@ -115,6 +115,10 @@ const Benefit = () => (
         <p>
         Chris Dawson & David Molina
         </p>
+        <h6>Auction Item Include:</h6>
+        <p>
+        Disney Parkhopper Passes, wine tastings, airline tickets, and more!
+        </p>
       </div>
     </Section>
     <Section title="Menu" theme="white">
@@ -182,6 +186,13 @@ const Benefit = () => (
             <img className={styles.logo} src={Nodejs} alt="Node Summit" />
           </a>
           <a
+            href="http://www.srvd.vet"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className={styles.srvdLogo} src={srvd} alt="SRVD" />
+          </a>
+          <a
             href="https://www.codefellows.org/"
             target="_blank"
             rel="noopener noreferrer"
@@ -201,13 +212,6 @@ const Benefit = () => (
             rel="noopener noreferrer"
           >
             <img className={styles.logo} src={ebay} alt="eBay" />
-          </a>
-          <a
-            href="http://www.srvd.vet"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img className={styles.srvdLogo} src={srvd} alt="SRVD" />
           </a>
           <a
             href="http://www.oregonpva.org"
