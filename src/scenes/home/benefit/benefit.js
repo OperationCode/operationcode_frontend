@@ -2,12 +2,14 @@ import React from 'react';
 import Section from 'shared/components/section/section';
 import LinkButton from 'shared/components/linkButton/linkButton';
 import Sabio from '../../../images/codeSchoolLogos/sabio.png';
-import CodeFellows from '../../../images/codeSchoolLogos/cf-logo-horizontal-2-color-black.png';
+import CodeFellows from '../../../images/codeSchoolLogos/codefellows_small.png';
 import Nodejs from '../../../images/NodeSummitSF_ColorLogoWeb.jpg';
 import srvd from '../../../images/srvd.png';
 import ebay from '../../../images/320px-EBay_logo.png';
 import secureSet from '../../../images/SecureSet.logoUSE.jpg';
 import PVA from '../../../images/pvaoregon.jpg';
+import PXD from '../../../images/pdxcglogo.svg';
+import launchCode from '../../../images/launchcode.png';
 import styles from './benefit.css';
 
 const Benefit = () => (
@@ -170,48 +172,62 @@ const Benefit = () => (
            Beneficial State Bank
           </a>.
         </p>
-        <p>
+        <div className={styles.logoBox}>
           <a
             href="https://www.sabio.la/gi"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className={styles.logo} src={Sabio} alt="Sabio" />
+            <img className={styles.logoTall} src={Sabio} alt="Sabio" />
           </a>
           <a
             href="https://www.nodesummit.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className={styles.logo} src={Nodejs} alt="Node Summit" />
+            <img className={styles.logoTall} src={Nodejs} alt="Node Summit" />
           </a>
           <a
             href="http://www.srvd.vet"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className={styles.srvdLogo} src={srvd} alt="SRVD" />
+            <img className={styles.logoTall} src={srvd} alt="SRVD" />
+          </a>
+          <a
+            href="https://pdxcodeguild.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className={styles.logoTall} src={PXD} alt="PXD Code Guild" />
           </a>
           <a
             href="https://www.codefellows.org/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className={styles.logo} src={CodeFellows} alt="Code Fellows" />
+            <img className={styles.logoLong} src={CodeFellows} alt="Code Fellows" />
           </a>
           <a
             href="https://secureset.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className={styles.logo} src={secureSet} alt="Secure Set Cybersecurity Bootcamp" />
+            <img className={styles.logoLong} src={secureSet} alt="Secure Set Cybersecurity Bootcamp" />
+          </a>
+          <a
+            href="https://www.launchcode.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className={styles.logoLong} src={launchCode} alt="Launch Code" />
           </a>
           <a
             href="https://www.ebay.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className={styles.logo} src={ebay} alt="eBay" />
+            <img className={styles.logoLong} src={ebay} alt="eBay" />
           </a>
           <a
             href="http://www.oregonpva.org"
@@ -220,7 +236,7 @@ const Benefit = () => (
           >
             <img className={styles.pvaLogo} src={PVA} alt="Oregon PVA" />
           </a>
-        </p>
+        </div>
       </div>
     </Section>
     <Section title="Location" theme="white">
