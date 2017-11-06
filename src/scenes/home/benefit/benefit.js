@@ -1,13 +1,15 @@
 import React from 'react';
 import Section from 'shared/components/section/section';
 import LinkButton from 'shared/components/linkButton/linkButton';
-import Sabio from '../../../images/codeSchoolLogos/sabio.png';
-import CodeFellows from '../../../images/codeSchoolLogos/cf-logo-horizontal-2-color-black.png';
-import Nodejs from '../../../images/NodeSummitSF_ColorLogoWeb.jpg';
-import srvd from '../../../images/srvd.png';
-import ebay from '../../../images/320px-EBay_logo.png';
-import secureSet from '../../../images/SecureSet.logoUSE.jpg';
-import PVA from '../../../images/pvaoregon.jpg';
+import SabioLogo from '../../../images/codeSchoolLogos/sabio.png';
+import CodeFellowsLogo from '../../../images/codeSchoolLogos/codefellows_small.png';
+import NodejsLogo from '../../../images/NodeSummitSF_ColorLogoWeb.jpg';
+import srvdLogo from '../../../images/srvd.png';
+import ebayLogo from '../../../images/320px-EBay_logo.png';
+import secureSetLogo from '../../../images/SecureSet.logoUSE.jpg';
+import PVAlogo from '../../../images/pvaoregon.jpg';
+import PDXlogo from '../../../images/pdxcglogo.svg';
+import launchCodeLogo from '../../../images/launchcode.png';
 import styles from './benefit.css';
 
 const Benefit = () => (
@@ -170,57 +172,71 @@ const Benefit = () => (
            Beneficial State Bank
           </a>.
         </p>
-        <p>
+        <div className={styles.logoBox}>
           <a
             href="https://www.sabio.la/gi"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className={styles.logo} src={Sabio} alt="Sabio" />
+            <img className={styles.logoTall} src={SabioLogo} alt="Sabio" />
           </a>
           <a
             href="https://www.nodesummit.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className={styles.logo} src={Nodejs} alt="Node Summit" />
+            <img className={styles.logoTall} src={NodejsLogo} alt="Node Summit" />
           </a>
           <a
             href="http://www.srvd.vet"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className={styles.srvdLogo} src={srvd} alt="SRVD" />
+            <img className={styles.logoTall} src={srvdLogo} alt="SRVD" />
+          </a>
+          <a
+            href="https://pdxcodeguild.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className={styles.logoTall} src={PDXlogo} alt="PXD Code Guild" />
           </a>
           <a
             href="https://www.codefellows.org/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className={styles.logo} src={CodeFellows} alt="Code Fellows" />
+            <img className={styles.logoLong} src={CodeFellowsLogo} alt="Code Fellows" />
           </a>
           <a
             href="https://secureset.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className={styles.logo} src={secureSet} alt="Secure Set Cybersecurity Bootcamp" />
+            <img className={styles.logoLong} src={secureSetLogo} alt="Secure Set Cybersecurity Bootcamp" />
+          </a>
+          <a
+            href="https://www.launchcode.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className={styles.logoLong} src={launchCodeLogo} alt="Launch Code" />
           </a>
           <a
             href="https://www.ebay.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className={styles.logo} src={ebay} alt="eBay" />
+            <img className={styles.logoLong} src={ebayLogo} alt="eBay" />
           </a>
           <a
             href="http://www.oregonpva.org"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className={styles.pvaLogo} src={PVA} alt="Oregon PVA" />
+            <img className={styles.pvaLogo} src={PVAlogo} alt="Oregon PVA" />
           </a>
-        </p>
+        </div>
       </div>
     </Section>
     <Section title="Location" theme="white">

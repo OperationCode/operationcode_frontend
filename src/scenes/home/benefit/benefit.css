@@ -25,20 +25,30 @@
   font-size: 0.8em;
 }
 
-.logo {
-  max-width: 25%;
-  height: auto;
-  margin: 2vw;
+.logoBox {
+  margin: auto;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
+
+.logoTall {
+  width: auto;
+  height: 30vh;
+  margin: 1vw;
+}
+
+.logoLong{
+  max-width: 20vw;
+  height: auto;
+  margin: 1vw;
+}
+
 .pvaLogo {
-  max-width: 25%;
+  max-width: 100%;
   height: auto;
-  margin: 2vw;
-}
-.srvdLogo {
-  height:auto;
-  max-width: 10%;
-  margin: 2vw;
 }
 
 .wrap {
@@ -63,14 +73,13 @@
   .tickets > div {
     width: 300px;
   }
-  .logo {
-    max-width: 50%;
+  .logoTall {
+    width: auto;
+    height: 30vh;
+    margin: 3vw;
   }
-  .srvdLogo {
-    height:auto;
-  }
-  .pvaLogo {
-    max-width: 75%;
+  .logoLong{
+    max-width: 90vw;
   }
 }
 
