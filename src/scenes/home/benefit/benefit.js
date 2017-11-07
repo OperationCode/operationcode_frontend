@@ -10,6 +10,7 @@ import secureSetLogo from '../../../images/SecureSet.logoUSE.jpg';
 import PVAlogo from '../../../images/pvaoregon.jpg';
 import PDXlogo from '../../../images/pdxcglogo.svg';
 import launchCodeLogo from '../../../images/launchcode.png';
+import topCoderLogo from '../../../images/topcoder.png';
 import styles from './benefit.css';
 
 const Benefit = () => (
@@ -228,6 +229,13 @@ const Benefit = () => (
             rel="noopener noreferrer"
           >
             <img className={styles.logoLong} src={ebayLogo} alt="eBay" />
+          </a>
+		           <a
+            href="https://www.topcoder.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className={styles.logoLong} src={topCoderLogo} alt="Top Coder" />
           </a>
           <a
             href="http://www.oregonpva.org"
