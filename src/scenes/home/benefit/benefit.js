@@ -234,7 +234,7 @@ const Benefit = () => (
             href="https://www.topcoder.com/"
             target="_blank"
             rel="noopener noreferrer"
-           >
+          >
             <img className={styles.logoLong} src={topCoderLogo} alt="Top Coder" />
           </a>
           <a
