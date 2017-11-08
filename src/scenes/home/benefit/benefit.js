@@ -10,12 +10,13 @@ import secureSetLogo from '../../../images/SecureSet.logoUSE.jpg';
 import PVAlogo from '../../../images/pvaoregon.jpg';
 import PDXlogo from '../../../images/pdxcglogo.svg';
 import launchCodeLogo from '../../../images/launchcode.png';
+import topCoderLogo from '../../../images/topcoder.png';
 import styles from './benefit.css';
 
 const Benefit = () => (
   <div>
     <div className={styles.wrap}>
-     Registration Closes Tuesday, November 7th at Noon.
+     Registration Closes Thursday, November 9th at Noon.
     </div>
     <Section title="Benefit Dinner & Auction" theme="white" headingLines={false}>
       <br />
@@ -141,7 +142,11 @@ const Benefit = () => (
           <b>Vegetarian Option:</b> Wild Mushrooms, Broccolini, Asparagus, and Fontina Cheese Served in an Acorn Squash with Butternut Squash Puree<br />
         </p>
         <p>
-          Dinner Served with Artisan Rolls & Butter, House Brewed Coffee & Tea
+          Dinner Served with Artisan Rolls & Butter, House Brewed Coffee & Tea.
+        </p>
+        <h6>Dessert</h6>
+        <p>
+          To commemorate the 242nd Marine Corps Birthday, a birthday cake will be served for dessert.
         </p>
       </div>
     </Section>
@@ -228,6 +233,13 @@ const Benefit = () => (
             rel="noopener noreferrer"
           >
             <img className={styles.logoLong} src={ebayLogo} alt="eBay" />
+          </a>
+          <a
+            href="https://www.topcoder.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className={styles.logoLong} src={topCoderLogo} alt="Top Coder" />
           </a>
           <a
             href="http://www.oregonpva.org"
