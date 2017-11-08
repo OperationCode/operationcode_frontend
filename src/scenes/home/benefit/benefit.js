@@ -16,7 +16,7 @@ import styles from './benefit.css';
 const Benefit = () => (
   <div>
     <div className={styles.wrap}>
-     Registration Closes Tuesday, November 7th at Noon.
+     Registration Closes Thursday, November 9th at Noon.
     </div>
     <Section title="Benefit Dinner & Auction" theme="white" headingLines={false}>
       <br />
@@ -142,7 +142,11 @@ const Benefit = () => (
           <b>Vegetarian Option:</b> Wild Mushrooms, Broccolini, Asparagus, and Fontina Cheese Served in an Acorn Squash with Butternut Squash Puree<br />
         </p>
         <p>
-          Dinner Served with Artisan Rolls & Butter, House Brewed Coffee & Tea
+          Dinner Served with Artisan Rolls & Butter, House Brewed Coffee & Tea.
+        </p>
+        <h6>Dessert</h6>
+        <p>
+          To commemorate the 242nd Marine Corps Birthday, a birthday cake will be served for dessert.
         </p>
       </div>
     </Section>
