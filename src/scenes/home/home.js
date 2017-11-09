@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import * as CookieHelpers from 'shared/utils/cookieHelper';
 import Login from 'shared/components/login/login';
+import AdditionalInfo from 'shared/components/login/additionalInfo';
 import IdmeVerify from 'shared/components/idme/idmeverify/idmeverify';
 import AuthenticatedRoute from 'shared/components/authenticatedRoute/authenticatedRoute';
 import familyImage from 'images/Family-2.jpg';
@@ -31,6 +32,7 @@ import ResetPassword from './resetPassword/resetPassword';
 import Challenge from './challenge/challenge';
 import SignupInformation from './informationForm/informationForm';
 import Benefit from './benefit/benefit';
+import Events from './events/events'
 import styles from './home.css';
 
 class Home extends Component {
@@ -92,6 +94,7 @@ class Home extends Component {
       [`${styles.backgroundImage}`]: this.state.bgImage
     });
     return (
+
       <div
         className={classes}
         style={(this.state.bgImage) ? { backgroundImage: `url(${this.state.bgImageUrl})` } : {}}
@@ -165,8 +168,16 @@ class Home extends Component {
               component={SignupInformation}
             />
             <Route
+              path="/additional-info"
+              component={AdditionalInfo}
+            />
+            <Route
               path="/challenge"
               component={Challenge}
+            />
+            <Route
+              path="/events"
+              component={Events}
             />
             <Route
               exact

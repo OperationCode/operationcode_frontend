@@ -27,6 +27,7 @@ class Header extends Component {
       <span>
         <NavItem to="/about" text="About" onClick={onClick} />
         <NavItem to="/code_schools" text="Code Schools" onClick={onClick} />
+        <NavItem to="/events" text="Events" onClick={onClick} />
         <NavItem to="/jobs" text="Job Board" onClick={onClick} />
         <NavItem to="https://opencollective.com/operationcode#support" text="Donate" onClick={onClick} isExternal />
         {signedIn && <NavItem to="https://op.co.de/mentor-request" text="Request Help" onClick={onClick} isExternal />}

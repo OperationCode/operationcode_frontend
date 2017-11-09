@@ -71,6 +71,7 @@ class SignUp extends Component {
       const {
         email, zip, password, firstName, lastName, identifier
       } = this.state;
+      console.log('Here!');
       axios.post(`${config.backendUrl}/users`, {
         user: {
           first_name: firstName,
@@ -81,10 +82,12 @@ class SignUp extends Component {
           identifier
         }
       }).then(({ data }) => {
+        console.log('Success!');
         window.location = '/signup-info';
         CookieHelpers.setUserAuthCookie(data);
         this.setState({ isLoading: false });
       }).catch((error) => {
+        console.log('Failed!');
         const data = _.get(error, 'response.data');
         let errorMessage = '';
         if (data) {
