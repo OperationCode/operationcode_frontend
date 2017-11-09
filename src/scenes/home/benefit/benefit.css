@@ -51,18 +51,6 @@
   height: auto;
 }
 
-.wrap {
-  margin-top:1vh;
-  padding:5px;
-  width: 100%;
-  background: #F2CF7F;
-  text-align: center;
-  font-weight: bold;
-  font-size: 2rem;
-  border-top: 2px solid #E69F00;
-  border-bottom: 2px solid #E69F00;
-}
-
 @media screen and (min-width: 415px) and (max-width: 1280px) {
   .tickets > div {
     width: 375px;
