@@ -148,6 +148,7 @@ const Benefit = () => (
           <b>Vegetarian Option:</b> Wild Mushrooms, Broccolini, Asparagus, and Fontina Cheese Served in an Acorn Squash with Butternut Squash Puree<br />
         </p>
         <p>
+          Gluten Free Option Upon Request<br />
           Dinner Served with Artisan Rolls & Butter, House Brewed Coffee & Tea.
         </p>
         <h6>Dessert</h6>
