@@ -11,6 +11,8 @@ import PVAlogo from '../../../images/pvaoregon.jpg';
 import PDXlogo from '../../../images/pdxcglogo.svg';
 import launchCodeLogo from '../../../images/launchcode.png';
 import topCoderLogo from '../../../images/topcoder.png';
+import alchemyLogo from '../../../images/alchemyLogo.png';
+import gitkrackenLogo from '../../../images/gitkraken-logo-dark-hz.png';
 import styles from './benefit.css';
 
 const Benefit = () => (
@@ -45,6 +47,13 @@ const Benefit = () => (
           text="Download/Print Flyer"
           theme="blue"
           link="https://s3-us-west-2.amazonaws.com/operationcode/benefitdinner_auction_operationcode.pdf"
+          isExternal
+        />
+        <LinkButton
+          role="button"
+          text="View Auction Items"
+          theme="blue"
+          link="https://s3-us-west-2.amazonaws.com/operationcode/finalpackages_benefit_dinner_auction_operationcode.pdf"
           isExternal
         />
       </p>
@@ -175,7 +184,8 @@ const Benefit = () => (
             rel="noopener noreferrer"
           >
            Beneficial State Bank
-          </a>.
+          </a>.<br />
+          We want to thank friends of Operation Code for purchasing a ticket for veterans to attend, including: Jay Bloom, Billy Le, and Domenica Mendoza Bueno.
         </p>
         <div className={styles.logoBox}>
           <a
@@ -205,6 +215,13 @@ const Benefit = () => (
             rel="noopener noreferrer"
           >
             <img className={styles.logoTall} src={PDXlogo} alt="PXD Code Guild" />
+          </a>
+          <a
+            href="http://www.alchemycodelab.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className={styles.logoTall} src={alchemyLogo} alt="Alchemy Codelab" />
           </a>
           <a
             href="https://www.codefellows.org/"
@@ -240,6 +257,13 @@ const Benefit = () => (
             rel="noopener noreferrer"
           >
             <img className={styles.logoLong} src={topCoderLogo} alt="Top Coder" />
+          </a>
+          <a
+            href="https://www.gitkraken.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className={styles.logoLong} src={gitkrackenLogo} alt="GitKracken" />
           </a>
           <a
             href="http://www.oregonpva.org"
