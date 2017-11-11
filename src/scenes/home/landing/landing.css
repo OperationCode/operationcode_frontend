@@ -10,9 +10,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top:10vw;
+  margin-top: 10vw;
   text-align: center;
-  padding-bottom:60px;
+  padding-bottom: 60px;
 }
 
 .pageHeading h1 {
@@ -20,6 +20,32 @@
   color: #fff;
   text-shadow: black 1px 0 15px;
   padding: 50px 0 25px 0;
+}
+
+.liveStreamModal {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: column nowrap;
+  margin: 10%;
+  padding: 30px;
+  background-color: #ddd;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+.liveStreamModal_CloseButton {
+  align-self: flex-end;
+}
+
+.liveStreamModal_CloseButton:hover {
+  cursor: pointer;
+  color: #249cde;
+}
+
+.liveStreamModal_Content {
+  width: 70%;
+  height: 70%;
 }
 
 @media screen and (max-width: 900px) {
@@ -37,5 +63,14 @@
   }
   .pageHeading h1 {
     font-size: 18px;
+  }
+
+  .liveStreamModal {
+    padding: 15px;
+  }
+
+  .liveStreamModal_Content {
+    width: 90%;
+    height: 90%;
   }
 }
