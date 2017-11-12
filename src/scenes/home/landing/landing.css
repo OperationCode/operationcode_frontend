@@ -22,7 +22,7 @@
   padding: 50px 0 25px 0;
 }
 
-.liveStreamModal {
+.landingModal {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -34,16 +34,16 @@
   border-radius: 20px;
 }
 
-.liveStreamModal_CloseButton {
+.landingModal_CloseButton {
   align-self: flex-end;
 }
 
-.liveStreamModal_CloseButton:hover {
+.landingModal_CloseButton:hover {
   cursor: pointer;
   color: #249cde;
 }
 
-.liveStreamModal_Content {
+.landingModal_Content {
   width: 70%;
   height: 70%;
 }
@@ -65,11 +65,11 @@
     font-size: 18px;
   }
 
-  .liveStreamModal {
+  .landingModal {
     padding: 15px;
   }
 
-  .liveStreamModal_Content {
+  .landingModal_Content {
     width: 90%;
     height: 90%;
   }
