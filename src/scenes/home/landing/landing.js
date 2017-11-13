@@ -20,7 +20,8 @@ class Landing extends Component {
   };
 
   componentDidMount() {
-    this.toggleModal();
+    // Uncomment in order to render landing screen pop-up when desired
+    // this.toggleModal();
   }
 
   toggleModal = () => {
@@ -30,40 +31,23 @@ class Landing extends Component {
   render() {
     return (
       <div className={styles.landing}>
-        {/* TODO: REMOVE MODAL AFTER BENEFIT DINNER */}
+        {/* Modal only rendered when this.toggleModal() is uncommented in componentDidMount() */}
         <ReactModal
           isOpen={this.state.showModal}
           onRequestClose={this.toggleModal}
-          contentLabel="Live Stream of Benefit Dinner"
-          className={styles.liveStreamModal}
+          contentLabel="None"
+          className={styles.landingModal}
         >
           <FaClose
             size={48}
-            className={styles.liveStreamModal_CloseButton}
+            className={styles.landingModal_CloseButton}
             onClick={this.toggleModal}
           />
-          <div className={styles.liveStreamModal_Content}>
-            <h3>Operation Code Benefit Dinner!</h3>
-            <p>From the bottom of our hearts, thank you for all of your support.</p>
-            <p>
-              We&apos;ll be live streaming the event for your viewing enjoyment. If you&apos;re
-              still interested in donating to Operation Code, please{' '}
-              <a
-                href="https://opencollective.com/operationcode#support"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                click here
-              </a>!
-            </p>
-            <LinkButton
-              text="Link to Live Stream"
-              link="https://www.youtube.com/watch?v=aYcqMZBDUsU"
-              isExternal
-            />
+          <div className={styles.landingModal_Content}>
+            <h3>Pop-up Title</h3>
+            <p>Content</p>
           </div>
         </ReactModal>
-        {/* ************************************************************************** */}
 
         <div className={styles.pageHeading}>
           <h1>
