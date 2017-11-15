@@ -10,17 +10,19 @@ let email; // response.profileObj.email,
 let zip;
 let password; // response.tokenObj.login_hint,
 let identifier;
+let response;
 
 class SocialLogin extends React.Component {
   static login() {
     console.log(firstName);
     console.log('Here!');
     axios
-      .post(`${config.backendUrl}/sessions`, {
-        user: {
+      .post(`${config.backendUrl}/auth/google_oauth2/callback`, {
+        data: response
+        /* user: {
           email: 'v@test.com', // response.profileObj.email,
           social_password: 'Password123', // response.tokenObj.login_hint,
-        }
+        } */
       })
       .then(({ data }) => {
         console.log('Success!');
@@ -34,10 +36,10 @@ class SocialLogin extends React.Component {
           Object.keys(data).forEach((key) => {
             if (data && data.hasOwnProperty(key)) { // eslint-disable-line
               errorMessage += ` ${key}: ${data[key][0]} `;
-              if (errorMessage === ' error: I ') {
+              /* if (errorMessage === ' error: I ') {
                 console.log('starting registration...');
                 window.location = '/additional-info';
-              }
+              } */
               console.log(errorMessage);
             }
           });
@@ -60,7 +62,6 @@ class SocialLogin extends React.Component {
           email: 'v@test.com', // response.profileObj.email,
           zip: '',
           password: 'Password', // response.tokenObj.login_hint,
-          social_password: 'Password123',
           identifier: ''
         }
       })
@@ -82,11 +83,12 @@ class SocialLogin extends React.Component {
         }
       });
   }
-  static run(f, l, e, p) {
+  static run(f, l, e, p, r) {
     firstName = f;
     lastName = l;
     email = e;
     password = p;
+    response = r;
     this.login();
   }
 }
