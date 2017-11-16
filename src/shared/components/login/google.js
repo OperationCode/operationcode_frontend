@@ -52,7 +52,7 @@ class Google extends React.Component {
     return (
       <div>
         <meta name="google-signin-scope" content="profile email" />
-        <meta name="google-signin-client_id" content=GOOGLE_ID />
+        <meta name="google-signin-client_id" content=ENV['GOOGLE_ID'] />
         <script src="https://apis.google.com/js/platform.js" async defer />
         {/* eslint-disable */}
         <GoogleLogin clientId=GOOGLE_ID onSuccess={responseGoogle} onFailure={responseGoogle} />
