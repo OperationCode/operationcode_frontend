@@ -3,20 +3,43 @@ import Section from 'shared/components/section/section';
 import LinkButton from 'shared/components/linkButton/linkButton';
 import SabioLogo from '../../../images/codeSchoolLogos/sabio.png';
 import CodeFellowsLogo from '../../../images/codeSchoolLogos/codefellows_small.png';
-import NodejsLogo from '../../../images/NodeSummitSF_ColorLogoWeb.jpg';
-import srvdLogo from '../../../images/srvd.png';
-import ebayLogo from '../../../images/320px-EBay_logo.png';
-import secureSetLogo from '../../../images/SecureSet.logoUSE.jpg';
-import PVAlogo from '../../../images/pvaoregon.jpg';
-import PDXlogo from '../../../images/pdxcglogo.svg';
-import launchCodeLogo from '../../../images/launchcode.png';
-import topCoderLogo from '../../../images/topcoder.png';
-import alchemyLogo from '../../../images/alchemyLogo.png';
-import gitkrackenLogo from '../../../images/gitkraken-logo-dark-hz.png';
+import NodejsLogo from './logos/NodeSummitSF_ColorLogoWeb.jpg';
+import srvdLogo from './logos/srvd.png';
+import ebayLogo from './logos/320px-EBay_logo.png';
+import secureSetLogo from './logos/SecureSet.logoUSE.jpg';
+import PVAlogo from './logos/pvaoregon.jpg';
+import PDXlogo from './logos/pdxcglogo.svg';
+import launchCodeLogo from './logos/launchcode.png';
+import topCoderLogo from './logos/topcoder.png';
+import alchemyLogo from './logos/alchemyLogo.png';
+import gitkrackenLogo from './logos/gitkraken-logo-dark-hz.png';
 import styles from './benefit.css';
 
 const Benefit = () => (
   <div>
+    <div className={styles.tyBanner}><h3>Thank You!</h3>
+      <p>Thank you to all of our donors, sponsors, and event staff who helped make the Operation Code 2017 Benefit Dinner a success!<br />
+       Save the date: November 9th, 2018
+      </p>
+      <p className={styles.desc}>For Sponsorship Information,
+        <a
+          href="mailto:staff@operationcode.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+         contact us
+        </a>.
+        <br />
+        To make a donation,
+        <a
+          href="https://opencollective.com/operationcode#support"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+         click here
+        </a>.
+      </p>
+    </div>
     <Section title="Benefit Dinner & Auction" theme="white" headingLines={false}>
       <br />
       <h3>
