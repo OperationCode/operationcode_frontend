@@ -4,12 +4,13 @@ import ReactModal from 'react-modal';
 import Section from 'shared/components/section/section';
 import styles from './modal.css';
 
-const Modal = ({ isOpen, title, onRequestClose, children }) => (
+const Modal = ({ isOpen, title, onRequestClose, children, width }) => (
   <ReactModal
     isOpen={isOpen}
     contentLabel={title}
     shouldCloseOnOverlayClick
     onRequestClose={onRequestClose}
+    style={{ content: { width, margin: '0 auto' } }}
   >
     <Section title={title} theme="white" className={styles.modal}>
       <div className={styles.scrollable}>
@@ -24,14 +25,16 @@ Modal.propTypes = {
   children: PropTypes.element.isRequired,
   isOpen: PropTypes.bool,
   onRequestClose: PropTypes.func,
-  title: PropTypes.string
+  title: PropTypes.string,
+  width: PropTypes.string
 };
 
 Modal.defaultProps = {
   children: <span />,
   isOpen: false,
   onRequestClose: () => {},
-  title: ''
+  title: '',
+  width: ''
 };
 
 export default Modal;
