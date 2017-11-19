@@ -45,7 +45,7 @@ class CodeSchools extends Component {
       <div>
         {
           this.state.modal &&
-          <Modal widthPct="" title={this.state.scholarshipSchoolModal.schoolName} isOpen onRequestClose={this.hideModal}>
+          <Modal width="50%" title={this.state.scholarshipSchoolModal.schoolName} isOpen onRequestClose={this.hideModal}>
             <div className={styles.scholarshipModalContent}>
               <img src={this.state.scholarshipSchoolModal.logo} alt={this.state.scholarshipSchoolModal.alt} style={{ float: 'left' }} />
               <p className={styles.scholarshipModalDescription}><br /><br />{this.state.scholarshipSchoolModal.description}</p>
