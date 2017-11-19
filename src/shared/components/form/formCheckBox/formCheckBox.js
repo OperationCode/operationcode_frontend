@@ -34,7 +34,6 @@ FormCheckBox.propTypes = {
 };
 
 FormCheckBox.defaultProps = {
-  checked: false,
   onChange: null,
   checkBox: null,
   label: null

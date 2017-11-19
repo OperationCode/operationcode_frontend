@@ -4,7 +4,9 @@ import ReactModal from 'react-modal';
 import Section from 'shared/components/section/section';
 import styles from './modal.css';
 
-const Modal = ({ isOpen, title, onRequestClose, children, width }) => (
+const Modal = ({
+  isOpen, title, onRequestClose, children, width
+}) => (
   <ReactModal
     isOpen={isOpen}
     contentLabel={title}
@@ -22,7 +24,7 @@ const Modal = ({ isOpen, title, onRequestClose, children, width }) => (
 );
 
 Modal.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.element,
   isOpen: PropTypes.bool,
   onRequestClose: PropTypes.func,
   title: PropTypes.string,

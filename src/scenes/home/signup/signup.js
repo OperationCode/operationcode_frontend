@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
 import * as CookieHelpers from 'shared/utils/cookieHelper';
 import Form from 'shared/components/form/form';
 import FormEmail from 'shared/components/form/formEmail/formEmail';
@@ -11,6 +12,7 @@ import FormInput from 'shared/components/form/formInput/formInput';
 import Section from 'shared/components/section/section';
 import config from 'config/environment';
 import styles from './signup.css';
+
 
 class SignUp extends Component {
   constructor(props) {
@@ -68,7 +70,9 @@ class SignUp extends Component {
     this.setState({ isLoading: true });
 
     if (this.isFormValid()) {
-      const { email, zip, password, firstName, lastName, identifier } = this.state;
+      const {
+        email, zip, password, firstName, lastName, identifier
+      } = this.state;
       axios.post(`${config.backendUrl}/users`, {
         user: {
           first_name: firstName,
@@ -92,6 +96,7 @@ class SignUp extends Component {
             }
           });
         }
+        this.props.sendNotification('error', 'Error', 'Please try registering again. Contact one of our staff if this problem persists.');
         this.setState({ error: errorMessage, isLoading: false });
       });
     } else {
@@ -160,14 +165,19 @@ class SignUp extends Component {
             validationErrorMessage="Passwords must match"
             ref={(child) => { this.passwordConfirmRef = child; }}
           />
-          {this.state.error ? <ul className={styles.errorList}>There was an error joining Operation Code:
+          {this.state.error &&
+          <ul className={styles.errorList}>There was an error joining Operation Code:
             <li className={styles.errorMessage}>{this.state.error}</li>
-          </ul> : null }
+          </ul>}
           {this.state.isLoading ? <FormButton className={styles.joinButton} text="Loading..." disabled theme="grey" /> : <FormButton className={styles.joinButton} text="Join" onClick={this.handleOnClick} theme="red" />}
         </Form>
       </Section>
     );
   }
 }
+
+SignUp.propTypes = {
+  sendNotification: PropTypes.func.isRequired
+};
 
 export default SignUp;

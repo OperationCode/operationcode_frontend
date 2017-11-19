@@ -41,7 +41,7 @@ class Body extends Component {
     postBackend('scholarship_applications', body).then(() => {
       this.props.onSuccess();
     }).catch((failed) => {
-      const error = failed.response.data.error;
+      const { error } = failed.response.data;
       this.setState({ error });
     });
   }
@@ -54,7 +54,7 @@ class Body extends Component {
     return (
       <div>
         <div className={styles.title}>Reason for Attending<span className={styles.red}> *</span></div>
-        <FormTextArea onChange={this.onTextAreaChange} placeHolder={'Please write about why you want to attend this conference, and what you hope to get out of it.'} />
+        <FormTextArea onChange={this.onTextAreaChange} placeHolder="Please write about why you want to attend this conference, and what you hope to get out of it." />
         <div className={styles.title}>Conditions for Acceptance<span className={styles.red}> *</span></div>
         <div className={styles.terms}> {this.props.scholarship_terms} </div>
         <FormCheckBox name="scholarship_application" value="I agree" checked={this.state.terms_accepted} onChange={this.onCheckboxChange} checkBox={{ display: 'block', margin: '20px 0px 20px 5px' }} label={{ textTransform: 'uppercase', fontWeight: 'bold', marginLeft: '15px' }} />

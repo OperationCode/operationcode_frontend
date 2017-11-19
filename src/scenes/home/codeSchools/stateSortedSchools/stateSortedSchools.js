@@ -92,8 +92,7 @@ class StateSortedSchools extends Component {
             fullTime={campus.full_time ? 'Full-Time' : 'Flexible'}
             hardware={campus.hardware_included ? 'Yes' : 'No'}
           />
-        )
-      );
+        ));
 
     return (
       <Section
