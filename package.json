@@ -22,6 +22,7 @@
     "react": "15.6.2",
     "react-dom": "^15.5.4",
     "react-error-overlay": "^1.0.7",
+    "react-facebook-login": "^3.7.0",
     "react-ga": "^2.2.0",
     "react-google-login": "^3.0.1",
     "react-google-login-component": "^0.9.1",

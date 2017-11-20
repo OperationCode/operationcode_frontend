@@ -32,7 +32,6 @@ import ResetPassword from './resetPassword/resetPassword';
 import Challenge from './challenge/challenge';
 import SignupInformation from './informationForm/informationForm';
 import Benefit from './benefit/benefit';
-import Events from './events/events'
 import styles from './home.css';
 
 class Home extends Component {
@@ -174,10 +173,6 @@ class Home extends Component {
             <Route
               path="/challenge"
               component={Challenge}
-            />
-            <Route
-              path="/events"
-              component={Events}
             />
             <Route
               exact

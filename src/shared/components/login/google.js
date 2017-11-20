@@ -12,7 +12,7 @@ class Google extends React.Component {
       <div>
         <script src="https://apis.google.com/js/platform.js" async defer />
         {/* eslint-disable */}
-        <GoogleLogin clientId='344751133153-v2h3l08lcrkqjjerftlv450hbe5p2i7b.apps.googleusercontent.com' onSuccess={responseGoogle} onFailure={responseGoogle} />
+        <GoogleLogin clientId="344751133153-v2h3l08lcrkqjjerftlv450hbe5p2i7b.apps.googleusercontent.com" onSuccess={responseGoogle} onFailure={responseGoogle} />
         {/* eslint-enable */}
       </div>
     );

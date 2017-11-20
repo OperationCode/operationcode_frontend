@@ -24,8 +24,6 @@ class SocialLogin extends React.Component {
           email: emailAddress,
           first_name: firstName,
           last_name: lastName,
-          password: pass,
-          zip: zipCode
         }
       })
       .then(({ data }) => {

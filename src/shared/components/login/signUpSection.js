@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Google from './google.js';
-// import Facebook from './facebook.js';
+import Facebook from './facebook.js';
 import Section from '../../../shared/components/section/section';
 import LinkButton from '../../../shared/components/linkButton/linkButton';
 
@@ -22,9 +22,9 @@ class SignUpSection extends Component {
         <p>
           <Google />
         </p>
-        {/* <p> */}
-        {/*  <Facebook /> */}
-        {/* </p> */}
+        <p>
+          <Facebook />
+        </p>
       </Section>
     );
   }
