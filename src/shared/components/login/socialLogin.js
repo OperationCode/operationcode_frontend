@@ -4,28 +4,32 @@ import config from 'config/environment';
 import _ from 'lodash';
 import * as CookieHelpers from '../../utils/cookieHelper';
 
-let firstName; // response.profileObj.givenName,
-let lastName; // response.profileObj.familyName,
-let email; // response.profileObj.email,
-let zip;
-let password; // response.tokenObj.login_hint,
-let identifier;
-let response;
+let firstName;
+let lastName = '';
+let emailAddress;
+let zipCode;
+let pass;
 
 class SocialLogin extends React.Component {
   static login() {
     console.log(firstName);
-    console.log('Here!');
+    console.log(lastName);
+    console.log(emailAddress);
+    console.log(zipCode);
+    console.log(pass);
     axios
-      .post(`${config.backendUrl}/auth/google_oauth2/callback`, {
-        data: response
-        /* user: {
-          email: 'v@test.com', // response.profileObj.email,
-          social_password: 'Password123', // response.tokenObj.login_hint,
-        } */
+      .post(`${config.backendUrl}/users/social`, {
+        // data: code
+        user: {
+          email: emailAddress,
+          first_name: firstName,
+          last_name: lastName,
+          password: pass,
+          zip: zipCode
+        }
       })
       .then(({ data }) => {
-        console.log('Success!');
+        console.log('success!');
         CookieHelpers.setUserAuthCookie(data);
         window.location = data.redirect_to;
       }).catch((error) => {
@@ -46,50 +50,12 @@ class SocialLogin extends React.Component {
         }
       });
   }
-  static register() {
-    console.log(firstName);
-    console.log(lastName);
-    console.log(email);
-    console.log(zip);
-    console.log(identifier);
-    console.log(password);
-    console.log('Here!');
-    axios
-      .post(`${config.backendUrl}/users`, {
-        user: {
-          first_name: 'F', // response.profileObj.givenName,
-          last_name: 'L', // response.profileObj.familyName,
-          email: 'v@test.com', // response.profileObj.email,
-          zip: '',
-          password: 'Password', // response.tokenObj.login_hint,
-          identifier: ''
-        }
-      })
-      .then(({ data }) => {
-        console.log('Success!');
-        CookieHelpers.setUserAuthCookie(data);
-        window.location = '/signup-info';
-      }).catch((error) => {
-        console.log(error);
-        const data = _.get(error, 'response.data');
-        let errorMessage = '';
-        if (data) {
-          Object.keys(data).forEach((key) => {
-            if (data && data.hasOwnProperty(key)) { // eslint-disable-line
-              errorMessage += ` ${key}: ${data[key][0]} `;
-              console.log(errorMessage);
-            }
-          });
-        }
-      });
-  }
-  static run(f, l, e, p, r) {
+  static run(f, l, e) {
     firstName = f;
     lastName = l;
-    email = e;
-    password = p;
-    response = r;
+    emailAddress = e;
     this.login();
+    // window.location = '/additional-info';
   }
 }
 export default SocialLogin;

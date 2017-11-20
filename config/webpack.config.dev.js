@@ -19,7 +19,6 @@ const publicPath = '/';
 const publicUrl = '';
 // Get environment variables to inject into our app.
 const env = getClientEnvironment(publicUrl);
-
 // Options for PostCSS as we reference these options twice
 // Adds vendor prefixing to support IE9 and above
 const postCSSLoaderOptions = {

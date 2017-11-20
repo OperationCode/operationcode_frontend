@@ -5,7 +5,8 @@ import FormZipCode from 'shared/components/form/formZipCode/formZipCode';
 import FormPassword from 'shared/components/form/formPassword/formPassword';
 import FormButton from 'shared/components/form/formButton/formButton';
 import styles from 'scenes/home/informationForm/informationForm.css';
-import SocialLogin from './socialLogin';
+import _ from 'lodash';
+import { patchBackend } from 'shared/utils/apiHelper';
 
 class AdditionalInfo extends React.Component {
   state = {
@@ -21,10 +22,33 @@ class AdditionalInfo extends React.Component {
   }
   handleOnClick = (e) => {
     e.preventDefault();
-    console.log('Here!');
-    SocialLogin.zip = this.state.zip;
-    SocialLogin.password = this.state.zip;
-    SocialLogin.register();
+    console.log(this.state.zip);
+    console.log(this.state.password);
+    patchBackend('users', {
+      user: {
+        zip: this.state.zip,
+        password: this.state.password
+      },
+    })
+      .then(() => {
+        window.location = '/signup-info';
+      }).catch((error) => {
+        console.log(error);
+        const data = _.get(error, 'response.data');
+        let errorMessage = '';
+        if (data) {
+          Object.keys(data).forEach((key) => {
+            if (data && data.hasOwnProperty(key)) { // eslint-disable-line
+              errorMessage += ` ${key}: ${data[key][0]} `;
+              /* if (errorMessage === ' error: I ') {
+                console.log('starting registration...');
+                window.location = '/additional-info';
+              } */
+              console.log(errorMessage);
+            }
+          });
+        }
+      });
   };
   render() {
     return (

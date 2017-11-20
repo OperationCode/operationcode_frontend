@@ -221,10 +221,12 @@ coverage
 *.orig
 
 # Create-React-App .gitignore
-.env
+# .env
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
 # Visual Studio Code config
 .vscode
+
+# backend
