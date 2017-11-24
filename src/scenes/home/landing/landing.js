@@ -56,12 +56,12 @@ class Landing extends Component {
           </h1>
           <LinkButton text="Join" theme="red" link="/signup" />
         </div>
-        <AnnounceBanner
+        {/* <AnnounceBanner
           link="/benefit"
           imageSource={BenefitBanner}
           fallbackImage450pxWideSource={MobileBenefitBanner}
           altText="Click here to find more information about our Benefit Dinner and Silent Auction on November 10th"
-        />
+        /> */}
         <WhatWeDo />
         <Membership />
         <MoreInformation />
