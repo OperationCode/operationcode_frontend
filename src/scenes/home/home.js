@@ -7,6 +7,7 @@ import classNames from 'classnames';
 import * as CookieHelpers from 'shared/utils/cookieHelper';
 import Login from 'shared/components/login/login';
 import AdditionalInfo from 'shared/components/login/additionalInfo';
+import SocialLogin from 'shared/components/login/socialLogin';
 import IdmeVerify from 'shared/components/idme/idmeverify/idmeverify';
 import AuthenticatedRoute from 'shared/components/authenticatedRoute/authenticatedRoute';
 import familyImage from 'images/Family-2.jpg';
@@ -169,6 +170,10 @@ class Home extends Component {
             <Route
               path="/additional-info"
               component={AdditionalInfo}
+            />
+            <Route
+              path="/social-login"
+              component={SocialLogin}
             />
             <Route
               path="/challenge"

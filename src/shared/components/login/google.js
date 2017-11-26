@@ -3,8 +3,10 @@ import GoogleLogin from 'react-google-login';
 import SocialLogin from './socialLogin';
 
 const responseGoogle = (response) => {
+  const login = new SocialLogin();
   console.log(response);
-  SocialLogin.run(response.profileObj.familyName, response.profileObj.givenName, response.profileObj.email);
+  console.log(SocialLogin);
+  login.run(response.profileObj.givenName, response.profileObj.familyName, response.profileObj.email);
 };
 class Google extends React.Component {
   render() {

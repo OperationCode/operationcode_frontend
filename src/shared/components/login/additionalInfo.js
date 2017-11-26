@@ -16,7 +16,6 @@ class AdditionalInfo extends React.Component {
   onZipChange = (value, valid) => {
     this.setState({ zip: value, zipValid: valid });
   }
-
   onPasswordChange = (value, valid) => {
     this.setState({ password: value, passwordValid: valid });
   }

@@ -1,2 +1,3 @@
 mockServices
 /src/scenes/home/home.js
+/src/shared/components/login/socialLogin.js
