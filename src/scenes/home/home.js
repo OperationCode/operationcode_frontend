@@ -33,6 +33,7 @@ import ResetPassword from './resetPassword/resetPassword';
 import Challenge from './challenge/challenge';
 import SignupInformation from './informationForm/informationForm';
 import Benefit from './benefit/benefit';
+import OurPrograms from './ourPrograms/ourPrograms';
 import styles from './home.css';
 
 const ReactToastr = require('react-toastr');
@@ -255,6 +256,10 @@ class Home extends Component {
               render={() => (
                 <Benefit {...authProps} />
               )}
+            />
+            <Route
+              path="/our_programs"
+              component={OurPrograms}
             />
             {/* eslint-disable */}
             <Route

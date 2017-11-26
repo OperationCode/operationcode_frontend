@@ -1,0 +1,10 @@
+.characteristics {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.iconContainer {
+  width: 75px;
+  padding: 0 25px 0 0;
+}

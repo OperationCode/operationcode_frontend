@@ -1,0 +1,50 @@
+.flexContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 15px 0 0 0;
+}
+
+.container {
+  border-left: 1px solid #ccc;
+  width: 70%;
+}
+
+.box {
+  width: 100%;
+  border: 1px solid #ccc;
+  margin: 0 0 20px 20px;
+  padding: 10px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.box p {
+  margin: 0;
+}
+
+.box:before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: -27.5px;
+  height: 10px;
+  width: 10px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.box .stepHeading, .box .stepCount {
+  font-weight: 700;
+}
+
+.box .stepCount {
+  position: absolute;
+  top: 5px;
+  left: -90px;
+}
+
+.box .stepHeading {
+  margin-bottom: 20px;
+}
