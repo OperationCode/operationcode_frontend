@@ -13,33 +13,40 @@ import * as CookieHelpers from '../../utils/cookieHelper';
 let firstName;
 let lastName = '';
 let emailAddress;
-let zipCode;
-let pass;
 
 class SocialLogin extends React.Component {
   state = {
     zip: '',
     password: ''
   }
-  run(f, l, e) {
-    firstName = f;
-    lastName = l;
-    emailAddress = e;
+
+  onZipChange = (value, valid) => {
+    this.setState({ zip: value, zipValid: valid });
+  }
+
+  onPasswordChange = (value, valid) => {
+    this.setState({ password: value, passwordValid: valid });
+  }
+
+  run(First, Last, Email) {
+    firstName = First;
+    lastName = Last;
+    emailAddress = Email;
     axios
       .post(`${config.backendUrl}/users/exist`, {
         // data: code
         user: {
-          email: emailAddress
+          email: Email
         }
       })
       .then(({ data }) => {
         console.log('redirect is: ');
         console.log(data.redirect_to);
+        window.localStorage.setItem('firstname', `${First}`);
+        window.localStorage.setItem('lastname', `${Last}`);
+        window.localStorage.setItem('email', `${Email}`);
         if (data.redirect_to === '/additional-info') {
           console.log('rendering');
-          window.localStorage.setItem("firstname", `${f}`);
-          window.localStorage.setItem("lastname", `${l}`);
-          window.localStorage.setItem("email", `${e}`);
           window.location = '/social-login';
         } else {
           this.login();
@@ -63,23 +70,16 @@ class SocialLogin extends React.Component {
       });
     // window.location = '/additional-info';
   }
-  onZipChange = (value, valid) => {
-    this.setState({ zip: value, zipValid: valid });
-  }
-  onPasswordChange = (value, valid) => {
-    this.setState({ password: value, passwordValid: valid });
-  }
-  login(z,p) {
-    firstName = localStorage.getItem("firstname");
-    lastName = localStorage.getItem("lastname");
-    emailAddress = localStorage.getItem("email");
-    zipCode = z;
-    pass = p;
+  /* eslint class-methods-use-this: ["error", { "exceptMethods": ["login"] }] */
+  login(Zip, Password) {
+    firstName = localStorage.getItem('firstname');
+    lastName = localStorage.getItem('lastname');
+    emailAddress = localStorage.getItem('email');
     console.log(firstName);
     console.log(lastName);
     console.log(emailAddress);
-    console.log(zipCode);
-    console.log(pass);
+    console.log(Zip);
+    console.log(Password);
     axios
       .post(`${config.backendUrl}/users/social`, {
         // data: code
@@ -87,8 +87,8 @@ class SocialLogin extends React.Component {
           email: emailAddress,
           first_name: firstName,
           last_name: lastName,
-          zip: zipCode,
-          password: pass
+          zip: Zip,
+          password: Password
         }
       })
       .then(({ data }) => {
