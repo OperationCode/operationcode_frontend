@@ -47,8 +47,6 @@ const validToken = (token) => {
   const jwt = jwt_decode(token);
   const currentTime = new Date().getTime() / 1000;
 
-  // TODO we could validate the signature as well (issue#281)
-
   if (currentTime > jwt.exp) { return false; }
 
   return true;

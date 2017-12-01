@@ -7,7 +7,6 @@ import PropTypes from 'prop-types';
 import styles from './formComponents.css';
 
 class Interests extends Component {
-
   componentDidMount() {
     if (this.props.onLoad) {
       this.props.onLoad();
@@ -19,28 +18,26 @@ class Interests extends Component {
       .map(language =>
         (
           <FormCheckBox
-            name={'languages'}
+            name="languages"
             value={language}
             onChange={e => this.props.update(e)}
             key={language}
             checkBox={{ display: 'block', margin: '20px' }}
             label={{ textTransform: 'uppercase', fontWeight: 'bold', marginLeft: '15px' }}
           />
-      )
-    );
+        ));
     const disciplines = DISCIPLINES
       .map(discipline =>
         (
           <FormCheckBox
-            name={'disciplines'}
+            name="disciplines"
             value={discipline}
             onChange={e => this.props.update(e)}
             key={discipline}
             checkBox={{ display: 'block', margin: '20px' }}
             label={{ textTransform: 'uppercase', fontWeight: 'bold', marginLeft: '15px' }}
           />
-      )
-    );
+        ));
     return (
       <Form className={styles.signup}>
         <h3>Progress = {this.props.percent}%</h3>

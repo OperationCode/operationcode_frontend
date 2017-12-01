@@ -5,6 +5,10 @@
   border-radius: 5px;
 }
 
+.eventTitle {
+  text-transform: capitalize;
+}
+
 @media screen and (max-width: 680px) {
   .eventTitle {
     font-size: 1.5rem;

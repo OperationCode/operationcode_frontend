@@ -11,7 +11,6 @@ import MilitaryInfo from './formComponents/militaryInfo';
 import styles from './informationForm.css';
 
 class SignupInformation extends Component {
-
   constructor(props) {
     super(props);
     this.onIdentifierStatusChange = this.onIdentifierStatusChange.bind(this);
@@ -49,7 +48,7 @@ class SignupInformation extends Component {
   // Adds values from checkboxes to a set, eliminating possible repeat values
   onCheckBoxChange = (e) => {
     const interests = new Set(this.state.interests);
-    const value = e.target.value;
+    const { value } = e.target;
     if (e.target.checked) {
       interests.add(value);
     } else {
@@ -114,11 +113,11 @@ class SignupInformation extends Component {
         interests: Array.from(this.state.interests)
       },
     })
-    .then(() => {
-      this.setState({ step: this.state.step += 1 });
-    }).catch(() => {
-      this.setState({ error: true });
-    });
+      .then(() => {
+        this.setState({ step: this.state.step += 1 });
+      }).catch(() => {
+        this.setState({ error: true });
+      });
   }
   // Showstep renders each consecutive 'page' (component) based on user input
   // The form splits based on identifier, which determines whether or not
@@ -133,7 +132,7 @@ class SignupInformation extends Component {
         return (
           <MilitaryInfo
             update={this.onIdentifierStatusChange}
-            percent={'20'}
+            percent="20"
           />
         );
       // Civillian STEP 2
@@ -143,7 +142,7 @@ class SignupInformation extends Component {
             role={this.state.role}
             company={this.state.company}
             update={this.onIdentifierStatusChange}
-            percent={'33'}
+            percent="33"
             identifier={this.state.identifier}
           />
         );
@@ -152,7 +151,7 @@ class SignupInformation extends Component {
         return (
           <Interests
             update={this.onCheckBoxChange}
-            percent={'66'}
+            percent="66"
             onLoad={this.onCheckboxLoad}
           />
         );
@@ -168,7 +167,7 @@ class SignupInformation extends Component {
             role={this.state.role}
             company={this.state.company}
             update={this.onIdentifierStatusChange}
-            percent={'40'}
+            percent="40"
           />
         );
       // Military STEP 4
@@ -176,7 +175,7 @@ class SignupInformation extends Component {
         return (
           <SchoolInfo
             update={this.onIdentifierStatusChange}
-            percent={'60'}
+            percent="60"
           />
         );
       // Military STEP 5
@@ -184,7 +183,7 @@ class SignupInformation extends Component {
         return (
           <Interests
             update={this.onCheckBoxChange}
-            percent={'80'}
+            percent="80"
           />
         );
       // Military COMPLETE
@@ -216,7 +215,7 @@ class SignupInformation extends Component {
           <FormButton text="Go Back" onClick={this.previousPage} theme="blue" />
           <FormButton text="Save and Continue" onClick={this.saveAndContinue} theme="red" />
           {this.state.error ? <ul className={styles.errorList}>There was an error saving your information, please try again.
-          </ul> : null }
+                              </ul> : null }
         </div>
       </Section>
     );
