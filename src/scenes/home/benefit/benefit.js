@@ -1,13 +1,50 @@
 import React from 'react';
 import Section from 'shared/components/section/section';
 import LinkButton from 'shared/components/linkButton/linkButton';
-import Sabio from '../../../images/codeSchoolLogos/sabio.png';
+import SabioLogo from '../../../images/codeSchoolLogos/sabio.png';
+import CodeFellowsLogo from '../../../images/codeSchoolLogos/codefellows_small.png';
+import NodejsLogo from './logos/NodeSummitSF_ColorLogoWeb.jpg';
+import srvdLogo from './logos/srvd.png';
+import ebayLogo from './logos/320px-EBay_logo.png';
+import secureSetLogo from './logos/SecureSet.logoUSE.jpg';
+import PVAlogo from './logos/pvaoregon.jpg';
+import PDXlogo from './logos/pdxcglogo.svg';
+import launchCodeLogo from './logos/launchcode.png';
+import topCoderLogo from './logos/topcoder.png';
+import alchemyLogo from './logos/alchemyLogo.png';
+import gitkrackenLogo from './logos/gitkraken-logo-dark-hz.png';
 import styles from './benefit.css';
 
 const Benefit = () => (
   <div>
+    <div className={styles.tyBanner}><h3>Thank You!</h3>
+      <p>Thank you to all of our donors, sponsors, and event staff who helped make the Operation Code 2017 Benefit Dinner a success!<br />
+       Save the date: November 9th, 2018
+      </p>
+      <p className={styles.desc}>For Sponsorship Information,
+        <a
+          href="mailto:staff@operationcode.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+         contact us
+        </a>.
+        <br />
+        To make a donation,
+        <a
+          href="https://opencollective.com/operationcode#support"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+         click here
+        </a>.
+      </p>
+    </div>
     <Section title="Benefit Dinner & Auction" theme="white" headingLines={false}>
       <br />
+      <h3>
+        Open to the Public
+      </h3>
       <p className={styles.cta}>
         <LinkButton
           role="button"
@@ -22,6 +59,21 @@ const Benefit = () => (
           text="Purchase Tickets"
           theme="red-large"
           link="https://buytickets.at/opcode/122463"
+          isExternal
+        />
+        <br />
+        <LinkButton
+          role="button"
+          text="Download/Print Flyer"
+          theme="blue"
+          link="https://s3-us-west-2.amazonaws.com/operationcode/benefitdinner_auction_operationcode.pdf"
+          isExternal
+        />
+        <LinkButton
+          role="button"
+          text="View Auction Items"
+          theme="blue"
+          link="https://s3-us-west-2.amazonaws.com/operationcode/finalpackages_benefit_dinner_auction_operationcode.pdf"
           isExternal
         />
       </p>
@@ -69,7 +121,6 @@ const Benefit = () => (
         <p>
           Hosted bar, wine, hors d’oeuvres, auction, dinner, and program
         </p>
-
         <h6>When:</h6>
         <p>
         Friday, November 10, 2017<br />
@@ -92,13 +143,44 @@ const Benefit = () => (
         Business Casual
         </p>
         <br />
-        <h6>Event Chairs:</h6>
+        <h6>Event Co-Chairs:</h6>
         <p>
         Chris Dawson & David Molina
         </p>
+        <h6>Auction Item Include:</h6>
+        <p>
+        Disney Parkhopper Passes, wine tastings, airline tickets, and more!
+        </p>
       </div>
     </Section>
-    <Section title="Sponsors" theme="white">
+    <Section title="Menu" theme="white">
+      <div className={styles.cta}>
+        <p>
+          <h6>Hors D’Oeuvres:</h6>
+          <i>(Served with Silent Auction)</i> <br />
+             Stuffed Baby Mushrooms <br />
+          <i className={styles.desc}>with Bacon, Cream Cheese & Jalapeno</i><br />
+             Grilled Prosciutto, Quince Paste, and Manchego Cheese on Baguette<br />
+             Smoked Salmon Mousse Tartlets<br />
+          <i className={styles.desc}>House Smoked Salmon with Cream Cheese, Chives & Lemon Zest</i><br />
+             Pierre Robert Cheese & Cherry Conserve Crostini<br />
+          <h6>Salad:</h6> Italian Kale and Romaine Salad<br />
+          <i className={styles.desc}>with Radicchio, Fennel, Feta Cheese, Dried Cranberries and Candied Walnuts with a Green Goddess Dressing</i><br />
+          <h6>Dinner:</h6> Mushroom Duxelle Stuffed Chicken<br />
+          <i className={styles.desc}>Panko-Crusted Boneless Chicken Breast Stuffed with Mushroom Duxelle, Served with Creamy Farro Risotto & Rosemary Sage Cream Sauce</i><br />
+          <b>Vegetarian Option:</b> Wild Mushrooms, Broccolini, Asparagus, and Fontina Cheese Served in an Acorn Squash with Butternut Squash Puree<br />
+        </p>
+        <p>
+          Gluten Free Option Upon Request<br />
+          Dinner Served with Artisan Rolls & Butter, House Brewed Coffee & Tea.
+        </p>
+        <h6>Dessert</h6>
+        <p>
+          To commemorate the 242nd Marine Corps Birthday, a birthday cake will be served for dessert.
+        </p>
+      </div>
+    </Section>
+    <Section title="This Year's Guests" theme="white">
       <div className={styles.cta}>
         <p>
           This year’s major sponsors include{' '}
@@ -123,21 +205,110 @@ const Benefit = () => (
             rel="noopener noreferrer"
           >
            Beneficial State Bank
-          </a>.
+          </a>.<br />
+          We want to thank friends of Operation Code for purchasing a ticket for veterans to attend, including: Jay Bloom, Billy Le, and Domenica Mendoza Bueno.
         </p>
-        <p>
+        <div className={styles.logoBox}>
           <a
             href="https://www.sabio.la/gi"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={Sabio} alt="Sabio" />
+            <img className={styles.logoTall} src={SabioLogo} alt="Sabio" />
           </a>
-        </p>
+          <a
+            href="https://www.nodesummit.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className={styles.logoTall} src={NodejsLogo} alt="Node Summit" />
+          </a>
+          <a
+            href="http://www.srvd.vet"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className={styles.logoTall} src={srvdLogo} alt="SRVD" />
+          </a>
+          <a
+            href="https://pdxcodeguild.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className={styles.logoTall} src={PDXlogo} alt="PXD Code Guild" />
+          </a>
+          <a
+            href="http://www.alchemycodelab.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className={styles.logoTall} src={alchemyLogo} alt="Alchemy Codelab" />
+          </a>
+          <a
+            href="https://www.codefellows.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className={styles.logoLong} src={CodeFellowsLogo} alt="Code Fellows" />
+          </a>
+          <a
+            href="https://secureset.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className={styles.logoLong} src={secureSetLogo} alt="Secure Set Cybersecurity Bootcamp" />
+          </a>
+          <a
+            href="https://www.launchcode.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className={styles.logoLong} src={launchCodeLogo} alt="Launch Code" />
+          </a>
+          <a
+            href="https://www.ebay.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className={styles.logoLong} src={ebayLogo} alt="eBay" />
+          </a>
+          <a
+            href="https://www.topcoder.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className={styles.logoLong} src={topCoderLogo} alt="Top Coder" />
+          </a>
+          <a
+            href="https://www.gitkraken.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className={styles.logoLong} src={gitkrackenLogo} alt="GitKracken" />
+          </a>
+          <a
+            href="http://www.oregonpva.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className={styles.pvaLogo} src={PVAlogo} alt="Oregon PVA" />
+          </a>
+        </div>
       </div>
     </Section>
     <Section title="Location" theme="white">
       <div className={styles.cta}>
+        <h6>
+        To reserve one of our blocked rooms at the historic Sentinel Hotel, please contact:
+        </h6>
+        <p>
+        Shelley Phonharath<br />
+        shelley.phonharath@provenancehotels.com<br />
+        (503) 419-1620
+        </p>
+        <p>
+        Thank you to all of our guests coming from across the United Stated to join us!
+        </p>
         <iframe
           title="Sentinel Hotel"
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11181.901436230051!2d-122.6826821!3d45.5206389!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x776c285f8c70615a!2sSentinel!5e0!3m2!1sen!2sus!4v1501714755964"
@@ -150,9 +321,19 @@ const Benefit = () => (
         <br />
         <p>
           <b>For Additional Information</b><br />
-          Please contact David Molina at:<br />
+          David Molina:<br />
+          Co-Chair<br />
           david@operationcode.org<br />
-          (971) 279-2586 (work)<br />
+          (971) 279-2586 (work)
+        </p>
+        <p>
+          or
+        </p>
+        <p>
+          Chris Dawson:<br />
+          Co-Chair<br />
+          xrdawson@gmail.com<br />
+          (971) 533-8335
         </p>
         <br />
         <p className={styles.cta}>
