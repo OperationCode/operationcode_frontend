@@ -129,19 +129,19 @@ class Login extends Component {
     e.preventDefault();
 
     if (this.isFormValid()) {
-      axios
-        .post(`${config.backendUrl}/sessions`, {
-          user: {
-            email: this.state.email,
-            password: this.state.password
-          },
-          sso: this.state.sso,
-          sig: this.state.sig
-        })
+      axios.post(`${config.backendUrl}/sessions`, {
+        user: {
+          email: this.state.email,
+          password: this.state.password
+        },
+        sso: this.state.sso,
+        sig: this.state.sig
+      })
         .then(({ data }) => {
           CookieHelpers.setUserAuthCookie(data);
           this.setState({ authenticated: true });
           this.props.updateRootAuthState((history) => {
+            this.props.sendNotification('success', 'Success', 'You have logged in!');
             if (this.state.ssoParamsPresent) {
               window.location = data.redirect_to;
             } else {
@@ -150,6 +150,7 @@ class Login extends Component {
           });
         })
         .catch((error) => {
+          this.props.sendNotification('error', 'Error', 'We will investigate this issue!');
           this.setErrorMessage(error);
         });
     }
@@ -195,7 +196,8 @@ class Login extends Component {
 
 Login.propTypes = {
   updateRootAuthState: PropTypes.func,
-  isLoggedIn: PropTypes.bool
+  isLoggedIn: PropTypes.bool,
+  sendNotification: PropTypes.func.isRequired
 };
 
 Login.defaultProps = {
