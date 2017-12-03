@@ -32,6 +32,7 @@ import Press from './press/press';
 import ResetPassword from './resetPassword/resetPassword';
 import Challenge from './challenge/challenge';
 import SignupInformation from './informationForm/informationForm';
+import Terms from './termsOfService/termsOfService';
 import Benefit from './benefit/benefit';
 import styles from './home.css';
 
@@ -225,6 +226,10 @@ class Home extends Component {
             <Route
               path="/challenge"
               component={Challenge}
+            />
+            <Route
+              path="/terms"
+              component={Terms}
             />
             <Route
               exact
