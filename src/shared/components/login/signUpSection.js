@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import Google from './google.js';
-import Facebook from './facebook.js';
 import Section from '../../../shared/components/section/section';
 import LinkButton from '../../../shared/components/linkButton/linkButton';
 
@@ -19,12 +17,6 @@ class SignUpSection extends Component {
           </a>. Make sure you stop in and say hi!
         </p>
         <LinkButton text="Sign Up" theme="red" link="/signup" />
-        <p>
-          <Google />
-        </p>
-        <p>
-          <Facebook />
-        </p>
       </Section>
     );
   }

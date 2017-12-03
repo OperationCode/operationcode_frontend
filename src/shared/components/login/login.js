@@ -8,6 +8,8 @@ import styles from './login.css';
 import Form from '../form/form';
 import Section from '../section/section';
 import * as CookieHelpers from '../../utils/cookieHelper';
+import Google from './google.js';
+import Facebook from './facebook.js';
 import FormEmail from '../form/formEmail/formEmail';
 import FormInput from '../form/formInput/formInput';
 import FormButton from '../form/formButton/formButton';
@@ -180,8 +182,11 @@ class Login extends Component {
               Reset Password
             </Link>
           </Form>
+          <div className={styles.flexRow}>
+            <Google />
+            <Facebook />
+          </div>
         </Section>
-
         <SignUpSection />
       </div>
     );

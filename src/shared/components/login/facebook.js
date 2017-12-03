@@ -1,6 +1,7 @@
 import React from 'react';
 import FacebookLogin from 'react-facebook-login';
 import SocialLogin from './socialLogin';
+import styles from './socialMediaButtons.css';
 
 const responseFacebook = (response) => {
   console.log(response);
@@ -11,16 +12,16 @@ const responseFacebook = (response) => {
   console.log(lastName);
   SocialLogin.run(firstName, lastName, response.email);
 };
-
-class Facebook extends React.Component {
-  render() {
-    return (
-      <div>
-        <script src="https://connect.facebook.net/en_US/sdk.js" async defer />
-        <FacebookLogin appId="711044949101273" fields="name,email" callback={responseFacebook} />
-      </div>
-    );
-  }
-}
+const Facebook = () => (
+  <div>
+    <script src="https://connect.facebook.net/en_US/sdk.js" async defer />
+    <FacebookLogin
+      appId="711044949101273"
+      fields="name,email"
+      cssClass={[styles.loginButton, styles.facebookButton].join(' ')}
+      callback={responseFacebook}
+    />
+  </div>
+);
 
 export default Facebook;

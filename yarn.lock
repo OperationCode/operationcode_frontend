@@ -7382,10 +7382,6 @@ react-ga@^2.2.0:
     object-assign "^4.0.1"
     prop-types "^15.5.6"
 
-react-google-login-component@^0.9.1:
-  version "0.9.2"
-  resolved "https://registry.yarnpkg.com/react-google-login-component/-/react-google-login-component-0.9.2.tgz#c4edf72c0dad55b4f11215e358a5e31b42e55acd"
-
 react-google-login@^3.0.1:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/react-google-login/-/react-google-login-3.0.2.tgz#b08752e0ba0bb334ae5580ed8acd4c6dadb823a8"

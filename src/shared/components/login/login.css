@@ -35,6 +35,13 @@ select {
   flex-direction: column;
 }
 
+.flexRow {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
 @media screen and (min-width: 780px) {
   .gridRow {
     flex-direction: row;

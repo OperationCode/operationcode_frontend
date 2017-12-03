@@ -168,11 +168,11 @@ class Home extends Component {
               component={SignupInformation}
             />
             <Route
-              path="/additional-info"
+              path="/additional_info"
               component={AdditionalInfo}
             />
             <Route
-              path="/social-login"
+              path="/social_login"
               component={SocialLogin}
             />
             <Route

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import axios from 'axios';
 import config from 'config/environment';
 import Section from 'shared/components/section/section';
@@ -14,7 +14,7 @@ let firstName;
 let lastName = '';
 let emailAddress;
 
-class SocialLogin extends React.Component {
+class SocialLogin extends Component {
   state = {
     zip: '',
     password: ''
@@ -45,9 +45,9 @@ class SocialLogin extends React.Component {
         window.localStorage.setItem('firstname', `${First}`);
         window.localStorage.setItem('lastname', `${Last}`);
         window.localStorage.setItem('email', `${Email}`);
-        if (data.redirect_to === '/additional-info') {
+        if (data.redirect_to === '/additional_info') {
           console.log('rendering');
-          window.location = '/social-login';
+          window.location = '/social_login';
         } else {
           this.login();
         }
