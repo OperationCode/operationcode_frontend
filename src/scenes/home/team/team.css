@@ -6,11 +6,9 @@
   justify-content: center;
 }
 
-.board {
+.boardMembers {
   display: flex;
-  flex-wrap: nowrap;
-  padding: 20px 0;
+  flex-flow: row wrap;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
 }
-
