@@ -75,7 +75,9 @@ function getClientEnvironment(publicUrl) {
         OC_BACKEND_URL: process.env.OC_BACKEND_URL || 'http://localhost:3000/api/v1',
         OC_HOST: process.env.OC_HOST || 'http://localhost:4000',
         OC_IDME_CLIENT_ID: process.env.OC_IDME_CLIENT_ID || '6d781bfd42506613a0fe4ad4123aaf6d',
-        OC_IDME_AUTH_URL: process.env.OC_IDME_AUTH_URL || 'http://localhost:4001/oauth/authorize'
+        OC_IDME_AUTH_URL: process.env.OC_IDME_AUTH_URL || 'http://localhost:4001/oauth/authorize',
+        OC_GOOGLE_KEY: process.env.OC_GOOGLE_KEY || '344751133153-v2h3l08lcrkqjjerftlv450hbe5p2i7b.apps.googleusercontent.com',
+        OC_FACEBOOK_KEY: process.env.OC_FACEBOOK_KEY || '711044949101273',
       }
     );
   // Stringify all values so we can feed into Webpack DefinePlugin

@@ -34,6 +34,7 @@ class Login extends Component {
   };
 
   componentDidMount = () => {
+    console.log(`Key: ${config.facebookKey}`);
     this.checkForSsoParams();
   };
 
