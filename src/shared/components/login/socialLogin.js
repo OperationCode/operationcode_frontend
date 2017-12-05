@@ -10,10 +10,6 @@ import styles from 'scenes/home/informationForm/informationForm.css';
 import _ from 'lodash';
 import * as CookieHelpers from '../../utils/cookieHelper';
 
-let firstName;
-let lastName = '';
-let emailAddress;
-
 class SocialLogin extends Component {
   state = {
     zip: '',
@@ -28,10 +24,7 @@ class SocialLogin extends Component {
     this.setState({ password: value, passwordValid: valid });
   }
 
-  run(First, Last, Email) {
-    firstName = First;
-    lastName = Last;
-    emailAddress = Email;
+  run = (First, Last, Email) => {
     axios
       .post(`${config.backendUrl}/users/exist`, {
         // data: code
@@ -69,12 +62,12 @@ class SocialLogin extends Component {
         }
       });
     // window.location = '/additional-info';
-  }
+  };
   /* eslint class-methods-use-this: ["error", { "exceptMethods": ["login"] }] */
-  login(Zip, Password) {
-    firstName = localStorage.getItem('firstname');
-    lastName = localStorage.getItem('lastname');
-    emailAddress = localStorage.getItem('email');
+  login = (Zip, Password) => {
+    const firstName = localStorage.getItem('firstname');
+    const lastName = localStorage.getItem('lastname');
+    const emailAddress = localStorage.getItem('email');
     console.log(firstName);
     console.log(lastName);
     console.log(emailAddress);
@@ -109,7 +102,7 @@ class SocialLogin extends Component {
           });
         }
       });
-  }
+  };
   handleOnClick = (e) => {
     e.preventDefault();
     this.login(this.state.zip, this.state.password);
@@ -138,4 +131,5 @@ class SocialLogin extends Component {
     );
   }
 }
+
 export default SocialLogin;
