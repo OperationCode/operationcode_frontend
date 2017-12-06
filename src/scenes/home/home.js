@@ -33,6 +33,7 @@ import ResetPassword from './resetPassword/resetPassword';
 import Challenge from './challenge/challenge';
 import SignupInformation from './informationForm/informationForm';
 import Benefit from './benefit/benefit';
+import Terms from './termsOfService/termsOfService';
 import styles from './home.css';
 
 const ReactToastr = require('react-toastr');
@@ -59,31 +60,31 @@ class Home extends Component {
 
   setBgImage(location) {
     if (location.pathname === '/') {
-      this.setState({ 
+      this.setState({
         bgChanged: !(this.state.bgImage),
-        bgImage: true, 
-        bgImageUrl: familyImage, 
-        bgImageStyle: "backgroundImageHome" 
+        bgImage: true,
+        bgImageUrl: familyImage,
+        bgImageStyle: "backgroundImageHome"
       });
     } else if (location.pathname === '/team') {
-      this.setState({ 
-        bgChanged: !(this.state.bgImage), 
-        bgImage: true, 
-        bgImageUrl: lincolnImage, 
-        bgImageStyle: "backgroundImageTeam" 
+      this.setState({
+        bgChanged: !(this.state.bgImage),
+        bgImage: true,
+        bgImageUrl: lincolnImage,
+        bgImageStyle: "backgroundImageTeam"
       });
     } else if (location.pathname === '/history') {
-      this.setState({ 
-        bgChanged: !(this.state.bgImage), 
-        bgImage: true, 
-        bgImageUrl: colinPowellImage, 
-        bgImageStyle: "backgroundImageTeam" 
+      this.setState({
+        bgChanged: !(this.state.bgImage),
+        bgImage: true,
+        bgImageUrl: colinPowellImage,
+        bgImageStyle: "backgroundImageTeam"
       });
     } else {
-      this.setState({ 
-        bgChanged: this.state.bgImage, 
-        bgImage: false, 
-        bgImageUrl: null, 
+      this.setState({
+        bgChanged: this.state.bgImage,
+        bgImage: false,
+        bgImageUrl: null,
         bgImageStyle: null
       });
     }
@@ -225,6 +226,10 @@ class Home extends Component {
             <Route
               path="/challenge"
               component={Challenge}
+            />
+            <Route
+              path="/terms"
+              component={Terms}
             />
             <Route
               exact
