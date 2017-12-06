@@ -4,3 +4,9 @@
   align-items: center;
   justify-content: space-around;
 }
+
+.scholarshipLink {
+  color: inherit;
+  font-family: inherit;
+  text-decoration: none;
+}

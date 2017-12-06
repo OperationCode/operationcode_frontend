@@ -1,6 +1,4 @@
 .imageCard {
-  width: 600px;
-  height: 200px;
   margin: 15px;
   display: flex;
   flex-flow: row wrap;
@@ -11,11 +9,6 @@
 .image {
   height: 200px;
   width: 300px;
-}
-
-.cardImage {
-  width: 300px;
-  height: 200px;
 }
 
 .cardText {
@@ -41,8 +34,8 @@
 /* Vertical space between cards for vertical layout */
 @media screen and (max-width: 667px) {
   .imageCard {
-    height: 400px;
-    width: 300px;
+    height: 400px !important;
+    width: 300px !important;
   }
 
   .cardText > h6 {

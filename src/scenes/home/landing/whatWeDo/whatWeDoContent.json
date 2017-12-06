@@ -15,18 +15,18 @@
       "imageUrl": "images/General-Group-Coffee.jpg"
     },
     {
+      "title": "Scholarships",
+      "body": "Our scholarships provide opportunities for the military community to kickstart their careers in software development. We partner with tech conferences around the country and offer scholarship tickets to events throughout the year, as well as partial and full tuition scholarships to coding bootcamps.",
+      "buttonText": "View Past Events",
+      "linkTo": "/pastEvents",
+      "imageUrl": "images/rhs2017_photo.jpg"
+    },
+    {
       "title": "Conference Scholarships",
       "body": "We partner with tech conferences around the country and offers scholarship tickets to events throughout the year.",
       "buttonText": "View Past Events",
       "linkTo": "/pastEvents",
       "imageUrl": "images/ThinkstockPhotos-489787502.jpg"
-    },
-    {
-      "title": "Code School Scholarships",
-      "body": "Our scholarships to code schools provide opportunities for the military community to kickstart their careers in software development.",
-      "buttonText": "View Past Events",
-      "linkTo": "/pastEvents",
-      "imageUrl": "images/rhs2017_photo.jpg"
     }
   ]
 }
