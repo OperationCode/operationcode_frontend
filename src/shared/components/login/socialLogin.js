@@ -68,40 +68,47 @@ class SocialLogin extends Component {
     const firstName = localStorage.getItem('firstname');
     const lastName = localStorage.getItem('lastname');
     const emailAddress = localStorage.getItem('email');
-    console.log(firstName);
-    console.log(lastName);
-    console.log(emailAddress);
-    console.log(Zip);
-    console.log(Password);
-    axios
-      .post(`${config.backendUrl}/users/social`, {
-        // data: code
-        user: {
-          email: emailAddress,
-          first_name: firstName,
-          last_name: lastName,
-          zip: Zip,
-          password: Password
-        }
-      })
-      .then(({ data }) => {
-        console.log('success!');
-        console.log(data.redirect_to);
-        CookieHelpers.setUserAuthCookie(data);
-        window.location = data.redirect_to;
-      }).catch((error) => {
-        console.log(error);
-        const data = _.get(error, 'response.data');
-        let errorMessage = '';
-        if (data) {
-          Object.keys(data).forEach((key) => {
-            if (data && data.hasOwnProperty(key)) { // eslint-disable-line
-              errorMessage += ` ${key}: ${data[key][0]} `;
-              console.log(errorMessage);
-            }
-          });
-        }
-      });
+    localStorage.removeItem('firstname');
+    localStorage.removeItem('lastname');
+    localStorage.removeItem('email');
+    if (emailAddress == null) {
+      window.location = '/';
+    } else {
+      console.log(firstName);
+      console.log(lastName);
+      console.log(emailAddress);
+      console.log(Zip);
+      console.log(Password);
+      axios
+        .post(`${config.backendUrl}/users/social`, {
+          // data: code
+          user: {
+            email: emailAddress,
+            first_name: firstName,
+            last_name: lastName,
+            zip: Zip,
+            password: Password
+          }
+        })
+        .then(({ data }) => {
+          console.log('success!');
+          console.log(data.redirect_to);
+          CookieHelpers.setUserAuthCookie(data);
+          window.location = data.redirect_to;
+        }).catch((error) => {
+          console.log(error);
+          const data = _.get(error, 'response.data');
+          let errorMessage = '';
+          if (data) {
+            Object.keys(data).forEach((key) => {
+              if (data && data.hasOwnProperty(key)) { // eslint-disable-line
+                errorMessage += ` ${key}: ${data[key][0]} `;
+                console.log(errorMessage);
+              }
+            });
+          }
+        });
+    }
   };
   handleOnClick = (e) => {
     e.preventDefault();

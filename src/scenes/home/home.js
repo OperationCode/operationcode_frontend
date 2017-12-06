@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import * as CookieHelpers from 'shared/utils/cookieHelper';
 import Login from 'shared/components/login/login';
-import AdditionalInfo from 'shared/components/login/additionalInfo';
 import SocialLogin from 'shared/components/login/socialLogin';
 import IdmeVerify from 'shared/components/idme/idmeverify/idmeverify';
 import AuthenticatedRoute from 'shared/components/authenticatedRoute/authenticatedRoute';
@@ -226,8 +225,8 @@ class Home extends Component {
               component={SignupInformation}
             />
             <Route
-              path="/additional_info"
-              component={AdditionalInfo}
+              path="/social-login"
+              component={SocialLogin}
             />
             <Route
               path="/social_login"
