@@ -16,12 +16,23 @@ class SocialLogin extends Component {
     password: ''
   }
 
+  componentWillUnmount() {
+    this.onExit();
+  }
+
   onZipChange = (value, valid) => {
     this.setState({ zip: value, zipValid: valid });
   }
 
   onPasswordChange = (value, valid) => {
     this.setState({ password: value, passwordValid: valid });
+  }
+
+  onExit = () => {
+    window.localStorage.removeItem('firstname');
+    window.localStorage.removeItem('lastname');
+    window.localStorage.removeItem('email');
+    console.log(window.localStorage.getItem('email'));
   }
 
   run = (First, Last, Email) => {
