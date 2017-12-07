@@ -13,7 +13,9 @@ import * as CookieHelpers from '../../utils/cookieHelper';
 class SocialLogin extends Component {
   state = {
     zip: '',
-    password: ''
+    password: '',
+    error: false,
+    isLoading: false
   }
 
   componentWillUnmount() {
@@ -49,7 +51,7 @@ class SocialLogin extends Component {
         window.localStorage.setItem('firstname', `${First}`);
         window.localStorage.setItem('lastname', `${Last}`);
         window.localStorage.setItem('email', `${Email}`);
-        if (data.redirect_to === '/additional_info') {
+        if (data.redirect_to === '/social_login') {
           console.log('rendering');
           window.location = '/social_login';
         } else {
@@ -121,10 +123,23 @@ class SocialLogin extends Component {
         });
     }
   };
+
   handleOnClick = (e) => {
     e.preventDefault();
-    this.login(this.state.zip, this.state.password);
+    this.setState({ isLoading: true });
+    if (this.isFormValid()) {
+      this.login(this.state.zip, this.state.password);
+    } else {
+      this.setState({ error: 'Missing required field(s)', isLoading: false });
+      this.zipRef.inputRef.revalidate();
+      this.passwordRef.inputRef.revalidate();
+    }
   };
+
+  isFormValid = () =>
+    this.state.zipValid
+    && this.state.passwordValid
+
   render() {
     return (
       <Section className={styles.signup} title="Zipcode and Password Required">
@@ -143,7 +158,11 @@ class SocialLogin extends Component {
             validationErrorMessage="Must be 6 characters long and include a capitalized letter"
             ref={(child) => { this.passwordRef = child; }}
           />
-          <FormButton className={styles.joinButton} text="Join" onClick={this.handleOnClick} theme="red" />
+          {this.state.error &&
+          <ul className={styles.errorList}>There was an error joining Operation Code:
+            <li className={styles.errorMessage}>{this.state.error}</li>
+          </ul>}
+          {this.state.isLoading ? <FormButton className={styles.joinButton} text="Loading..." disabled theme="grey" /> : <FormButton className={styles.joinButton} text="Join" onClick={this.handleOnClick} theme="red" />}
         </Form>
       </Section>
     );
