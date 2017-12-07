@@ -8,17 +8,12 @@ const ImageCard = ({
   cardText,
   image,
   link,
-  title,
-  cardHeight,
-  cardWidth,
-  textWidth,
-  imageHeight,
-  imageWidth
+  title
 }) => (
-  <div className={styles.imageCard} style={{ height: cardHeight, width: cardWidth }}>
-    <img className={styles.cardImage} src={image} alt={title} style={{ height: imageHeight, width: imageWidth }} />
+  <div className={styles.imageCard}>
+    <img className={styles.cardImage} src={image} alt={title} />
 
-    <div className={styles.cardText} style={{ width: textWidth }}>
+    <div className={styles.cardText}>
       <h6>{title}</h6>
       <p>{cardText}</p>
       {link &&
@@ -37,21 +32,11 @@ ImageCard.propTypes = {
   cardText: PropTypes.string.isRequired,
   buttonText: PropTypes.string,
   link: PropTypes.string,
-  cardHeight: PropTypes.number,
-  cardWidth: PropTypes.number,
-  textWidth: PropTypes.number,
-  imageHeight: PropTypes.number,
-  imageWidth: PropTypes.number
 };
 
 ImageCard.defaultProps = {
   link: null,
   buttonText: null,
-  cardHeight: 200,
-  cardWidth: 600,
-  textWidth: 250,
-  imageHeight: 200,
-  imageWidth: 300
 };
 
 export default ImageCard;
