@@ -53,7 +53,7 @@ class SocialLogin extends Component {
         window.localStorage.setItem('email', `${Email}`);
         if (data.redirect_to === '/social_login') {
           console.log('rendering');
-          window.location = '/social_login';
+          window.location = data.redirect_to;
         } else {
           this.login();
         }
