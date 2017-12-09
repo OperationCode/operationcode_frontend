@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import config from 'config/environment';
+import PropTypes from 'prop-types';
 import Section from 'shared/components/section/section';
 import Form from 'shared/components/form/form';
 import FormZipCode from 'shared/components/form/formZipCode/formZipCode';
@@ -11,9 +12,16 @@ import _ from 'lodash';
 import * as CookieHelpers from '../../utils/cookieHelper';
 
 class SocialLogin extends Component {
+  constructor(props) {
+    super();
+    this.props = props;
+  }
+
   state = {
     zip: '',
+    zipValid: false,
     password: '',
+    passwordValid: false,
     error: false,
     isLoading: false
   }
@@ -49,7 +57,10 @@ class SocialLogin extends Component {
         window.localStorage.setItem('lastname', `${Last}`);
         window.localStorage.setItem('email', `${Email}`);
         if (data.redirect_to === '/social_login') {
-          window.location = data.redirect_to;
+          this.props.updateRootAuthState((history) => {
+            history.push(data.redirect_to);
+            window.location = data.redirect_to;
+          });
         } else {
           this.login();
         }
@@ -64,9 +75,11 @@ class SocialLogin extends Component {
             }
           });
         }
+        this.props.sendNotification('error', 'Error', 'We will investigate this issue!');
       });
     // window.location = '/additional-info';
   };
+
   /* eslint class-methods-use-this: ["error", { "exceptMethods": ["login"] }] */
   login = (Zip, Password) => {
     const firstName = localStorage.getItem('firstname');
@@ -77,6 +90,7 @@ class SocialLogin extends Component {
     localStorage.removeItem('email');
     if (emailAddress == null) {
       window.location = '/';
+      this.props.sendNotification('error', 'Error', 'Sorry, you have not entered a valid email. Please try again.');
     } else {
       axios
         .post(`${config.backendUrl}/users/social`, {
@@ -91,7 +105,11 @@ class SocialLogin extends Component {
         })
         .then(({ data }) => {
           CookieHelpers.setUserAuthCookie(data);
-          window.location = data.redirect_to;
+          this.props.updateRootAuthState((history) => {
+            history.push(data.redirect_to);
+            this.props.sendNotification('success', 'Success', 'You have logged in!');
+            window.location = data.redirect_to;
+          });
         }).catch((error) => {
           const data = _.get(error, 'response.data');
           let errorMessage = '';
@@ -103,6 +121,7 @@ class SocialLogin extends Component {
               }
             });
           }
+          this.props.sendNotification('error', 'Error', 'We will investigate this issue!');
         });
     }
   };
@@ -151,5 +170,14 @@ class SocialLogin extends Component {
     );
   }
 }
+
+SocialLogin.propTypes = {
+  updateRootAuthState: PropTypes.func,
+  sendNotification: PropTypes.func.isRequired
+};
+
+SocialLogin.defaultProps = {
+  updateRootAuthState: () => {},
+};
 
 export default SocialLogin;

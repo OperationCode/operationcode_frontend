@@ -184,8 +184,8 @@ class Login extends Component {
             </Link>
           </Form>
           <div className={styles.flexRow}>
-            <Google />
-            <Facebook />
+            <Google sendNotification={this.props.sendNotification} updateRootAuthState={this.props.updateRootAuthState} />
+            <Facebook sendNotification={this.props.sendNotification} updateRootAuthState={this.props.updateRootAuthState} />
           </div>
         </Section>
         <SignUpSection />

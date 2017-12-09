@@ -226,11 +226,21 @@ class Home extends Component {
             />
             <Route
               path="/social-login"
-              component={SocialLogin}
+              render={() => (
+                <SocialLogin
+                  updateRootAuthState={this.updateRootAuthState}
+                  sendNotification={this.sendNotification}
+                />
+              )}
             />
             <Route
               path="/social_login"
-              component={SocialLogin}
+              render={() => (
+                <SocialLogin
+                  updateRootAuthState={this.updateRootAuthState}
+                  sendNotification={this.sendNotification}
+                />
+              )}
             />
             <Route
               path="/challenge"
