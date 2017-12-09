@@ -6,8 +6,6 @@ import styles from './socialMediaButtons.css';
 
 const responseGoogle = (response) => {
   const login = new SocialLogin();
-  console.log(response);
-  console.log(SocialLogin);
   login.run(response.profileObj.givenName, response.profileObj.familyName, response.profileObj.email);
 };
 

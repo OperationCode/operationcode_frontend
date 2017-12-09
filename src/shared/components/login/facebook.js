@@ -6,12 +6,9 @@ import styles from './socialMediaButtons.css';
 
 const responseFacebook = (response) => {
   const login = new SocialLogin();
-  console.log(response);
   const nameArray = response.name.split(' ');
   const firstName = nameArray[0];
   const lastName = nameArray[nameArray.length];
-  console.log(firstName);
-  console.log(lastName);
   login.run(firstName, lastName, response.email);
 };
 

@@ -34,7 +34,6 @@ class SocialLogin extends Component {
     window.localStorage.removeItem('firstname');
     window.localStorage.removeItem('lastname');
     window.localStorage.removeItem('email');
-    console.log(window.localStorage.getItem('email'));
   }
 
   run = (First, Last, Email) => {
@@ -46,30 +45,22 @@ class SocialLogin extends Component {
         }
       })
       .then(({ data }) => {
-        console.log('redirect is: ');
-        console.log(data.redirect_to);
         window.localStorage.setItem('firstname', `${First}`);
         window.localStorage.setItem('lastname', `${Last}`);
         window.localStorage.setItem('email', `${Email}`);
         if (data.redirect_to === '/social_login') {
-          console.log('rendering');
           window.location = data.redirect_to;
         } else {
           this.login();
         }
       }).catch((error) => {
-        console.log(error);
         const data = _.get(error, 'response.data');
         let errorMessage = '';
         if (data) {
           Object.keys(data).forEach((key) => {
             if (data && data.hasOwnProperty(key)) { // eslint-disable-line
               errorMessage += ` ${key}: ${data[key][0]} `;
-              /* if (errorMessage === ' error: I ') {
-                console.log('starting registration...');
-                window.location = '/additional-info';
-              } */
-              console.log(errorMessage);
+              this.state.error = errorMessage;
             }
           });
         }
@@ -87,11 +78,6 @@ class SocialLogin extends Component {
     if (emailAddress == null) {
       window.location = '/';
     } else {
-      console.log(firstName);
-      console.log(lastName);
-      console.log(emailAddress);
-      console.log(Zip);
-      console.log(Password);
       axios
         .post(`${config.backendUrl}/users/social`, {
           // data: code
@@ -104,19 +90,16 @@ class SocialLogin extends Component {
           }
         })
         .then(({ data }) => {
-          console.log('success!');
-          console.log(data.redirect_to);
           CookieHelpers.setUserAuthCookie(data);
           window.location = data.redirect_to;
         }).catch((error) => {
-          console.log(error);
           const data = _.get(error, 'response.data');
           let errorMessage = '';
           if (data) {
             Object.keys(data).forEach((key) => {
               if (data && data.hasOwnProperty(key)) { // eslint-disable-line
                 errorMessage += ` ${key}: ${data[key][0]} `;
-                console.log(errorMessage);
+                this.state.error = errorMessage;
               }
             });
           }
