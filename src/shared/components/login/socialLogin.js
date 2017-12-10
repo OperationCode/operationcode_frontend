@@ -12,11 +12,6 @@ import _ from 'lodash';
 import * as CookieHelpers from '../../utils/cookieHelper';
 
 class SocialLogin extends Component {
-  constructor(props) {
-    super();
-    this.props = props;
-  }
-
   state = {
     zip: '',
     zipValid: false,
@@ -24,7 +19,7 @@ class SocialLogin extends Component {
     passwordValid: false,
     error: false,
     isLoading: false
-  }
+  };
 
   componentWillUnmount() {
     this.onExit();
@@ -32,22 +27,21 @@ class SocialLogin extends Component {
 
   onZipChange = (value, valid) => {
     this.setState({ zip: value, zipValid: valid });
-  }
+  };
 
   onPasswordChange = (value, valid) => {
     this.setState({ password: value, passwordValid: valid });
-  }
+  };
 
   onExit = () => {
     window.localStorage.removeItem('firstname');
     window.localStorage.removeItem('lastname');
     window.localStorage.removeItem('email');
-  }
+  };
 
   run = (First, Last, Email) => {
     axios
       .post(`${config.backendUrl}/users/exist`, {
-        // data: code
         user: {
           email: Email
         }
@@ -59,71 +53,73 @@ class SocialLogin extends Component {
         if (data.redirect_to === '/social_login') {
           this.props.updateRootAuthState((history) => {
             history.push(data.redirect_to);
-            window.location = data.redirect_to;
           });
         } else {
           this.login();
         }
-      }).catch((error) => {
+      })
+      .catch((error) => {
         const data = _.get(error, 'response.data');
         let errorMessage = '';
         if (data) {
           Object.keys(data).forEach((key) => {
-            if (data && data.hasOwnProperty(key)) { // eslint-disable-line
+            if (data && data[key]) {
               errorMessage += ` ${key}: ${data[key][0]} `;
               this.state.error = errorMessage;
             }
           });
         }
-        this.props.sendNotification('error', 'Error', 'We will investigate this issue!');
+
+        this.props.sendNotification(
+          'error',
+          'Error',
+          'We will investigate this issue!'
+        );
       });
-    // window.location = '/additional-info';
   };
 
-  /* eslint class-methods-use-this: ["error", { "exceptMethods": ["login"] }] */
   login = (Zip, Password) => {
-    const firstName = localStorage.getItem('firstname');
-    const lastName = localStorage.getItem('lastname');
-    const emailAddress = localStorage.getItem('email');
-    localStorage.removeItem('firstname');
-    localStorage.removeItem('lastname');
-    localStorage.removeItem('email');
-    if (emailAddress == null) {
-      window.location = '/';
-      this.props.sendNotification('error', 'Error', 'Sorry, you have not entered a valid email. Please try again.');
-    } else {
-      axios
-        .post(`${config.backendUrl}/users/social`, {
-          // data: code
-          user: {
-            email: emailAddress,
-            first_name: firstName,
-            last_name: lastName,
-            zip: Zip,
-            password: Password
-          }
-        })
-        .then(({ data }) => {
-          CookieHelpers.setUserAuthCookie(data);
-          this.props.updateRootAuthState((history) => {
-            history.push(data.redirect_to);
-            this.props.sendNotification('success', 'Success', 'You have logged in!');
-            window.location = data.redirect_to;
-          });
-        }).catch((error) => {
-          const data = _.get(error, 'response.data');
-          let errorMessage = '';
-          if (data) {
-            Object.keys(data).forEach((key) => {
-              if (data && data.hasOwnProperty(key)) { // eslint-disable-line
-                errorMessage += ` ${key}: ${data[key][0]} `;
-                this.state.error = errorMessage;
-              }
-            });
-          }
-          this.props.sendNotification('error', 'Error', 'We will investigate this issue!');
+    axios
+      .post(`${config.backendUrl}/users/social`, {
+        user: {
+          email: localStorage.getItem('email'),
+          first_name: localStorage.getItem('firstname'),
+          last_name: localStorage.getItem('lastname'),
+          zip: Zip,
+          password: Password
+        }
+      })
+      .then(({ data }) => {
+        localStorage.removeItem('firstname');
+        localStorage.removeItem('lastname');
+        localStorage.removeItem('email');
+        CookieHelpers.setUserAuthCookie(data);
+        this.props.updateRootAuthState((history) => {
+          this.props.sendNotification(
+            'success',
+            'Success',
+            'You have logged in!'
+          );
+          history.push(data.redirect_to);
         });
-    }
+      })
+      .catch((error) => {
+        const data = _.get(error, 'response.data');
+        let errorMessage = '';
+        if (data) {
+          Object.keys(data).forEach((key) => {
+            if (data && data[key]) {
+              errorMessage += ` ${key}: ${data[key][0]} `;
+              this.state.error = errorMessage;
+            }
+          });
+        }
+        this.props.sendNotification(
+          'error',
+          'Error',
+          'We will investigate this issue!'
+        );
+      });
   };
 
   handleOnClick = (e) => {
@@ -138,11 +134,10 @@ class SocialLogin extends Component {
     }
   };
 
-  isFormValid = () =>
-    this.state.zipValid
-    && this.state.passwordValid
+  isFormValid = () => this.state.zipValid && this.state.passwordValid;
 
   render() {
+    console.log(this.props);
     return (
       <Section className={styles.signup} title="Zipcode and Password Required">
         <Form className={styles.signupForm}>
@@ -150,7 +145,9 @@ class SocialLogin extends Component {
             id="zip"
             placeholder="Zip Code (Required)"
             onChange={this.onZipChange}
-            ref={(child) => { this.zipRef = child; }}
+            ref={(child) => {
+              this.zipRef = child;
+            }}
           />
           <FormPassword
             id="password"
@@ -158,13 +155,31 @@ class SocialLogin extends Component {
             onChange={this.onPasswordChange}
             validationRegex={/^(?=.*[A-Z]).{6,}$/}
             validationErrorMessage="Must be 6 characters long and include a capitalized letter"
-            ref={(child) => { this.passwordRef = child; }}
+            ref={(child) => {
+              this.passwordRef = child;
+            }}
           />
-          {this.state.error &&
-          <ul className={styles.errorList}>There was an error joining Operation Code:
-            <li className={styles.errorMessage}>{this.state.error}</li>
-          </ul>}
-          {this.state.isLoading ? <FormButton className={styles.joinButton} text="Loading..." disabled theme="grey" /> : <FormButton className={styles.joinButton} text="Join" onClick={this.handleOnClick} theme="red" />}
+          {this.state.error && (
+            <ul className={styles.errorList}>
+              There was an error joining Operation Code:
+              <li className={styles.errorMessage}>{this.state.error}</li>
+            </ul>
+          )}
+          {this.state.isLoading ? (
+            <FormButton
+              className={styles.joinButton}
+              text="Loading..."
+              disabled
+              theme="grey"
+            />
+          ) : (
+            <FormButton
+              className={styles.joinButton}
+              text="Join"
+              onClick={this.handleOnClick}
+              theme="red"
+            />
+          )}
         </Form>
       </Section>
     );
@@ -172,12 +187,12 @@ class SocialLogin extends Component {
 }
 
 SocialLogin.propTypes = {
-  updateRootAuthState: PropTypes.func,
-  sendNotification: PropTypes.func.isRequired
+  sendNotification: PropTypes.func.isRequired,
+  updateRootAuthState: PropTypes.func
 };
 
 SocialLogin.defaultProps = {
-  updateRootAuthState: () => {},
+  updateRootAuthState: () => {}
 };
 
 export default SocialLogin;

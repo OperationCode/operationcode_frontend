@@ -91,7 +91,7 @@ class Login extends Component {
   };
 
   checkSsoLoggedIn = () => {
-    if (this.state.ssoParamsPresent && this.props.isLoggedIn) {
+    if (this.state.ssoParamsPresent && this.props.isAuth) {
       this.ssoLoggedInRedirect();
     }
   };
@@ -196,13 +196,13 @@ class Login extends Component {
 
 Login.propTypes = {
   updateRootAuthState: PropTypes.func,
-  isLoggedIn: PropTypes.bool,
+  isAuth: PropTypes.bool,
   sendNotification: PropTypes.func.isRequired
 };
 
 Login.defaultProps = {
   updateRootAuthState: () => {},
-  isLoggedIn: false
+  isAuth: false
 };
 
 export default Login;

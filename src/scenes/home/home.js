@@ -125,6 +125,17 @@ class Home extends Component {
     );
   }
 
+  /*
+   * Simple boolean to check that local storage includes the
+   * information necessary to visit /social-login
+   */
+   hasSocialLoginPayload = () => {
+     const firstNameExists = window.localStorage.getItem('firstname');
+     const lastNameExists = window.localStorage.getItem('lastname');
+     const emailExists = window.localStorage.getItem('email');
+     return firstNameExists && lastNameExists && emailExists ? true : false;
+   }
+
   render() {
     const { mentor, signedIn, verified } = this.state;
     const authProps = {
@@ -164,7 +175,7 @@ class Home extends Component {
               render={() => (
                 <SignUp
                   updateRootAuthState={this.updateRootAuthState}
-                  isLoggedIn={this.state.signedIn} {...authProps}
+                  isAuth={this.state.signedIn} {...authProps}
                   sendNotification={this.sendNotification}
                 />
               )}
@@ -174,7 +185,7 @@ class Home extends Component {
               render={() => (
                 <SignUp
                   updateRootAuthState={this.updateRootAuthState}
-                  isLoggedIn={this.state.signedIn} {...authProps}
+                  isAuth={this.state.signedIn} {...authProps}
                   sendNotification={this.sendNotification}
                 />
               )}
@@ -224,23 +235,19 @@ class Home extends Component {
               path="/signup-info"
               component={SignupInformation}
             />
-            <Route
+            <AuthenticatedRoute
               path="/social-login"
-              render={() => (
-                <SocialLogin
-                  updateRootAuthState={this.updateRootAuthState}
-                  sendNotification={this.sendNotification}
-                />
-              )}
+              isAuth={this.hasSocialLoginPayload()}
+              component={SocialLogin}
+              sendNotification={this.sendNotification}
+              updateRootAuthState={this.updateRootAuthState}
             />
-            <Route
+            <AuthenticatedRoute
               path="/social_login"
-              render={() => (
-                <SocialLogin
-                  updateRootAuthState={this.updateRootAuthState}
-                  sendNotification={this.sendNotification}
-                />
-              )}
+              isAuth={this.hasSocialLoginPayload()}
+              component={SocialLogin}
+              sendNotification={this.sendNotification}
+              updateRootAuthState={this.updateRootAuthState}
             />
             <Route
               path="/challenge"
@@ -287,29 +294,29 @@ class Home extends Component {
               render={() => (
                 <Login
                   updateRootAuthState={this.updateRootAuthState}
-                  isLoggedIn={this.state.signedIn}{...authProps}
+                  isAuth={this.state.signedIn}{...authProps}
                   sendNotification={this.sendNotification}
                 />
               )}
             />
             <AuthenticatedRoute
               exact path="/scholarships/:id/apply"
-              isLoggedIn={CookieHelpers.getUserStatus().signedIn}
+              isAuth={CookieHelpers.getUserStatus().signedIn}
               component={ScholarshipApplication}
             />
             <AuthenticatedRoute
               exact path="/profile"
-              isLoggedIn={CookieHelpers.getUserStatus().signedIn}
+              isAuth={CookieHelpers.getUserStatus().signedIn}
               component={() => (<Profile {...authProps} />)}
             />
             <AuthenticatedRoute
               exact path="/profile/verify"
-              isLoggedIn={CookieHelpers.getUserStatus().signedIn}
+              isAuth={CookieHelpers.getUserStatus().signedIn}
               component={IdmeVerify}
               updateRootAuthState={this.updateRootAuthState}
               {...authProps}
             />
-            <Route exact path="/reset_password" component={ResetPassword} />
+            <Route exact path="/resetpassword" component={ResetPassword} />
             <Route
               path="*" component={FourOhFour}
             />
