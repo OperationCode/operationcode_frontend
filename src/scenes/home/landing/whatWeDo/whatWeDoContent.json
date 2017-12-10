@@ -27,6 +27,13 @@
       "buttonText": "View Past Events",
       "linkTo": "/pastEvents",
       "imageUrl": "images/rhs2017_photo.jpg"
+    },
+    {
+      "title": "Community Events",
+      "body": "Join one of our chapters throughout the country at our local meetups, and learn with fellow members of the military community.",
+      "buttonText": "View Past Events",
+      "linkTo": "/pastEvents",
+      "imageUrl": "images/operation-code-seattle-meetup.jpg"
     }
   ]
 }
