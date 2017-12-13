@@ -8,7 +8,7 @@ Check out [how Operation Code Open Source projects are maintained](https://githu
 
 * [Kyle Holmberg](http://www.github.com/kylemh)
 
-# Lieutenant
+# Sergeant
 
 * [Evan Cooper](http://www.github.com/cooperbuilt)
 
