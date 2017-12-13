@@ -15,7 +15,7 @@ class StateSortedSchools extends Component {
     };
   }
 
-  getCampusesByState = selectedStates => {
+  getCampusesByState = (selectedStates) => {
     function matchesCampus(state, campus) {
       try {
         return state.value === campus.state;
@@ -32,7 +32,7 @@ class StateSortedSchools extends Component {
     }
 
     const campuses = this.props.schools.reduce((acc, school) => {
-      school.locations.forEach(location => {
+      school.locations.forEach((location) => {
         acc.push({
           name: school.name,
           url: school.url,
@@ -62,7 +62,7 @@ class StateSortedSchools extends Component {
 
   sortCampuses = campuses => campuses.sort((a, b) => a.state.localeCompare(b.state));
 
-  handleSelectChange = selectedStates => {
+  handleSelectChange = (selectedStates) => {
     if (selectedStates) {
       const campusesByState = this.getCampusesByState(selectedStates);
       const sortedCampusesByState = this.sortCampuses(campusesByState);
@@ -79,20 +79,20 @@ class StateSortedSchools extends Component {
     const stateSchools = !this.state.campusesByState
       ? null
       : this.state.campusesByState.map(campus => (
-          <SchoolCard
-            key={`${Math.random()} + ${campus.name} + ${campus.address}`}
-            alt={campus.name}
-            schoolName={campus.name}
-            link={campus.url}
-            schoolAddress={campus.address}
-            schoolCity={campus.city}
-            schoolState={campus.state}
-            logo={campus.logo}
-            GI={campus.va_accepted ? 'Yes' : 'No'}
-            fullTime={campus.full_time ? 'Full-Time' : 'Flexible'}
-            hardware={campus.hardware_included ? 'Yes' : 'No'}
-          />
-        ));
+        <SchoolCard
+          key={`${Math.random()} + ${campus.name} + ${campus.address}`}
+          alt={campus.name}
+          schoolName={campus.name}
+          link={campus.url}
+          schoolAddress={campus.address}
+          schoolCity={campus.city}
+          schoolState={campus.state}
+          logo={campus.logo}
+          GI={campus.va_accepted ? 'Yes' : 'No'}
+          fullTime={campus.full_time ? 'Full-Time' : 'Flexible'}
+          hardware={campus.hardware_included ? 'Yes' : 'No'}
+        />
+      ));
 
     return (
       <Section
@@ -120,21 +120,19 @@ class StateSortedSchools extends Component {
 }
 
 StateSortedSchools.propTypes = {
-  schools: PropTypes.arrayOf(
-    PropTypes.shape({
-      created_at: PropTypes.string,
-      full_time: PropTypes.bool,
-      hardware_included: PropTypes.bool,
-      has_online: PropTypes.bool,
-      id: PropTypes.number,
-      logo: PropTypes.string,
-      name: PropTypes.string,
-      notes: PropTypes.string,
-      online_only: PropTypes.bool,
-      updated_at: PropTypes.string,
-      url: PropTypes.string,
-    })
-  ).isRequired,
+  schools: PropTypes.arrayOf(PropTypes.shape({
+    created_at: PropTypes.string,
+    full_time: PropTypes.bool,
+    hardware_included: PropTypes.bool,
+    has_online: PropTypes.bool,
+    id: PropTypes.number,
+    logo: PropTypes.string,
+    name: PropTypes.string,
+    notes: PropTypes.string,
+    online_only: PropTypes.bool,
+    updated_at: PropTypes.string,
+    url: PropTypes.string,
+  })).isRequired,
 };
 
 export default StateSortedSchools;

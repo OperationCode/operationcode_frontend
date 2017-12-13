@@ -12,7 +12,7 @@ class FormInput extends Component {
     };
   }
 
-  handleChange = event => {
+  handleChange = (event) => {
     const valid = this.validate(event.target.value);
     this.setState({ text: event.target.value, isValid: valid }, () => {
       if (this.props.onChange) {
@@ -21,7 +21,7 @@ class FormInput extends Component {
     });
   };
 
-  validate = text => {
+  validate = (text) => {
     if (this.props.validateFunc) {
       return this.props.validateFunc(text);
     } else if (text.length > 0 && this.props.validationRegex) {

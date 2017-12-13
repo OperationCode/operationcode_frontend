@@ -23,13 +23,9 @@ class OnlineSchools extends Component {
 
   loadSchools() {
     let onlineSchools = [];
-    this.props.schools.forEach(school => {
+    this.props.schools.forEach((school) => {
       if (school.has_online === true) {
-        onlineSchools = onlineSchools.concat(
-          school.locations.map(location =>
-            Object.assign({}, _.omit(school, ['locations']), location)
-          )
-        );
+        onlineSchools = onlineSchools.concat(school.locations.map(location => Object.assign({}, _.omit(school, ['locations']), location)));
       }
     });
 
@@ -105,21 +101,19 @@ class OnlineSchools extends Component {
 }
 
 OnlineSchools.propTypes = {
-  schools: PropTypes.arrayOf(
-    PropTypes.shape({
-      created_at: PropTypes.string,
-      full_time: PropTypes.bool,
-      hardware_included: PropTypes.bool,
-      has_online: PropTypes.bool,
-      id: PropTypes.number,
-      logo: PropTypes.string,
-      name: PropTypes.string,
-      notes: PropTypes.string,
-      online_only: PropTypes.bool,
-      updated_at: PropTypes.string,
-      url: PropTypes.string,
-    })
-  ).isRequired,
+  schools: PropTypes.arrayOf(PropTypes.shape({
+    created_at: PropTypes.string,
+    full_time: PropTypes.bool,
+    hardware_included: PropTypes.bool,
+    has_online: PropTypes.bool,
+    id: PropTypes.number,
+    logo: PropTypes.string,
+    name: PropTypes.string,
+    notes: PropTypes.string,
+    online_only: PropTypes.bool,
+    updated_at: PropTypes.string,
+    url: PropTypes.string,
+  })).isRequired,
 };
 
 export default OnlineSchools;

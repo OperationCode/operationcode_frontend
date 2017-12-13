@@ -19,12 +19,10 @@ class ApprovedSchools extends Component {
 
   loadSchools() {
     let approvedSchools = [];
-    this.props.schools.forEach(school => {
+    this.props.schools.forEach((school) => {
       const locations = school.locations.filter(location => location.va_accepted === true);
       if (locations.length > 0) {
-        approvedSchools = approvedSchools.concat(
-          locations.map(location => Object.assign({}, _.omit(school, ['locations']), location))
-        );
+        approvedSchools = approvedSchools.concat(locations.map(location => Object.assign({}, _.omit(school, ['locations']), location)));
       }
     });
 
@@ -65,21 +63,19 @@ class ApprovedSchools extends Component {
 }
 
 ApprovedSchools.propTypes = {
-  schools: PropTypes.arrayOf(
-    PropTypes.shape({
-      created_at: PropTypes.string,
-      full_time: PropTypes.bool,
-      hardware_included: PropTypes.bool,
-      has_online: PropTypes.bool,
-      id: PropTypes.number,
-      logo: PropTypes.string,
-      name: PropTypes.string,
-      notes: PropTypes.string,
-      online_only: PropTypes.bool,
-      updated_at: PropTypes.string,
-      url: PropTypes.string,
-    })
-  ).isRequired,
+  schools: PropTypes.arrayOf(PropTypes.shape({
+    created_at: PropTypes.string,
+    full_time: PropTypes.bool,
+    hardware_included: PropTypes.bool,
+    has_online: PropTypes.bool,
+    id: PropTypes.number,
+    logo: PropTypes.string,
+    name: PropTypes.string,
+    notes: PropTypes.string,
+    online_only: PropTypes.bool,
+    updated_at: PropTypes.string,
+    url: PropTypes.string,
+  })).isRequired,
 };
 
 export default ApprovedSchools;
