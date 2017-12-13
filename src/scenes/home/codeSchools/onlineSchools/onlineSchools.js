@@ -13,7 +13,7 @@ class OnlineSchools extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      eSchools: null
+      eSchools: null,
     };
   }
 
@@ -23,10 +23,13 @@ class OnlineSchools extends Component {
 
   loadSchools() {
     let onlineSchools = [];
-    this.props.schools.forEach((school) => {
+    this.props.schools.forEach(school => {
       if (school.has_online === true) {
-        onlineSchools = onlineSchools.concat(school.locations.map(location =>
-          Object.assign({}, _.omit(school, ['locations']), location)));
+        onlineSchools = onlineSchools.concat(
+          school.locations.map(location =>
+            Object.assign({}, _.omit(school, ['locations']), location)
+          )
+        );
       }
     });
 
@@ -34,52 +37,41 @@ class OnlineSchools extends Component {
   }
 
   render() {
-    const eSchools = this.state.eSchools.map(school =>
-      (
-        <SchoolCard
-          key={`${Math.random()} + ${school.name} + ${school.address}`}
-          alt={school.name}
-          schoolName={school.name}
-          link={school.url}
-          schoolAddress={school.online_only ? 'Online Only' : 'Online and in'}
-          schoolCity={school.city}
-          schoolState={school.state}
-          logo={school.logo}
-          GI={school.va_accepted ? 'Yes' : 'No'}
-          fullTime={school.full_time ? 'Full-Time' : 'Flexible'}
-          hardware={school.hardware_included ? 'Yes' : 'No'}
-        />
-      ));
+    const eSchools = this.state.eSchools.map(school => (
+      <SchoolCard
+        key={`${Math.random()} + ${school.name} + ${school.address}`}
+        alt={school.name}
+        schoolName={school.name}
+        link={school.url}
+        schoolAddress={school.online_only ? 'Online Only' : 'Online and in'}
+        schoolCity={school.city}
+        schoolState={school.state}
+        logo={school.logo}
+        GI={school.va_accepted ? 'Yes' : 'No'}
+        fullTime={school.full_time ? 'Full-Time' : 'Flexible'}
+        hardware={school.hardware_included ? 'Yes' : 'No'}
+      />
+    ));
     return (
       <div>
-        <Section
-          id="onlineSchools"
-          title="Online Schools"
-          headingLines={false}
-        >
+        <Section id="onlineSchools" title="Online Schools" headingLines={false}>
           <p>
-            Many programs offer coding schools in a completely digital fashion. <br />Regardless of where
-            you are in the world, you can learn how to code through these programs!
+            Many programs offer coding schools in a completely digital fashion. <br />Regardless of
+            where you are in the world, you can learn how to code through these programs!
           </p>
 
-          <div className={styles.eSchools}>
-            {eSchools}
-          </div>
+          <div className={styles.eSchools}>{eSchools}</div>
         </Section>
 
-        <Section
-          id="moocSchools"
-          title="MOOCs"
-          headingLines={false}
-        >
+        <Section id="moocSchools" title="MOOCs" headingLines={false}>
           <p>
             Massive, Open, Online Courses (or MOOCs) are course study programs made available over
             the internet!
             <br />
             Typically there are start and end dates, but the work itself is done at your own pace.
             <br />
-            MOOCs are usually free, but there are certain benefits to paying for premium aspects
-            of MOOCs.
+            MOOCs are usually free, but there are certain benefits to paying for premium aspects of
+            MOOCs.
             <br />
           </p>
 
@@ -113,19 +105,21 @@ class OnlineSchools extends Component {
 }
 
 OnlineSchools.propTypes = {
-  schools: PropTypes.arrayOf(PropTypes.shape({
-    created_at: PropTypes.string,
-    full_time: PropTypes.bool,
-    hardware_included: PropTypes.bool,
-    has_onlin: PropTypes.bool,
-    id: PropTypes.number,
-    logo: PropTypes.string,
-    name: PropTypes.string,
-    notes: PropTypes.string,
-    online_only: PropTypes.bool,
-    updated_at: PropTypes.string,
-    url: PropTypes.string,
-  })).isRequired
+  schools: PropTypes.arrayOf(
+    PropTypes.shape({
+      created_at: PropTypes.string,
+      full_time: PropTypes.bool,
+      hardware_included: PropTypes.bool,
+      has_online: PropTypes.bool,
+      id: PropTypes.number,
+      logo: PropTypes.string,
+      name: PropTypes.string,
+      notes: PropTypes.string,
+      online_only: PropTypes.bool,
+      updated_at: PropTypes.string,
+      url: PropTypes.string,
+    })
+  ).isRequired,
 };
 
 export default OnlineSchools;

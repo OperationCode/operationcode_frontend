@@ -11,11 +11,11 @@ class StateSortedSchools extends Component {
     super(props);
     this.state = {
       campusesByState: null,
-      selectedStates: null
+      selectedStates: null,
     };
   }
 
-  getCampusesByState = (selectedStates) => {
+  getCampusesByState = selectedStates => {
     function matchesCampus(state, campus) {
       try {
         return state.value === campus.state;
@@ -32,7 +32,7 @@ class StateSortedSchools extends Component {
     }
 
     const campuses = this.props.schools.reduce((acc, school) => {
-      school.locations.forEach((location) => {
+      school.locations.forEach(location => {
         acc.push({
           name: school.name,
           url: school.url,
@@ -43,7 +43,7 @@ class StateSortedSchools extends Component {
           logo: school.logo,
           va_accepted: location.va_accepted,
           full_time: school.full_time,
-          hardware_included: school.hardware_included
+          hardware_included: school.hardware_included,
         });
       });
       return acc;
@@ -62,7 +62,7 @@ class StateSortedSchools extends Component {
 
   sortCampuses = campuses => campuses.sort((a, b) => a.state.localeCompare(b.state));
 
-  handleSelectChange = (selectedStates) => {
+  handleSelectChange = selectedStates => {
     if (selectedStates) {
       const campusesByState = this.getCampusesByState(selectedStates);
       const sortedCampusesByState = this.sortCampuses(campusesByState);
@@ -76,9 +76,9 @@ class StateSortedSchools extends Component {
   };
 
   render() {
-    const stateSchools = !this.state.campusesByState ? null : this.state.campusesByState
-      .map(campus =>
-        (
+    const stateSchools = !this.state.campusesByState
+      ? null
+      : this.state.campusesByState.map(campus => (
           <SchoolCard
             key={`${Math.random()} + ${campus.name} + ${campus.address}`}
             alt={campus.name}
@@ -102,7 +102,6 @@ class StateSortedSchools extends Component {
         headingLines={false}
         margin
       >
-
         <Select
           className={styles.select}
           placeholder="Start typing a state..."
@@ -114,28 +113,28 @@ class StateSortedSchools extends Component {
           onChange={this.handleSelectChange}
         />
 
-        <div className={styles.stateSchools}>
-          {stateSchools}
-        </div>
+        <div className={styles.stateSchools}>{stateSchools}</div>
       </Section>
     );
   }
 }
 
 StateSortedSchools.propTypes = {
-  schools: PropTypes.arrayOf(PropTypes.shape({
-    created_at: PropTypes.string,
-    full_time: PropTypes.bool,
-    hardware_included: PropTypes.bool,
-    has_onlin: PropTypes.bool,
-    id: PropTypes.number,
-    logo: PropTypes.string,
-    name: PropTypes.string,
-    notes: PropTypes.string,
-    online_only: PropTypes.bool,
-    updated_at: PropTypes.string,
-    url: PropTypes.string,
-  })).isRequired
+  schools: PropTypes.arrayOf(
+    PropTypes.shape({
+      created_at: PropTypes.string,
+      full_time: PropTypes.bool,
+      hardware_included: PropTypes.bool,
+      has_online: PropTypes.bool,
+      id: PropTypes.number,
+      logo: PropTypes.string,
+      name: PropTypes.string,
+      notes: PropTypes.string,
+      online_only: PropTypes.bool,
+      updated_at: PropTypes.string,
+      url: PropTypes.string,
+    })
+  ).isRequired,
 };
 
 export default StateSortedSchools;

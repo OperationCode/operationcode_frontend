@@ -8,20 +8,20 @@ class FormInput extends Component {
     super();
     this.state = {
       text: '',
-      isValid: true
+      isValid: true,
     };
   }
 
-  handleChange = (event) => {
+  handleChange = event => {
     const valid = this.validate(event.target.value);
     this.setState({ text: event.target.value, isValid: valid }, () => {
       if (this.props.onChange) {
         this.props.onChange(this.state.text, this.state.isValid);
       }
     });
-  }
+  };
 
-  validate = (text) => {
+  validate = text => {
     if (this.props.validateFunc) {
       return this.props.validateFunc(text);
     } else if (text.length > 0 && this.props.validationRegex) {
@@ -30,7 +30,7 @@ class FormInput extends Component {
       return true;
     }
     return false;
-  }
+  };
 
   revalidate() {
     const valid = this.validate(this.state.text);
@@ -56,16 +56,6 @@ class FormInput extends Component {
   }
 }
 
-FormInput.defaultProps = {
-  label: null,
-  placeholder: null,
-  validationRegex: null,
-  validationErrorMessage: null,
-  validateFunc: null,
-  onChange: null,
-  inputType: 'text'
-};
-
 FormInput.propTypes = {
   label: PropTypes.string,
   placeholder: PropTypes.string,
@@ -74,7 +64,17 @@ FormInput.propTypes = {
   validationErrorMessage: PropTypes.string,
   validateFunc: PropTypes.func,
   onChange: PropTypes.func,
-  inputType: PropTypes.string
+  inputType: PropTypes.string,
+};
+
+FormInput.defaultProps = {
+  label: null,
+  placeholder: null,
+  validationRegex: null,
+  validationErrorMessage: null,
+  validateFunc: null,
+  onChange: null,
+  inputType: 'text',
 };
 
 export default FormInput;
