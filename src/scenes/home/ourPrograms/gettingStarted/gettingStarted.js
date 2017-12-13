@@ -18,7 +18,7 @@ const GettingStarted = () => (
       <div className={styles.timelineEvent}>
         <TimelineEvent
           title="Identify your Needs"
-          content={['The first step to getting a mentor is to decide that you need one. If you have a specific question, perhaps try asking in our Slack or Discussion forums. You can also turn to stackoverflow.com and ofcourse good. If you need something little more involved move on to Step 1.']}
+          content="The first step to getting a mentor is to decide that you need one. If you have a specific question, perhaps try asking in our Slack or Discussion forums. You can also turn to stackoverflow.com and ofcourse good. If you need something little more involved move on to Step 1."
         />
       </div>
     </div>
@@ -35,7 +35,7 @@ const GettingStarted = () => (
       <div className={styles.timelineEvent}>
         <TimelineEvent
           title="Request a Mentor"
-          content={['Navigate over to your profile in Operation Code and click the Request a Mentor button. You will be asked for a bit of information so we can best pair you up with the right mentor. It can take upto two weeks so please be patient. Once your mentor contacts you, agree upon a time and method for 30 minute meeting.']}
+          content="Navigate over to your profile in Operation Code and click the Request a Mentor button. You will be asked for a bit of information so we can best pair you up with the right mentor. It can take upto two weeks so please be patient. Once your mentor contacts you, agree upon a time and method for 30 minute meeting."
         />
       </div>
     </div>

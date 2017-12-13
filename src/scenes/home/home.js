@@ -10,6 +10,7 @@ import IdmeVerify from 'shared/components/idme/idmeverify/idmeverify';
 import AuthenticatedRoute from 'shared/components/authenticatedRoute/authenticatedRoute';
 import familyImage from 'images/Family-2.jpg';
 import lincolnImage from 'images/lincoln.jpg';
+import winstonImage from 'images/Winston.jpg';
 import colinPowellImage from 'images/colin-powell.jpg';
 import Profile from './profile/profile';
 import SignUp from './signup/signup';
@@ -33,11 +34,8 @@ import ResetPassword from './resetPassword/resetPassword';
 import Challenge from './challenge/challenge';
 import SignupInformation from './informationForm/informationForm';
 import Benefit from './benefit/benefit';
-<<<<<<< HEAD
 import Terms from './termsOfService/termsOfService';
-=======
 import OurPrograms from './ourPrograms/ourPrograms';
->>>>>>> added route our_programs, resolved conflict
 import styles from './home.css';
 
 const ReactToastr = require('react-toastr');
@@ -75,6 +73,13 @@ class Home extends Component {
         bgChanged: !(this.state.bgImage),
         bgImage: true,
         bgImageUrl: lincolnImage,
+        bgImageStyle: "backgroundImageTeam"
+      });
+    } else if (location.pathname === '/our_programs') {
+      this.setState({
+        bgChanged: !(this.state.bgImage),
+        bgImage: true,
+        bgImageUrl: winstonImage,
         bgImageStyle: "backgroundImageTeam"
       });
     } else if (location.pathname === '/history') {

@@ -8,8 +8,8 @@ import GettingStarted from './gettingStarted/gettingStarted';
 const OurPrograms = () => (
   <div>
     <QuoteBanner
-      author="The Smart Guy"
-      quote="Here is a quote about the awesome stuff."
+      author="Winston Churchill"
+      quote="We make a living by what we get, we make a life by what we give."
     />
     <Section title="Mentorship Program">
       <MentorshipProgram />
