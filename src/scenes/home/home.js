@@ -90,18 +90,13 @@ class Home extends Component {
     }
   }
 
-  updateRootAuthState = cb => {
+  updateRootAuthState = () => {
     const cookies = CookieHelpers.getUserStatus();
     this.setState(
       {
         signedIn: cookies.signedIn,
         mentor: cookies.mentor,
         verified: cookies.verified,
-      },
-      () => {
-        if (cb) {
-          cb(this.props.history);
-        }
       }
     );
   };
