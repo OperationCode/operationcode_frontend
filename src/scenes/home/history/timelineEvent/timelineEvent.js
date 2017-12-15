@@ -9,16 +9,17 @@ const TimelineEvent = ({ title, content }) => (
     </h4>
 
     <div className={styles.eventContent}>
-      <p>
-        {content}
-      </p>
+      {content}
     </div>
   </div>
 );
 
 TimelineEvent.propTypes = {
   title: PropTypes.string.isRequired,
-  content: PropTypes.string.isRequired,
+  content: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.array
+  ]).isRequired
 };
 
 export default TimelineEvent;
