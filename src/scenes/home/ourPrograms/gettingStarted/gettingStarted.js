@@ -12,7 +12,12 @@ const step2 = (
 );
 
 const step3 = (
-  <p>Your first meeting will accomplish a few things <ol><li>Determine if you and your mentor are good culture fit.</li><li>Outline a problem and determine your action</li></ol>
+  <p>
+    Your first meeting will accomplish a few things
+      <ol>
+      <li>Determine if you and your mentor are good culture fit.</li>
+      <li>Outline a problem and determine your action</li>
+    </ol>
   </p>
 );
 
