@@ -1,0 +1,20 @@
+.emailSignup {
+  width: 80%;
+}
+
+.emailListForm {
+  justify-content: center;
+  align-items: center;
+}
+
+.emailInput {
+  margin-bottom: 16px;
+  width: 20em;
+}
+
+.emailSignupText {
+  max-width: 700px;
+  font-size: 20px;
+}
+
+
