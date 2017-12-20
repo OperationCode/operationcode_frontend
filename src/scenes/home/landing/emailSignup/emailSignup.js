@@ -31,9 +31,7 @@ class EmailSignup extends Component {
 
     if (this.isFormValid()) {
       const { email } = this.state;
-      axios.post(`${config.backendUrl}/email_list_recipients`, {
-        user: { email }
-      }).then(() => {
+      axios.post(`${config.backendUrl}/email_list_recipients`, `email=${email}`).then(() => {
         this.setState({ isLoading: false });
         this.props.sendNotification('');
       }).catch((error) => {
