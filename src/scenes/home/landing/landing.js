@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import ReactModal from 'react-modal';
 import { FaClose } from 'react-icons/lib/fa';
 import LinkButton from 'shared/components/linkButton/linkButton';
@@ -10,8 +9,6 @@ import SuccessStories from './successStories/successStories';
 import Partners from './partners/partners';
 import Donate from '../../../shared/components/donate/donate';
 import Join from '../../../shared/components/join/join';
-import EmailSignup from './emailSignup/emailSignup';
-
 import styles from './landing.css';
 
 class Landing extends Component {
@@ -69,14 +66,9 @@ class Landing extends Component {
         <Partners />
         <Donate />
         <Join />
-        <EmailSignup sendNotification={this.props.sendNotification} />
       </div>
     );
   }
 }
-
-Landing.propTypes = {
-  sendNotification: PropTypes.func.isRequired
-};
 
 export default Landing;
