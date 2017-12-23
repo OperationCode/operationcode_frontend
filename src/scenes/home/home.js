@@ -235,7 +235,7 @@ class Home extends Component {
               exact
               path="/"
               render={props => (
-                <Landing {...props} />
+                <Landing {...props} sendNotification={this.sendNotification} />
               )}
             />
             <Route
