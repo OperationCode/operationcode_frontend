@@ -25,7 +25,7 @@ const MentorVolunteers = () => (
       </div>
       <p>
         <strong>Expert Knowledge:</strong> Each mentor is a subject matter expert in their choosen
-        field with year of experience. We will curate your specific request to a mentor that knows
+        field with years of experience. We will curate your specific request to a mentor that knows
         your field.
       </p>
     </div>

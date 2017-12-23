@@ -1,19 +1,27 @@
 import React from 'react';
-// import styles from './steps.css';
 import TimelineEvent from '../../history/timelineEvent/timelineEvent';
 import styles from '../../history/timeline/timeline.css';
 
 const step1 = (
-  'The first step to getting a mentor is to decide that you need one. If you have a specific question, perhaps try asking in our Slack or Discussion forums. You can also turn to stackoverflow.com and ofcourse good. If you need something little more involved move on to Step 1.'
+  <p>
+    The first step to getting a mentor is to decide that you need one. If you have a specific
+    question, perhaps try asking in our Slack. You can also turn to stackoverflow.com. If you need
+    something a little more involved, move on to Step 1.
+  </p>
 );
 
 const step2 = (
-  'Navigate over to your profile in Operation Code and click the Request a Mentor button. You will be asked for a bit of information so we can best pair you up with the right mentor. It can take upto two weeks so please be patient. Once your mentor contacts you, agree upon a time and method for 30 minute meeting.'
+  <p>
+    Navigate over to your profile in Operation Code and get verified as a Veteran using our ID.ME
+    system. Once verified, click the &apos;Request a Mentor&apos; button. You&apos;ll be asked for a
+    bit of information so we can best pair you up with the right mentor. Once your mentor contacts
+    you, agree upon a time and method for a 30 minute meeting.
+  </p>
 );
 
 const step3 = (
   <div>
-    Your first meeting will accomplish a few things
+    <p>Your first meeting will accomplish a few things</p>
     <ol>
       <li>Determine if you and your mentor are good culture fit.</li>
       <li>Outline a problem and determine your action</li>
@@ -34,10 +42,7 @@ const GettingStarted = () => (
       </div>
 
       <div className={styles.timelineEvent}>
-        <TimelineEvent
-          title="Identify your Needs"
-          content={step1}
-        />
+        <TimelineEvent title="Identify your Needs" content={step1} />
       </div>
     </div>
     <div className={styles.segment}>
@@ -51,10 +56,7 @@ const GettingStarted = () => (
       </div>
 
       <div className={styles.timelineEvent}>
-        <TimelineEvent
-          title="Request a Mentor"
-          content={step2}
-        />
+        <TimelineEvent title="Request a Mentor" content={step2} />
       </div>
     </div>
     <div className={styles.segment}>
@@ -68,10 +70,7 @@ const GettingStarted = () => (
       </div>
 
       <div className={styles.timelineEvent}>
-        <TimelineEvent
-          title="Your first Meeting"
-          content={step3}
-        />
+        <TimelineEvent title="Your first Meeting" content={step3} />
       </div>
     </div>
   </div>
