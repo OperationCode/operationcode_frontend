@@ -12,13 +12,13 @@ const step2 = (
 );
 
 const step3 = (
-  <p>
+  <div>
     Your first meeting will accomplish a few things
-      <ol>
+    <ol>
       <li>Determine if you and your mentor are good culture fit.</li>
       <li>Outline a problem and determine your action</li>
     </ol>
-  </p>
+  </div>
 );
 
 const GettingStarted = () => (

@@ -48,6 +48,12 @@
   }
 }
 
+.backgroundImageGettingStarted {
+  background-size: 100%;
+  background-position: right top;
+  background-repeat: no-repeat;
+}
+
 .backgroundImageTeam {
   background-size: 100%;
   background-position: right top;
@@ -57,6 +63,22 @@
 @media screen and (max-width: 1160px) {
   .backgroundImageTeam {
     background-size: auto 9%;
+  }
+  .backgroundImageGettingStarted {
+    background-size: auto 30%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .backgroundImageGettingStarted {
+    background-size: auto 25%;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .backgroundImageGettingStarted {
+    background-size: auto 20%;
+    background-position: right top 21%;
   }
 }
 

@@ -80,7 +80,7 @@ class Home extends Component {
         bgChanged: !(this.state.bgImage),
         bgImage: true,
         bgImageUrl: winstonImage,
-        bgImageStyle: "backgroundImageTeam"
+        bgImageStyle: "backgroundImageGettingStarted"
       });
     } else if (location.pathname === '/history') {
       this.setState({
