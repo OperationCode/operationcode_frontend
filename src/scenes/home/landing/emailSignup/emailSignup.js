@@ -15,35 +15,44 @@ class EmailSignup extends Component {
       email: '',
       emailValid: false,
       success: false,
-      isLoading: false
+      isLoading: false,
     };
   }
 
   onEmailChange = (value, valid) => {
     this.setState({ email: value.toLowerCase(), emailValid: valid });
-  }
-
-  handleOnClick = (e) => {
+  };
+  /* eslint-disable */
+  handleOnClick = e => {
     e.preventDefault();
 
     this.setState({ isLoading: true });
 
     if (this.isFormValid()) {
       const { email } = this.state;
-      axios.post(`${config.backendUrl}/email_list_recipients`, `email=${email}`).then(() => {
-        this.setState({ isLoading: false });
-        this.props.sendNotification('');
-      }).catch(() => {
-        this.props.sendNotification('error', 'Error', 'Please try signing up again. Contact one of our staff if this problem persists.');
-        this.setState({ isLoading: false });
-      });
+      axios
+        .post(`${config.backendUrl}/email_list_recipients`, `email=${email}`)
+        .then(() => {
+          this.setState({
+            isLoading: false,
+            success: true,
+          });
+          this.props.sendNotification('success', 'Success', 'Welcome to our E-mail list!');
+        })
+        .catch(() => {
+          this.props.sendNotification(
+            'error',
+            'Error',
+            'Please try signing up again. Contact one of our staff if this problem persists.'
+          );
+          this.setState({ isLoading: false });
+        });
     } else {
       this.setState({ error: 'Missing required field(s)', isLoading: false });
     }
-  }
+  };
 
-  isFormValid = () =>
-    this.state.emailValid;
+  isFormValid = () => this.state.emailValid;
 
   render() {
     return (
@@ -54,29 +63,37 @@ class EmailSignup extends Component {
         headingLines={false}
       >
         <p className={styles.emailSignupText}>
-          Keep up to date with everything Operation Code. We proimse we won&#39;t spam you or sell your information.
+          Keep up to date with everything Operation Code. We proimse we won&#39;t spam you or sell
+          your information.
         </p>
         <Form className={styles.emailListForm}>
           <div className={styles.emailInput}>
-            <FormEmail
-              id="email" placeholder="Email"
-              onChange={this.onEmailChange}
-              ref={(child) => { this.emailRef = child; }}
-            />
+            <FormEmail id="email" placeholder="Email" onChange={this.onEmailChange} />
           </div>
-          {this.state.error &&
-            <ul className={styles.errorList}>There was an error joining Operation Code:
+          {this.state.error && (
+            <ul className={styles.errorList}>
+              There was an error joining Operation Code:
               <li className={styles.errorMessage}>{this.state.error}</li>
-            </ul>}
-          {this.state.isLoading ? <FormButton className={styles.joinButton} text="Loading..." disabled theme="grey" /> : <FormButton className={styles.joinButton} text="Sign Up" onClick={this.handleOnClick} theme="blue" />}
+            </ul>
+          )}
+          {this.state.isLoading ? (
+            <FormButton className={styles.joinButton} text="Loading..." disabled theme="grey" />
+          ) : (
+            <FormButton
+              className={styles.joinButton}
+              text="Sign Up"
+              onClick={this.handleOnClick}
+              theme="blue"
+            />
+          )}
         </Form>
-      </Section >
+      </Section>
     );
   }
 }
 
 EmailSignup.propTypes = {
-  sendNotification: PropTypes.func.isRequired
+  sendNotification: PropTypes.func.isRequired,
 };
 
 export default EmailSignup;
