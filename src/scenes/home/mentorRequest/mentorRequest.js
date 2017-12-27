@@ -95,12 +95,6 @@ class MentorRequest extends Component {
             please let us know in the additional comments field below.
           </span>
 
-          <div className={styles.formBlock}>
-            <div className={styles.formElement}>
-              <h2>Slack Name</h2>
-              <p>If you are on Slack, this will help us better serve you</p>
-              <FormInput id="slackName" placeholder="Slack username" onChange={this.onSlackNameChange} />
-            </div>
 
             <div className={styles.formElement}>
               <h2>Service</h2>

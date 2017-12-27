@@ -33,12 +33,6 @@ const Profile = ({ verified }) => (
           url="https://operation-code.slack.com/"
         />
 
-        <IconCard
-          title="Enter our Discourse Forum"
-          fontAwesomeIcon="FaCommentsO"
-          url="https://community.operationcode.org/"
-        />
-
         <IconCard title="Update Info" fontAwesomeIcon="FaUser" url="/signup-info" />
       </div>
       <div
