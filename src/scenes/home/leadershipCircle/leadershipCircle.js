@@ -43,6 +43,7 @@ const LeadershipCircle = () => (
           <li>The knowledge that your gift of $100 or more supports Operation Code’s advocacy programs to ensure our men and women who’ve served have access to technical training</li>
           <li>Recognition in the annual State of Operation Code report</li>
         </ul>
+        <a href="https://donorbox.org/operation-code-leadership-circle">Join and Donate Now</a>
       </div>
     </Section>
   </div>
