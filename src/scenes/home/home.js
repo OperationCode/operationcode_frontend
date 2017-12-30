@@ -34,6 +34,7 @@ import Challenge from './challenge/challenge';
 import SignupInformation from './informationForm/informationForm';
 import Benefit from './benefit/benefit';
 import Terms from './termsOfService/termsOfService';
+import chapterLeader from './chapterLeader/chapterLeader';
 import styles from './home.css';
 
 const ReactToastr = require('react-toastr');
@@ -230,6 +231,10 @@ class Home extends Component {
             <Route
               path="/terms"
               component={Terms}
+            />
+            <Route
+              path="/chapterLeader"
+              component={chapterLeader}
             />
             <Route
               exact
