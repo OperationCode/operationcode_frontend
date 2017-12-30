@@ -26,6 +26,7 @@ import Landing from './landing/landing';
 import Footer from './footer/footer';
 import FourOhFour from './404/fourOhFour';
 import MentorRequest from './mentorRequest/mentorRequest';
+import LeadershipCircle from './leadershipCircle/leadershipCircle';
 import CodeSchools from './codeSchools/codeSchools';
 import About from './about/about';
 import Press from './press/press';
@@ -230,6 +231,10 @@ class Home extends Component {
             <Route
               path="/terms"
               component={Terms}
+            />
+            <Route
+              path="/leadership_circle"
+              component={LeadershipCircle}
             />
             <Route
               exact
