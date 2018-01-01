@@ -26,6 +26,7 @@ import Landing from './landing/landing';
 import Footer from './footer/footer';
 import FourOhFour from './404/fourOhFour';
 import MentorRequest from './mentorRequest/mentorRequest';
+import LeadershipCircle from './leadershipCircle/leadershipCircle';
 import CodeSchools from './codeSchools/codeSchools';
 import About from './about/about';
 import Press from './press/press';
@@ -171,24 +172,93 @@ class Home extends Component {
                 />
               )}
             />
-            <Route path="/history" component={History} />
-            <Route path="/sign-up" component={SignUp} />
-            <Route path="/team" component={Team} />
-            <Route path="/faq" component={FAQ} />
-            <Route path="/contact" component={Contact} />
-            <Route exact path="/about/financial-statements" component={FinancialStatements} />
-            <Route path="/about" component={About} />
-            <Route path="/press" component={Press} />
-            <Route path="/jobs" component={Jobs} />
-            <Route path="/media" component={Press} />
-            <Route path="/signup-info" component={SignupInformation} />
-            <Route path="/challenge" component={Challenge} />
-            <Route path="/terms" component={Terms} />
-            <Route exact path="/" render={props => <Landing {...props} />} />
-            <Route path="/mentor-request" render={() => <MentorRequest {...authProps} />} />
-            <Route exact path="/scholarships" component={Scholarships} />
-            <Route path="/benefit" render={() => <Benefit {...authProps} />} />
-            <Route path="/gala" render={() => <Benefit {...authProps} />} />
+            <Route
+              path="/history"
+              component={History}
+            />
+            <Route
+              path="/sign-up"
+              component={SignUp}
+            />
+            <Route
+              path="/team"
+              component={Team}
+            />
+            <Route
+              path="/faq"
+              component={FAQ}
+            />
+            <Route
+              path="/contact"
+              component={Contact}
+            />
+            <Route
+              exact
+              path="/about/financial-statements"
+              component={FinancialStatements}
+            />
+            <Route
+              path="/about"
+              component={About}
+            />
+            <Route
+              path="/press"
+              component={Press}
+            />
+            <Route
+              path="/jobs"
+              component={Jobs}
+            />
+            <Route
+              path="/media"
+              component={Press}
+            />
+            <Route
+              path="/signup-info"
+              component={SignupInformation}
+            />
+            <Route
+              path="/challenge"
+              component={Challenge}
+            />
+            <Route
+              path="/terms"
+              component={Terms}
+            />
+            <Route
+              path="/leadership_circle"
+              component={LeadershipCircle}
+            />
+            <Route
+              exact
+              path="/"
+              render={props => (
+                <Landing {...props} sendNotification={this.sendNotification} />
+              )}
+            />
+            <Route
+              path="/mentor-request"
+              render={() => (
+                <MentorRequest {...authProps} />
+              )}
+            />
+            <Route
+              exact
+              path="/scholarships"
+              component={Scholarships}
+            />
+            <Route
+              path="/benefit"
+              render={() => (
+                <Benefit {...authProps} />
+              )}
+            />
+            <Route
+              path="/gala"
+              render={() => (
+                <Benefit {...authProps} />
+              )}
+            />
             {/* eslint-disable */}
             <Route
               path="/newgibill"
