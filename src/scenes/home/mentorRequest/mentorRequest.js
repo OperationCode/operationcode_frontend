@@ -82,11 +82,11 @@ class MentorRequest extends Component {
 
   render() {
     const { error, loggedIn, success } = this.state;
-    
+
     if (!loggedIn) {
       return <Redirect to="/login" />;
     }
-    
+
     return (
       <Section className={styles.mentorRequest} title="Mentor Service Request">
         { error && <div className={styles.mentorRequestError}>{error}</div> }
