@@ -26,6 +26,7 @@ import Landing from './landing/landing';
 import Footer from './footer/footer';
 import FourOhFour from './404/fourOhFour';
 import MentorRequest from './mentorRequest/mentorRequest';
+import LeadershipCircle from './leadershipCircle/leadershipCircle';
 import CodeSchools from './codeSchools/codeSchools';
 import About from './about/about';
 import Press from './press/press';
@@ -34,7 +35,7 @@ import Challenge from './challenge/challenge';
 import SignupInformation from './informationForm/informationForm';
 import Benefit from './benefit/benefit';
 import Terms from './termsOfService/termsOfService';
-import chapterLeader from './chapterLeader/chapterLeader';
+import ChapterLeader from './chapterLeader/chapterLeader';
 import styles from './home.css';
 
 const ReactToastr = require('react-toastr');
@@ -233,14 +234,18 @@ class Home extends Component {
               component={Terms}
             />
             <Route
-              path="/chapterLeader"
-              component={chapterLeader}
+              path="/chapter_leader"
+              component={ChapterLeader}
+            />
+            <Route
+              path="/leadership_circle"
+              component={LeadershipCircle}
             />
             <Route
               exact
               path="/"
               render={props => (
-                <Landing {...props} />
+                <Landing {...props} sendNotification={this.sendNotification} />
               )}
             />
             <Route
