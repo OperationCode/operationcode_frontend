@@ -82,9 +82,11 @@ class MentorRequest extends Component {
 
   render() {
     const { error, loggedIn, success } = this.state;
+    
     if (!loggedIn) {
       return <Redirect to="/login" />;
     }
+    
     return (
       <Section className={styles.mentorRequest} title="Mentor Service Request">
         { error && <div className={styles.mentorRequestError}>{error}</div> }
@@ -94,7 +96,6 @@ class MentorRequest extends Component {
             Each session is 30 minutes. If you think youll need more time
             please let us know in the additional comments field below.
           </span>
-
 
           <div className={styles.formBlock}>
             <div className={styles.formElement}>
