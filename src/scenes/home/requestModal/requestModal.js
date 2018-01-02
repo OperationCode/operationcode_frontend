@@ -135,8 +135,33 @@ class RequestModal extends Component {
 RequestModal.propTypes = {
   isOpen: PropTypes.bool,
   onRequestClose: PropTypes.func,
-  request: PropTypes.object, // eslint-disable-line react/forbid-prop-types
-  mentors: PropTypes.array // eslint-disable-line react/forbid-prop-types
+  request: PropTypes.shape({
+    id: PropTypes.int,
+    language: PropTypes.string,
+    user: PropTypes.shape({
+      slack_name: PropTypes.string,
+      last_name: PropTypes.string,
+      first_name: PropTypes.string,
+      email: PropTypes.string
+    }),
+    service: PropTypes.shape({
+      name: PropTypes.string
+    }),
+    requested_mentor: PropTypes.shape({
+      first_name: PropTypes.string,
+      last_name: PropTypes.string
+    })
+  }),
+  mentors: PropTypes.arrayOf(PropTypes.shape({
+    email: PropTypes.string,
+    first_name: PropTypes.string,
+    id: PropTypes.int,
+    last_name: PropTypes.string,
+    mentor: PropTypes.bool,
+    slack_name: PropTypes.string,
+    verified: PropTypes.bool,
+    zip: PropTypes.string
+  }))
 };
 
 RequestModal.defaultProps = {

@@ -5,6 +5,7 @@ import image1 from 'images/General-Couple-Computer.jpg';
 import image2 from 'images/General-Group-Coffee.jpg';
 import image3 from 'images/ThinkstockPhotos-489787502.jpg';
 import image4 from 'images/rhs2017_photo.jpg';
+import image5 from 'images/operation-code-seattle-meetup.jpg';
 import content from './whatWeDoContent.json';
 import styles from './whatWeDo.css';
 
@@ -30,6 +31,11 @@ const WhatWeDo = () => (
         image={image4}
         title={content.items[3].title}
         cardText={content.items[3].body}
+      />
+      <ImageCard
+        image={image5}
+        title={content.items[4].title}
+        cardText={content.items[4].body}
       />
     </div>
   </Section>

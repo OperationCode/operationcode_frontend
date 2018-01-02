@@ -51,6 +51,15 @@
   height: auto;
 }
 
+.tyBanner {
+  width:100%;
+  margin-top: 3vh;
+  border-top: 3px solid #47566B;
+  border-bottom: 3px solid #47566B;
+  background-color: #dce6f4;
+  text-align: center;
+}
+
 @media screen and (min-width: 415px) and (max-width: 1280px) {
   .tickets > div {
     width: 375px;

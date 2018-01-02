@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import ReactModal from 'react-modal';
 import { FaClose } from 'react-icons/lib/fa';
 import LinkButton from 'shared/components/linkButton/linkButton';
-import AnnounceBanner from 'shared/components/announceBanner/announceBanner';
 import WhatWeDo from './whatWeDo/whatWeDo';
 import Membership from './membership/membership';
 import MoreInformation from './moreInformation/moreInformation';
@@ -10,8 +10,8 @@ import SuccessStories from './successStories/successStories';
 import Partners from './partners/partners';
 import Donate from '../../../shared/components/donate/donate';
 import Join from '../../../shared/components/join/join';
-import BenefitBanner from '../../../images/benefit.jpg';
-import MobileBenefitBanner from '../../../images/benefit-mobile.jpg';
+import EmailSignup from './emailSignup/emailSignup';
+
 import styles from './landing.css';
 
 class Landing extends Component {
@@ -56,12 +56,12 @@ class Landing extends Component {
           </h1>
           <LinkButton text="Join" theme="red" link="/signup" />
         </div>
-        <AnnounceBanner
+        {/* <AnnounceBanner
           link="/benefit"
           imageSource={BenefitBanner}
           fallbackImage450pxWideSource={MobileBenefitBanner}
           altText="Click here to find more information about our Benefit Dinner and Silent Auction on November 10th"
-        />
+        /> */}
         <WhatWeDo />
         <Membership />
         <MoreInformation />
@@ -69,9 +69,14 @@ class Landing extends Component {
         <Partners />
         <Donate />
         <Join />
+        <EmailSignup sendNotification={this.props.sendNotification} />
       </div>
     );
   }
 }
+
+Landing.propTypes = {
+  sendNotification: PropTypes.func.isRequired
+};
 
 export default Landing;

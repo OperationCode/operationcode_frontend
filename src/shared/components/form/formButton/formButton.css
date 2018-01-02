@@ -6,8 +6,20 @@
   composes: red from 'shared/styles/button.css';
 }
 
+.red:hover {
+  background-color: #f1665a;
+  border-color: #f1665a;
+  cursor: pointer;
+}
+
 .blue {
   composes: blue from 'shared/styles/button.css';
+}
+
+.blue:hover {
+  background-color: #249cde;
+  border-color: #249cde;
+  cursor: pointer;
 }
 
 .grey {
