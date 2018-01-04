@@ -274,6 +274,7 @@ class Home extends Component {
                   isLoggedIn={this.state.signedIn}
                   {...authProps}
                   sendNotification={this.sendNotification}
+                  history={this.props.history}
                 />
               )}
             />
