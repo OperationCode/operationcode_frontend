@@ -107,7 +107,9 @@ class MentorRequest extends Component {
                 onChange={this.onSlackNameChange}
               />
             </div>
+          </div>
 
+          <div className={styles.formBlock}>
             <div className={styles.formElement}>
               <h2>Service</h2>
               <p>Which one of our services would you like to book?</p>
