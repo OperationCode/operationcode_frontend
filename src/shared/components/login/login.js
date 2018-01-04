@@ -114,15 +114,6 @@ class Login extends Component {
 
   isFormValid = () => this.state.emailValid && this.state.passwordValid;
 
-  // This is a temp function to ensure we return a URL if the changes to the API
-  // aren't in place. It can be removed after operationcode_backend#91 has been deployed
-  resolveRedirectUrl = (redirectUrl) => {
-    if (redirectUrl) {
-      return redirectUrl;
-    }
-    return '/profile';
-  };
-
   handleOnClick = (e) => {
     e.preventDefault();
 
@@ -138,14 +129,13 @@ class Login extends Component {
         .then(({ data }) => {
           CookieHelpers.setUserAuthCookie(data);
           this.setState({ authenticated: true });
-          this.props.updateRootAuthState((history) => {
-            this.props.sendNotification('success', 'Success', 'You have logged in!');
-            if (this.state.ssoParamsPresent) {
-              window.location = data.redirect_to;
-            } else {
-              history.push(this.resolveRedirectUrl(data.redirect_to));
-            }
-          });
+          this.props.updateRootAuthState();
+          this.props.sendNotification('success', 'Success', 'You have logged in!');
+          if (this.state.ssoParamsPresent) {
+            window.location = data.redirect_to;
+          } else {
+            this.props.history.push(data.redirect_to);
+          }
         })
         .catch((error) => {
           this.props.sendNotification('error', 'Error', 'We will investigate this issue!');
@@ -192,7 +182,25 @@ class Login extends Component {
 Login.propTypes = {
   updateRootAuthState: PropTypes.func,
   isLoggedIn: PropTypes.bool,
-  sendNotification: PropTypes.func.isRequired
+  sendNotification: PropTypes.func.isRequired,
+
+  history: PropTypes.shape({
+    action: PropTypes.string,
+    block: PropTypes.func,
+    createHref: PropTypes.func,
+    go: PropTypes.func,
+    goBack: PropTypes.func,
+    goForward: PropTypes.func,
+    length: PropTypes.number,
+    listen: PropTypes.func,
+    location: PropTypes.shape({
+      key: PropTypes.string,
+      pathname: PropTypes.string,
+      search: PropTypes.string,
+    }),
+    push: PropTypes.func,
+    replace: PropTypes.func,
+  }).isRequired,
 };
 
 Login.defaultProps = {
