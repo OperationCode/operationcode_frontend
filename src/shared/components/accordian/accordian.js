@@ -11,6 +11,7 @@ const Accordian = ({ children }) => (
   </div>
 );
 
+
 Accordian.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.instanceOf(AccordianItem)),

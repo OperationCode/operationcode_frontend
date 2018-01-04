@@ -5,44 +5,34 @@ import Heading from 'shared/components/heading/heading';
 import ReactTable from 'react-table';
 
 class IndexTable extends Component {
-  static propTypes = {
-    columns: PropTypes.arrayOf(PropTypes.object).isRequired,
-    heading: PropTypes.string.isRequired,
-    onRowClick: PropTypes.func,
-    fetchRecords: PropTypes.func.isRequired,
-    showPagination: PropTypes.bool
-  };
-
-  static defaultProps = {
-    onRowClick: () => {},
-    showPagination: true
-  };
-
   state = {
     loggedIn: true,
-    data: []
+    data: [],
   };
 
   componentDidMount() {
-    this.props.fetchRecords().then((data) => {
-      this.setState({ data });
-    }).catch(this.setFetchError);
+    this.props
+      .fetchRecords()
+      .then(data => {
+        this.setState({ data });
+      })
+      .catch(this.setFetchError);
   }
 
-  setFetchError = (err) => {
+  setFetchError = err => {
     const { response } = err;
     // The 500 means you the user is not a mentor, should
     // update that later
     if (response.status === 401 || response.status === 500) {
       this.setState({ loggedIn: false });
     }
-  }
+  };
 
   handleRowClick = (state, rowInfo) => ({
     onClick: () => {
       this.props.onRowClick(this.state.data[rowInfo.index]);
-    }
-  })
+    },
+  });
 
   render() {
     if (!this.state.loggedIn) {
@@ -51,10 +41,7 @@ class IndexTable extends Component {
 
     return (
       <div style={{ width: '100%' }}>
-        <Heading
-          text={this.props.heading}
-          style={{ margin: '4rem auto', lineHeight: 0 }}
-        />
+        <Heading text={this.props.heading} style={{ margin: '4rem auto', lineHeight: 0 }} />
         <ReactTable
           data={this.state.data}
           columns={this.props.columns}
@@ -66,5 +53,23 @@ class IndexTable extends Component {
     );
   }
 }
+
+IndexTable.defaultProps = {
+  onRowClick: () => {},
+  showPagination: true,
+};
+
+IndexTable.propTypes = {
+  columns: PropTypes.arrayOf(
+    PropTypes.shape({
+      Header: PropTypes.string,
+      accessor: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+    })
+  ).isRequired,
+  heading: PropTypes.string.isRequired,
+  onRowClick: PropTypes.func,
+  fetchRecords: PropTypes.func.isRequired,
+  showPagination: PropTypes.bool,
+};
 
 export default IndexTable;
