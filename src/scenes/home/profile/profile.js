@@ -16,13 +16,13 @@ const Profile = ({ verified }) => (
         <IconCard
           title="Request a Mentor"
           fontAwesomeIcon="FaLifeBouy"
-          url="https://op.co.de/mentor-request"
+          url={verified ? 'https://op.co.de/mentor-request' : ''}
         />
 
         <IconCard
           title="Check for Scholarships"
           fontAwesomeIcon="FaGraduationCap"
-          url="/scholarships"
+          url={verified ? '/scholarships' : ''}
         />
 
         <IconCard title="Check for Open Jobs" fontAwesomeIcon="FaBriefcase" url="/jobs" />
