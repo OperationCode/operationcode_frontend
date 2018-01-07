@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { Route, Redirect } from 'react-router-dom';
 
 const AuthenticatedRoute = (props) => {
-  console.log(props);
   if (!props.isAuth) {
     return <Redirect to="/login" />;
   }
@@ -15,7 +14,7 @@ const AuthenticatedRoute = (props) => {
 };
 
 AuthenticatedRoute.propTypes = {
-  sendNotification: PropTypes.func.isRequired,
+  sendNotification: PropTypes.func,
   updateRootAuthState: PropTypes.func,
   isAuth: PropTypes.bool.isRequired,
   component: PropTypes.func.isRequired,
@@ -23,7 +22,8 @@ AuthenticatedRoute.propTypes = {
 };
 
 AuthenticatedRoute.defaultProps = {
-  updateRootAuthState: () => {}
+  updateRootAuthState: () => {},
+  sendNotification: () => {}
 };
 
 export default AuthenticatedRoute;

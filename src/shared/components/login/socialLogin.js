@@ -51,9 +51,7 @@ class SocialLogin extends Component {
         window.localStorage.setItem('lastname', `${Last}`);
         window.localStorage.setItem('email', `${Email}`);
         if (data.redirect_to === '/social_login') {
-          this.props.updateRootAuthState((history) => {
-            history.push(data.redirect_to);
-          });
+          this.props.history.push(data.redirect_to);
         } else {
           this.login();
         }
@@ -94,14 +92,13 @@ class SocialLogin extends Component {
         localStorage.removeItem('lastname');
         localStorage.removeItem('email');
         CookieHelpers.setUserAuthCookie(data);
-        this.props.updateRootAuthState((history) => {
-          this.props.sendNotification(
-            'success',
-            'Success',
-            'You have logged in!'
-          );
-          history.push(data.redirect_to);
-        });
+        this.props.updateRootAuthState();
+        this.props.sendNotification(
+          'success',
+          'Success',
+          'You have logged in!'
+        );
+        this.props.history.push(data.redirect_to);
       })
       .catch((error) => {
         const data = _.get(error, 'response.data');
@@ -137,7 +134,6 @@ class SocialLogin extends Component {
   isFormValid = () => this.state.zipValid && this.state.passwordValid;
 
   render() {
-    console.log(this.props);
     return (
       <Section className={styles.signup} title="Zipcode and Password Required">
         <Form className={styles.signupForm}>
@@ -188,7 +184,24 @@ class SocialLogin extends Component {
 
 SocialLogin.propTypes = {
   sendNotification: PropTypes.func.isRequired,
-  updateRootAuthState: PropTypes.func
+  updateRootAuthState: PropTypes.func,
+  history: PropTypes.shape({
+    action: PropTypes.string,
+    block: PropTypes.func,
+    createHref: PropTypes.func,
+    go: PropTypes.func,
+    goBack: PropTypes.func,
+    goForward: PropTypes.func,
+    length: PropTypes.number,
+    listen: PropTypes.func,
+    location: PropTypes.shape({
+      key: PropTypes.string,
+      pathname: PropTypes.string,
+      search: PropTypes.string,
+    }),
+    push: PropTypes.func,
+    replace: PropTypes.func,
+  }).isRequired,
 };
 
 SocialLogin.defaultProps = {
