@@ -249,6 +249,7 @@ class Home extends Component {
               component={SocialLogin}
               sendNotification={this.sendNotification}
               updateRootAuthState={this.updateRootAuthState}
+              history={this.props.history}
             />
             <AuthenticatedRoute
               path="/social_login"
@@ -256,6 +257,7 @@ class Home extends Component {
               component={SocialLogin}
               sendNotification={this.sendNotification}
               updateRootAuthState={this.updateRootAuthState}
+              history={this.props.history}
             />
             <Route
               path="/challenge"
