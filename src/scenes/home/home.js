@@ -129,10 +129,23 @@ class Home extends Component {
    * information necessary to visit /social-login
    */
    hasSocialLoginPayload = () => {
-     const firstNameExists = window.localStorage.getItem('firstname');
-     const lastNameExists = window.localStorage.getItem('lastname');
-     const emailExists = window.localStorage.getItem('email');
-     return firstNameExists && lastNameExists && emailExists ? true : false;
+     let firstNameExists = null;
+     let lastNameExists = null;
+     let emailExists = null;
+     try {
+       firstNameExists = window.localStorage.getItem('firstname');
+       lastNameExists = window.localStorage.getItem('lastname');
+       emailExists = window.localStorage.getItem('email');
+     }
+     catch (e) {
+       return false;
+     }
+     if((firstNameExists !== null) && (lastNameExists !== null) && (emailExists !== null)) {
+       return true;
+     }
+     else {
+       return false;
+     }
    }
 
   render() {

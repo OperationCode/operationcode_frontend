@@ -22,8 +22,8 @@ AuthenticatedRoute.propTypes = {
 };
 
 AuthenticatedRoute.defaultProps = {
+  sendNotification: null,
   updateRootAuthState: () => {},
-  sendNotification: () => {}
 };
 
 export default AuthenticatedRoute;
