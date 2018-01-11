@@ -1,0 +1,13 @@
+.noteForSchoolReps {
+  text-align: center;
+  font-size: 1em;
+  margin: 15px 0 0 0;
+}
+
+.scholarshipSchools {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+}

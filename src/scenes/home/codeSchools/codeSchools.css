@@ -10,3 +10,11 @@
 .filterButtonDiv > a {
   margin: 2% 1%;
 }
+
+.scholarshipModalContent {
+  margin-left: 20px;
+}
+
+.scholarshipModalDescription {
+  line-height: 1;
+}

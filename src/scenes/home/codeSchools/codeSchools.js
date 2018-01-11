@@ -1,19 +1,24 @@
 import React, { Component } from 'react';
 import LinkButton from 'shared/components/linkButton/linkButton';
 import Section from 'shared/components/section/section';
+import Modal from 'shared/components/modal/modal';
 import ApprovedSchools from './approvedSchools/approvedSchools';
 import PartnerSchools from './partnerSchools/partnerSchools';
 import OnlineSchools from './onlineSchools/onlineSchools';
 import StateSortedSchools from './stateSortedSchools/stateSortedSchools';
+import ScholarshipSchools from './scholarshipSchools/scholarshipSchools';
 import styles from './codeSchools.css';
 
 class CodeSchools extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
-      schools: null
+      schools: [],
+      modal: false,
+      scholarshipSchoolModal: {}
     };
+
+    this.showModal = this.showModal.bind(this);
   }
 
   componentWillMount() {
@@ -23,9 +28,30 @@ class CodeSchools extends Component {
       }));
   }
 
+  showModal = (schoolDetails) => {
+    this.setState({ modal: 'true', scholarshipSchoolModal: schoolDetails });
+  }
+
+  hideModal = () => {
+    this.setState({
+      modal: false,
+      scholarshipSchoolModal: {}
+    });
+  }
+
   render() {
     return (
       <div>
+        {
+          this.state.modal &&
+          <Modal width="50%" title={this.state.scholarshipSchoolModal.schoolName} isOpen onRequestClose={this.hideModal}>
+            <div className={styles.scholarshipModalContent}>
+              <img src={this.state.scholarshipSchoolModal.logo} alt={this.state.scholarshipSchoolModal.alt} style={{ float: 'left' }} />
+              <p className={styles.scholarshipModalDescription}><br /><br />{this.state.scholarshipSchoolModal.description}</p>
+              {this.state.scholarshipSchoolModal.link && <div><a href={this.state.scholarshipSchoolModal.link} target="_blank" rel="noopener noreferrer">{this.state.scholarshipSchoolModal.link}</a></div>}
+            </div>
+          </Modal>
+        }
         <Section
           title="Code Schools"
           theme="white"
@@ -67,9 +93,16 @@ class CodeSchools extends Component {
               theme="blue"
               scrollLink
             />
+            <LinkButton
+              link="scholarshipSchools"
+              text="Scholarships"
+              theme="blue"
+              scrollLink
+            />
           </div>
         </Section>
 
+        {this.state.schools && <ScholarshipSchools schools={this.state.schools} showModal={this.showModal} />}
         {this.state.schools && <ApprovedSchools schools={this.state.schools} />}
         {this.state.schools && <PartnerSchools schools={this.state.schools} />}
         {this.state.schools && <OnlineSchools schools={this.state.schools} />}
