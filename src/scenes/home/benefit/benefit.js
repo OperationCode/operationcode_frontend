@@ -1,6 +1,7 @@
 import React from 'react';
 import Section from 'shared/components/section/section';
 import LinkButton from 'shared/components/linkButton/linkButton';
+import YouTube from 'shared/components/youtubeVideo';
 import SabioLogo from '../../../images/codeSchoolLogos/sabio.png';
 import CodeFellowsLogo from '../../../images/codeSchoolLogos/codefellows_small.png';
 import NodejsLogo from './logos/NodeSummitSF_ColorLogoWeb.jpg';
@@ -18,6 +19,11 @@ import styles from './benefit.css';
 const Benefit = () => (
   <div>
     <div className={styles.tyBanner}><h3>Thank You!</h3>
+      <YouTube
+        id="edMC6Wc3nsg"
+        height="420"
+        width="740"
+      />
       <p>Thank you to all of our donors, sponsors, and event staff who helped make the Operation Code 2017 Benefit Dinner a success!<br />
        Save the date: November 9th, 2018
       </p>
