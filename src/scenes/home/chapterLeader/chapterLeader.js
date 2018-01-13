@@ -7,7 +7,7 @@ const chapterLeaders = () => (
       <div>
         <p>Operation Code is looking for volunteer Chapter Leaders to build local communities nationwide! Tell us more about yourself
           <a
-            href="http://op.co.de/chapter-leader-volunteer6"
+            href="http://op.co.de/chapter-leader-volunteer"
             target="_blank"
             rel="noopener noreferrer"
           >
