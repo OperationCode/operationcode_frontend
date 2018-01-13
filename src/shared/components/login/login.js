@@ -148,8 +148,7 @@ class Login extends Component {
           });
         })
         .catch((error) => {
-          const statusCode = error.response.status;
-          if (statusCode !== 401) {
+          if (error.response.status !== 401) {
             this.props.sendNotification('error', 'Error', 'We will investigate this issue!');
           }
 
