@@ -19,7 +19,7 @@ const Membership = () => (
           fontAwesomeIcon="FaGroup"
           iconAboveHeading
           subText="Join our open community. Learn and grow with fellow veterans, servicemembers,
-          and military spouses."
+          and military spouses. Work with your peers to build open source projects."
         />
       </li>
       <li>
@@ -28,7 +28,8 @@ const Membership = () => (
           fontAwesomeIcon="FaRoad"
           iconAboveHeading
           subText="Find new opportunities in the tech industry through our scholarship program.
-          Attend conferences and coding bootcamps to build your skills."
+          Attend software development conferences and coding bootcamps, and build the skills of the
+          future."
         />
       </li>
       <li>
@@ -36,8 +37,8 @@ const Membership = () => (
           title="Connections"
           fontAwesomeIcon="FaFlagCheckered"
           iconAboveHeading
-          subText="Jump-start your journey. Gain access to our Slack team to learn from professional
-          software engineers with years of experience."
+          subText="Jumpstart your journey. Access our mentorship and coding channels, and learn from
+          senior software engineers at top-tier tech companies with years of experience."
         />
       </li>
       <li>
@@ -45,8 +46,9 @@ const Membership = () => (
           title="Careers"
           fontAwesomeIcon="FaSuitcase"
           iconAboveHeading
-          subText="Get expert feedback on your portfolio, side project, or resume. Find local and remote jobs all
-          across the country."
+          subText="Launch your career in the tech industry on our job board. Find local and remote
+          jobs all across the country. Get expert feedback on your portfolio, side project, or
+          resume."
         />
       </li>
     </ul>
