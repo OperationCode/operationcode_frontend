@@ -64,7 +64,7 @@ class Landing extends Component {
         <Partners />
         <Donate />
         <Join />
-        {/* <EmailSignup sendNotification={this.props.sendNotification} /> */}
+        <EmailSignup sendNotification={this.props.sendNotification} /> 
       </div>
     );
   }
