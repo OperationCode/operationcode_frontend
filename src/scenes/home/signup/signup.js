@@ -122,9 +122,9 @@ class SignUp extends Component {
         <Form className={styles.signupForm}>
           <span>
             Are you ready to deploy your future?  Join Operation Code
-            today and launch your career in software development.
+            today and launch your career in tech.
             Once you complete the form below you&#8217;ll be invited
-            to join our team on Slack and the <a href="https://community.operationcode.org/" target="_blank" rel="noopener noreferrer">forums</a>.  Make sure you stop in and say hi!
+            to join our team on Slack.  Make sure you stop in and say hi!
           </span>
           <FormEmail
             id="email" placeholder="Email (Required)"
