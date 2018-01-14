@@ -10,6 +10,10 @@ ReactGA.initialize('UA-75642413-1');
 
 class App extends Component {
   componentDidMount() {
+    // History listening doesn't catch first page load
+    ReactGA.set({ page: history.location.pathname });
+    ReactGA.pageview(history.location.pathname);
+
     if (process.env.NODE_ENV === 'production') {
       history.listen((location) => {
         ReactGA.set({ page: location.pathname });
