@@ -10,7 +10,7 @@ const AdBanner = ({
   clickText
 }) =>
   (
-    <a href={link} target="_blank" rel="noopener noreferrer" className={styles.adLink}>
+    <a href={link} target="_blank" rel="noopener noreferrer" className={styles.adBannerLink}>
       <div className={styles.adBanner}>
         <div className={styles.adBannerImage}>
           <img src={imageSource} alt={altText} />
