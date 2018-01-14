@@ -6,9 +6,9 @@ const topcodeBanner = () => (
 
   <AdBanner>
     link={'http://op.co.de/topcoder-veterans'},
-    imageSource = {topcodeLogo},  
-    altText = 'Top Coder',
-    adBannerText= 'Operation Code and Topcoder are excited to announce opportunities for our members to work on open source coding projects, solve critical problems, and compete for cash prizes! Sign up at topcoder-veterans.'    
+    imageSource = {topcodeLogo},
+    altText = {'Top Coder'},
+    adBannerText= {'Operation Code and Topcoder are excited to announce opportunities for our members to work on open source coding projects, solve critical problems, and compete for cash prizes! Sign up at topcoder-veterans.'}
   </AdBanner>
 );
 
