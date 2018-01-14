@@ -12,7 +12,7 @@ const SchoolCard = ({
   schoolAddress,
   schoolCity,
   schoolName,
-  schoolState
+  schoolState,
 }) => (
   <div className={styles.schoolCard}>
     <div className={styles.schoolCardImage}>
@@ -30,9 +30,13 @@ const SchoolCard = ({
         </span>
         <br />
         <span className={styles.schoolLocation}>
-          {schoolAddress.includes('Online') ? <p>Online Available<br /></p> : null}
-          {schoolCity}{schoolCity ? ', ' : null}
-          {schoolState}{schoolState ? <br /> : null}
+          {schoolAddress.includes('Online')
+            ? `Online Available ${<br />}`
+            : null}
+          {schoolCity}
+          {schoolCity ? ', ' : null}
+          {schoolState}
+          {schoolState ? <br /> : null}
           <br />
         </span>
       </p>
