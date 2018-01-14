@@ -9,15 +9,16 @@
 .adBannerText {  
   font-family: "Roboto", sans-serif; 
   font-size:18px;
+  
 }
 
 .adBanner {
   background-color: #DBF0CC;
   border-color: #D0EEBA;  
   display: flex;
-  flex-flow: row wrap;
-  width: 100%;
-  justify-content: center;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
   border-style: solid;
   border-width: 2px;
   padding: 1rem;
@@ -37,8 +38,4 @@
   width: 100%;
 }
 
-@media screen and (max-width: 450px) {
-  .adBannerImage {
-    display: none;
-  }
-}
+

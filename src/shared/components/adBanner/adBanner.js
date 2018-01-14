@@ -6,7 +6,8 @@ const AdBanner = ({
   link,
   imageSource,
   altText,
-  adBannerText
+  adBannerText,
+  clickText
 }) =>
   (
     <a href={link} target="_blank" rel="noopener noreferrer" className={styles.adLink}>
@@ -14,7 +15,9 @@ const AdBanner = ({
         <div className={styles.adBannerImage}>
           <img src={imageSource} alt={altText} />
         </div>
-        <h3 className={styles.adBannerText}> {adBannerText} </h3>
+        <h4 className={styles.adBannerText}> {adBannerText}
+          <br /> {clickText}
+        </h4>
       </div>
     </a>
   );
@@ -24,7 +27,8 @@ AdBanner.propTypes = {
   link: PropTypes.string.isRequired,
   imageSource: PropTypes.string.isRequired,
   altText: PropTypes.string.isRequired,
-  adBannerText: PropTypes.string.isRequired
+  adBannerText: PropTypes.string.isRequired,
+  clickText: PropTypes.string.isRequired
 };
 
 export default AdBanner;
