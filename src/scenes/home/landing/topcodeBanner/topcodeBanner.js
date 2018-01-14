@@ -2,7 +2,7 @@ import React from 'react';
 import topcodeLogo from 'images/partnerLogos/logo_topcoder_with_name.svg';
 import AdBanner from 'shared/components/adBanner/adBanner';
 
-const topcodeBanner = () => (
+const TopcodeBanner = () => (
   <AdBanner
     link="http://op.co.de/topcoder-veterans"
     imageSource={topcodeLogo}
@@ -12,4 +12,4 @@ const topcodeBanner = () => (
   />
 );
 
-export default topcodeBanner;
+export default TopcodeBanner;
