@@ -1,5 +1,3 @@
-/* eslint-disable no-console, react/forbid-prop-types */
-
 import React, { Component } from 'react';
 import { Route, withRouter, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -52,7 +50,7 @@ class Home extends Component {
   };
 
   componentWillMount() {
-    this.props.history.listen(location => {
+    this.props.history.listen((location) => {
       this.setBgImage(location);
     });
     this.setBgImage(this.props.location);
@@ -93,13 +91,11 @@ class Home extends Component {
 
   updateRootAuthState = () => {
     const cookies = CookieHelpers.getUserStatus();
-    this.setState(
-      {
-        signedIn: cookies.signedIn,
-        mentor: cookies.mentor,
-        verified: cookies.verified,
-      }
-    );
+    this.setState({
+      signedIn: cookies.signedIn,
+      mentor: cookies.mentor,
+      verified: cookies.verified,
+    });
   };
 
   logOut = () => {
@@ -138,7 +134,11 @@ class Home extends Component {
     return (
       <div
         className={classes}
-        style={this.state.bgImage ? { backgroundImage: `url(${this.state.bgImageUrl})` } : {}}
+        style={
+          this.state.bgImage
+            ? { backgroundImage: `url(${this.state.bgImageUrl})` }
+            : {}
+        }
       >
         <Header
           transparent={this.state.bgImage}
@@ -172,63 +172,24 @@ class Home extends Component {
                 />
               )}
             />
-            <Route
-              path="/history"
-              component={History}
-            />
-            <Route
-              path="/sign-up"
-              component={SignUp}
-            />
-            <Route
-              path="/team"
-              component={Team}
-            />
-            <Route
-              path="/faq"
-              component={FAQ}
-            />
-            <Route
-              path="/contact"
-              component={Contact}
-            />
+            <Route path="/history" component={History} />
+            <Route path="/sign-up" component={SignUp} />
+            <Route path="/team" component={Team} />
+            <Route path="/faq" component={FAQ} />
+            <Route path="/contact" component={Contact} />
             <Route
               exact
               path="/about/financial-statements"
               component={FinancialStatements}
             />
-            <Route
-              path="/about"
-              component={About}
-            />
-            <Route
-              path="/press"
-              component={Press}
-            />
-            <Route
-              path="/jobs"
-              component={Jobs}
-            />
-            <Route
-              path="/media"
-              component={Press}
-            />
-            <Route
-              path="/signup-info"
-              component={SignupInformation}
-            />
-            <Route
-              path="/challenge"
-              component={Challenge}
-            />
-            <Route
-              path="/terms"
-              component={Terms}
-            />
-            <Route
-              path="/leadership_circle"
-              component={LeadershipCircle}
-            />
+            <Route path="/about" component={About} />
+            <Route path="/press" component={Press} />
+            <Route path="/jobs" component={Jobs} />
+            <Route path="/media" component={Press} />
+            <Route path="/signup-info" component={SignupInformation} />
+            <Route path="/challenge" component={Challenge} />
+            <Route path="/terms" component={Terms} />
+            <Route path="/leadership_circle" component={LeadershipCircle} />
             <Route
               exact
               path="/"
@@ -238,32 +199,17 @@ class Home extends Component {
             />
             <Route
               path="/mentor-request"
-              render={() => (
-                <MentorRequest {...authProps} />
-              )}
+              render={() => <MentorRequest {...authProps} />}
             />
-            <Route
-              exact
-              path="/scholarships"
-              component={Scholarships}
-            />
-            <Route
-              path="/benefit"
-              render={() => (
-                <Benefit {...authProps} />
-              )}
-            />
-            <Route
-              path="/gala"
-              render={() => (
-                <Benefit {...authProps} />
-              )}
-            />
+            <Route exact path="/scholarships" component={Scholarships} />
+            <Route path="/benefit" render={() => <Benefit {...authProps} />} />
+            <Route path="/gala" render={() => <Benefit {...authProps} />} />
             {/* eslint-disable */}
             <Route
               path="/newgibill"
               component={() =>
-                (window.location = 'http://www.benefits.va.gov/gibill/post911_gibill.asp')}
+                (window.location =
+                  'http://www.benefits.va.gov/gibill/post911_gibill.asp')}
             />
             {/* eslint-enable */}
             <Route
@@ -303,7 +249,7 @@ class Home extends Component {
           </Switch>
         </div>
         <ToastContainer
-          ref={input => {
+          ref={(input) => {
             this.container = input;
           }}
           toastMessageFactory={ToastMessageFactory}
