@@ -2,24 +2,24 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
+import ReactGA from 'react-ga';
 import styles from './linkButton.css';
 
-const LinkButton = (props) => {
-  const {
-    link,
-    text,
-    theme,
-    scrollLink,
-    isExternal,
-    ...otherProps
-  } = props;
-
+const LinkButton = ({
+  link,
+  text,
+  theme,
+  scrollLink,
+  isExternal,
+  ...otherProps
+}) => {
   if (scrollLink) {
     return (
       <ScrollLink
         className={`${styles.linkButton} ${styles[theme]}`}
         to={link}
-        smooth duration={400}
+        smooth
+        duration={400}
         {...otherProps}
       >
         {text}
@@ -28,12 +28,34 @@ const LinkButton = (props) => {
   }
 
   if (isExternal) {
+    if (process.env.NODE_ENV === 'production') {
+      // landing page is 25 characters including SSL
+      const location = window.location.href.slice(25);
+
+      return (
+        <ReactGA.OutboundLink
+          to={link}
+          eventLabel={`OUTBOUND [n/a] to ${link} from ${location}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`${styles.linkButton} ${styles[theme]}`}
+        >
+          {text}
+        </ReactGA.OutboundLink>
+      );
+    }
+
+    const onDevLinkButtonClick = () => {
+      console.log(`OUTBOUND ${analyticsEventLabel} analytics event clicked`); // eslint-disable-line
+    };
+
     return (
       <a
         href={link}
         target="_blank"
         rel="noopener noreferrer"
         className={`${styles.linkButton} ${styles[theme]}`}
+        onClick={onDevLinkButtonClick}
       >
         {text}
       </a>
