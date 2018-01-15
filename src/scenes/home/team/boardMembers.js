@@ -9,22 +9,42 @@ const Chair = {
 const Vicechair = {
   name: 'Dr. Tyrone Grandison',
   role: 'Vice Chairman',
-  description: '',
+  description: 'thi ones',
   src: './images/tyrone.png'
 };
 
 const Treasurer = {
   name: 'Elmer Thomas',
   role: 'Treasurer',
-  description: '',
+  description: 'jakfljslakf',
   src: './images/elmer.png'
 };
 
+const board1 = {
+  name: 'Conrad Hollomon',
+  role: 'Board Director',
+  description: 'hi there',
+  src: './images/conrad.jpg'
+};
 const Secretary = {
   name: 'Thomas Ciszec',
   role: 'Secretary',
-  description: '',
+  description: 'this value',
   src: './images/thomas.jpg'
 };
 
-export default [Chair, Vicechair, Treasurer, Secretary];
+const Exec = {
+  name: 'David Molina',
+  role: 'Executive Director',
+  description: 'Member Officio',
+  src: './images/david.jpg'
+};
+
+const Emeritus = {
+  name: 'Mark Kerr',
+  role: 'Chairman Emeritus',
+  description: 'Member ex Officio',
+  src: './images/mark.jpg'
+};
+
+export default [Chair, Vicechair, Treasurer, board1, Secretary, Exec, Emeritus];

@@ -27,8 +27,9 @@ class Team extends Component {
       />
     ));
 
-    const boardMembers = BoardMembers.map(boardMember => (
+    const boardMembersMap = BoardMembers.map(boardMember => (
       <BoardCard
+        key={`${Math.random()} + ${boardMember.name}`}
         name={boardMember.name}
         role={boardMember.role}
         description={boardMember.description}
@@ -53,7 +54,15 @@ class Team extends Component {
         </Section>
 
         <Section title="Our Board" theme="white">
-          <div className={styles.boardMembers}>{boardMembers}</div>
+          <div className={styles.boardMembers}>{boardMembersMap}</div>
+          <div>
+            <p>
+              Operation Code deeply appreciates the time, energy, and hard work
+              of our Founding Board Members: Aimee Knight, Laura Gomez, Pete
+              Runyon, Josh Carter, and Nick Frost. <em>Thank You</em> for
+              setting us up for success!
+            </p>
+          </div>
         </Section>
       </div>
     );
