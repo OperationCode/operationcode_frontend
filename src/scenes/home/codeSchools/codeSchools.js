@@ -46,7 +46,7 @@ class CodeSchools extends Component {
             <br />
             <br />
             We encourage you to check out the schools below, do your research,
-            and ask fellow software developers in Slack in our Slack Community.
+            and ask fellow techies in our Slack Community.
           </p>
 
           <div className={styles.filterButtonDiv}>
