@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import LinkButton from 'shared/components/linkButton/linkButton';
 import Section from 'shared/components/section/section';
 import ApprovedSchools from './approvedSchools/approvedSchools';
@@ -17,19 +18,11 @@ class CodeSchools extends Component {
     };
   }
 
-  componentWillMount() {
-    return fetch('https://api.operationcode.org/api/v2/code_schools.json')
-      .then(response =>
-        response.json().then((data) => {
-          this.setState({
-            schools: data
-          });
-        }))
-      .catch(() => {
-        this.setState({
-          errorResponse: true
-        });
-      });
+  componentDidMount() {
+    axios
+      .get('https://api.operationcode.org/api/v1/code_schools.json')
+      .then(response => this.setState({ schools: response.data }))
+      .catch(() => this.setState({ errorResponse: true }));
   }
 
   render() {
@@ -83,7 +76,7 @@ class CodeSchools extends Component {
           </p>
         )}
         {this.state.schools && <ApprovedSchools schools={this.state.schools} />}
-        {this.state.schools && <PartnerSchools schools={this.state.schools} />}
+        <PartnerSchools schools={this.state.schools} />
         {this.state.schools && <OnlineSchools schools={this.state.schools} />}
         {this.state.schools && (
           <StateSortedSchools schools={this.state.schools} />
