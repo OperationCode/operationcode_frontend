@@ -20,9 +20,9 @@ export const setUserAuthCookie = ({ token, user }) => {
   cookies.set('verified', user.verified, cookieOptions);
 };
 
-export const setVerified = (verified) => {
+export const setUserVerifiedCookie = (isVerified) => {
   const cookies = new Cookies();
-  cookies.set('verified', verified, cookieOptions);
+  cookies.set('verified', isVerified, cookieOptions);
 };
 
 export const clearAuthCookies = () => {
