@@ -16,9 +16,9 @@ const AdBanner = ({ link, imageSource, altText, adBannerText, clickText }) => {
             <img src={imageSource} alt={altText} />
           </div>
           <h4 className={styles.adBannerText}>
-            {' '}
             {adBannerText}
-            <br /> {clickText}
+            <br />
+            {clickText}
           </h4>
         </div>
       </OutboundLink>
@@ -42,9 +42,9 @@ const AdBanner = ({ link, imageSource, altText, adBannerText, clickText }) => {
           <img src={imageSource} alt={altText} />
         </div>
         <h4 className={styles.adBannerText}>
-          {' '}
           {adBannerText}
-          <br /> {clickText}
+          <br />
+          {clickText}
         </h4>
       </div>
     </a>
