@@ -35,7 +35,7 @@ const LinkButton = ({
       return (
         <ReactGA.OutboundLink
           to={link}
-          eventLabel={`OUTBOUND [n/a] to ${link} from ${location}`}
+          eventLabel={`OUTBOUND [${text} Button Click] to ${link} from ${location}`}
           target="_blank"
           rel="noopener noreferrer"
           className={`${styles.linkButton} ${styles[theme]}`}
@@ -46,7 +46,7 @@ const LinkButton = ({
     }
 
     const onDevLinkButtonClick = () => {
-      console.log(`OUTBOUND ${analyticsEventLabel} analytics event clicked`); // eslint-disable-line
+      console.log(`OUTBOUND [${text} Button Click] analytics event clicked`); // eslint-disable-line
     };
 
     return (
