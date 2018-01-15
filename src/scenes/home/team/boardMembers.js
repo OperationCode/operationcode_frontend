@@ -27,4 +27,26 @@ const Secretary = {
   src: './images/thomas.jpg'
 };
 
-export default [Chair, Vicechair, Treasurer, Secretary];
+const board1 = {
+  name: 'Conrad Hollomon',
+  role: 'Board Director',
+  description: '',
+  src: './images/conrad.jpg'
+};
+
+const Exec = {
+  name: 'David Molina',
+  role: 'Executive Director',
+  description: 'Member ex Officio',
+  src: './images/DavidMolina.jpg'
+};
+
+const Emeritus = {
+  name: 'Mark Kerr',
+  role: 'Chairman Emeritus',
+  description: 'Member ex Officio',
+  src: './images/img_unk.png'
+};
+
+
+export default [Chair, Vicechair, Treasurer, Secretary, board1, Exec, Emeritus];
