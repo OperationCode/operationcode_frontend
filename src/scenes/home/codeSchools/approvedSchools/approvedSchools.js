@@ -9,7 +9,7 @@ class ApprovedSchools extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      vaSchools: null,
+      vaSchools: null
     };
   }
 
@@ -22,7 +22,8 @@ class ApprovedSchools extends Component {
     this.props.schools.forEach((school) => {
       const locations = school.locations.filter(location => location.va_accepted === true);
       if (locations.length > 0) {
-        approvedSchools = approvedSchools.concat(locations.map(location => Object.assign({}, _.omit(school, ['locations']), location)));
+        approvedSchools = approvedSchools.concat(locations.map(location =>
+          Object.assign({}, _.omit(school, ['locations']), location)));
       }
     });
 
@@ -47,14 +48,20 @@ class ApprovedSchools extends Component {
     ));
 
     return (
-      <Section id="approvedSchools" title="VA-Approved Schools" headingLines={false}>
+      <Section
+        id="approvedSchools"
+        title="VA-Approved Schools"
+        headingLines={false}
+      >
         <div className={styles.vaSchools}>{vaSchools}</div>
 
         <div className={styles.noteForSchoolReps}>
           <p>
             Are you a code school seeking state and/or VA approval?
             <br />
-            <a href="mailto:staff@operationcode.org">Request technical assistance today.</a>
+            <a href="mailto:staff@operationcode.org">
+              Request technical assistance today.
+            </a>
           </p>
         </div>
       </Section>
@@ -74,8 +81,8 @@ ApprovedSchools.propTypes = {
     notes: PropTypes.string,
     online_only: PropTypes.bool,
     updated_at: PropTypes.string,
-    url: PropTypes.string,
-  })).isRequired,
+    url: PropTypes.string
+  })).isRequired
 };
 
 export default ApprovedSchools;
