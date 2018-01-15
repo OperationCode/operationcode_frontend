@@ -10,3 +10,7 @@
 .filterButtonDiv > a {
   margin: 2% 1%;
 }
+
+.codeschoolError {
+  color: red;
+}
