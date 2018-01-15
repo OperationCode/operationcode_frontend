@@ -12,19 +12,24 @@ class CodeSchools extends Component {
     super(props);
 
     this.state = {
-      schools: null
+      schools: null,
+      errorResponse: false
     };
   }
 
   componentWillMount() {
-    return fetch('https://api.operationcode.org/api/v1/code_schools.json')
+    return fetch('https://api.operationcode.org/api/v2/code_schools.json')
       .then(response =>
         response.json().then((data) => {
           this.setState({
             schools: data
           });
         }))
-      .catch(() => {});
+      .catch(() => {
+        this.setState({
+          errorResponse: true
+        });
+      });
   }
 
   render() {
@@ -71,7 +76,7 @@ class CodeSchools extends Component {
             />
           </div>
         </Section>
-        {!this.state.schools && (
+        {this.state.errorResponse && (
           <p className={styles.codeschoolError}>
             Whoops! Something went wrong… please check back later.
             <br />
