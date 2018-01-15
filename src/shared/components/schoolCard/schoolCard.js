@@ -12,7 +12,7 @@ const SchoolCard = ({
   schoolAddress,
   schoolCity,
   schoolName,
-  schoolState,
+  schoolState
 }) => (
   <div className={styles.schoolCard}>
     <div className={styles.schoolCardImage}>
@@ -30,9 +30,11 @@ const SchoolCard = ({
         </span>
         <br />
         <span className={styles.schoolLocation}>
-          {schoolAddress.includes('Online')
-            ? `Online Available ${<br />}`
-            : null}
+          {schoolAddress.includes('Online') ? (
+            <text>
+              Online Available<br />
+            </text>
+          ) : null}
           {schoolCity}
           {schoolCity ? ', ' : null}
           {schoolState}
@@ -62,12 +64,12 @@ SchoolCard.propTypes = {
   logo: PropTypes.string.isRequired,
   GI: PropTypes.string.isRequired,
   fullTime: PropTypes.string.isRequired,
-  hardware: PropTypes.string.isRequired,
+  hardware: PropTypes.string.isRequired
 };
 
 SchoolCard.defaultProps = {
   schoolCity: null,
-  schoolState: null,
+  schoolState: null
 };
 
 export default SchoolCard;
