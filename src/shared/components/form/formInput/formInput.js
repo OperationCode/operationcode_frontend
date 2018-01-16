@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Label from 'shared/components/label/label';
@@ -9,7 +8,7 @@ class FormInput extends Component {
     super();
     this.state = {
       text: '',
-      isValid: true
+      isValid: true,
     };
   }
 
@@ -20,7 +19,7 @@ class FormInput extends Component {
         this.props.onChange(this.state.text, this.state.isValid);
       }
     });
-  }
+  };
 
   validate = (text) => {
     if (this.props.validateFunc) {
@@ -31,7 +30,7 @@ class FormInput extends Component {
       return true;
     }
     return false;
-  }
+  };
 
   revalidate() {
     const valid = this.validate(this.state.text);
@@ -65,7 +64,7 @@ FormInput.propTypes = {
   validationErrorMessage: PropTypes.string,
   validateFunc: PropTypes.func,
   onChange: PropTypes.func,
-  inputType: PropTypes.string
+  inputType: PropTypes.string,
 };
 
 FormInput.defaultProps = {
@@ -75,7 +74,7 @@ FormInput.defaultProps = {
   validationErrorMessage: null,
   validateFunc: null,
   onChange: null,
-  inputType: "text"
+  inputType: 'text',
 };
 
 export default FormInput;

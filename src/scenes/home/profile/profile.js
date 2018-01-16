@@ -8,35 +8,38 @@ import styles from './profile.css';
 const Profile = ({ verified }) => (
   <Section title="My Profile" theme="gray">
     <div className={verified ? styles.profileContainer_verified : styles.profileContainer}>
+
+      {verified && (
+        <div
+          className={
+            verified ? styles.profileContainer__cards_verified : styles.profileContainer__cards
+          }
+        >
+          <IconCard
+            title="Request a Mentor"
+            fontAwesomeIcon="FaLifeBouy"
+            url="https://op.co.de/mentor-request"
+          />
+
+          <IconCard
+            title="Check for Scholarships"
+            fontAwesomeIcon="FaGraduationCap"
+            url="/scholarships"
+          />
+        </div>
+      )}
+
       <div
         className={
           verified ? styles.profileContainer__cards_verified : styles.profileContainer__cards
         }
       >
-        <IconCard
-          title="Request a Mentor"
-          fontAwesomeIcon="FaLifeBouy"
-          url="https://op.co.de/mentor-request"
-        />
-
-        <IconCard
-          title="Check for Scholarships"
-          fontAwesomeIcon="FaGraduationCap"
-          url="/scholarships"
-        />
-
         <IconCard title="Check for Open Jobs" fontAwesomeIcon="FaBriefcase" url="/jobs" />
 
         <IconCard
           title="Enter our Slack Team"
           fontAwesomeIcon="FaSlack"
           url="https://operation-code.slack.com/"
-        />
-
-        <IconCard
-          title="Enter our Discourse Forum"
-          fontAwesomeIcon="FaCommentsO"
-          url="https://community.operationcode.org/"
         />
 
         <IconCard title="Update Info" fontAwesomeIcon="FaUser" url="/signup-info" />

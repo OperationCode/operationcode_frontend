@@ -82,9 +82,11 @@ class MentorRequest extends Component {
 
   render() {
     const { error, loggedIn, success } = this.state;
+
     if (!loggedIn) {
       return <Redirect to="/login" />;
     }
+
     return (
       <Section className={styles.mentorRequest} title="Mentor Service Request">
         { error && <div className={styles.mentorRequestError}>{error}</div> }
@@ -98,10 +100,16 @@ class MentorRequest extends Component {
           <div className={styles.formBlock}>
             <div className={styles.formElement}>
               <h2>Slack Name</h2>
-              <p>If you are on Slack, this will help us better serve you</p>
-              <FormInput id="slackName" placeholder="Slack username" onChange={this.onSlackNameChange} />
+              <p>Using Slack is required for mentorship.</p>
+              <FormInput
+                id="slackName"
+                placeholder="Slack username"
+                onChange={this.onSlackNameChange}
+              />
             </div>
+          </div>
 
+          <div className={styles.formBlock}>
             <div className={styles.formElement}>
               <h2>Service</h2>
               <p>Which one of our services would you like to book?</p>

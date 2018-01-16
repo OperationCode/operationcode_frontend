@@ -1,0 +1,61 @@
+.partners {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+
+.partnerLogos {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+  .partnerLogos > div {
+    margin: 0 50px;
+  }
+
+    .partnerLogos img {
+      height: 100px;
+      filter: grayscale(100%);
+      transition: .2s ease-in-out;
+    }
+
+    .partnerLogos img:hover {
+      filter: grayscale(0%);
+    }
+
+
+  @media screen and (max-width: 650px) {
+   
+    .partners {
+      width: 90%;
+      text-align: center;
+    }
+
+    .partnerLogos{
+      width: 90%;
+      justify-content: space-between;
+    }
+
+      .partnerLogos > div {
+        margin: 0;
+        width: 50%;
+        display: flex;
+        text-align: center;
+
+      }
+
+      .partnerLogos img {
+        width: 70%;
+        height: auto;
+        filter: grayscale(0);
+        margin: 0 auto;
+      }
+
+  }
+
+.contactUs {
+  text-align: center;
+}
