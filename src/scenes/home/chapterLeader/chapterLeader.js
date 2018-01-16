@@ -55,7 +55,6 @@ const chapterLeaders = () => (
           </a>
         </p>
       </div>
-
     </Section>
   </div>
 );
