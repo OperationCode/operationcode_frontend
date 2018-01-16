@@ -61,17 +61,12 @@ const LinkButton = ({
       );
     }
 
-    const onDevLinkButtonClick = () => {
-      console.log(`OUTBOUND [${text} Button Click] analytics event clicked`); // eslint-disable-line
-    };
-
     return (
       <a
         href={link}
         target="_blank"
         rel="noopener noreferrer"
         className={`${styles.linkButton} ${styles[theme]}`}
-        onClick={onDevLinkButtonClick}
       >
         {text}
       </a>

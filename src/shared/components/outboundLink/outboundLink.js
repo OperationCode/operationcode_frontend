@@ -19,17 +19,8 @@ const OutboundLink = ({ href, analyticsEventLabel, children }) => {
     );
   }
 
-  const onDevOutboundLinkClick = () => {
-    console.log(`OUTBOUND ${analyticsEventLabel} analytics event clicked`); // eslint-disable-line
-  };
-
   return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      onClick={onDevOutboundLinkClick}
-    >
+    <a href={href} target="_blank" rel="noopener noreferrer">
       {children}
     </a>
   );

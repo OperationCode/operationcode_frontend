@@ -25,17 +25,12 @@ const AdBanner = ({ link, imageSource, altText, adBannerText, clickText }) => {
     );
   }
 
-  const onDevAdBannerClick = () => {
-    console.log('OUTBOUND [AdBanner] analytics event clicked'); // eslint-disable-line
-  };
-
   return (
     <a
       href={link}
       target="_blank"
       rel="noopener noreferrer"
       className={styles.adBannerLink}
-      onClick={onDevAdBannerClick}
     >
       <div className={styles.adBanner}>
         <div className={styles.adBannerImage}>
