@@ -10,7 +10,7 @@ const OutboundLink = ({ href, analyticsEventLabel, children }) => {
     return (
       <ReactGA.OutboundLink
         to={href}
-        eventLabel={`OUTBOUND ${analyticsEventLabel} from ${location}`}
+        eventLabel={`OUTBOUND [${analyticsEventLabel}] from ${location}`}
         target="_blank"
         rel="noopener noreferrer"
       >
