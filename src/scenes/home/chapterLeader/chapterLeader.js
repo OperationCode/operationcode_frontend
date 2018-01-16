@@ -47,7 +47,7 @@ const chapterLeaders = () => (
         </ul>
         <p>Think you are interested in becoming a Chapter Leader? Click
           <a
-            href="http://op.co.de/chapter-leader-volunteer6"
+            href="http://op.co.de/chapter-leader-volunteer"
             target="_blank"
             rel="noopener noreferrer"
           >
