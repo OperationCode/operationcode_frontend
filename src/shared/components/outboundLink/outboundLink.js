@@ -4,7 +4,7 @@ import ReactGA from 'react-ga';
 
 const OutboundLink = ({ href, analyticsEventLabel, children }) => {
   if (process.env.NODE_ENV === 'production') {
-    // landing page is 25 characters including SSL
+    // https://operationcode.org is 25 characters - only show what follows
     const location = window.location.href.slice(25);
 
     return (

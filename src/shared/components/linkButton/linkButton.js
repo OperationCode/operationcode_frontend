@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { Link as ScrollLink } from 'react-scroll';
+import { Link as ScrollLink, Events as ScrollEvent } from 'react-scroll';
 import ReactGA from 'react-ga';
 import styles from './linkButton.css';
 
@@ -13,6 +13,9 @@ const LinkButton = ({
   isExternal,
   ...otherProps
 }) => {
+  /* ******************** */
+  /* SCROLL  LINK  BUTTON */
+  /* ******************** */
   if (scrollLink) {
     // Report scroll link button clicks to Google Analytics
     if (process.env.NODE_ENV === 'production') {
@@ -37,9 +40,12 @@ const LinkButton = ({
     );
   }
 
+  /* ******************** */
+  /* EXTERNAL LINK BUTTON */
+  /* ******************** */
   if (isExternal) {
     if (process.env.NODE_ENV === 'production') {
-      // landing page is 25 characters including SSL
+      // https://operationcode.org is 25 characters - only show what follows
       const location = window.location.href.slice(25);
 
       return (
@@ -72,6 +78,9 @@ const LinkButton = ({
     );
   }
 
+  /* ******************** */
+  /* INTERNAL LINK BUTTON */
+  /* ******************** */
   return (
     <Link
       className={`${styles.linkButton} ${styles[theme]}`}
