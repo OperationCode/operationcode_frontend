@@ -14,6 +14,16 @@ const LinkButton = ({
   ...otherProps
 }) => {
   if (scrollLink) {
+    // Report scroll link button clicks to Google Analytics
+    if (process.env.NODE_ENV === 'production') {
+      ScrollEvent.scrollEvent.register('begin', () => {
+        ReactGA.event({
+          category: 'Scroll Button Clicked',
+          action: `Clicked to view ${link} from ${window.location.pathname}`,
+        });
+      });
+    }
+
     return (
       <ScrollLink
         className={`${styles.linkButton} ${styles[theme]}`}
