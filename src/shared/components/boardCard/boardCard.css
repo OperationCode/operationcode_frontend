@@ -12,20 +12,23 @@
   padding: 1.5rem;
 }
 
-.boardCard:hover {
+.boardCard:hover,
+.boardCard:focus {
   box-shadow: 0 9px 28px rgba(0, 0, 0, 0.25);
   max-height: 650px;
   height: auto;
   transition: box-shadow 0.3s ease-in-out, max-height 0.3s ease-in-out;
 }
 
-.boardCard:hover .descriptionText {
+.boardCard:hover .descriptionText,
+.boardCard:active .descriptionText {
   opacity: 1;
   visibility: visible;
   transition: opacity 0.3s linear;
 }
 
-.boardCard:hover > img {
+.boardCard:hover > img,
+.boardCard:active > img {
   filter: grayscale(0%);
 }
 
