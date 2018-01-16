@@ -26,7 +26,7 @@ const AdBanner = ({ link, imageSource, altText, adBannerText, clickText }) => {
   }
 
   const onDevAdBannerClick = () => {
-    console.log(`OUTBOUND ${analyticsEventLabel} analytics event clicked`); // eslint-disable-line
+    console.log('OUTBOUND [AdBanner] analytics event clicked'); // eslint-disable-line
   };
 
   return (
