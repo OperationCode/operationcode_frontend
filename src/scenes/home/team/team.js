@@ -54,6 +54,7 @@ class Team extends Component {
 
         <Section title="Our Board" theme="white">
           <div className={styles.boardMembers}>{boardMembers}</div>
+          <div><p>Operation Code deeply appreciates the time, energy, and hard work of our Founding Board Members: Aimee Knight, Laura Gomez, Pete Runyon, Josh Carter, and Nick Frost. <em>Thank You</em> for setting us up for success!</p></div>
         </Section>
       </div>
     );

@@ -22,9 +22,11 @@ class PartnerSchools extends Component {
         margin1
       >
         <p>
-          Many code schools around the nation offer military/veterans discounts to make coding education more accessible to our veterans.
+          Many code schools around the nation offer military/veterans discounts
+          to make coding education more accessible to our veterans.
           <br />
-          We&apos;ve partnered up with those schools in order to help direct veterans to the best code schools around the country.
+          We&apos;ve partnered up with those schools in order to help direct
+          veterans to the best code schools around the country.
           <br />
           <br />
           <b>Apply for a scholarship with our partners now and get coding:</b>
@@ -133,9 +135,7 @@ class PartnerSchools extends Component {
           <p>
             Are you a code school seeking a partnership with Operation Code?
             <br />
-            <a href="mailto:staff@operationcode.org">
-              Reach out to us!
-            </a>
+            <a href="mailto:staff@operationcode.org">Reach out to us!</a>
           </p>
         </div>
       </Section>
