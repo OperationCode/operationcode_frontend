@@ -214,8 +214,7 @@ class SignupInformation extends Component {
         <div className={styles.buttonContainer}>
           <FormButton text="Go Back" onClick={this.previousPage} theme="blue" />
           <FormButton text="Save and Continue" onClick={this.saveAndContinue} theme="red" />
-          {this.state.error ? <ul className={styles.errorList}>There was an error saving your information, please try again.
-                              </ul> : null }
+          {this.state.error ? <ul className={styles.errorList}>There was an error saving your information, please try again.</ul> : null }
         </div>
       </Section>
     );

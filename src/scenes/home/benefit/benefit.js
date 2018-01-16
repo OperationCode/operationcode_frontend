@@ -197,7 +197,7 @@ const Benefit = () => (
           >
             Dan Shaw
           </a>,
-           {' '}
+          {' '}
           <a
             href="https://www.sabio.la/gi"
             target="_blank"
