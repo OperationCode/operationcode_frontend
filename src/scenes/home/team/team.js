@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import Section from 'shared/components/section/section';
 import QuoteBanner from 'shared/components/quoteBanner/quoteBanner';
 import TeamCard from 'shared/components/teamCard/teamCard';
@@ -8,14 +9,15 @@ import styles from './team.css';
 
 class Team extends Component {
   state = {
-    members: []
+    members: [],
   };
 
-  componentWillMount() {
-    return fetch('https://api.operationcode.org/api/v1/team_members.json').then(response =>
-      response.json().then((data) => {
-        this.setState({ members: data });
-      }));
+  componentDidMount() {
+    axios
+      .get('https://api.operationcode.org/api/v1/team_members.json')
+      .then((response) => {
+        this.setState({ members: response.data });
+      });
   }
 
   render() {
@@ -43,6 +45,21 @@ class Team extends Component {
           quote="To care for him who shall have borne the battle and for his widow, and his orphan."
         />
 
+        <Section title="Our Board" theme="white">
+          <div className={styles.boardMembers}>{boardMembers}</div>
+          <div className={styles.foundingMembers}>
+            <p>
+              Operation Code deeply appreciates the time, energy, and hard work
+              of our <b>Founding Board Members</b>: Aimee Knight, Laura Gomez,
+              Pete Runyon, Josh Carter, and Nick Frost.
+            </p>
+
+            <p style={{ textAlign: 'center' }}>
+              <em>Thank you for setting us up for success!</em>
+            </p>
+          </div>
+        </Section>
+
         <Section title="Our Team" theme="white">
           <p>
             Our all volunteer staff are dedicated individuals who come from a
@@ -50,11 +67,6 @@ class Team extends Component {
             and military community.
           </p>
           <div className={styles.team}>{team}</div>
-        </Section>
-
-        <Section title="Our Board" theme="white">
-          <div className={styles.boardMembers}>{boardMembers}</div>
-          <div><p>Operation Code deeply appreciates the time, energy, and hard work of our Founding Board Members: Aimee Knight, Laura Gomez, Pete Runyon, Josh Carter, and Nick Frost. <em>Thank You</em> for setting us up for success!</p></div>
         </Section>
       </div>
     );
