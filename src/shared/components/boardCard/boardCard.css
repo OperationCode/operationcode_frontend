@@ -1,5 +1,5 @@
 .boardCard {
-  max-height: 300px;
+  max-height: 275px;
   width: 250px;
   background: white;
   display: flex;
@@ -21,6 +21,7 @@
 
 .boardCard:hover .descriptionText {
   opacity: 1;
+  visibility: visible;
   transition: opacity 0.3s linear;
 }
 
@@ -54,6 +55,7 @@
 
 .descriptionText {
   opacity: 0;
+  visibility: hidden;
   align-self: left;
   padding: 1rem 0 0 0;
 }
