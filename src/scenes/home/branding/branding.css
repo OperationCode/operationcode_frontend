@@ -14,3 +14,8 @@
   color: #249cbc;
   text-decoration: none;
 }
+@media (min-width: 769px) and (max-width: 1025px) {
+  .brandingConatiner > .content{
+    width: 90%;
+  }
+}
