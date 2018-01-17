@@ -1,0 +1,83 @@
+.marginSpace{
+  margin: 5em 0;
+}
+.sectionPadding{
+  margin: 2em 0 0;
+  padding: 3em 0 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.sectionPadding:last-child{
+  border: none;
+}
+.logosInfo{
+  width: 60%;
+  font-size: 1.2rem;
+  text-align: justify;
+}
+.logoImages{
+  width: 100%;
+  text-align: center;
+}
+.smallLogos{
+  display: flex;
+  align-items: center;
+  flex-flow: row;
+}
+.stackLogos{
+  width: 50%;
+}
+.starLogos,
+.stackedLogos{
+  width: 33.33%;
+}
+.smallMedalLogos{
+  text-align: center;
+}
+.medalLogos{
+  margin: 1em;
+  display: inline-block;
+}
+.medalLogos img{
+  max-width: 130px;
+}
+.largeLogos{
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+}
+.largeLogos .stackLogos,
+.largeLogos .starLogos{
+  width: 625px;
+}
+.largeLogos .stackedLogos{
+  width: 460px;
+}
+.largeLogos img{
+  width: 100%;
+  max-width: 100%;
+}
+@media screen and (max-width: 500px) {
+  .logosInfo{
+    width: 100%;
+  }
+  .smallLogos{
+    flex-flow: column;
+  }
+  .smallLogos .stackLogos,
+  .smallLogos .starLogos,
+  .smallLogos .stackedLogos{
+    width: 100%;
+    max-width: 318px;
+  }
+  .medalLogos img{
+    max-width: 100%;
+  }
+  .largeLogos .stackLogos,
+  .largeLogos .starLogos{
+    width: 100%;
+  }
+  .largeLogos .stackedLogos{
+    width: 100%;
+  }
+}
