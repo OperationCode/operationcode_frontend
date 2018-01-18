@@ -30,7 +30,21 @@ class ApprovedSchools extends Component {
   }
 
   render() {
-    const vaSchools = this.state.vaSchools.map(school => (
+    // temporary until this is updated in the backend
+    const skillDistillery = {
+      name: 'Skill Distillery',
+      address: '7400 E Orchard Rd, Greenwood Village, CO 80111',
+      address1: '7400 E Orchard Rd, Greenwood Village, CO 80111',
+      link: 'http://skilldistillery.com/',
+      schoolCity: 'Greenwood Village',
+      schoolState: 'Colorado',
+      va_accepted: true,
+      full_time: true,
+      hardware_included: false,
+      logo: 'https://image.ibb.co/jGx5P6/untitled_3.png'
+    };
+
+    const vaSchools = [...this.state.vaSchools, skillDistillery].map(school => (
       <SchoolCard
         key={`${Math.random()} + ${school.name} + ${school.address}`}
         alt={school.name}
