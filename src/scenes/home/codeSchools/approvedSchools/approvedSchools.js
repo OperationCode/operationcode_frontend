@@ -41,7 +41,7 @@ class ApprovedSchools extends Component {
       va_accepted: true,
       full_time: true,
       hardware_included: false,
-      logo: 'https://image.ibb.co/jGx5P6/untitled_3.png'
+      logo: 'https://user-images.githubusercontent.com/28678836/35170180-4a970a28-fd2d-11e7-8e78-825a727f5232.png'
     };
 
     const vaSchools = [...this.state.vaSchools, skillDistillery].map(school => (
