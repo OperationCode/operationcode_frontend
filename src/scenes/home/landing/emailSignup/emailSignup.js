@@ -72,7 +72,7 @@ class EmailSignup extends Component {
           </div>
           {this.state.error && (
             <ul className={styles.errorList}>
-              There was an error joining Operation Code:
+              There was an error joining the mailing list:
               <li className={styles.errorMessage}>{this.state.error}</li>
             </ul>
           )}

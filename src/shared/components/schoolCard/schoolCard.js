@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import OutboundLink from 'shared/components/outboundLink/outboundLink';
 import styles from './schoolCard.css';
 
 const SchoolCard = ({
@@ -14,42 +15,44 @@ const SchoolCard = ({
   schoolName,
   schoolState,
 }) => (
-  <div className={styles.schoolCard}>
-    <div className={styles.schoolCardImage}>
-      <a href={link} target="_blank" rel="noopener noreferrer">
+  <OutboundLink
+    href={link}
+    analyticsEventLabel={`User clicked on <SchoolCard> ${schoolName} - ${schoolCity} location`}
+    className={styles.schoolCardLink}
+  >
+    <div className={styles.schoolCard}>
+      <div className={styles.schoolCardImage}>
         <img src={logo} alt={alt} className={styles.logo} />
-      </a>
-    </div>
+      </div>
 
-    <div className={styles.schoolText}>
-      <p>
-        <span className={styles.schoolName}>
-          <a href={link} target="_blank" rel="noopener noreferrer">
-            {schoolName}
-          </a>
-        </span>
-        <br />
-        <span className={styles.schoolLocation}>
-          {schoolAddress.includes('Online')
-            ? `Online Available ${<br />}`
-            : null}
-          {schoolCity}
-          {schoolCity ? ', ' : null}
-          {schoolState}
-          {schoolState ? <br /> : null}
+      <div className={styles.schoolText}>
+        <p>
+          <span className={styles.schoolName}>{schoolName}</span>
           <br />
-        </span>
-      </p>
+          <span className={styles.schoolLocation}>
+            {schoolAddress.includes('Online') ? (
+              <text>
+                Online Available<br />
+              </text>
+            ) : null}
+            {schoolCity}
+            {schoolCity ? ', ' : null}
+            {schoolState}
+            {schoolState ? <br /> : null}
+            <br />
+          </span>
+        </p>
 
-      <p className={styles.schoolInfo}>
-        GI Bill Accepted: <b>{GI}</b>
-        <br />
-        Commitment: <b>{fullTime}</b>
-        <br />
-        Hardware Included: <b>{hardware}</b>
-      </p>
+        <p className={styles.schoolInfo}>
+          GI Bill Accepted: <b>{GI}</b>
+          <br />
+          Commitment: <b>{fullTime}</b>
+          <br />
+          Hardware Included: <b>{hardware}</b>
+        </p>
+      </div>
     </div>
-  </div>
+  </OutboundLink>
 );
 
 SchoolCard.propTypes = {

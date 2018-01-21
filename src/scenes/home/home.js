@@ -34,6 +34,7 @@ import Challenge from './challenge/challenge';
 import SignupInformation from './informationForm/informationForm';
 import Benefit from './benefit/benefit';
 import Terms from './termsOfService/termsOfService';
+import ChapterLeader from './chapterLeader/chapterLeader';
 import styles from './home.css';
 
 const ReactToastr = require('react-toastr');
@@ -191,6 +192,7 @@ class Home extends Component {
             <Route path="/signup-info" component={SignupInformation} />
             <Route path="/challenge" component={Challenge} />
             <Route path="/terms" component={Terms} />
+            <Route path="/chapter_leader" component={ChapterLeader} />
             <Route path="/leadership_circle" component={LeadershipCircle} />
             <Route
               exact
@@ -206,6 +208,7 @@ class Home extends Component {
             <Route exact path="/scholarships" component={Scholarships} />
             <Route path="/benefit" render={() => <Benefit {...authProps} />} />
             <Route path="/gala" render={() => <Benefit {...authProps} />} />
+
             {/* eslint-disable */}
             <Route
               path="/newgibill"
@@ -214,6 +217,7 @@ class Home extends Component {
                   'http://www.benefits.va.gov/gibill/post911_gibill.asp')}
             />
             {/* eslint-enable */}
+
             <Route
               path="/login"
               render={() => (

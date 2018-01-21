@@ -138,7 +138,10 @@ class Login extends Component {
           }
         })
         .catch((error) => {
-          this.props.sendNotification('error', 'Error', 'We will investigate this issue!');
+          if (_.get(error, ['response', 'status'], -1) !== 401) {
+            this.props.sendNotification('error', 'Error', 'We will investigate this issue!');
+          }
+
           this.setErrorMessage(error);
         });
     }

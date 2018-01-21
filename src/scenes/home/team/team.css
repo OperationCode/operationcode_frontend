@@ -1,3 +1,14 @@
+.boardMembers {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.foundingMembers {
+  padding: 2rem 0 0 0;
+}
+
 .team {
   display: flex;
   flex-wrap: wrap;
@@ -6,9 +17,10 @@
   justify-content: center;
 }
 
-.boardMembers {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
+@media screen and (max-width: 850px) {
+  .boardMembers {
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
