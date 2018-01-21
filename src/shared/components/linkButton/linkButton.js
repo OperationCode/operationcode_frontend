@@ -45,13 +45,11 @@ const LinkButton = ({
   /* ******************** */
   if (isExternal) {
     if (process.env.NODE_ENV === 'production') {
-      // https://operationcode.org is 25 characters - only show what follows
-      const location = window.location.href.slice(25);
-
       return (
         <ReactGA.OutboundLink
           to={link}
-          eventLabel={`OUTBOUND [${text} Button Click] to ${link} from ${location}`}
+          eventLabel={`OUTBOUND [${text} Button Click] to ${link} from ${window
+            .location.pathname}`}
           target="_blank"
           rel="noopener noreferrer"
           className={`${styles.linkButton} ${styles[theme]}`}
