@@ -6,7 +6,7 @@ import LizaRodewald from 'images/liza_rodewald.png';
 import StacyChin from 'images/stacy_chin.png';
 import ConradHollomon from 'images/conrad_hollomon.jpg';
 import DavidMolina from 'images/david_molina.jpg';
-import imageUnkown from 'images/img_unk.png';
+import imageUnknown from 'images/img_unk.png';
 
 const Chair = {
   name: 'Dr. James Davis',
@@ -75,7 +75,7 @@ const Emeritus = {
   name: 'Mark Kerr',
   role: 'Chairman Emeritus',
   description: 'Member Ex Officio',
-  src: imageUnkown,
+  src: imageUnknown,
 };
 
 export default [
