@@ -19,8 +19,8 @@ const Partners = () => (
     </div>
 
     <div className={styles.partnerLogos}>
-      {partners.map(({ name, order, link, imgSource }) => (
-        <div key={order}>
+      {partners.map(({ name, link, imgSource }) => (
+        <div key={name}>
           <OutboundLink href={link} analyticsEventLabel={`[Partner] ${name}`}>
             <img src={imgSource} alt={name} />
           </OutboundLink>
