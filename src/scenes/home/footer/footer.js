@@ -26,6 +26,7 @@ const Footer = () => (
         <div className={styles.blockGroup} >
           <Link to="/about">About</Link>
           <Link to="/press">Press</Link>
+          <Link to="/branding">Branding</Link>
           <Link to="/faq">FAQ</Link>
           <Link to="/team">Team</Link>
         </div>

@@ -5,7 +5,7 @@ import styles from './pressBranding.css';
 function PressBranding() {
   return (
     <div className={styles.logos}>
-      <Link to="/branding">view our branding</Link>
+      <Link to="/branding">View Our Branding</Link>
     </div>
   );
 }

@@ -15,6 +15,11 @@
   font-size: 1.2rem;
   text-align: justify;
 }
+a{
+  color: #249cbc;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
 .logoImages{
   width: 100%;
   text-align: center;
