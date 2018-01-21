@@ -3,7 +3,7 @@ import Section from 'shared/components/section/section';
 import LinkButton from 'shared/components/linkButton/linkButton';
 import YouTube from 'shared/components/youtubeVideo/youtubeVideo';
 import SabioLogo from '../../../images/codeSchoolLogos/sabio.png';
-import CodeFellowsLogo from '../../../images/codeSchoolLogos/codefellows_small.png';
+import codeFellowsLogo from '../../../images/codeSchoolLogos/codefellows_small.png';
 import NodejsLogo from './logos/NodeSummitSF_ColorLogoWeb.jpg';
 import srvdLogo from './logos/srvd.png';
 import ebayLogo from './logos/320px-EBay_logo.png';
@@ -197,7 +197,7 @@ const Benefit = () => (
           >
             Dan Shaw
           </a>,
-           {' '}
+          {' '}
           <a
             href="https://www.sabio.la/gi"
             target="_blank"
@@ -255,7 +255,7 @@ const Benefit = () => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className={styles.logoLong} src={CodeFellowsLogo} alt="Code Fellows" />
+            <img className={styles.logoLong} src={codeFellowsLogo} alt="Code Fellows" />
           </a>
           <a
             href="https://secureset.com/"
