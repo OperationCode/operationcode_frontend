@@ -8,7 +8,11 @@
   height: 150px;
   background: #fff;
   box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.schoolCardLink {
+  text-decoration: none;
 }
 
 .schoolCard p {
@@ -17,7 +21,7 @@
 }
 
 .schoolCard:hover {
-   box-shadow: 0 14px 28px rgba(0,0,0,0.25);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25);
 }
 
 .schoolCardImage {
@@ -43,10 +47,6 @@
 .schoolName {
   font-weight: 800;
   font-size: 1.4rem;
-}
-
-.schoolName a {
-  text-decoration: none;
 }
 
 .schoolLocation {

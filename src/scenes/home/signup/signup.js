@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
 import * as CookieHelpers from 'shared/utils/cookieHelper';
 import Form from 'shared/components/form/form';
 import FormEmail from 'shared/components/form/formEmail/formEmail';
@@ -12,8 +13,8 @@ import Section from 'shared/components/section/section';
 import config from 'config/environment';
 import styles from './signup.css';
 
-class SignUp extends Component {
 
+class SignUp extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -69,7 +70,9 @@ class SignUp extends Component {
     this.setState({ isLoading: true });
 
     if (this.isFormValid()) {
-      const { email, zip, password, firstName, lastName, identifier } = this.state;
+      const {
+        email, zip, password, firstName, lastName, identifier
+      } = this.state;
       axios.post(`${config.backendUrl}/users`, {
         user: {
           first_name: firstName,
@@ -93,6 +96,7 @@ class SignUp extends Component {
             }
           });
         }
+        this.props.sendNotification('error', 'Error', 'Please try registering again. Contact one of our staff if this problem persists.');
         this.setState({ error: errorMessage, isLoading: false });
       });
     } else {
@@ -117,10 +121,12 @@ class SignUp extends Component {
       <Section className={styles.signup} title="Join Operation Code">
         <Form className={styles.signupForm}>
           <span>
-            Are you ready to deploy your future?  Join Operation Code
-            today and launch your career in software development.
-            Once you complete the form below you&#8217;ll be invited
-            to join our team on Slack and the <a href="https://community.operationcode.org/" target="_blank" rel="noopener noreferrer">forums</a>.  Make sure you stop in and say hi!
+            Are you ready to deploy your future? Our community supports veterans
+            transitioning into the tech industry, but we welcome family members,
+            tech professionals, volunteers and sponsors. Join Operation Code today
+            and launch your career in tech. Once you complete the form below,
+            you&#8217;ll be invited to join our team on Slack. Make sure you stop
+            in and say hi!
           </span>
           <FormEmail
             id="email" placeholder="Email (Required)"
@@ -161,14 +167,19 @@ class SignUp extends Component {
             validationErrorMessage="Passwords must match"
             ref={(child) => { this.passwordConfirmRef = child; }}
           />
-          {this.state.error ? <ul className={styles.errorList}>There was an error joining Operation Code:
+          {this.state.error &&
+          <ul className={styles.errorList}>There was an error joining Operation Code:
             <li className={styles.errorMessage}>{this.state.error}</li>
-          </ul> : null }
+          </ul>}
           {this.state.isLoading ? <FormButton className={styles.joinButton} text="Loading..." disabled theme="grey" /> : <FormButton className={styles.joinButton} text="Join" onClick={this.handleOnClick} theme="red" />}
         </Form>
       </Section>
     );
   }
 }
+
+SignUp.propTypes = {
+  sendNotification: PropTypes.func.isRequired
+};
 
 export default SignUp;

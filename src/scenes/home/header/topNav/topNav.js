@@ -1,16 +1,12 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './topNav.css';
 
-class TopNav extends PureComponent {
-  render() {
-    return (
-      <div className={styles.topNav} >
-        {this.props.children}
-      </div>
-    );
-  }
-}
+const TopNav = ({ children }) => (
+  <div className={styles.topNav} >
+    {children}
+  </div>
+);
 
 TopNav.propTypes = {
   children: PropTypes.node.isRequired

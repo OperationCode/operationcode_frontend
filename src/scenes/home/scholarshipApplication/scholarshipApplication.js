@@ -19,11 +19,11 @@ class ScholarshipApplication extends Component {
   }
 
   componentWillMount() {
-    const id = this.props.match.params.id;
+    const { id } = this.props.match.params;
     getScholarship(id).then((data) => {
       this.setState({ scholarship: data });
     }).catch((failed) => {
-      const error = failed.response.data.error;
+      const { error } = failed.response.data;
       this.setState({ error });
     });
   }

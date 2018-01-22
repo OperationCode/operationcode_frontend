@@ -1,0 +1,42 @@
+.imageListItem {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 15px;
+}
+
+.cardImage {
+  margin: 15px;
+  border-radius: 50%;
+  border: 3px solid #41a4c0;
+  width: 150px;
+  max-width: 150px;
+  height: 150px;
+  max-height: 150px;
+  flex: 1 0 auto;
+}
+
+.cardText {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  margin: 15px;
+}
+
+.cardText > p {
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.cardTitle {
+  font-size: 1.7rem;
+}
+
+/* Vertical space between cards for vertical layout */
+@media screen and (max-width: 650px) {
+  .imageListItem {
+    flex-flow: row wrap;
+  }
+}

@@ -14,7 +14,7 @@ class JumboQuote extends Component {
 
   componentDidMount() {
     if (quotes.quotes.length > 0) {
-      const randomQuoteID = Math.floor(Math.random() * quotes.quotes.length)
+      const randomQuoteID = Math.floor(Math.random() * quotes.quotes.length);
 
       this.setState({
         quote: quotes.quotes[randomQuoteID]
