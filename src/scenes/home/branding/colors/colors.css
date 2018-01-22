@@ -1,17 +1,21 @@
-.colorPalette{
+.colorPalette {
   text-align: center;
   margin: 3em 0;
 }
-.colorPalette:last-child{
+
+.colorPalette:last-child {
   margin-top: 0em;
 }
-.colorImages{
+
+.colorImages {
   display: inline-block;
   margin: 1em;
 }
-.colorImages img{
+
+.colorImages img {
   max-width: 300px;
 }
-.colorImages p{
+
+.colorImages p {
   text-align: left;
 }

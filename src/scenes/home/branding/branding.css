@@ -1,21 +1,11 @@
-.brandingConatiner{
+.brandingConatiner {
   width: 100%;
   height: 100%;
   background-color: #f0f2f2;
 }
-.brandingFonts{
-  text-align: center;
-  margin: 3em 0;
-}
-.brandingFonts img{
-  max-width: 90%;
-}
-.brandingFonts a{
-  color: #249cbc;
-  text-decoration: none;
-}
+
 @media (min-width: 769px) and (max-width: 1025px) {
-  .brandingConatiner > .content{
+  .brandingConatiner > .content {
     width: 90%;
   }
 }
