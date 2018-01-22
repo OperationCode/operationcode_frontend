@@ -35,6 +35,7 @@ const Footer = () => (
           <a href="https://smile.amazon.com/ch/47-4247572" target="_blank" rel="noopener noreferrer">Amazon Smile</a>
           <Link to="/contact">Contact</Link>
           <a href="https://www.iubenda.com/privacy-policy/8174861" target="_blank" rel="noopener noreferrer">Privacy</a>
+          <Link to="/terms">Terms of Service</Link>
         </div>
         <ScrollUpButton />
       </div>
