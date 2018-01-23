@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@storybook/addon-actions": "^3.2.11",
-    "@storybook/addon-links": "^3.2.10",
-    "@storybook/cli": "^3.2.10",
-    "@storybook/react": "^3.2.11",
+    "@storybook/addon-actions": "^3.4.0-alpha.5",
+    "@storybook/addon-links": "^3.4.0-alpha.5",
+    "@storybook/cli": "^3.4.0-alpha.5",
+    "@storybook/react": "^3.4.0-alpha.5",
     "axios": "^0.16.1",
     "classnames": "^2.2.5",
     "dateformat": "^2.0.0",
@@ -73,7 +73,7 @@
     "prettier-eslint-cli": "^4.4.0",
     "promise": "7.1.1",
     "react-dev-utils": "^3.0.0",
-    "snyk": "^1.42.3",
+    "snyk": "^1.69.1",
     "style-loader": "0.13.1",
     "sw-precache-webpack-plugin": "0.9.1",
     "url-loader": "0.5.7",
@@ -96,16 +96,9 @@
     "validate": "npm ls"
   },
   "jest": {
-    "moduleDirectories": [
-      "node_modules",
-      "src"
-    ],
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx}"
-    ],
-    "setupFiles": [
-      "<rootDir>/config/polyfills.js"
-    ],
+    "moduleDirectories": ["node_modules", "src"],
+    "collectCoverageFrom": ["src/**/*.{js,jsx}"],
+    "setupFiles": ["<rootDir>/config/polyfills.js"],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.js?(x)",
       "<rootDir>/src/**/?(*.)(spec|test).js?(x)"
@@ -117,22 +110,14 @@
       "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
       "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
     },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
-    ],
+    "transformIgnorePatterns": ["[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"],
     "moduleNameMapper": {
       "^react-native$": "react-native-web"
     }
   },
   "babel": {
-    "presets": [
-      "react-app"
-    ]
+    "presets": ["react-app"]
   },
   "homepage": "http://frontend.operationcode.org/",
-  "pre-commit": [
-    "fix",
-    "format",
-    "lint"
-  ]
+  "pre-commit": ["fix", "format", "lint"]
 }
