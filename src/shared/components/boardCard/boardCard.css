@@ -17,14 +17,14 @@
   box-shadow: 0 9px 28px rgba(0, 0, 0, 0.25);
   max-height: 650px;
   height: auto;
-  transition: box-shadow 0.3s ease-in-out, max-height 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, max-height 0.2s ease-in-out;
 }
 
 .boardCard:hover .descriptionText,
 .boardCard:active .descriptionText {
   opacity: 1;
   visibility: visible;
-  transition: opacity 0.3s linear;
+  transition: opacity 0.8s ease-in-out;
 }
 
 .boardCard:hover > img,
