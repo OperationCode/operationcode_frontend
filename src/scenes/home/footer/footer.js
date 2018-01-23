@@ -8,7 +8,7 @@ import styles from './footer.css';
 const Footer = () => (
   <div className={styles.footer}>
     <div className={styles.content}>
-      <div className={styles.outerFooterGroups}>
+      <div className={styles.outerFooterGroupSocial}>
         <div className={styles.email} >
           <a href="mailto:contact@operationcode.org">contact@operationcode.org</a>
         </div>
@@ -22,7 +22,7 @@ const Footer = () => (
           Operation Code™
         </p>
       </div>
-      <div className={styles.outerFooterGroups}>
+      <div className={styles.outerFooterGroupLinks}>
         <div className={styles.blockGroup} >
           <Link to="/about">About</Link>
           <Link to="/press">Press</Link>

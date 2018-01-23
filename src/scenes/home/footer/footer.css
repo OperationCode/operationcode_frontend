@@ -12,8 +12,17 @@
   height: 100%;
 }
 
-/* outerFooterGroups class represents the NON logo columns of the footer flex container */
-.outerFooterGroups {
+/* outerFooterGroup class represents the NON logo columns of the footer flex container */
+.outerFooterGroupLinks {
+  display: flex;
+  flex: 1 0 30%;
+  flex-flow: row wrap;
+  padding: 64px 0;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+}
+.outerFooterGroupSocial {
   display: flex;
   flex: 1 0 30%;
   flex-flow: column wrap;
@@ -49,15 +58,15 @@
 .blockGroup {
   display: flex;
   flex: 1 0 50%;
-  flex-flow: row wrap;
-  align-items: center;
+  flex-flow: column wrap;
+  align-items: flex-start;
   justify-content: space-around;
 }
 
 .blockGroup a {
   text-decoration: none;
   color: #F7F7F7;
-  padding: 0 30px;
+  margin: 5px 0px;
 }
 
 .blockGroup a:hover {
@@ -78,7 +87,8 @@
 }
 
 @media screen and (max-width: 1330px) {
-  .outerFooterGroups {
+  .outerFooterGroupSocial,
+  .outerFooterGroupLinks {
     flex: 1 0 35%;
   }
 
@@ -101,6 +111,10 @@
   .logo > p {
     font-size: 0.7rem;
   }
+
+  .blockGroup {
+    font-size: 1.2rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -110,12 +124,12 @@
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
-  .outerFooterGroups {
-    padding: 32px 0;
+  .outerFooterGroupSocial,
+  .outerFooterGroupLinks {
+    padding: 10px 0;
   }
 
   .blockGroup {
-    flex-direction: column;
     height: 100%;
   }
 }
@@ -132,7 +146,7 @@
 
 @media screen and (max-width: 480px) {
   .footer {
-    height: 500px;
+    height: 550px;
     padding: 0 16px;
   }
 
@@ -140,7 +154,8 @@
     display: block;
   }
 
-  .outerFooterGroups {
+  .outerFooterGroupSocial,
+  .outerFooterGroupLinks {
     justify-content: center;
     flex: 1 0 auto;
     padding: 20px 0;
@@ -160,10 +175,7 @@
   }
 
   .blockGroup a {
-    padding: 10px 10px;
+    padding: 0px 0px 0px 30px;
   }
 
-  .blockGroup ~ .blockGroup {
-    margin-top: 10px;
-  }
 }
