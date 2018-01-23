@@ -13,7 +13,7 @@ class MentorRequest extends Component {
   state = {
     mentors: [],
     services: [],
-    loggedIn: true
+    loggedIn: false
   };
 
   componentDidMount() {
