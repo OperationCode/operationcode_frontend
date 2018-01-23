@@ -2,30 +2,27 @@
 const path = require('path');
 const fs = require('fs');
 
-let fileArray = [];
-
-const read = dir =>
+const readImageDirectory = dir =>
   fs
     .readdirSync(dir)
     .reduce(
-      (files, file) =>
-        fs.statSync(path.join(dir, file)).isDirectory()
-          ? files.concat(read(path.join(dir, file)))
-          : files.concat(path.join(dir, file)),
-      []
+    (files, file) =>
+      fs.statSync(path.join(dir, file)).isDirectory()
+        ? files.concat(readImageDirectory(path.join(dir, file)))
+        : files.concat(path.join(dir, file)),
+    []
     )
     .filter(file => typeof file === 'string')
-    .map(image => {
-      if (fs.lstatSync(image).size > 1000000) {
-        fileArray.push(image);
-      }
+    .filter(image => {
+      fs.lstatSync(image).size > 1000000;
     });
 
-read('src/images/');
+const fileArray = readImageDirectory('src/images/');
 
-if (fileArray.length > 0) {
+if (fileArray.length) {
   console.log(`The following image(s) are over our 1MB size limit: ${fileArray}`);
   process.exit(-1);
 } else {
+  console.log('Test successful 💪 💪 💪 💪 💪 💪');
   process.exit(0);
 }
