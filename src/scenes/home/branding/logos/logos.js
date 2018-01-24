@@ -36,7 +36,7 @@ const LogosSection = () => (
       In most cases, use the blue-accent version of the logo. The red-accent is
       delivered for special uses only.
     </p>
-    <p>
+    <p className={styles.logosInfo}>
       <a href="https://ocbranding.squarespace.com/s/Operation-Code-Logo.eps">
         Download master EPS file
       </a>
