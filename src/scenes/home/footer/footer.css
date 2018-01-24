@@ -3,6 +3,7 @@
   height: 250px;
   padding: 0 20px;
   position: relative;
+  font-size: 1.1rem;
 }
 
 .content {
@@ -12,7 +13,7 @@
   height: 100%;
 }
 
-/* outerFooterGroup class represents the NON logo columns of the footer flex container */
+/* outerFooterGroup classes represent the NON logo columns of the footer flex container */
 .outerFooterGroupLinks {
   display: flex;
   flex: 1 0 30%;
@@ -61,12 +62,14 @@
   flex-flow: column wrap;
   align-items: flex-start;
   justify-content: space-around;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .blockGroup a {
   text-decoration: none;
   color: #F7F7F7;
-  margin: 5px 0px;
+  margin: 0.75rem 0px;
 }
 
 .blockGroup a:hover {
@@ -111,42 +114,11 @@
   .logo > p {
     font-size: 0.7rem;
   }
-
-  .blockGroup {
-    font-size: 1.2rem;
-  }
 }
 
 @media screen and (max-width: 768px) {
-  .logo > p {
-    font-size: 0.5rem;
-  }
-}
-
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  .outerFooterGroupSocial,
-  .outerFooterGroupLinks {
-    padding: 10px 0;
-  }
-
-  .blockGroup {
-    height: 100%;
-  }
-}
-
-@media screen and (max-width: 616px) {
-  .email {
-    font-size: 0.8rem;
-  }
-
-  .blockRow a {
-    padding: 10px 10px;
-  }
-}
-
-@media screen and (max-width: 480px) {
   .footer {
-    height: 550px;
+    height: 600px;
     padding: 0 16px;
   }
 
@@ -158,7 +130,7 @@
   .outerFooterGroupLinks {
     justify-content: center;
     flex: 1 0 auto;
-    padding: 20px 0;
+    padding: 5px 0px;
   }
 
   .email {
@@ -175,7 +147,23 @@
   }
 
   .blockGroup a {
-    padding: 0px 0px 0px 30px;
+    padding: 0px 0px 0px 6rem;
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 616px) {
+  .blockRow a {
+    padding: 10px 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .blockGroup a {
+    padding-left: 3rem;
   }
 
+  .footer {
+    padding-bottom: 50px;
+  }
 }
