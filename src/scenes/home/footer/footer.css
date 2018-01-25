@@ -1,6 +1,6 @@
 .footer {
-  background-color: #4A4A4A;
-  height: 250px;
+  background-color: #4a4a4a;
+  height: 300px;
   padding: 0 20px;
   position: relative;
   font-size: 1.1rem;
@@ -39,7 +39,7 @@
 }
 
 .email a {
-  color: #F7F7F7;
+  color: #f7f7f7;
   text-align: center;
   text-decoration: none;
 }
@@ -68,7 +68,7 @@
 
 .blockGroup a {
   text-decoration: none;
-  color: #F7F7F7;
+  color: #f7f7f7;
   margin: 0.75rem 0px;
 }
 
@@ -78,7 +78,7 @@
 }
 
 .copyright {
-  color:#F7F7F7;
+  color: #f7f7f7;
   font-size: inherit;
   font-family: 'PF Din Display';
   text-align: center;
@@ -106,7 +106,7 @@
   }
 }
 
-@media screen and (min-width: 481px) and (max-width: 979px) {
+@media screen and (min-width: 481px) and (max-width: 1100px) {
   .logo > img {
     height: 100px;
   }
@@ -118,8 +118,8 @@
 
 @media screen and (max-width: 768px) {
   .footer {
-    height: 600px;
-    padding: 0 16px;
+    height: 700px;
+    padding: 2rem 1rem 1rem 1rem;
   }
 
   .content {
@@ -138,8 +138,18 @@
     margin-bottom: 10px;
   }
 
+  .logo {
+    margin: 1rem 0;
+  }
+
+  .copyright {
+    margin: 0;
+  }
+
   .logo img {
     height: 100px;
+    line-height: 1.5;
+    margin: 0 0 1rem 0;
   }
 
   .blockGroup {
@@ -155,6 +165,10 @@
 @media screen and (max-width: 616px) {
   .blockRow a {
     padding: 10px 10px;
+  }
+
+  .footer {
+    height: 650px;
   }
 }
 
