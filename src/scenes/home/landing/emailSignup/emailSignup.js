@@ -63,7 +63,7 @@ class EmailSignup extends Component {
         headingLines={false}
       >
         <p className={styles.emailSignupText}>
-          Keep up to date with everything Operation Code. We proimse we won&#39;t spam you or sell
+          Keep up to date with everything Operation Code. We promise we won&#39;t spam you or sell
           your information.
         </p>
         <Form className={styles.emailListForm}>
