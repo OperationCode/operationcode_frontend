@@ -31,6 +31,7 @@ class Team extends Component {
 
     const boardMembers = BoardMembers.map(boardMember => (
       <BoardCard
+        key={`${Math.random()} + ${boardMember.name}`}
         name={boardMember.name}
         role={boardMember.role}
         description={boardMember.description}
