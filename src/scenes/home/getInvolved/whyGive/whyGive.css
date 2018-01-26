@@ -1,0 +1,60 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin: 5vw;
+}
+
+.half {
+  width:50%;
+}
+
+@media (max-width:500px){
+  .half{
+    width:100%;
+  }
+}
+@media (max-width:800px){
+  .half{
+    width:40%;
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    margin: 2vw;
+  }
+  li.check{
+    margin-top: 80px;
+    line-height: normal;
+  }
+}
+
+ul{
+  list-style-type: none;
+  padding:0;
+}
+
+li.check{
+  background: url('../check.svg') no-repeat;
+  height:40px;
+  padding-left:45px;
+  margin-top: 20px;
+  line-height: normal;
+}
+
+li.check:first-child{
+  margin-top:0;
+}
+
+.button {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
