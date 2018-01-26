@@ -18,10 +18,8 @@
   display: flex;
   flex: 1 0 30%;
   flex-flow: row wrap;
-  padding: 64px 0;
   justify-content: flex-start;
   align-items: center;
-  overflow: hidden;
 }
 .outerFooterGroupSocial {
   display: flex;
@@ -30,7 +28,6 @@
   padding: 64px 0;
   justify-content: space-around;
   align-items: center;
-  overflow: hidden;
 }
 
 .email {
