@@ -63,3 +63,14 @@
   align-self: left;
   padding: 1rem 0 0 0;
 }
+
+@media screen and (max-width: 850px) {
+  .boardCard {
+    max-height: 650px;
+  }
+
+  .descriptionText {
+    opacity: 1;
+    visibility: visible;
+  }
+}
