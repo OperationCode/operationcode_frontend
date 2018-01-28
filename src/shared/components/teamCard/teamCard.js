@@ -8,15 +8,11 @@ const TeamCard = ({ name, role, email, slack }) => (
       {name}
     </span>
     <hr />
-    <span className={styles.role}>
-      {role}
-    </span>
-    <span className={styles.email}>
-      {email}
-    </span>
-    <span className={styles.slack}>
-      {slack}
-    </span>
+    <ul>
+      <li className={styles.role}>{role}</li>
+      <li className={styles.slack}>{slack}</li>
+      <li className={styles.email}>{email}</li>
+    </ul>
   </div>
 );
 
