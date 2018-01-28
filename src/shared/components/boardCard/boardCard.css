@@ -67,6 +67,17 @@
 @media screen and (max-width: 850px) {
   .boardCard {
     max-height: 650px;
+    transition: none;
+  }
+
+  .boardCard:hover,
+  .boardCard:focus {
+    transition: none;
+  }
+  
+  .boardCard:hover .descriptionText,
+  .boardCard:active .descriptionText {
+    transition: none;
   }
 
   .descriptionText {
