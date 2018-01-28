@@ -64,7 +64,7 @@
   padding: 1rem 0 0 0;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 450px) {
   .boardCard {
     max-height: 650px;
     transition: none;
