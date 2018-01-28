@@ -1,16 +1,9 @@
-ul {
-  list-style-type:none;
-  text-align: center;
-}
-
 .teamCard {
   border-radius: 4px;
   align-items: center;
   text-align: center;
-  margin: 20px 10px;
-  /*Width and height affect Lincoln Photo*/
+  margin: 20px 10px;o*/
   padding: 10px;
-  /*width: 185px;*/
   width: 250px;
   height: 110px;
   background: #F0F2F2;
