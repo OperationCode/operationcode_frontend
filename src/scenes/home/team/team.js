@@ -64,7 +64,7 @@ class Team extends Component {
             </p>
           </div>
         </Section>
-        <Section title="Our Executive Team" theme="white">
+        <Section title="Our Executive Staff" theme="white">
           <p>
             Our all volunteer staff are dedicated individuals who come from a
             wide variety of backgrounds, including members of both the civilian
