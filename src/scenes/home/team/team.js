@@ -27,10 +27,10 @@ class Team extends Component {
     const team = this.state.members.map(member => (
       <TeamCard
         key={`${Math.random()} + ${member.name}`}
-        slack={member.slack}
-        email={member.email}
         name={member.name}
         role={member.role}
+        email={member.email}
+        slack={member.slack}
       />
     ));
 
