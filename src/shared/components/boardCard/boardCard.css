@@ -24,7 +24,8 @@
 .boardCard:active .descriptionText {
   opacity: 1;
   visibility: visible;
-  transition: opacity 0.3s linear;
+  transition: opacity 0.3s ease-in-out;
+  transition-delay: 0.2s;
 }
 
 .boardCard:hover > img,

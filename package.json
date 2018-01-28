@@ -93,7 +93,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "backend": "./bin/run_backend.sh",
-    "validate": "npm ls"
+    "validate": "npm ls",
+    "image-size": "node scripts/imageSize.js"
   },
   "jest": {
     "moduleDirectories": ["node_modules", "src"],
@@ -119,5 +120,5 @@
     "presets": ["react-app"]
   },
   "homepage": "http://frontend.operationcode.org/",
-  "pre-commit": ["fix", "format", "lint"]
+  "pre-commit": ["fix", "format", "lint", "image-size"]
 }
