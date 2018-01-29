@@ -3,7 +3,7 @@ import { Route, Router } from 'react-router';
 import ReactGA from 'react-ga';
 import createHistory from 'history/createBrowserHistory';
 import ScrollToTop from 'shared/components/scrollToTop/scrollToTop';
-import AllRoutes from './scenes/router/allRoutes';
+import AllRoutes from './scenes/allRoutes/allRoutes';
 
 const history = createHistory();
 ReactGA.initialize('UA-75642413-1');
