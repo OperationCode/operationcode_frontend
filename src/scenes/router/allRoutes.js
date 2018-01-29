@@ -129,7 +129,7 @@ class AllRoutes extends Component {
     };
 
     const classes = classNames({
-      [`${styles.router}`]: true,
+      [`${styles.allRoutes}`]: true,
       [`${styles[this.state.bgImageStyle]}`]: this.state.bgImage,
     });
     return (
