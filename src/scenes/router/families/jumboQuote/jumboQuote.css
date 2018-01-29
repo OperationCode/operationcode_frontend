@@ -1,0 +1,15 @@
+
+.quotes {
+  color: #445366;
+}
+.quoteBody {
+  text-align: center;
+  color: #445366;
+}
+.quoteAuthor {
+  text-align: right;
+  color: #445366;
+}
+.quoteIcon {
+  vertical-align: top;
+}

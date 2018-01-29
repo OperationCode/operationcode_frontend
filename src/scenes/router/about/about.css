@@ -1,0 +1,28 @@
+.serviceSealWrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 85%;
+}
+
+.serviceSeal {
+  height: 100px;
+  width: 100px;
+  padding: 10px;
+}
+
+.coreValues {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 85%;
+}
+
+@media screen and (max-width: 465px) {
+  .serviceSeal {
+    height: 75px;
+    width: 75px;
+  }
+}

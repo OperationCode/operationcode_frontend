@@ -1,0 +1,57 @@
+.content {
+  background-color: black;
+  background-color:rgba(47,52,72,.95);
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  position: relative;
+  height: 80px;
+}
+
+.logo {
+  position: relative;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 40px;
+  max-width: 75%;
+}
+
+.close {
+  color: #fff;
+  text-decoration: none;
+  font-size: 40px;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.list {
+  padding: 30px 5%;
+  border-top: 1px solid #fafafa;
+  font-size: 2.5em;
+}
+
+.item {
+  color: #F7F7F7;
+}
+
+.item ~ .item {
+  margin-top: 16px;
+}
+
+.list span {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  position: relative;
+}
+
+@media screen and (orientation: landscape) {
+  .list {
+    font-size: 1.3em;
+  }
+}

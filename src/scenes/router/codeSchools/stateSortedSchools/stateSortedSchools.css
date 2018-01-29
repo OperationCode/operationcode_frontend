@@ -1,0 +1,26 @@
+.stateSchools {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.select {
+  min-width: 300px;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* iPhone Safari-only media query to prevent zoom effect when the select is focused */
+/* see https://stackoverflow.com/questions/6483425/prevent-iphone-from-zooming-in-on-select-in-web-app */
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+
+  .select input {
+    font-size: 16px !important;
+  }
+
+  .select input:focus {
+          font-size: 16px !important;
+      }
+  }

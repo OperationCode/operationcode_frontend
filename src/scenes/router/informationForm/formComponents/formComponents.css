@@ -1,0 +1,46 @@
+.information__form > * {
+  margin-top: 10px;
+}
+
+.information__input {
+  background-color: #E6E6E6;
+  color: #000;
+  border: none;
+  font-size: 1.3em;
+  padding: 0 16px;
+  height: 50px;
+  width: 100%;
+}
+
+.information__select {
+  height: 4.2rem;
+  width: 100%;
+  padding: 0 1rem;
+  background-color: #e6e6e6;
+  font-size: 1.3rem;
+  margin: 1rem 0;
+}
+
+.signup select {
+  height: 4.2rem;
+  width: 100%;
+  padding: 0 1rem;
+  background-color: #e6e6e6;
+  font-size: 1.3rem;
+  margin: 1rem 0;
+}
+
+.signup {
+  width:100%;
+}
+
+.signup .info__tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.signup .info__tagsTitle {
+  font-size: 1.5em;
+}

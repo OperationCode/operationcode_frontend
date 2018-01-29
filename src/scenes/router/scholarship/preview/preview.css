@@ -1,0 +1,38 @@
+.scholarshipPreviewLink {
+  text-decoration: none;
+  font-family: "Noto Serif", sans-serif;
+  color: rgb(71, 86, 107);
+}
+
+.preview {
+  position: relative;
+  background: rgb(255, 255, 255);
+  box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);
+  margin: 2rem 0;
+  padding: 1em 1em;
+  border-radius: .28571429rem;
+  border: 1px solid rgba(34,36,38,.15);
+}
+
+.preview:hover {
+  -webkit-box-shadow: 0 14px 28px rgba(0,0,0,0.25);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25);
+}
+
+.preview:hover > h6::after {
+  background-color: rgb(65, 164, 192);
+}
+
+.previewHeader6 {
+  display: flex;
+  letter-spacing: .05em;
+}
+
+.previewHeader6::after {
+  flex-grow: 1;
+  height: 3px;
+  content: '\a0';
+  background-color: rgba(0, 0, 0, 0.25);
+  align-self: center;
+  margin: 0 10px 5px 10px;
+}

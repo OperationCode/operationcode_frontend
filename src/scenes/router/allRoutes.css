@@ -1,0 +1,86 @@
+.allRoutes {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.main {
+    display: flex;
+    flex: 1;
+}
+
+.main > div {
+    width: 100%;
+}
+
+.allRoutesImage {
+    height:300px;
+}
+
+.backgroundImageRouter {
+    background-size: 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1200px) {
+  .backgroundImageRouter {
+    background-size: auto 17%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .backgroundImageRouter{
+    background-size: auto 15%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .backgroundImageRouter {
+    background-size: auto 8%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .backgroundImageRouter {
+    background-size: auto 5%;
+  }
+}
+
+.backgroundImageTeam {
+  background-size: 100%;
+  background-position: right top;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1160px) {
+  .backgroundImageTeam {
+    background-size: auto 9%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .backgroundImageTeam {
+    background-size: auto 7%;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .backgroundImageTeam {
+    background-size: auto 5%;
+    background-position: top right -55px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .backgroundImageTeam {
+    background-size: auto 6%;
+  }
+}
+
+@media screen and (max-width: 365px) {
+  .backgroundImageTeam {
+    background-size: auto 4%;
+  }
+}

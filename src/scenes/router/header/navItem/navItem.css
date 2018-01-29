@@ -1,0 +1,22 @@
+.navItem {
+  text-decoration: none;
+  color: #F7F7F7;
+}
+
+.navItem:hover {
+  text-shadow: 2px 2px 2px #333;
+  transition-duration: 0.2s;
+}
+
+.menuItem {
+  composes: navItem;
+  font-size: 30px;
+}
+
+.menuItem ~ .menuItem {
+  margin-top: 16px;
+}
+
+.disabledNavItem {
+  display: none;
+}

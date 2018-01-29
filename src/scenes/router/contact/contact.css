@@ -1,0 +1,41 @@
+p {
+  font-size: 1.1rem;
+}
+
+svg {
+  color: #249CBC;
+}
+
+a:hover > svg {
+  color: #44BCDC;
+}
+
+.flexContainer {
+  width: 80%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 15px 0 0 0;
+}
+
+.flexContainer > div {
+  padding: 0 30px 50px 30px;
+}
+
+.centerText {
+  text-align: center;
+}
+
+/* Icons are not uniform in size... */
+.slackIcon {
+  padding: 27.5px 0 18.5px 0;
+}
+
+.mailIcon {
+  padding: 0 0 16px 0;
+}
+
+.address {
+  text-align: left;
+  padding: 0 0 0 27px;
+}
