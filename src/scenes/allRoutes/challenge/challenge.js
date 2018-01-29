@@ -10,7 +10,7 @@ import PRButton from '../../../images/GitHubPRButton.png';
 import styles from './challenge.css';
 
 const RepoLink = 'https://github.com/OperationCode/operationcode_frontend/';
-const ChallengeLink = `${RepoLink}blob/master/src/scenes/home/challenge/challenge.js`;
+const ChallengeLink = `${RepoLink}blob/master/src/scenes/allRoutes/challenge/challenge.js`;
 
 class Challenge extends Component {
   constructor() {

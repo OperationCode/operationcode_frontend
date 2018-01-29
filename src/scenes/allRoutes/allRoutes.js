@@ -34,14 +34,14 @@ import SignupInformation from './informationForm/informationForm';
 import Benefit from './benefit/benefit';
 import Terms from './termsOfService/termsOfService';
 import ChapterLeader from './chapterLeader/chapterLeader';
-import styles from './home.css';
+import styles from './allRoutes.css';
 
 const ReactToastr = require('react-toastr');
 
 const { ToastContainer } = ReactToastr;
 const ToastMessageFactory = React.createFactory(ReactToastr.ToastMessage.animation);
 
-class Home extends Component {
+class AllRoutes extends Component {
   state = {
     bgImage: false,
     bgImageUrl: null,
@@ -64,7 +64,7 @@ class Home extends Component {
         bgChanged: !this.state.bgImage,
         bgImage: true,
         bgImageUrl: familyImage,
-        bgImageStyle: 'backgroundImageHome',
+        bgImageStyle: 'backgroundImageAllRoutes',
       });
     } else if (location.pathname === '/team') {
       this.setState({
@@ -129,7 +129,7 @@ class Home extends Component {
     };
 
     const classes = classNames({
-      [`${styles.home}`]: true,
+      [`${styles.allRoutes}`]: true,
       [`${styles[this.state.bgImageStyle]}`]: this.state.bgImage,
     });
     return (
@@ -262,7 +262,7 @@ class Home extends Component {
   }
 }
 
-Home.propTypes = {
+AllRoutes.propTypes = {
   history: PropTypes.shape({
     action: PropTypes.string,
     block: PropTypes.func,
@@ -289,4 +289,4 @@ Home.propTypes = {
   }).isRequired,
 };
 
-export default withRouter(Home);
+export default withRouter(AllRoutes);

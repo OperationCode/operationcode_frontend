@@ -1,4 +1,4 @@
-.home {
+.allRoutes {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -14,36 +14,36 @@
     width: 100%;
 }
 
-.homeImage {
+.allRoutesImage {
     height:300px;
 }
 
-.backgroundImageHome {
+.backgroundImageAllRoutes{
     background-size: 100%;
     background-position: center top;
     background-repeat: no-repeat;
 }
 
 @media screen and (max-width: 1200px) {
-  .backgroundImageHome {
+  .backgroundImageAllRoutes {
     background-size: auto 17%;
   }
 }
 
 @media screen and (max-width: 1000px) {
-  .backgroundImageHome {
+  .backgroundImageAllRoutes {
     background-size: auto 15%;
   }
 }
 
 @media screen and (max-width: 800px) {
-  .backgroundImageHome {
+  .backgroundImageAllRoutes {
     background-size: auto 8%;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .backgroundImageHome {
+  .backgroundImageAllRoutes {
     background-size: auto 5%;
   }
 }
