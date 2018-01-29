@@ -18,32 +18,32 @@
     height:300px;
 }
 
-.backgroundImageRouter {
+.backgroundImageAllRoutes{
     background-size: 100%;
     background-position: center top;
     background-repeat: no-repeat;
 }
 
 @media screen and (max-width: 1200px) {
-  .backgroundImageRouter {
+  .backgroundImageAllRoutes {
     background-size: auto 17%;
   }
 }
 
 @media screen and (max-width: 1000px) {
-  .backgroundImageRouter{
+  .backgroundImageAllRoutes {
     background-size: auto 15%;
   }
 }
 
 @media screen and (max-width: 800px) {
-  .backgroundImageRouter {
+  .backgroundImageAllRoutes {
     background-size: auto 8%;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .backgroundImageRouter {
+  .backgroundImageAllRoutes {
     background-size: auto 5%;
   }
 }

@@ -64,7 +64,7 @@ class AllRoutes extends Component {
         bgChanged: !this.state.bgImage,
         bgImage: true,
         bgImageUrl: familyImage,
-        bgImageStyle: 'backgroundImageRouter',
+        bgImageStyle: 'backgroundImageAllRoutes',
       });
     } else if (location.pathname === '/team') {
       this.setState({
