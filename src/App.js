@@ -3,7 +3,7 @@ import { Route, Router } from 'react-router';
 import ReactGA from 'react-ga';
 import createHistory from 'history/createBrowserHistory';
 import ScrollToTop from 'shared/components/scrollToTop/scrollToTop';
-import Home from './scenes/home/home';
+import AllRoutes from './scenes/router/allRoutes';
 
 const history = createHistory();
 ReactGA.initialize('UA-75642413-1');
@@ -26,7 +26,7 @@ class App extends Component {
     return (
       <Router history={history}>
         <ScrollToTop>
-          <Route path="/" component={Home} />
+          <Route path="/" component={AllRoutes} />
         </ScrollToTop>
       </Router>
     );
