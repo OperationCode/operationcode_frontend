@@ -1,24 +1,27 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import Section from 'shared/components/section/section';
 import QuoteBanner from 'shared/components/quoteBanner/quoteBanner';
-import TeamCard from 'shared/components/teamCard/teamCard';
 import BoardCard from 'shared/components/boardCard/boardCard';
+import TeamCard from 'shared/components/teamCard/teamCard';
 import BoardMembers from './boardMembers';
 import styles from './team.css';
 
+
 class Team extends Component {
   state = {
-    members: [],
+    members: [
+      { name: 'David Molina', role: 'CEO', slack: '@david', email: 'david@operationcode.org' },
+      { name: 'Morgan Larrouy-Smith', role: 'Executive Assistant', slack: '', email: 'morgan@operationcode.org' },
+      { name: 'David Reis', role: 'Acting COO', slack: '@davidr', email: '' },
+      { name: 'Jennifer Weiderman', role: 'CCMO', slack: '@Jenn', email: 'jennifer@operationcode.org' },
+      { name: 'Amy Tan', role: 'CFO', slack: '@amy', email: 'amy@operationcode.org' },
+      { name: 'Nell Shamrell', role: 'CTO', slack: '@nellshamrell', email: 'nell@operationcode.org' },
+      { name: 'Kate Horner', role: 'Acting CDO', slack: '@katehorner', email: '' },
+      { name: 'Kelly MacLeod', role: 'HR', slack: '@kelly', email: 'kelly@operationcode.org' },
+      { name: 'Jameel Martin', role: 'Public Policy Director', slack: '@0311-code', email: 'jameel@operationcode.org' },
+      { name: 'Stefano DAniello', role: 'General Counsel', slack: '@stefano', email: '' }
+    ],
   };
-
-  componentDidMount() {
-    axios
-      .get('https://api.operationcode.org/api/v1/team_members.json')
-      .then((response) => {
-        this.setState({ members: response.data });
-      });
-  }
 
   render() {
     const team = this.state.members.map(member => (
@@ -26,6 +29,8 @@ class Team extends Component {
         key={`${member.name} + ${member.role}`}
         name={member.name}
         role={member.role}
+        email={member.email}
+        slack={member.slack}
       />
     ));
 
@@ -60,8 +65,7 @@ class Team extends Component {
             </p>
           </div>
         </Section>
-
-        <Section title="Our Team" theme="white">
+        <Section title="Our Executive Staff" theme="white">
           <p>
             Our all volunteer staff are dedicated individuals who come from a
             wide variety of backgrounds, including members of both the civilian

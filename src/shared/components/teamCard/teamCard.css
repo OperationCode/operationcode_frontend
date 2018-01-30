@@ -2,9 +2,9 @@
   border-radius: 4px;
   align-items: center;
   text-align: center;
-  margin: 20px 10px;
+  margin: 20px 10px;o*/
   padding: 10px;
-  width: 185px;
+  width: 250px;
   height: 110px;
   background: #F0F2F2;
   box-shadow: 0 3px 6px 1px rgba(0, 0, 0, 0.1);
@@ -15,12 +15,21 @@
   box-shadow: 0 9px 28px rgba(0,0,0,0.25);
 }
 
+
 .name {
   text-transform: uppercase;
   font-weight: 800;
 }
 
 .role {
+  font-size: .8rem;
+}
+
+.slack {
+  font-size: .8rem;
+}
+
+.email {
   font-size: .8rem;
 }
 
