@@ -9,24 +9,32 @@
 }
 
 .half {
-  width:50%;
+  width: 50%;
 }
 
-@media only screen and (min-width:320px) and (max-width:480px){
-  .half{
-    width:100%;
+.photo {
+  max-width: 500px;
+  height: auto;
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .half {
+    width: 100%;
   }
-  li.check{
+  li.check {
     margin-top: 70px;
     line-height: normal;
   }
-  li.check:last-of-type{
-    margin-bottom:10px;
+  li.check:last-of-type {
+    margin-bottom: 10px;
+  }
+  .photo {
+    max-width: 300px;
+    height: auto;
   }
 }
-@media only screen and (min-width: 768px) and (max-width:1024px){
-  .half{
-    width:40%;
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .half {
+    width: 40%;
   }
   .wrapper {
     display: flex;
@@ -37,35 +45,38 @@
     justify-content: space-around;
     margin: 2vw;
   }
-  li.check{
+  li.check {
     margin-top: 80px;
     line-height: normal;
   }
-  li.check:nth-of-type(2){
+  li.check:nth-of-type(2) {
     margin-top: 80px;
   }
-  li.check:last-of-type{
-    padding-bottom:10px;
+  li.check:last-of-type {
+    padding-bottom: 10px;
+  }
+  .photo {
+    max-width: 350px;
+    height: auto;
   }
 }
 
-ul{
+ul {
   list-style-type: none;
-  padding:0;
+  padding: 0;
 }
 
-li.check{
+li.check {
   background: url('../check.svg') 20px no-repeat;
-  height:40px;
-  padding-left:75px;
+  height: 40px;
+  padding-left: 75px;
   margin-top: 30px;
   line-height: normal;
 }
 
-li.check:first-child{
-  margin-top:0;
+li.check:first-child {
+  margin-top: 0;
 }
-
 
 .button {
   display: block;

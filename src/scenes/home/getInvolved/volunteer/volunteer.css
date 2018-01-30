@@ -1,6 +1,6 @@
 .outerAlt {
   background-color: #e3e3e3;
-  width:100%;
+  width: 100%;
 }
 
 .wrapper {
@@ -14,12 +14,12 @@
 }
 
 .half {
-  width:50%;
+  width: 50%;
 }
 
-.photo{
-  max-width:350px;
-  height:auto;
+.photo {
+  max-width: 500px;
+  height: auto;
 }
 
 .button {
@@ -28,47 +28,52 @@
   text-align: center;
 }
 
-ul{
+ul {
   list-style-type: none;
-  padding:0;
+  padding: 0;
 }
 
-li.check{
+li.check {
   background: url('../check.svg') 20px no-repeat;
-  height:40px;
-  padding-left:75px;
+  height: 40px;
+  padding-left: 75px;
   margin-top: 30px;
   line-height: normal;
 }
 
-li.check:nth-of-type(2){
+li.check:nth-of-type(2) {
   margin-top: 90px;
 }
 
-li.check:first-child{
-  margin-top:0;
+li.check:first-child {
+  margin-top: 0;
 }
 
-@media only screen and (min-width:320px) and (max-width:480px){
-  .half{
-    width:350px;
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .half {
+    width: 350px;
     align-self: center;
   }
-  li.check{
+  li.check {
     margin-top: 60px;
     line-height: normal;
   }
-  li.check:last-of-type{
-    margin-bottom:10px;
+  li.check:last-of-type {
+    margin-bottom: 10px;
   }
-  li.check:nth-of-type(2){
+  li.check:nth-of-type(2) {
     margin-top: 70px;
+  }
+  .photo {
+    max-width: 300px;
+    height: auto;
   }
 }
 
-@media and screen (max-width:800px){
-  .half{
-    width:40%;
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .half {
+    width: 40%;
+    padding: 0;
   }
   .wrapper {
     display: flex;
@@ -79,14 +84,18 @@ li.check:first-child{
     justify-content: space-around;
     margin: 2vw;
   }
-  li.check{
+  li.check {
     margin-top: 70px;
     line-height: normal;
   }
-  li.check:nth-of-type(2){
-    margin-top: 90px;
+  li.check:nth-of-type(2) {
+    margin-top: 150px;
   }
-  li.check:last-of-type{
-    margin-bottom:10px;
+  li.check:last-of-type {
+    margin-bottom: 10px;
+  }
+  .photo {
+    max-width: 400px;
+    height: auto;
   }
 }
