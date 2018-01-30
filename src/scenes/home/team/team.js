@@ -23,7 +23,7 @@ class Team extends Component {
   render() {
     const team = this.state.members.map(member => (
       <TeamCard
-        key={`${Math.random()} + ${member.name}`}
+        key={`${member.name} + ${member.role}`}
         name={member.name}
         role={member.role}
       />
@@ -31,7 +31,7 @@ class Team extends Component {
 
     const boardMembers = BoardMembers.map(boardMember => (
       <BoardCard
-        key={`${Math.random()} + ${boardMember.name}`}
+        key={`${boardMember.name} + ${boardMember.role}`}
         name={boardMember.name}
         role={boardMember.role}
         description={boardMember.description}
