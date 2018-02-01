@@ -86,7 +86,7 @@
     "start": "node scripts/start.js",
     "start:server": "node server",
     "build": "node scripts/build.js",
-    "test": "snyk test && node scripts/test.js --env=jsdom",
+    "test": "node scripts/test.js --env=jsdom",
     "fix": "eslint --fix \"src/**/*.js\"",
     "format": "prettier-eslint \"src/**/*.js\"",
     "lint": "eslint \"src/**/*.js\"",
