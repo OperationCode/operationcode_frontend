@@ -64,7 +64,7 @@ const MilFamCommitteeDirector = {
 };
 
 const FundraisingCommitteeDirector = {
-  name: 'Stacy Chin',
+  name: 'Dr. Stacy Chin',
   role: 'Director of Fundraising Committee',
   description:
     'Dr. Stacy Chin is the CEO and co-founder of Hydroglyde Coatings, and has a Ph.D in Chemistry from Boston University. Dr. Chin is an entrepreneur, mentor, and active tutor in the graduate sciences. She champions the interests of women in science, technology, engineering and mathematics. Stacy currently serves as head of our fundraising committee.',

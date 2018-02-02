@@ -63,3 +63,25 @@
   align-self: left;
   padding: 1rem 0 0 0;
 }
+
+@media screen and (max-width: 450px) {
+  .boardCard {
+    max-height: 650px;
+    transition: none;
+  }
+
+  .boardCard:hover,
+  .boardCard:focus {
+    transition: none;
+  }
+  
+  .boardCard:hover .descriptionText,
+  .boardCard:active .descriptionText {
+    transition: none;
+  }
+
+  .descriptionText {
+    opacity: 1;
+    visibility: visible;
+  }
+}
