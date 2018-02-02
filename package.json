@@ -121,6 +121,6 @@
     "presets": ["react-app"]
   },
   "homepage": "http://frontend.operationcode.org/",
-  "pre-commit": ["fix", "format", "lint", "image-size", "synk-protect"],
+  "pre-commit": ["fix", "format", "lint", "image-size", "snyk-protect"],
   "snyk": true
 }
