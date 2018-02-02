@@ -94,7 +94,8 @@
     "build-storybook": "build-storybook",
     "backend": "./bin/run_backend.sh",
     "validate": "npm ls",
-    "image-size": "node scripts/imageSize.js"
+    "image-size": "node scripts/imageSize.js",
+    "snyk-protect": "snyk protect"
   },
   "jest": {
     "moduleDirectories": ["node_modules", "src"],
@@ -120,5 +121,6 @@
     "presets": ["react-app"]
   },
   "homepage": "http://frontend.operationcode.org/",
-  "pre-commit": ["fix", "format", "lint", "image-size"]
+  "pre-commit": ["fix", "format", "lint", "image-size", "synk-protect"],
+  "snyk": true
 }
