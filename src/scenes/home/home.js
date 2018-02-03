@@ -23,11 +23,11 @@ import Header from './header/header';
 import Landing from './landing/landing';
 import Footer from './footer/footer';
 import FourOhFour from './404/fourOhFour';
-import MentorRequest from './mentorRequest/mentorRequest';
 import LeadershipCircle from './leadershipCircle/leadershipCircle';
 import CodeSchools from './codeSchools/codeSchools';
 import About from './about/about';
 import Press from './press/press';
+import Branding from './branding/branding';
 import ResetPassword from './resetPassword/resetPassword';
 import Challenge from './challenge/challenge';
 import SignupInformation from './informationForm/informationForm';
@@ -185,6 +185,7 @@ class Home extends Component {
             />
             <Route path="/about" component={About} />
             <Route path="/press" component={Press} />
+            <Route path="/branding" component={Branding} />
             <Route path="/jobs" component={Jobs} />
             <Route path="/media" component={Press} />
             <Route path="/signup-info" component={SignupInformation} />
@@ -198,10 +199,6 @@ class Home extends Component {
               render={props => (
                 <Landing {...props} sendNotification={this.sendNotification} />
               )}
-            />
-            <Route
-              path="/mentor-request"
-              render={() => <MentorRequest {...authProps} />}
             />
             <Route exact path="/scholarships" component={Scholarships} />
             <Route path="/benefit" render={() => <Benefit {...authProps} />} />

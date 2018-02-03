@@ -19,9 +19,55 @@ class CodeSchools extends Component {
   }
 
   componentDidMount() {
+    const temporaryAddons = [
+      {
+        name: 'Skill Distillery',
+        email: 'n/a',
+        url: 'https://skilldistillery.com/',
+        full_time: true,
+        hardware_included: false,
+        has_online: false,
+        online_only: false,
+        logo:
+          'https://raw.githubusercontent.com/OperationCode/operationcode_frontend/master/src/images/codeSchoolLogos/skill_distillery.png',
+        locations: [
+          {
+            address1: '7400 East Orchard Road',
+            address2: null,
+            city: 'Greenwood Village',
+            state: 'CO',
+            va_accepted: true,
+            zip: 80111
+          }
+        ]
+      },
+      {
+        name: 'devCodeCamp',
+        email: 'hello@devcodecamp.com',
+        url: 'https://devcodecamp.com/',
+        full_time: true,
+        hardware_included: false,
+        has_online: false,
+        online_only: false,
+        logo:
+          'https://raw.githubusercontent.com/OperationCode/operationcode_frontend/master/src/images/codeSchoolLogos/devcodecamp.png',
+        locations: [
+          {
+            address1: '313 North Plankinton Avenue',
+            address2: null,
+            city: 'Milwaukee',
+            state: 'WI',
+            va_accepted: true,
+            zip: 53203
+          }
+        ]
+      }
+    ];
+
     axios
       .get('https://api.operationcode.org/api/v1/code_schools.json')
-      .then(response => this.setState({ schools: response.data }))
+      .then(response =>
+        this.setState({ schools: [...response.data, ...temporaryAddons] }))
       .catch(() => this.setState({ errorResponse: true }));
   }
 

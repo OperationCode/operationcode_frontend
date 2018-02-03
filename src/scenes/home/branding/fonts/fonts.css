@@ -1,0 +1,13 @@
+.brandingFonts {
+  text-align: center;
+  margin: 3em 0;
+}
+
+.brandingFonts img {
+  max-width: 90%;
+}
+
+.brandingFonts a {
+  color: #249cbc;
+  text-decoration: none;
+}
