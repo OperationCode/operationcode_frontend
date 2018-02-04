@@ -53,11 +53,10 @@ const Profile = ({ verified }) => (
         {!verified && (
           <div className={styles.profileContainer__idMe__btn}>
             <span className={styles.profileContainer__idMe__title}>
-              Get Verified for Added Benefits
+              Veterans, Servicemembers and Spouses!
             </span>
             <p>
-              To gain access to <span className={styles.profileContainer__verified__services}>Mentorship</span> and <span className={styles.profileContainer__verified__services}>Scholarships</span>, we
-              require that you verify your military status.
+              To gain access to <span className={styles.profileContainer__verified__services}>Mentorship</span> and <span className={styles.profileContainer__verified__services}>Scholarships</span>, please verify your military status.
             </p>
 
             <p>
