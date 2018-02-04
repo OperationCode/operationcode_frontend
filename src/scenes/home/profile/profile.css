@@ -52,6 +52,11 @@
   font-size: 1.5rem;
 }
 
+.profileContainer__verified__services {
+  font-weight: bold;
+  color:#249CBC;
+}
+
 @media screen and (max-width: 1000px) {
   .profileContainer {
     flex-direction: column;
