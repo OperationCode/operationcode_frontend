@@ -56,10 +56,12 @@ const Profile = ({ verified }) => (
               Get Verified for Added Benefits
             </span>
             <p>
-              In order to take advantage of resources such as Mentorship and Scholarships, we
-              require that you verify your military affiliation status. We use Id.Me for
-              verification, a highly secure and specialized platform that will protect your
-              information. We will not store or transfer any of your sensitive information.
+              To gain access to <span className={styles.profileContainer__verified__services}>Mentorship</span> and <span className={styles.profileContainer__verified__services}>Scholarships</span>, we
+              require that you verify your military status.
+            </p>
+
+            <p>
+              Sign in below to get verified!
             </p>
             <Idme />
           </div>
