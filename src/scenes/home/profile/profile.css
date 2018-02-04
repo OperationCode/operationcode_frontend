@@ -57,6 +57,11 @@
   color:#249CBC;
 }
 
+.profileContainer__disclaimer {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
 @media screen and (max-width: 1000px) {
   .profileContainer {
     flex-direction: column;

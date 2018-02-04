@@ -63,6 +63,9 @@ const Profile = ({ verified }) => (
               Sign in below to get verified!
             </p>
             <Idme />
+            <p className={styles.profileContainer__disclaimer}>
+              We do not store or transfer any of your sensitive information
+            </p>
           </div>
         )}
       </div>
