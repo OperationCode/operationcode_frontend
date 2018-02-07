@@ -28,8 +28,8 @@ const Contact = () => (
         <IconCard
           title="Mailing Address" fontAwesomeIcon="FaHome" iconSize={175}
           subText="Operation Code<br/>
-            1220 SW Morrison St<br/>
-            Suite 437<br/>
+            707 SW Washington St.<br/>
+            Suite 1100<br/>
             Portland, OR 97205"
           usingHtml
         />
