@@ -49,12 +49,17 @@
 }
 
 .profileContainer__idMe__title {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .profileContainer__verified__services {
   font-weight: bold;
   color:#249CBC;
+}
+
+.profileContainer__disclaimer {
+  font-size: 0.9rem;
+  font-style: italic;
 }
 
 @media screen and (max-width: 1000px) {
