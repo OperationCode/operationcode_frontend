@@ -1,9 +1,10 @@
 # ✨ :us: OperationCode Frontend :us: ✨
 
--------
-
 [![Build Status](https://travis-ci.org/OperationCode/operationcode_frontend.svg?branch=master)](https://travis-ci.org/OperationCode/operationcode_frontend)
 [![PRs Welcome][prs-badge]][prs]
+
+![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=<badge_key>)
+[![Known Vulnerabilities](https://snyk.io/test/github/OperationCode/operationcode_frontend/badge.svg)](https://snyk.io/test/github/OperationCode/operationcode_frontend)
 
 [prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=social-square
 [prs]: http://makeapullrequest.com

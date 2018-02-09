@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@storybook/addon-actions": "^3.2.11",
-    "@storybook/addon-links": "^3.2.10",
-    "@storybook/cli": "^3.2.10",
-    "@storybook/react": "^3.2.11",
+    "@storybook/addon-actions": "^3.4.0-alpha.5",
+    "@storybook/addon-links": "^3.4.0-alpha.5",
+    "@storybook/cli": "^3.4.0-alpha.5",
+    "@storybook/react": "^3.4.0-alpha.5",
     "axios": "^0.16.1",
     "classnames": "^2.2.5",
     "dateformat": "^2.0.0",
@@ -73,6 +73,7 @@
     "prettier-eslint-cli": "^4.4.0",
     "promise": "7.1.1",
     "react-dev-utils": "^3.0.0",
+    "snyk": "^1.69.1",
     "style-loader": "0.13.1",
     "sw-precache-webpack-plugin": "0.9.1",
     "url-loader": "0.5.7",
@@ -85,15 +86,16 @@
     "start": "node scripts/start.js",
     "start:server": "node server",
     "build": "node scripts/build.js",
+    "test": "node scripts/test.js --env=jsdom",
     "fix": "eslint --fix \"src/**/*.js\"",
     "format": "prettier-eslint \"src/**/*.js\"",
-    "test": "node scripts/test.js --env=jsdom",
     "lint": "eslint \"src/**/*.js\"",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "backend": "./bin/run_backend.sh",
     "validate": "npm ls",
-    "image-size": "node scripts/imageSize.js"
+    "image-size": "node scripts/imageSize.js",
+    "snyk-protect": "snyk protect"
   },
   "jest": {
     "moduleDirectories": ["node_modules", "src"],
@@ -119,5 +121,6 @@
     "presets": ["react-app"]
   },
   "homepage": "http://frontend.operationcode.org/",
-  "pre-commit": ["fix", "format", "lint", "image-size"]
+  "pre-commit": ["fix", "format", "lint", "image-size", "snyk-protect"],
+  "snyk": true
 }
