@@ -1,6 +1,7 @@
 # OperationCode Frontend
 This is OperationCode.org's repository for their new front-end implementation using React.js
 
+Before contributing, please review our [GitHub Workflow](#github-workflow).
 
 ## Table Of Contents
 - [Quick-Start Guide](#quick-start-guide)
@@ -40,6 +41,12 @@ With an open source project involving contributors of varying levels of experien
 If you're unfamiliar with any of the instructions, you can navigate the [rest of this guide](#technologies) to figure out the relevant technology and potential environment issues. <b>If an instruction begins with "Run ...", that means to type the text in place of ... within your CLI.</b>
 
 Lastly, if you run into any problems with the following instructions, please try to communicate with us on Slack. You can get an invite to our Slack channel by [requesting to join Operation Code](https://operationcode.org/join). Once in our Slack team, simply type: `/open #oc-projects` and then click enter.
+
+#### GitHub Workflow
+1. Before working on an issue, post a comment on the issue asking to claim it.  One of our maintainers will assign themselves as a placeholder on the issue, at which point you are good to start working on it.
+2. Fork the Operation Code Frontend repo. Create a feature branch on your forked repo for the issue you are working on, and commit your work to that branch.
+3. Submit a pull request within two weeks of claiming the issue.
+4. Please do not ask to claim an issue or submit pull requests for an issue that someone else is currently assigned to.
 
 #### Forking and Cloning this repository
 
