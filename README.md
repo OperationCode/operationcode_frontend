@@ -13,7 +13,9 @@
 
 # Welcome!
 
-Welcome to our frontend repository built using React and Express! Please look forward to an increased amount of documentation and tickets. We highly recommend [joining our organization](https://operationcode.org/join) to receive an invite to our Slack team. From there, you'll want to join the `#oc-projects` channel. You can get help from multiple professional developers and people who have worked on the application since day 1!
+Welcome to our frontend repository built using React and Express! We highly recommend [joining our organization](https://operationcode.org/join) to receive an invite to our Slack team. From there, you'll want to join the `#oc-projects` channel. You can get help from multiple professional developers and people who have worked on the application since day 1!
+
+Before contributing, please review our [GitHub Workflow](https://github.com/OperationCode/operationcode_frontend/blob/master/CONTRIBUTING.md#github-workflow) in the contributing guide.
 
 For information about the maintainers of the project, check out [MAINTAINERS.md](MAINTAINERS.md).
 
