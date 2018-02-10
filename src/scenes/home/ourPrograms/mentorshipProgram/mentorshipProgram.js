@@ -13,8 +13,8 @@ const MentorshipProgram = ({ fontSize }) => (
       <div className={styles.featureDescription}>
         <ul>
           <li>
-            A set of scheduled phone calls or video conferences aimed at having professional
-            developers guide your next steps.
+            A one-on-one session via phone call or Slack aimed at having professional developers
+            guide your next steps.
           </li>
           <li>
             Friendly monitoring from a volunteer staff member, encouraging you to keep working
@@ -45,8 +45,9 @@ const MentorshipProgram = ({ fontSize }) => (
             and Googling for yourself before going to our volunteers for aid.
           </li>
           <li>
-            A guarantee that someone will work with you long-term. All our mentors are volunteers
-            taking on mentees as their schedule allows.
+            A guarantee that someone will work with you for at least 30 minutes - potentially
+            on a long-term basis. All our mentors are volunteers taking on mentees as their 
+            schedule allows.
           </li>
         </ul>
       </div>
