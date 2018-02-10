@@ -82,18 +82,18 @@
     "whatwg-fetch": "2.0.3"
   },
   "scripts": {
-    "start": "node scripts/start.js",
-    "start:server": "node server",
+    "backend": "./bin/run_backend.sh",
+    "build-storybook": "build-storybook",
     "build": "node scripts/build.js",
     "fix": "eslint --fix \"src/**/*.js\"",
     "format": "prettier-eslint \"src/**/*.js\"",
-    "test": "node scripts/test.js --env=jsdom",
+    "image-size": "node scripts/imageSize.js",
     "lint": "eslint \"src/**/*.js\"",
+    "start:server": "node server",
+    "start": "node scripts/start.js",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "backend": "./bin/run_backend.sh",
-    "validate": "npm ls",
-    "image-size": "node scripts/imageSize.js"
+    "test": "node scripts/test.js --env=jsdom",
+    "validate": "npm ls"
   },
   "jest": {
     "moduleDirectories": ["node_modules", "src"],
