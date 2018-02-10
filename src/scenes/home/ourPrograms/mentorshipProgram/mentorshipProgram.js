@@ -1,10 +1,11 @@
 import React from 'react';
-import { FaCheck, FaBan } from 'react-icons/lib/fa';
 import PropTypes from 'prop-types';
+import { FaCheck, FaBan } from 'react-icons/lib/fa';
+import Section from 'shared/components/section/section';
 import styles from './mentorshipProgram.css';
 
 const MentorshipProgram = ({ fontSize }) => (
-  <div>
+  <Section title="Mentorship Program">
     <div className={styles.flexContainer}>
       <div className={styles.featureHeading}>
         <FaCheck size={fontSize} />
@@ -52,7 +53,7 @@ const MentorshipProgram = ({ fontSize }) => (
         </ul>
       </div>
     </div>
-  </div>
+  </Section>
 );
 
 MentorshipProgram.propTypes = {

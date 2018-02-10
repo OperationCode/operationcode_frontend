@@ -1,50 +1,61 @@
-.flexContainer {
-  width: 100%;
+.timeline {
+  width: 90%;
+  margin: 50px auto;
+}
+
+.segment {
   display: flex;
-  justify-content: center;
-  padding: 15px 0 0 0;
 }
 
-.container {
-  border-left: 1px solid #ccc;
-  width: 70%;
-}
-
-.box {
-  width: 100%;
-  border: 1px solid #ccc;
-  margin: 0 0 20px 20px;
-  padding: 10px;
-  border-radius: 4px;
+/* Step Number (left column) */
+.stepNumber {
+  flex: 1;
   position: relative;
+  text-align: right;
+  white-space: nowrap;
 }
 
-.box p {
-  margin: 0;
-}
-
-.box:before {
-  content: '';
+.stepNumber > h3 {
   position: absolute;
-  top: 10px;
-  left: -27.5px;
-  height: 10px;
-  width: 10px;
-  border: 1px solid #ccc;
+  width: 100%;
+  top: 14px;
+  padding-right: 10px;
+}
+
+/* Vertical Line w/ Bubbles (middle column) */
+.vertLine {
+  position: relative;
+  padding: 0 20px;
+}
+
+.line {
+  position: absolute;
+  transform: translateX(-50%);
+  width: 2px;
+  top: 0;
+  height: 100%;
+  background-color: #d7d7d7;
+}
+
+.bubble {
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
-  background-color: #fff;
-}
-
-.box .stepHeading, .box .stepCount {
-  font-weight: 700;
-}
-
-.box .stepCount {
+  border: 2px solid #7d7d7d;
+  background-color: white;
   position: absolute;
-  top: 5px;
-  left: -90px;
+  transform: translateX(-50%);
+  top: 25px;
 }
 
-.box .stepHeading {
-  margin-bottom: 20px;
+/* Events (right column) */
+.timelineEvent {
+  flex: 8;
+}
+
+@media screen and (max-width: 680px) {
+  .stepNumber > h3 {
+    top: 24px;
+    font-size: 1.1rem;
+  }
 }
