@@ -28,6 +28,10 @@ img[alt^="Small"] {
   width: 45%;
   max-width: 560px;
 }
+.logos a{
+  color: #249cbc;
+  text-decoration: none;
+}
 
 @media screen and (min-width: 415px) and (max-width: 1280px) {
   .logos > .imgBox {

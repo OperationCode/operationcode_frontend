@@ -11,7 +11,7 @@ class StateSortedSchools extends Component {
     super(props);
     this.state = {
       campusesByState: null,
-      selectedStates: null
+      selectedStates: null,
     };
   }
 
@@ -43,7 +43,7 @@ class StateSortedSchools extends Component {
           logo: school.logo,
           va_accepted: location.va_accepted,
           full_time: school.full_time,
-          hardware_included: school.hardware_included
+          hardware_included: school.hardware_included,
         });
       });
       return acc;
@@ -76,23 +76,23 @@ class StateSortedSchools extends Component {
   };
 
   render() {
-    const stateSchools = !this.state.campusesByState ? null : this.state.campusesByState
-      .map(campus =>
-        (
-          <SchoolCard
-            key={`${Math.random()} + ${campus.name} + ${campus.address}`}
-            alt={campus.name}
-            schoolName={campus.name}
-            link={campus.url}
-            schoolAddress={campus.address}
-            schoolCity={campus.city}
-            schoolState={campus.state}
-            logo={campus.logo}
-            GI={campus.va_accepted ? 'Yes' : 'No'}
-            fullTime={campus.full_time ? 'Full-Time' : 'Flexible'}
-            hardware={campus.hardware_included ? 'Yes' : 'No'}
-          />
-        ));
+    const stateSchools = !this.state.campusesByState
+      ? null
+      : this.state.campusesByState.map(campus => (
+        <SchoolCard
+          key={`${Math.random()} + ${campus.name} + ${campus.address}`}
+          alt={campus.name}
+          schoolName={campus.name}
+          link={campus.url}
+          schoolAddress={campus.address}
+          schoolCity={campus.city}
+          schoolState={campus.state}
+          logo={campus.logo}
+          GI={campus.va_accepted ? 'Yes' : 'No'}
+          fullTime={campus.full_time ? 'Full-Time' : 'Flexible'}
+          hardware={campus.hardware_included ? 'Yes' : 'No'}
+        />
+      ));
 
     return (
       <Section
@@ -102,7 +102,6 @@ class StateSortedSchools extends Component {
         headingLines={false}
         margin
       >
-
         <Select
           className={styles.select}
           placeholder="Start typing a state..."
@@ -114,16 +113,26 @@ class StateSortedSchools extends Component {
           onChange={this.handleSelectChange}
         />
 
-        <div className={styles.stateSchools}>
-          {stateSchools}
-        </div>
+        <div className={styles.stateSchools}>{stateSchools}</div>
       </Section>
     );
   }
 }
 
 StateSortedSchools.propTypes = {
-  schools: PropTypes.array.isRequired // eslint-disable-line
+  schools: PropTypes.arrayOf(PropTypes.shape({
+    created_at: PropTypes.string,
+    full_time: PropTypes.bool,
+    hardware_included: PropTypes.bool,
+    has_online: PropTypes.bool,
+    id: PropTypes.number,
+    logo: PropTypes.string,
+    name: PropTypes.string,
+    notes: PropTypes.string,
+    online_only: PropTypes.bool,
+    updated_at: PropTypes.string,
+    url: PropTypes.string,
+  })).isRequired,
 };
 
 export default StateSortedSchools;

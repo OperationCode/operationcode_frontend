@@ -83,9 +83,10 @@ class Challenge extends Component {
 
             <li>
               Scroll to the bottom for the <b>Commit changes</b> form. There are two input boxes. In
-              the input field with &quot;Update names.txt&quot;, type <code>Add &lt;YOUR NAME&gt;
+              the input field with &quot;Update names.txt&quot;, type
+              <code>Add &lt;YOUR NAME&gt;
                to challenge list
-                                                                      </code>. You will leave the second, large input field blank. There
+              </code>. You will leave the second, large input field blank. There
               are two &quot;radio&quot; buttons below the input fields. Check the one that says
               &quot;Create a new branch&quot;. You screen should now have something like this:
               <br /><br />

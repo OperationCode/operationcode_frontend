@@ -32,15 +32,18 @@
     "react-select": "^1.0.0-rc.5",
     "react-table": "^6.0.5",
     "react-toastr": "^2.9.5",
+    "react-youtube": "^7.5.0",
     "sinon": "^2.3.2",
     "universal-cookie": "^2.0.7"
   },
   "devDependencies": {
     "autoprefixer": "7.1.0",
+    "babel-cli": "^6.26.0",
     "babel-core": "6.24.1",
-    "babel-eslint": "^8.0.1",
+    "babel-eslint": "^8.2.1",
     "babel-jest": "20.0.3",
     "babel-loader": "7.0.0",
+    "babel-preset-flow": "^6.23.0",
     "babel-preset-react-app": "^3.0.3",
     "babel-runtime": "6.23.0",
     "body-parser": "^1.17.2",
@@ -66,7 +69,7 @@
     "object-assign": "4.1.1",
     "postcss-loader": "2.0.5",
     "precommit-hook": "^3.0.0",
-    "prettier-eslint": "^8.2.0",
+    "prettier-eslint": "^8.7.4",
     "prettier-eslint-cli": "^4.4.0",
     "promise": "7.1.1",
     "react-dev-utils": "^3.0.0",
@@ -89,19 +92,13 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "backend": "./bin/run_backend.sh",
-    "validate": "npm ls"
+    "validate": "npm ls",
+    "image-size": "node scripts/imageSize.js"
   },
   "jest": {
-    "moduleDirectories": [
-      "node_modules",
-      "src"
-    ],
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx}"
-    ],
-    "setupFiles": [
-      "<rootDir>/config/polyfills.js"
-    ],
+    "moduleDirectories": ["node_modules", "src"],
+    "collectCoverageFrom": ["src/**/*.{js,jsx}"],
+    "setupFiles": ["<rootDir>/config/polyfills.js"],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.js?(x)",
       "<rootDir>/src/**/?(*.)(spec|test).js?(x)"
@@ -113,22 +110,14 @@
       "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
       "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
     },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
-    ],
+    "transformIgnorePatterns": ["[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"],
     "moduleNameMapper": {
       "^react-native$": "react-native-web"
     }
   },
   "babel": {
-    "presets": [
-      "react-app"
-    ]
+    "presets": ["react-app"]
   },
   "homepage": "http://frontend.operationcode.org/",
-  "pre-commit": [
-    "fix",
-    "format",
-    "lint"
-  ]
+  "pre-commit": ["fix", "format", "lint", "image-size"]
 }
