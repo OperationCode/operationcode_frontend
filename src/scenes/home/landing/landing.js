@@ -10,6 +10,7 @@ import SuccessStories from './successStories/successStories';
 import Partners from './partners/partners';
 import Donate from '../../../shared/components/donate/donate';
 import Join from '../../../shared/components/join/join';
+import TopCode from './topcodeBanner/topcodeBanner';
 import EmailSignup from './emailSignup/emailSignup';
 
 import styles from './landing.css';
@@ -48,7 +49,6 @@ class Landing extends Component {
             <p>Content</p>
           </div>
         </ReactModal>
-
         <div className={styles.pageHeading}>
           <h1>
             The largest community dedicated to helping military veterans and families launch
@@ -56,12 +56,7 @@ class Landing extends Component {
           </h1>
           <LinkButton text="Join" theme="red" link="/signup" />
         </div>
-        {/* <AnnounceBanner
-          link="/benefit"
-          imageSource={BenefitBanner}
-          fallbackImage450pxWideSource={MobileBenefitBanner}
-          altText="Click here to find more information about our Benefit Dinner and Silent Auction on November 10th"
-        /> */}
+        <TopCode />
         <WhatWeDo />
         <Membership />
         <MoreInformation />

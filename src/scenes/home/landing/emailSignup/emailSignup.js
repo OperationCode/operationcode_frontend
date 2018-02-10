@@ -63,7 +63,7 @@ class EmailSignup extends Component {
         headingLines={false}
       >
         <p className={styles.emailSignupText}>
-          Keep up to date with everything Operation Code. We proimse we won&#39;t spam you or sell
+          Keep up to date with everything Operation Code. We promise we won&#39;t spam you or sell
           your information.
         </p>
         <Form className={styles.emailListForm}>
@@ -72,7 +72,7 @@ class EmailSignup extends Component {
           </div>
           {this.state.error && (
             <ul className={styles.errorList}>
-              There was an error joining Operation Code:
+              There was an error joining the mailing list:
               <li className={styles.errorMessage}>{this.state.error}</li>
             </ul>
           )}

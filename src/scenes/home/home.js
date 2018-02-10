@@ -1,5 +1,3 @@
-/* eslint-disable no-console, react/forbid-prop-types */
-
 import React, { Component } from 'react';
 import { Route, withRouter, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -26,16 +24,17 @@ import Header from './header/header';
 import Landing from './landing/landing';
 import Footer from './footer/footer';
 import FourOhFour from './404/fourOhFour';
-import MentorRequest from './mentorRequest/mentorRequest';
 import LeadershipCircle from './leadershipCircle/leadershipCircle';
 import CodeSchools from './codeSchools/codeSchools';
 import About from './about/about';
 import Press from './press/press';
+import Branding from './branding/branding';
 import ResetPassword from './resetPassword/resetPassword';
 import Challenge from './challenge/challenge';
 import SignupInformation from './informationForm/informationForm';
 import Benefit from './benefit/benefit';
 import Terms from './termsOfService/termsOfService';
+import ChapterLeader from './chapterLeader/chapterLeader';
 import styles from './home.css';
 
 const ReactToastr = require('react-toastr');
@@ -53,7 +52,7 @@ class Home extends Component {
   };
 
   componentWillMount() {
-    this.props.history.listen(location => {
+    this.props.history.listen((location) => {
       this.setBgImage(location);
     });
     this.setBgImage(this.props.location);
@@ -94,13 +93,11 @@ class Home extends Component {
 
   updateRootAuthState = () => {
     const cookies = CookieHelpers.getUserStatus();
-    this.setState(
-      {
-        signedIn: cookies.signedIn,
-        mentor: cookies.mentor,
-        verified: cookies.verified,
-      }
-    );
+    this.setState({
+      signedIn: cookies.signedIn,
+      mentor: cookies.mentor,
+      verified: cookies.verified,
+    });
   };
 
   logOut = () => {
@@ -164,7 +161,11 @@ class Home extends Component {
 
       <div
         className={classes}
-        style={this.state.bgImage ? { backgroundImage: `url(${this.state.bgImageUrl})` } : {}}
+        style={
+          this.state.bgImage
+            ? { backgroundImage: `url(${this.state.bgImageUrl})` }
+            : {}
+        }
       >
         <Header
           transparent={this.state.bgImage}
@@ -198,26 +199,11 @@ class Home extends Component {
                 />
               )}
             />
-            <Route
-              path="/history"
-              component={History}
-            />
-            <Route
-              path="/sign-up"
-              component={SignUp}
-            />
-            <Route
-              path="/team"
-              component={Team}
-            />
-            <Route
-              path="/faq"
-              component={FAQ}
-            />
-            <Route
-              path="/contact"
-              component={Contact}
-            />
+            <Route path="/history" component={History} />
+            <Route path="/sign-up" component={SignUp} />
+            <Route path="/team" component={Team} />
+            <Route path="/faq" component={FAQ} />
+            <Route path="/contact" component={Contact} />
             <Route
               exact
               path="/about/financial-statements"
@@ -231,6 +217,7 @@ class Home extends Component {
               path="/press"
               component={Press}
             />
+            <Route path="/branding" component={Branding} />
             <Route
               path="/jobs"
               component={Jobs}
@@ -267,6 +254,7 @@ class Home extends Component {
               path="/terms"
               component={Terms}
             />
+            <Route path="/chapter_leader" component={ChapterLeader} />
             <Route
               path="/leadership_circle"
               component={LeadershipCircle}
@@ -278,36 +266,19 @@ class Home extends Component {
                 <Landing {...props} sendNotification={this.sendNotification} />
               )}
             />
-            <Route
-              path="/mentor-request"
-              render={() => (
-                <MentorRequest {...authProps} />
-              )}
-            />
-            <Route
-              exact
-              path="/scholarships"
-              component={Scholarships}
-            />
-            <Route
-              path="/benefit"
-              render={() => (
-                <Benefit {...authProps} />
-              )}
-            />
-            <Route
-              path="/gala"
-              render={() => (
-                <Benefit {...authProps} />
-              )}
-            />
+            <Route exact path="/scholarships" component={Scholarships} />
+            <Route path="/benefit" render={() => <Benefit {...authProps} />} />
+            <Route path="/gala" render={() => <Benefit {...authProps} />} />
+
             {/* eslint-disable */}
             <Route
               path="/newgibill"
               component={() =>
-                (window.location = 'http://www.benefits.va.gov/gibill/post911_gibill.asp')}
+                (window.location =
+                  'http://www.benefits.va.gov/gibill/post911_gibill.asp')}
             />
             {/* eslint-enable */}
+
             <Route
               path="/login"
               render={() => (
@@ -348,7 +319,7 @@ class Home extends Component {
           </Switch>
         </div>
         <ToastContainer
-          ref={input => {
+          ref={(input) => {
             this.container = input;
           }}
           toastMessageFactory={ToastMessageFactory}

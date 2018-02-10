@@ -6,6 +6,7 @@ import { withRouter } from 'react-router-dom';
 import Section from 'shared/components/section/section';
 import _ from 'lodash';
 import styles from './idmeverify.css';
+import { setUserVerifiedCookie } from '../../../utils/cookieHelper';
 
 class IdmeVerify extends Component {
   constructor() {
@@ -19,6 +20,7 @@ class IdmeVerify extends Component {
     } else if (qs.access_token) {
       postBackend('users/profile/verify', { access_token: qs.access_token }).then((response) => {
         if (_.get(response, 'data.verified')) {
+          setUserVerifiedCookie(true);
           this.setState({ verified: true });
           this.props.updateRootAuthState();
         }

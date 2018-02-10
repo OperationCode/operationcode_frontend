@@ -5,7 +5,13 @@ import * as faIcons from 'react-icons/lib/fa';
 import styles from './iconCard.css';
 
 const IconCard = ({
-  fontAwesomeIcon, iconAboveHeading, iconSize, subText, title, url, usingHtml
+  fontAwesomeIcon,
+  iconAboveHeading,
+  iconSize,
+  subText,
+  title,
+  url,
+  usingHtml,
 }) => {
   const Icon = faIcons[fontAwesomeIcon];
 
@@ -25,7 +31,12 @@ const IconCard = ({
   }
 
   if (usingHtml) {
-    subTextNode = <span className={styles.iconCard__subtext} dangerouslySetInnerHTML={createMarkup()} />;
+    subTextNode = (
+      <span
+        className={styles.iconCard__subtext}
+        dangerouslySetInnerHTML={createMarkup()}
+      />
+    );
   } else {
     subTextNode = <span className={styles.iconCard__subtext}>{subText}</span>;
   }
@@ -33,7 +44,12 @@ const IconCard = ({
   if (url) {
     if (subText) {
       return (
-        <a href={url} className={[styles.iconCard, styles.iconCardWithSubText].join(' ')} target="_blank" rel="noopener noreferrer">
+        <a
+          href={url}
+          className={[styles.iconCard, styles.iconCardWithSubText].join(' ')}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {iconBefore}
           {titleNode}
           {iconAfter}
@@ -42,7 +58,12 @@ const IconCard = ({
       );
     }
     return (
-      <a href={url} className={styles.iconCard} target="_blank" rel="noopener noreferrer">
+      <a
+        href={url}
+        className={styles.iconCard}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {iconBefore}
         {titleNode}
         {iconAfter}
@@ -71,7 +92,7 @@ const IconCard = ({
 function subTextLengthChecker(props, propName) {
   if (props[propName]) {
     const str = props[propName];
-    const maxLen = 150;
+    const maxLen = 180;
     if (typeof str !== 'string') {
       return Error(`${propName} must be a string`);
     }
@@ -88,7 +109,7 @@ function createChainableTypeChecker(validate) {
     if (props[propName] === null) {
       const locationName = ReactPropTypeLocationNames[location];
       if (isRequired) {
-        return new Error((`Required ${locationName} ${propName} was not specified in ${componentName}.`));
+        return new Error(`Required ${locationName} ${propName} was not specified in ${componentName}.`);
       }
       return null;
     }
@@ -110,7 +131,7 @@ IconCard.propTypes = {
   url: PropTypes.string,
   iconSize: PropTypes.number,
   iconAboveHeading: PropTypes.bool,
-  usingHtml: PropTypes.bool
+  usingHtml: PropTypes.bool,
 };
 
 IconCard.defaultProps = {
@@ -118,7 +139,7 @@ IconCard.defaultProps = {
   url: undefined,
   iconSize: 100,
   iconAboveHeading: false,
-  usingHtml: false
+  usingHtml: false,
 };
 
 export default IconCard;

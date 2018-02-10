@@ -1,8 +1,9 @@
 import React from 'react';
 import Section from 'shared/components/section/section';
 import LinkButton from 'shared/components/linkButton/linkButton';
+import YouTube from 'shared/components/youtubeVideo/youtubeVideo';
 import SabioLogo from '../../../images/codeSchoolLogos/sabio.png';
-import CodeFellowsLogo from '../../../images/codeSchoolLogos/codefellows_small.png';
+import codeFellowsLogo from '../../../images/codeSchoolLogos/codefellows_small.png';
 import NodejsLogo from './logos/NodeSummitSF_ColorLogoWeb.jpg';
 import srvdLogo from './logos/srvd.png';
 import ebayLogo from './logos/320px-EBay_logo.png';
@@ -18,6 +19,11 @@ import styles from './benefit.css';
 const Benefit = () => (
   <div>
     <div className={styles.tyBanner}><h3>Thank You!</h3>
+      <YouTube
+        id="edMC6Wc3nsg"
+        height="420"
+        width="740"
+      />
       <p>Thank you to all of our donors, sponsors, and event staff who helped make the Operation Code 2017 Benefit Dinner a success!<br />
        Save the date: November 9th, 2018
       </p>
@@ -191,7 +197,7 @@ const Benefit = () => (
           >
             Dan Shaw
           </a>,
-           {' '}
+          {' '}
           <a
             href="https://www.sabio.la/gi"
             target="_blank"
@@ -249,7 +255,7 @@ const Benefit = () => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className={styles.logoLong} src={CodeFellowsLogo} alt="Code Fellows" />
+            <img className={styles.logoLong} src={codeFellowsLogo} alt="Code Fellows" />
           </a>
           <a
             href="https://secureset.com/"

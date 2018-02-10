@@ -3,10 +3,12 @@ import FormInput from '../formInput/formInput';
 
 class FormEmail extends Component {
   render() {
+    const validEmailRegex = /(^[^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})/;
+
     return (
       <FormInput
         {...this.props}
-        validationRegex={/\S+@\S+\.\S+/}
+        validationRegex={validEmailRegex}
         validationErrorMessage="Must be a valid email"
         ref={(child) => { this.inputRef = child; }}
       />
