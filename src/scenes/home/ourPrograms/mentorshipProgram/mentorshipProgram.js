@@ -46,7 +46,7 @@ const MentorshipProgram = ({ fontSize }) => (
           </li>
           <li>
             A guarantee that someone will work with you for at least 30 minutes - potentially
-            on a long-term basis. All our mentors are volunteers taking on mentees as their 
+            on a long-term basis. All our mentors are volunteers taking on mentees as their
             schedule allows.
           </li>
         </ul>
