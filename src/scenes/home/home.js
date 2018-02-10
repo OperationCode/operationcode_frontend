@@ -8,6 +8,7 @@ import IdmeVerify from 'shared/components/idme/idmeverify/idmeverify';
 import AuthenticatedRoute from 'shared/components/authenticatedRoute/authenticatedRoute';
 import familyImage from 'images/Family-2.jpg';
 import lincolnImage from 'images/lincoln.jpg';
+import winstonImage from 'images/Winston.jpg';
 import colinPowellImage from 'images/colin-powell.jpg';
 import Profile from './profile/profile';
 import SignUp from './signup/signup';
@@ -33,6 +34,7 @@ import Challenge from './challenge/challenge';
 import SignupInformation from './informationForm/informationForm';
 import Benefit from './benefit/benefit';
 import Terms from './termsOfService/termsOfService';
+import OurPrograms from './ourPrograms/ourPrograms';
 import ChapterLeader from './chapterLeader/chapterLeader';
 import styles from './home.css';
 
@@ -72,6 +74,13 @@ class Home extends Component {
         bgImage: true,
         bgImageUrl: lincolnImage,
         bgImageStyle: 'backgroundImageTeam',
+      });
+    } else if (location.pathname === '/our_programs') {
+      this.setState({
+        bgChanged: !(this.state.bgImage),
+        bgImage: true,
+        bgImageUrl: winstonImage,
+        bgImageStyle: "backgroundImageGettingStarted"
       });
     } else if (location.pathname === '/history') {
       this.setState({
@@ -199,6 +208,10 @@ class Home extends Component {
               render={props => (
                 <Landing {...props} sendNotification={this.sendNotification} />
               )}
+            />
+            <Route
+              path="/our_programs"
+              component={OurPrograms}
             />
             <Route exact path="/scholarships" component={Scholarships} />
             <Route path="/benefit" render={() => <Benefit {...authProps} />} />
