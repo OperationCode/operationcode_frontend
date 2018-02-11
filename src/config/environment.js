@@ -1,9 +1,9 @@
 const config = {
-  backendHost: 'https://api.operationcode.org/',
-  backendUrl: 'https://api.operationcode.org/api/v1',
-  idmeClientId: '6d781bfd42506613a0fe4ad4123aaf6d',
-  host: 'https://www.operationcode.org',
-  idmeOAuthUrl: 'https://api.id.me/oauth/authorize'
+  backendHost: process.env.OC_BACKEND_HOST,
+  backendUrl: process.env.OC_BACKEND_URL,
+  host: process.env.OC_HOST,
+  idmeClientId: process.env.OC_IDME_CLIENT_ID,
+  idmeOAuthUrl: process.env.OC_IDME_AUTH_URL
 };
 
 export default config;
