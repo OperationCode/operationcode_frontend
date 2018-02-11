@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Section from 'shared/components/section/section';
 import IconCard from 'shared/components/iconCard/iconCard';
@@ -56,7 +57,7 @@ const Profile = ({ verified }) => (
               Veterans, Servicemembers and Spouses!
             </span>
             <p>
-              To gain access to <span className={styles.profileContainer__verified__services}>Mentorship</span> and <span className={styles.profileContainer__verified__services}>Scholarships</span>, please verify your military status.
+              To gain access to <Link to="/our_programs#mentorshipProgram" style={{ textDecoration: 'none' }}><span className={styles.profileContainer__verified__services}>Mentorship</span></Link> and <span className={styles.profileContainer__verified__services}>Scholarships</span>, please verify your military status.
             </p>
 
             <p>
