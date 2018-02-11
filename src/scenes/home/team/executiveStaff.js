@@ -3,7 +3,6 @@ const CEO = {
   role: 'CEO',
   slack: '@david',
   email: 'david@operationcode.org',
-
 };
 
 const ExecutiveAssistant = {
@@ -30,7 +29,7 @@ const CCMO = {
 const CFO = {
   name: 'Amy Tan',
   role: 'CFO',
-  slack: '@amy',
+  slack: '@amy Tan',
   email: 'amy@operationcode.org',
 };
 
@@ -44,7 +43,7 @@ const CTO = {
 const ActingCDO = {
   name: 'Kate Horner',
   role: 'Acting CDO',
-  slack: '@katehorner',
+  slack: '@Katehorner',
   email: '',
 };
 
