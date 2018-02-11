@@ -77,7 +77,6 @@ class SocialLogin extends Component {
   };
 
   login = (Zip, Password) => {
-    console.log(this.props);
     axios
       .post(`${config.backendUrl}/users/social`, {
         user: {
@@ -112,8 +111,6 @@ class SocialLogin extends Component {
             }
           });
         }
-        console.log('Error: ');
-        console.log(error);
         this.props.sendNotification(
           'error',
           'Error',
