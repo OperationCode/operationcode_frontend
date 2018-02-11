@@ -3,6 +3,7 @@
   flex: 0 40%;
   align-items: center;
   display:flex;
+  background-color: green;
 }
 
 .logo img {

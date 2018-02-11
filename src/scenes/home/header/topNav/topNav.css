@@ -1,8 +1,12 @@
 .topNav {
   display: flex;
+  margin-left: 400px;
   justify-content: flex-end;
   flex: 1 0 60%;
   font-size: 20px;
+  position: fixed;
+  background-color: red;
+
 }
 
 .topNav a {
