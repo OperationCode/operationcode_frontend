@@ -1,41 +1,30 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import Section from 'shared/components/section/section';
 import QuoteBanner from 'shared/components/quoteBanner/quoteBanner';
 import TeamCard from 'shared/components/teamCard/teamCard';
-import BoardCard from 'shared/components/boardCard/boardCard';
 import BoardMembers from './boardMembers';
+import ExecutiveStaff from './executiveStaff';
 import styles from './team.css';
 
 class Team extends Component {
-  state = {
-    members: [],
-  };
-
-  componentDidMount() {
-    axios
-      .get('https://api.operationcode.org/api/v1/team_members.json')
-      .then((response) => {
-        this.setState({ members: response.data });
-      });
-  }
-
   render() {
-    const team = this.state.members.map(member => (
-      <TeamCard
-        key={`${member.name} + ${member.role}`}
-        name={member.name}
-        role={member.role}
-      />
-    ));
-
     const boardMembers = BoardMembers.map(boardMember => (
-      <BoardCard
+      <TeamCard
         key={`${boardMember.name} + ${boardMember.role}`}
         name={boardMember.name}
         role={boardMember.role}
         description={boardMember.description}
         src={boardMember.src}
+      />
+    ));
+    const executiveStaff = ExecutiveStaff.map(staff => (
+      <TeamCard
+        key={`${staff.name} + ${staff.role}`}
+        name={staff.name}
+        role={staff.role}
+        slack={staff.slack}
+        email={staff.email}
+        isBoard={false}
       />
     ));
 
@@ -61,13 +50,8 @@ class Team extends Component {
           </div>
         </Section>
 
-        <Section title="Our Team" theme="white">
-          <p>
-            Our all volunteer staff are dedicated individuals who come from a
-            wide variety of backgrounds, including members of both the civilian
-            and military community.
-          </p>
-          <div className={styles.team}>{team}</div>
+        <Section title="Our Executive Staff" theme="white">
+          <div className={styles.executiveStaff}>{executiveStaff}</div>
         </Section>
       </div>
     );

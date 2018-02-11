@@ -5,6 +5,13 @@
   align-items: flex-start;
 }
 
+.executiveStaff {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  justify-content: space-between;
+}
+
 .foundingMembers {
   padding: 2rem 0 0 0;
 }
