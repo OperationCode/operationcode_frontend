@@ -53,11 +53,10 @@ class Home extends Component {
   };
 
   componentWillMount() {
-    /*TEMP -- DISABLE PHOTO
     this.props.history.listen((location) => {
       this.setBgImage(location);
     });
-    this.setBgImage(this.props.location);*/
+    this.setBgImage(this.props.location);
     this.updateRootAuthState();
   }
 
