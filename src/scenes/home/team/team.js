@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Section from 'shared/components/section/section';
 import QuoteBanner from 'shared/components/quoteBanner/quoteBanner';
 import TeamCard from 'shared/components/teamCard/teamCard';
