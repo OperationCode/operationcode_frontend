@@ -12,7 +12,7 @@ const ExecutiveAssistant = {
   email: 'morgan@operationcode.org',
 };
 
-const ActingCOO = {
+const COO = {
   name: 'David Reis',
   role: 'Acting COO',
   slack: '@davidr',
@@ -40,7 +40,7 @@ const CTO = {
   email: 'nell@operationcode.org',
 };
 
-const ActingCDO = {
+const CDO = {
   name: 'Kate Horner',
   role: 'Acting CDO',
   slack: '@Katehorner',
@@ -71,11 +71,11 @@ const GeneralCounsel = {
 export default [
   CEO,
   ExecutiveAssistant,
-  ActingCOO,
+  COO,
   CCMO,
   CFO,
   CTO,
-  ActingCDO,
+  CDO,
   HR,
   PublicPolicyDirector,
   GeneralCounsel
