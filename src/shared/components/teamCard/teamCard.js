@@ -10,8 +10,8 @@ const TeamCard = ({ name, role, slackUsername, email, isBoard, description, imag
     <hr className={styles.hr} />
     {!isBoard && (
       <span className={styles.detail}>
-        <span className={styles.slackUsername}>
-          <text>{slack}</text>
+        <span className={styles.slack}>
+          <text>{slackUsername}</text>
         </span>
         <span className={styles.email}>
           <text>{email}</text>
