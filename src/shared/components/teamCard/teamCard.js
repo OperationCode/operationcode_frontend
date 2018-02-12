@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './teamCard.css';
 
-const TeamCard = ({ name, role, slack, email, isBoard, description, imageSrc }) => (
+const TeamCard = ({ name, role, slackUsername, email, isBoard, description, imageSrc }) => (
   <div className={styles.teamCard}>
     {imageSrc && (<img src={imageSrc} alt={`Headshot of ${name}`} />)}
     <h6 className={styles.name}>{name}</h6>
@@ -10,7 +10,7 @@ const TeamCard = ({ name, role, slack, email, isBoard, description, imageSrc }) 
     <hr className={styles.hr} />
     {!isBoard && (
       <span className={styles.detail}>
-        <span className={styles.slack}>
+        <span className={styles.slackUsername}>
           <text>{slack}</text>
         </span>
         <span className={styles.email}>
@@ -29,8 +29,8 @@ const TeamCard = ({ name, role, slack, email, isBoard, description, imageSrc }) 
 TeamCard.propTypes = {
   name: PropTypes.string.isRequired,
   role: PropTypes.string.isRequired,
-  slack: PropTypes.string.isRequired,
-  email: PropTypes.string.isRequired,
+  slackUsername: PropTypes.string,
+  email: PropTypes.string,
   isBoard: PropTypes.bool,
   imageSrc: PropTypes.string,
   description: PropTypes.string,
@@ -38,8 +38,10 @@ TeamCard.propTypes = {
 
 TeamCard.defaultProps = {
   description: null,
+  email: '',
   isBoard: true,
-  imageSrc: ''
+  imageSrc: '',
+  slackUsername: '',
 };
 
 export default TeamCard;
