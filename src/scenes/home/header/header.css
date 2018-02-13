@@ -1,17 +1,17 @@
 .header {
   display: flex;
+  justify-content:space-around; 
   align-items: center;
   height: 80px;
-  /*background-color: rgb(117,129,143);*/
-  background-color: black;
+  background-color: rgb(117,129,143);
   padding: 0 2rem;
+  position: fixed;
 }
 
 .logo {
   display: flex;
   align-items: center;
   height: 60px;
-  margin-left: 40px;
 }
 
 .logo img {
