@@ -35,7 +35,7 @@ const MentorshipProgram = ({ fontSize }) => (
         <ul>
           <li>
             A live &quot;Ask Jeeves&quot; alternative. Mentors are happy to help you, but also
-            expert a certain degree of individual effort. Please spend time{' '}
+            expect a certain degree of individual effort. Please spend time{' '}
             <a
               href="https://community.operationcode.org/t/the-art-of-asking-questions/121"
               target="_blank"
