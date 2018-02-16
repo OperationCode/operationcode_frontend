@@ -1,0 +1,14 @@
+.heroBanner {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.headerStyles {
+  text-align: left;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px red solid;
+  width: 80vw;
+}
