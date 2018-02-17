@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'font-awesome/css/font-awesome.css';
+import '@fortawesome/fontawesome/styles.css';
 import App from './App';
 import './shared/styles/normalize.global.css';
 import './shared/styles/react-table.global.css';
