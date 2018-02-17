@@ -4,8 +4,9 @@
   align-items: center;
   height: 80px;
   background-color: rgb(117,129,143);
-  padding: 0 2rem;
-  position: fixed;
+  /*padding: 0 2rem;*/
+  width: 100%;
+  position: sticky;
 }
 
 .logo {

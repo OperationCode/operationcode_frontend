@@ -52,13 +52,14 @@ class Home extends Component {
     mentor: false,
   };
 
+  /*
   componentWillMount() {
     this.props.history.listen((location) => {
       this.setBgImage(location);
     });
     this.setBgImage(this.props.location);
     this.updateRootAuthState();
-  }
+  }*/
 
   setBgImage(location) {
     if (location.pathname === '/') {
@@ -150,12 +151,15 @@ class Home extends Component {
             : {}
         }
       >
+        {/**/}
+          PLACEHOLDER
+       
         <Header
           transparent={this.state.bgImage}
           logOut={this.logOut}
           signedIn={signedIn}
           mentor={mentor}
-        />
+        /> 
         <div className={styles.main}>
           <Switch>
             <Route path="/code-schools" component={CodeSchools} />
