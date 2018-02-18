@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FaCheck, FaBan } from 'react-icons/lib/fa';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { faCheck, faBan } from '@fortawesome/fontawesome-free-solid';
 import Section from 'shared/components/section/section';
 import styles from './mentorshipProgram.css';
 
-const MentorshipProgram = ({ fontSize }) => (
+const MentorshipProgram = ({ iconSize }) => (
   <Section title="Mentorship Program">
     <div className={styles.flexContainer}>
       <div className={styles.featureHeading}>
-        <FaCheck size={fontSize} />
+        <FontAwesomeIcon icon={faCheck} size={iconSize} />
         <p>What It Is</p>
       </div>
       <div className={styles.featureDescription}>
@@ -28,7 +29,7 @@ const MentorshipProgram = ({ fontSize }) => (
     </div>
     <div className={styles.flexContainer}>
       <div className={styles.featureHeading}>
-        <FaBan size={fontSize} />
+        <FontAwesomeIcon icon={faBan} size={iconSize} />
         <p>What It Isn&apos;t</p>
       </div>
       <div className={styles.featureDescription}>
@@ -56,11 +57,11 @@ const MentorshipProgram = ({ fontSize }) => (
 );
 
 MentorshipProgram.propTypes = {
-  fontSize: PropTypes.number,
+  iconSize: PropTypes.string,
 };
 
 MentorshipProgram.defaultProps = {
-  fontSize: 36,
+  iconSize: '2x',
 };
 
 export default MentorshipProgram;
