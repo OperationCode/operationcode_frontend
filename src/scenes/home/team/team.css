@@ -17,8 +17,14 @@
   padding: 2rem 0 0 0;
 }
 
+.teamError {
+  color: red;
+  margin-top: 2.5em;
+  text-align: center;
+}
+
 @media screen and (max-width: 840px) {
-  .boardMembers {
+  .boardMembers, .executiveStaff {
     align-items: center;
     flex-flow: column nowrap;
     justify-content: space-between;
