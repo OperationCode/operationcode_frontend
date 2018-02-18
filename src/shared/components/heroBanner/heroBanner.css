@@ -23,12 +23,12 @@
 
 @media only screen and (min-width: 700px) and (max-width: 1024px) {
   .headerStyles {
-    height: 40vh;
+    height: 35vh;
   }
 }
 
 @media only screen and (min-width: 300px) and (max-width: 700px) {
   .headerStyles {
-    height: 30vh;
+    height: 40vh;
   }
 }
