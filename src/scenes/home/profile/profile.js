@@ -44,18 +44,13 @@ const Profile = ({ verified }) => (
         />
 
         <IconCard title="Update Info" fontAwesomeIcon="FaUser" url="/signup-info" />
+        <IconCard title="Our Programs" fontAwesomeIcon="FaGroup" url="/our_programs#mentorshipProgram" />
       </div>
       <div
         className={
           verified ? styles.profileContainer__idMe_verified : styles.profileContainer__idMe
         }
       >
-        {verified && (
-          <div>
-            <h5>Your profile is verified with id.me</h5>
-            <p><Link to="/our_programs#mentorshipProgram" style={{ textDecoration: 'none' }}><span className={styles.profileContainer__verified__services}>Get Mentorship</span></Link></p>
-          </div>
-        )}
         {!verified && (
           <div className={styles.profileContainer__idMe__btn}>
             <span className={styles.profileContainer__idMe__title}>
