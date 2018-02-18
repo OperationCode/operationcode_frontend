@@ -153,10 +153,8 @@ class Home extends Component {
         }
       >
         
-          PLACEHOLDER
-       
+          PLACEHOLDER - Testing navbar
         <Header
-          transparent={this.state.bgImage}
           logOut={this.logOut}
           signedIn={signedIn}
           mentor={mentor}
