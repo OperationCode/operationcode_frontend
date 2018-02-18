@@ -52,14 +52,14 @@ class Home extends Component {
     mentor: false,
   };
 
-  /*
+  /**/
   componentWillMount() {
     this.props.history.listen((location) => {
       this.setBgImage(location);
     });
     this.setBgImage(this.props.location);
     this.updateRootAuthState();
-  }*/
+  }
 
   setBgImage(location) {
     if (location.pathname === '/') {
@@ -143,6 +143,7 @@ class Home extends Component {
       [`${styles[this.state.bgImageStyle]}`]: this.state.bgImage,
     });
     return (
+      
       <div
         className={classes}
         style={
@@ -151,7 +152,7 @@ class Home extends Component {
             : {}
         }
       >
-        {/**/}
+        
           PLACEHOLDER
        
         <Header
