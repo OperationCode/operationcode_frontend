@@ -1,14 +1,34 @@
 .heroBanner {
-  width: 100%;
+  width: 100vw;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  display: table;
 }
 
 .headerStyles {
   text-align: left;
   margin: 0 auto;
-  padding: 10px;
-  border: 1px red solid;
   width: 80vw;
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 10vw;
+}
+
+@media only screen and (min-width: 1025px) {
+  .headerStyles {
+    height: 50vh;
+  }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1024px) {
+  .headerStyles {
+    height: 40vh;
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 700px) {
+  .headerStyles {
+    height: 30vh;
+  }
 }
