@@ -6,7 +6,10 @@
   background-color: rgb(117,129,143);
   /*padding: 0 2rem;*/
   width: 100%;
+  position: -webkit-sticky;
   position: sticky;
+  top: 0px;
+
 }
 
 .logo {
