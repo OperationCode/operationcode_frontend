@@ -7,7 +7,6 @@ import StacyChin from 'images/stacy_chin.png';
 import ConradHollomon from 'images/conrad_hollomon.jpg';
 import DavidMolina from 'images/david_molina.jpg';
 import MarkKerr from 'images/mark_kerr.jpg';
-// import imageUnknown from 'images/img_unk.png';
 
 const Chair = {
   name: 'Dr. James Davis',
