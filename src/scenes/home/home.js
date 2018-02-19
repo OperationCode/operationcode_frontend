@@ -143,17 +143,16 @@ class Home extends Component {
       [`${styles[this.state.bgImageStyle]}`]: this.state.bgImage,
     });
     return (
-      
-      <div
-        className={classes}
-        style={
-          this.state.bgImage
-            ? { backgroundImage: `url(${this.state.bgImageUrl})` }
-            : {}
-        }
-      >
-        
-          PLACEHOLDER - Testing navbar
+      <div>
+        <div
+          className={classes}
+          style={
+            this.state.bgImage
+              ? { backgroundImage: `url(${this.state.bgImageUrl})` }
+              : {}
+          }
+        ></div>
+                  
         <Header
           logOut={this.logOut}
           signedIn={signedIn}
