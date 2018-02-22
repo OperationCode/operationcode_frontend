@@ -121,8 +121,8 @@ class SignUp extends Component {
       <Section className={styles.signup} title="Join Operation Code">
         <Form className={styles.signupForm}>
           <span>
-            Are you ready to deploy your future? Our community supports veterans
-            transitioning into the tech industry, but we welcome family members,
+            Are you ready to deploy your future? Our community supports active duty and veterans
+            transitioning into the tech industry, but we welcome spouse, family members,
             tech professionals, volunteers and sponsors. Join Operation Code today
             and launch your career in tech. Once you complete the form below,
             you&#8217;ll be invited to join our team on Slack. Make sure you stop
