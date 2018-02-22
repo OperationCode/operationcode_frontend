@@ -15,3 +15,4 @@ Check out [how Operation Code Open Source projects are maintained](https://githu
 # Maintainers
 
 * [Kelly MacLeod](http://www.github.com/ksmacleod99)
+* [Will Montgomery](http://www.github.com/wimo7083)
