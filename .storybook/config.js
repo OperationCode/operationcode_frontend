@@ -1,9 +1,14 @@
 import { configure } from '@storybook/react';
 
-// automatically import all files ending in *.stories.js
-const req = require.context('../stories', true, /.stories.js$/);
+import 'shared/styles/normalize.global.css';
+import 'shared/styles/react-table.global.css';
+import 'shared/styles/react-select.global.css';
+import 'index.css';
+
+const req = require.context('../stories', true, /\.js$/)
+
 function loadStories() {
-  req.keys().forEach((filename) => req(filename));
+  req.keys().forEach(filename => req(filename));
 }
 
 configure(loadStories, module);
