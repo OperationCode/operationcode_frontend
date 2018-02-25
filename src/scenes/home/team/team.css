@@ -1,26 +1,26 @@
 .boardMembers {
+  align-items: flex-start;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+}
+
+.executiveStaff {
   align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  justify-content: space-between;
 }
 
 .foundingMembers {
   padding: 2rem 0 0 0;
 }
 
-.team {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 20px 0;
-  align-items: center;
-  justify-content: center;
-}
-
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 840px) {
   .boardMembers {
+    align-items: center;
     flex-flow: column nowrap;
     justify-content: space-between;
-    align-items: center;
   }
 }
