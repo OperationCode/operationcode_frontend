@@ -11,14 +11,14 @@ const MoreInformation = () => (
   <Section title="Who We Serve" theme="gray">
     <div className={styles.moreInformation}>
       <ClipPathImage
-        title="Military Spouses"
-        image={familyImage}
-        altText="Military Spouses"
-      />
-      <ClipPathImage
         title="Veterans, Active Duty, and Reservists"
         image={milImage}
         altText="Veterans, Active Duty, and Reservists"
+      />
+      <ClipPathImage
+        title="Military Spouses"
+        image={familyImage}
+        altText="Military Spouses"
       />
       <ClipPathImage
         title="Volunteers and Sponsors"
