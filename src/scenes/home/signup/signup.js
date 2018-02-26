@@ -122,8 +122,8 @@ class SignUp extends Component {
         <Form className={styles.signupForm}>
           <span>
             Are you ready to deploy your future? Our community supports active duty and veterans
-            transitioning into the tech industry, but we welcome spouse, family members,
-            tech professionals, volunteers and sponsors. Join Operation Code today
+            transitioning into the tech industry, but spouse, family members,
+            tech professionals, volunteers and sponsors are also welcome. Join Operation Code today
             and launch your career in tech. Once you complete the form below,
             you&#8217;ll be invited to join our team on Slack. Make sure you stop
             in and say hi!
