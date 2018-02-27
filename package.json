@@ -23,6 +23,7 @@
     "react-dom": "^15.5.4",
     "react-error-overlay": "^1.0.7",
     "react-ga": "^2.2.0",
+    "react-google-maps": "^9.4.5",
     "react-icons": "^2.2.5",
     "react-modal": "^2.3.3",
     "react-router": "^4.1.1",
@@ -96,9 +97,16 @@
     "validate": "npm ls"
   },
   "jest": {
-    "moduleDirectories": ["node_modules", "src"],
-    "collectCoverageFrom": ["src/**/*.{js,jsx}"],
-    "setupFiles": ["<rootDir>/config/polyfills.js"],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}"
+    ],
+    "setupFiles": [
+      "<rootDir>/config/polyfills.js"
+    ],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.js?(x)",
       "<rootDir>/src/**/?(*.)(spec|test).js?(x)"
@@ -110,14 +118,23 @@
       "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
       "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
     },
-    "transformIgnorePatterns": ["[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"],
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
+    ],
     "moduleNameMapper": {
       "^react-native$": "react-native-web"
     }
   },
   "babel": {
-    "presets": ["react-app"]
+    "presets": [
+      "react-app"
+    ]
   },
   "homepage": "http://frontend.operationcode.org/",
-  "pre-commit": ["fix", "format", "lint", "image-size"]
+  "pre-commit": [
+    "fix",
+    "format",
+    "lint",
+    "image-size"
+  ]
 }
