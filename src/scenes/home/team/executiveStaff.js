@@ -19,6 +19,13 @@ const COO = {
   email: '',
 };
 
+const CCMO_CDO = {
+  name: 'Jennifer Weideman',
+  role: 'CCMO, CDO',
+  slackUsername: '@Jenn',
+  email: 'jennifer@operationcode.org',
+};
+
 const CFO = {
   name: 'Amy Tan',
   role: 'CFO',
@@ -31,13 +38,6 @@ const CTO = {
   role: 'CTO',
   slackUsername: '@nellshamrell',
   email: 'nell@operationcode.org',
-};
-
-const CDO = {
-  name: 'Jennifer Weideman',
-  role: 'CDO',
-  slackUsername: '@Jenn',
-  email: 'jennifer@operationcode.org'
 };
 
 const CCO = {
@@ -72,9 +72,9 @@ export default [
   CEO,
   ExecutiveAssistant,
   COO,
+  CCMO_CDO,
   CFO,
   CTO,
-  CDO,
   CCO,
   HR,
   PublicPolicyDirector,
