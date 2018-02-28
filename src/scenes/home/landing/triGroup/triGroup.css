@@ -7,12 +7,38 @@
   align-items: center;
 }
 .triGroupContainer {
+  width: 100%;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.clickableLogo {
+  display: flex;
+  align-content: center;
   justify-content: center;
 }
-iframe {
+
+/* iframe {
   padding: 25px;
+} */
+
+.medalLogos {
+  margin: 1em;
+  /* display: inline-block; */
+  display: flex;
+  flex-direction: column;
+  height: 380px;
+  align-content: center;
+  justify-content: center;
+}
+
+.medalLogos img {
+  display: flex;
+  align-content: center;
+  height: 70%;
+  width: 70%;
 }
 
 /* Video iFrame Media Queries */
@@ -21,6 +47,9 @@ iframe {
     width: 666px;
     height: 375px;
   }
+  .medalLogos {
+    max-height: 375px;
+  }
 }
 
 @media screen and (max-width: 720px) {
@@ -28,11 +57,18 @@ iframe {
     width: 444px;
     height: 250px;
   }
+
+  .medalLogos {
+    max-height: 250px;
+  }
 }
 
 @media screen and (max-width: 480px) {
   iframe {
     width: 333px;
     height: 187.5px;
+  }
+  .medalLogos {
+    max-height: 187.5px;
   }
 }

@@ -1,0 +1,16 @@
+{
+  "join": {
+    "url": "/join",
+    "text": "Join Us!",
+    "color": "red"
+  },
+  "video": {
+    "url": "https://www.youtube.com/embed/xN7yMoe38xc?modestbranding=1&start=133&showinfo=0",
+    "title": "Watch will struggle with react"
+  },
+  "donate": {
+    "url": "https://opencollective.com/operationcode#support",
+    "text": "Donate Now!",
+    "color": "blue"
+  }
+}
