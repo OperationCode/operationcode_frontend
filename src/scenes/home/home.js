@@ -49,7 +49,7 @@ class Home extends Component {
     bgImageUrl: null,
     bgImageStyle: null,
     signedIn: false,
-    mentor: false,
+    mentor: false
   };
 
   componentWillMount() {
@@ -63,38 +63,39 @@ class Home extends Component {
   setBgImage(location) {
     if (location.pathname === '/') {
       this.setState({
-        bgChanged: !this.state.bgImage,
-        bgImage: true,
-        bgImageUrl: familyImage,
-        bgImageStyle: 'backgroundImageHome',
+        bgChanged: this.state.bgImage,
+        bgImage: false,
+        bgImageUrl: null,
+        bgImageStyle: null,
       });
-    } else if (location.pathname === '/team') {
+    }
+    if (location.pathname === '/team') {
       this.setState({
         bgChanged: !this.state.bgImage,
         bgImage: true,
         bgImageUrl: lincolnImage,
-        bgImageStyle: 'backgroundImageTeam',
+        bgImageStyle: 'backgroundImageTeam'
       });
     } else if (location.pathname === '/our_programs') {
       this.setState({
-        bgChanged: !(this.state.bgImage),
+        bgChanged: !this.state.bgImage,
         bgImage: true,
         bgImageUrl: winstonImage,
-        bgImageStyle: "backgroundImageGettingStarted"
+        bgImageStyle: 'backgroundImageGettingStarted'
       });
     } else if (location.pathname === '/history') {
       this.setState({
         bgChanged: !this.state.bgImage,
         bgImage: true,
         bgImageUrl: colinPowellImage,
-        bgImageStyle: 'backgroundImageHistory',
+        bgImageStyle: 'backgroundImageHistory'
       });
     } else {
       this.setState({
         bgChanged: this.state.bgImage,
         bgImage: false,
         bgImageUrl: null,
-        bgImageStyle: null,
+        bgImageStyle: null
       });
     }
   }
@@ -104,7 +105,7 @@ class Home extends Component {
     this.setState({
       signedIn: cookies.signedIn,
       mentor: cookies.mentor,
-      verified: cookies.verified,
+      verified: cookies.verified
     });
   };
 
@@ -114,7 +115,7 @@ class Home extends Component {
       {
         signedIn: false,
         mentor: false,
-        verified: false,
+        verified: false
       },
       () => {
         this.props.history.push('/');
@@ -125,7 +126,7 @@ class Home extends Component {
   sendNotification = (type, title, subtitle) => {
     this.container[type](subtitle, title, {
       timeOut: 3000,
-      extendedTimeOut: 3000,
+      extendedTimeOut: 3000
     });
   };
 
@@ -134,12 +135,12 @@ class Home extends Component {
     const authProps = {
       signedIn,
       mentor,
-      verified,
+      verified
     };
 
     const classes = classNames({
       [`${styles.home}`]: true,
-      [`${styles[this.state.bgImageStyle]}`]: this.state.bgImage,
+      [`${styles[this.state.bgImageStyle]}`]: this.state.bgImage
     });
     return (
       <div
@@ -209,10 +210,7 @@ class Home extends Component {
                 <Landing {...props} sendNotification={this.sendNotification} />
               )}
             />
-            <Route
-              path="/our_programs"
-              component={OurPrograms}
-            />
+            <Route path="/our_programs" component={OurPrograms} />
             <Route exact path="/scholarships" component={Scholarships} />
             <Route path="/benefit" render={() => <Benefit {...authProps} />} />
             <Route path="/gala" render={() => <Benefit {...authProps} />} />
@@ -288,18 +286,18 @@ Home.propTypes = {
     location: PropTypes.shape({
       key: PropTypes.string,
       pathname: PropTypes.string,
-      search: PropTypes.string,
+      search: PropTypes.string
     }),
     push: PropTypes.func,
-    replace: PropTypes.func,
+    replace: PropTypes.func
   }).isRequired,
 
   location: PropTypes.shape({
     hash: PropTypes.string,
     key: PropTypes.string,
     pathname: PropTypes.string,
-    search: PropTypes.string,
-  }).isRequired,
+    search: PropTypes.string
+  }).isRequired
 };
 
 export default withRouter(Home);
