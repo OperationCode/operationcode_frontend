@@ -41,10 +41,8 @@ class SocialLogin extends Component {
 
   run = (First, Last, Email) => {
     axios
-      .post(`${config.backendUrl}/users/exist`, {
-        user: {
-          email: Email
-        }
+      .post(`${config.backendUrl}/social_users/${Email}`, {
+        id: Email
       })
       .then(({ data }) => {
         window.localStorage.setItem('firstname', `${First}`);
@@ -78,7 +76,7 @@ class SocialLogin extends Component {
 
   login = (Zip, Password) => {
     axios
-      .post(`${config.backendUrl}/users/social`, {
+      .post(`${config.backendUrl}/social_users`, {
         user: {
           email: localStorage.getItem('email'),
           first_name: localStorage.getItem('firstname'),
