@@ -61,14 +61,6 @@ class Home extends Component {
   }
 
   setBgImage(location) {
-    if (location.pathname === '/') {
-      this.setState({
-        bgChanged: this.state.bgImage,
-        bgImage: false,
-        bgImageUrl: null,
-        bgImageStyle: null,
-      });
-    }
     if (location.pathname === '/team') {
       this.setState({
         bgChanged: !this.state.bgImage,
@@ -82,6 +74,13 @@ class Home extends Component {
         bgImage: true,
         bgImageUrl: winstonImage,
         bgImageStyle: 'backgroundImageGettingStarted',
+      });
+    } else if (location.pathname === '/about') {
+      this.setState({
+        bgChanged: !this.state.bgImage,
+        bgImage: true,
+        bgImageUrl: familyImage,
+        bgImageStyle: 'backgroundImageAbout',
       });
     } else if (location.pathname === '/history') {
       this.setState({

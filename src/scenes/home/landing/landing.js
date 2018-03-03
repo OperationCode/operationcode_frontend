@@ -4,7 +4,6 @@ import ReactModal from 'react-modal';
 import { FaClose } from 'react-icons/lib/fa';
 // import LinkButton from 'shared/components/linkButton/linkButton';
 import TriGroup from './triGroup/triGroup';
-import WhatWeDo from './whatWeDo/whatWeDo';
 import Membership from './membership/membership';
 import MoreInformation from './moreInformation/moreInformation';
 import SuccessStories from './successStories/successStories';
@@ -18,7 +17,7 @@ import styles from './landing.css';
 
 class Landing extends Component {
   state = {
-    showModal: false
+    showModal: false,
   };
 
   componentDidMount() {
@@ -53,15 +52,7 @@ class Landing extends Component {
 
         <div />
         <TriGroup />
-        {/* <div className={styles.pageHeading}>
-          <h1>
-            The largest community dedicated to helping military veterans and families launch
-            software development careers.
-          </h1>
-          <LinkButton text="Join" theme="red" link="/signup" />
-    </div> */}
         <TopCode />
-        <WhatWeDo />
         <Membership />
         <MoreInformation />
         <SuccessStories />
@@ -75,7 +66,7 @@ class Landing extends Component {
 }
 
 Landing.propTypes = {
-  sendNotification: PropTypes.func.isRequired
+  sendNotification: PropTypes.func.isRequired,
 };
 
 export default Landing;

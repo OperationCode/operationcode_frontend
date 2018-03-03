@@ -6,14 +6,23 @@ import redMedalLogo from 'images/logos/small-red-medal.png';
 import styles from './triGroup.css';
 import staticData from './triGroup.json';
 
+const wideStyle = {
+  width: 'inherit',
+};
+
 const ClickableLogo = props => (
   <div className={styles.clickableLogo}>
     <a href={props.url}>
-      <div className={styles.medalLogos}>
-        <img src={props.logo} alt="Colored Medal Logo" />
-        <LinkButton link={props.url} text={props.text} theme={props.color} scrollLink />
-      </div>
+      <img src={props.logo} alt="Colored Medal Logo" />
     </a>
+
+    <LinkButton
+      link={props.url}
+      text={props.text}
+      theme={props.color}
+      style={wideStyle}
+      scrollLink
+    />
   </div>
 );
 
@@ -34,8 +43,8 @@ const TriGroup = () => (
         src={staticData.video.url}
         frameBorder="0"
         allowFullScreen
-        width="600"
-        height="340"
+        width="800"
+        height="440"
       />
     </div>
 

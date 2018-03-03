@@ -2,7 +2,6 @@
   padding-top: 15px;
   padding-bottom: 15px;
   display: flex;
-  flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
 }
@@ -12,63 +11,52 @@
   /* align-items: center; */
   flex-direction: row;
   justify-content: space-around;
+  background-color: #f0f2f2;
 }
 
 .clickableLogo {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-}
+  height: inherit;
 
-/* iframe {
-  padding: 25px;
-} */
-
-.medalLogos {
-  margin: 1em;
-  /* display: inline-block; */
   display: flex;
   flex-direction: column;
-  height: 380px;
   align-content: center;
   justify-content: center;
+  padding-left: 30px;
+  margin: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 30px;
+  box-shadow: 5px 10px #888888;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.clickableLogo:hover {
+  background: #e1e1e1;
 }
 
-.medalLogos img {
+iframe {
+  padding: 25px;
+}
+/* 
+.clickableLogo img {
   display: flex;
   align-content: center;
-  height: 70%;
-  width: 70%;
-}
+  height: 100%;
+  width: 100%;
+} */
 
-/* Video iFrame Media Queries */
 @media screen and (max-width: 960px) {
   iframe {
-    width: 666px;
-    height: 375px;
+    display: none;
   }
-  .medalLogos {
-    max-height: 375px;
+  .clickableLogo img {
+    display: none;
   }
-}
-
-@media screen and (max-width: 720px) {
-  iframe {
-    width: 444px;
-    height: 250px;
+  .triGroupContainer {
+    display: flex;
+    flex-direction: column;
   }
-
-  .medalLogos {
-    max-height: 250px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  iframe {
-    width: 333px;
-    height: 187.5px;
-  }
-  .medalLogos {
-    max-height: 187.5px;
+  .triGroupContainer {
+    padding: 15px;
   }
 }
