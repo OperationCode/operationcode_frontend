@@ -1,0 +1,42 @@
+.flexContainer {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  padding: 15px 0 0 0;
+}
+
+.featureHeading {
+  width: 30%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+
+.featureHeading > p {
+  margin-left: 20px;
+}
+
+.iconStyle {
+  color: #000;
+}
+
+.featureDescription {
+  width: 70%;
+}
+
+@media screen and (max-width: 768px) {
+  .flexContainer {
+    flex-flow: column;
+  }
+
+  .featureHeading {
+    width: 100%;
+  }
+
+  .featureDescription {
+    width: 100%;
+  }
+}

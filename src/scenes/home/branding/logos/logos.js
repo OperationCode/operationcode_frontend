@@ -37,7 +37,7 @@ const LogosSection = () => (
       delivered for special uses only.
     </p>
     <p className={styles.logosInfo}>
-      <a href="https://ocbranding.squarespace.com/s/Operation-Code-Logo.eps">
+      <a href="https://s3.us-east-2.amazonaws.com/operationcode-web/Operation-Code-Logo.eps">
         Download master EPS file
       </a>
     </p>
