@@ -37,6 +37,7 @@ import Terms from './termsOfService/termsOfService';
 import OurPrograms from './ourPrograms/ourPrograms';
 import ChapterLeader from './chapterLeader/chapterLeader';
 import styles from './home.css';
+import HeroBanner from 'shared/components/heroBanner/heroBanner';
 
 const ReactToastr = require('react-toastr');
 
@@ -52,7 +53,6 @@ class Home extends Component {
     mentor: false,
   };
 
-  /**/
   componentWillMount() {
     this.props.history.listen((location) => {
       this.setBgImage(location);
@@ -144,15 +144,7 @@ class Home extends Component {
     });
     return (
       <div>
-        <div
-          className={classes}
-          style={
-            this.state.bgImage
-              ? { backgroundImage: `url(${this.state.bgImageUrl})` }
-              : {}
-          }
-        ></div>
-                  
+        <HeroBanner />              
         <Header
           logOut={this.logOut}
           signedIn={signedIn}
