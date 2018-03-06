@@ -15,21 +15,21 @@ const ExecutiveAssistant = {
 const COO = {
   name: 'David Reis',
   role: 'Acting COO',
-  slackUsername: '@davidr',
+  slackUsername: '@davidR',
   email: '',
 };
 
-const CCMO = {
-  name: 'Jennifer Weiderman',
-  role: 'CCMO',
-  slackUsername: '@jenn',
+const CCMO_CDO = {
+  name: 'Jennifer Weideman',
+  role: 'CCMO, CDO',
+  slackUsername: '@Jenn',
   email: 'jennifer@operationcode.org',
 };
 
 const CFO = {
   name: 'Amy Tan',
   role: 'CFO',
-  slackUsername: '@amytan',
+  slackUsername: '@Amy Tan',
   email: 'amy@operationcode.org',
 };
 
@@ -40,29 +40,29 @@ const CTO = {
   email: 'nell@operationcode.org',
 };
 
-const CDO = {
-  name: 'Kate Horner',
-  role: 'Acting CDO',
-  slackUsername: '@katehorner',
-  email: '',
+const CCO = {
+  name: 'Ashley Templet',
+  role: 'CCO',
+  slackUsername: '@Ashley',
+  email: 'ashley@operationcode.org'
 };
 
 const HR = {
   name: 'Kelly MacLeod',
   role: 'HR',
-  slackUsername: '@kelly',
+  slackUsername: '@Kelly',
   email: 'kelly@operationcode.org',
 };
 
 const PublicPolicyDirector = {
-  name: 'Jameel Martin',
+  name: 'Jameel Matin',
   role: 'Public Policy Director',
   slackUsername: '@0311-code',
   email: 'jameel@operationcode.org',
 };
 
 const GeneralCounsel = {
-  name: 'Stefano DAniello',
+  name: 'Stefano D\'Aniello',
   role: 'General Counsel',
   slackUsername: '@stefano',
   email: '',
@@ -72,10 +72,10 @@ export default [
   CEO,
   ExecutiveAssistant,
   COO,
-  CCMO,
+  CCMO_CDO,
   CFO,
   CTO,
-  CDO,
+  CCO,
   HR,
   PublicPolicyDirector,
   GeneralCounsel

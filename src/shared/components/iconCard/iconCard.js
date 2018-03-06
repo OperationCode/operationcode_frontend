@@ -1,29 +1,40 @@
 /* eslint-disable react/no-danger */
 import React, { ReactPropTypeLocationNames } from 'react';
 import PropTypes from 'prop-types';
-import * as faIcons from 'react-icons/lib/fa';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import * as faIconsBrands from '@fortawesome/fontawesome-free-brands';
+import * as faIconsRegular from '@fortawesome/fontawesome-free-regular';
+import * as faIconsSolid from '@fortawesome/fontawesome-free-solid';
 import styles from './iconCard.css';
+
+const faModules = {
+  brand: faIconsBrands,
+  regular: faIconsRegular,
+  solid: faIconsSolid
+};
 
 const IconCard = ({
   fontAwesomeIcon,
-  iconAboveHeading,
+  iconType,
   iconSize,
+  iconAboveHeading,
   subText,
   title,
   url,
-  usingHtml,
+  usingHtml
 }) => {
-  const Icon = faIcons[fontAwesomeIcon];
+  const faModule = faModules[iconType];
 
+  const icon = <FontAwesomeIcon icon={faModule[fontAwesomeIcon]} size={iconSize} />;
   let iconBefore = null;
   let iconAfter = null;
   let subTextNode = null;
   const titleNode = <h5 className={styles.iconCard__title}>{title}</h5>;
 
   if (iconAboveHeading) {
-    iconBefore = <Icon size={iconSize} />;
+    iconBefore = icon;
   } else {
-    iconAfter = <Icon size={iconSize} />;
+    iconAfter = icon;
   }
 
   function createMarkup() {
@@ -129,7 +140,8 @@ IconCard.propTypes = {
   subText: subTextLength,
   fontAwesomeIcon: PropTypes.string.isRequired,
   url: PropTypes.string,
-  iconSize: PropTypes.number,
+  iconType: PropTypes.oneOf(Object.keys(faModules)),
+  iconSize: PropTypes.string,
   iconAboveHeading: PropTypes.bool,
   usingHtml: PropTypes.bool,
 };
@@ -137,7 +149,8 @@ IconCard.propTypes = {
 IconCard.defaultProps = {
   subText: undefined,
   url: undefined,
-  iconSize: 100,
+  iconType: 'solid',
+  iconSize: '6x',
   iconAboveHeading: false,
   usingHtml: false,
 };

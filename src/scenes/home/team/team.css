@@ -8,9 +8,9 @@
 .executiveStaff {
   align-items: flex-start;
   display: flex;
-  flex-wrap: wrap;
-  padding: 20px 0;
+  flex-flow: row wrap;
   justify-content: space-between;
+  padding: 20px 0;
 }
 
 .foundingMembers {
@@ -18,9 +18,11 @@
 }
 
 @media screen and (max-width: 840px) {
-  .boardMembers {
+  .boardMembers,
+  .executiveStaff {
     align-items: center;
-    flex-flow: column nowrap;
+    flex-direction: column;
     justify-content: space-between;
+    width: 100%;
   }
 }
