@@ -16,10 +16,10 @@
 }
 
 .pageHeading h1 {
-  color: #fff;
-  text-shadow: black 1px 0 15px;
-  padding: 20px;
+  color: rgb(74,74,74);
   font-size: 2em;
+  letter-spacing: 1px;
+  padding: 20px;
 }
 
 .landingModal {

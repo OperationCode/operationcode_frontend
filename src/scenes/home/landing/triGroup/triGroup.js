@@ -6,10 +6,6 @@ import redMedalLogo from 'images/logos/small-red-medal.png';
 import styles from './triGroup.css';
 import staticData from './triGroup.json';
 
-const wideStyle = {
-  width: 'inherit',
-};
-
 const ClickableLogo = props => (
   <div className={styles.clickableLogo}>
     <a href={props.url}>
@@ -20,7 +16,6 @@ const ClickableLogo = props => (
       link={props.url}
       text={props.text}
       theme={props.color}
-      style={wideStyle}
       scrollLink
     />
   </div>
