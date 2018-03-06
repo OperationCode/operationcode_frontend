@@ -18,13 +18,13 @@ const Profile = ({ verified }) => (
         >
           <IconCard
             title="Request a Mentor"
-            fontAwesomeIcon="FaLifeBouy"
+            fontAwesomeIcon="faLifeRing"
             url="https://op.co.de/mentor-request"
           />
 
           <IconCard
             title="Check for Scholarships"
-            fontAwesomeIcon="FaGraduationCap"
+            fontAwesomeIcon="faGraduationCap"
             url="/scholarships"
           />
         </div>
@@ -35,16 +35,30 @@ const Profile = ({ verified }) => (
           verified ? styles.profileContainer__cards_verified : styles.profileContainer__cards
         }
       >
-        <IconCard title="Check for Open Jobs" fontAwesomeIcon="FaBriefcase" url="/jobs" />
+        <IconCard
+          title="Check for Open Jobs"
+          fontAwesomeIcon="faBriefcase"
+          url="/jobs"
+        />
 
         <IconCard
           title="Enter our Slack Team"
-          fontAwesomeIcon="FaSlack"
+          fontAwesomeIcon="faSlackHash"
+          iconType="brand"
           url="https://operation-code.slack.com/"
         />
 
-        <IconCard title="Update Info" fontAwesomeIcon="FaUser" url="/signup-info" />
-        <IconCard title="Our Programs" fontAwesomeIcon="FaGroup" url="/our_programs#mentorshipProgram" />
+        <IconCard
+          title="Update Info"
+          fontAwesomeIcon="faUser"
+          url="/signup-info"
+        />
+
+        <IconCard
+          title="Our Programs"
+          fontAwesomeIcon="faHandshake"
+          url="/our_programs#mentorshipProgram"
+        />
       </div>
       <div
         className={

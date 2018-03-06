@@ -1,5 +1,7 @@
 import React from 'react';
-import { FaClockO, FaGroup, FaHandPeaceO } from 'react-icons/lib/fa';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { faClock, faHandPeace } from '@fortawesome/fontawesome-free-regular';
+import { faUsers } from '@fortawesome/fontawesome-free-solid';
 import Section from 'shared/components/section/section';
 import styles from './mentorVolunteers.css';
 
@@ -12,7 +14,7 @@ const MentorVolunteers = () => (
     <div className={styles.iconList}>
       <div className={styles.characteristics}>
         <div className={styles.iconContainer}>
-          <FaClockO size={75} />
+          <FontAwesomeIcon icon={faClock} size="4x" />
         </div>
         <p>
           <strong>Availability:</strong> They are willing to set aside time to
@@ -22,7 +24,7 @@ const MentorVolunteers = () => (
 
       <div className={styles.characteristics}>
         <div className={styles.iconContainer}>
-          <FaGroup size={75} />
+          <FontAwesomeIcon icon={faUsers} size="4x" />
         </div>
         <p>
           <strong>Expert Knowledge:</strong> Each mentor is a subject matter
@@ -33,7 +35,7 @@ const MentorVolunteers = () => (
 
       <div className={styles.characteristics}>
         <div className={styles.iconContainer}>
-          <FaHandPeaceO size={75} />
+          <FontAwesomeIcon icon={faHandPeace} size="4x" />
         </div>
         <p>
           <strong>Trustworthiness:</strong> Our mentors are honest with you,
