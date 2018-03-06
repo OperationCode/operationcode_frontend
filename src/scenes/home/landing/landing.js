@@ -51,7 +51,7 @@ class Landing extends Component {
         </ReactModal>
         <div className={styles.pageHeading}>
           <h1>
-            The largest community dedicated to helping military veterans and families launch.
+            The largest community dedicated to helping military veterans and families launch software development careers.
           </h1>
         </div>
         <div />
