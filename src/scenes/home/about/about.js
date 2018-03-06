@@ -16,6 +16,10 @@ import styles from './about.css';
 
 const About = () => (
   <div>
+    <div className={styles.banner}>
+      <h2 className={styles.bannerText}>A non-profit charity helping the military community learn software development, enter the tech industry, and code the future.</h2>
+    </div>
+
     <Section title="About" theme="white">
       <p>
         We at Operation Code strive to provide an efficient way into a tech career for veterans and
