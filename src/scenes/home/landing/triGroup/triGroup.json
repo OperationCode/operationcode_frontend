@@ -11,6 +11,7 @@
   "donate": {
     "url": "https://opencollective.com/operationcode#support",
     "text": "Donate Now!",
-    "color": "blue"
+    "color": "blue",
+    "isExternal": true
   }
 }

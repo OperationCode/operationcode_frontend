@@ -16,7 +16,7 @@ const ClickableLogo = props => (
       link={props.url}
       text={props.text}
       theme={props.color}
-      scrollLink
+      isExternal={props.isExternal}
     />
   </div>
 );
@@ -26,6 +26,11 @@ ClickableLogo.propTypes = {
   logo: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
+  isExternal: PropTypes.bool
+};
+
+ClickableLogo.defaultProps = {
+  isExternal: false
 };
 
 const TriGroup = () => (
