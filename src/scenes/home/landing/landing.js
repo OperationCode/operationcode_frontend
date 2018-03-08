@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactModal from 'react-modal';
-import TriGroup from './triGroup/triGroup';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/fontawesome-free-solid';
+import TriGroup from './triGroup/triGroup';
 import Membership from './membership/membership';
 import MoreInformation from './moreInformation/moreInformation';
 import SuccessStories from './successStories/successStories';
@@ -52,7 +52,8 @@ class Landing extends Component {
         </ReactModal>
         <div className={styles.pageHeading}>
           <h1>
-            The largest community dedicated to helping military veterans and families launch software development careers.
+            The largest community dedicated to helping military veterans and families launch
+            software development careers.
           </h1>
         </div>
         <div />
