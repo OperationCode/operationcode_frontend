@@ -40,7 +40,7 @@ const TriGroup = () => {
 
       <div className={styles.videos}>
         <iframe
-          className={styles.specialVideoForJenn}
+          className={styles.triGroupVideo}
           title={staticData.video.title}
           src={staticData.video.url}
           frameBorder="0"
