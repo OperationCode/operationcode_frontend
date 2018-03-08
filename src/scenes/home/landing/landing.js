@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactModal from 'react-modal';
-import { FaClose } from 'react-icons/lib/fa';
-// import LinkButton from 'shared/components/linkButton/linkButton';
 import TriGroup from './triGroup/triGroup';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { faTimes } from '@fortawesome/fontawesome-free-solid';
 import Membership from './membership/membership';
 import MoreInformation from './moreInformation/moreInformation';
 import SuccessStories from './successStories/successStories';
@@ -39,8 +39,9 @@ class Landing extends Component {
           contentLabel="None"
           className={styles.landingModal}
         >
-          <FaClose
-            size={48}
+          <FontAwesomeIcon
+            icon={faTimes}
+            size="4x"
             className={styles.landingModal_CloseButton}
             onClick={this.toggleModal}
           />
