@@ -41,8 +41,10 @@ class SocialLogin extends Component {
 
   run = (First, Last, Email) => {
     axios
-      .post(`${config.backendUrl}/social_users/${Email}`, {
-        id: Email
+      .get(`${config.backendUrl}/social_users`, {
+        params: {
+          email: Email
+        }
       })
       .then(({ data }) => {
         window.localStorage.setItem('firstname', `${First}`);

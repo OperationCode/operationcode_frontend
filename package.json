@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.3",
+    "@fortawesome/fontawesome-free-brands": "^5.0.6",
+    "@fortawesome/fontawesome-free-regular": "^5.0.6",
+    "@fortawesome/fontawesome-free-solid": "^5.0.6",
+    "@fortawesome/react-fontawesome": "^0.0.17",
     "@storybook/addon-actions": "^3.2.11",
     "@storybook/addon-links": "^3.2.10",
     "@storybook/cli": "^3.2.10",
@@ -11,7 +16,6 @@
     "classnames": "^2.2.5",
     "dateformat": "^2.0.0",
     "express": "^4.15.2",
-    "font-awesome": "^4.7.0",
     "history": "^4.6.1",
     "jwt-decode": "^2.2.0",
     "lodash": "^4.17.4",
@@ -98,9 +102,16 @@
     "validate": "npm ls"
   },
   "jest": {
-    "moduleDirectories": ["node_modules", "src"],
-    "collectCoverageFrom": ["src/**/*.{js,jsx}"],
-    "setupFiles": ["<rootDir>/config/polyfills.js"],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}"
+    ],
+    "setupFiles": [
+      "<rootDir>/config/polyfills.js"
+    ],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.js?(x)",
       "<rootDir>/src/**/?(*.)(spec|test).js?(x)"
@@ -112,14 +123,23 @@
       "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
       "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
     },
-    "transformIgnorePatterns": ["[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"],
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
+    ],
     "moduleNameMapper": {
       "^react-native$": "react-native-web"
     }
   },
   "babel": {
-    "presets": ["react-app"]
+    "presets": [
+      "react-app"
+    ]
   },
   "homepage": "http://frontend.operationcode.org/",
-  "pre-commit": ["fix", "format", "lint", "image-size"]
+  "pre-commit": [
+    "fix",
+    "format",
+    "lint",
+    "image-size"
+  ]
 }

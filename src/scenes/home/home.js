@@ -88,7 +88,7 @@ class Home extends Component {
         bgChanged: !this.state.bgImage,
         bgImage: true,
         bgImageUrl: colinPowellImage,
-        bgImageStyle: 'backgroundImageTeam',
+        bgImageStyle: 'backgroundImageHistory',
       });
     } else {
       this.setState({
