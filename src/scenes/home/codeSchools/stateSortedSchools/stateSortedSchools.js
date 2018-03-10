@@ -12,6 +12,7 @@ class StateSortedSchools extends Component {
     this.state = {
       campusesByState: null,
       selectedStates: null,
+      noResults: false,
     };
   }
 
@@ -45,15 +46,16 @@ class StateSortedSchools extends Component {
   sortCampuses = campuses => campuses.sort((a, b) => a.state.localeCompare(b.state));
 
   handleSelectChange = (selectedStates) => {
-    if (selectedStates) {
+    if (selectedStates.length > 0) {
       const campusesByState = this.getCampusesByState(selectedStates);
-      const sortedCampusesByState = this.sortCampuses(campusesByState);
-      this.setState({ campusesByState: sortedCampusesByState });
-      this.setState({ selectedStates });
+      this.setState({
+        campusesByState: this.sortCampuses(campusesByState),
+        selectedStates,
+        noResults: campusesByState.length === 0
+      });
     } else {
       // Clear results when search field is blank
-      this.setState({ campusesByState: null });
-      this.setState({ selectedStates: null });
+      this.setState({ campusesByState: null, selectedStates: null, noResults: false });
     }
   };
 
@@ -94,7 +96,7 @@ class StateSortedSchools extends Component {
           onChange={this.handleSelectChange}
         />
 
-        <div className={styles.stateSchools}>{stateSchools}</div>
+        <div className={styles.stateSchools}>{this.state.noResults ? (<p>No results found.</p>) : stateSchools}</div>
       </Section>
     );
   }
