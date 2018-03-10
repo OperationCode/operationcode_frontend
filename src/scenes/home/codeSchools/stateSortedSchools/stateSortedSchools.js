@@ -80,7 +80,6 @@ class StateSortedSchools extends Component {
       <Section
         id="schoolsByState"
         title="Schools by State"
-        theme="white"
         headingLines={false}
         margin
       >

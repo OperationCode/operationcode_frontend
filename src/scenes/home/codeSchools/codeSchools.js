@@ -6,6 +6,7 @@ import Section from 'shared/components/section/section';
 import ApprovedSchools from './approvedSchools/approvedSchools';
 import PartnerSchools from './partnerSchools/partnerSchools';
 import OnlineSchools from './onlineSchools/onlineSchools';
+import MoocSchools from './moocSchools/moocSchools';
 import StateSortedSchools from './stateSortedSchools/stateSortedSchools';
 import styles from './codeSchools.css';
 
@@ -87,9 +88,8 @@ class CodeSchools extends Component {
         {this.state.schools && <ApprovedSchools schools={this.state.schools.filter(school => school.va_accepted === true)} />}
         <PartnerSchools />
         {this.state.schools && <OnlineSchools schools={this.state.schools.filter(school => school.has_online === true)} />}
-        {this.state.schools && (
-          <StateSortedSchools schools={this.state.schools} />
-        )}
+        <MoocSchools />
+        {this.state.schools && <StateSortedSchools schools={this.state.schools} />}
       </div>
     );
   }
