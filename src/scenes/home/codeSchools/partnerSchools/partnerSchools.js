@@ -4,14 +4,6 @@ import SchoolCard from 'shared/components/schoolCard/schoolCard';
 import styles from './partnerSchools.css';
 
 class PartnerSchools extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      partner_schools: {}
-    };
-  }
-
   render() {
     return (
       <Section
