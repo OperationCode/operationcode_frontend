@@ -5,9 +5,11 @@ import TeamCard from 'shared/components/teamCard/teamCard';
 import BoardMembers from './boardMembers';
 import ExecutiveStaff from './executiveStaff';
 import styles from './team.css';
+import HeroBanner from 'shared/components/heroBanner/heroBanner';
 
 const Team = () => (
   <div>
+    <HeroBanner />
     <QuoteBanner
       author="Abraham Lincoln"
       quote="To care for him who shall have borne the battle and for his widow, and his orphan."

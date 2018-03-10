@@ -37,6 +37,7 @@ import Terms from './termsOfService/termsOfService';
 import OurPrograms from './ourPrograms/ourPrograms';
 import ChapterLeader from './chapterLeader/chapterLeader';
 import styles from './home.css';
+import HeroBanner from 'shared/components/heroBanner/heroBanner';
 
 const ReactToastr = require('react-toastr');
 
@@ -142,20 +143,13 @@ class Home extends Component {
       [`${styles[this.state.bgImageStyle]}`]: this.state.bgImage,
     });
     return (
-      <div
-        className={classes}
-        style={
-          this.state.bgImage
-            ? { backgroundImage: `url(${this.state.bgImageUrl})` }
-            : {}
-        }
-      >
+      <div>
+        <HeroBanner />              
         <Header
-          transparent={this.state.bgImage}
           logOut={this.logOut}
           signedIn={signedIn}
           mentor={mentor}
-        />
+        /> 
         <div className={styles.main}>
           <Switch>
             <Route path="/code-schools" component={CodeSchools} />
