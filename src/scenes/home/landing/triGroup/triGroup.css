@@ -1,0 +1,51 @@
+.videos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.triGroupContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #f0f2f2;
+  padding-bottom: 30px;
+}
+
+.clickableLogo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.triGroupVideo {
+  padding: 25px;
+}
+
+.clickableLogo img {
+  height: 200px;
+}
+
+@media screen and (max-width: 960px) {
+  .triGroupVideo {
+    display: none;
+  }
+
+  .clickableLogo ~ .clickableLogo {
+    margin-top: 15px;
+  }
+
+  .clickableLogo img {
+    display: none;
+  }
+
+  .triGroupContainer {
+    flex-direction: column;
+  }
+}

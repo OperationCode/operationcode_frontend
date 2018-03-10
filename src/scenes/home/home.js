@@ -61,14 +61,7 @@ class Home extends Component {
   }
 
   setBgImage(location) {
-    if (location.pathname === '/') {
-      this.setState({
-        bgChanged: !this.state.bgImage,
-        bgImage: true,
-        bgImageUrl: familyImage,
-        bgImageStyle: 'backgroundImageHome',
-      });
-    } else if (location.pathname === '/team') {
+    if (location.pathname === '/team') {
       this.setState({
         bgChanged: !this.state.bgImage,
         bgImage: true,
@@ -77,10 +70,17 @@ class Home extends Component {
       });
     } else if (location.pathname === '/our_programs') {
       this.setState({
-        bgChanged: !(this.state.bgImage),
+        bgChanged: !this.state.bgImage,
         bgImage: true,
         bgImageUrl: winstonImage,
-        bgImageStyle: "backgroundImageGettingStarted"
+        bgImageStyle: 'backgroundImageGettingStarted',
+      });
+    } else if (location.pathname === '/about') {
+      this.setState({
+        bgChanged: !this.state.bgImage,
+        bgImage: true,
+        bgImageUrl: familyImage,
+        bgImageStyle: 'backgroundImageAbout',
       });
     } else if (location.pathname === '/history') {
       this.setState({
@@ -118,7 +118,7 @@ class Home extends Component {
       },
       () => {
         this.props.history.push('/');
-      }
+      },
     );
   };
 
@@ -144,11 +144,7 @@ class Home extends Component {
     return (
       <div
         className={classes}
-        style={
-          this.state.bgImage
-            ? { backgroundImage: `url(${this.state.bgImageUrl})` }
-            : {}
-        }
+        style={this.state.bgImage ? { backgroundImage: `url(${this.state.bgImageUrl})` } : {}}
       >
         <Header
           transparent={this.state.bgImage}
@@ -187,11 +183,7 @@ class Home extends Component {
             <Route path="/team" component={Team} />
             <Route path="/faq" component={FAQ} />
             <Route path="/contact" component={Contact} />
-            <Route
-              exact
-              path="/about/financial-statements"
-              component={FinancialStatements}
-            />
+            <Route exact path="/about/financial-statements" component={FinancialStatements} />
             <Route path="/about" component={About} />
             <Route path="/press" component={Press} />
             <Route path="/branding" component={Branding} />
@@ -205,14 +197,9 @@ class Home extends Component {
             <Route
               exact
               path="/"
-              render={props => (
-                <Landing {...props} sendNotification={this.sendNotification} />
-              )}
+              render={props => <Landing {...props} sendNotification={this.sendNotification} />}
             />
-            <Route
-              path="/our_programs"
-              component={OurPrograms}
-            />
+            <Route path="/our_programs" component={OurPrograms} />
             <Route exact path="/scholarships" component={Scholarships} />
             <Route path="/benefit" render={() => <Benefit {...authProps} />} />
             <Route path="/gala" render={() => <Benefit {...authProps} />} />
@@ -221,8 +208,7 @@ class Home extends Component {
             <Route
               path="/newgibill"
               component={() =>
-                (window.location =
-                  'http://www.benefits.va.gov/gibill/post911_gibill.asp')}
+                (window.location = 'http://www.benefits.va.gov/gibill/post911_gibill.asp')}
             />
             {/* eslint-enable */}
 
