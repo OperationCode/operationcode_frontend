@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Section from 'shared/components/section/section';
@@ -6,31 +5,8 @@ import SchoolCard from 'shared/components/schoolCard/schoolCard';
 import styles from './approvedSchools.css';
 
 class ApprovedSchools extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      vaSchools: null,
-    };
-  }
-
-  componentWillMount() {
-    this.setState({ vaSchools: this.loadSchools() });
-  }
-
-  loadSchools() {
-    let approvedSchools = [];
-    this.props.schools.forEach((school) => {
-      const locations = school.locations.filter(location => location.va_accepted === true);
-      if (locations.length > 0) {
-        approvedSchools = approvedSchools.concat(locations.map(location => Object.assign({}, _.omit(school, ['locations']), location)));
-      }
-    });
-
-    return approvedSchools;
-  }
-
   render() {
-    const vaSchools = this.state.vaSchools.map(school => (
+    const vaSchools = this.props.schools.map(school => (
       <SchoolCard
         key={`${Math.random()} + ${school.name} + ${school.address}`}
         alt={school.name}

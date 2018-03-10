@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Section from 'shared/components/section/section';
@@ -10,30 +9,8 @@ import udacityLogo from 'images/moocLogos/udacity.jpg';
 import styles from './onlineSchools.css';
 
 class OnlineSchools extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      eSchools: null,
-    };
-  }
-
-  componentWillMount() {
-    this.setState({ eSchools: this.loadSchools() });
-  }
-
-  loadSchools() {
-    let onlineSchools = [];
-    this.props.schools.forEach((school) => {
-      if (school.has_online === true) {
-        onlineSchools = onlineSchools.concat(school.locations.map(location => Object.assign({}, _.omit(school, ['locations']), location)));
-      }
-    });
-
-    return onlineSchools;
-  }
-
   render() {
-    const eSchools = this.state.eSchools.map(school => (
+    const eSchools = this.props.schools.map(school => (
       <SchoolCard
         key={`${Math.random()} + ${school.name} + ${school.address}`}
         alt={school.name}

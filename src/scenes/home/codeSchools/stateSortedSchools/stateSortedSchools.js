@@ -31,25 +31,7 @@ class StateSortedSchools extends Component {
       }
     }
 
-    const campuses = this.props.schools.reduce((acc, school) => {
-      school.locations.forEach((location) => {
-        acc.push({
-          name: school.name,
-          url: school.url,
-          address: location.address1,
-          city: location.city,
-          state: location.state,
-          zip: location.zip,
-          logo: school.logo,
-          va_accepted: location.va_accepted,
-          full_time: school.full_time,
-          hardware_included: school.hardware_included,
-        });
-      });
-      return acc;
-    }, []);
-
-    const matchingCampuses = campuses.reduce((acc, campus) => {
+    const matchingCampuses = this.props.schools.reduce((acc, campus) => {
       const matchingState = selectedStates.some(state => matchesCampus(state, campus));
       if (matchingState) {
         acc.push(campus);
@@ -84,7 +66,7 @@ class StateSortedSchools extends Component {
           alt={campus.name}
           schoolName={campus.name}
           link={campus.url}
-          schoolAddress={campus.address}
+          schoolAddress={campus.address1}
           schoolCity={campus.city}
           schoolState={campus.state}
           logo={campus.logo}
