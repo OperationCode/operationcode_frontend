@@ -7,32 +7,20 @@ import styles from './triGroup.css';
 import staticData from './triGroup.json';
 
 const TriGroup = () => {
-  const ClickableLogo = props => (
+  const ClickableLogo = ({ color, isExternal, logo, text, url }) => (
     <div className={styles.clickableLogo}>
-      <a href={props.url}>
-        <img src={props.logo} alt="Colored Medal Logo" />
+      <a href={url}>
+        <img src={logo} alt="Colored Medal Logo" />
       </a>
 
       <LinkButton
-        link={props.url}
-        text={props.text}
-        theme={props.color}
-        isExternal={props.isExternal}
+        link={url}
+        text={text}
+        theme={color}
+        isExternal={isExternal}
       />
     </div>
   );
-
-  ClickableLogo.propTypes = {
-    url: PropTypes.string.isRequired,
-    logo: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired,
-    color: PropTypes.string.isRequired,
-    isExternal: PropTypes.bool,
-  };
-
-  ClickableLogo.defaultProps = {
-    isExternal: false,
-  };
 
   return (
     <div className={styles.triGroupContainer}>
@@ -54,4 +42,5 @@ const TriGroup = () => {
     </div>
   );
 };
+
 export default TriGroup;
