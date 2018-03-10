@@ -33,7 +33,7 @@
 }
 
 @media screen and (max-width: 960px) {
-  iframe {
+  .triGroupVideo {
     display: none;
   }
 
