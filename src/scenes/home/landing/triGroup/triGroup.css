@@ -1,9 +1,24 @@
-.videos {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  border-radius: 4px;
+.embedContainer {
+  width: 100%;
+  max-width: 960px;
+}
+
+.embedVideo {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 50px; 
+  height: 0;
+  width: 100%;
   overflow: hidden;
+  background: gray;
+}
+
+.embedVideo iframe, .embedVideo object, .embedVideo embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .triGroupContainer {
@@ -24,28 +39,26 @@
   padding-right: 30px;
 }
 
-.triGroupVideo {
-  padding: 25px;
-}
-
 .clickableLogo img {
   height: 200px;
 }
 
 @media screen and (max-width: 960px) {
-  .triGroupVideo {
-    display: none;
-  }
-
-  .clickableLogo ~ .clickableLogo {
-    margin-top: 15px;
-  }
-
   .clickableLogo img {
     display: none;
   }
 
   .triGroupContainer {
     flex-direction: column;
+    padding-bottom: 5px;
+  }
+
+  .embedContainer {
+    order: 1;
+    padding-bottom: 5px;
+  }
+
+  .clickableLogo {
+    order: 2;
   }
 }
