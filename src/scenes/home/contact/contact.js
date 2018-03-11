@@ -18,15 +18,24 @@ const Contact = () => (
       <div className={styles.flexContainer}>
         {/* Columns */}
         <IconCard
-          title="Email" fontAwesomeIcon="FaEnvelope" iconSize={175} url="mailto:staff@operationcode.org"
+          title="Email"
+          fontAwesomeIcon="faEnvelope"
+          iconSize="6x"
+          url="mailto:staff@operationcode.org"
           subText="staff@operationcode.org"
         />
         <IconCard
-          title="Slack Team" fontAwesomeIcon="FaSlack" iconSize={175} url="https://operation-code.slack.com"
+          title="Slack Team"
+          fontAwesomeIcon="faSlack"
+          iconType="brand"
+          iconSize="6x"
+          url="https://operation-code.slack.com"
           subText="https://operation-code.slack.com"
         />
         <IconCard
-          title="Mailing Address" fontAwesomeIcon="FaHome" iconSize={175}
+          title="Mailing Address"
+          fontAwesomeIcon="faHome"
+          iconSize="6x"
           subText="Operation Code<br/>
             707 SW Washington St.<br/>
             Suite 1100<br/>
