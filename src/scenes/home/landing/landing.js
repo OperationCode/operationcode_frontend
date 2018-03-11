@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import ReactModal from 'react-modal';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/fontawesome-free-solid';
-import LinkButton from 'shared/components/linkButton/linkButton';
-import WhatWeDo from './whatWeDo/whatWeDo';
+import TriGroup from './triGroup/triGroup';
 import Membership from './membership/membership';
 import MoreInformation from './moreInformation/moreInformation';
 import SuccessStories from './successStories/successStories';
@@ -18,7 +17,7 @@ import styles from './landing.css';
 
 class Landing extends Component {
   state = {
-    showModal: false
+    showModal: false,
   };
 
   componentDidMount() {
@@ -56,10 +55,10 @@ class Landing extends Component {
             The largest community dedicated to helping military veterans and families launch
             software development careers.
           </h1>
-          <LinkButton text="Join" theme="red" link="/signup" />
         </div>
+        <div />
+        <TriGroup />
         <TopCode />
-        <WhatWeDo />
         <Membership />
         <MoreInformation />
         <SuccessStories />
@@ -73,7 +72,7 @@ class Landing extends Component {
 }
 
 Landing.propTypes = {
-  sendNotification: PropTypes.func.isRequired
+  sendNotification: PropTypes.func.isRequired,
 };
 
 export default Landing;
