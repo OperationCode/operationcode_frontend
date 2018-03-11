@@ -50,5 +50,15 @@
 
   .triGroupContainer {
     flex-direction: column;
+    padding-bottom: 5px;
+  }
+
+  .embedContainer {
+    order: 1;
+    padding-bottom: 5px;
+  }
+
+  .clickableLogo {
+    order: 2;
   }
 }
