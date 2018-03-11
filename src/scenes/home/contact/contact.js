@@ -26,7 +26,7 @@ const Contact = () => (
         />
         <IconCard
           title="Slack Team"
-          fontAwesomeIcon="faSlack"
+          fontAwesomeIcon="faSlackHash"
           iconType="brand"
           iconSize="6x"
           url="https://operation-code.slack.com"
