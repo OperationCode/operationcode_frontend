@@ -35,16 +35,15 @@ const TriGroup = () => {
     <div className={styles.triGroupContainer}>
       <ClickableLogo color="red" logo={redMedalLogo} text="Join Us!" url="/join" />
 
-      <div className={styles.videos}>
-        <iframe
-          className={styles.triGroupVideo}
-          title="The New Developer - Operation Code - GitHub Universe 2016"
-          src="https://www.youtube.com/embed/xN7yMoe38xc?modestbranding=1&start=133&showinfo=0"
-          frameBorder="0"
-          allowFullScreen
-          width="800"
-          height="440"
-        />
+      <div className={styles.embedContainer}>
+        <div className={styles.embedVideo}>
+          <iframe
+            title="The New Developer - Operation Code - GitHub Universe 2016"
+            src="https://www.youtube.com/embed/xN7yMoe38xc?modestbranding=1&start=133&showinfo=0"
+            frameBorder="0"
+            allowFullScreen
+          />
+        </div>
       </div>
 
       <ClickableLogo
