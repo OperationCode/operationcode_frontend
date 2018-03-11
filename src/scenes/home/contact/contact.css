@@ -25,17 +25,3 @@ a:hover > svg {
 .centerText {
   text-align: center;
 }
-
-/* Icons are not uniform in size... */
-.slackIcon {
-  padding: 27.5px 0 18.5px 0;
-}
-
-.mailIcon {
-  padding: 0 0 16px 0;
-}
-
-.address {
-  text-align: left;
-  padding: 0 0 0 27px;
-}
