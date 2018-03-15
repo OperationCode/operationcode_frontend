@@ -4,6 +4,7 @@ import LinkButton from 'shared/components/linkButton/linkButton';
 import OutboundLink from 'shared/components/outboundLink/outboundLink';
 import blueMedalLogo from 'images/logos/small-blue-medal.png';
 import redMedalLogo from 'images/logos/small-red-medal.png';
+import commonUrl from 'shared/constants/commonLinks';
 import styles from './triGroup.css';
 
 const TriGroup = () => {
@@ -13,11 +14,11 @@ const TriGroup = () => {
       isExternal: PropTypes.bool,
       logo: PropTypes.string.isRequired,
       text: PropTypes.string.isRequired,
-      url: PropTypes.string.isRequired,
+      url: PropTypes.string.isRequired
     };
 
     ClickableLogo.defaultProps = {
-      isExternal: false,
+      isExternal: false
     };
 
     return (
@@ -26,14 +27,24 @@ const TriGroup = () => {
           <img src={logo} alt="Colored Medal Logo" />
         </OutboundLink>
 
-        <LinkButton link={url} text={text} theme={color} isExternal={isExternal} />
+        <LinkButton
+          link={url}
+          text={text}
+          theme={color}
+          isExternal={isExternal}
+        />
       </div>
     );
   };
 
   return (
     <div className={styles.triGroupContainer}>
-      <ClickableLogo color="red" logo={redMedalLogo} text="Join Us!" url="/join" />
+      <ClickableLogo
+        color="red"
+        logo={redMedalLogo}
+        text="Join Us!"
+        url="/join"
+      />
 
       <div className={styles.embedContainer}>
         <div className={styles.embedVideo}>
@@ -51,7 +62,7 @@ const TriGroup = () => {
         isExternal
         logo={blueMedalLogo}
         text="Donate Now!"
-        url="https://opencollective.com/operationcode#support"
+        url={commonUrl.donateLink}
       />
     </div>
   );
