@@ -5,13 +5,6 @@ const CEO = {
   email: 'david@operationcode.org',
 };
 
-const ExecutiveAssistant = {
-  name: 'Morgan Larrouy-Smith',
-  role: 'Executive Assistant',
-  slackUsername: '',
-  email: 'morgan@operationcode.org',
-};
-
 const COO = {
   name: 'David Reis',
   role: 'Acting COO',
@@ -70,7 +63,6 @@ const GeneralCounsel = {
 
 export default [
   CEO,
-  ExecutiveAssistant,
   COO,
   CCMO_CDO,
   CFO,

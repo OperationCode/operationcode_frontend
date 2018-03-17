@@ -1,0 +1,64 @@
+.embedContainer {
+  width: 100%;
+  max-width: 960px;
+}
+
+.embedVideo {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 50px; 
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  background: gray;
+}
+
+.embedVideo iframe, .embedVideo object, .embedVideo embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.triGroupContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #f0f2f2;
+  padding-bottom: 30px;
+}
+
+.clickableLogo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.clickableLogo img {
+  height: 200px;
+}
+
+@media screen and (max-width: 960px) {
+  .clickableLogo img {
+    display: none;
+  }
+
+  .triGroupContainer {
+    flex-direction: column;
+    padding-bottom: 5px;
+  }
+
+  .embedContainer {
+    order: 1;
+    padding-bottom: 5px;
+  }
+
+  .clickableLogo {
+    order: 2;
+  }
+}
