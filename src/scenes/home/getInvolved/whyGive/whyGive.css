@@ -16,23 +16,16 @@
   max-width: 500px;
   height: auto;
 }
-@media only screen and (min-width: 320px) and (max-width: 480px) {
+@media only screen and (min-width: 320px) and (max-width: 680px) {
   .half {
     width: 100%;
-  }
-  li.check {
-    margin-top: 70px;
-    line-height: normal;
-  }
-  li.check:last-of-type {
-    margin-bottom: 10px;
   }
   .photo {
     max-width: 300px;
     height: auto;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 680px) and (max-width: 1111px) {
   .half {
     width: 40%;
   }
@@ -45,37 +38,10 @@
     justify-content: space-around;
     margin: 2vw;
   }
-  li.check {
-    margin-top: 80px;
-    line-height: normal;
-  }
-  li.check:nth-of-type(2) {
-    margin-top: 80px;
-  }
-  li.check:last-of-type {
-    padding-bottom: 10px;
-  }
   .photo {
-    max-width: 350px;
+    max-width: 100%;
     height: auto;
   }
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li.check {
-  background: url('../check.svg') 20px no-repeat;
-  height: 40px;
-  padding-left: 75px;
-  margin-top: 30px;
-  line-height: normal;
-}
-
-li.check:first-child {
-  margin-top: 0;
 }
 
 .button {

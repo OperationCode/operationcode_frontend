@@ -27,42 +27,10 @@
   margin: 0 auto;
   text-align: center;
 }
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li.check {
-  background: url('../check.svg') 20px no-repeat;
-  height: 40px;
-  padding-left: 75px;
-  margin-top: 30px;
-  line-height: normal;
-}
-
-li.check:nth-of-type(2) {
-  margin-top: 90px;
-}
-
-li.check:first-child {
-  margin-top: 0;
-}
-
-@media only screen and (min-width: 320px) and (max-width: 480px) {
+@media only screen and (min-width: 320px) and (max-width: 680px) {
   .half {
     width: 350px;
     align-self: center;
-  }
-  li.check {
-    margin-top: 60px;
-    line-height: normal;
-  }
-  li.check:last-of-type {
-    margin-bottom: 10px;
-  }
-  li.check:nth-of-type(2) {
-    margin-top: 70px;
   }
   .photo {
     max-width: 300px;
@@ -70,7 +38,7 @@ li.check:first-child {
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 680px) and (max-width: 1111px) {
   .half {
     width: 40%;
     padding: 0;
@@ -84,18 +52,8 @@ li.check:first-child {
     justify-content: space-around;
     margin: 2vw;
   }
-  li.check {
-    margin-top: 70px;
-    line-height: normal;
-  }
-  li.check:nth-of-type(2) {
-    margin-top: 150px;
-  }
-  li.check:last-of-type {
-    margin-bottom: 10px;
-  }
   .photo {
-    max-width: 400px;
+    max-width: 100%;
     height: auto;
   }
 }
