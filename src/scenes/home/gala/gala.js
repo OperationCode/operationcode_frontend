@@ -2,7 +2,7 @@ import React from 'react';
 import ReactRevealText from 'react-reveal-text';
 import commonUrl from 'shared/constants/commonLinks';
 import LinkButton from 'shared/components/linkButton/linkButton';
-import Styles from './gala.css';
+import styles from './gala.css';
 
 class Gala extends React.Component {
   constructor() {
@@ -18,8 +18,8 @@ class Gala extends React.Component {
 
   render() {
     return (
-      <div className={Styles.hero}>
-        <div className={Styles.heading}>
+      <div className={styles.hero}>
+        <div className={styles.heading}>
           <h1>
             <ReactRevealText show={this.state.show}>
               Operation Code
@@ -36,7 +36,7 @@ class Gala extends React.Component {
               href="mailto:staff@operationcode.org"
               target="_blank"
               rel="noopener noreferrer"
-              className={Styles.galaLink}
+              className={styles.galaLink}
             >
               Contact us
             </a>{' '}
