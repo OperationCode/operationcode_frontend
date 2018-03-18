@@ -8,7 +8,7 @@ const Gala = () => (
     <div className={Styles.heading}>
       <h1 className="mast__title js-spanize">Operation Code</h1>
       <h2 className="mast__title js-spanize">Deploy the Future Gala 2018</h2>
-      <p>Save the Date: Saturday, November 10th, 2018</p>
+      <p>Saturday, November 10th, 2018</p>
       <p>
         <a
           href="mailto:staff@operationcode.org"
