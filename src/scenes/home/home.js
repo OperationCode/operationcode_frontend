@@ -33,6 +33,7 @@ import ResetPassword from './resetPassword/resetPassword';
 import Challenge from './challenge/challenge';
 import SignupInformation from './informationForm/informationForm';
 import Benefit from './benefit/benefit';
+import Gala from './gala/gala';
 import Terms from './termsOfService/termsOfService';
 import OurPrograms from './ourPrograms/ourPrograms';
 import ChapterLeader from './chapterLeader/chapterLeader';
@@ -202,7 +203,7 @@ class Home extends Component {
             <Route path="/our_programs" component={OurPrograms} />
             <Route exact path="/scholarships" component={Scholarships} />
             <Route path="/benefit" render={() => <Benefit {...authProps} />} />
-            <Route path="/gala" render={() => <Benefit {...authProps} />} />
+            <Route path="/gala" render={() => <Gala {...authProps} />} />
 
             {/* eslint-disable */}
             <Route
