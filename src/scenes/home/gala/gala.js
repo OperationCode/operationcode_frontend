@@ -36,6 +36,7 @@ class Gala extends React.Component {
               href="mailto:staff@operationcode.org"
               target="_blank"
               rel="noopener noreferrer"
+              className={Styles.galaLink}
             >
               Contact us
             </a>{' '}
@@ -48,7 +49,7 @@ class Gala extends React.Component {
             link={commonUrl.donateLink}
             isExternal
           />
-          <p>Check back for more information</p>
+          <p>Check back for more information.</p>
         </div>
       </div>
     );
