@@ -6,6 +6,12 @@
   flex-flow: row wrap;
   align-items: center;
   background-color: #FFF;
+  box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.imageCard:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25);
 }
 
 .image {
