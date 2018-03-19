@@ -7632,6 +7632,14 @@ react-modal@^2.3.3:
     exenv "^1.2.0"
     prop-types "^15.5.10"
 
+react-reveal-text@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/react-reveal-text/-/react-reveal-text-0.1.1.tgz#97ed4c3cbd3671c0d79bcb4c80459c2ca69ef402"
+  dependencies:
+    prop-types "^15.6.0"
+    react "^16.0.0"
+    react-dom "^16.0.0"
+
 react-router-dom@^4.2.2:
   version "4.2.2"
   resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-4.2.2.tgz#c8a81df3adc58bba8a76782e946cbd4eae649b8d"
