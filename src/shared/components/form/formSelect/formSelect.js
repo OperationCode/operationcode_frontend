@@ -18,17 +18,23 @@ class FormSelect extends Component {
     const { prompt, options } = this.props;
     const opts = [];
 
+    // prettier-ignore
     if (prompt) {
-      opts.push(<option key="prompt" value="">{ prompt }</option>);
+      opts.push(<option key="prompt" value="">{prompt}</option>);
     }
-    options.forEach(option => opts.push(<option key={option.value} value={option.value}>{option.label}</option>));
+
+    // prettier-ignore
+    options.forEach((option) => {
+      opts.push(<option key={option.value} value={option.value}>{option.label}</option>);
+    });
+
     return opts;
-  }
+  };
 
   render() {
     return (
       <div>
-        <select id={this.props.id} onChange={e => this.onChange(e)}>
+        <select id={this.props.id} onBlur={e => this.onChange(e)}>
           {this.buildOptions()}
         </select>
       </div>
