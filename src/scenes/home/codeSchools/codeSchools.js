@@ -40,43 +40,22 @@ class CodeSchools extends Component {
       <div>
         <Section title="Code Schools" theme="white">
           <p>
-            Code schools are accelerated learning programs that will prepare you
-            for a career in software development. <br />Each school listed below
-            ranges in length, vary in tuition costs, and in programming
-            languages. <br />Desirable from an employer&apos;s standpoint, code
-            schools are founded by software developers who saw a need <br />for
-            more programmers and aspired to teach the next generation.
+            Code schools are accelerated learning programs that will prepare you for a career in
+            software development. <br />Each school listed below ranges in length, vary in tuition
+            costs, and in programming languages. <br />Desirable from an employer&apos;s standpoint,
+            code schools are founded by software developers who saw a need <br />for more
+            programmers and aspired to teach the next generation.
             <br />
             <br />
-            We encourage you to check out the schools below, do your research,
-            and ask fellow techies in our Slack Community.
+            We encourage you to check out the schools below, do your research, and ask fellow
+            techies in our Slack Community.
           </p>
 
           <div className={styles.filterButtonDiv}>
-            <LinkButton
-              link="approvedSchools"
-              text="VA-Approved Schools"
-              theme="blue"
-              scrollLink
-            />
-            <LinkButton
-              link="partnerSchools"
-              text="Partnered Schools"
-              theme="blue"
-              scrollLink
-            />
-            <LinkButton
-              link="onlineSchools"
-              text="Online Schools"
-              theme="blue"
-              scrollLink
-            />
-            <LinkButton
-              link="schoolsByState"
-              text="Search by State"
-              theme="blue"
-              scrollLink
-            />
+            <LinkButton link="approvedSchools" text="VA-Approved Schools" theme="blue" scrollLink />
+            <LinkButton link="partnerSchools" text="Partnered Schools" theme="blue" scrollLink />
+            <LinkButton link="onlineSchools" text="Online Schools" theme="blue" scrollLink />
+            <LinkButton link="schoolsByState" text="Search by State" theme="blue" scrollLink />
           </div>
         </Section>
         {this.state.errorResponse && (
@@ -85,9 +64,17 @@ class CodeSchools extends Component {
             <br />
           </p>
         )}
-        {this.state.schools && <ApprovedSchools schools={this.state.schools.filter(school => school.va_accepted === true)} />}
+        {this.state.schools && (
+          <ApprovedSchools
+            schools={this.state.schools.filter(school => school.va_accepted === true)}
+          />
+        )}
         <PartnerSchools />
-        {this.state.schools && <OnlineSchools schools={this.state.schools.filter(school => school.has_online === true)} />}
+        {this.state.schools && (
+          <OnlineSchools
+            schools={this.state.schools.filter(school => school.has_online === true)}
+          />
+        )}
         <MoocSchools />
         {this.state.schools && <StateSortedSchools schools={this.state.schools} />}
       </div>

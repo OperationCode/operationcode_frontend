@@ -62,8 +62,8 @@ class MentorshipProgram extends React.Component {
                 and Googling for yourself before going to our volunteers for aid.
               </li>
               <li>
-                A guarantee that someone will work with you on a long-term basis. All our mentors work
-                on a volunteer basis, taking on mentees as their schedule allows.
+                A guarantee that someone will work with you on a long-term basis. All our mentors
+                work on a volunteer basis, taking on mentees as their schedule allows.
               </li>
             </ul>
           </div>
@@ -74,11 +74,11 @@ class MentorshipProgram extends React.Component {
 }
 
 MentorshipProgram.propTypes = {
-  iconSize: PropTypes.string,
+  iconSize: PropTypes.string
 };
 
 MentorshipProgram.defaultProps = {
-  iconSize: '2x',
+  iconSize: '2x'
 };
 
 export default MentorshipProgram;
