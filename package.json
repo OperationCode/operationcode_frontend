@@ -91,7 +91,6 @@
     "build": "node scripts/build.js",
     "fix": "eslint --fix \"src/**/*.js\"",
     "format": "prettier-eslint \"src/**/*.js\"",
-    "image-size": "node scripts/imageSize.js",
     "lint": "eslint \"src/**/*.js\"",
     "start:server": "node server",
     "start": "node scripts/start.js",
@@ -137,7 +136,6 @@
   "pre-commit": [
     "fix",
     "format",
-    "lint",
-    "image-size"
+    "lint"
   ]
 }
