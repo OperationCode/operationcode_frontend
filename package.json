@@ -95,7 +95,6 @@
     "format-js": "prettier-eslint --write \"**/*.js\"",
     "format-css": "stylelint --fix \"**/*.css\"",
     "fix": "eslint --fix \"src/**/*.js\"",
-    "image-size": "node scripts/imageSize.js",
     "lint": "eslint \"**/*.js\"",
     "precommit": "lint-staged",
     "start:server": "node server",
