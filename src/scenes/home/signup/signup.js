@@ -13,7 +13,6 @@ import Section from 'shared/components/section/section';
 import config from 'config/environment';
 import styles from './signup.css';
 
-
 class SignUp extends Component {
   constructor(props) {
     super(props);
@@ -35,34 +34,33 @@ class SignUp extends Component {
 
   onFirstNameChange = (value) => {
     this.setState({ firstName: value });
-  }
+  };
 
   onLastNameChange = (value) => {
     this.setState({ lastName: value });
-  }
+  };
 
   onIdentifierStatusChange = (value) => {
     this.setState({ identifier: value });
-  }
+  };
 
   onEmailChange = (value, valid) => {
     this.setState({ email: value.toLowerCase(), emailValid: valid });
-  }
+  };
 
   onZipChange = (value, valid) => {
     this.setState({ zip: value, zipValid: valid });
-  }
+  };
 
   onPasswordChange = (value, valid) => {
     this.setState({ password: value, passwordValid: valid });
-  }
+  };
 
   onConfirmPasswordChange = (value, valid) => {
     this.setState({ passwordConfirm: value, passwordConfirmValid: valid });
-  }
+  };
 
-  validatePasswordConfirm = value =>
-    value === this.state.password;
+  validatePasswordConfirm = value => value === this.state.password;
 
   handleOnClick = (e) => {
     e.preventDefault();
@@ -70,35 +68,42 @@ class SignUp extends Component {
     this.setState({ isLoading: true });
 
     if (this.isFormValid()) {
-      const {
-        email, zip, password, firstName, lastName, identifier
-      } = this.state;
-      axios.post(`${config.backendUrl}/users`, {
-        user: {
-          first_name: firstName,
-          last_name: lastName,
-          email,
-          zip,
-          password,
-          identifier
-        }
-      }).then(({ data }) => {
-        window.location = '/signup-info';
-        CookieHelpers.setUserAuthCookie(data);
-        this.setState({ isLoading: false });
-      }).catch((error) => {
-        const data = _.get(error, 'response.data');
-        let errorMessage = '';
-        if (data) {
-          Object.keys(data).forEach((key) => {
-            if (data && data.hasOwnProperty(key)) { // eslint-disable-line
-              errorMessage += ` ${key}: ${data[key][0]} `;
-            }
-          });
-        }
-        this.props.sendNotification('error', 'Error', 'Please try registering again. Contact one of our staff if this problem persists.');
-        this.setState({ error: errorMessage, isLoading: false });
-      });
+      const { email, zip, password, firstName, lastName, identifier } = this.state;
+      axios
+        .post(`${config.backendUrl}/users`, {
+          user: {
+            first_name: firstName,
+            last_name: lastName,
+            email,
+            zip,
+            password,
+            identifier
+          }
+        })
+        .then(({ data }) => {
+          window.location = '/signup-info';
+          CookieHelpers.setUserAuthCookie(data);
+          this.setState({ isLoading: false });
+        })
+        .catch((error) => {
+          const data = _.get(error, 'response.data');
+          let errorMessage = '';
+          if (data) {
+            /* eslint-disable */
+            Object.keys(data).forEach(key => {
+              if (data && data.hasOwnProperty(key)) {
+                errorMessage += ` ${key}: ${data[key][0]} `;
+              }
+            });
+            /* eslint-enable */
+          }
+          this.props.sendNotification(
+            'error',
+            'Error',
+            'Please try registering again. Contact one of our staff if this problem persists.'
+          );
+          this.setState({ error: errorMessage, isLoading: false });
+        });
     } else {
       this.setState({ error: 'Missing required field(s)', isLoading: false });
       this.emailRef.inputRef.revalidate();
@@ -108,13 +113,13 @@ class SignUp extends Component {
       this.passwordRef.inputRef.revalidate();
       this.passwordConfirmRef.inputRef.revalidate();
     }
-  }
+  };
 
   isFormValid = () =>
-    this.state.emailValid
-    && this.state.zipValid
-    && this.state.passwordValid
-    && this.state.passwordConfirmValid;
+    this.state.emailValid &&
+    this.state.zipValid &&
+    this.state.passwordValid &&
+    this.state.passwordConfirmValid;
 
   render() {
     return (
@@ -122,34 +127,42 @@ class SignUp extends Component {
         <Form className={styles.signupForm}>
           <span>
             Are you ready to deploy your future? Our community supports active duty and veterans
-            transitioning into the tech industry, but spouses, family members,
-            tech professionals, volunteers and sponsors are also welcome. Join Operation Code today
-            and launch your career in tech. Once you complete the form below,
-            you&#8217;ll be invited to join our team on Slack. Make sure you stop
-            in and say hi!
+            transitioning into the tech industry, but spouses, family members, tech professionals,
+            volunteers and sponsors are also welcome. Join Operation Code today and launch your
+            career in tech. Once you complete the form below, you&#8217;ll be invited to join our
+            team on Slack. Make sure you stop in and say hi!
           </span>
           <FormEmail
-            id="email" placeholder="Email (Required)"
+            id="email"
+            placeholder="Email (Required)"
             onChange={this.onEmailChange}
-            ref={(child) => { this.emailRef = child; }}
+            ref={(child) => {
+              this.emailRef = child;
+            }}
           />
           <FormInput
             id="firstName"
             placeholder="First Name (Required)"
             onChange={this.onFirstNameChange}
-            ref={(child) => { this.firstNameRef = child; }}
+            ref={(child) => {
+              this.firstNameRef = child;
+            }}
           />
           <FormInput
             id="lastName"
             placeholder="Last Name (Required)"
             onChange={this.onLastNameChange}
-            ref={(child) => { this.lastNameRef = child; }}
+            ref={(child) => {
+              this.lastNameRef = child;
+            }}
           />
           <FormZipCode
             id="zip"
             placeholder="Zip Code (Required)"
             onChange={this.onZipChange}
-            ref={(child) => { this.zipRef = child; }}
+            ref={(child) => {
+              this.zipRef = child;
+            }}
           />
           <FormPassword
             id="password"
@@ -157,7 +170,9 @@ class SignUp extends Component {
             onChange={this.onPasswordChange}
             validationRegex={/^(?=.*[A-Z]).{6,}$/}
             validationErrorMessage="Must be 6 characters long and include a capitalized letter"
-            ref={(child) => { this.passwordRef = child; }}
+            ref={(child) => {
+              this.passwordRef = child;
+            }}
           />
           <FormPassword
             id="passwordConfirm"
@@ -165,13 +180,26 @@ class SignUp extends Component {
             onChange={this.onConfirmPasswordChange}
             validateFunc={this.validatePasswordConfirm}
             validationErrorMessage="Passwords must match"
-            ref={(child) => { this.passwordConfirmRef = child; }}
+            ref={(child) => {
+              this.passwordConfirmRef = child;
+            }}
           />
-          {this.state.error &&
-          <ul className={styles.errorList}>There was an error joining Operation Code:
-            <li className={styles.errorMessage}>{this.state.error}</li>
-          </ul>}
-          {this.state.isLoading ? <FormButton className={styles.joinButton} text="Loading..." disabled theme="grey" /> : <FormButton className={styles.joinButton} text="Join" onClick={this.handleOnClick} theme="red" />}
+          {this.state.error && (
+            <ul className={styles.errorList}>
+              There was an error joining Operation Code:
+              <li className={styles.errorMessage}>{this.state.error}</li>
+            </ul>
+          )}
+          {this.state.isLoading ? (
+            <FormButton className={styles.joinButton} text="Loading..." disabled theme="grey" />
+          ) : (
+            <FormButton
+              className={styles.joinButton}
+              text="Join"
+              onClick={this.handleOnClick}
+              theme="red"
+            />
+          )}
         </Form>
       </Section>
     );

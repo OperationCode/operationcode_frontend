@@ -7,14 +7,11 @@ import styles from './stateSortedSchools.css';
 import stateOptions from './stateOptions';
 
 class StateSortedSchools extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      campusesByState: null,
-      selectedStates: null,
-      noResults: false,
-    };
-  }
+  state = {
+    campusesByState: null,
+    selectedStates: null,
+    noResults: false
+  };
 
   getCampusesByState = (selectedStates) => {
     function matchesCampus(state, campus) {
@@ -79,12 +76,7 @@ class StateSortedSchools extends Component {
       ));
 
     return (
-      <Section
-        id="schoolsByState"
-        title="Schools by State"
-        headingLines={false}
-        margin
-      >
+      <Section id="schoolsByState" title="Schools by State" headingLines={false} margin>
         <Select
           className={styles.select}
           placeholder="Start typing a state..."
@@ -96,7 +88,9 @@ class StateSortedSchools extends Component {
           onChange={this.handleSelectChange}
         />
 
-        <div className={styles.stateSchools}>{this.state.noResults ? (<p>No results found.</p>) : stateSchools}</div>
+        <div className={styles.stateSchools}>
+          {this.state.noResults ? <p>No results found.</p> : stateSchools}
+        </div>
       </Section>
     );
   }
@@ -114,8 +108,8 @@ StateSortedSchools.propTypes = {
     notes: PropTypes.string,
     online_only: PropTypes.bool,
     updated_at: PropTypes.string,
-    url: PropTypes.string,
-  })).isRequired,
+    url: PropTypes.string
+  })).isRequired
 };
 
 export default StateSortedSchools;

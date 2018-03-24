@@ -17,6 +17,7 @@
     "dateformat": "^2.0.0",
     "express": "^4.15.2",
     "history": "^4.6.1",
+    "husky": "^0.14.3",
     "jwt-decode": "^2.2.0",
     "lodash": "^4.17.4",
     "postscribe": "^2.0.8",
@@ -70,14 +71,16 @@
     "html-webpack-plugin": "2.28.0",
     "http-proxy-middleware": "0.17.3",
     "jest": "20.0.3",
+    "lint-staged": "^7.0.0",
     "object-assign": "4.1.1",
     "postcss-loader": "2.0.5",
-    "precommit-hook": "^3.0.0",
-    "prettier-eslint": "^8.7.4",
-    "prettier-eslint-cli": "^4.4.0",
+    "prettier-eslint": "^8.8.1",
+    "prettier-eslint-cli": "^4.7.1",
     "promise": "7.1.1",
     "react-dev-utils": "^3.0.0",
     "style-loader": "0.13.1",
+    "stylelint": "^9.1.3",
+    "stylelint-config-standard": "^18.2.0",
     "sw-precache-webpack-plugin": "0.9.1",
     "url-loader": "0.5.7",
     "webpack": "^3.7.1",
@@ -89,26 +92,26 @@
     "backend": "./bin/run_backend.sh",
     "build-storybook": "build-storybook",
     "build": "node scripts/build.js",
+    "format-js": "prettier-eslint --write \"**/*.js\"",
+    "format-css": "stylelint --fix \"**/*.css\"",
     "fix": "eslint --fix \"src/**/*.js\"",
-    "format": "prettier-eslint \"src/**/*.js\"",
-    "lint": "eslint \"src/**/*.js\"",
+    "lint": "eslint \"**/*.js\"",
+    "precommit": "lint-staged",
     "start:server": "node server",
     "start": "node scripts/start.js",
     "storybook": "start-storybook -p 6006",
     "test": "node scripts/test.js --env=jsdom",
     "validate": "npm ls"
   },
+  "lint-staged": {
+    "*.{js,json}": ["prettier-eslint --write", "git add"],
+    "*.css": ["stylelint --fix", "git add"],
+    "*.{jpg,jpeg,png,gif,svg}": "npm run image-size"
+  },
   "jest": {
-    "moduleDirectories": [
-      "node_modules",
-      "src"
-    ],
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx}"
-    ],
-    "setupFiles": [
-      "<rootDir>/config/polyfills.js"
-    ],
+    "moduleDirectories": ["node_modules", "src"],
+    "collectCoverageFrom": ["src/**/*.{js,jsx}"],
+    "setupFiles": ["<rootDir>/config/polyfills.js"],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.js?(x)",
       "<rootDir>/src/**/?(*.)(spec|test).js?(x)"
@@ -120,22 +123,13 @@
       "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
       "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
     },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
-    ],
+    "transformIgnorePatterns": ["[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"],
     "moduleNameMapper": {
       "^react-native$": "react-native-web"
     }
   },
   "babel": {
-    "presets": [
-      "react-app"
-    ]
+    "presets": ["react-app"]
   },
-  "homepage": "http://frontend.operationcode.org/",
-  "pre-commit": [
-    "fix",
-    "format",
-    "lint"
-  ]
+  "homepage": "https://operationcode.org/"
 }
