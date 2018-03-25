@@ -17,16 +17,15 @@
   <meta name="twitter:creator" content="@operation_code" />
   <link property="og:url" content="http://operationcode.org/gala" />
   <meta property="og:title" content="Join us at the gala!" />
-  <meta property="og:description" content="The Operation Code Board of Directors, all-volunteer staff, and more than 3,211 members cordially invite you to the Deploy the Future Gala November 10, 2017 in the Governor Ballroom at Portland’s historic Sentinel Hotel."
-  />
+  <meta property="og:description" content="The Operation Code Board of Directors, all-volunteer staff, and more than 3,211 members cordially invite you to the Deploy the Future Gala November 10, 2017 in the Governor Ballroom at Portland’s historic Sentinel Hotel." />
 
   <link rel="stylesheet" type="styles/css" href="styles/css/styles.css">
-  <script src="https://cdn.ravenjs.com/3.16.0/raven.min.js" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.ravenjs.com/3.16.0/raven.min.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <div id="app"></div>
-  <script>
+  <script defer>
     Raven.config('https://a566cf6623524f11990720bcff927f75@sentry.io/207359!', {
       shouldSendCallback: function() {
         return window.location.host === 'operationcode.org';
