@@ -3,9 +3,9 @@
   white-space: nowrap;
   vertical-align: middle;
   user-select: none;
-  color: #ddd;
+  color: #dddddd;
   padding: 8px;
-  margin:5px;
+  margin: 5px;
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.42857143;
@@ -18,45 +18,76 @@
 }
 
 .red {
-  background-color: #D1665A;
-  border-color: #D1665A;
-  color: #FFF;
+  background-color: #d1665a;
+  border-color: #d1665a;
+  color: #ffffff;
   cursor: pointer;
 }
 
 .red-large {
-  background-color: #D1665A;
-  border-color: #D1665A;
-  color: #FFF;
+  background-color: #d1665a;
+  border-color: #d1665a;
+  color: #ffffff;
   font-size: 1.5rem;
   padding: 20px 40px;
   cursor: pointer;
 }
 
-.red:hover {
-  background-color: #F1665A;
-  border-color: #F1665A;
+.red-small {
+  background-color: #d1665a;
+  border-color: #d1665a;
+  color: #ffffff;
+  cursor: pointer;
+  min-width: 120px;
+}
+
+.red:hover,
+.red-small:hover {
+  background-color: #f1665a;
+  border-color: #f1665a;
   cursor: pointer;
 }
 
 .blue {
-  background-color: #249CBC;
-  border-color:#249CBC;
-  color: #fff;
+  background-color: #249cbc;
+  border-color: #249cbc;
+  color: #ffffff;
   cursor: pointer;
 }
 
 .blue:hover {
-  background-color: #249CDE;
-  border-color: #249CDE;
+  background-color: #249cde;
+  border-color: #249cde;
   cursor: pointer;
 }
 
 .blue-large {
-  background-color: #249CBC;
-  border-color: #249CBC;
-  color: #FFF;
+  background-color: #249cbc;
+  border-color: #249cbc;
+  color: #ffffff;
   font-size: 1.5rem;
   padding: 20px 40px;
   cursor: pointer;
+}
+
+.bordered-dark-blue-small {
+  background-color: #ffffff;
+  border: 1px solid #191f39;
+  color: #191f39;
+}
+
+.bordered-dark-blue-small:hover {
+  background-color: #191f39;
+  color: #ffffff;
+}
+
+.bordered-white-small {
+  background-color: #191f39;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+
+.bordered-white-small:hover {
+  background-color: #ffffff;
+  color: #191f39;
 }
