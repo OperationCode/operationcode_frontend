@@ -8246,12 +8246,6 @@ react-style-proptype@^3.0.0:
   dependencies:
     prop-types "^15.5.4"
 
-react-table@^6.0.5:
-  version "6.8.0"
-  resolved "https://registry.yarnpkg.com/react-table/-/react-table-6.8.0.tgz#5ce402eb735df68534c03dabb3faa031478b6a58"
-  dependencies:
-    classnames "^2.2.5"
-
 react-toastr@^2.9.5:
   version "2.9.5"
   resolved "https://registry.yarnpkg.com/react-toastr/-/react-toastr-2.9.5.tgz#f2263770c8ce13714625e7ce6d0908279353bb31"
