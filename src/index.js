@@ -4,6 +4,7 @@ import '@fortawesome/fontawesome/styles.css';
 import App from './App';
 import './shared/styles/normalize.global.css';
 import './shared/styles/react-select.global.css';
+import './shared/styles/notifications.css';
 import './index.css';
 
 ReactDOM.render(
