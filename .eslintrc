@@ -1,5 +1,5 @@
 {
-  "extends": "airbnb",
+  "extends": ["airbnb", "plugin:jsx-a11y/recommended"],
   "env": {
     "browser": true,
     "commonjs": true,
@@ -11,8 +11,7 @@
   "rules": {
     "no-console": 1,
     "comma-dangle": [1, "only-multiline"],
-    "jsx-a11y/anchor-is-valid": 0,
-    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/anchor-is-valid": ["error", { "components": ["Link"], "specialLink": ["to"] }],
     "jsx-a11y/label-has-for": [
       2,
       {
@@ -33,8 +32,16 @@
     "import/extensions": 0,
     "import/no-extraneous-dependencies": 0,
     "linebreak-style": 0,
-    "max-len": 0,
-    "react/jsx-max-props-per-line": 0
+    "max-len": [
+      2,
+      100,
+      {
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    "react/jsx-max-props-per-line": [2, { "maximum": 4 }]
   },
   "settings": {
     "import/resolver": {
