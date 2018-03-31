@@ -1,0 +1,21 @@
+.content {
+  padding: 64px 0;
+}
+
+.header {
+  padding: 0 2rem;
+  max-width: 475px;
+}
+
+.headerTitle {
+  color: #fff;
+  font-weight: 400;
+  font-size: 3rem;
+}
+
+.headerSubtitle {
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+}
