@@ -18,7 +18,8 @@
   height: 300px;
 }
 
-.backgroundImageAbout {
+.backgroundImageAbout,
+.backgroundImagePolicy {
   background-size: 100%;
   background-position: center top;
   background-repeat: no-repeat;
