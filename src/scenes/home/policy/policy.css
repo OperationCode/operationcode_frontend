@@ -1,9 +1,8 @@
 .content {
-  padding: 64px 0;
+  padding: 64px 2rem;
 }
 
 .header {
-  padding: 0 2rem;
   max-width: 475px;
 }
 
@@ -16,6 +15,49 @@
 .headerSubtitle {
   color: #fff;
   font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+}
+
+.transparentBlue {
+  background-color: rgba(21, 29, 48, 0.7);
+}
+
+.statisticContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3em;
+}
+
+.statistic {
+  composes: transparentBlue;
+  display: inline-flex;
+  margin: 0;
+  padding: .5em;
+  max-width: 500px;
+}
+
+.statistic + .statistic {
+  margin-top: 1em;
+}
+
+.shortenedStatistic{
+  max-width: 370px;
+}
+
+.statisticNumber {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  flex-shrink: 0;
+  color: #98bddd;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  padding: 0 1rem;
+}
+
+.statisticDescription {
+  color: #fff;
   font-size: 1.3rem;
   line-height: 1.5rem;
 }

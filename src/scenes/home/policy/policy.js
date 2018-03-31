@@ -11,6 +11,22 @@ const Policy = () => (
         sector.
       </div>
     </h1>
+
+    <div className={styles.statisticContainer}>
+      <figure className={`${styles.statistic} ${styles.shortenedStatistic}`}>
+        <div className={styles.statisticNumber}>2%</div>
+        <div className={styles.statisticDescription}>
+          Percentage of the tech industry that are veterans.
+        </div>
+      </figure>
+
+      <figure className={styles.statistic}>
+        <div className={styles.statisticNumber}>1.6 Mil.</div>
+        <div className={styles.statisticDescription}>
+          Software development job postings between 2016 and 2017.
+        </div>
+      </figure>
+    </div>
   </div>
 );
 
