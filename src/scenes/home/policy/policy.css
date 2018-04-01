@@ -1,25 +1,26 @@
 .content {
   padding: 64px 2rem;
+  font-family: "PF Din Display";
 }
 
 .header {
   max-width: 475px;
 }
 
-.headerTitle {
+.title {
   color: #fff;
   font-weight: 400;
   font-size: 3rem;
 }
 
-.headerSubtitle {
+.subtitle {
   color: #fff;
   font-weight: 400;
-  font-size: 1.3rem;
-  line-height: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 1.7rem;
 }
 
-.transparentBlue {
+.bgTransparentBlue {
   background-color: rgba(21, 29, 48, 0.7);
 }
 
@@ -30,10 +31,10 @@
 }
 
 .statistic {
-  composes: transparentBlue;
+  composes: bgTransparentBlue;
   display: inline-flex;
   margin: 0;
-  padding: .5em;
+  padding: 0.5em;
   max-width: 500px;
 }
 
@@ -41,7 +42,7 @@
   margin-top: 1em;
 }
 
-.shortenedStatistic{
+.shortenedStatistic {
   max-width: 370px;
 }
 
@@ -58,6 +59,47 @@
 
 .statisticDescription {
   color: #fff;
-  font-size: 1.3rem;
-  line-height: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+}
+
+.info {
+  margin-top: 3em;
+}
+
+.event {
+  display: flex;
+}
+
+.eventDetails {
+  composes: bgTransparentBlue;
+  display: inline-flex;
+  margin: 0;
+}
+
+.detail {
+  color: #98bddd;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.detail + .detail {
+  border-left: 1px solid #98bddd47;
+}
+
+.rsvp {
+  display: flex;
+  align-items: center;
+  background-color: #d1665a;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+  padding: 1rem 2rem;
+}
+
+.rsvp:hover {
+  background-color: #f1665a;
+  border-color: #f1665a;
 }

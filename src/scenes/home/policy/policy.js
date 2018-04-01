@@ -4,8 +4,8 @@ import styles from './policy.css';
 const Policy = () => (
   <div className={styles.content}>
     <h1 className={styles.header}>
-      <div className={styles.headerTitle}>Modernize the GI Bill</div>
-      <div className={styles.headerSubtitle}>
+      <div className={styles.title}>Modernize the GI Bill</div>
+      <div className={styles.subtitle}>
         We&apos;re heading to Washington, D.C. to demand that Congress develop
         policies to make veterans more competitive for careers in the tech
         sector.
@@ -26,6 +26,21 @@ const Policy = () => (
           Software development job postings between 2016 and 2017.
         </div>
       </figure>
+    </div>
+
+    <div className={styles.info}>
+      <h1 className={styles.subtitle}>
+        Join us on our mission to spread awareness, demand change, and seek
+        solutions.
+      </h1>
+      <div className={styles.event}>
+        <figure className={styles.eventDetails}>
+          <div className={styles.detail}>Capitol Hill</div>
+          <div className={styles.detail}>April 19, 2018</div>
+          <div className={styles.detail}>12:30PM - 2:00PM</div>
+        </figure>
+        <div className={styles.rsvp}>RSVP</div>
+      </div>
     </div>
   </div>
 );
