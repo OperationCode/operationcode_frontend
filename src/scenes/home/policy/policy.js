@@ -29,7 +29,7 @@ const Policy = () => (
     </div>
 
     <div className={styles.info}>
-      <h1 className={styles.subtitle}>
+      <h1 className={styles.infoSubtitle}>
         Join us on our mission to spread awareness, demand change, and seek
         solutions.
       </h1>

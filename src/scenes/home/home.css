@@ -25,6 +25,12 @@
   background-repeat: no-repeat;
 }
 
+@media screen and (max-width: 1640px) {
+  .backgroundImagePolicy {
+    background-size: cover;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .backgroundImageAbout {
     background-size: auto 17%;
@@ -88,6 +94,12 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .backgroundImagePolicy {
+    background-size: auto 55%;
+  }
+}
+
 @media screen and (max-width: 650px) {
   .backgroundImageTeam {
     background-size: auto 10%;
@@ -102,6 +114,10 @@
   .backgroundImageHistory {
     background-size: auto 5%;
     background-position: top right -55px;
+  }
+
+  .backgroundImagePolicy {
+    background-size: auto 55%;
   }
 }
 
