@@ -161,6 +161,7 @@
   font-size: 1.5rem;
   line-height: 1.7rem;
   padding: 1.3rem 2rem 1rem;
+  text-decoration: none;
 }
 
 .rsvp:hover {

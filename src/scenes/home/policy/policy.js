@@ -1,5 +1,8 @@
 import React from 'react';
+import OutboundLink from 'shared/components/outboundLink/outboundLink';
 import styles from './policy.css';
+
+const formLink = 'https://goo.gl/forms/kJUhtxHConEVKpy23';
 
 const Policy = () => (
   <div className={styles.content}>
@@ -39,7 +42,13 @@ const Policy = () => (
           <div className={styles.detail}>April 19, 2018</div>
           <div className={styles.detail}>12:30PM - 2:00PM</div>
         </figure>
-        <div className={styles.rsvp}>RSVP</div>
+        <OutboundLink
+          href={formLink}
+          analyticsEventLabel={`[AdBanner Hit] to ${formLink} from /`}
+          className={styles.rsvp}
+        >
+          RSVP
+        </OutboundLink>
       </div>
     </div>
   </div>
