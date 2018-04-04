@@ -1,0 +1,30 @@
+.banner {
+  display: flex;
+  justify-content: center;
+  background-color: #f0f2f2;
+  width: 100%;
+}
+
+.bannerText {
+  font-size: 18px;
+  margin-top: 1rem;
+  max-width: 80%;
+}
+
+@media screen and (max-width: 767px) {
+  .bannerText {
+    font-size: 14px;
+    max-width: none;
+  }
+}
+
+.bannerLink,
+.bannerLink:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+.bannerLink:hover {
+  color: #249CBC;
+  text-decoration: none;
+}

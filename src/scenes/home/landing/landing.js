@@ -11,6 +11,7 @@ import Partners from './partners/partners';
 import Donate from '../../../shared/components/donate/donate';
 import Join from '../../../shared/components/join/join';
 import TopCode from './topcodeBanner/topcodeBanner';
+import PolicyBanner from '../policy/policyBanner';
 import EmailSignup from './emailSignup/emailSignup';
 
 import styles from './landing.css';
@@ -54,6 +55,7 @@ class Landing extends Component {
           <h1>
             The largest community dedicated to helping military veterans and families launch
             software development careers.
+            <PolicyBanner />
           </h1>
         </div>
         <div />

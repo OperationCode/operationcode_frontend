@@ -18,10 +18,17 @@
   height: 300px;
 }
 
-.backgroundImageAbout {
+.backgroundImageAbout,
+.backgroundImagePolicy {
   background-size: 100%;
   background-position: center top;
   background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1640px) {
+  .backgroundImagePolicy {
+    background-size: cover;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -87,6 +94,12 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .backgroundImagePolicy {
+    background-size: auto 55%;
+  }
+}
+
 @media screen and (max-width: 650px) {
   .backgroundImageTeam {
     background-size: auto 10%;
@@ -101,6 +114,10 @@
   .backgroundImageHistory {
     background-size: auto 5%;
     background-position: top right -55px;
+  }
+
+  .backgroundImagePolicy {
+    background-size: auto 55%;
   }
 }
 
