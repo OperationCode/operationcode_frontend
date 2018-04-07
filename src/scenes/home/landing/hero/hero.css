@@ -4,13 +4,15 @@
 }
 
 .pageHeading {
-  background-color: #191f39;
-  color: #ffffff;
   text-align: center;
-  padding: 15px;
+  padding: 15px 30px;
   width: 100%;
   box-sizing: border-box;
   margin: 0;
+}
+
+.pageHeading h1 {
+  font-weight: normal;
 }
 
 .btnContainer {
@@ -29,6 +31,12 @@
 .embedContainer {
   width: 100%;
   box-sizing: border-box;
+}
+
+.embedContainer p {
+  margin: 0.5em 0;
+  padding: 0 5px;
+  font-size: 1em;
 }
 
 .embedVideo {
@@ -54,10 +62,11 @@
   }
 
   .pageHeading {
-    width: 45%;
-    background-color: #ffffff;
-    color: #191f39;
+    width: 50%;
     text-align: right;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
   }
 
   .btnContainer {
@@ -65,13 +74,32 @@
   }
 
   .embedContainer {
-    width: 55%;
-    margin: 2em 0;
+    width: 50%;
+    margin: 4em 0;
+    padding: 0 0 0 30px;
+  }
+
+  .embedVideo {
+    box-shadow: 1px 1px 6px #777777;
+  }
+
+  .embedContainer p {
+    padding: 0;
   }
 }
 
 @media screen and (min-width: 1320px) {
   .heroContainer {
     width: 80%;
+  }
+
+  .pageHeading h1 {
+    font-size: 4em;
+    line-height: 1em;
+  }
+
+  .pageHeading p {
+    max-width: 600px;
+    font-size: 1.5em;
   }
 }
