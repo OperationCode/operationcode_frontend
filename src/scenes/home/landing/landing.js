@@ -11,6 +11,7 @@ import Partners from './partners/partners';
 import Donate from '../../../shared/components/donate/donate';
 import Join from '../../../shared/components/join/join';
 import TopCode from './topcodeBanner/topcodeBanner';
+import PolicyBanner from '../policy/policyBanner';
 import EmailSignup from './emailSignup/emailSignup';
 
 import styles from './landing.css';
@@ -50,7 +51,7 @@ class Landing extends Component {
             <p>Content</p>
           </div>
         </ReactModal>
-        <div />
+        <PolicyBanner />
         <Hero />
         <TopCode />
         <Membership />
