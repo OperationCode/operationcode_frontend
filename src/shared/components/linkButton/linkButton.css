@@ -25,27 +25,21 @@
 }
 
 .red-large {
-  background-color: #d1665a;
-  border-color: #d1665a;
-  color: #ffffff;
+  composes: red;
   font-size: 1.5rem;
   padding: 20px 40px;
-  cursor: pointer;
 }
 
 .red-small {
-  background-color: #d1665a;
-  border-color: #d1665a;
-  color: #ffffff;
-  cursor: pointer;
-  min-width: 120px;
+  composes: red;
+  width: 120px;
 }
 
 .red:hover,
-.red-small:hover {
+.red-small:hover,
+.red-large:hover {
   background-color: #f1665a;
   border-color: #f1665a;
-  cursor: pointer;
 }
 
 .blue {
@@ -55,39 +49,21 @@
   cursor: pointer;
 }
 
-.blue:hover {
+.blue-large {
+  composes: blue;
+  font-size: 1.5rem;
+  padding: 20px 40px;
+}
+
+.blue-small {
+  composes: blue;
+  width: 120px;
+}
+
+.blue:hover,
+.blue-small:hover,
+.blue-large:hover {
   background-color: #249cde;
   border-color: #249cde;
   cursor: pointer;
-}
-
-.blue-large {
-  background-color: #249cbc;
-  border-color: #249cbc;
-  color: #ffffff;
-  font-size: 1.5rem;
-  padding: 20px 40px;
-  cursor: pointer;
-}
-
-.bordered-dark-blue-small {
-  background-color: #ffffff;
-  border: 1px solid #191f39;
-  color: #191f39;
-}
-
-.bordered-dark-blue-small:hover {
-  background-color: #191f39;
-  color: #ffffff;
-}
-
-.bordered-white-small {
-  background-color: #191f39;
-  border: 1px solid #ffffff;
-  color: #ffffff;
-}
-
-.bordered-white-small:hover {
-  background-color: #ffffff;
-  color: #191f39;
 }

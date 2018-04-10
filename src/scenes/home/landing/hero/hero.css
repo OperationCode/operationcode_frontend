@@ -1,9 +1,9 @@
-.heroContainer {
+.container {
   display: flex;
   flex-flow: column;
 }
 
-.pageHeading {
+.header {
   text-align: center;
   padding: 15px 30px;
   width: 100%;
@@ -11,7 +11,7 @@
   margin: 0;
 }
 
-.pageHeading h1 {
+.heading {
   font-weight: normal;
 }
 
@@ -33,12 +33,6 @@
   box-sizing: border-box;
 }
 
-.embedContainer p {
-  margin: 0.5em 0;
-  padding: 0 5px;
-  font-size: 1em;
-}
-
 .embedVideo {
   position: relative;
   height: 0;
@@ -54,52 +48,71 @@
   height: 100%;
 }
 
+.embedCaption {
+  margin: 0.5em 0;
+  padding: 0 1em;
+  font-size: 1em;
+  text-align: center;
+}
+
 @media screen and (min-width: 780px) {
-  .heroContainer {
+  .container {
     flex-flow: row;
-    align-items: center;
+    margin: 3em 0;
     width: 90%;
   }
 
-  .pageHeading {
-    width: 50%;
-    text-align: right;
+  .header {
     display: flex;
     flex-flow: column;
-    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 48px;
+    width: 50%;
+  }
+
+  .heading {
+    font-size: 2.2em;
+    letter-spacing: 2px;
+    line-height: 1em;
+    text-align: right;
+  }
+
+  .description {
+    font-size: 1.2em;
+    margin: 0.5em 0 0.5em auto;
+    max-width: 600px;
+    text-align: right;
   }
 
   .btnContainer {
+    margin-top: 0.5em;
     justify-content: flex-end;
   }
 
   .embedContainer {
     width: 50%;
-    margin: 4em 0;
     padding: 0 0 0 30px;
   }
 
   .embedVideo {
     box-shadow: 1px 1px 6px #777777;
   }
-
-  .embedContainer p {
-    padding: 0;
-  }
 }
 
 @media screen and (min-width: 1320px) {
-  .heroContainer {
+  .container {
     width: 80%;
   }
 
-  .pageHeading h1 {
-    font-size: 4em;
-    line-height: 1em;
+  .header {
+    padding: 15px 45px;
   }
 
-  .pageHeading p {
-    max-width: 600px;
-    font-size: 1.5em;
+  .heading {
+    font-size: 3.3em;
+  }
+
+  .description {
+    font-size: 1.3em;
   }
 }
