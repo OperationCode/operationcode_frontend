@@ -215,7 +215,7 @@ class Home extends Component {
             <Route path="/benefit" component={Benefit} />
             <Route path="/gala" component={Gala} />
             <Route path="/policy" component={Policy} />
-            <Route path="/opCodeCon" component={OpCodeCon} />
+            <Route path="/op-code-con" component={OpCodeCon} />
 
             {/* eslint-disable */}
             <Route

@@ -1,12 +1,18 @@
 .hero {
   background-image: url('./raleigh.jpg');
-  text-align: left;
 }
+
 .heading {
-  color: #47566B;
+  color: #47566b;
   margin: 10%;
 }
+
 .textLink {
-  color: #47566B;
+  color: #47566b;
+  font-size: 1.2em;
+}
+
+.textLink:hover {
+  color: #d1665a;
   font-size: 1.2em;
 }
