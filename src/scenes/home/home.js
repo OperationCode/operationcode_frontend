@@ -39,6 +39,7 @@ import Terms from './termsOfService/termsOfService';
 import OurPrograms from './ourPrograms/ourPrograms';
 import ChapterLeader from './chapterLeader/chapterLeader';
 import Policy from './policy/policy';
+import OpCodeCon from './opCodeCon/opCodeCon';
 import styles from './home.css';
 
 const ReactToastr = require('react-toastr');
@@ -214,6 +215,7 @@ class Home extends Component {
             <Route path="/benefit" component={Benefit} />
             <Route path="/gala" component={Gala} />
             <Route path="/policy" component={Policy} />
+            <Route path="/op-code-con" component={OpCodeCon} />
 
             {/* eslint-disable */}
             <Route
