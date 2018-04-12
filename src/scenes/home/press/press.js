@@ -19,7 +19,7 @@ const Press = () => (
         <Link to="/history">view our history</Link>, and{' '}
         <Link to="/team">learn more about our staff</Link>. Lastly, if you are seeking information
         not located on our website, please do not hesitate to email us at{' '}
-        <a href="mailto:staff@operationcode.org">staff@operationcode.org</a>.
+        <a href="mailto:eilish@operationcode.org">eilish@operationcode.org</a>.
       </p>
 
       <br />
@@ -29,7 +29,7 @@ const Press = () => (
           <h4>Code Schools</h4>
           <p>
             Firstly, if your code school&apos;s information is not listed on our directory, please
-            contact us at <a href="mailto:staff@operationcode.org">staff@operationcode.org</a>. If
+            contact us at <a href="mailto:eilish@operationcode.org">eilish@operationcode.org</a>. If
             your school has recently partnered with our organization and is seeking information to
             write about it a blog post, we recommend joining our Slack team to receive personal
             recommendations from our members, many of whom have attended various coding schools -
@@ -45,7 +45,7 @@ const Press = () => (
             pedastal, can look forward to receive social media blasts and the appreciate of
             America&apos;s military veterans. If you are thinking about a partnership with Operation
             Code, but are unsure of what to offer our members,{' '}
-            <a href="mailto:staff@operationcode.org">let&apos;s talk</a>. If you&apos;re seeking
+            <a href="mailto:eilish@operationcode.org">let&apos;s talk</a>. If you&apos;re seeking
             information to display in announcing the partnership, please see below!
           </p>
         </div>
