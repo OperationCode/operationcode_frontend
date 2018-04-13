@@ -14,10 +14,7 @@ const Contact = () => (
         <br />
         The best way to reach our staff and our members is by{' '}
         <Link to="join">joining Operation Code</Link> to receive an invite to our team, including
-        our Slack chat and{' '}
-        <a href="https://community.operationcode.org/" target="_blank" rel="noopener noreferrer">
-          forums
-        </a>. You can also reach us via email, physical mail, or via{' '}
+        our Slack chat. You can also reach us via email, physical mail, or via{' '}
         <a href="//twitter.com/operation_code" target="_blank" rel="noopener noreferrer">
           Twitter.
         </a>
