@@ -8,8 +8,8 @@ const Contact = () => (
   <div>
     <Section title="Contact Us">
       <p className={styles.centerText}>
-        We are a decentralized community of hard-working volunteers,
-        <n /> and we love hearing feedback, comments, and suggestions!
+        We are a decentralized community of hard-working volunteers, and we love hearing feedback,
+        comments, and suggestions!
         <br />
         <br />
         The best way to reach our staff and our members is by{' '}
