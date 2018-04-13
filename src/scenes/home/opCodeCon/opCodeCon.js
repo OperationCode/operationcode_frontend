@@ -16,7 +16,13 @@ const OpCodeCon = () => (
         </a>{' '}
         for sponsorship information.
       </p>
-      <LinkButton role="button" text="Donate" theme="red" link={commonUrl.donateLink} isExternal />
+      <LinkButton
+        role="button"
+        text="Donate"
+        theme="red"
+        link={commonUrl.donateLink}
+        isExternal
+      />
       {/* <p>Check back for more information.</p> */}
     </div>
   </div>
