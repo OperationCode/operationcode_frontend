@@ -11,13 +11,16 @@ const OpCodeCon = () => (
       <p>September 19th-20th, 2018</p>
       <p>Raleigh Convention Center, Raleigh, NC</p>
       <p>
-        <a href="mailto:staff@operationcode.org" className={styles.textLink}>
+        <a href="mailto:eilish@operationcode.org" className={styles.textLink}>
           Contact us
         </a>{' '}
         for sponsorship information.
       </p>
       <LinkButton
-        role="button" text="Donate" theme="red" link={commonUrl.donateLink}
+        role="button"
+        text="Donate"
+        theme="red"
+        link={commonUrl.donateLink}
         isExternal
       />
       {/* <p>Check back for more information.</p> */}
