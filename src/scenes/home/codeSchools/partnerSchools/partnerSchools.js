@@ -128,7 +128,7 @@ const PartnerSchools = () => {
         <p>
           Are you a code school seeking a partnership with Operation Code?
           <br />
-          <a href="mailto:eilish@operationcode.org">Reach out to us!</a>
+          <a href="mailto:staff@operationcode.org">Reach out to us!</a>
         </p>
       </div>
     </Section>

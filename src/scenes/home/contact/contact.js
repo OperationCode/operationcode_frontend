@@ -12,7 +12,7 @@ const Contact = () => (
         comments, and suggestions!
         <br />
         <br />
-        The best way to reach our eilish and our members is by{' '}
+        The best way to reach our staff and our members is by{' '}
         <Link to="join">joining Operation Code</Link> to receive an invite to our team, including
         our Slack chat and{' '}
         <a href="https://community.operationcode.org/" target="_blank" rel="noopener noreferrer">
@@ -30,8 +30,8 @@ const Contact = () => (
           title="Email"
           fontAwesomeIcon="faEnvelope"
           iconSize="6x"
-          url="mailto:eilish@operationcode.org"
-          subText="eilish@operationcode.org"
+          url="mailto:staff@operationcode.org"
+          subText="staff@operationcode.org"
         />
         <IconCard
           title="Slack Team"

@@ -33,7 +33,7 @@ class Gala extends React.Component {
           <p>Saturday, November 10th, 2018</p>
           <p>
             <a
-              href="mailto:eilish@operationcode.org"
+              href="mailto:staff@operationcode.org"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.galaLink}

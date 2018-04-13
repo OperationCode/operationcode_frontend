@@ -23,13 +23,13 @@ const Benefit = () => (
       <h3>Thank You!</h3>
       <YouTube id="edMC6Wc3nsg" height="420" width="740" />
       <p>
-        Thank you to all of our donors, sponsors, and event eilish who helped make the Operation
+        Thank you to all of our donors, sponsors, and event staff who helped make the Operation
         Code 2017 Benefit Dinner a success!<br />
         Save the date: November 9th, 2018
       </p>
       <p className={styles.desc}>
         For Sponsorship Information,
-        <a href="mailto:eilish@operationcode.org" target="_blank" rel="noopener noreferrer">
+        <a href="mailto:staff@operationcode.org" target="_blank" rel="noopener noreferrer">
           contact us
         </a>.
         <br />

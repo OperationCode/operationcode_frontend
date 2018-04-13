@@ -42,7 +42,7 @@
     },
     {
       "question": "My question isn't listed. How do I contact Operation Code?",
-      "answer": "If you have a question that isn't listed here on our FAQ or our <a href='https://medium.com/@operation_code'>blog</a>, write to <a href='mailto:eilish@operationcode.org'>eilish@operationcode.org</a> and we'll get back to you as soon as we can."
+      "answer": "If you have a question that isn't listed here on our FAQ or our <a href='https://medium.com/@operation_code'>blog</a>, write to <a href='mailto:staff@operationcode.org'>staff@operationcode.org</a> and we'll get back to you as soon as we can."
     }
   ],
   "donation": [
@@ -72,7 +72,7 @@
     },
     {
       "question": "Can I make donations to a particular veteran or their family learning to code?",
-      "answer": "<a href=\"mailto:eilish@operationcode.org\">Please get in touch with us directly,</a> so we can ensure we find a good match."
+      "answer": "<a href=\"mailto:staff@operationcode.org\">Please get in touch with us directly,</a> so we can ensure we find a good match."
     },
     {
       "question": "What is AmazonSmile and how can buying at Amazon help Operation Code?",
