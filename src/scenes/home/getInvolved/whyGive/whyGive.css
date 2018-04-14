@@ -1,51 +1,56 @@
 .wrapper {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  margin: 5vw;
 }
 
 .half {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 50%;
 }
 
 .photo {
+  width: 100%;
   max-width: 500px;
   height: auto;
 }
-@media only screen and (min-width: 320px) and (max-width: 680px) {
-  .half {
-    width: 100%;
-  }
-  .photo {
-    max-width: 300px;
-    height: auto;
-  }
+
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
-@media only screen and (min-width: 680px) and (max-width: 1111px) {
-  .half {
-    width: 40%;
-  }
-  .wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    align-content: center;
-    justify-content: space-around;
-    margin: 2vw;
-  }
-  .photo {
-    max-width: 100%;
-    height: auto;
-  }
+
+.listItem {
+  display: flex;
+  align-items: center;
+}
+
+.itemText {
+  margin-left: 20px;
 }
 
 .button {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
+  margin-top: 1rem;
+}
+
+@media only screen and (min-width: 1112px) {
+  .half {
+    padding: 2rem;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1111px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .half {
+    padding: 1rem 0;
+    width: 100%;
+  }
 }
