@@ -3,11 +3,9 @@ import HeroBanner from 'shared/components/heroBanner/heroBanner';
 import banner1 from 'images/bannerimg1.jpg';
 import WhyGive from './whyGive/whyGive';
 import Volunteer from './volunteer/volunteer';
-import SuccessStories from './successStories/successStories';
-import styles from './getInvolved.css';
 
 const getInvolved = () => (
-  <div className={styles.page}>
+  <div>
     <HeroBanner
       imageSrc={banner1}
       title="Get Involved"
@@ -16,7 +14,6 @@ const getInvolved = () => (
 
     <WhyGive />
     <Volunteer />
-    <SuccessStories />
   </div>
 );
 
