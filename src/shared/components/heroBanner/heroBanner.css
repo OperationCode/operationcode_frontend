@@ -1,34 +1,26 @@
 .heroBanner {
-  width: 100vw;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
-  display: table;
+  background-position: center;
+  display: flex;
+  height: 70vh;
+  width: 100%;
 }
 
-.headerStyles {
-  text-align: left;
-  margin: 0 auto;
-  width: 80vw;
-  display: table-cell;
-  vertical-align: middle;
-  padding-left: 10vw;
+.header {
+  flex-grow: 1;
+  box-sizing: border-box;
+  padding: 4rem;
 }
 
-@media only screen and (min-width: 1025px) {
-  .headerStyles {
-    height: 70vh;
-  }
-}
-
-@media only screen and (min-width: 700px) and (max-width: 1024px) {
-  .headerStyles {
-    height: 35vh;
-  }
-}
-
-@media only screen and (min-width: 300px) and (max-width: 700px) {
-  .headerStyles {
+@media only screen and (max-width: 1024px) {
+  .heroBanner {
     height: 40vh;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    padding: 2rem;
   }
 }
