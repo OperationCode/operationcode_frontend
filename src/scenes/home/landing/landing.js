@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactModal from 'react-modal';
-import { FaClose } from 'react-icons/lib/fa';
-import LinkButton from 'shared/components/linkButton/linkButton';
-import WhatWeDo from './whatWeDo/whatWeDo';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { faTimes } from '@fortawesome/fontawesome-free-solid';
+import Hero from './hero/hero';
 import Membership from './membership/membership';
 import MoreInformation from './moreInformation/moreInformation';
 import SuccessStories from './successStories/successStories';
@@ -11,6 +11,7 @@ import Partners from './partners/partners';
 import Donate from '../../../shared/components/donate/donate';
 import Join from '../../../shared/components/join/join';
 import TopCode from './topcodeBanner/topcodeBanner';
+import PolicyBanner from '../policy/policyBanner';
 import EmailSignup from './emailSignup/emailSignup';
 
 import styles from './landing.css';
@@ -39,8 +40,9 @@ class Landing extends Component {
           contentLabel="None"
           className={styles.landingModal}
         >
-          <FaClose
-            size={48}
+          <FontAwesomeIcon
+            icon={faTimes}
+            size="4x"
             className={styles.landingModal_CloseButton}
             onClick={this.toggleModal}
           />
@@ -49,15 +51,9 @@ class Landing extends Component {
             <p>Content</p>
           </div>
         </ReactModal>
-        <div className={styles.pageHeading}>
-          <h1>
-            The largest community dedicated to helping military veterans and families launch
-            software development careers.
-          </h1>
-          <LinkButton text="Join" theme="red" link="/signup" />
-        </div>
+        <PolicyBanner />
+        <Hero />
         <TopCode />
-        <WhatWeDo />
         <Membership />
         <MoreInformation />
         <SuccessStories />

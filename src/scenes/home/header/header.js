@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import commonUrl from 'shared/constants/commonLinks';
 import styles from './header.css';
 import NavItem from './navItem/navItem';
 import TopNav from './topNav/topNav';
@@ -28,13 +29,27 @@ class Header extends Component {
         <NavItem to="/about" text="About" onClick={onClick} />
         <NavItem to="/code_schools" text="Code Schools" onClick={onClick} />
         <NavItem to="/jobs" text="Job Board" onClick={onClick} />
-        <NavItem to="https://opencollective.com/operationcode#support" text="Donate" onClick={onClick} isExternal />
-        <NavItem to="/leadership_circle" text="Leadership Circle" onClick={onClick} />
-        {signedIn && <NavItem to="https://op.co.de/mentor-request" text="Request Help" onClick={onClick} isExternal />}
-        {signedIn ? <NavItem to="/profile" text="Profile" onClick={onClick} />
-          : <NavItem to="/join" text="Join" onClick={onClick} />}
-        {signedIn ? <NavItem to="/" text="Logout" onClick={this.props.logOut} />
-          : <NavItem to="/login" text="Login" onClick={onClick} />}
+        <NavItem
+          to={commonUrl.donateLink}
+          text="Donate"
+          onClick={onClick}
+          isExternal
+        />
+        <NavItem
+          to="/leadership_circle"
+          text="Leadership Circle"
+          onClick={onClick}
+        />
+        {signedIn ? (
+          <NavItem to="/profile" text="Profile" onClick={onClick} />
+        ) : (
+          <NavItem to="/join" text="Join" onClick={onClick} />
+        )}
+        {signedIn ? (
+          <NavItem to="/" text="Logout" onClick={this.props.logOut} />
+        ) : (
+          <NavItem to="/login" text="Login" onClick={onClick} />
+        )}
       </span>
     );
   }
@@ -46,12 +61,10 @@ class Header extends Component {
       [`${styles.transparent}`]: this.props.transparent
     });
     return (
-      <div className={classes} >
+      <div className={classes}>
         <Logo />
         <Burger onClick={this.handleToggleDrawer} />
-        <TopNav>
-          {this.renderNavContents(signedIn, mentor)}
-        </TopNav>
+        <TopNav>{this.renderNavContents(signedIn, mentor)}</TopNav>
         <SideNav
           isVisible={this.state.isSideNavVisible}
           onClose={this.handleToggleDrawer}

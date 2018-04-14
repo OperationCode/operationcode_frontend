@@ -1,7 +1,6 @@
 .iconCard {
   padding: 10px;
   width: 180px;
-  height: 180px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,10 +16,6 @@ a.iconCard {
 
 a.iconCard:hover {
   color: #444;
-}
-
-.iconCardWithSubText {
-  min-height: 350px;
 }
 
 .iconCard__icon {

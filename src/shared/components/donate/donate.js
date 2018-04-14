@@ -1,6 +1,7 @@
 import React from 'react';
 import Section from 'shared/components/section/section';
 import LinkButton from 'shared/components/linkButton/linkButton';
+import commonUrl from 'shared/constants/commonLinks';
 import styles from './donate.css';
 
 const Donate = () => (
@@ -10,17 +11,16 @@ const Donate = () => (
     className={styles.donateSection}
     headingTheme="white"
   >
-    <div className={styles.donate} >
+    <div className={styles.donate}>
       <p>
-        As a 501(c)(3) veteran-led nonprofit organization,
-        our programs and services are maintained
-        through the efforts of our volunteer staff.
-        Your financial support allows us to continue helping
-        the military community learn software development,
-        enter the tech industry, and code the future.
+        As a 501(c)(3) veteran-led nonprofit organization, our programs and
+        services are maintained through the efforts of our volunteer staff. Your
+        financial support allows us to continue helping the military community
+        learn software development, enter the tech industry, and code the
+        future.
       </p>
       <p>Thank you for supporting our mission!</p>
-      <LinkButton text="Donate Now" link="https://opencollective.com/operationcode#support" isExternal />
+      <LinkButton text="Donate Now" link={commonUrl.donateLink} isExternal />
     </div>
   </Section>
 );

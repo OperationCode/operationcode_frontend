@@ -7,13 +7,11 @@ import styles from './stateSortedSchools.css';
 import stateOptions from './stateOptions';
 
 class StateSortedSchools extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      campusesByState: null,
-      selectedStates: null,
-    };
-  }
+  state = {
+    campusesByState: null,
+    selectedStates: null,
+    noResults: false
+  };
 
   getCampusesByState = (selectedStates) => {
     function matchesCampus(state, campus) {
@@ -31,25 +29,7 @@ class StateSortedSchools extends Component {
       }
     }
 
-    const campuses = this.props.schools.reduce((acc, school) => {
-      school.locations.forEach((location) => {
-        acc.push({
-          name: school.name,
-          url: school.url,
-          address: location.address1,
-          city: location.city,
-          state: location.state,
-          zip: location.zip,
-          logo: school.logo,
-          va_accepted: location.va_accepted,
-          full_time: school.full_time,
-          hardware_included: school.hardware_included,
-        });
-      });
-      return acc;
-    }, []);
-
-    const matchingCampuses = campuses.reduce((acc, campus) => {
+    const matchingCampuses = this.props.schools.reduce((acc, campus) => {
       const matchingState = selectedStates.some(state => matchesCampus(state, campus));
       if (matchingState) {
         acc.push(campus);
@@ -63,15 +43,16 @@ class StateSortedSchools extends Component {
   sortCampuses = campuses => campuses.sort((a, b) => a.state.localeCompare(b.state));
 
   handleSelectChange = (selectedStates) => {
-    if (selectedStates) {
+    if (selectedStates.length > 0) {
       const campusesByState = this.getCampusesByState(selectedStates);
-      const sortedCampusesByState = this.sortCampuses(campusesByState);
-      this.setState({ campusesByState: sortedCampusesByState });
-      this.setState({ selectedStates });
+      this.setState({
+        campusesByState: this.sortCampuses(campusesByState),
+        selectedStates,
+        noResults: campusesByState.length === 0
+      });
     } else {
       // Clear results when search field is blank
-      this.setState({ campusesByState: null });
-      this.setState({ selectedStates: null });
+      this.setState({ campusesByState: null, selectedStates: null, noResults: false });
     }
   };
 
@@ -84,7 +65,7 @@ class StateSortedSchools extends Component {
           alt={campus.name}
           schoolName={campus.name}
           link={campus.url}
-          schoolAddress={campus.address}
+          schoolAddress={campus.address1}
           schoolCity={campus.city}
           schoolState={campus.state}
           logo={campus.logo}
@@ -95,13 +76,7 @@ class StateSortedSchools extends Component {
       ));
 
     return (
-      <Section
-        id="schoolsByState"
-        title="Schools by State"
-        theme="white"
-        headingLines={false}
-        margin
-      >
+      <Section id="schoolsByState" title="Schools by State" headingLines={false} margin>
         <Select
           className={styles.select}
           placeholder="Start typing a state..."
@@ -113,7 +88,9 @@ class StateSortedSchools extends Component {
           onChange={this.handleSelectChange}
         />
 
-        <div className={styles.stateSchools}>{stateSchools}</div>
+        <div className={styles.stateSchools}>
+          {this.state.noResults ? <p>No results found.</p> : stateSchools}
+        </div>
       </Section>
     );
   }
@@ -131,8 +108,8 @@ StateSortedSchools.propTypes = {
     notes: PropTypes.string,
     online_only: PropTypes.bool,
     updated_at: PropTypes.string,
-    url: PropTypes.string,
-  })).isRequired,
+    url: PropTypes.string
+  })).isRequired
 };
 
 export default StateSortedSchools;

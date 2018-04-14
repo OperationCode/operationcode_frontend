@@ -20,15 +20,20 @@ class Scholarships extends Component {
     if (this.state.scholarships === null) {
       // loading
     } else if (this.state.scholarships.length === 0) {
-      schlrshps = <p>There are no scholarships available at this time, please check back periodically for more opportunities.</p>;
+      schlrshps = (
+        <p>
+          There are no scholarships available at this time, please check back periodically for more
+          opportunities.
+        </p>
+      );
     } else {
-      schlrshps = this.state.scholarships.map(scholarship => <Preview key={scholarship.id} scholarship={scholarship} />);
+      schlrshps = this.state.scholarships.map(scholarship => (
+        <Preview key={scholarship.id} scholarship={scholarship} />
+      ));
     }
     return (
       <Section title="Scholarships">
-        <div className={styles.container}>
-          {schlrshps}
-        </div>
+        <div className={styles.container}>{schlrshps}</div>
       </Section>
     );
   }

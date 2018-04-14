@@ -11,22 +11,15 @@ import MilitaryInfo from './formComponents/militaryInfo';
 import styles from './informationForm.css';
 
 class SignupInformation extends Component {
-  constructor(props) {
-    super(props);
-    this.onIdentifierStatusChange = this.onIdentifierStatusChange.bind(this);
-    this.onCheckBoxChange = this.onCheckBoxChange.bind(this);
-    this.previousPage = this.previousPage.bind(this);
-    this.onCheckboxLoad = this.onCheckboxLoad.bind(this);
-    this.state = {
-      error: false,
-      isValid: true,
-      isDescriptionValid: true,
-      success: false,
-      identifier: 'false',
-      interests: new Set(),
-      step: 0
-    };
-  }
+  state = {
+    error: false,
+    isValid: true,
+    isDescriptionValid: true,
+    success: false,
+    identifier: 'false',
+    interests: new Set(),
+    step: 0
+  };
 
   onCheckboxLoad = () => {
     // Clear the interests once we get to the interests page
@@ -35,7 +28,7 @@ class SignupInformation extends Component {
       interests.clear();
       this.setState({ interests });
     }
-  }
+  };
 
   // On-Change handler dynamically creates state named after the
   // ID of the changing event, with a value captured by the event itself.
@@ -43,7 +36,7 @@ class SignupInformation extends Component {
   // Then state will be updated with key of 'hello' and value of 'greeted'
   onIdentifierStatusChange = (e, value) => {
     this.setState({ [e.target.id]: value });
-  }
+  };
 
   // Adds values from checkboxes to a set, eliminating possible repeat values
   onCheckBoxChange = (e) => {
@@ -56,19 +49,19 @@ class SignupInformation extends Component {
     }
 
     this.setState({ interests });
-  }
+  };
 
   // make sure isDescriptionValid is false on initialization
   onIdentifierInit = () => {
     this.setState({ isDescriptionValid: false });
-  }
+  };
 
   // check if an option was selected: volunteer / veteran
   validateDescription = (value) => {
     const isDescriptionValid = Boolean(value.length);
     this.setState({ isDescriptionValid });
     return isDescriptionValid;
-  }
+  };
 
   // Reduces 'step' value by 1, going back one page in the form
   // Unless you are at the first page
@@ -77,8 +70,8 @@ class SignupInformation extends Component {
       return;
     }
 
-    this.setState({ step: this.state.step -= 1 });
-  }
+    this.setState({ step: (this.state.step -= 1) });
+  };
 
   isFormValid = () => {
     let valid = true;
@@ -88,7 +81,7 @@ class SignupInformation extends Component {
 
     this.setState({ error: !valid });
     return valid;
-  }
+  };
 
   // Patches whatever values that have been captured so far to the DB
   // Then adds 1 to step to progress to the next page.
@@ -111,14 +104,15 @@ class SignupInformation extends Component {
         branch_of_service: this.state.branch,
         // Necessary to convert Set to Array for storage in DB
         interests: Array.from(this.state.interests)
-      },
+      }
     })
       .then(() => {
-        this.setState({ step: this.state.step += 1 });
-      }).catch(() => {
+        this.setState({ step: (this.state.step += 1) });
+      })
+      .catch(() => {
         this.setState({ error: true });
       });
-  }
+  };
   // Showstep renders each consecutive 'page' (component) based on user input
   // The form splits based on identifier, which determines whether or not
   // You are military or civillian. If miltitary, it's false. If civillian, true
@@ -129,12 +123,7 @@ class SignupInformation extends Component {
     switch (step) {
       // Military STEP 2
       case '1false':
-        return (
-          <MilitaryInfo
-            update={this.onIdentifierStatusChange}
-            percent="20"
-          />
-        );
+        return <MilitaryInfo update={this.onIdentifierStatusChange} percent="20" />;
       // Civillian STEP 2
       case '1true':
         return (
@@ -149,17 +138,11 @@ class SignupInformation extends Component {
       // Civillian STEP 3
       case '2true':
         return (
-          <Interests
-            update={this.onCheckBoxChange}
-            percent="66"
-            onLoad={this.onCheckboxLoad}
-          />
+          <Interests update={this.onCheckBoxChange} percent="66" onLoad={this.onCheckboxLoad} />
         );
       // Civillian COMPLETE
       case '3true':
-        return (
-          <Redirect to="/profile" />
-        );
+        return <Redirect to="/profile" />;
       // Military STEP 3
       case '2false':
         return (
@@ -172,25 +155,13 @@ class SignupInformation extends Component {
         );
       // Military STEP 4
       case '3false':
-        return (
-          <SchoolInfo
-            update={this.onIdentifierStatusChange}
-            percent="60"
-          />
-        );
+        return <SchoolInfo update={this.onIdentifierStatusChange} percent="60" />;
       // Military STEP 5
       case '4false':
-        return (
-          <Interests
-            update={this.onCheckBoxChange}
-            percent="80"
-          />
-        );
+        return <Interests update={this.onCheckBoxChange} percent="80" />;
       // Military COMPLETE
       case '5false':
-        return (
-          <Redirect to="/profile" />
-        );
+        return <Redirect to="/profile" />;
       // STEP ONE
       default:
         return (
@@ -203,18 +174,28 @@ class SignupInformation extends Component {
           />
         );
     }
-  }
+  };
 
   render() {
     const showStep = this.showStep();
+
     return (
       <Section title="More Info">
-        <p>At Op-Code, we are dedicated to helping our community thrive. In order to do so, we need to collect some information to better serve you. Please take a minute to complete these steps and help us on our mission to code the future. We will never sell or distribute your information.</p>
+        <p>
+          At Op-Code, we are dedicated to helping our community thrive. In order to do so, we need
+          to collect some information to better serve you. Please take a minute to complete these
+          steps and help us on our mission to code the future. We will never sell or distribute your
+          information.
+        </p>
         {showStep}
         <div className={styles.buttonContainer}>
           <FormButton text="Go Back" onClick={this.previousPage} theme="blue" />
           <FormButton text="Save and Continue" onClick={this.saveAndContinue} theme="red" />
-          {this.state.error && (<ul className={styles.errorList}>There was an error saving your information, please try again.</ul>)}
+          {this.state.error && (
+            <ul className={styles.errorList}>
+              There was an error saving your information, please try again.
+            </ul>
+          )}
         </div>
       </Section>
     );

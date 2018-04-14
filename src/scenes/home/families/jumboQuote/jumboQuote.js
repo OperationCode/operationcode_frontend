@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { FaQuoteLeft, FaQuoteRight } from 'react-icons/lib/fa';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { faQuoteLeft, faQuoteRight } from '@fortawesome/fontawesome-free-solid';
 import quotes from './quotes.json';
 import styles from './jumboQuote.css';
 
@@ -26,9 +27,9 @@ class JumboQuote extends Component {
     return (
       <div className={styles.quotes}>
         <h4 className={styles.quoteBody}>
-          <FaQuoteLeft className={styles.quoteIcon} />
+          <FontAwesomeIcon icon={faQuoteLeft} className={styles.quoteIcon} />
           {this.state.quote.body}
-          <FaQuoteRight className={styles.quoteIcon} />
+          <FontAwesomeIcon icon={faQuoteRight} className={styles.quoteIcon} />
         </h4>
         <h5 className={styles.quoteAuthor}>{this.state.quote.author} </h5>
       </div>

@@ -8,7 +8,9 @@ import IdmeVerify from 'shared/components/idme/idmeverify/idmeverify';
 import AuthenticatedRoute from 'shared/components/authenticatedRoute/authenticatedRoute';
 import familyImage from 'images/Family-2.jpg';
 import lincolnImage from 'images/lincoln.jpg';
+import winstonImage from 'images/Winston.jpg';
 import colinPowellImage from 'images/colin-powell.jpg';
+import policyImage from 'images/policy.jpg';
 import Profile from './profile/profile';
 import SignUp from './signup/signup';
 import Scholarships from './scholarship/scholarships';
@@ -23,7 +25,6 @@ import Header from './header/header';
 import Landing from './landing/landing';
 import Footer from './footer/footer';
 import FourOhFour from './404/fourOhFour';
-import MentorRequest from './mentorRequest/mentorRequest';
 import LeadershipCircle from './leadershipCircle/leadershipCircle';
 import CodeSchools from './codeSchools/codeSchools';
 import About from './about/about';
@@ -33,9 +34,13 @@ import ResetPassword from './resetPassword/resetPassword';
 import Challenge from './challenge/challenge';
 import SignupInformation from './informationForm/informationForm';
 import Benefit from './benefit/benefit';
+import Gala from './gala/gala';
 import Terms from './termsOfService/termsOfService';
+import OurPrograms from './ourPrograms/ourPrograms';
 import ChapterLeader from './chapterLeader/chapterLeader';
 import GetInvolved from './getInvolved/getInvolved';
+import Policy from './policy/policy';
+import OpCodeCon from './opCodeCon/opCodeCon';
 import styles from './home.css';
 
 const ReactToastr = require('react-toastr');
@@ -61,26 +66,40 @@ class Home extends Component {
   }
 
   setBgImage(location) {
-    if (location.pathname === '/') {
-      this.setState({
-        bgChanged: !this.state.bgImage,
-        bgImage: true,
-        bgImageUrl: familyImage,
-        bgImageStyle: 'backgroundImageHome',
-      });
-    } else if (location.pathname === '/team') {
+    if (location.pathname === '/team') {
       this.setState({
         bgChanged: !this.state.bgImage,
         bgImage: true,
         bgImageUrl: lincolnImage,
         bgImageStyle: 'backgroundImageTeam',
       });
+    } else if (location.pathname === '/our_programs') {
+      this.setState({
+        bgChanged: !this.state.bgImage,
+        bgImage: true,
+        bgImageUrl: winstonImage,
+        bgImageStyle: 'backgroundImageGettingStarted',
+      });
+    } else if (location.pathname === '/about') {
+      this.setState({
+        bgChanged: !this.state.bgImage,
+        bgImage: true,
+        bgImageUrl: familyImage,
+        bgImageStyle: 'backgroundImageAbout',
+      });
     } else if (location.pathname === '/history') {
       this.setState({
         bgChanged: !this.state.bgImage,
         bgImage: true,
         bgImageUrl: colinPowellImage,
-        bgImageStyle: 'backgroundImageTeam',
+        bgImageStyle: 'backgroundImageHistory',
+      });
+    } else if (location.pathname === '/policy') {
+      this.setState({
+        bgChanged: !this.state.bgImage,
+        bgImage: true,
+        bgImageUrl: policyImage,
+        bgImageStyle: 'backgroundImagePolicy',
       });
     } else {
       this.setState({
@@ -111,7 +130,7 @@ class Home extends Component {
       },
       () => {
         this.props.history.push('/');
-      }
+      },
     );
   };
 
@@ -137,11 +156,7 @@ class Home extends Component {
     return (
       <div
         className={classes}
-        style={
-          this.state.bgImage
-            ? { backgroundImage: `url(${this.state.bgImageUrl})` }
-            : {}
-        }
+        style={this.state.bgImage ? { backgroundImage: `url(${this.state.bgImageUrl})` } : {}}
       >
         <Header
           transparent={this.state.bgImage}
@@ -180,11 +195,7 @@ class Home extends Component {
             <Route path="/team" component={Team} />
             <Route path="/faq" component={FAQ} />
             <Route path="/contact" component={Contact} />
-            <Route
-              exact
-              path="/about/financial-statements"
-              component={FinancialStatements}
-            />
+            <Route exact path="/about/financial-statements" component={FinancialStatements} />
             <Route path="/about" component={About} />
             <Route path="/press" component={Press} />
             <Route path="/branding" component={Branding} />
@@ -199,24 +210,20 @@ class Home extends Component {
             <Route
               exact
               path="/"
-              render={props => (
-                <Landing {...props} sendNotification={this.sendNotification} />
-              )}
+              render={props => <Landing {...props} sendNotification={this.sendNotification} />}
             />
-            <Route
-              path="/mentor-request"
-              render={() => <MentorRequest {...authProps} />}
-            />
+            <Route path="/our_programs" component={OurPrograms} />
             <Route exact path="/scholarships" component={Scholarships} />
-            <Route path="/benefit" render={() => <Benefit {...authProps} />} />
-            <Route path="/gala" render={() => <Benefit {...authProps} />} />
+            <Route path="/benefit" component={Benefit} />
+            <Route path="/gala" component={Gala} />
+            <Route path="/policy" component={Policy} />
+            <Route path="/op-code-con" component={OpCodeCon} />
 
             {/* eslint-disable */}
             <Route
               path="/newgibill"
               component={() =>
-                (window.location =
-                  'http://www.benefits.va.gov/gibill/post911_gibill.asp')}
+                (window.location = 'http://www.benefits.va.gov/gibill/post911_gibill.asp')}
             />
             {/* eslint-enable */}
 
