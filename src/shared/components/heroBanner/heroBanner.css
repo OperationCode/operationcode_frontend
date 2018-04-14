@@ -3,7 +3,7 @@
   background-size: cover;
   background-position: center;
   display: flex;
-  height: 70vh;
+  height: 480px;
   width: 100%;
 }
 
@@ -13,13 +13,11 @@
   padding: 4rem;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 320px) and (max-width: 768px) {
   .heroBanner {
-    height: 40vh;
+    height: 320px;
   }
-}
 
-@media only screen and (max-width: 768px) {
   .header {
     padding: 2rem;
   }
