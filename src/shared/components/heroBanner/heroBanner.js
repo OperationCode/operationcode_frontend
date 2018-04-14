@@ -2,23 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './heroBanner.css';
 
-const propTypes = {
-  imageSrc: PropTypes.node.isRequired,
-  title: PropTypes.string.isRequired,
-  className: PropTypes.string.isRequired,
-  subtitle: PropTypes.string,
-  isLeftFocus: PropTypes.bool,
-  isCenterFocus: PropTypes.bool,
-  isRightFocus: PropTypes.bool
-};
-
-const defaultProps = {
-  subtitle: '',
-  isLeftFocus: false,
-  isCenterFocus: true,
-  isRightFocus: false
-};
-
 const HeroBanner = ({ imageSrc, title, subtitle, ...props }) => {
   const bannerStyles = {
     color: '#fff00',
@@ -39,7 +22,15 @@ const HeroBanner = ({ imageSrc, title, subtitle, ...props }) => {
   );
 };
 
-HeroBanner.propTypes = propTypes;
-HeroBanner.defaultProps = defaultProps;
+HeroBanner.propTypes = {
+  imageSrc: PropTypes.node.isRequired,
+  title: PropTypes.string.isRequired,
+  className: PropTypes.string.isRequired,
+  subtitle: PropTypes.string
+};
+
+HeroBanner.defaultProps = {
+  subtitle: ''
+};
 
 export default HeroBanner;
