@@ -4,7 +4,7 @@ import faCheck from '@fortawesome/fontawesome-free-solid/faCheck';
 import LinkButton from 'shared/components/linkButton/linkButton';
 import Section from 'shared/components/section/section';
 import Dinner1 from 'images/benefit_dinner_2017_1.jpg';
-import styles from './whyGive.css';
+import styles from '../getInvolved.css';
 
 const WhyGive = () => (
   <Section title="Why give to Operation Code?" theme="white">

@@ -1,30 +1,66 @@
-.page {
+/* Shared styles for Get Involved sections: Why Give, Volunteer, etc. */
+
+.wrapper {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  flex: 1 0 100%;
-  align-items: center;
-  justify-content: flex-start;
 }
 
-.pageHeading {
+.half {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin-top: 10vw;
-  margin-left: 5vw;
-  text-align: left;
-  padding-bottom: 60px;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
 }
 
-@media (max-width: 500px) {
-  .pageHeading {
+.halfPhotoWrapper {
+  composes: half;
+}
+
+.photo {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+}
+
+.itemText {
+  margin-left: 20px;
+}
+
+.button {
+  margin-top: 1rem;
+}
+
+@media only screen and (min-width: 1112px) {
+  .half {
+    padding: 2rem;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1111px) {
+  .wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10vw;
-    margin-left: 5vw;
-    text-align: left;
-    padding-bottom: 60px;
+  }
+
+  .half {
+    padding: 1rem 0;
+    width: 100%;
+  }
+
+  .halfPhotoWrapper {
+    order: -1;
   }
 }
