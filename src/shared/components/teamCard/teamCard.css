@@ -37,6 +37,7 @@
 .teamCard > img {
   height: 125px;
   width: 125px;
+  flex: 1 0 auto;
   border-radius: 100%;
   box-shadow: 0 3px 4px 2px rgba(0, 0, 0, 0.15);
   filter: grayscale(100%);
