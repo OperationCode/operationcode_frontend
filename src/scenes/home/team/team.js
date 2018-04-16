@@ -20,8 +20,16 @@ class Team extends Component {
     axios
       .get('https://api.operationcode.org/api/v1/team_members.json')
       .then((response) => {
-        const boardMembers = response.data.filter(x => x.group === 'board');
-        const executiveStaffMembers = response.data.filter(x => x.group === 'team');
+        const sortById = members => members.sort((a, b) => a.id - b.id);
+        const sortedMembers = sortById(response.data);
+
+        const boardMembers = sortedMembers.filter(x => x.group === 'board');
+        let executiveStaffMembers = sortedMembers.filter(x => x.group === 'team');
+
+        // add founder as first member of executive staff, even though he's in group 'board'
+        const founder = boardMembers.filter(x => x.name === 'David Molina');
+        executiveStaffMembers = [...founder, ...executiveStaffMembers];
+
         this.setState({ boardMembers, executiveStaffMembers });
       })
       .catch(() => this.setState({ errorResponse: true }));
