@@ -3,14 +3,18 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faCheck from '@fortawesome/fontawesome-free-solid/faCheck';
 import LinkButton from 'shared/components/linkButton/linkButton';
 import Section from 'shared/components/section/section';
-import Dinner1 from 'images/benefit_dinner_2017_1.jpg';
+import imageUrl from 'images/benefit_dinner_2017_1.jpg';
 import styles from '../getInvolved.css';
 
 const WhyGive = () => (
   <Section title="Why give to Operation Code?" theme="white">
     <div className={styles.wrapper}>
       <div className={styles.half}>
-        <img src={Dinner1} alt="Benefit Dinner 2017" className={styles.photo} />
+        <img
+          src={imageUrl}
+          alt="Benefit Dinner 2017"
+          className={styles.photo}
+        />
       </div>
       <div className={styles.half}>
         <ul className={styles.list}>
