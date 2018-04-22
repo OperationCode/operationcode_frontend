@@ -4,7 +4,7 @@ import SchoolCard from 'shared/components/schoolCard/schoolCard';
 import styles from './partnerSchools.css';
 
 const PartnerSchools = () => {
-  const codeSchoolImageUrl = 'https://raw.githubusercontent.com/OperationCode/operationcode_frontend/master/src/images/codeSchoolLogos/';
+  const codeSchoolImageUrl = 'https://s3.amazonaws.com/operationcode-assets/codeSchoolLogos/';
 
   return (
     <Section
