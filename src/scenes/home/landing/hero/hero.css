@@ -1,6 +1,7 @@
 .container {
   display: flex;
   flex-flow: column;
+  padding-top: 20px;
 }
 
 .header {
