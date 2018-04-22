@@ -83,7 +83,7 @@ const PartnerSchools = () => {
           schoolName="Launch School"
           link="https://launchschool.com/blog/operation-code-scholarship/"
           schoolAddress="Online"
-          logo={`${codeSchoolImageUrl}launch_code.jpg`}
+          logo={`${codeSchoolImageUrl}launch_school.jpg`}
           GI="No"
           fullTime="Self-Driven"
           hardware="No"
