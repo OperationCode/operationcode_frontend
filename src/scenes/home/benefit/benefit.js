@@ -3,8 +3,6 @@ import Section from 'shared/components/section/section';
 import LinkButton from 'shared/components/linkButton/linkButton';
 import YouTube from 'shared/components/youtubeVideo/youtubeVideo';
 import commonUrl from 'shared/constants/commonLinks';
-import SabioLogo from '../../../images/codeSchoolLogos/sabio.png';
-import codeFellowsLogo from '../../../images/codeSchoolLogos/codefellows_small.png';
 import NodejsLogo from './logos/NodeSummitSF_ColorLogoWeb.jpg';
 import srvdLogo from './logos/srvd.png';
 import ebayLogo from './logos/320px-EBay_logo.png';
@@ -214,7 +212,7 @@ const Benefit = () => (
         </p>
         <div className={styles.logoBox}>
           <a href="https://www.sabio.la/gi" target="_blank" rel="noopener noreferrer">
-            <img className={styles.logoTall} src={SabioLogo} alt="Sabio" />
+            <img className={styles.logoTall} src="https://s3.amazonaws.com/operationcode-assets/codeSchoolLogos/sabio.png" alt="Sabio" />
           </a>
           <a href="https://www.nodesummit.com" target="_blank" rel="noopener noreferrer">
             <img className={styles.logoTall} src={NodejsLogo} alt="Node Summit" />
@@ -229,7 +227,7 @@ const Benefit = () => (
             <img className={styles.logoTall} src={alchemyLogo} alt="Alchemy Codelab" />
           </a>
           <a href="https://www.codefellows.org/" target="_blank" rel="noopener noreferrer">
-            <img className={styles.logoLong} src={codeFellowsLogo} alt="Code Fellows" />
+            <img className={styles.logoLong} src="https://s3.amazonaws.com/operationcode-assets/codeSchoolLogos/code_fellows.jpg" alt="Code Fellows" />
           </a>
           <a href="https://secureset.com/" target="_blank" rel="noopener noreferrer">
             <img
