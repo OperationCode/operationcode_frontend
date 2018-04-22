@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import OutboundLink from 'shared/components/outboundLink/outboundLink';
 import styles from './adBanner.css';
 
-const AdBanner = ({ link, imageSource, altText, adBannerText, clickText }) => {
+const AdBanner = ({ link, imageSource, altText, adBannerText, clickText, theme }) => {
   if (process.env.NODE_ENV === 'production') {
     return (
       <OutboundLink
@@ -26,13 +26,8 @@ const AdBanner = ({ link, imageSource, altText, adBannerText, clickText }) => {
   }
 
   return (
-    <a
-      href={link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={styles.adBannerLink}
-    >
-      <div className={styles.adBanner}>
+    <a href={link} target="_blank" rel="noopener noreferrer" className={styles.adBannerLink}>
+      <div className={`${styles.adBanner} ${styles[theme]}`}>
         <div className={styles.adBannerImage}>
           <img src={imageSource} alt={altText} />
         </div>
@@ -52,6 +47,11 @@ AdBanner.propTypes = {
   altText: PropTypes.string.isRequired,
   adBannerText: PropTypes.string.isRequired,
   clickText: PropTypes.string.isRequired,
+  theme: PropTypes.string
+};
+
+AdBanner.defaultProps = {
+  theme: null
 };
 
 export default AdBanner;

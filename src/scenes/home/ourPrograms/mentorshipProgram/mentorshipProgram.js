@@ -51,15 +51,8 @@ class MentorshipProgram extends React.Component {
             <ul>
               <li>
                 A live &quot;Ask Jeeves&quot; alternative. Mentors are happy to help you, but also
-                expect a certain degree of individual effort. Please spend time{' '}
-                <a
-                  href="https://community.operationcode.org/t/the-art-of-asking-questions/121"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  learning how to ask questions
-                </a>{' '}
-                and Googling for yourself before going to our volunteers for aid.
+                expect a certain degree of individual effort. Please spend time learning how to ask
+                questions and Googling for yourself before going to our volunteers for aid.
               </li>
               <li>
                 A guarantee that someone will work with you on a long-term basis. All our mentors

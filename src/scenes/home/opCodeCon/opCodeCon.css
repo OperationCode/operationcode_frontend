@@ -1,0 +1,37 @@
+.hero {
+  background-image: url('./raleigh.jpg');
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-size: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    background-size: auto 150%;
+  }
+}
+
+.heading {
+  color: #47566b;
+  padding: 3rem;
+  height: 600px;
+}
+
+@media screen and (max-width: 768px) {
+.heading {
+    height: 450px;
+  }
+}
+
+.textLink {
+  color: #47566b;
+  font-size: 1.2em;
+}
+
+.textLink:hover {
+  color: #d1665a;
+  font-size: 1.2em;
+}

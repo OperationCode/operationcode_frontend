@@ -11,6 +11,7 @@ import familyImage from 'images/Family-2.jpg';
 import lincolnImage from 'images/lincoln.jpg';
 import winstonImage from 'images/Winston.jpg';
 import colinPowellImage from 'images/colin-powell.jpg';
+import policyImage from 'images/policy.jpg';
 import Profile from './profile/profile';
 import SignUp from './signup/signup';
 import Scholarships from './scholarship/scholarships';
@@ -38,6 +39,8 @@ import Gala from './gala/gala';
 import Terms from './termsOfService/termsOfService';
 import OurPrograms from './ourPrograms/ourPrograms';
 import ChapterLeader from './chapterLeader/chapterLeader';
+import Policy from './policy/policy';
+import OpCodeCon from './opCodeCon/opCodeCon';
 import styles from './home.css';
 
 const ReactToastr = require('react-toastr');
@@ -90,6 +93,13 @@ class Home extends Component {
         bgImage: true,
         bgImageUrl: colinPowellImage,
         bgImageStyle: 'backgroundImageHistory',
+      });
+    } else if (location.pathname === '/policy') {
+      this.setState({
+        bgChanged: !this.state.bgImage,
+        bgImage: true,
+        bgImageUrl: policyImage,
+        bgImageStyle: 'backgroundImagePolicy',
       });
     } else {
       this.setState({
@@ -262,8 +272,10 @@ class Home extends Component {
             />
             <Route path="/our_programs" component={OurPrograms} />
             <Route exact path="/scholarships" component={Scholarships} />
-            <Route path="/benefit" render={() => <Benefit {...authProps} />} />
-            <Route path="/gala" render={() => <Gala {...authProps} />} />
+            <Route path="/benefit" component={Benefit} />
+            <Route path="/gala" component={Gala} />
+            <Route path="/policy" component={Policy} />
+            <Route path="/op-code-con" component={OpCodeCon} />
 
             {/* eslint-disable */}
             <Route

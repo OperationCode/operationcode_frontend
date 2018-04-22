@@ -1,60 +1,94 @@
-import React from 'react';
+import React, { Component } from 'react';
+import axios from 'axios';
 import Section from 'shared/components/section/section';
 import QuoteBanner from 'shared/components/quoteBanner/quoteBanner';
 import TeamCard from 'shared/components/teamCard/teamCard';
-import BoardMembers from './boardMembers';
-import ExecutiveStaff from './executiveStaff';
 import styles from './team.css';
 
-const Team = () => (
-  <div>
-    <QuoteBanner
-      author="Abraham Lincoln"
-      quote="To care for him who shall have borne the battle and for his widow, and his orphan."
-    />
+class Team extends Component {
+  constructor(props) {
+    super(props);
 
-    <Section title="Our Board" theme="white">
-      <div className={styles.boardMembers}>
-        {BoardMembers.map(boardMember => (
-          <TeamCard
-            key={`${boardMember.name} + ${boardMember.role}`}
-            name={boardMember.name}
-            role={boardMember.role}
-            description={boardMember.description}
-            imageSrc={boardMember.imageSrc}
-          />
-        ))}
-      </div>
-      <div className={styles.foundingMembers}>
-        <p>
-          Operation Code deeply appreciates the time, energy, and hard work of
-          our <b>Founding Board Members</b>, including Mark Kerr (Chair), Laura
-          Gomez (Vice Chair), Pete Runyon (Secretary/ Treasurer), Josh Carter,
-          Nick Frost, and Aimee Knight on their support, dedication and
-          commitment in the early days.
-        </p>
+    this.state = {
+      boardMembers: null,
+      executiveStaffMembers: null,
+      errorResponse: false
+    };
+  }
 
-        <p style={{ textAlign: 'center' }}>
-          <em>Thank you for setting us up for success!</em>
-        </p>
-      </div>
-    </Section>
+  componentDidMount() {
+    axios
+      .get('https://api.operationcode.org/api/v1/team_members.json')
+      .then((response) => {
+        const sortById = members => members.sort((a, b) => a.id - b.id);
+        const sortedMembers = sortById(response.data);
 
-    <Section title="Our Executive Staff" theme="white">
-      <div className={styles.executiveStaff}>
-        {ExecutiveStaff.map(staff => (
-          <TeamCard
-            key={`${staff.name} + ${staff.role}`}
-            name={staff.name}
-            role={staff.role}
-            slack={staff.slackUsername}
-            email={staff.email}
-            isBoard={false}
-          />
-        ))}
+        const boardMembers = sortedMembers.filter(x => x.group === 'board');
+        let executiveStaffMembers = sortedMembers.filter(x => x.group === 'team');
+
+        // add founder as first member of executive staff, even though he's in group 'board'
+        const founder = boardMembers.filter(x => x.name === 'David Molina');
+        executiveStaffMembers = [...founder, ...executiveStaffMembers];
+
+        this.setState({ boardMembers, executiveStaffMembers });
+      })
+      .catch(() => this.setState({ errorResponse: true }));
+  }
+
+  render() {
+    return (
+      <div>
+        <QuoteBanner
+          author="Abraham Lincoln"
+          quote="To care for him who shall have borne the battle and for his widow, and his orphan."
+        />
+
+        <Section title="Our Board" theme="white">
+          <div className={styles.boardMembers}>
+            {this.state.boardMembers &&
+              this.state.boardMembers.map(boardMember => (
+                <TeamCard
+                  key={`${boardMember.name} + ${boardMember.role}`}
+                  name={boardMember.name}
+                  role={boardMember.role}
+                  description={boardMember.description}
+                  imageSrc={boardMember.image_src}
+                />
+              ))}
+          </div>
+          <div className={styles.foundingMembers}>
+            <p>
+              Operation Code deeply appreciates the time, energy, and hard work
+              of our <b>Founding Board Members</b>, including Mark Kerr (Chair),
+              Laura Gomez (Vice Chair), Pete Runyon (Secretary/ Treasurer), Josh
+              Carter, Nick Frost, and Aimee Knight on their support, dedication
+              and commitment in the early days.
+            </p>
+
+            <p style={{ textAlign: 'center' }}>
+              <em>Thank you for setting us up for success!</em>
+            </p>
+          </div>
+        </Section>
+
+        <Section title="Our Executive Staff" theme="white">
+          <div className={styles.executiveStaff}>
+            {this.state.executiveStaffMembers &&
+              this.state.executiveStaffMembers.map(staff => (
+                <TeamCard
+                  key={`${staff.name} + ${staff.role}`}
+                  name={staff.name}
+                  role={staff.role}
+                  slack={staff.slackUsername}
+                  email={staff.email}
+                  isBoard={false}
+                />
+              ))}
+          </div>
+        </Section>
       </div>
-    </Section>
-  </div>
-);
+    );
+  }
+}
 
 export default Team;
