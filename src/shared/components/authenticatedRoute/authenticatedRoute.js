@@ -8,7 +8,16 @@ const AuthenticatedRoute = (props) => {
     return <Redirect to="/login" />;
   }
   if (props.sendNotification && props.updateRootAuthState) {
-    return <Route render={() => (<SocialLogin updateRootAuthState={props.updateRootAuthState} sendNotification={props.sendNotification} history={props.history} />)} isAUth={props.isAuth} route={props.path} />;
+    return (
+      <Route
+        render={() => (
+          <SocialLogin
+            updateRootAuthState={props.updateRootAuthState}
+            sendNotification={props.sendNotification}
+            history={props.history}
+          />
+        )} isAUth={props.isAuth} route={props.path}
+      />);
   }
   return <Route component={props.component} {...props} />;
 };
