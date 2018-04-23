@@ -8,17 +8,43 @@ import FormZipCode from 'shared/components/form/formZipCode/formZipCode';
 import FormPassword from 'shared/components/form/formPassword/formPassword';
 import FormButton from 'shared/components/form/formButton/formButton';
 import styles from 'scenes/home/informationForm/informationForm.css';
-import _ from 'lodash';
+import getValue from 'lodash/get';
 import * as CookieHelpers from '../../utils/cookieHelper';
 
 class SocialLogin extends Component {
+  static propTypes = {
+    sendNotification: PropTypes.func.isRequired,
+    updateRootAuthState: PropTypes.func,
+    history: PropTypes.shape({
+      action: PropTypes.string,
+      block: PropTypes.func,
+      createHref: PropTypes.func,
+      go: PropTypes.func,
+      goBack: PropTypes.func,
+      goForward: PropTypes.func,
+      length: PropTypes.number,
+      listen: PropTypes.func,
+      location: PropTypes.shape({
+        key: PropTypes.string,
+        pathname: PropTypes.string,
+        search: PropTypes.string
+      }),
+      push: PropTypes.func,
+      replace: PropTypes.func
+    }).isRequired
+  };
+
+  static defaultProps = {
+    updateRootAuthState: () => {}
+  };
+
   state = {
-    zip: '',
-    zipValid: false,
+    error: false,
+    isLoading: false,
     password: '',
     passwordValid: false,
-    error: false,
-    isLoading: false
+    zip: '',
+    zipValid: false
   };
 
   componentWillUnmount() {
@@ -57,7 +83,7 @@ class SocialLogin extends Component {
         }
       })
       .catch((error) => {
-        const data = _.get(error, 'response.data');
+        const data = getValue(error, 'response.data');
         let errorMessage = '';
         if (data) {
           Object.keys(data).forEach((key) => {
@@ -68,11 +94,7 @@ class SocialLogin extends Component {
           });
         }
 
-        this.props.sendNotification(
-          'error',
-          'Error',
-          'We will investigate this issue!'
-        );
+        this.props.sendNotification('error', 'Error', 'We will investigate this issue!');
       });
   };
 
@@ -93,15 +115,11 @@ class SocialLogin extends Component {
         localStorage.removeItem('email');
         CookieHelpers.setUserAuthCookie(data);
         this.props.updateRootAuthState();
-        this.props.sendNotification(
-          'success',
-          'Success',
-          'You have logged in!'
-        );
+        this.props.sendNotification('success', 'Success', 'You have logged in!');
         this.props.history.push(data.redirect_to);
       })
       .catch((error) => {
-        const data = _.get(error, 'response.data');
+        const data = getValue(error, 'response.data');
         let errorMessage = '';
         if (data) {
           Object.keys(data).forEach((key) => {
@@ -111,11 +129,7 @@ class SocialLogin extends Component {
             }
           });
         }
-        this.props.sendNotification(
-          'error',
-          'Error',
-          'We will investigate this issue!'
-        );
+        this.props.sendNotification('error', 'Error', 'We will investigate this issue!');
       });
   };
 
@@ -162,12 +176,7 @@ class SocialLogin extends Component {
             </ul>
           )}
           {this.state.isLoading ? (
-            <FormButton
-              className={styles.joinButton}
-              text="Loading..."
-              disabled
-              theme="grey"
-            />
+            <FormButton className={styles.joinButton} text="Loading..." disabled theme="grey" />
           ) : (
             <FormButton
               className={styles.joinButton}
@@ -181,31 +190,5 @@ class SocialLogin extends Component {
     );
   }
 }
-
-SocialLogin.propTypes = {
-  sendNotification: PropTypes.func.isRequired,
-  updateRootAuthState: PropTypes.func,
-  history: PropTypes.shape({
-    action: PropTypes.string,
-    block: PropTypes.func,
-    createHref: PropTypes.func,
-    go: PropTypes.func,
-    goBack: PropTypes.func,
-    goForward: PropTypes.func,
-    length: PropTypes.number,
-    listen: PropTypes.func,
-    location: PropTypes.shape({
-      key: PropTypes.string,
-      pathname: PropTypes.string,
-      search: PropTypes.string,
-    }),
-    push: PropTypes.func,
-    replace: PropTypes.func,
-  }).isRequired,
-};
-
-SocialLogin.defaultProps = {
-  updateRootAuthState: () => {}
-};
 
 export default SocialLogin;

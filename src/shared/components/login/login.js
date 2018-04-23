@@ -1,24 +1,50 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 import axios from 'axios';
-import PropTypes from 'prop-types';
 import config from 'config/environment';
+import PropTypes from 'prop-types';
+import queryString from 'query-string';
 import { Link } from 'react-router-dom';
+import Google from 'shared/components/socialLogin/google';
+import Facebook from 'shared/components/socialLogin/facebook';
 import styles from './login.css';
 import Form from '../form/form';
 import Section from '../section/section';
 import * as CookieHelpers from '../../utils/cookieHelper';
-import Google from './google.js';
-import Facebook from './facebook.js';
 import FormEmail from '../form/formEmail/formEmail';
 import FormInput from '../form/formInput/formInput';
 import FormButton from '../form/formButton/formButton';
 import SignUpSection from './signUpSection';
 
-require('./login.css');
-const queryString = require('query-string');
-
 class Login extends Component {
+  static propTypes = {
+    updateRootAuthState: PropTypes.func,
+    isAuth: PropTypes.bool,
+    sendNotification: PropTypes.func.isRequired,
+    history: PropTypes.shape({
+      action: PropTypes.string,
+      block: PropTypes.func,
+      createHref: PropTypes.func,
+      go: PropTypes.func,
+      goBack: PropTypes.func,
+      goForward: PropTypes.func,
+      length: PropTypes.number,
+      listen: PropTypes.func,
+      location: PropTypes.shape({
+        key: PropTypes.string,
+        pathname: PropTypes.string,
+        search: PropTypes.string
+      }),
+      push: PropTypes.func,
+      replace: PropTypes.func
+    }).isRequired
+  };
+
+  static defaultProps = {
+    updateRootAuthState: () => {},
+    isAuth: false
+  };
+
   state = {
     email: '',
     emailValid: false,
@@ -120,14 +146,15 @@ class Login extends Component {
     e.preventDefault();
 
     if (this.isFormValid()) {
-      axios.post(`${config.backendUrl}/sessions`, {
-        user: {
-          email: this.state.email,
-          password: this.state.password
-        },
-        sso: this.state.sso,
-        sig: this.state.sig
-      })
+      axios
+        .post(`${config.backendUrl}/sessions`, {
+          user: {
+            email: this.state.email,
+            password: this.state.password
+          },
+          sso: this.state.sso,
+          sig: this.state.sig
+        })
         .then(({ data }) => {
           CookieHelpers.setUserAuthCookie(data);
           this.setState({ authenticated: true });
@@ -194,33 +221,5 @@ class Login extends Component {
     );
   }
 }
-
-Login.propTypes = {
-  updateRootAuthState: PropTypes.func,
-  isAuth: PropTypes.bool,
-  sendNotification: PropTypes.func.isRequired,
-  history: PropTypes.shape({
-    action: PropTypes.string,
-    block: PropTypes.func,
-    createHref: PropTypes.func,
-    go: PropTypes.func,
-    goBack: PropTypes.func,
-    goForward: PropTypes.func,
-    length: PropTypes.number,
-    listen: PropTypes.func,
-    location: PropTypes.shape({
-      key: PropTypes.string,
-      pathname: PropTypes.string,
-      search: PropTypes.string,
-    }),
-    push: PropTypes.func,
-    replace: PropTypes.func,
-  }).isRequired,
-};
-
-Login.defaultProps = {
-  updateRootAuthState: () => {},
-  isAuth: false
-};
 
 export default Login;

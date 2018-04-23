@@ -1,5 +1,5 @@
 import React from 'react';
-import SocialLogin from 'shared/components/login/socialLogin';
+import SocialLogin from 'shared/components/socialLogin/socialLogin';
 import PropTypes from 'prop-types';
 import { Route, Redirect } from 'react-router-dom';
 
@@ -16,8 +16,11 @@ const AuthenticatedRoute = (props) => {
             sendNotification={props.sendNotification}
             history={props.history}
           />
-        )} isAUth={props.isAuth} route={props.path}
-      />);
+        )}
+        isAUth={props.isAuth}
+        route={props.path}
+      />
+    );
   }
   return <Route component={props.component} {...props} />;
 };
@@ -35,10 +38,10 @@ AuthenticatedRoute.propTypes = {
     location: PropTypes.shape({
       key: PropTypes.string,
       pathname: PropTypes.string,
-      search: PropTypes.string,
+      search: PropTypes.string
     }),
     push: PropTypes.func,
-    replace: PropTypes.func,
+    replace: PropTypes.func
   }),
   sendNotification: PropTypes.func,
   updateRootAuthState: PropTypes.func,
@@ -50,7 +53,7 @@ AuthenticatedRoute.propTypes = {
 AuthenticatedRoute.defaultProps = {
   history: null,
   sendNotification: null,
-  updateRootAuthState: () => {},
+  updateRootAuthState: () => {}
 };
 
 export default AuthenticatedRoute;
