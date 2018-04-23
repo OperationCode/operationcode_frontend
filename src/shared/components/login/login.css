@@ -9,12 +9,12 @@
 }
 
 .loginError {
-  color:red;
+  color: red;
   font-weight: bold;
 }
 
 select {
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   vertical-align: top;
 }
 
@@ -33,13 +33,6 @@ select {
 .gridRow {
   display: flex;
   flex-direction: column;
-}
-
-.flexRow {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
 }
 
 @media screen and (min-width: 780px) {

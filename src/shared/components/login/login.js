@@ -1,26 +1,22 @@
 import React, { Component } from 'react';
-import _ from 'lodash';
+import getValue from 'lodash/get';
 import axios from 'axios';
 import config from 'config/environment';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import { Link } from 'react-router-dom';
-import Google from 'shared/components/socialLogin/google';
-import Facebook from 'shared/components/socialLogin/facebook';
+import Form from 'shared/components/form/form';
+import FormButton from 'shared/components/form/formButton/formButton';
+import FormEmail from 'shared/components/form/formEmail/formEmail';
+import FormInput from 'shared/components/form/formInput/formInput';
+import Section from 'shared/components/section/section';
+import SocialLoginsGrouping from 'shared/components/socialLogin/socialLoginsGrouping';
+import * as CookieHelpers from 'shared/utils/cookieHelper';
 import styles from './login.css';
-import Form from '../form/form';
-import Section from '../section/section';
-import * as CookieHelpers from '../../utils/cookieHelper';
-import FormEmail from '../form/formEmail/formEmail';
-import FormInput from '../form/formInput/formInput';
-import FormButton from '../form/formButton/formButton';
 import SignUpSection from './signUpSection';
 
 class Login extends Component {
   static propTypes = {
-    updateRootAuthState: PropTypes.func,
-    isAuth: PropTypes.bool,
-    sendNotification: PropTypes.func.isRequired,
     history: PropTypes.shape({
       action: PropTypes.string,
       block: PropTypes.func,
@@ -37,7 +33,10 @@ class Login extends Component {
       }),
       push: PropTypes.func,
       replace: PropTypes.func
-    }).isRequired
+    }).isRequired,
+    isAuth: PropTypes.bool,
+    sendNotification: PropTypes.func.isRequired,
+    updateRootAuthState: PropTypes.func
   };
 
   static defaultProps = {
@@ -72,8 +71,8 @@ class Login extends Component {
   };
 
   setErrorMessage = (error) => {
-    const errorStatus = _.get(error, ['response', 'status'], -1);
-    const errorMessage = _.get(error, 'message');
+    const errorStatus = getValue(error, ['response', 'status'], -1);
+    const errorMessage = getValue(error, 'message');
     this.setState({ errorStatus, errorMessage });
   };
 
@@ -167,7 +166,7 @@ class Login extends Component {
           }
         })
         .catch((error) => {
-          if (_.get(error, ['response', 'status'], -1) !== 401) {
+          if (getValue(error, ['response', 'status'], -1) !== 401) {
             this.props.sendNotification('error', 'Error', 'We will investigate this issue!');
           }
 
@@ -203,18 +202,12 @@ class Login extends Component {
               Reset Password
             </Link>
           </Form>
-          <div className={styles.flexRow}>
-            <Google
-              sendNotification={this.props.sendNotification}
-              updateRootAuthState={this.props.updateRootAuthState}
-              history={this.props.history}
-            />
-            <Facebook
-              sendNotification={this.props.sendNotification}
-              updateRootAuthState={this.props.updateRootAuthState}
-              history={this.props.history}
-            />
-          </div>
+
+          <SocialLoginsGrouping
+            history={this.props.history}
+            sendNotification={this.props.sendNotification}
+            updateRootAuthState={this.props.updateRootAuthState}
+          />
         </Section>
         <SignUpSection />
       </div>

@@ -197,10 +197,11 @@ class Home extends Component {
               path="/signup"
               render={() => (
                 <SignUp
-                  updateRootAuthState={this.updateRootAuthState}
-                  isAuth={this.state.signedIn}
                   {...authProps}
+                  history={this.props.history}
+                  isAuth={this.state.signedIn}
                   sendNotification={this.sendNotification}
+                  updateRootAuthState={this.updateRootAuthState}
                 />
               )}
             />
@@ -216,7 +217,30 @@ class Home extends Component {
               )}
             />
             <Route path="/history" component={History} />
-            <Route path="/sign-up" component={SignUp} />
+            <Route
+              path="/login"
+              render={() => (
+                <Login
+                  {...authProps}
+                  history={this.props.history}
+                  isAuth={this.state.signedIn}
+                  sendNotification={this.sendNotification}
+                  updateRootAuthState={this.updateRootAuthState}
+                />
+              )}
+            />
+            <Route
+              path="/sign-up"
+              render={() => (
+                <SignUp
+                  {...authProps}
+                  history={this.props.history}
+                  isAuth={this.state.signedIn}
+                  sendNotification={this.sendNotification}
+                  updateRootAuthState={this.updateRootAuthState}
+                />
+              )}
+            />
             <Route path="/team" component={Team} />
             <Route path="/faq" component={FAQ} />
             <Route path="/contact" component={Contact} />
@@ -289,11 +313,11 @@ class Home extends Component {
               path="/login"
               render={() => (
                 <Login
-                  updateRootAuthState={this.updateRootAuthState}
-                  isAuth={this.state.signedIn}
                   {...authProps}
-                  sendNotification={this.sendNotification}
                   history={this.props.history}
+                  isAuth={this.state.signedIn}
+                  sendNotification={this.sendNotification}
+                  updateRootAuthState={this.updateRootAuthState}
                 />
               )}
             />
