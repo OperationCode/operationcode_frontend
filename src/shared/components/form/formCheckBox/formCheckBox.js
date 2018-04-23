@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './formCheckBox.css';
 
-const FormCheckBox = ({ checkBox, name, value, onChange, label }) => (
+const FormCheckBox = ({
+  checkBox, name, value, onChange, label
+}) => (
   <div style={checkBox}>
     <input
       type="checkbox"
