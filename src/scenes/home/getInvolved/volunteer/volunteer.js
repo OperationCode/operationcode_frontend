@@ -3,7 +3,6 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faCheck from '@fortawesome/fontawesome-free-solid/faCheck';
 import LinkButton from 'shared/components/linkButton/linkButton';
 import Section from 'shared/components/section/section';
-import imageUrl from 'images/hackathon1.jpg';
 import styles from '../getInvolved.css';
 
 const Volunteer = () => (
@@ -40,7 +39,7 @@ const Volunteer = () => (
       </div>
       <div className={styles.halfPhotoWrapper}>
         <img
-          src={imageUrl}
+          src="https://s3.amazonaws.com/operationcode-assets/page-get_involved/hackathon1.jpg"
           alt="Operation Code Members at Operation Spark"
           className={styles.photo}
         />

@@ -3,7 +3,6 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faCheck from '@fortawesome/fontawesome-free-solid/faCheck';
 import LinkButton from 'shared/components/linkButton/linkButton';
 import Section from 'shared/components/section/section';
-import imageUrl from 'images/benefit_dinner_2017_1.jpg';
 import styles from '../getInvolved.css';
 
 const WhyGive = () => (
@@ -11,7 +10,7 @@ const WhyGive = () => (
     <div className={styles.wrapper}>
       <div className={styles.half}>
         <img
-          src={imageUrl}
+          src="https://s3.amazonaws.com/operationcode-assets/page-get_involved/benefit_dinner_2017.jpg"
           alt="Benefit Dinner 2017"
           className={styles.photo}
         />
