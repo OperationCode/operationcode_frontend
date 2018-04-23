@@ -17,7 +17,7 @@ const AuthenticatedRoute = (props) => {
             history={props.history}
           />
         )}
-        isAUth={props.isAuth}
+        isAuth={props.isAuth}
         route={props.path}
       />
     );
