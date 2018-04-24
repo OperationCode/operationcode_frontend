@@ -42,11 +42,13 @@
 <body>
   <div id="root"></div>
   <script>
-    Raven.config('https://23e9c0c37a3841b8a692c98b8978f515@sentry.io/147247', {
-      shouldSendCallback: function () {
-        return window.location.host === 'operationcode.org';
-      }
-    }).install();
+    if (window.Raven) {
+      Raven.config('https://23e9c0c37a3841b8a692c98b8978f515@sentry.io/147247', {
+        shouldSendCallback: function () {
+          return window.location.host === 'operationcode.org';
+        }
+      }).install();
+    }
   </script>
 </body>
 
