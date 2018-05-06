@@ -197,10 +197,10 @@ class Login extends Component {
               onChange={this.onPasswordChange}
             />
             {errorFeedback && <h2 className={styles.loginError}>{errorFeedback}</h2>}
-            <FormButton className={styles.Button} text="Login" onClick={this.handleOnClick} />
-            <Link className={styles.resetBtn} to="/reset_password">
-              Reset Password
-            </Link>
+            <FormButton className={styles.loginBtn} text="Login" onClick={this.handleOnClick} />
+            <span className={styles.resetBtn}>
+              Forgot your password? <Link to="/reset_password">Reset it.</Link>
+            </span>
           </Form>
 
           <SocialLoginsGrouping

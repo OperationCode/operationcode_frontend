@@ -1,33 +1,17 @@
-.login section {
-  align-self: center;
-}
-
-.Button {
+.loginBtn {
   align-self: center;
   margin-top: 2rem;
   width: 100%;
 }
 
+.resetBtn {
+  margin-top: 0.5em;
+  text-align: center;
+}
+
 .loginError {
   color: red;
   font-weight: bold;
-}
-
-select {
-  border: 1px solid #cccccc;
-  vertical-align: top;
-}
-
-input,
-select {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
-
-.resetBtn {
-  text-align: center;
-  margin-top: 0.5em;
 }
 
 .gridRow {
