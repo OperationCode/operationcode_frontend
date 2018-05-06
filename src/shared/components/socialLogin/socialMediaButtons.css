@@ -1,7 +1,6 @@
 /* Credit: https://codepen.io/davidelrizzo/pen/vEYvyv */
 
 /* Shared */
-
 .loginButton {
   font-family: Helvetica, sans-serif;
   width: 210px;
@@ -28,21 +27,17 @@
   height: 100%;
 }
 
-.loginButton:focus {
-  outline: none;
-}
-
 .loginButton:active {
   opacity: 0.75;
   box-shadow: inset 0 0 0 32px rgba(0, 0, 0, 0.1);
 }
 
 /* Facebook */
-
 .facebookButton {
   background-color: #4c69ba;
   background-image: linear-gradient(#4c69ba, #3b55a0);
   text-shadow: 0 -1px 0 #354c8c;
+  transition: opacity 0.15s linear;
 }
 
 .facebookButton::before {
@@ -50,16 +45,17 @@
   background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png') 6px 6px no-repeat;
 }
 
+.facebookButton:active,
 .facebookButton:hover,
 .facebookButton:focus {
-  background-color: #5b7bd5;
-  background-image: linear-gradient(#5b7bd5, #4864b1);
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 /* Google */
-
 .googleButton {
   background: #dd4b39;
+  transition: opacity 0.15s linear;
 }
 
 .googleButton::before {
@@ -67,7 +63,9 @@
   background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_google.png') 6px 6px no-repeat;
 }
 
+.googleButton:active,
 .googleButton:hover,
 .googleButton:focus {
-  background: #e74b37;
+  opacity: 0.8;
+  cursor: pointer;
 }
