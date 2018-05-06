@@ -38,6 +38,7 @@ import Gala from './gala/gala';
 import Terms from './termsOfService/termsOfService';
 import OurPrograms from './ourPrograms/ourPrograms';
 import ChapterLeader from './chapterLeader/chapterLeader';
+import GetInvolved from './getInvolved/getInvolved';
 import Policy from './policy/policy';
 import OpCodeCon from './opCodeCon/opCodeCon';
 import styles from './home.css';
@@ -205,6 +206,7 @@ class Home extends Component {
             <Route path="/terms" component={Terms} />
             <Route path="/chapter_leader" component={ChapterLeader} />
             <Route path="/leadership_circle" component={LeadershipCircle} />
+            <Route path="/get-involved" component={GetInvolved} />
             <Route
               exact
               path="/"
