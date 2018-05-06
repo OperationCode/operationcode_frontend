@@ -342,10 +342,10 @@ class Home extends Component {
               {...authProps}
             />
             <Route exact path="/resetpassword" component={ResetPassword} />
-            <Route
-              path="*" component={FourOhFour}
-            />
             <Route exact path="/reset_password" component={ResetPassword} />
+
+            {/* Place any new routes above this line */}
+            <Route path="*" component={FourOhFour} />
           </Switch>
         </div>
         <ToastContainer
