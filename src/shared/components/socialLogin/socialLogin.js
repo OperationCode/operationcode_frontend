@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import config from 'config/environment';
 import PropTypes from 'prop-types';
+import axios from 'axios';
+import getValue from 'lodash/get';
+import config from 'config/environment';
 import Section from 'shared/components/section/section';
 import Form from 'shared/components/form/form';
 import FormZipCode from 'shared/components/form/formZipCode/formZipCode';
 import FormPassword from 'shared/components/form/formPassword/formPassword';
 import FormButton from 'shared/components/form/formButton/formButton';
-import styles from 'scenes/home/informationForm/informationForm.css';
-import getValue from 'lodash/get';
+import informationFormStyles from 'scenes/home/informationForm/informationForm.css';
+import styles from './socialLogin.css';
 import * as CookieHelpers from '../../utils/cookieHelper';
 
 class SocialLogin extends Component {
@@ -149,8 +150,18 @@ class SocialLogin extends Component {
 
   render() {
     return (
-      <Section className={styles.signup} title="Zipcode and Password Required">
-        <Form className={styles.signupForm}>
+      <Section className={informationFormStyles.signup} title="Zipcode and Password Required">
+        <div className={styles.socialLoginMessage}>
+          <p>
+            We understand that you wanted to register quickly by choosing to use your social media
+            account.
+          </p>
+          <p>
+            Please understand that providing more information will help us receive funding and
+            continue to help veterans.
+          </p>
+        </div>
+        <Form className={informationFormStyles.signupForm}>
           <FormZipCode
             id="zip"
             placeholder="Zip Code (Required)"
@@ -170,16 +181,21 @@ class SocialLogin extends Component {
             }}
           />
           {this.state.error && (
-            <ul className={styles.errorList}>
+            <ul className={informationFormStyles.errorList}>
               There was an error joining Operation Code:
-              <li className={styles.errorMessage}>{this.state.error}</li>
+              <li className={informationFormStyles.errorMessage}>{this.state.error}</li>
             </ul>
           )}
           {this.state.isLoading ? (
-            <FormButton className={styles.joinButton} text="Loading..." disabled theme="grey" />
+            <FormButton
+              className={informationFormStyles.joinButton}
+              text="Loading..."
+              disabled
+              theme="grey"
+            />
           ) : (
             <FormButton
-              className={styles.joinButton}
+              className={informationFormStyles.joinButton}
               text="Join"
               onClick={this.handleOnClick}
               theme="red"
