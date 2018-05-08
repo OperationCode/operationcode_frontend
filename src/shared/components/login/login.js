@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import _ from 'lodash';
+import getVal from 'lodash/get';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 import config from 'config/environment';
@@ -44,8 +44,8 @@ class Login extends Component {
   };
 
   setErrorMessage = (error) => {
-    const errorStatus = _.get(error, ['response', 'status'], -1);
-    const errorMessage = _.get(error, 'message');
+    const errorStatus = getVal(error, ['response', 'status'], -1);
+    const errorMessage = getVal(error, 'message');
     this.setState({ errorStatus, errorMessage });
   };
 
@@ -138,7 +138,7 @@ class Login extends Component {
           }
         })
         .catch((error) => {
-          if (_.get(error, ['response', 'status'], -1) !== 401) {
+          if (getVal(error, ['response', 'status'], -1) !== 401) {
             this.props.sendNotification('error', 'Error', 'We will investigate this issue!');
           }
 
