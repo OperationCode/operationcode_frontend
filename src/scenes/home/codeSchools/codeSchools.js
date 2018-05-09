@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import omit from 'lodash/omit';
 import React, { Component } from 'react';
 import axios from 'axios';
 import LinkButton from 'shared/components/linkButton/linkButton';
@@ -26,7 +26,7 @@ class CodeSchools extends Component {
       .then((response) => {
         const schools = response.data.reduce((acc, school) => {
           school.locations.forEach((location) => {
-            acc.push(Object.assign({}, _.omit(school, ['locations']), location));
+            acc.push(Object.assign({}, omit(school, ['locations']), location));
           });
           return acc;
         }, []);

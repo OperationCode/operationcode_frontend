@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import _ from 'lodash';
+import getVal from 'lodash/get';
 import PropTypes from 'prop-types';
 import * as CookieHelpers from 'shared/utils/cookieHelper';
 import Form from 'shared/components/form/form';
@@ -86,7 +86,7 @@ class SignUp extends Component {
           this.setState({ isLoading: false });
         })
         .catch((error) => {
-          const data = _.get(error, 'response.data');
+          const data = getVal(error, 'response.data');
           let errorMessage = '';
           if (data) {
             /* eslint-disable */
