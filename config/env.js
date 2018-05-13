@@ -71,13 +71,16 @@ function getClientEnvironment(publicUrl) {
         // This should only be used as an escape hatch. Normally you would put
         // images into the `src` and `import` them in code to get their paths.
         PUBLIC_URL: publicUrl,
+        // Note - fallback string values are for development, and are not prod secrets.
         OC_BACKEND_HOST: process.env.OC_BACKEND_HOST || 'http://localhost:3000/',
         OC_BACKEND_URL: process.env.OC_BACKEND_URL || 'http://localhost:3000/api/v1',
         OC_HOST: process.env.OC_HOST || 'http://localhost:4000',
         OC_IDME_CLIENT_ID: process.env.OC_IDME_CLIENT_ID || '6d781bfd42506613a0fe4ad4123aaf6d',
         OC_IDME_AUTH_URL: process.env.OC_IDME_AUTH_URL || 'http://localhost:4001/oauth/authorize',
-        OC_GOOGLE_KEY: process.env.OC_GOOGLE_KEY || '344751133153-v2h3l08lcrkqjjerftlv450hbe5p2i7b.apps.googleusercontent.com',
-        OC_FACEBOOK_KEY: process.env.OC_FACEBOOK_KEY || '711044949101273',
+        OC_GOOGLE_KEY:
+          process.env.OC_GOOGLE_KEY ||
+          '448638408285-30ql5odkp58oadiiaaknnvpcu7atg7om.apps.googleusercontent.com',
+        OC_FACEBOOK_KEY: process.env.OC_FACEBOOK_KEY || '582270232152798'
       }
     );
   // Stringify all values so we can feed into Webpack DefinePlugin
