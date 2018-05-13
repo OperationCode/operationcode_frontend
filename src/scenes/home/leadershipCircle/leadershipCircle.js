@@ -24,7 +24,7 @@ const LeadershipCircle = () => (
         Please join us and help make our mission a success. Together, we will create a new and
         secure future for today’s veterans and military spouses.
       </p>
-      <a href="https://donorbox.org/operation-code-leadership-circle">Join and Donate Now</a>
+      <a href="https://secure.lglforms.com/form_engine/s/L428AQ2rrsFJQyy5Fbglvg">Join and Donate Now</a>
       <p className={styles.level}>Benefactor ($2500 or more)</p>
       <ul>
         <li>
@@ -81,7 +81,7 @@ const LeadershipCircle = () => (
         </li>
         <li>Recognition in the annual State of Operation Code report</li>
       </ul>
-      <a href="https://donorbox.org/operation-code-leadership-circle">Join and Donate Now</a>
+      <a href="https://secure.lglforms.com/form_engine/s/L428AQ2rrsFJQyy5Fbglvg">Join and Donate Now</a>
     </div>
   </Section>
 );
