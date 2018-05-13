@@ -1,5 +1,5 @@
 const commonUrl = {
-  donateLink: 'https://donorbox.org/operationcode'
+  donateLink: 'https://secure.lglforms.com/form_engine/s/BRtP7QUKyHOyEYsZROsRew'
 };
 
 export default commonUrl;
