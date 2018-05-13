@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import getValue from 'lodash/get';
+import getVal from 'lodash/get';
 import PropTypes from 'prop-types';
 import * as CookieHelpers from 'shared/utils/cookieHelper';
 
