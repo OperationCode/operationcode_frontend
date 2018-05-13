@@ -79,8 +79,8 @@ function getClientEnvironment(publicUrl) {
         OC_IDME_AUTH_URL: process.env.OC_IDME_AUTH_URL || 'http://localhost:4001/oauth/authorize',
         OC_GOOGLE_KEY:
           process.env.OC_GOOGLE_KEY ||
-          '448638408285-30ql5odkp58oadiiaaknnvpcu7atg7om.apps.googleusercontent.com',
-        OC_FACEBOOK_KEY: process.env.OC_FACEBOOK_KEY || '582270232152798'
+          '344751133153-v2h3l08lcrkqjjerftlv450hbe5p2i7b.apps.googleusercontent.com',
+        OC_FACEBOOK_KEY: process.env.OC_FACEBOOK_KEY || '711044949101273'
       }
     );
   // Stringify all values so we can feed into Webpack DefinePlugin
