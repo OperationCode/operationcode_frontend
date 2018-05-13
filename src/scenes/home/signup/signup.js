@@ -113,7 +113,7 @@ class SignUp extends Component {
           this.setState({ isLoading: false });
         })
         .catch((error) => {
-          const data = getValue(error, 'response.data');
+          const data = getVal(error, 'response.data');
           let errorMessage = '';
           if (data) {
             /* eslint-disable */
