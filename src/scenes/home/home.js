@@ -210,10 +210,11 @@ class Home extends Component {
               path="/join"
               render={() => (
                 <SignUp
-                  updateRootAuthState={this.updateRootAuthState}
-                  isAuth={this.state.signedIn}
                   {...authProps}
+                  history={this.props.history}
+                  isAuth={this.state.signedIn}
                   sendNotification={this.sendNotification}
+                  updateRootAuthState={this.updateRootAuthState}
                 />
               )}
             />
