@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { postBackend } from 'shared/utils/apiHelper';
 import { withRouter } from 'react-router-dom';
 import Section from 'shared/components/section/section';
-import _ from 'lodash';
+import getVal from 'lodash/get';
 import styles from './idmeverify.css';
 import { setUserVerifiedCookie } from '../../../utils/cookieHelper';
 
@@ -19,7 +19,7 @@ class IdmeVerify extends Component {
       this.setState({ error: qs.error_description });
     } else if (qs.access_token) {
       postBackend('users/profile/verify', { access_token: qs.access_token }).then((response) => {
-        if (_.get(response, 'data.verified')) {
+        if (getVal(response, 'data.verified')) {
           setUserVerifiedCookie(true);
           this.setState({ verified: true });
           this.props.updateRootAuthState();
