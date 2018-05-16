@@ -5,14 +5,14 @@ import QuestionAnswerData from './questions';
 import styles from './faq.css';
 
 const FAQ = () => {
-  const generalQuestions = QuestionAnswerData.general.map(question => (
-    <Question q={question.question} a={question.answer} key={Math.random + question.question} />
+  const generalQuestions = QuestionAnswerData.general.map(qna => (
+    <Question q={qna.question} a={qna.answer} key={qna.question} />
   ));
-  const donationQuestions = Data.donation.map(question => (
-    <Question q={question.question} a={question.answer} key={Math.random + question.question} />
+  const donationQuestions = QuestionAnswerData.donation.map(qna => (
+    <Question q={qna.question} a={qna.answer} key={qna.question} />
   ));
-  const volunteerQuestions = Data.volunteer.map(question => (
-    <Question q={question.question} a={question.answer} key={Math.random + question.question} />
+  const volunteerQuestions = QuestionAnswerData.volunteer.map(qna => (
+    <Question q={qna.question} a={qna.answer} key={qna.question} />
   ));
 
   return (
