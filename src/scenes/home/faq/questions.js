@@ -1,3 +1,5 @@
+import commonUrl from 'shared/constants/commonLinks';
+
 const questions = {
   general: [
     {
@@ -23,7 +25,7 @@ const questions = {
     {
       question: 'Who does Operation Code serve?',
       answer:
-        "Operation Code serves our nation's finest who've worn the uniform and their families who are interested in coding and software development. Our programs are offered at no cost to the military community, including veterans, transitioning servicemembers, and military spouses and families."
+        "Operation Code serves our nation's finest who've worn the uniform and their families who are interested in coding and software development. Our programs are offered at no cost to the military community, including veterans, transitioning service members, and military spouses and families."
     },
     {
       question:
@@ -43,8 +45,9 @@ const questions = {
     },
     {
       question: "How can I help, if I can't afford to donate to Operation Code?",
-      answer:
-        "In addition to requiring financial support, we also need <a href='http://op.co.de/volunteer' target='_blank'>volunteers</a> and interns. The larger our community, the more we can spread the word about our work. Also, remember that every <a href='https://secure.lglforms.com/form_engine/s/BRtP7QUKyHOyEYsZROsRew'>donation</a>, no matter how modest, brings us closer to our goals."
+      answer: `In addition to requiring financial support, we also need <a href='http://op.co.de/volunteer' target='_blank'>volunteers</a> and interns. The larger our community, the more we can spread the word about our work. Also, remember that every <a href=${
+        commonUrl.donateLink
+      }>donation</a>, no matter how modest, brings us closer to our goals.`
     },
     {
       question:
@@ -61,8 +64,9 @@ const questions = {
   donation: [
     {
       question: 'What is the fastest way to make a donation?',
-      answer:
-        "The fastest way to make a donation is through our secured online form <a href='https://secure.lglforms.com/form_engine/s/BRtP7QUKyHOyEYsZROsRew'>here</a>."
+      answer: `The fastest way to make a donation is through our secured online form <a href=${
+        commonUrl.donateLink
+      }>here</a>.`
     },
     {
       question: 'I would rather mail a check. To whom do I make it out and where do I send it?',
