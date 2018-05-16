@@ -1,11 +1,11 @@
 import React from 'react';
 import Section from 'shared/components/section/section';
 import Question from './question/question';
-import Data from './questions';
+import QuestionAnswerData from './questions';
 import styles from './faq.css';
 
 const FAQ = () => {
-  const generalQuestions = Data.general.map(question => (
+  const generalQuestions = QuestionAnswerData.general.map(question => (
     <Question q={question.question} a={question.answer} key={Math.random + question.question} />
   ));
   const donationQuestions = Data.donation.map(question => (
