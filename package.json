@@ -100,7 +100,7 @@
     "lint": "eslint \"**/*.js\"",
     "precommit": "lint-staged",
     "start:server": "node server",
-    "start": "set HTTPS=true&&node scripts/start.js",
+    "start": "node scripts/start.js",
     "storybook": "start-storybook -p 6006",
     "test": "node scripts/test.js --env=jsdom",
     "validate": "npm ls"
