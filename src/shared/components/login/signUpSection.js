@@ -1,6 +1,6 @@
 import React from 'react';
-import Section from '../../../shared/components/section/section';
-import LinkButton from '../../../shared/components/linkButton/linkButton';
+import Section from 'shared/components/section/section';
+import LinkButton from 'shared/components/linkButton/linkButton';
 
 const SignUpSection = () => (
   <Section title="New user?" theme="white">
@@ -12,5 +12,4 @@ const SignUpSection = () => (
     <LinkButton text="Sign Up" theme="red" link="/signup" />
   </Section>
 );
-
 export default SignUpSection;

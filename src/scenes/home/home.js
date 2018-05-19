@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import * as CookieHelpers from 'shared/utils/cookieHelper';
 import Login from 'shared/components/login/login';
+import SocialLogin from 'shared/components/socialLogin/socialLogin';
 import IdmeVerify from 'shared/components/idme/idmeverify/idmeverify';
 import AuthenticatedRoute from 'shared/components/authenticatedRoute/authenticatedRoute';
 import familyImage from 'images/Family-2.jpg';
@@ -141,6 +142,30 @@ class Home extends Component {
     });
   };
 
+  /*
+   * Simple boolean to check that local storage includes the
+   * information necessary to visit /social-login
+   */
+   hasSocialLoginPayload = () => {
+     let firstNameExists = null;
+     let lastNameExists = null;
+     let emailExists = null;
+     try {
+       firstNameExists = window.localStorage.getItem('firstname');
+       lastNameExists = window.localStorage.getItem('lastname');
+       emailExists = window.localStorage.getItem('email');
+     }
+     catch (e) {
+       return false;
+     }
+     if((firstNameExists !== null) && (lastNameExists !== null) && (emailExists !== null)) {
+       return true;
+     }
+     else {
+       return false;
+     }
+   }
+
   render() {
     const { mentor, signedIn, verified } = this.state;
     const authProps = {
@@ -154,6 +179,7 @@ class Home extends Component {
       [`${styles[this.state.bgImageStyle]}`]: this.state.bgImage,
     });
     return (
+
       <div
         className={classes}
         style={this.state.bgImage ? { backgroundImage: `url(${this.state.bgImageUrl})` } : {}}
@@ -172,10 +198,11 @@ class Home extends Component {
               path="/signup"
               render={() => (
                 <SignUp
-                  updateRootAuthState={this.updateRootAuthState}
-                  isLoggedIn={this.state.signedIn}
                   {...authProps}
+                  history={this.props.history}
+                  isAuth={this.state.signedIn}
                   sendNotification={this.sendNotification}
+                  updateRootAuthState={this.updateRootAuthState}
                 />
               )}
             />
@@ -183,15 +210,39 @@ class Home extends Component {
               path="/join"
               render={() => (
                 <SignUp
-                  updateRootAuthState={this.updateRootAuthState}
-                  isLoggedIn={this.state.signedIn}
                   {...authProps}
+                  history={this.props.history}
+                  isAuth={this.state.signedIn}
                   sendNotification={this.sendNotification}
+                  updateRootAuthState={this.updateRootAuthState}
                 />
               )}
             />
             <Route path="/history" component={History} />
-            <Route path="/sign-up" component={SignUp} />
+            <Route
+              path="/login"
+              render={() => (
+                <Login
+                  {...authProps}
+                  history={this.props.history}
+                  isAuth={this.state.signedIn}
+                  sendNotification={this.sendNotification}
+                  updateRootAuthState={this.updateRootAuthState}
+                />
+              )}
+            />
+            <Route
+              path="/sign-up"
+              render={() => (
+                <SignUp
+                  {...authProps}
+                  history={this.props.history}
+                  isAuth={this.state.signedIn}
+                  sendNotification={this.sendNotification}
+                  updateRootAuthState={this.updateRootAuthState}
+                />
+              )}
+            />
             <Route path="/team" component={Team} />
             <Route path="/faq" component={FAQ} />
             <Route path="/contact" component={Contact} />
@@ -199,11 +250,42 @@ class Home extends Component {
             <Route path="/about" component={About} />
             <Route path="/press" component={Press} />
             <Route path="/branding" component={Branding} />
-            <Route path="/jobs" component={Jobs} />
-            <Route path="/media" component={Press} />
-            <Route path="/signup-info" component={SignupInformation} />
-            <Route path="/challenge" component={Challenge} />
-            <Route path="/terms" component={Terms} />
+            <Route
+              path="/jobs"
+              component={Jobs}
+            />
+            <Route
+              path="/media"
+              component={Press}
+            />
+            <Route
+              path="/signup-info"
+              component={SignupInformation}
+            />
+            <AuthenticatedRoute
+              path="/social-login"
+              isAuth={this.hasSocialLoginPayload()}
+              component={SocialLogin}
+              sendNotification={this.sendNotification}
+              updateRootAuthState={this.updateRootAuthState}
+              history={this.props.history}
+            />
+            <AuthenticatedRoute
+              path="/social_login"
+              isAuth={this.hasSocialLoginPayload()}
+              component={SocialLogin}
+              sendNotification={this.sendNotification}
+              updateRootAuthState={this.updateRootAuthState}
+              history={this.props.history}
+            />
+            <Route
+              path="/challenge"
+              component={Challenge}
+            />
+            <Route
+              path="/terms"
+              component={Terms}
+            />
             <Route path="/chapter_leader" component={ChapterLeader} />
             <Route path="/leadership_circle" component={LeadershipCircle} />
             <Route path="/get-involved" component={GetInvolved} />
@@ -231,35 +313,38 @@ class Home extends Component {
               path="/login"
               render={() => (
                 <Login
-                  updateRootAuthState={this.updateRootAuthState}
-                  isLoggedIn={this.state.signedIn}
                   {...authProps}
-                  sendNotification={this.sendNotification}
                   history={this.props.history}
+                  isAuth={this.state.signedIn}
+                  sendNotification={this.sendNotification}
+                  updateRootAuthState={this.updateRootAuthState}
                 />
               )}
             />
             <AuthenticatedRoute
               exact
               path="/scholarships/:id/apply"
-              isLoggedIn={CookieHelpers.getUserStatus().signedIn}
+              isAuth={CookieHelpers.getUserStatus().signedIn}
               component={ScholarshipApplication}
             />
             <AuthenticatedRoute
               exact
               path="/profile"
-              isLoggedIn={CookieHelpers.getUserStatus().signedIn}
-              component={() => <Profile {...authProps} />}
+              isAuth={CookieHelpers.getUserStatus().signedIn}
+              component={() => (<Profile {...authProps} />)}
             />
             <AuthenticatedRoute
               exact
               path="/profile/verify"
-              isLoggedIn={CookieHelpers.getUserStatus().signedIn}
+              isAuth={CookieHelpers.getUserStatus().signedIn}
               component={IdmeVerify}
               updateRootAuthState={this.updateRootAuthState}
               {...authProps}
             />
+            <Route exact path="/resetpassword" component={ResetPassword} />
             <Route exact path="/reset_password" component={ResetPassword} />
+
+            {/* Place any new routes above this line */}
             <Route path="*" component={FourOhFour} />
           </Switch>
         </div>
