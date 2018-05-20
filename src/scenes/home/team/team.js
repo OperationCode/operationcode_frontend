@@ -23,12 +23,18 @@ class Team extends Component {
         const sortById = members => members.sort((a, b) => a.id - b.id);
         const sortedMembers = sortById(response.data);
 
-        const boardMembers = sortedMembers.filter(x => x.group === 'board');
+        let boardMembers = sortedMembers.filter(x => x.group === 'board');
         let executiveStaffMembers = sortedMembers.filter(x => x.group === 'team');
 
-        // add founder as first member of executive staff, even though he's in group 'board'
-        const founder = boardMembers.filter(x => x.name === 'David Molina');
-        executiveStaffMembers = [...founder, ...executiveStaffMembers];
+        // reorder board members so board chair is first
+        const isBoardChair = boardMember => boardMember.name === 'David Molina';
+        const boardChair = boardMembers.filter(x => isBoardChair(x));
+        const nonChairBoardMembers = boardMembers.filter(x => !isBoardChair(x));
+        boardMembers = [...boardChair, ...nonChairBoardMembers];
+
+        // add CEO as first member of executive staff, even though he's in group 'board'
+        const CEO = boardMembers.filter(x => x.name === 'Conrad Hollomon');
+        executiveStaffMembers = [...CEO, ...executiveStaffMembers];
 
         this.setState({ boardMembers, executiveStaffMembers });
       })
