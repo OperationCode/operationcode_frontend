@@ -66,9 +66,11 @@ class Team extends Component {
             <p>
               Operation Code deeply appreciates the time, energy, and hard work
               of our <b>Founding Board Members</b>, including Mark Kerr (Chair),
-              Laura Gomez (Vice Chair), Pete Runyon (Secretary/ Treasurer), Josh
-              Carter, Nick Frost, and Aimee Knight on their support, dedication
-              and commitment in the early days.
+              Laura Gomez (Vice Chair), Dr. Tyrone Grandison (Vice Chair), Dr. Stacy
+              Chin (Director of Fundraising Committee), Liza Rodewald (Director of
+              Military Families Committee), Pete Runyon (Secretary/ Treasurer), Josh
+              Carter, Nick Frost, and Aimee Knight on their support, dedication and
+              commitment in the early days.
             </p>
 
             <p style={{ textAlign: 'center' }}>
