@@ -1,7 +1,7 @@
 .hero {
-  background-image: url('./OpCodeCon_graphics.png');
+  background-image: url('./OpCodeCon_Raleigh.png');
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom;
 }
 
 @media screen and (min-width: 1100px) {
@@ -12,29 +12,30 @@
 
 @media screen and (min-width: 500px) and (max-width: 1100px) {
   .hero {
-    background-size: 80%;
-    padding-top: 20%;
-    background-position: top;
+    background-size: 100%;
+    background-position: bottom;
   }
 }
 
 @media screen and (max-width: 480px) {
   .hero {
-    background-size: 100%;
-    padding-top: 115px;
-    background-position: top;
+    background: none;
   }
+}
+
+h3 {
+  color:#c66c60;
 }
 
 .heading {
   color: #249cbc;
+  padding-top: 15px;
   text-align: center;
-  padding-top: 25%;
-  height: 600px;
+  height: 800px;
 }
 
 @media screen and (max-width: 768px) {
   .heading {
-    height: 450px;
+    height: 600px;
   }
 }
