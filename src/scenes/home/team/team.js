@@ -11,7 +11,7 @@ class Team extends Component {
 
     this.state = {
       boardMembers: null,
-      executiveStaffMembers: null,
+      staffMembers: null,
       errorResponse: false
     };
   }
@@ -20,25 +20,26 @@ class Team extends Component {
     axios
       .get('https://api.operationcode.org/api/v1/team_members.json')
       .then((response) => {
-        const sortById = members => members.sort((a, b) => a.id - b.id);
-        const sortedMembers = sortById(response.data);
+        const boardMembers = response.data.filter(x => x.group === 'board');
+        const staffMembers = response.data.filter(x => x.group === 'team');
+        const boardChair = 'David Molina';
+        const CEO = 'Conrad Hollomon';
 
-        let boardMembers = sortedMembers.filter(x => x.group === 'board');
-        let executiveStaffMembers = sortedMembers.filter(x => x.group === 'team');
-
-        // reorder board members so board chair is first
-        const isBoardChair = boardMember => boardMember.name === 'David Molina';
-        const boardChair = boardMembers.filter(x => isBoardChair(x));
-        const nonChairBoardMembers = boardMembers.filter(x => !isBoardChair(x));
-        boardMembers = [...boardChair, ...nonChairBoardMembers];
-
-        // add CEO as first member of executive staff, even though he's in group 'board'
-        const CEO = boardMembers.filter(x => x.name === 'Conrad Hollomon');
-        executiveStaffMembers = [...CEO, ...executiveStaffMembers];
-
-        this.setState({ boardMembers, executiveStaffMembers });
+        this.setState({
+          boardMembers: this.getOrderedGroup(boardMembers, boardChair),
+          staffMembers: this.getOrderedGroup(staffMembers, CEO)
+        });
       })
       .catch(() => this.setState({ errorResponse: true }));
+  }
+
+  // returns ordered board/staff group w/ group leader first
+  getOrderedGroup = (group, leaderName) => {
+    const isLeader = member => member.name === leaderName;
+    const sortedMembers = group.sort((a, b) => a.id - b.id);
+    const leader = sortedMembers.filter(x => isLeader(x));
+    const remainingMembers = sortedMembers.filter(x => !isLeader(x));
+    return [...leader, ...remainingMembers];
   }
 
   render() {
@@ -79,16 +80,16 @@ class Team extends Component {
           </div>
         </Section>
 
-        <Section title="Our Executive Staff" theme="white">
-          <div className={styles.executiveStaff}>
-            {this.state.executiveStaffMembers &&
-              this.state.executiveStaffMembers.map(staff => (
+        <Section title="Our Staff" theme="white">
+          <div className={styles.staffMembers}>
+            {this.state.staffMembers &&
+              this.state.staffMembers.map(staffMember => (
                 <TeamCard
-                  key={`${staff.name} + ${staff.role}`}
-                  name={staff.name}
-                  role={staff.role}
-                  slack={staff.slackUsername}
-                  email={staff.email}
+                  key={`${staffMember.name} + ${staffMember.role}`}
+                  name={staffMember.name}
+                  role={staffMember.role}
+                  slack={staffMember.slackUsername}
+                  email={staffMember.email}
                   isBoard={false}
                 />
               ))}

@@ -5,7 +5,7 @@
   justify-content: space-between;
 }
 
-.executiveStaff {
+.staffMembers {
   align-items: flex-start;
   display: flex;
   flex-flow: row wrap;
@@ -19,7 +19,7 @@
 
 @media screen and (max-width: 840px) {
   .boardMembers,
-  .executiveStaff {
+  .staffMembers {
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
