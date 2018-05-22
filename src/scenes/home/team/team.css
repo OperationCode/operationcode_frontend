@@ -2,14 +2,11 @@
   align-items: flex-start;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .staffMembers {
-  align-items: flex-start;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+  composes: boardMembers;
   padding: 20px 0;
 }
 
