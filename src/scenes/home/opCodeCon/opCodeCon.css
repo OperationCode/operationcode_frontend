@@ -1,37 +1,41 @@
 .hero {
-  background-image: url('./raleigh.jpg');
+  background-image: url('https://s3.amazonaws.com/operationcode-assets/heroBanners/op_code_con_raleigh.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1100px) {
   .hero {
     background-size: 100%;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 500px) and (max-width: 1100px) {
   .hero {
-    background-size: auto 150%;
+    background-size: 100%;
+    background-position: bottom;
   }
 }
 
+@media screen and (max-width: 499px) {
+  .hero {
+    background: none;
+  }
+}
+
+.red {
+  color:#D1665A;
+}
+
 .heading {
-  color: #47566b;
-  padding: 3rem;
-  height: 600px;
+  color: #249cbc;
+  padding-top: 15px;
+  text-align: center;
+  height: 800px;
 }
 
 @media screen and (max-width: 768px) {
-.heading {
-    height: 450px;
+  .heading {
+    height: 600px;
   }
-}
-
-.textLink {
-  color: #47566b;
-  font-size: 1.2em;
-}
-
-.textLink:hover {
-  color: #d1665a;
-  font-size: 1.2em;
 }
