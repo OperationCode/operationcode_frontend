@@ -40,7 +40,6 @@ const OpCodeCon = () => (
         role="button" text="Donate" theme="red" link={commonUrl.donateLink}
         isExternal
       />
-      {/* <p>Check back for more information.</p> */}
     </div>
   </div>
 );
