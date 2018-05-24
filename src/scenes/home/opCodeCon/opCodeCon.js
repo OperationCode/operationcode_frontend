@@ -8,7 +8,7 @@ const OpCodeCon = () => (
     <div className={styles.heading}>
       <h1>OpCodeCon</h1>
       <h2>Raleigh, NC</h2>
-      <h3> Sept 19-20</h3>
+      <h3 className={styles.red}> Sept 19-20</h3>
       <p>Join us for our inaugural Operation Code Convention!</p>
       <p>Get your tickets and book your room here!</p>
       <LinkButton

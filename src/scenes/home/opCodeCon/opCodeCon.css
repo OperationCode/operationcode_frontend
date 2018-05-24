@@ -17,14 +17,14 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 499px) {
   .hero {
     background: none;
   }
 }
 
-h3 {
-  color:#c66c60;
+.red {
+  color:#D1665A;
 }
 
 .heading {
