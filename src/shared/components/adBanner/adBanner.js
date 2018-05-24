@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import OutboundLink from 'shared/components/outboundLink/outboundLink';
 import styles from './adBanner.css';
 
-const AdBanner = ({ link, imageSource, altText, adBannerText, clickText, theme }) => {
+const AdBanner = ({
+  link, imageSource, altText, adBannerText, clickText, theme
+}) => {
   if (process.env.NODE_ENV === 'production') {
     return (
       <OutboundLink

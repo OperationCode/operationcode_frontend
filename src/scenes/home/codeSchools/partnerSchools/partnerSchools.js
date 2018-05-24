@@ -52,7 +52,7 @@ const PartnerSchools = () => {
           link="https://www.codeplatoon.org/"
           schoolAddress="Online, Chicago"
           logo={`${codeSchoolImageUrl}code_platoon.jpg`}
-          GI="No"
+          GI="Yes"
           fullTime="Full-Time"
           hardware="No"
         />

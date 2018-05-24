@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import _ from 'lodash';
+import getVal from 'lodash/get';
 import PropTypes from 'prop-types';
 import * as CookieHelpers from 'shared/utils/cookieHelper';
+
 import Form from 'shared/components/form/form';
 import FormEmail from 'shared/components/form/formEmail/formEmail';
 import FormZipCode from 'shared/components/form/formZipCode/formZipCode';
@@ -10,27 +11,51 @@ import FormPassword from 'shared/components/form/formPassword/formPassword';
 import FormButton from 'shared/components/form/formButton/formButton';
 import FormInput from 'shared/components/form/formInput/formInput';
 import Section from 'shared/components/section/section';
+import SocialLoginsGrouping from 'shared/components/socialLogin/socialLoginsGrouping';
 import config from 'config/environment';
 import styles from './signup.css';
 
 class SignUp extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      email: '',
-      emailValid: false,
-      error: false,
-      isValid: true,
-      isLoading: false,
-      mentor: false,
-      password: '',
-      passwordConfirm: '',
-      passwordValid: false,
-      success: false,
-      zip: '',
-      zipValid: false
-    };
-  }
+  static propTypes = {
+    history: PropTypes.shape({
+      action: PropTypes.string,
+      block: PropTypes.func,
+      createHref: PropTypes.func,
+      go: PropTypes.func,
+      goBack: PropTypes.func,
+      goForward: PropTypes.func,
+      length: PropTypes.number,
+      listen: PropTypes.func,
+      location: PropTypes.shape({
+        key: PropTypes.string,
+        pathname: PropTypes.string,
+        search: PropTypes.string
+      }),
+      push: PropTypes.func,
+      replace: PropTypes.func
+    }).isRequired,
+    sendNotification: PropTypes.func.isRequired,
+    updateRootAuthState: PropTypes.func
+  };
+
+  static defaultProps = {
+    updateRootAuthState: () => {}
+  };
+
+  state = {
+    email: '',
+    emailValid: false,
+    error: false,
+    isValid: true,
+    isLoading: false,
+    mentor: false,
+    password: '',
+    passwordConfirm: '',
+    passwordValid: false,
+    success: false,
+    zip: '',
+    zipValid: false
+  };
 
   onFirstNameChange = (value) => {
     this.setState({ firstName: value });
@@ -68,7 +93,9 @@ class SignUp extends Component {
     this.setState({ isLoading: true });
 
     if (this.isFormValid()) {
-      const { email, zip, password, firstName, lastName, identifier } = this.state;
+      const {
+        email, zip, password, firstName, lastName, identifier
+      } = this.state;
       axios
         .post(`${config.backendUrl}/users`, {
           user: {
@@ -86,7 +113,7 @@ class SignUp extends Component {
           this.setState({ isLoading: false });
         })
         .catch((error) => {
-          const data = _.get(error, 'response.data');
+          const data = getVal(error, 'response.data');
           let errorMessage = '';
           if (data) {
             /* eslint-disable */
@@ -201,13 +228,18 @@ class SignUp extends Component {
             />
           )}
         </Form>
+
+        <div className={styles.socialLogins}>
+          <p>Or join via Google or Facebook:</p>
+          <SocialLoginsGrouping
+            history={this.props.history}
+            sendNotification={this.props.sendNotification}
+            updateRootAuthState={this.props.updateRootAuthState}
+          />
+        </div>
       </Section>
     );
   }
 }
-
-SignUp.propTypes = {
-  sendNotification: PropTypes.func.isRequired
-};
 
 export default SignUp;

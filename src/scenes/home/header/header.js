@@ -29,22 +29,9 @@ class Header extends Component {
         <NavItem to="/about" text="About" onClick={onClick} />
         <NavItem to="/code_schools" text="Code Schools" onClick={onClick} />
         <NavItem to="/jobs" text="Job Board" onClick={onClick} />
-        <NavItem
-          to={commonUrl.donateLink}
-          text="Donate"
-          onClick={onClick}
-          isExternal
-        />
-        <NavItem
-          to="/leadership_circle"
-          text="Leadership Circle"
-          onClick={onClick}
-        />
-        {signedIn ? (
-          <NavItem to="/profile" text="Profile" onClick={onClick} />
-        ) : (
-          <NavItem to="/join" text="Join" onClick={onClick} />
-        )}
+        <NavItem to={commonUrl.donateLink} text="Donate" onClick={onClick} isExternal />
+        <NavItem to="/leadership_circle" text="Leadership Circle" onClick={onClick} />
+        {signedIn ? <NavItem to="/profile" text="Profile" onClick={onClick} /> : null}
         {signedIn ? (
           <NavItem to="/" text="Logout" onClick={this.props.logOut} />
         ) : (
@@ -65,10 +52,7 @@ class Header extends Component {
         <Logo />
         <Burger onClick={this.handleToggleDrawer} />
         <TopNav>{this.renderNavContents(signedIn, mentor)}</TopNav>
-        <SideNav
-          isVisible={this.state.isSideNavVisible}
-          onClose={this.handleToggleDrawer}
-        >
+        <SideNav isVisible={this.state.isSideNavVisible} onClose={this.handleToggleDrawer}>
           {this.renderNavContents(signedIn, mentor, this.handleToggleDrawer)}
         </SideNav>
       </div>
