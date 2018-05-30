@@ -42,6 +42,7 @@ import ChapterLeader from './chapterLeader/chapterLeader';
 import GetInvolved from './getInvolved/getInvolved';
 import Policy from './policy/policy';
 import OpCodeCon from './opCodeCon/opCodeCon';
+import UpgradeBrowser from 'shared/components/upgradeBrowser/upgradeBrowser';
 import styles from './home.css';
 
 const ReactToastr = require('react-toastr');
@@ -56,6 +57,7 @@ class Home extends Component {
     bgImageStyle: null,
     signedIn: false,
     mentor: false,
+    showUpgradeBrowserModal:false
   };
 
   componentWillMount() {
@@ -63,6 +65,7 @@ class Home extends Component {
       this.setBgImage(location);
     });
     this.setBgImage(this.props.location);
+    this.checkIfIE();
     this.updateRootAuthState();
   }
 
@@ -165,6 +168,15 @@ class Home extends Component {
        return false;
      }
    }
+   
+   checkIfIE = () => {
+    let ua = window.navigator.userAgent;
+    let msie = ua.indexOf('MSIE');
+    const trident = ua.indexOf('Trident/');
+    if (msie > 0 || trident > 0) {
+      this.setState({ showUpgradeBrowserModal: true });
+    }
+  }
 
   render() {
     const { mentor, signedIn, verified } = this.state;
@@ -178,6 +190,11 @@ class Home extends Component {
       [`${styles.home}`]: true,
       [`${styles[this.state.bgImageStyle]}`]: this.state.bgImage,
     });
+      
+    if ( this.state.showUpgradeBrowserModal==true){
+        console.log(this.state.showUpgradeBrowserModal);
+        return <UpgradeBrowser />
+    }
     return (
 
       <div
