@@ -1,5 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { faMapMarkerAlt, faBuilding, faCloudUploadAlt } from '@fortawesome/fontawesome-free-solid';
+import styles from './featuredJob.css';
 
 const FeaturedJob = ({
   title,
@@ -12,23 +15,33 @@ const FeaturedJob = ({
   remote
 }) => (
   <div>
-    <div className="zr_job">
-      <div className="zr_job_title">
+    <div className={styles.job}>
+      <div>
         <a rel="nofollow" href={sourceUrl} className="zr_job_link">{title}</a>
       </div>
-      <div className="zr_job_details">
-        <div className="zr_job_detail_container">
-          <span className="zr_job_company">{source}</span>
-          <span className="zr_job_city">{city}</span>
-          <span className="zr_job_state">{state}</span>
-          <span className="zr_job_country">{country}</span>
-          <span className="zr_job_remote">{remote ? 'Remote' : ''}</span>
+      <div className={styles.details}>
+        <div className={styles.detailsContainer}>
+          <FontAwesomeIcon icon={faBuilding} size="sm" style={{ color: '#afafaf' }} />
+          <span className={styles.detail}>{source}</span>
         </div>
-        <div className="zr_job_detail_container" />
+        <div className={styles.detailsContainer}>
+          <FontAwesomeIcon icon={faMapMarkerAlt} size="sm" style={{ color: '#afafaf' }} />
+          <span className={styles.detail}>{city},</span>
+          <span className={styles.detail}>{state},</span>
+          <span className={styles.detail}>{country}</span>
+        </div>
+        {remote &&
+          <div className={styles.detailsContainer}>
+            <FontAwesomeIcon icon={faCloudUploadAlt} size="sm" style={{ color: '#afafaf' }} />
+            <span className={styles.remote}>Remote</span>
+          </div>
+        }
       </div>
-      <div className="zr_job_desc">{description}</div>
+      <div className={styles.description}>
+        {description}
+      </div>
     </div>
-  </div>
+  </div >
 );
 
 FeaturedJob.propTypes = {

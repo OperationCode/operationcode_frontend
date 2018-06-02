@@ -1,2 +1,43 @@
-/* Note: these styles are copied to match the ziprecruiter styles that are inserted on our page */
+/* Note: these styles are copied to match the ziprecruiter styles that are being dynamically inserted on our page (see jobs.js) */
 
+.job {
+  padding: 15px 0px;
+}
+
+.link {
+  text-decoration: none;
+  color: #1a0dab;
+  font-size: 17px;
+  float: left;
+  margin-right: 3px;
+  margin-bottom: 1px;
+}
+
+.details {
+  font-size: 13px;
+  color: #999999;
+  margin: 3px 0;
+  clear: both;
+}
+
+.detailsContainer {
+  float: left;
+  margin-right: 15px;
+}
+
+.detail {
+  margin-left: 4px;
+}
+
+.remote {
+  composes: detail;
+  font-style: italic;
+}
+
+.description {
+  clear: both;
+  font-size: 14px;
+  color: #545454;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
