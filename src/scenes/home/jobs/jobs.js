@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import Section from 'shared/components/section/section';
+import FeaturedJob from './featuredJob/featuredJob';
+import FeaturedJobsData from './featuredJobs.json';
+import styles from './jobs.css';
 
 const zipRecruiterScript = document.createElement('script');
 
@@ -29,11 +32,39 @@ class Jobs extends Component {
     };
     tryRunInit();
   }
+
+  featuredJobs
   render() {
+    const featuredJobs = FeaturedJobsData
+      .filter(x => x.status === 'active')
+      .map(job => (
+        <FeaturedJob
+          key={`${Math.random()} + ${job.name} + ${job.sourceUrl}`}
+          title={job.title}
+          source={job.source}
+          sourceUrl={job.sourceUrl}
+          city={job.city}
+          state={job.state}
+          country={job.country}
+          description={job.description}
+          status={job.status}
+          remote={job.remote}
+        />
+      ));
     return (
-      <Section title="Open Positions" theme="white">
-        <div id="zipsearch_container" />
-      </Section>
+      <div>
+        <Section title="Featured Jobs" theme="white">
+          <div className={styles.featuredJobsContainer}>
+            <div className={styles.featuredJobs}>
+              {featuredJobs}
+            </div>
+          </div>
+        </Section>
+        <Section title="Search All Jobs" theme="white">
+          <div id="zipsearch_container" />
+        </Section>
+      </div>
+
     );
   }
 }
