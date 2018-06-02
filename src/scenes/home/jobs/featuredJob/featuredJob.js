@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faBuilding, faCloudUploadAlt } from '@fortawesome/fontawesome-free-solid';
+import OutboundLink from 'shared/components/outboundLink/outboundLink';
 import styles from './featuredJob.css';
 
 const FeaturedJob = ({
@@ -17,7 +18,9 @@ const FeaturedJob = ({
   <div>
     <div className={styles.job}>
       <div>
-        <a rel="nofollow" href={sourceUrl} className="zr_job_link">{title}</a>
+        <OutboundLink href={sourceUrl} analyticsEventLabel={`[FeaturedJob] ${sourceUrl}`}>
+          <span className={styles.link}>{title}</span>
+        </OutboundLink>
       </div>
       <div className={styles.details}>
         <div className={styles.detailsContainer}>
