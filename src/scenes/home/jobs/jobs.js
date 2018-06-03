@@ -33,7 +33,6 @@ class Jobs extends Component {
     tryRunInit();
   }
 
-  featuredJobs
   render() {
     const featuredJobs = FeaturedJobsData
       .filter(x => x.status === 'active')
@@ -51,14 +50,18 @@ class Jobs extends Component {
           remote={job.remote}
         />
       ));
+
     return (
       <div>
-        <Section title="Featured Jobs" theme="white">
+        <Section title="Featured Jobs" theme="whiteCondensed">
           <div className={styles.featuredJobsContainer}>
             <div className={styles.featuredJobs}>
               {featuredJobs}
             </div>
           </div>
+          <p className={styles.contact}>
+            Are you hiring? <a href="mailto:staff@operationcode.org">Contact</a> us to post your job opening with Operation Code!
+          </p>
         </Section>
         <Section title="Search All Jobs" theme="white">
           <div id="zipsearch_container" />
