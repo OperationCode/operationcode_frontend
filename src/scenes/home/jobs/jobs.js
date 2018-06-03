@@ -36,19 +36,11 @@ class Jobs extends Component {
 
   render() {
     const featuredJobs = FeaturedJobsData
-      .filter(x => x.status === 'active')
+      .filter(job => job.status === 'active')
       .map(job => (
         <FeaturedJob
           key={`${Math.random()} + ${job.name} + ${job.sourceUrl}`}
-          title={job.title}
-          source={job.source}
-          sourceUrl={job.sourceUrl}
-          city={job.city}
-          state={job.state}
-          country={job.country}
-          description={job.description}
-          status={job.status}
-          remote={job.remote}
+          {...job}
         />
       ));
 
