@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Section from 'shared/components/section/section';
+import OutboundLink from 'shared/components/outboundLink/outboundLink';
 import FeaturedJob from './featuredJob/featuredJob';
 import FeaturedJobsData from './featuredJobs.json';
 import styles from './jobs.css';
@@ -60,7 +61,7 @@ class Jobs extends Component {
             </div>
           </div>
           <p className={styles.contact}>
-            Are you hiring? <a href="mailto:staff@operationcode.org">Contact</a> us to post your job opening with Operation Code!
+            Are you hiring? <OutboundLink href="mailto:kelly@operationcode.org" analyticsEventLabel="User clicked on Job Posting contact">Contact</OutboundLink> us to post your job opening with Operation Code!
           </p>
         </Section>
         <Section title="Search All Jobs" theme="white">
