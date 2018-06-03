@@ -1,13 +1,13 @@
 [
   {
-    "title": "Software Engineer",
+    "title": "Software Engineer (Mock Data)",
     "source": "Microsoft",
     "sourceUrl": "https://www.microsoft.com",
     "city": "Redmond",
     "state": "Washington",
     "country": "United States",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    "status": "active",
+    "status": "inactive",
     "remote": false,
     "tags": [
       "C#",
@@ -16,14 +16,14 @@
     ]
   },
   {
-    "title": "QA Engineer",
+    "title": "QA Engineer (Mock Data)",
     "source": "Apple",
     "sourceUrl": "https://www.apple.com",
     "city": "San Francisco",
     "state": "California",
     "country": "United States",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ",
-    "status": "active",
+    "status": "inactive",
     "remote": true,
     "tags": [
       "C#",
@@ -32,11 +32,11 @@
     ]
   },
   {
-    "title": "DevOps Engineeer",
+    "title": "DevOps Engineeer (Mock Data)",
     "source": "GitHub",
     "sourceUrl": "https://www.github.com",
     "city": "Austin",
-    "state": "texas",
+    "state": "Texas",
     "country": "United States",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "status": "inactive",
