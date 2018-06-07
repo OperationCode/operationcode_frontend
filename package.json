@@ -19,7 +19,6 @@
     "express": "^4.16.3",
     "history": "^4.6.1",
     "husky": "^0.14.3",
-    "image-size": "^0.6.2",
     "jwt-decode": "^2.2.0",
     "lodash": "^4.17.10",
     "postscribe": "^2.0.8",
@@ -109,26 +108,13 @@
     "validate": "npm ls"
   },
   "lint-staged": {
-    "*.{js,json}": [
-      "prettier-eslint --write",
-      "git add"
-    ],
-    "*.css": [
-      "stylelint --fix",
-      "git add"
-    ]
+    "*.{js,json}": ["prettier-eslint --write", "git add"],
+    "*.css": ["stylelint --fix", "git add"]
   },
   "jest": {
-    "moduleDirectories": [
-      "node_modules",
-      "src"
-    ],
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx}"
-    ],
-    "setupFiles": [
-      "<rootDir>/config/polyfills.js"
-    ],
+    "moduleDirectories": ["node_modules", "src"],
+    "collectCoverageFrom": ["src/**/*.{js,jsx}"],
+    "setupFiles": ["<rootDir>/config/polyfills.js"],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.js?(x)",
       "<rootDir>/src/**/?(*.)(spec|test).js?(x)"
@@ -140,17 +126,13 @@
       "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
       "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
     },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
-    ],
+    "transformIgnorePatterns": ["[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"],
     "moduleNameMapper": {
       "^react-native$": "react-native-web"
     }
   },
   "babel": {
-    "presets": [
-      "react-app"
-    ]
+    "presets": ["react-app"]
   },
   "homepage": "https://operationcode.org/"
 }

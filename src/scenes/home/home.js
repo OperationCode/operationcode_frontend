@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route, withRouter, Switch } from 'react-router-dom';
+import getValue from 'lodash/get';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import * as CookieHelpers from 'shared/utils/cookieHelper';
@@ -57,7 +58,7 @@ class Home extends Component {
     bgImageStyle: null,
     signedIn: false,
     mentor: false,
-    showUpgradeBrowserModal:false
+    showUpgradeBrowserModal: false
   };
 
   componentWillMount() {
@@ -170,11 +171,10 @@ class Home extends Component {
    }
    
    checkIfIE = () => {
-    let ua = window.navigator.userAgent;
-    let msie = ua.indexOf('MSIE');
-    const trident = ua.indexOf('Trident/');
-    if (msie > 0 || trident > 0) {
-      this.setState({ showUpgradeBrowserModal: true });
+    const userAgent = getValue(window, 'navigator.userAgent', '');
+    const hasIEUserAgent = (userAgent.indexOf('MSIE')!==-1)||(userAgent.indexOf('Trident')!==-1);
+    if (hasIEUserAgent) {
+        this.setState({ showUpgradeBrowserModal: true });
     }
   }
 
@@ -191,12 +191,7 @@ class Home extends Component {
       [`${styles[this.state.bgImageStyle]}`]: this.state.bgImage,
     });
       
-    if ( this.state.showUpgradeBrowserModal==true){
-        console.log(this.state.showUpgradeBrowserModal);
-        return <UpgradeBrowser />
-    }
-    return (
-
+    return (this.state.showUpgradeBrowserModal)?(<UpgradeBrowser />):(
       <div
         className={classes}
         style={this.state.bgImage ? { backgroundImage: `url(${this.state.bgImageUrl})` } : {}}

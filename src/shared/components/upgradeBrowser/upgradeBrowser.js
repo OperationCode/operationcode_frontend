@@ -8,23 +8,14 @@ import edgeLogo from 'images/browserLogos/edge-icon.png';
 import safariLogo from 'images/browserLogos/safari-icon.png';
 import styles from './upgradeBrowser.css';
 
-const openModal = true;
 const UpgradeBrowser = () => (
-  //  constructor() {
-  //    super();
-  //    this.state = {
-  //      showModal: !!document.documentMode
-  //    };
-  //    this.checkIE();
-  // this.checkIE = this.checkIE.bind(this);
-  //  }
   <div>
-    <ReactModal className={styles.layout} overlayClassName={styles.overlay} isOpen={openModal}>
+    <ReactModal className={styles.layout} overlayClassName={styles.overlay} isOpen="true">
       <div className={styles.content_align}>
         <FontAwesomeIcon icon={faexclamationtriangle} className={styles.warning_logo} />
         <div className={styles.upgrade_browser_message}>Please Upgrade Your Browser</div>
         <div className={styles.main_message}>
-          You might be experiencing some problems viewing this page.Use the links below to download
+          You might be experiencing some problems viewing this page. Use the links below to download
           or upgrade your existing browser for a seamless experience.
         </div>
         <div className={styles.flex}>
