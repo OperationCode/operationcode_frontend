@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactModal from 'react-modal';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import faexclamationtriangle from '@fortawesome/fontawesome-free-solid/faExclamationTriangle';
+import faExclamationTriangle from '@fortawesome/fontawesome-free-solid/faExclamationTriangle';
 import OutboundLink from 'shared/components/outboundLink/outboundLink';
 import firefoxLogo from 'images/browserLogos/firefox-icon.png';
 import chromeLogo from 'images/browserLogos/chrome-icon.png';
@@ -13,7 +13,7 @@ const UpgradeBrowser = () => (
   <div>
     <ReactModal className={styles.layout} overlayClassName={styles.overlay} isOpen="true">
       <div className={styles.content_align}>
-        <FontAwesomeIcon icon={faexclamationtriangle} className={styles.warning_logo} />
+        <FontAwesomeIcon icon={faExclamationTriangle} className={styles.warning_logo} />
         <div className={styles.upgrade_browser_message}>Please Upgrade Your Browser</div>
         <div className={styles.main_message}>
           You might be experiencing some problems viewing this page. Use the links below to download
