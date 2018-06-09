@@ -3,10 +3,6 @@ import ReactModal from 'react-modal';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faExclamationTriangle from '@fortawesome/fontawesome-free-solid/faExclamationTriangle';
 import OutboundLink from 'shared/components/outboundLink/outboundLink';
-import firefoxLogo from 'images/browserLogos/firefox-icon.png';
-import chromeLogo from 'images/browserLogos/chrome-icon.png';
-import edgeLogo from 'images/browserLogos/edge-icon.png';
-import safariLogo from 'images/browserLogos/safari-icon.png';
 import styles from './upgradeBrowser.css';
 
 const UpgradeBrowser = () => (
@@ -23,25 +19,25 @@ const UpgradeBrowser = () => (
           <div className={styles.browser}>
             <span className={styles.browser_name}>Microsoft Edge</span>
             <OutboundLink href="https://www.microsoft.com/windows/microsoft-edge" analyticsEventLabel="User clicked on Edge download link">
-              <img className={styles.browser_image} src={edgeLogo} alt="edge" />
+              <img className={styles.browser_image} src="https://s3.amazonaws.com/operationcode-assets/browserLogos/edge-icon.png" alt="edge" />
             </OutboundLink>
           </div>
           <div className={styles.browser}>
             <span className={styles.browser_name}>Google Chrome</span>
             <OutboundLink href="https://www.google.com/chrome" analyticsEventLabel="User clicked on Chrome download link">
-              <img className={styles.browser_image} src={chromeLogo} alt="chrome" />
+              <img className={styles.browser_image} src="https://s3.amazonaws.com/operationcode-assets/browserLogos/chrome-icon.png" alt="chrome" />
             </OutboundLink>
           </div>
           <div className={styles.browser}>
             <span className={styles.browser_name}>Mozilla Firefox</span>
             <OutboundLink href="https://www.mozilla.org/firefox/new" analyticsEventLabel="User clicked on Firefox download link">
-              <img className={styles.browser_image} src={firefoxLogo} alt="firefox" />
+              <img className={styles.browser_image} src="https://s3.amazonaws.com/operationcode-assets/browserLogos/firefox-icon.png" alt="firefox" />
             </OutboundLink>
           </div>
           <div className={styles.browser}>
             <span className={styles.browser_name}>Safari</span>
             <OutboundLink href="https://support.apple.com/downloads/safari" analyticsEventLabel="User clicked on Safari download link">
-              <img className={styles.browser_image} src={safariLogo} alt="safari" />
+              <img className={styles.browser_image} src="https://s3.amazonaws.com/operationcode-assets/browserLogos/safari-icon.png" alt="safari" />
             </OutboundLink>
           </div>
         </div>
