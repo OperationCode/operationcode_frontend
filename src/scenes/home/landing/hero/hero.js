@@ -27,7 +27,7 @@ const hero = () => (
         />
       </div>
       <p className={styles.embedCaption}>
-        Executive Director, David Molina, speaks in San Francisco about Operation Code.
+        Founder and Board Chair David Molina speaks in San Francisco about Operation Code.
       </p>
     </div>
   </div>
