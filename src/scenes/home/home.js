@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route, withRouter, Switch } from 'react-router-dom';
+import getValue from 'lodash/get';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import * as CookieHelpers from 'shared/utils/cookieHelper';
@@ -42,6 +43,7 @@ import ChapterLeader from './chapterLeader/chapterLeader';
 import GetInvolved from './getInvolved/getInvolved';
 import Policy from './policy/policy';
 import OpCodeCon from './opCodeCon/opCodeCon';
+import UpgradeBrowser from 'shared/components/upgradeBrowser/upgradeBrowser';
 import styles from './home.css';
 
 const ReactToastr = require('react-toastr');
@@ -56,6 +58,7 @@ class Home extends Component {
     bgImageStyle: null,
     signedIn: false,
     mentor: false,
+    showUpgradeBrowserModal: false
   };
 
   componentWillMount() {
@@ -63,6 +66,7 @@ class Home extends Component {
       this.setBgImage(location);
     });
     this.setBgImage(this.props.location);
+    this.checkIfIE();
     this.updateRootAuthState();
   }
 
@@ -165,6 +169,14 @@ class Home extends Component {
        return false;
      }
    }
+   
+   checkIfIE = () => {
+    const userAgent = getValue(window, 'navigator.userAgent', '');
+    const hasIEUserAgent = (userAgent.indexOf('MSIE')!==-1)||(userAgent.indexOf('Trident')!==-1);
+    if (hasIEUserAgent) {
+        this.setState({ showUpgradeBrowserModal: true });
+    }
+  }
 
   render() {
     const { mentor, signedIn, verified } = this.state;
@@ -178,8 +190,8 @@ class Home extends Component {
       [`${styles.home}`]: true,
       [`${styles[this.state.bgImageStyle]}`]: this.state.bgImage,
     });
-    return (
-
+      
+    return (this.state.showUpgradeBrowserModal)?(<UpgradeBrowser />):(
       <div
         className={classes}
         style={this.state.bgImage ? { backgroundImage: `url(${this.state.bgImageUrl})` } : {}}

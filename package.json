@@ -109,8 +109,7 @@
   },
   "lint-staged": {
     "*.{js,json}": ["prettier-eslint --write", "git add"],
-    "*.css": ["stylelint --fix", "git add"],
-    "*.{jpg,jpeg,png,gif,svg}": "npm run image-size"
+    "*.css": ["stylelint --fix", "git add"]
   },
   "jest": {
     "moduleDirectories": ["node_modules", "src"],
