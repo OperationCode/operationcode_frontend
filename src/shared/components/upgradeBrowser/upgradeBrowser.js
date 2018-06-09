@@ -19,28 +19,28 @@ const UpgradeBrowser = () => (
           or upgrade your existing browser for a seamless experience.
         </div>
         <div className={styles.flex}>
-          <div className={styles.browser_name}>
-            Microsoft Edge<br />
+          <div className={styles.browser}>
+            <span className={styles.browser_name}>Microsoft Edge</span>
             <a href="https://www.microsoft.com/windows/microsoft-edge">
-              <img className={styles.browser_images} src={edgeLogo} alt="firefox" />
+              <img className={styles.browser_image} src={edgeLogo} alt="firefox" />
             </a>
           </div>
-          <div className={styles.browser_name}>
-            Google Chrome<br />
+          <div className={styles.browser}>
+            <span className={styles.browser_name}>Google Chrome</span>
             <a href="https://www.google.com/chrome">
-              <img className={styles.browser_images} src={chromeLogo} alt="firefox" />
+              <img className={styles.browser_image} src={chromeLogo} alt="firefox" />
             </a>
           </div>
-          <div className={styles.browser_name}>
-            Mozilla Firefox<br />
+          <div className={styles.browser}>
+            <span className={styles.browser_name}>Mozilla Firefox</span>
             <a href="https://www.mozilla.org/firefox/new">
-              <img className={styles.browser_images} src={firefoxLogo} alt="firefox" />
+              <img className={styles.browser_image} src={firefoxLogo} alt="firefox" />
             </a>
           </div>
-          <div className={styles.browser_name}>
-            Safari<br />
+          <div className={styles.browser}>
+            <span className={styles.browser_name}>Safari</span>
             <a href="https://support.apple.com/downloads/safari">
-              <img className={styles.browser_images} src={safariLogo} alt="firefox" />
+              <img className={styles.browser_image} src={safariLogo} alt="firefox" />
             </a>
           </div>
         </div>
