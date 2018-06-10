@@ -9,35 +9,42 @@ import Success from './success/success';
 import styles from './scholarshipApplication.css';
 
 class ScholarshipApplication extends Component {
-  constructor() {
-    super();
-    this.state = {
-      error: null,
-      scholarship: {},
-      success: false
-    };
-  }
+  state = {
+    error: null,
+    scholarship: {},
+    success: false
+  };
 
   componentWillMount() {
-    const id = this.props.match.params.id;
-    getScholarship(id).then((data) => {
-      this.setState({ scholarship: data });
-    }).catch((failed) => {
-      const error = failed.response.data.error;
-      this.setState({ error });
-    });
+    const { id } = this.props.match.params;
+    getScholarship(id)
+      .then((data) => {
+        this.setState({ scholarship: data });
+      })
+      .catch((failed) => {
+        const { error } = failed.response.data;
+        this.setState({ error });
+      });
   }
 
   onSuccess = () => {
     this.setState({ success: true });
-  }
+  };
 
   render() {
     return (
       <Section theme="white">
         <Form className={styles.applicationForm}>
           <Head scholarship={this.state.scholarship} />
-          { this.state.success ? <Success /> : <Body scholarship_id={this.state.scholarship.id} scholarship_terms={this.state.scholarship.terms} onSuccess={this.onSuccess} /> }
+          {this.state.success ? (
+            <Success />
+          ) : (
+            <Body
+              scholarship_id={this.state.scholarship.id}
+              scholarship_terms={this.state.scholarship.terms}
+              onSuccess={this.onSuccess}
+            />
+          )}
           <div className={styles.red}>{this.state.error}</div>
         </Form>
       </Section>
@@ -53,7 +60,7 @@ ScholarshipApplication.propTypes = {
     }),
     path: PropTypes.string,
     url: PropTypes.string
-  }).isRequired,
+  }).isRequired
 };
 
 export default ScholarshipApplication;

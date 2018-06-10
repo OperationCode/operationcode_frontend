@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Section from 'shared/components/section/section';
 import IconCard from 'shared/components/iconCard/iconCard';
@@ -7,52 +8,79 @@ import styles from './profile.css';
 
 const Profile = ({ verified }) => (
   <Section title="My Profile" theme="gray">
-    <div className={styles.profileContainer}>
-      <div className={styles.profileContainer__cards}>
-        <IconCard
-          title="Request a Mentor" fontAwesomeIcon="FaLifeBouy"
-          url="https://op.co.de/mentor-request"
-        />
+    <div className={verified ? styles.profileContainer_verified : styles.profileContainer}>
 
-        <IconCard
-          title="Check for Scholarships" fontAwesomeIcon="FaGraduationCap"
-          url="/scholarships"
-        />
+      {verified && (
+        <div
+          className={
+            verified ? styles.profileContainer__cards_verified : styles.profileContainer__cards
+          }
+        >
+          <IconCard
+            title="Request a Mentor"
+            fontAwesomeIcon="faLifeRing"
+            url="https://op.co.de/mentor-request"
+          />
 
+          <IconCard
+            title="Check for Scholarships"
+            fontAwesomeIcon="faGraduationCap"
+            url="/scholarships"
+          />
+        </div>
+      )}
+
+      <div
+        className={
+          verified ? styles.profileContainer__cards_verified : styles.profileContainer__cards
+        }
+      >
         <IconCard
-          title="Check for Open Jobs" fontAwesomeIcon="FaBriefcase"
+          title="Check for Open Jobs"
+          fontAwesomeIcon="faBriefcase"
           url="/jobs"
         />
 
         <IconCard
-          title="Enter our Slack Channel" fontAwesomeIcon="FaSlack"
+          title="Enter our Slack Team"
+          fontAwesomeIcon="faSlackHash"
+          iconType="brand"
           url="https://operation-code.slack.com/"
         />
 
         <IconCard
-          title="Enter our Discourse Forums" fontAwesomeIcon="FaCommentsO"
-          url="https://community.operationcode.org/"
+          title="Update Info"
+          fontAwesomeIcon="faUser"
+          url="/signup-info"
         />
 
         <IconCard
-          title="Update My Info" fontAwesomeIcon="FaUser"
-          url="/signup-info"
+          title="Our Programs"
+          fontAwesomeIcon="faHandshake"
+          url="/our_programs#mentorshipProgram"
         />
       </div>
-      <div className={styles.profileContainer__idMe}>
-        {verified && <h2>Your profile is verified with id.me</h2>}
+      <div
+        className={
+          verified ? styles.profileContainer__idMe_verified : styles.profileContainer__idMe
+        }
+      >
         {!verified && (
           <div className={styles.profileContainer__idMe__btn}>
             <span className={styles.profileContainer__idMe__title}>
-              Get Verified for Added Benefits
+              Veterans, Servicemembers and Spouses!
             </span>
             <p>
-              In order to take advantage of resources such as Mentorship and Scholarships, we
-              require that you verify your military affiliation status. We use Id.Me for
-              verification, a highly secure and specialized platform that will protect your
-              information. We will not store or transfer any of your sensitive information.
+              To gain access to <Link to="/our_programs#mentorshipProgram" style={{ textDecoration: 'none' }}><span className={styles.profileContainer__verified__services}>Mentorship</span></Link> and <span className={styles.profileContainer__verified__services}>Scholarships</span>, please verify your military status.
+            </p>
+
+            <p>
+              Sign in below to get verified!
             </p>
             <Idme />
+            <p className={styles.profileContainer__disclaimer}>
+              We do not store or transfer any of your sensitive information
+            </p>
           </div>
         )}
       </div>
@@ -61,11 +89,11 @@ const Profile = ({ verified }) => (
 );
 
 Profile.propTypes = {
-  verified: PropTypes.bool,
+  verified: PropTypes.bool
 };
 
 Profile.defaultProps = {
-  verified: false,
+  verified: false
 };
 
 export default Profile;

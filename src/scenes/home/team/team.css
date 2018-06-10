@@ -1,16 +1,25 @@
-.team {
+.boardMembers {
+  align-items: flex-start;
   display: flex;
-  flex-wrap: wrap;
-  padding: 20px 0;
-  align-items: center;
+  flex-flow: row wrap;
   justify-content: center;
 }
 
-.board {
-  display: flex;
-  flex-wrap: wrap;
+.staffMembers {
+  composes: boardMembers;
   padding: 20px 0;
-  align-items: center;
-  justify-content: center;
 }
 
+.foundingMembers {
+  padding: 2rem 0 0 0;
+}
+
+@media screen and (max-width: 840px) {
+  .boardMembers,
+  .staffMembers {
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+  }
+}

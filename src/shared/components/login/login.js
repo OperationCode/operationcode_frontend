@@ -1,22 +1,49 @@
 import React, { Component } from 'react';
+import getVal from 'lodash/get';
 import axios from 'axios';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import config from 'config/environment';
-import _ from 'lodash';
+import PropTypes from 'prop-types';
+import queryString from 'query-string';
+import { Link } from 'react-router-dom';
+import Form from 'shared/components/form/form';
+import FormButton from 'shared/components/form/formButton/formButton';
+import FormEmail from 'shared/components/form/formEmail/formEmail';
+import FormInput from 'shared/components/form/formInput/formInput';
+import Section from 'shared/components/section/section';
+import SocialLoginsGrouping from 'shared/components/socialLogin/socialLoginsGrouping';
+import * as CookieHelpers from 'shared/utils/cookieHelper';
 import styles from './login.css';
-import Form from '../form/form';
-import Section from '../section/section';
-import * as CookieHelpers from '../../utils/cookieHelper';
-import FormEmail from '../form/formEmail/formEmail';
-import FormInput from '../form/formInput/formInput';
-import FormButton from '../form/formButton/formButton';
-import SignUpLink from '../signUpLink/signUpLink';
-
-require('./login.css');
-const queryString = require('query-string');
+import SignUpSection from './signUpSection';
 
 class Login extends Component {
+  static propTypes = {
+    history: PropTypes.shape({
+      action: PropTypes.string,
+      block: PropTypes.func,
+      createHref: PropTypes.func,
+      go: PropTypes.func,
+      goBack: PropTypes.func,
+      goForward: PropTypes.func,
+      length: PropTypes.number,
+      listen: PropTypes.func,
+      location: PropTypes.shape({
+        key: PropTypes.string,
+        pathname: PropTypes.string,
+        search: PropTypes.string
+      }),
+      push: PropTypes.func,
+      replace: PropTypes.func
+    }).isRequired,
+    isAuth: PropTypes.bool,
+    sendNotification: PropTypes.func.isRequired,
+    updateRootAuthState: PropTypes.func
+  };
+
+  static defaultProps = {
+    updateRootAuthState: () => {},
+    isAuth: false
+  };
+
   state = {
     email: '',
     emailValid: false,
@@ -29,28 +56,28 @@ class Login extends Component {
     sso: null,
     sig: null,
     ssoParamsPresent: false
-  }
+  };
 
   componentDidMount = () => {
     this.checkForSsoParams();
-  }
+  };
 
   onEmailChange = (value, valid) => {
     this.setState({ email: value, emailValid: valid });
-  }
+  };
 
   onPasswordChange = (value, valid) => {
     this.setState({ password: value, passwordValid: valid });
-  }
+  };
 
   setErrorMessage = (error) => {
-    const errorStatus = _.get(error, ['response', 'status'], -1);
-    const errorMessage = _.get(error, 'message');
+    const errorStatus = getVal(error, ['response', 'status'], -1);
+    const errorMessage = getVal(error, 'message');
     this.setState({ errorStatus, errorMessage });
-  }
+  };
 
   setSsoParams = () => {
-    const parsed = queryString.parse(location.search);
+    const parsed = queryString.parse(location.search); //eslint-disable-line
 
     if (this.state.ssoParamsPresent) {
       this.setState(
@@ -61,7 +88,7 @@ class Login extends Component {
         this.checkSsoLoggedIn
       );
     }
-  }
+  };
 
   // SSO Flow:
   //   * Discourse sends us an SSO token and a signature for that token (shared key)
@@ -81,68 +108,72 @@ class Login extends Component {
   //       to discourse with our payload and sig
   //     * These values are provided by the backend
   checkForSsoParams = () => {
-    const parsed = queryString.parse(location.search);
+    const parsed = queryString.parse(location.search); //eslint-disable-line
 
     if (parsed.sso && parsed.sig) {
-      this.setState(
-        { ssoParamsPresent: true },
-        this.setSsoParams
-      );
+      this.setState({ ssoParamsPresent: true }, this.setSsoParams);
     }
-  }
+  };
 
   checkSsoLoggedIn = () => {
-    if (this.state.ssoParamsPresent && this.props.isLoggedIn) { this.ssoLoggedInRedirect(); }
-  }
+    if (this.state.ssoParamsPresent && this.props.isAuth) {
+      this.ssoLoggedInRedirect();
+    }
+  };
 
   ssoLoggedInRedirect = () => {
-    axios.get(`${config.backendUrl}/sessions/sso?sso=${encodeURI(this.state.sso)}&sig=${this.state.sig}`, {
-      headers: {
-        Authorization: `Bearer ${CookieHelpers.authToken()}`
-      }
-    }).then(({ data }) => {
-      window.location = data.redirect_to;
-    }).catch((error) => {
-      this.setErrorMessage(error);
-    });
-  }
+    axios
+      .get(
+        `${config.backendUrl}/sessions/sso?sso=${encodeURI(this.state.sso)}&sig=${this.state.sig}`,
+        {
+          headers: {
+            Authorization: `Bearer ${CookieHelpers.authToken()}`
+          }
+        }
+      )
+      .then(({ data }) => {
+        window.location = data.redirect_to;
+      })
+      .catch((error) => {
+        this.setErrorMessage(error);
+      });
+  };
 
-  isFormValid = () => this.state.emailValid && this.state.passwordValid
-
-  // This is a temp function to ensure we return a URL if the changes to the API
-  // aren't in place. It can be removed after operationcode_backend#91 has been deployed
-  resolveRedirectUrl = (redirectUrl) => {
-    if (redirectUrl) { return redirectUrl; }
-    return '/profile';
-  }
-
+  isFormValid = () => this.state.emailValid && this.state.passwordValid;
 
   handleOnClick = (e) => {
     e.preventDefault();
 
     if (this.isFormValid()) {
-      axios.post(`${config.backendUrl}/sessions`, {
-        user: {
-          email: this.state.email,
-          password: this.state.password,
-        },
-        sso: this.state.sso,
-        sig: this.state.sig
-      }).then(({ data }) => {
-        CookieHelpers.setUserAuthCookie(data);
-        this.setState({ authenticated: true });
-        this.props.updateRootAuthState((history) => {
+      axios
+        .post(`${config.backendUrl}/sessions`, {
+          user: {
+            email: this.state.email,
+            password: this.state.password
+          },
+          sso: this.state.sso,
+          sig: this.state.sig
+        })
+        .then(({ data }) => {
+          CookieHelpers.setUserAuthCookie(data);
+          this.setState({ authenticated: true });
+          this.props.updateRootAuthState();
+          this.props.sendNotification('success', 'Success', 'You have logged in!');
           if (this.state.ssoParamsPresent) {
             window.location = data.redirect_to;
           } else {
-            history.push(this.resolveRedirectUrl(data.redirect_to));
+            this.props.history.push(data.redirect_to);
           }
+        })
+        .catch((error) => {
+          if (getVal(error, ['response', 'status'], -1) !== 401) {
+            this.props.sendNotification('error', 'Error', 'We will investigate this issue!');
+          }
+
+          this.setErrorMessage(error);
         });
-      }).catch((error) => {
-        this.setErrorMessage(error);
-      });
     }
-  }
+  };
 
   render() {
     const { errorStatus, errorMessage } = this.state;
@@ -154,29 +185,34 @@ class Login extends Component {
     }
 
     return (
-      <Section title="Login" theme="white">
-        <Form autoComplete>
-          <FormEmail id="email" displayName="Email" label="Email" onChange={this.onEmailChange} />
-          <FormInput id="password" displayName="Password" label="Password" inputType="password" onChange={this.onPasswordChange} />
-          {errorFeedback && <h2 className={styles.loginError}>{errorFeedback}</h2>}
-          <FormButton className={styles.Button} text="Login" onClick={this.handleOnClick} />
-        </Form>
-        <Link to="/reset_password">Reset Password</Link>
-        <SignUpLink />
-      </Section>
+      <div className={styles.gridRow}>
+        <Section title="Login" theme="white">
+          <Form autoComplete>
+            <FormEmail id="email" displayName="Email" label="Email" onChange={this.onEmailChange} />
+            <FormInput
+              id="password"
+              displayName="Password"
+              label="Password"
+              inputType="password"
+              onChange={this.onPasswordChange}
+            />
+            {errorFeedback && <h2 className={styles.loginError}>{errorFeedback}</h2>}
+            <FormButton className={styles.loginBtn} text="Login" onClick={this.handleOnClick} />
+            <span className={styles.resetBtn}>
+              Forgot your password? <Link to="/reset_password">Reset it.</Link>
+            </span>
+          </Form>
+
+          <SocialLoginsGrouping
+            history={this.props.history}
+            sendNotification={this.props.sendNotification}
+            updateRootAuthState={this.props.updateRootAuthState}
+          />
+        </Section>
+        <SignUpSection />
+      </div>
     );
   }
 }
-
-
-Login.propTypes = {
-  updateRootAuthState: PropTypes.func,
-  isLoggedIn: PropTypes.bool
-};
-
-Login.defaultProps = {
-  updateRootAuthState: () => {},
-  isLoggedIn: false
-};
 
 export default Login;

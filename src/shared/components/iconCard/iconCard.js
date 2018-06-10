@@ -1,21 +1,40 @@
 /* eslint-disable react/no-danger */
 import React, { ReactPropTypeLocationNames } from 'react';
 import PropTypes from 'prop-types';
-import * as faIcons from 'react-icons/lib/fa';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import * as faIconsBrands from '@fortawesome/fontawesome-free-brands';
+import * as faIconsRegular from '@fortawesome/fontawesome-free-regular';
+import * as faIconsSolid from '@fortawesome/fontawesome-free-solid';
 import styles from './iconCard.css';
 
-const IconCard = ({ fontAwesomeIcon, iconAboveHeading, iconSize, subText, title, url, usingHtml }) => {
-  const Icon = faIcons[fontAwesomeIcon];
+const faModules = {
+  brand: faIconsBrands,
+  regular: faIconsRegular,
+  solid: faIconsSolid
+};
 
+const IconCard = ({
+  fontAwesomeIcon,
+  iconType,
+  iconSize,
+  iconAboveHeading,
+  subText,
+  title,
+  url,
+  usingHtml
+}) => {
+  const faModule = faModules[iconType];
+
+  const icon = <FontAwesomeIcon icon={faModule[fontAwesomeIcon]} size={iconSize} />;
   let iconBefore = null;
   let iconAfter = null;
   let subTextNode = null;
   const titleNode = <h5 className={styles.iconCard__title}>{title}</h5>;
 
   if (iconAboveHeading) {
-    iconBefore = <Icon size={iconSize} />;
+    iconBefore = icon;
   } else {
-    iconAfter = <Icon size={iconSize} />;
+    iconAfter = icon;
   }
 
   function createMarkup() {
@@ -23,7 +42,12 @@ const IconCard = ({ fontAwesomeIcon, iconAboveHeading, iconSize, subText, title,
   }
 
   if (usingHtml) {
-    subTextNode = <span className={styles.iconCard__subtext} dangerouslySetInnerHTML={createMarkup()} />;
+    subTextNode = (
+      <span
+        className={styles.iconCard__subtext}
+        dangerouslySetInnerHTML={createMarkup()}
+      />
+    );
   } else {
     subTextNode = <span className={styles.iconCard__subtext}>{subText}</span>;
   }
@@ -31,7 +55,12 @@ const IconCard = ({ fontAwesomeIcon, iconAboveHeading, iconSize, subText, title,
   if (url) {
     if (subText) {
       return (
-        <a href={url} className={[styles.iconCard, styles.iconCardWithSubText].join(' ')} target="_blank" rel="noopener noreferrer">
+        <a
+          href={url}
+          className={[styles.iconCard, styles.iconCardWithSubText].join(' ')}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {iconBefore}
           {titleNode}
           {iconAfter}
@@ -40,7 +69,12 @@ const IconCard = ({ fontAwesomeIcon, iconAboveHeading, iconSize, subText, title,
       );
     }
     return (
-      <a href={url} className={styles.iconCard} target="_blank" rel="noopener noreferrer">
+      <a
+        href={url}
+        className={styles.iconCard}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {iconBefore}
         {titleNode}
         {iconAfter}
@@ -69,7 +103,7 @@ const IconCard = ({ fontAwesomeIcon, iconAboveHeading, iconSize, subText, title,
 function subTextLengthChecker(props, propName) {
   if (props[propName]) {
     const str = props[propName];
-    const maxLen = 150;
+    const maxLen = 180;
     if (typeof str !== 'string') {
       return Error(`${propName} must be a string`);
     }
@@ -86,9 +120,7 @@ function createChainableTypeChecker(validate) {
     if (props[propName] === null) {
       const locationName = ReactPropTypeLocationNames[location];
       if (isRequired) {
-        return new Error(
-          (`Required ${locationName} ${propName} was not specified in ${componentName}.`)
-        );
+        return new Error(`Required ${locationName} ${propName} was not specified in ${componentName}.`);
       }
       return null;
     }
@@ -108,17 +140,19 @@ IconCard.propTypes = {
   subText: subTextLength,
   fontAwesomeIcon: PropTypes.string.isRequired,
   url: PropTypes.string,
-  iconSize: PropTypes.number,
+  iconType: PropTypes.oneOf(Object.keys(faModules)),
+  iconSize: PropTypes.string,
   iconAboveHeading: PropTypes.bool,
-  usingHtml: PropTypes.bool
+  usingHtml: PropTypes.bool,
 };
 
 IconCard.defaultProps = {
   subText: undefined,
   url: undefined,
-  iconSize: 100,
+  iconType: 'solid',
+  iconSize: '6x',
   iconAboveHeading: false,
-  usingHtml: false
+  usingHtml: false,
 };
 
 export default IconCard;

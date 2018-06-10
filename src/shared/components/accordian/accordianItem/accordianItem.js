@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from './accordianItem.css';
 
 const AccordianItem = () => (
@@ -9,12 +8,5 @@ const AccordianItem = () => (
     </a>
   </dt>
 );
-
-AccordianItem.PropTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.element),
-    PropTypes.element
-  ]).isRequired
-};
 
 export default AccordianItem;

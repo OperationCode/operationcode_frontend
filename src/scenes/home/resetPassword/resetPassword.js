@@ -10,17 +10,21 @@ const queryString = require('query-string');
 class ResetPassword extends Component {
   state = {
     resetPasswordToken: null
-  }
+  };
 
   componentDidMount = () => {
-    const parsed = queryString.parse(location.search);
+    const parsed = queryString.parse(window.location.search);
     this.setState({ resetPasswordToken: parsed.reset_password_token });
-  }
+  };
 
   render() {
     return (
       <Section className={styles.resetPassword} title="Reset Password">
-        { this.state.resetPasswordToken ? <SetPassword resetPasswordToken={this.state.resetPasswordToken} /> : <RequestToken /> }
+        {this.state.resetPasswordToken ? (
+          <SetPassword resetPasswordToken={this.state.resetPasswordToken} />
+        ) : (
+          <RequestToken />
+        )}
         <SignUpLink />
       </Section>
     );

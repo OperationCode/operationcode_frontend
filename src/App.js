@@ -2,18 +2,20 @@ import React, { Component } from 'react';
 import { Route, Router } from 'react-router';
 import ReactGA from 'react-ga';
 import createHistory from 'history/createBrowserHistory';
+import ScrollToTop from 'shared/components/scrollToTop/scrollToTop';
 import Home from './scenes/home/home';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.history = createHistory();
-  }
+const history = createHistory();
+ReactGA.initialize('UA-75642413-1');
 
+class App extends Component {
   componentDidMount() {
     if (process.env.NODE_ENV === 'production') {
-      ReactGA.initialize('UA-75642413-1', { debug: false });
-      this.history.listen((location) => {
+      // History listening doesn't catch first page load
+      ReactGA.set({ page: history.location.pathname });
+      ReactGA.pageview(history.location.pathname);
+
+      history.listen((location) => {
         ReactGA.set({ page: location.pathname });
         ReactGA.pageview(location.pathname);
       });
@@ -22,8 +24,10 @@ class App extends Component {
 
   render() {
     return (
-      <Router history={this.history} >
-        <Route component={Home} />
+      <Router history={history}>
+        <ScrollToTop>
+          <Route path="/" component={Home} />
+        </ScrollToTop>
       </Router>
     );
   }

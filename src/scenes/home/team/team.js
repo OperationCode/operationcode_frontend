@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import Section from 'shared/components/section/section';
 import QuoteBanner from 'shared/components/quoteBanner/quoteBanner';
 import TeamCard from 'shared/components/teamCard/teamCard';
-import StaffCard from 'shared/components/staffCard/staffCard';
-import BoardCard from 'shared/components/boardCard/boardCard';
 import styles from './team.css';
 
 class Team extends Component {
@@ -11,78 +10,39 @@ class Team extends Component {
     super(props);
 
     this.state = {
-      members: []
+      boardMembers: null,
+      staffMembers: null,
+      errorResponse: false
     };
   }
 
-  componentWillMount() {
-    return fetch('https://api.operationcode.org/api/v1/team_members.json').then(response =>
-      response.json().then((data) => {
-        this.setState({ members: data });
+  componentDidMount() {
+    axios
+      .get('https://api.operationcode.org/api/v1/team_members.json')
+      .then((response) => {
+        const boardMembers = response.data.filter(x => x.group === 'board');
+        const staffMembers = response.data.filter(x => x.group === 'team');
+        const boardChair = 'David Molina';
+        const CEO = 'Conrad Hollomon';
+
+        this.setState({
+          boardMembers: this.getOrderedGroup(boardMembers, boardChair),
+          staffMembers: this.getOrderedGroup(staffMembers, CEO)
+        });
       })
-    );
+      .catch(() => this.setState({ errorResponse: true }));
+  }
+
+  // returns ordered board/staff group w/ group leader first
+  getOrderedGroup = (group, leaderName) => {
+    const isLeader = member => member.name === leaderName;
+    const sortedMembers = group.sort((a, b) => a.id - b.id);
+    const leader = sortedMembers.filter(x => isLeader(x));
+    const remainingMembers = sortedMembers.filter(x => !isLeader(x));
+    return [...leader, ...remainingMembers];
   }
 
   render() {
-    const team = this.state.members.map(member =>
-      (
-        <TeamCard
-          key={`${Math.random()} + ${member.name}`}
-          name={member.name}
-          role={member.role}
-        />
-      )
-    );
-    const ceo = {
-      name: 'David Molina',
-      role: 'Founder / CEO',
-      src: './images/DavidMolina.jpg',
-      alt: 'David Molina',
-      twitter: '@davidcmolina',
-      email: 'david@operationcode.org'
-    };
-    const coo = {
-      name: 'Conrad Hollomon',
-      role: 'COO',
-      src: './images/ConradHollomon.jpg',
-      alt: 'Conrad Hollomon',
-      twitter: '@hollomancer',
-      email: 'conrad@operationcode.org'
-    };
-    const cto = {
-      name: 'Rick Rein',
-      role: 'CTO',
-      src: './images/RickRein.jpg',
-      alt: 'Rick Rein',
-      twitter: '@rickrrrrrr',
-      email: 'rick@operationcode.org'
-    };
-
-    const chair = {
-      name: 'Dr. James Davis',
-      role: 'Chair',
-      src: './images/james.jpg',
-      alt: 'Dr. James Davis'
-    };
-    const vicechair = {
-      name: 'Dr. Tyrone Grandison',
-      role: 'Vice Chair',
-      src: './images/tyrone.png',
-      alt: 'Dr. Tyrone Grandison'
-    };
-    const treasurer = {
-      name: 'Elmer Thomas',
-      role: 'Treasurer',
-      src: './images/elmer.png',
-      alt: 'Elmer Thomas'
-    };
-    const secretary = {
-      name: 'Thomas Ciszec',
-      role: 'Secretary',
-      src: './images/thomas.jpg',
-      alt: 'Thomas Ciszec'
-    };
-
     return (
       <div>
         <QuoteBanner
@@ -90,29 +50,49 @@ class Team extends Component {
           quote="To care for him who shall have borne the battle and for his widow, and his orphan."
         />
 
-        <Section title="Our Staff" theme="white">
-          <p>
-            Our all volunteer staff are dedicated individuals who come from a wide variety of backgrounds, including members of both the civilian and military community.
-          </p>
-          <div className={styles.team}>
-            { team }
-          </div>
-        </Section>
-
-        <Section title="Our Team" theme="gray">
-          <div className={styles.board}>
-            <StaffCard name={ceo.name} role={ceo.role} src={ceo.src} twitter={ceo.twitter} email={ceo.email} alt={ceo.alt} />
-            <StaffCard name={coo.name} role={coo.role} src={coo.src} twitter={coo.twitter} email={coo.email} alt={coo.alt} />
-            <StaffCard name={cto.name} role={cto.role} src={cto.src} twitter={cto.twitter} email={cto.email} alt={cto.alt} />
-          </div>
-        </Section>
-
         <Section title="Our Board" theme="white">
-          <div className={styles.board}>
-            <BoardCard name={chair.name} role={chair.role} src={chair.src} alt={chair.alt} />
-            <BoardCard name={vicechair.name} role={vicechair.role} src={vicechair.src} alt={vicechair.alt} />
-            <BoardCard name={treasurer.name} role={treasurer.role} src={treasurer.src} alt={treasurer.alt} />
-            <BoardCard name={secretary.name} role={secretary.role} src={secretary.src} alt={secretary.alt} />
+          <div className={styles.boardMembers}>
+            {this.state.boardMembers &&
+              this.state.boardMembers.map(boardMember => (
+                <TeamCard
+                  key={`${boardMember.name} + ${boardMember.role}`}
+                  name={boardMember.name}
+                  role={boardMember.role}
+                  description={boardMember.description}
+                  imageSrc={boardMember.image_src}
+                />
+              ))}
+          </div>
+          <div className={styles.foundingMembers}>
+            <p>
+              Operation Code deeply appreciates the time, energy, and hard work
+              of our <b>Founding Board Members</b>, including Mark Kerr (Chair),
+              Laura Gomez (Vice Chair), Dr. Tyrone Grandison (Vice Chair), Dr. Stacy
+              Chin (Director of Fundraising Committee), Liza Rodewald (Director of
+              Military Families Committee), Pete Runyon (Secretary/ Treasurer), Josh
+              Carter, Nick Frost, and Aimee Knight on their support, dedication and
+              commitment in the early days.
+            </p>
+
+            <p style={{ textAlign: 'center' }}>
+              <em>Thank you for setting us up for success!</em>
+            </p>
+          </div>
+        </Section>
+
+        <Section title="Our Staff" theme="white">
+          <div className={styles.staffMembers}>
+            {this.state.staffMembers &&
+              this.state.staffMembers.map(staffMember => (
+                <TeamCard
+                  key={`${staffMember.name} + ${staffMember.role}`}
+                  name={staffMember.name}
+                  role={staffMember.role}
+                  slack={staffMember.slackUsername}
+                  email={staffMember.email}
+                  isBoard={false}
+                />
+              ))}
           </div>
         </Section>
       </div>

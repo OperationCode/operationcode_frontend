@@ -1,49 +1,140 @@
 .home {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 .main {
-    display: flex;
-    flex: 1;
+  display: flex;
+  flex: 1;
 }
 
 .main > div {
-    width: 100%;
+  width: 100%;
 }
 
 .homeImage {
-    height:300px;
+  height: 300px;
 }
 
-.backgroundImage {
-    background-size: 100%;
-    background-position: center top;
-    background-repeat: no-repeat;
+.backgroundImageAbout,
+.backgroundImagePolicy {
+  background-size: 100%;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1640px) {
+  .backgroundImagePolicy {
+    background-size: cover;
+  }
 }
 
 @media screen and (max-width: 1200px) {
-  .backgroundImage {
+  .backgroundImageAbout {
     background-size: auto 17%;
   }
 }
 
 @media screen and (max-width: 1000px) {
-  .backgroundImage {
+  .backgroundImageAbout {
     background-size: auto 15%;
   }
 }
 
 @media screen and (max-width: 800px) {
-  .backgroundImage {
+  .backgroundImageAbout {
     background-size: auto 8%;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .backgroundImage {
+  .backgroundImageAbout {
     background-size: auto 5%;
+  }
+}
+
+.backgroundImageGettingStarted,
+.backgroundImageTeam,
+.backgroundImageHistory {
+  background-size: 100%;
+  background-position: right top;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1160px) {
+  .backgroundImageTeam {
+    background-size: auto 25%;
+  }
+
+  .backgroundImageGettingStarted {
+    background-size: auto 30%;
+  }
+
+  .backgroundImageHistory {
+    background-size: auto 9%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .backgroundImageGettingStarted {
+    background-size: auto 25%;
+    background-position: top;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .backgroundImageGettingStarted {
+    background-size: auto 20%;
+  }
+
+  .backgroundImageTeam {
+    background-size: auto 15%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .backgroundImagePolicy {
+    background-size: auto 55%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .backgroundImageTeam {
+    background-size: auto 10%;
+  }
+
+  .backgroundImageHistory {
+    background-size: auto 7%;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .backgroundImageHistory {
+    background-size: auto 5%;
+    background-position: top right -55px;
+  }
+
+  .backgroundImagePolicy {
+    background-size: auto 55%;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .backgroundImageHistory {
+    background-size: auto 6%;
+  }
+}
+
+@media screen and (max-width: 427px) {
+  .backgroundImageTeam {
+    background-size: auto 7%;
+  }
+}
+
+@media screen and (max-width: 365px) {
+  .backgroundImageHistory {
+    background-size: auto 4%;
   }
 }

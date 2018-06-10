@@ -3,12 +3,9 @@ import PropTypes from 'prop-types';
 import styles from './formTextArea.css';
 
 class FormTextArea extends Component {
-  constructor() {
-    super();
-    this.state = {
-      value: ''
-    };
-  }
+  state = {
+    value: ''
+  };
 
   handleChange = (event) => {
     this.setState({ value: event.target.value }, () => {
@@ -16,12 +13,16 @@ class FormTextArea extends Component {
         this.props.onChange(this.state.value);
       }
     });
-  }
+  };
 
   render() {
     return (
       <div>
-        <textarea className={styles.text_area} onChange={this.handleChange} placeholder={this.props.placeHolder} />
+        <textarea
+          className={styles.text_area}
+          onChange={this.handleChange}
+          placeholder={this.props.placeHolder}
+        />
       </div>
     );
   }
