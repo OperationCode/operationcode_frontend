@@ -49,6 +49,10 @@ class CodeSchools extends Component {
             <br />
             We encourage you to check out the schools below, do your research, and ask fellow
             techies in our Slack Community.
+            <br />
+            <br />
+            <strong>Code Schools:</strong> if you&apos;d like your school to be listed here, please
+            fill out our <a href="http://op.co.de/code-school-request">request form</a>.
           </p>
 
           <div className={styles.filterButtonDiv}>
