@@ -2,6 +2,7 @@ import omit from 'lodash/omit';
 import React, { Component } from 'react';
 import axios from 'axios';
 import LinkButton from 'shared/components/linkButton/linkButton';
+import OutboundLink from 'shared/components/outboundLink/outboundLink';
 import Section from 'shared/components/section/section';
 import ApprovedSchools from './approvedSchools/approvedSchools';
 import PartnerSchools from './partnerSchools/partnerSchools';
@@ -52,7 +53,8 @@ class CodeSchools extends Component {
             <br />
             <br />
             <strong>Code Schools:</strong> if you&apos;d like your school to be listed here, please
-            fill out our <a href="http://op.co.de/code-school-request">request form</a>.
+            fill out our{' '}
+            <OutboundLink href="http://op.co.de/code-school-request">request form</OutboundLink>.
           </p>
 
           <div className={styles.filterButtonDiv}>
