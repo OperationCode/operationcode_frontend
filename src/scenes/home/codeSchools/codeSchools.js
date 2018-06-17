@@ -2,6 +2,7 @@ import omit from 'lodash/omit';
 import React, { Component } from 'react';
 import axios from 'axios';
 import LinkButton from 'shared/components/linkButton/linkButton';
+import OutboundLink from 'shared/components/outboundLink/outboundLink';
 import Section from 'shared/components/section/section';
 import ApprovedSchools from './approvedSchools/approvedSchools';
 import PartnerSchools from './partnerSchools/partnerSchools';
@@ -49,6 +50,16 @@ class CodeSchools extends Component {
             <br />
             We encourage you to check out the schools below, do your research, and ask fellow
             techies in our Slack Community.
+            <br />
+            <br />
+            <strong>Code Schools:</strong> if you&apos;d like your school to be listed here, please
+            fill out our{' '}
+            <OutboundLink
+              href="https://op.co.de/code-school-request"
+              analyticsEventLabel="Code School Form"
+            >
+              request form
+            </OutboundLink>.
           </p>
 
           <div className={styles.filterButtonDiv}>
