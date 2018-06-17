@@ -54,7 +54,12 @@ class CodeSchools extends Component {
             <br />
             <strong>Code Schools:</strong> if you&apos;d like your school to be listed here, please
             fill out our{' '}
-            <OutboundLink href="https://op.co.de/code-school-request">request form</OutboundLink>.
+            <OutboundLink
+              href="https://op.co.de/code-school-request"
+              analyticsEventLabel="Code School Form"
+            >
+              request form
+            </OutboundLink>.
           </p>
 
           <div className={styles.filterButtonDiv}>
