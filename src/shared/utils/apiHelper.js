@@ -53,15 +53,3 @@ export function postRequest({
   });
 }
 
-export function updateRequest({ request, status, mentor }) {
-  const authHeader = setAuthorizationHeader();
-
-  return axios.patch(`${config.backendUrl}/requests/${request}`, {
-    request: {
-      status,
-      mentor
-    }
-  }, {
-    headers: authHeader
-  });
-}

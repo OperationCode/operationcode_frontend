@@ -15,13 +15,20 @@ class MentorRequest extends Component {
     services: []
   };
 
-  componentDidMount() {
-    Promise.all([ApiHelpers.getServices(), ApiHelpers.getMentors()]).then((values) => {
+  async componentDidMount() {
+    try {
+      const [services, mentors] = await Promise.all([
+        ApiHelpers.getServices(),
+        ApiHelpers.getMentors()
+      ]);
+
       this.setState({
-        services: values[0],
-        mentors: values[1]
+        services,
+        mentors
       });
-    }).catch(this.setFetchError);
+    } catch (error) {
+      this.setFetchError(error);
+    }
   }
 
   onSlackNameChange = (name) => {
