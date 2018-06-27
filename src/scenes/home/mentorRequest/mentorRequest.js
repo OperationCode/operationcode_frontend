@@ -12,8 +12,7 @@ import styles from './mentorRequest.css';
 class MentorRequest extends Component {
   state = {
     mentors: [],
-    services: [],
-    loggedIn: false
+    services: []
   };
 
   componentDidMount() {
@@ -81,11 +80,7 @@ class MentorRequest extends Component {
   }
 
   render() {
-    const { error, loggedIn, success } = this.state;
-
-    if (!loggedIn) {
-      return <Redirect to="/login" />;
-    }
+    const { error, success } = this.state;
 
     return (
       <Section className={styles.mentorRequest} title="Mentor Service Request">
@@ -147,7 +142,10 @@ class MentorRequest extends Component {
           </div>
           <div className={styles.formRow}>
             <h2>Additional Details</h2>
-            <p>Please provide us with any more info that may help in us in assigning a mentor to this request.</p>
+            <p>
+              Please provide us with any more info
+              that may help in us in assigning a mentor to this request.
+            </p>
             <FormInput id="additionalDetails" onChange={this.onDetailsChange} />
             <FormButton className={styles.joinButton} text="Request Mentor" onSubmit={this.handleOnClick} theme="red" />
             {success && <Redirect to="/thanks" />}
