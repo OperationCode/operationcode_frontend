@@ -35,7 +35,7 @@ class MilitaryInfo extends Component {
         <FormSelect
           id="branch"
           options={BRANCH}
-          prompt={this.state.branchPrompt}
+          prompt="Branch / Affiliation"
           onChange={e => this.props.update(e, e.target.value)}
         />
       </Form>
