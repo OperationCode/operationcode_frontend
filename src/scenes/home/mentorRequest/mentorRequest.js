@@ -10,154 +10,174 @@ import styles from './mentorRequest.css';
 
 
 class MentorRequest extends Component {
-  state = {
-    mentors: [],
-    services: []
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      isLoading: true
+    };
+  }
 
   async componentDidMount() {
     try {
-      const [services, mentors] = await Promise.all([
-        ApiHelpers.getServices(),
-        ApiHelpers.getMentors()
-      ]);
-
+      const { mentors, services, skillsets } = await ApiHelpers.getMentorshipData();
       this.setState({
+        mentors,
         services,
-        mentors
+        skillsets,
+        isLoading: false
       });
     } catch (error) {
-      this.setFetchError(error);
+      this.setState({ error: 'There was an error building the form. Please try again.' });
     }
   }
 
-  onSlackNameChange = (name) => {
+  onSlackUserNameChange = (value) => {
     this.setState({
-      slackName: name
+      slackUserName: value
     });
   }
 
-  onDetailsChange = (details) => {
+  onAdditionalDetailsChange = (value) => {
     this.setState({
-      additionalDetails: details
+      additionalDetails: value
     });
   }
 
-  onUpdateSelect = (name, event) => {
+  onSelectMentor = (event) => {
     this.setState({
-      [name]: event.target.value
+      mentorId: event.target.value
     });
   }
 
-  setFetchError = ({ response }) => {
-    if (response.status === 401) {
-      this.setState({ loggedIn: false });
-    } else {
-      this.setState({ error: 'There was an error building the form. Please try again' });
-    }
+  onSelectServices = (event) => {
+    const serviceName = event.target.value;
+    this.setState({
+      selectedServices: serviceName
+    });
   }
 
-  buildServiceOptions = () =>
-    this.state.services.map(service => ({ value: service.id, label: service.name }))
+  onSelectSkillsets = (event) => {
+    const selectedSkillsets = this.state.skillsets
+      .filter(x => x.id === event.target.value)
+      .map(x => x.name).join(',');
 
-  buildMentorOptions = () =>
-    this.state.mentors.map(mentor => ({ value: mentor.id, label: `${mentor.last_name}, ${mentor.first_name}` }))
+    this.setState({
+      selectedSkillsets
+    });
+  }
 
-  buildLanguageOptions = () =>
-    [
-      { value: 'javascript', label: 'Javascript' },
-      { value: 'ruby', label: 'Ruby' },
-      { value: 'python', label: 'Python' },
-      { value: 'java', label: 'Java' },
-      { value: 'dotnet', label: '.NET' },
-      { value: 'htmlcss', label: 'HTML/CSS' }
-    ]
+  buildOptions = dataset => dataset
+    .sort((a, b) => a.name.localeCompare(b.name)) // sort alphabetically
+    .map(x => ({ value: x.id, label: x.name }))
 
-  handleOnClick = () => {
-    ApiHelpers.postRequest({
-      language: this.state.languageType,
-      additionalDetails: this.state.additionalDetails,
-      service: this.state.serviceType,
-      mentor: this.state.mentor
-    }).then(() => {
+  handleOnClick = async (event) => {
+    event.preventDefault();
+
+    try {
+      await ApiHelpers.createMentorRequest({
+        slackUser: this.state.slackUserName,
+        serviceIds: this.state.selectedServices,
+        skillsets: this.state.selectedSkillsets,
+        additionalDetails: this.state.additionalDetails,
+        mentorId: this.state.mentorId
+      });
+
       this.setState({ success: true });
-    }).catch(() => {
+    } catch (error) {
+      /* AIRTABLE MAINTENANCE NOTE:
+      The skillsets property that is submitted must contain string values
+      that are an exact match for the predefined skillset options on the Airtable
+      Mentor Request table, or the request will error out. The skillset FormSelect options that
+      a user selects from to set this property are fetched via API from the Airtable Skillsets
+      table, which contains exact matches for the predefined skillset options on the Airtable
+      Mentor Request table. */
       this.setState({ error: 'There was an error requesting a mentor.' });
-    });
+    }
   }
 
   render() {
-    const { error, success } = this.state;
-
     return (
       <Section className={styles.mentorRequest} title="Mentor Service Request">
-        { error && <div className={styles.mentorRequestError}>{error}</div> }
-        <Form className={styles.mentorRequestForm}>
-          <span>
-            Please use this form to schedule a mentorship session.
-            Each session is 30 minutes. If you think youll need more time
-            please let us know in the additional comments field below.
-          </span>
+        { this.state.error && <div className={styles.mentorRequestError}>{this.state.error}</div> }
+        { this.state.isLoading && <div>Loading...</div> }
+        { !this.state.isLoading &&
+          <Form className={styles.mentorRequestForm}>
+            <span>
+              Please use this form to schedule a mentorship session.
+              Each session is 30 minutes. If you think you&apos;ll need more time,
+              please let us know in the additional comments field below.
+            </span>
 
-          <div className={styles.formBlock}>
-            <div className={styles.formElement}>
-              <h2>Slack Name</h2>
-              <p>Using Slack is required for mentorship.</p>
-              <FormInput
-                id="slackName"
-                placeholder="Slack username"
-                onChange={this.onSlackNameChange}
-              />
-            </div>
-          </div>
-
-          <div className={styles.formBlock}>
-            <div className={styles.formElement}>
-              <h2>Service</h2>
-              <p>Which one of our services would you like to book?</p>
-              <FormSelect
-                id="serviceType"
-                prompt="Choose service"
-                options={this.buildServiceOptions()}
-                onChange={e => this.onUpdateSelect('serviceType', e)}
-              />
-            </div>
-          </div>
-
-          <div className={styles.formBlock}>
-            <div className={styles.formElement}>
-              <h2>Language</h2>
-              <p>Do you need a mentor for a specific language?</p>
-              <FormSelect
-                id="languageType"
-                options={this.buildLanguageOptions()}
-                onChange={e => this.onUpdateSelect('languageType', e)}
-                prompt="Select language"
-              />
+            <div className={styles.formBlock}>
+              <div className={styles.formElement}>
+                <h2>Slack User Name</h2>
+                <FormInput
+                  id="slackUser"
+                  placeholder="Slack user name"
+                  onChange={this.onSlackUserNameChange}
+                />
+              </div>
             </div>
 
-            <div className={styles.formElement}>
-              <h2>Mentor</h2>
-              <p>Would you like to pick a specific mentor?</p>
-              <FormSelect
-                id="mentor"
-                prompt="Choose mentor"
-                options={this.buildMentorOptions()}
-                onChange={e => this.onUpdateSelect('mentor', e)}
-              />
+            <div className={styles.formBlock}>
+              <div className={styles.formElement}>
+                <h2>Email</h2>
+                <FormInput
+                  id="email"
+                  placeholder="Email"
+                  onChange={this.onSlackNameChange}
+                />
+              </div>
             </div>
-          </div>
-          <div className={styles.formRow}>
-            <h2>Additional Details</h2>
-            <p>
-              Please provide us with any more info
-              that may help in us in assigning a mentor to this request.
-            </p>
-            <FormInput id="additionalDetails" onChange={this.onDetailsChange} />
-            <FormButton className={styles.joinButton} text="Request Mentor" onSubmit={this.handleOnClick} theme="red" />
-            {success && <Redirect to="/thanks" />}
-          </div>
-        </Form>
+
+            <div className={styles.formBlock}>
+              <div className={styles.formElement}>
+                <h2>Service</h2>
+                <p>Which one of our services would you like to book?</p>
+                <FormSelect
+                  id="serviceType"
+                  prompt="Choose service"
+                  options={this.buildOptions(this.state.services)}
+                  onChange={e => this.onSelectServices(e)}
+                />
+              </div>
+            </div>
+
+            <div className={styles.formBlock}>
+              <div className={styles.formElement}>
+                <h2>Skillset</h2>
+                <p>Do you need a mentor for a specific language or area of software development?</p>
+                <FormSelect
+                  id="languageType"
+                  options={this.buildOptions(this.state.skillsets)}
+                  onChange={e => this.onSelectSkillsets(e)}
+                  prompt="Select language"
+                />
+              </div>
+
+              <div className={styles.formElement}>
+                <h2>Mentor</h2>
+                <p>Would you like to pick a specific mentor?</p>
+                <FormSelect
+                  id="mentor"
+                  prompt="Choose mentor"
+                  options={this.buildOptions(this.state.mentors)}
+                  onChange={e => this.onSelectMentor(e)}
+                />
+              </div>
+            </div>
+            <div className={styles.formRow}>
+              <h2>Additional Details</h2>
+              <p>
+                Please provide us with any more info
+                that may help in us in assigning a mentor to this request.
+              </p>
+              <FormInput id="additionalDetails" onChange={this.onAdditionalDetailsChange} />
+              <FormButton className={styles.joinButton} text="Request Mentor" onClick={e => this.handleOnClick(e)} theme="red" />
+              {this.state.success && <Redirect to="/thanks" />}
+            </div>
+          </Form>
+        }
       </Section>
     );
   }
