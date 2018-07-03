@@ -7,10 +7,6 @@ import { MILSTATUS, BRANCH } from 'shared/constants/status';
 import styles from './formComponents.css';
 
 class MilitaryInfo extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <Form className={styles.signup}>
@@ -20,7 +16,7 @@ class MilitaryInfo extends Component {
           id="militaryStatus"
           options={MILSTATUS}
           prompt="Current Military Status"
-          onChange={e => this.onChange(e)}
+          onChange={e => this.props.update(e, e.target.value)}
         />
         <FormSelect
           id="branch"
