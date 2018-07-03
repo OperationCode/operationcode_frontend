@@ -139,11 +139,6 @@ export const BRANCH = [
   }
 ];
 
-export const BRANCH_PROMPT = {
-  spouse: "Your Partner's Branch of Service",
-  other: 'Your Branch of Service'
-};
-
 export const LANGUAGES = [
   'Javascript',
   'Ruby',

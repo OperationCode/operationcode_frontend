@@ -3,23 +3,13 @@ import { Line } from 'rc-progress';
 import Form from 'shared/components/form/form';
 import PropTypes from 'prop-types';
 import FormSelect from 'shared/components/form/formSelect/formSelect';
-import { MILSTATUS, BRANCH, BRANCH_PROMPT } from 'shared/constants/status';
+import { MILSTATUS, BRANCH } from 'shared/constants/status';
 import styles from './formComponents.css';
 
 class MilitaryInfo extends Component {
   constructor(props) {
     super(props);
-    this.state = { branchPrompt: BRANCH_PROMPT.other };
   }
-
-  onChange = (e) => {
-    this.props.update(e, e.target.value);
-    if (e.target.value === 'spouse') {
-      this.setState({ branchPrompt: BRANCH_PROMPT.spouse });
-    } else {
-      this.setState({ branchPrompt: BRANCH_PROMPT.other });
-    }
-  };
 
   render() {
     return (
