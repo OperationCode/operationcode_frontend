@@ -15,7 +15,7 @@ class Preview extends Component {
       <a className={styles.scholarshipPreviewLink} href={`scholarships/${scholarship.id}/apply`}>
         <div className={styles.preview}>
           <h6 className={styles.previewHeader6}>{scholarship.name}</h6>
-          <LinkButton link="approvedSchools" text="Read More" theme="blue" scrollLink />
+          <div className={styles.buttonCenter}><LinkButton text="Read More" theme="blue" scrollLink /></div>
         </div>
       </a>
     );
