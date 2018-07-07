@@ -5,7 +5,7 @@ import styles from './preview.css';
 
 class Preview extends Component {
   snip = (description) => {
-    const str = `${description.substr(0, 300)}... Read more`;
+    const str = `${description.substr(0, 300)}...`;
     return str;
   }
 
