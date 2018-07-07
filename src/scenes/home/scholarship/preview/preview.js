@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import LinkButton from 'shared/components/linkButton/linkButton';
 import PropTypes from 'prop-types';
 import styles from './preview.css';
 
 class Preview extends Component {
   snip = (description) => {
-    const str = `${description.substr(0, 300)}...`;
+    const str = `${description.substr(0, 300)}... Read more`;
     return str;
   }
 
@@ -14,7 +15,7 @@ class Preview extends Component {
       <a className={styles.scholarshipPreviewLink} href={`scholarships/${scholarship.id}/apply`}>
         <div className={styles.preview}>
           <h6 className={styles.previewHeader6}>{scholarship.name}</h6>
-          <span> {this.snip(scholarship.description)} </span>
+          <LinkButton link="approvedSchools" text="Read More" theme="blue" scrollLink />
         </div>
       </a>
     );
