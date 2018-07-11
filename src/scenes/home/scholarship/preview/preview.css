@@ -1,9 +1,3 @@
-.scholarshipPreviewLink {
-  text-decoration: none;
-  font-family: "Noto Serif", sans-serif;
-  color: rgb(71, 86, 107);
-}
-
 .preview {
   position: relative;
   background: rgb(255, 255, 255);
@@ -12,15 +6,6 @@
   padding: 1em 1em;
   border-radius: .28571429rem;
   border: 1px solid rgba(34,36,38,.15);
-}
-
-.preview:hover {
-  -webkit-box-shadow: 0 14px 28px rgba(0,0,0,0.25);
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25);
-}
-
-.preview:hover > h6::after {
-  background-color: rgb(65, 164, 192);
 }
 
 .previewHeader6 {
@@ -32,11 +17,11 @@
   flex-grow: 1;
   height: 3px;
   content: '\a0';
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgb(65, 164, 192);
   align-self: center;
   margin: 0 10px 5px 10px;
 }
 
-.buttonCenter {
+.buttonContainer {
   text-align: center;
 }
