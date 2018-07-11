@@ -9,7 +9,7 @@ class Preview extends Component {
     return (
       <div className={styles.preview}>
         <h6 className={styles.previewHeader6}>{scholarship.name}</h6>
-        <div className={styles.buttonContainer}><LinkButton link={`scholarships/${scholarship.id}/apply`} text="Read More" theme="blue" scrollLink /></div>
+        <div className={styles.buttonContainer}><LinkButton link={`scholarships/${scholarship.id}/apply`} text="Read More" theme="blue" /></div>
       </div>
     );
   }
