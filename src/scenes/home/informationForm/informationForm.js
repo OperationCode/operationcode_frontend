@@ -99,6 +99,7 @@ class SignupInformation extends Component {
         employment_status: this.state.workInfo,
         company_name: this.state.company,
         company_role: this.state.role,
+        military_status: this.state.militaryStatus,
         // Convert string to boolean for DB
         volunteer: this.state.identifier === 'true',
         branch_of_service: this.state.branch,
@@ -182,9 +183,9 @@ class SignupInformation extends Component {
     return (
       <Section title="More Info">
         <p>
-          At Op-Code, we are dedicated to helping our community thrive. In order to do so, we need
-          to collect some information to better serve you. Please take a minute to complete these
-          steps and help us on our mission to code the future. We will never sell or distribute your
+          At Operation Code, we are dedicated to helping our community thrive. In order to do so, we 
+          need to collect some information to better serve you. Please take a minute to complete these
+          steps, and help us on our mission to code the future! We will never sell or distribute your
           information.
         </p>
         {showStep}
