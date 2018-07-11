@@ -1,22 +1,16 @@
 import React, { Component } from 'react';
+import LinkButton from 'shared/components/linkButton/linkButton';
 import PropTypes from 'prop-types';
 import styles from './preview.css';
 
 class Preview extends Component {
-  snip = (description) => {
-    const str = `${description.substr(0, 300)}...`;
-    return str;
-  }
-
   render() {
     const { scholarship } = this.props;
     return (
-      <a className={styles.scholarshipPreviewLink} href={`scholarships/${scholarship.id}/apply`}>
-        <div className={styles.preview}>
-          <h6 className={styles.previewHeader6}>{scholarship.name}</h6>
-          <span> {this.snip(scholarship.description)} </span>
-        </div>
-      </a>
+      <div className={styles.preview}>
+        <h6 className={styles.previewHeader6}>{scholarship.name}</h6>
+        <div className={styles.buttonContainer}><LinkButton link={`scholarships/${scholarship.id}/apply`} text="Read More" theme="blue" scrollLink /></div>
+      </div>
     );
   }
 }
