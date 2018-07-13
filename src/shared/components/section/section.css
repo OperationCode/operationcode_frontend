@@ -15,6 +15,15 @@
   background-color: #FFF;
 }
 
+.condensed {
+  min-height: 0;
+}
+
+.whiteCondensed {
+  composes: white;
+  composes: condensed;
+}
+
 .content {
   display: flex;
   flex-flow: column;

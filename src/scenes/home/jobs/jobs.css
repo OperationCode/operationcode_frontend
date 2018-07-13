@@ -1,0 +1,20 @@
+/* Note: these styles are copied to match the ziprecruiter styles that are inserted on our page */
+
+.featuredJobsContainer {
+  width: 100%;
+  float: left;
+  clear: both;
+}
+
+.featuredJobs {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 30px 0px 10px;
+  width: 100%;
+  max-width: 768px;
+}
+
+.contact {
+    margin: 30px 0 0 0;
+    align-self: flex-start;
+    font-size: 1rem;
+}
