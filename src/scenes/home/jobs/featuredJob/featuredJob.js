@@ -29,9 +29,9 @@ const FeaturedJob = ({
         </div>
         <div className={styles.detailsContainer}>
           <FontAwesomeIcon icon={faMapMarkerAlt} size="sm" style={{ color: '#afafaf' }} />
-          <span className={styles.detail}>{city},</span>
-          <span className={styles.detail}>{state},</span>
-          <span className={styles.detail}>{country}</span>
+          {city && <span className={styles.detail}>{city},</span>}
+          {state && <span className={styles.detail}>{state},</span>}
+          {country && <span className={styles.detail}>{country}</span>}
         </div>
         {remote &&
           <div className={styles.detailsContainer}>
