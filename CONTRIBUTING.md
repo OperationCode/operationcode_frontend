@@ -37,11 +37,11 @@ Before contributing, please review our [GitHub Workflow](#github-workflow).
 
 ## Quick Start Guide
 
-First off, thank you for considering contributing to our Slackbot! It's people like you that make Operation Code such a great community.
+First off, thank you for considering contributing to our project! It's people like you that make Operation Code such a great community.
 
 Following these guidelines helps to communicate that you respect the time of the developers managing and developing this open source project. In return, they should reciprocate that respect in addressing your issue, assessing changes, and helping you finalize your pull requests.
 
-We're an open source project and we love to receive contributions from our community — you! There are many ways to contribute, from writing tutorials or blog posts, improving the documentation, submitting bug reports and feature requests or writing code which can be incorporated into the Slackbot itself.
+We're an open source project and we love to receive contributions from our community — you! There are many ways to contribute, from writing tutorials or blog posts, improving the documentation, submitting bug reports and feature requests or writing code which can be incorporated into the website itself.
 
 With an open source project involving contributors of varying levels of experience, it's difficult to create a one-size-fits-all guide. However, if if you feel confident with navigating your command line interface (CLI), please follow these step-by-step instructions. Please note: most of the following instructions are not relevant to many Windows users - you'll need to research the equivalent of each command knowing what terminal you use on your Windows platform.
 
