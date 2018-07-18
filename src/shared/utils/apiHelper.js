@@ -31,13 +31,19 @@ export const getScholarships = () => makeGenericGet('scholarships');
 export const getScholarship = id => makeGenericGet(`scholarships/${id}`);
 
 export function createMentorRequest({
-  slackUser, serviceIds, skillsets, additionalDetails, mentorId
+  slackUser,
+  email,
+  serviceIds,
+  skillsets,
+  additionalDetails,
+  mentorId
 }) {
   const authHeader = setAuthorizationHeader();
 
   return axios.post(`${config.backendUrl}/airtable/mentorships`, '', {
     params: {
       slack_user: slackUser,
+      email,
       services: serviceIds,
       skillsets,
       additional_details: additionalDetails,

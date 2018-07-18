@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
+import Select from 'react-select';
 import Form from 'shared/components/form/form';
 import FormButton from 'shared/components/form/formButton/formButton';
 import FormInput from 'shared/components/form/formInput/formInput';
-import FormSelect from 'shared/components/form/formSelect/formSelect';
 import * as ApiHelpers from 'shared/utils/apiHelper';
 import Section from 'shared/components/section/section';
 import styles from './mentorRequest.css';
@@ -37,32 +37,33 @@ class MentorRequest extends Component {
     });
   }
 
+  onEmailChange = (value) => {
+    this.setState({
+      email: value
+    });
+  }
+
   onAdditionalDetailsChange = (value) => {
     this.setState({
       additionalDetails: value
     });
   }
 
-  onSelectMentor = (event) => {
+  onSelectMentor = (mentor) => {
     this.setState({
-      mentorId: event.target.value
+      mentor
     });
   }
 
-  onSelectServices = (event) => {
-    const serviceName = event.target.value;
+  onSelectServices = (serviceName) => {
     this.setState({
-      selectedServices: serviceName
+      selectedService: serviceName
     });
   }
 
-  onSelectSkillsets = (event) => {
-    const selectedSkillsets = this.state.skillsets
-      .filter(x => x.id === event.target.value)
-      .map(x => x.name).join(',');
-
+  onSelectSkillsets = (skillsets) => {
     this.setState({
-      selectedSkillsets
+      selectedSkillsets: skillsets
     });
   }
 
@@ -70,20 +71,21 @@ class MentorRequest extends Component {
     .sort((a, b) => a.name.localeCompare(b.name)) // sort alphabetically
     .map(x => ({ value: x.id, label: x.name }))
 
-  handleOnClick = async (event) => {
-    event.preventDefault();
+    handleOnClick = async (event) => {
+      event.preventDefault();
 
-    try {
-      await ApiHelpers.createMentorRequest({
-        slackUser: this.state.slackUserName,
-        serviceIds: this.state.selectedServices,
-        skillsets: this.state.selectedSkillsets,
-        additionalDetails: this.state.additionalDetails,
-        mentorId: this.state.mentorId
-      });
+      try {
+        await ApiHelpers.createMentorRequest({
+          slackUser: this.state.slackUserName,
+          email: this.state.email,
+          serviceIds: this.state.selectedService,
+          skillsets: this.state.selectedSkillsets.map(x => x.label).join(','),
+          additionalDetails: this.state.additionalDetails,
+          mentorId: this.state.mentor.value
+        });
 
-      this.setState({ success: true });
-    } catch (error) {
+        this.setState({ success: true });
+      } catch (error) {
       /* AIRTABLE MAINTENANCE NOTE:
       The skillsets property that is submitted must contain string values
       that are an exact match for the predefined skillset options on the Airtable
@@ -91,16 +93,18 @@ class MentorRequest extends Component {
       a user selects from to set this property are fetched via API from the Airtable Skillsets
       table, which contains exact matches for the predefined skillset options on the Airtable
       Mentor Request table. */
-      this.setState({ error: 'There was an error requesting a mentor.' });
+        this.setState({ error: 'There was an error requesting a mentor.' });
+      }
     }
-  }
 
-  render() {
-    return (
-      <Section className={styles.mentorRequest} title="Mentor Service Request">
-        { this.state.error && <div className={styles.mentorRequestError}>{this.state.error}</div> }
-        { this.state.isLoading && <div>Loading...</div> }
-        { !this.state.isLoading &&
+    render() {
+      return (
+        <Section className={styles.mentorRequest} title="Mentor Service Request">
+          { this.state.error &&
+            <div className={styles.mentorRequestError}>{this.state.error}</div>
+          }
+          { this.state.isLoading && <div>Loading...</div> }
+          { !this.state.isLoading &&
           <Form className={styles.mentorRequestForm}>
             <span>
               Please use this form to schedule a mentorship session.
@@ -125,7 +129,7 @@ class MentorRequest extends Component {
                 <FormInput
                   id="email"
                   placeholder="Email"
-                  onChange={this.onSlackNameChange}
+                  onChange={this.onEmailChange}
                 />
               </div>
             </div>
@@ -134,10 +138,13 @@ class MentorRequest extends Component {
               <div className={styles.formElement}>
                 <h2>Service</h2>
                 <p>Which one of our services would you like to book?</p>
-                <FormSelect
-                  id="serviceType"
-                  prompt="Choose service"
+                <Select
+                  className={styles.select}
+                  placeholder="Choose service"
                   options={this.buildOptions(this.state.services)}
+                  value={this.state.selectedService}
+                  autoBlur
+                  autosize
                   onChange={e => this.onSelectServices(e)}
                 />
               </div>
@@ -147,21 +154,28 @@ class MentorRequest extends Component {
               <div className={styles.formElement}>
                 <h2>Skillset</h2>
                 <p>Do you need a mentor for a specific language or area of software development?</p>
-                <FormSelect
-                  id="languageType"
+                <Select
+                  className={styles.select}
+                  placeholder="Choose skillsets"
                   options={this.buildOptions(this.state.skillsets)}
+                  value={this.state.selectedSkillsets}
+                  autoBlur
+                  autosize
+                  multi
                   onChange={e => this.onSelectSkillsets(e)}
-                  prompt="Select language"
                 />
               </div>
 
               <div className={styles.formElement}>
                 <h2>Mentor</h2>
                 <p>Would you like to pick a specific mentor?</p>
-                <FormSelect
-                  id="mentor"
-                  prompt="Choose mentor"
+                <Select
+                  className={styles.select}
+                  placeholder="Choose a mentor"
                   options={this.buildOptions(this.state.mentors)}
+                  value={this.state.mentor}
+                  autoBlur
+                  autosize
                   onChange={e => this.onSelectMentor(e)}
                 />
               </div>
@@ -178,9 +192,9 @@ class MentorRequest extends Component {
             </div>
           </Form>
         }
-      </Section>
-    );
-  }
+        </Section>
+      );
+    }
 }
 
 export default MentorRequest;

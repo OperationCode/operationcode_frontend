@@ -27,11 +27,6 @@
   margin: 0;
 }
 
-.mentorRequestForm span {
-  padding: 10px 8px 30px 8px;
-  font-size:16px;
-}
-
 .mentorRequestForm {
   max-width: 90%;
   margin: auto;
@@ -46,7 +41,7 @@
 }
 
 .mentorRequestForm select {
-  height: 4.2rem;
+  height: 50px;
   width: 100%;
   padding: 0 1rem;
   background-color: #e6e6e6;
