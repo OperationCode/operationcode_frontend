@@ -42,7 +42,6 @@ import OurPrograms from './ourPrograms/ourPrograms';
 import ChapterLeader from './chapterLeader/chapterLeader';
 import GetInvolved from './getInvolved/getInvolved';
 import Policy from './policy/policy';
-import OpCodeCon from './opCodeCon/opCodeCon';
 import UpgradeBrowser from 'shared/components/upgradeBrowser/upgradeBrowser';
 import styles from './home.css';
 
@@ -169,7 +168,7 @@ class Home extends Component {
        return false;
      }
    }
-   
+
    checkIfIE = () => {
     const userAgent = getValue(window, 'navigator.userAgent', '');
     const hasIEUserAgent = (userAgent.indexOf('MSIE')!==-1)||(userAgent.indexOf('Trident')!==-1);
@@ -190,7 +189,7 @@ class Home extends Component {
       [`${styles.home}`]: true,
       [`${styles[this.state.bgImageStyle]}`]: this.state.bgImage,
     });
-      
+
     return (this.state.showUpgradeBrowserModal)?(<UpgradeBrowser />):(
       <div
         className={classes}
@@ -311,7 +310,6 @@ class Home extends Component {
             <Route path="/benefit" component={Benefit} />
             <Route path="/gala" component={Gala} />
             <Route path="/policy" component={Policy} />
-            <Route path="/op-code-con" component={OpCodeCon} />
 
             {/* eslint-disable */}
             <Route
