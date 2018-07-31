@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import Select from 'react-select';
 import Form from 'shared/components/form/form';
+import FormCheckBox from 'shared/components/form/formCheckBox/formCheckBox';
 import FormButton from 'shared/components/form/formButton/formButton';
 import FormInput from 'shared/components/form/formInput/formInput';
 import * as ApiHelpers from 'shared/utils/apiHelper';
@@ -101,92 +102,100 @@ class MentorRequest extends Component {
       return (
         <Section className={styles.mentorRequest} title="Mentor Service Request">
           { this.state.error &&
-            <div className={styles.mentorRequestError}>{this.state.error}</div>
+            <div className={styles.error}>{this.state.error}</div>
           }
           { this.state.isLoading && <div>Loading...</div> }
           { !this.state.isLoading &&
-          <Form className={styles.mentorRequestForm}>
-            <span>
+          <Form className={styles.form}>
+            <p className={styles.intro}>
               Please use this form to schedule a mentorship session.
               Each session is 30 minutes. If you think you&apos;ll need more time,
               please let us know in the additional comments field below.
-            </span>
+            </p>
 
             <div className={styles.formBlock}>
-              <div className={styles.formElement}>
-                <h2>Slack User Name</h2>
-                <FormInput
-                  id="slackUser"
-                  placeholder="Slack user name"
-                  onChange={this.onSlackUserNameChange}
-                />
-              </div>
+              <h2>Slack User Name</h2>
+              <FormInput
+                id="slackUser"
+                placeholder="Slack user name"
+                onChange={this.onSlackUserNameChange}
+              />
             </div>
 
             <div className={styles.formBlock}>
-              <div className={styles.formElement}>
-                <h2>Email</h2>
-                <FormInput
-                  id="email"
-                  placeholder="Email"
-                  onChange={this.onEmailChange}
-                />
-              </div>
+              <h2>Email</h2>
+              <FormInput
+                id="email"
+                placeholder="Email"
+                onChange={this.onEmailChange}
+              />
             </div>
 
             <div className={styles.formBlock}>
-              <div className={styles.formElement}>
-                <h2>Service</h2>
-                <p>Which one of our services would you like to book?</p>
-                <Select
-                  className={styles.select}
-                  placeholder="Choose service"
-                  options={this.buildOptions(this.state.services)}
-                  value={this.state.selectedService}
-                  autoBlur
-                  autosize
-                  onChange={e => this.onSelectServices(e)}
-                />
-              </div>
+              <h2>Service</h2>
+              <p className={styles.prompt}>
+                Which of our one-on-one mentor services would you like to book?
+              </p>
+              <Select
+                className={styles.select}
+                placeholder="Choose service"
+                options={this.buildOptions(this.state.services)}
+                value={this.state.selectedService}
+                autoBlur
+                autosize
+                onChange={e => this.onSelectServices(e)}
+              />
             </div>
 
             <div className={styles.formBlock}>
-              <div className={styles.formElement}>
-                <h2>Skillset</h2>
-                <p>Do you need a mentor for a specific language or area of software development?</p>
-                <Select
-                  className={styles.select}
-                  placeholder="Choose skillsets"
-                  options={this.buildOptions(this.state.skillsets)}
-                  value={this.state.selectedSkillsets}
-                  autoBlur
-                  autosize
-                  multi
-                  onChange={e => this.onSelectSkillsets(e)}
-                />
-              </div>
-
-              <div className={styles.formElement}>
-                <h2>Mentor</h2>
-                <p>Would you like to pick a specific mentor?</p>
-                <Select
-                  className={styles.select}
-                  placeholder="Choose a mentor"
-                  options={this.buildOptions(this.state.mentors)}
-                  value={this.state.mentor}
-                  autoBlur
-                  autosize
-                  onChange={e => this.onSelectMentor(e)}
-                />
-              </div>
+              <h2>Skillset</h2>
+              <p className={styles.prompt}>
+                Do you need a mentor for a specific language or area of software development?
+              </p>
+              <Select
+                className={styles.select}
+                placeholder="Choose skillsets"
+                options={this.buildOptions(this.state.skillsets)}
+                value={this.state.selectedSkillsets}
+                autoBlur
+                autosize
+                multi
+                onChange={e => this.onSelectSkillsets(e)}
+              />
             </div>
-            <div className={styles.formRow}>
+
+            <div className={styles.formBlock}>
+              <h2>Mentor</h2>
+              <p className={styles.prompt}>Would you like to pick a specific mentor?</p>
+              <Select
+                className={styles.select}
+                placeholder="Choose a mentor"
+                options={this.buildOptions(this.state.mentors)}
+                value={this.state.mentor}
+                autoBlur
+                autosize
+                onChange={e => this.onSelectMentor(e)}
+              />
+            </div>
+
+            <div className={styles.formBlock}>
               <h2>Additional Details</h2>
-              <p>
+              <p className={styles.prompt}>
                 Please provide us with any more info
                 that may help in us in assigning a mentor to this request.
               </p>
               <FormInput id="additionalDetails" onChange={this.onAdditionalDetailsChange} />
+            </div>
+
+            <div className={styles.formRow}>
+              <h2>Military Affiliation Certification</h2>
+              <FormCheckBox
+                value="I certify that I am a member of one of the following categories:
+                Veteran, Active Duty, Military Spouse"
+                key="asdfsdafdsa"
+                checkBox={{ display: 'block', margin: '20px 10px' }}
+                label={{ marginLeft: '15px' }}
+              />
               <FormButton className={styles.joinButton} text="Request Mentor" onClick={e => this.handleOnClick(e)} theme="red" />
               {this.state.success && <Redirect to="/thanks" />}
             </div>
