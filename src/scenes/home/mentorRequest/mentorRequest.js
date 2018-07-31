@@ -117,7 +117,6 @@ class MentorRequest extends Component {
               <h2>Slack User Name</h2>
               <FormInput
                 id="slackUser"
-                placeholder="Slack user name"
                 onChange={this.onSlackUserNameChange}
               />
             </div>
@@ -126,7 +125,6 @@ class MentorRequest extends Component {
               <h2>Email</h2>
               <FormInput
                 id="email"
-                placeholder="Email"
                 onChange={this.onEmailChange}
               />
             </div>
@@ -138,7 +136,7 @@ class MentorRequest extends Component {
               </p>
               <Select
                 className={styles.select}
-                placeholder="Choose service"
+                placeholder="Choose a service"
                 options={this.buildOptions(this.state.services)}
                 value={this.state.selectedService}
                 autoBlur
@@ -154,7 +152,7 @@ class MentorRequest extends Component {
               </p>
               <Select
                 className={styles.select}
-                placeholder="Choose skillsets"
+                placeholder="Choose one or more skillsets"
                 options={this.buildOptions(this.state.skillsets)}
                 value={this.state.selectedSkillsets}
                 autoBlur
@@ -193,7 +191,7 @@ class MentorRequest extends Component {
                 value="I certify that I am a member of one of the following categories:
                 Veteran, Active Duty, Military Spouse"
                 key="asdfsdafdsa"
-                checkBox={{ display: 'block', margin: '20px 10px' }}
+                checkBox={{ display: 'flex', alignItems: 'center', margin: '20px 10px' }}
                 label={{ marginLeft: '15px' }}
               />
               <FormButton className={styles.joinButton} text="Request Mentor" onClick={e => this.handleOnClick(e)} theme="red" />

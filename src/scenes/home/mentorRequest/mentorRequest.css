@@ -30,19 +30,34 @@
   height: 1.5rem;
 }
 
+/* begin setting input styles to match React-Select styles  */
 .formBlock input[type=text],
 .formRow input[type=text] {
   background-color: #fff;
   border-color: #d9d9d9 #ccc #b3b3b3;
   border: 1px solid #ccc;
   border-radius: 4px;
+  font-family: inherit;
   font-size: inherit;
   margin-top: 12px;
+}
+
+.formBlock input[type=text]::placeholder,
+.formRow input[type=text]::placeholder {
+  color: #aaa;
 }
 
 .formBlock input[type=text]:hover {
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
 }
+
+.formBlock input[type=text]:focus {
+  border-color: #007eff;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 3px rgba(0, 126, 255, 0.1);
+  background: #fff;
+  outline: none;
+}
+/* finish settting input styles to match React-Select styles */
 
 .select {
   margin-top: 10px;
