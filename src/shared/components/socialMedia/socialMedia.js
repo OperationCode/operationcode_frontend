@@ -35,7 +35,6 @@ const SocialMedia = () => (
       link="https://www.pinterest.com/operationcode/"
     />
   </SocialMediaContainer>
-  </SocialMediaContainer>
 );
 
 export default SocialMedia;
