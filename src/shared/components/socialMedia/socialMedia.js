@@ -3,6 +3,7 @@ import fbImage from 'images/icons/Facebook-Icon.svg';
 import ghImage from 'images/icons/GitHub-Icon.svg';
 import twtImage from 'images/icons/Twitter-Icon.svg';
 import liImage from 'images/icons/LinkedIn-Icon.svg';
+import pinImage from 'images/icons/Pinterest-Icon.svg';
 import SocialMediaContainer from './socialMediaContainer/socialMediaContainer';
 import SocialMediaItem from './socialMediaItem/socialMediaItem';
 
@@ -28,6 +29,12 @@ const SocialMedia = () => (
       smText="LinkedIn"
       link="https://www.linkedin.com/groups/13400924"
     />
+    <SocialMediaItem
+      smImage={pinImage}
+      smText="Pinterest"
+      link="https://www.pinterest.com/operationcode/"
+    />
+  </SocialMediaContainer>
   </SocialMediaContainer>
 );
 
