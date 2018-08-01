@@ -68,44 +68,55 @@ class MentorRequest extends Component {
     });
   }
 
+  onCheckboxChange = (event) => {
+    this.setState({
+      isMilitaryAffiliated: event.target.checked
+    });
+  }
+
   buildOptions = dataset => dataset
     .sort((a, b) => a.name.localeCompare(b.name)) // sort alphabetically
     .map(x => ({ value: x.id, label: x.name }))
 
-    handleOnClick = async (event) => {
-      event.preventDefault();
+  handleOnClick = async (event) => {
+    event.preventDefault();
 
-      try {
-        await ApiHelpers.createMentorRequest({
-          slackUser: this.state.slackUserName,
-          email: this.state.email,
-          serviceIds: this.state.selectedService,
-          skillsets: this.state.selectedSkillsets.map(x => x.label).join(','),
-          additionalDetails: this.state.additionalDetails,
-          mentorId: this.state.mentor.value
-        });
-
-        this.setState({ success: true });
-      } catch (error) {
-      /* AIRTABLE MAINTENANCE NOTE:
-      The skillsets property that is submitted must contain string values
-      that are an exact match for the predefined skillset options on the Airtable
-      Mentor Request table, or the request will error out. The skillset FormSelect options that
-      a user selects from to set this property are fetched via API from the Airtable Skillsets
-      table, which contains exact matches for the predefined skillset options on the Airtable
-      Mentor Request table. */
-        this.setState({ error: 'There was an error requesting a mentor.' });
-      }
+    if (!this.state.isMilitaryAffiliated) {
+      window.alert('Mentor Service Requests are only available to Veterans, Active Duty Military, or Military Spouses');
+      return;
     }
 
-    render() {
-      return (
-        <Section className={styles.mentorRequest} title="Mentor Service Request">
-          { this.state.error &&
-            <div className={styles.error}>{this.state.error}</div>
-          }
-          { this.state.isLoading && <div>Loading...</div> }
-          { !this.state.isLoading &&
+    try {
+      await ApiHelpers.createMentorRequest({
+        slackUser: this.state.slackUserName,
+        email: this.state.email,
+        serviceIds: this.state.selectedService,
+        skillsets: this.state.selectedSkillsets.map(x => x.label).join(','),
+        additionalDetails: this.state.additionalDetails,
+        mentorId: this.state.mentor.value
+      });
+
+      this.setState({ success: true });
+    } catch (error) {
+    /* AIRTABLE MAINTENANCE NOTE:
+    The skillsets property that is submitted must contain string values
+    that are an exact match for the predefined skillset options on the Airtable
+    Mentor Request table, or the request will error out. The skillset FormSelect options that
+    a user selects from to set this property are fetched via API from the Airtable Skillsets
+    table, which contains exact matches for the predefined skillset options on the Airtable
+    Mentor Request table. */
+      this.setState({ error: 'There was an error requesting a mentor.' });
+    }
+  }
+
+  render() {
+    return (
+      <Section className={styles.mentorRequest} title="Mentor Service Request">
+        { this.state.error &&
+          <div className={styles.error}>{this.state.error}</div>
+        }
+        { this.state.isLoading && <div>Loading...</div> }
+        { !this.state.isLoading &&
           <Form className={styles.form}>
             <p className={styles.intro}>
               Please use this form to schedule a mentorship session.
@@ -188,9 +199,11 @@ class MentorRequest extends Component {
             <div className={styles.formRow}>
               <h2>Military Affiliation Certification</h2>
               <FormCheckBox
+                name="militaryAffiliationCertification"
                 value="I certify that I am a member of one of the following categories:
                 Veteran, Active Duty, Military Spouse"
-                key="asdfsdafdsa"
+                checked={this.state.isMilitaryAffiliated}
+                onChange={this.onCheckboxChange}
                 checkBox={{ display: 'flex', alignItems: 'center', margin: '20px 10px' }}
                 label={{ marginLeft: '15px' }}
               />
@@ -199,9 +212,9 @@ class MentorRequest extends Component {
             </div>
           </Form>
         }
-        </Section>
-      );
-    }
+      </Section>
+    );
+  }
 }
 
 export default MentorRequest;
