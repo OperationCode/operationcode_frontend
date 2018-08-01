@@ -124,7 +124,7 @@ class MentorRequest extends Component {
               please let us know in the additional comments field below.
             </p>
 
-            <div className={styles.formBlock}>
+            <div className={styles.formBlockNoPrompt}>
               <h2>Slack User Name</h2>
               <FormInput
                 id="slackUser"
@@ -132,7 +132,7 @@ class MentorRequest extends Component {
               />
             </div>
 
-            <div className={styles.formBlock}>
+            <div className={styles.formBlockNoPrompt}>
               <h2>Email</h2>
               <FormInput
                 id="email"
