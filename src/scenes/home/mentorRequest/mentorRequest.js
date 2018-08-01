@@ -137,7 +137,10 @@ class MentorRequest extends Component {
             </p>
 
             <div className={styles.formBlockNoPrompt}>
-              <h2>Slack User Name</h2>
+              <h2 className={styles.label}>
+                Slack User Name
+                <small className={styles.subLabel}>(required)</small>
+              </h2>
               <FormInput
                 id="slackUser"
                 onChange={this.onSlackUserNameChange}
@@ -145,7 +148,10 @@ class MentorRequest extends Component {
             </div>
 
             <div className={styles.formBlockNoPrompt}>
-              <h2>Email</h2>
+              <h2 className={styles.label}>
+                Email
+                <small className={styles.subLabel}>(required)</small>
+              </h2>
               <FormInput
                 id="email"
                 onChange={this.onEmailChange}
@@ -153,7 +159,10 @@ class MentorRequest extends Component {
             </div>
 
             <div className={styles.formBlock}>
-              <h2>Service</h2>
+              <h2 className={styles.label}>
+                Service
+                <small className={styles.subLabel}>(required)</small>
+              </h2>
               <p className={styles.prompt}>
                 Which of our one-on-one mentor services would you like to book?
               </p>
@@ -169,7 +178,9 @@ class MentorRequest extends Component {
             </div>
 
             <div className={styles.formBlock}>
-              <h2>Skillset</h2>
+              <h2 className={styles.label}>
+                Skillset
+              </h2>
               <p className={styles.prompt}>
                 Do you need a mentor for a specific language or area of software development?
               </p>
@@ -186,8 +197,12 @@ class MentorRequest extends Component {
             </div>
 
             <div className={styles.formBlock}>
-              <h2>Mentor</h2>
-              <p className={styles.prompt}>Would you like to pick a specific mentor?</p>
+              <h2 className={styles.label}>
+                Mentor
+              </h2>
+              <p className={styles.prompt}>
+                Would you like to pick a specific mentor?
+              </p>
               <Select
                 className={styles.select}
                 placeholder="Choose a mentor"
@@ -200,7 +215,9 @@ class MentorRequest extends Component {
             </div>
 
             <div className={styles.formBlock}>
-              <h2>Additional Details</h2>
+              <h2 className={styles.label}>
+                Additional Details
+              </h2>
               <p className={styles.prompt}>
                 Please provide us with any more info
                 that may help in us in assigning a mentor to this request.
@@ -209,7 +226,10 @@ class MentorRequest extends Component {
             </div>
 
             <div className={styles.formRow}>
-              <h2>Military Affiliation Certification</h2>
+              <h2 className={styles.label}>
+                Military Affiliation Certification
+                <small className={styles.subLabel}>(required)</small>
+              </h2>
               <FormCheckBox
                 name="militaryAffiliationCertification"
                 value="I certify that I am a member of one of the following categories:

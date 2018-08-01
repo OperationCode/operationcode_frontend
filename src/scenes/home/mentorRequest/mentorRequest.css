@@ -32,10 +32,18 @@
   composes: formBlock;
 }
 
-.formBlock h2,
-.formRow h2 {
+.label {
+  display: flex;
   font-size: 1.5rem;
   height: 1.5rem;
+}
+
+.subLabel {
+  font-size: 0.7em;
+  margin-left: 6px;
+  align-self: flex-end;
+  line-height: 0.7em;
+  font-weight: normal;
 }
 
 .formBlock input[type=text],
