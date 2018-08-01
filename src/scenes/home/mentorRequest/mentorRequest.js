@@ -9,7 +9,6 @@ import * as ApiHelpers from 'shared/utils/apiHelper';
 import Section from 'shared/components/section/section';
 import styles from './mentorRequest.css';
 
-
 class MentorRequest extends Component {
   constructor(props) {
     super(props);
@@ -28,7 +27,7 @@ class MentorRequest extends Component {
         isLoading: false
       });
     } catch (error) {
-      this.setState({ error: 'There was an error building the form. Please try again.' });
+      this.setState({ loadingError: 'There was an error building the form. Please try again.' });
     }
   }
 
@@ -74,6 +73,12 @@ class MentorRequest extends Component {
     });
   }
 
+  get hasRequiredFields() {
+    return this.state.slackUserName != null
+    && this.state.email != null
+    && this.state.selectedService != null;
+  }
+
   buildOptions = dataset => dataset
     .sort((a, b) => a.name.localeCompare(b.name)) // sort alphabetically
     .map(x => ({ value: x.id, label: x.name }))
@@ -82,7 +87,14 @@ class MentorRequest extends Component {
     event.preventDefault();
 
     if (!this.state.isMilitaryAffiliated) {
-      window.alert('Mentor Service Requests are only available to Veterans, Active Duty Military, or Military Spouses');
+      this.setState({ affiliationError: 'Mentor Service Requests are only available to Veterans, Active Duty Military, or Military Spouses.' });
+    }
+
+    if (!this.hasRequiredFields) {
+      this.setState({ submitError: 'Please enter all required fields.' });
+    }
+
+    if (!this.state.isMilitaryAffiliated || !this.hasRequiredFields) {
       return;
     }
 
@@ -91,29 +103,29 @@ class MentorRequest extends Component {
         slackUser: this.state.slackUserName,
         email: this.state.email,
         serviceIds: this.state.selectedService,
-        skillsets: this.state.selectedSkillsets.map(x => x.label).join(','),
+        skillsets: this.state.selectedSkillsets ? this.state.selectedSkillsets.map(x => x.label).join(',') : '',
         additionalDetails: this.state.additionalDetails,
-        mentorId: this.state.mentor.value
+        mentorId: this.state.mentor ? this.state.mentor.value : ''
       });
 
       this.setState({ success: true });
     } catch (error) {
-    /* AIRTABLE MAINTENANCE NOTE:
-    The skillsets property that is submitted must contain string values
-    that are an exact match for the predefined skillset options on the Airtable
-    Mentor Request table, or the request will error out. The skillset FormSelect options that
-    a user selects from to set this property are fetched via API from the Airtable Skillsets
-    table, which contains exact matches for the predefined skillset options on the Airtable
-    Mentor Request table. */
-      this.setState({ error: 'There was an error requesting a mentor.' });
+      /* AIRTABLE MAINTENANCE NOTE:
+      The skillsets property that is submitted must contain string values
+      that are an exact match for the predefined skillset options on the Airtable
+      Mentor Request table, or the request will error out. The skillset FormSelect options that
+      a user selects from to set this property are fetched via API from the Airtable Skillsets
+      table, which contains exact matches for the predefined skillset options on the Airtable
+      Mentor Request table. */
+      this.setState({ submitError: 'There was an error requesting a mentor.' });
     }
   }
 
   render() {
     return (
       <Section className={styles.mentorRequest} title="Mentor Service Request">
-        { this.state.error &&
-          <div className={styles.error}>{this.state.error}</div>
+        { this.state.loadingError &&
+          <div className={styles.error}>{this.state.loadingError}</div>
         }
         { this.state.isLoading && <div>Loading...</div> }
         { !this.state.isLoading &&
@@ -208,7 +220,13 @@ class MentorRequest extends Component {
                 label={{ marginLeft: '15px' }}
               />
               <FormButton className={styles.joinButton} text="Request Mentor" onClick={e => this.handleOnClick(e)} theme="red" />
-              {this.state.success && <Redirect to="/thanks" />}
+              { this.state.success && <Redirect to="/thanks" /> }
+              { this.state.submitError &&
+                <div className={styles.error}>{this.state.submitError}</div>
+              }
+              { !this.state.isMilitaryAffiliated && this.state.affiliationError &&
+                <div className={styles.error}>{this.state.affiliationError}</div>
+              }
             </div>
           </Form>
         }
