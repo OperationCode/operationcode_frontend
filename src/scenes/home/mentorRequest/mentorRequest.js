@@ -133,7 +133,7 @@ class MentorRequest extends Component {
             <p className={styles.intro}>
               Please use this form to schedule a mentorship session.
               Each session is 30 minutes. If you think you&apos;ll need more time,
-              please let us know in the additional comments field below.
+              please let us know in the additional details field below.
             </p>
 
             <div className={styles.formBlockNoPrompt}>
@@ -222,7 +222,11 @@ class MentorRequest extends Component {
                 Please provide us with any more info
                 that may help in us in assigning a mentor to this request.
               </p>
-              <FormInput id="additionalDetails" onChange={this.onAdditionalDetailsChange} />
+              <FormInput
+                id="additionalDetails"
+                validateFunc={() => true}
+                onChange={this.onAdditionalDetailsChange}
+              />
             </div>
 
             <div className={styles.formRow}>
@@ -236,7 +240,7 @@ class MentorRequest extends Component {
                 Veteran, Active Duty, Military Spouse"
                 checked={this.state.isMilitaryAffiliated}
                 onChange={this.onCheckboxChange}
-                checkBox={{ display: 'flex', alignItems: 'center', margin: '20px 10px' }}
+                checkBox={{ display: 'flex', alignItems: 'center', margin: '15px 5px' }}
                 label={{ marginLeft: '15px' }}
               />
               <FormButton className={styles.joinButton} text="Request Mentor" onClick={e => this.handleOnClick(e)} theme="red" />

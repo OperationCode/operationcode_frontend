@@ -2,8 +2,10 @@
   width: 100%;
 }
 
-.intro {
-  padding: 0 1rem;
+@media screen and (min-width: 769px) {
+  .intro {
+    padding: 0 1rem;
+  }
 }
 
 .form {
@@ -23,9 +25,17 @@
   flex-direction: column;
   justify-content: flex-end;
   height: auto;
-  margin-top: .5rem;
   padding: 1rem;
+  margin-top: .5rem;
   width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .formBlock {
+    margin-top: 1rem;
+    padding: 1rem 0;
+    width: 100%;
+  }
 }
 
 .formBlockNoPrompt {
@@ -36,6 +46,14 @@
   display: flex;
   font-size: 1.5rem;
   height: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .label {
+    height: auto;
+    line-height: 1em;
+    display: block;
+  }
 }
 
 .subLabel {
@@ -95,9 +113,21 @@
   margin: 10px 0 0 0;
 }
 
+@media screen and (max-width: 768px) {
+  .prompt {
+    margin: .5em 0 0 0;
+  }
+}
+
 .formRow {
   width: 100%;
   padding: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .formRow {
+    margin-top: 1rem;
+  }
 }
 
 .formRow input[type=text] {
@@ -116,17 +146,12 @@
   color: red;
   margin: 1rem auto;
   max-width: 500px;
-  padding: 1rem;
   text-align: center;
   width: 100%;
 }
 
-@media screen and (max-width: 500px) {
-  .mentorRequestForm {
-    flex-direction: row;
-  }
-
-  .formBlock {
-    width: 100%;
+@media screen and (min-width: 769px) {
+  .error {
+    padding: 1rem;
   }
 }
