@@ -102,7 +102,7 @@ class MentorRequest extends Component {
       await ApiHelpers.createMentorRequest({
         slackUser: this.state.slackUserName,
         email: this.state.email,
-        serviceIds: this.state.selectedService,
+        serviceIds: this.state.selectedService.value,
         skillsets: this.state.selectedSkillsets ? this.state.selectedSkillsets.map(x => x.label).join(',') : '',
         additionalDetails: this.state.additionalDetails,
         mentorId: this.state.mentor ? this.state.mentor.value : ''
