@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
 import Select from 'react-select';
 import Form from 'shared/components/form/form';
 import FormCheckBox from 'shared/components/form/formCheckBox/formCheckBox';
@@ -94,7 +93,7 @@ class MentorRequest extends Component {
       this.setState({ submitError: 'Please enter all required fields.' });
     }
 
-    if (!this.state.isMilitaryAffiliated || !this.hasRequiredFields) {
+    if (this.state.success || !this.state.isMilitaryAffiliated || !this.hasRequiredFields) {
       return;
     }
 
@@ -108,7 +107,7 @@ class MentorRequest extends Component {
         mentorId: this.state.mentor ? this.state.mentor.value : ''
       });
 
-      this.setState({ success: true });
+      this.setState({ success: 'Your mentor request has been sent! One of our mentors will contact you within the next few days, so keep an eye on your Slack DMs or email.' });
     } catch (error) {
       /* AIRTABLE MAINTENANCE NOTE:
       The skillsets property that is submitted must contain string values
@@ -128,7 +127,8 @@ class MentorRequest extends Component {
           <div className={styles.error}>{this.state.loadingError}</div>
         }
         { this.state.isLoading && <div>Loading...</div> }
-        { !this.state.isLoading &&
+        { this.state.success }
+        { !this.state.isLoading && !this.state.success &&
           <Form className={styles.form}>
             <p className={styles.intro}>
               Please use this form to schedule a mentorship session.
@@ -244,7 +244,6 @@ class MentorRequest extends Component {
                 label={{ marginLeft: '15px' }}
               />
               <FormButton className={styles.joinButton} text="Request Mentor" onClick={e => this.handleOnClick(e)} theme="red" />
-              { this.state.success && <Redirect to="/thanks" /> }
               { this.state.submitError &&
                 <div className={styles.error}>{this.state.submitError}</div>
               }
