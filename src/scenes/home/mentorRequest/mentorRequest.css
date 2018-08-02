@@ -2,6 +2,15 @@
   width: 100%;
 }
 
+.loadingWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.loadingText {
+  margin-left: 12px;
+}
+
 @media screen and (min-width: 769px) {
   .intro {
     padding: 0 1rem;

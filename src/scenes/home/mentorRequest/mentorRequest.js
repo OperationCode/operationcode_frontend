@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Select from 'react-select';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { faCircleNotch } from '@fortawesome/fontawesome-free-solid';
 import Form from 'shared/components/form/form';
 import FormCheckBox from 'shared/components/form/formCheckBox/formCheckBox';
 import FormButton from 'shared/components/form/formButton/formButton';
@@ -126,7 +128,11 @@ class MentorRequest extends Component {
         { this.state.loadingError &&
           <div className={styles.error}>{this.state.loadingError}</div>
         }
-        { this.state.isLoading && <div>Loading...</div> }
+        { this.state.isLoading &&
+          <div className={styles.loadingWrapper}>
+            <FontAwesomeIcon icon={faCircleNotch} spin size="2x" />
+            <span className={styles.loadingText}>Loading...</span>
+          </div> }
         { this.state.success }
         { !this.state.isLoading && !this.state.success &&
           <Form className={styles.form}>
