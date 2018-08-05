@@ -76,10 +76,7 @@ class MentorRequest extends Component {
       && !!this.state.email
       && !!this.state.selectedService;
 
-    this.setState({
-      hasRequiredFields,
-      requiredFieldsError: hasRequiredFields ? null : 'Please enter all required fields.'
-    });
+    this.setState({ hasRequiredFields });
   }
 
   buildOptions = dataset => dataset
@@ -245,8 +242,8 @@ class MentorRequest extends Component {
                 :
                 <FormButton className={styles.joinButton} text="Request Mentor" disabled theme="grey" />
               }
-              { !this.state.hasRequiredFields && this.requiredFieldsError &&
-                <div className={styles.error}>{this.state.requiredFieldsError}</div>
+              { this.state.submitError &&
+                <div className={styles.error}>{this.state.submitError}</div>
               }
             </div>
           </Form>
