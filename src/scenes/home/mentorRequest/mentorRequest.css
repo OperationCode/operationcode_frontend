@@ -47,6 +47,12 @@
   }
 }
 
+/* align formTextArea wrapper div */
+.formBlock > div {
+  display: flex;
+  align-items: flex-end;
+}
+
 .formBlockNoPrompt {
   composes: formBlock;
 }
@@ -74,20 +80,27 @@
 }
 
 .formBlock input[type=text],
-.formRow input[type=text] {
+.formRow input[type=text],
+.formBlock textarea {
   background-color: #fff;
   border-radius: 4px;
   height: 52px;
   margin-top: 10px;
 }
 
-.formBlockNoPrompt input[type=text] {
+.formBlock textarea {
+  resize: vertical;
+}
+
+.formBlockNoPrompt input[type=text],
+.formBlockNoPrompt textarea, {
   margin-top: 14px;
 }
 
 /* begin setting input styles to match React-Select styles  */
 .formBlock input[type=text]:not([class^="formInput__error"]),
-.formRow input[type=text]:not([class^="formInput__error"]) {
+.formRow input[type=text]:not([class^="formInput__error"]),
+.formBlock textarea {
   border-color: #d9d9d9 #ccc #b3b3b3;
   border: 1px solid #ccc;
   font-family: inherit;
@@ -95,7 +108,8 @@
 }
 
 .formBlock input[type=text]::placeholder,
-.formRow input[type=text]::placeholder {
+.formRow input[type=text]::placeholder,
+.formBlock textarea {
   color: #aaa;
 }
 
@@ -104,7 +118,9 @@
 }
 
 .formBlock input[type=text]:focus,
-.formBlock input[type=text]:focus:hover {
+.formBlock input[type=text]:focus:hover,
+.formBlock textarea:focus,
+.formBlock textarea:focus:hover {
   border-color: #007eff;
   border-style: solid;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 3px rgba(0, 126, 255, 0.1);

@@ -6,6 +6,7 @@ import Form from 'shared/components/form/form';
 import FormCheckBox from 'shared/components/form/formCheckBox/formCheckBox';
 import FormButton from 'shared/components/form/formButton/formButton';
 import FormInput from 'shared/components/form/formInput/formInput';
+import FormTextArea from 'shared/components/form/formTextArea/formTextArea';
 import * as ApiHelpers from 'shared/utils/apiHelper';
 import Section from 'shared/components/section/section';
 import styles from './mentorRequest.css';
@@ -228,9 +229,8 @@ class MentorRequest extends Component {
                 Please provide us with any more info
                 that may help in us in assigning a mentor to this request.
               </p>
-              <FormInput
+              <FormTextArea
                 id="additionalDetails"
-                validateFunc={() => true}
                 onChange={this.onAdditionalDetailsChange}
               />
             </div>
