@@ -15,6 +15,14 @@ class MentorRequest extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      slackUserName: '',
+      email: '',
+      selectedService: null,
+      selectedSkillsets: [],
+      mentor: '',
+      additionalDetails: '',
+      hasRequiredFields: false,
+      isMilitaryAffiliated: false,
       isLoading: true
     };
   }
@@ -34,51 +42,44 @@ class MentorRequest extends Component {
   }
 
   onSlackUserNameChange = (value) => {
-    this.setState({
-      slackUserName: value
-    });
+    this.setState({ slackUserName: value }, this.checkForRequiredFields);
   }
 
   onEmailChange = (value) => {
-    this.setState({
-      email: value
-    });
+    this.setState({ email: value }, this.checkForRequiredFields);
   }
 
-  onAdditionalDetailsChange = (value) => {
-    this.setState({
-      additionalDetails: value
-    });
-  }
-
-  onSelectMentor = (mentor) => {
-    this.setState({
-      mentor
-    });
-  }
-
-  onSelectServices = (serviceName) => {
-    this.setState({
-      selectedService: serviceName
-    });
+  onSelectService = (serviceName) => {
+    this.setState({ selectedService: serviceName }, this.checkForRequiredFields);
   }
 
   onSelectSkillsets = (skillsets) => {
-    this.setState({
-      selectedSkillsets: skillsets
-    });
+    this.setState({ selectedSkillsets: skillsets });
+  }
+
+  onSelectMentor = (mentor) => {
+    this.setState({ mentor });
+  }
+
+  onAdditionalDetailsChange = (value) => {
+    this.setState({ additionalDetails: value });
   }
 
   onCheckboxChange = (event) => {
-    this.setState({
-      isMilitaryAffiliated: event.target.checked
-    });
+    this.setState({ isMilitaryAffiliated: event.target.checked }, this.checkForRequiredFields);
   }
 
-  get hasRequiredFields() {
-    return this.state.slackUserName != null
-    && this.state.email != null
-    && this.state.selectedService != null;
+  isValid = () => this.state.hasRequiredFields && this.state.isMilitaryAffiliated;
+
+  checkForRequiredFields = () => {
+    const hasRequiredFields = !!this.state.slackUserName
+      && !!this.state.email
+      && !!this.state.selectedService;
+
+    this.setState({
+      hasRequiredFields,
+      requiredFieldsError: hasRequiredFields ? null : 'Please enter all required fields.'
+    });
   }
 
   buildOptions = dataset => dataset
@@ -88,17 +89,7 @@ class MentorRequest extends Component {
   handleOnClick = async (event) => {
     event.preventDefault();
 
-    if (!this.state.isMilitaryAffiliated) {
-      this.setState({ affiliationError: 'Mentor Service Requests are only available to Veterans, Active Duty Military, or Military Spouses.' });
-    }
-
-    if (!this.hasRequiredFields) {
-      this.setState({ submitError: 'Please enter all required fields.' });
-    }
-
-    if (this.state.success || !this.state.isMilitaryAffiliated || !this.hasRequiredFields) {
-      return;
-    }
+    if (!this.isValid()) return;
 
     try {
       await ApiHelpers.createMentorRequest({
@@ -180,7 +171,7 @@ class MentorRequest extends Component {
                 value={this.state.selectedService}
                 autoBlur
                 autosize
-                onChange={e => this.onSelectServices(e)}
+                onChange={e => this.onSelectService(e)}
               />
             </div>
 
@@ -243,18 +234,19 @@ class MentorRequest extends Component {
               <FormCheckBox
                 name="militaryAffiliationCertification"
                 value="I certify that I am a member of one of the following categories:
-                Veteran, Active Duty, Military Spouse"
+                Veteran, Active Duty Military, Military Spouse"
                 checked={this.state.isMilitaryAffiliated}
                 onChange={this.onCheckboxChange}
                 checkBox={{ display: 'flex', alignItems: 'center', margin: '15px 5px' }}
                 label={{ marginLeft: '15px' }}
               />
-              <FormButton className={styles.joinButton} text="Request Mentor" onClick={e => this.handleOnClick(e)} theme="red" />
-              { this.state.submitError &&
-                <div className={styles.error}>{this.state.submitError}</div>
+              { this.isValid() ?
+                <FormButton className={styles.joinButton} text="Request Mentor" onClick={e => this.handleOnClick(e)} theme="blue" />
+                :
+                <FormButton className={styles.joinButton} text="Request Mentor" disabled theme="grey" />
               }
-              { !this.state.isMilitaryAffiliated && this.state.affiliationError &&
-                <div className={styles.error}>{this.state.affiliationError}</div>
+              { !this.state.hasRequiredFields && this.requiredFieldsError &&
+                <div className={styles.error}>{this.state.requiredFieldsError}</div>
               }
             </div>
           </Form>

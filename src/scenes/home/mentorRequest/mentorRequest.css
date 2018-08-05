@@ -114,8 +114,7 @@
 }
 
 .formBlock input[type=text]::placeholder,
-.formRow input[type=text]::placeholder,
-.formBlock textarea {
+.formRow input[type=text]::placeholder {
   color: #aaa;
 }
 
@@ -169,6 +168,10 @@
   align-self: flex-end;
   margin-top: 20px;
   width: 100%;
+}
+
+.joinButton:disabled {
+  cursor: not-allowed;
 }
 
 .error {
