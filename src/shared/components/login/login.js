@@ -29,7 +29,10 @@ class Login extends Component {
       location: PropTypes.shape({
         key: PropTypes.string,
         pathname: PropTypes.string,
-        search: PropTypes.string
+        search: PropTypes.string,
+        state: PropTypes.shape({
+          referrer: PropTypes.string
+        })
       }),
       push: PropTypes.func,
       replace: PropTypes.func
@@ -55,7 +58,8 @@ class Login extends Component {
     error: '',
     sso: null,
     sig: null,
-    ssoParamsPresent: false
+    ssoParamsPresent: false,
+    location: null
   };
 
   componentDidMount = () => {
@@ -159,10 +163,13 @@ class Login extends Component {
           this.setState({ authenticated: true });
           this.props.updateRootAuthState();
           this.props.sendNotification('success', 'Success', 'You have logged in!');
+          const redirect = this.props.history.location.state
+            ? this.props.history.location.state.referrer
+            : data.redirect_to;
           if (this.state.ssoParamsPresent) {
-            window.location = data.redirect_to;
+            window.location = redirect;
           } else {
-            this.props.history.push(data.redirect_to);
+            this.props.history.push(redirect);
           }
         })
         .catch((error) => {
@@ -197,7 +204,7 @@ class Login extends Component {
               onChange={this.onPasswordChange}
             />
             {errorFeedback && <h2 className={styles.loginError}>{errorFeedback}</h2>}
-            <FormButton className={styles.loginBtn} text="Login" onClick={this.handleOnClick} />
+            <FormButton className={styles.loginBtn} text="Login" onClick={e => this.handleOnClick(e)} />
             <span className={styles.resetBtn}>
               Forgot your password? <Link to="/reset_password">Reset it.</Link>
             </span>
