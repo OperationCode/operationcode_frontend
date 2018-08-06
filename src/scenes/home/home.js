@@ -43,6 +43,7 @@ import ChapterLeader from './chapterLeader/chapterLeader';
 import GetInvolved from './getInvolved/getInvolved';
 import Policy from './policy/policy';
 import UpgradeBrowser from 'shared/components/upgradeBrowser/upgradeBrowser';
+import MentorRequest from './mentorRequest/mentorRequest';
 import styles from './home.css';
 
 const ReactToastr = require('react-toastr');
@@ -350,6 +351,12 @@ class Home extends Component {
               component={IdmeVerify}
               updateRootAuthState={this.updateRootAuthState}
               {...authProps}
+            />
+            <AuthenticatedRoute
+              exact
+              path="/mentor-request"
+              isAuth={CookieHelpers.getUserStatus().signedIn}
+              component={() => (<MentorRequest {...authProps} />)}
             />
             <Route exact path="/resetpassword" component={ResetPassword} />
             <Route exact path="/reset_password" component={ResetPassword} />

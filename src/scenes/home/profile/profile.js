@@ -17,12 +17,6 @@ const Profile = ({ verified }) => (
           }
         >
           <IconCard
-            title="Request a Mentor"
-            fontAwesomeIcon="faLifeRing"
-            url="https://op.co.de/mentor-request"
-          />
-
-          <IconCard
             title="Check for Scholarships"
             fontAwesomeIcon="faGraduationCap"
             url="/scholarships"
@@ -35,6 +29,13 @@ const Profile = ({ verified }) => (
           verified ? styles.profileContainer__cards_verified : styles.profileContainer__cards
         }
       >
+
+        <IconCard
+          title="Request a Mentor"
+          fontAwesomeIcon="faLifeRing"
+          url="/mentor-request"
+        />
+
         <IconCard
           title="Check for Open Jobs"
           fontAwesomeIcon="faBriefcase"
