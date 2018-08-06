@@ -12,7 +12,7 @@ export const MENTOR_ANSWERS = [
 export const IDENTIFIERS = [
   {
     value: false,
-    label: 'Active Duty Veteran / Spouse'
+    label: 'Servicemember, Veteran, Military Spouse / Dependent'
   },
   {
     value: true,
@@ -31,7 +31,7 @@ export const WORKINFO = [
   },
   {
     value: 'unemployed',
-    label: 'Currently Un-Employed'
+    label: 'Currently Unemployed'
   }
 ];
 
@@ -73,14 +73,14 @@ export const MILSTATUS = [
   },
   {
     value: 'spouse',
-    label: 'Spouse / Family Member of Service Member'
+    label: 'Military Spouse / Dependent'
   }
 ];
 
 export const BRANCH = [
   {
     value: 'army',
-    label: 'Army / Army Reserves'
+    label: 'Army / Army Reserves / Army National Guard'
   },
   {
     value: 'navy',
@@ -92,19 +92,11 @@ export const BRANCH = [
   },
   {
     value: 'airforce',
-    label: 'Air Force / Air Force Reserves'
+    label: 'Air Force / Air Force Reserves / Air National Guard'
   },
   {
     value: 'coastguard',
     label: 'Coast Guard / Coast Guard Reserves'
-  },
-  {
-    value: 'armyguard',
-    label: 'Army National Guard'
-  },
-  {
-    value: 'airguard',
-    label: 'Air National Guard'
   },
   {
     value: 'other',
@@ -126,13 +118,13 @@ export const LANGUAGES = [
 
 export const DISCIPLINES = [
   'Web Developer',
-  'Web Designer',
-  'Front-End Developer',
-  'Back-End Developer',
+  'UX/UI Designer',
+  'Frontend Developer',
+  'Backend Developer',
   'Full-Stack Developer',
   'Mobile / IOS',
   'Mobile / Android',
-  'I.T / SysAdmin',
+  'I.T. / Sysadmin',
   'Cyber Security',
   'Data Science'
 ];
