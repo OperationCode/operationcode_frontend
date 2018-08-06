@@ -352,12 +352,13 @@ class Home extends Component {
               updateRootAuthState={this.updateRootAuthState}
               {...authProps}
             />
-            <AuthenticatedRoute
+            {/* Temporarily disabling the mentor-request form route so anyone accessing it gets 404 */}
+            {/* <AuthenticatedRoute
               exact
               path="/mentor-request"
               isAuth={CookieHelpers.getUserStatus().signedIn}
               component={() => (<MentorRequest {...authProps} />)}
-            />
+            /> */}
             <Route exact path="/resetpassword" component={ResetPassword} />
             <Route exact path="/reset_password" component={ResetPassword} />
 
