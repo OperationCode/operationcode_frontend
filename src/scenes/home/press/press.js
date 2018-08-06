@@ -4,6 +4,7 @@ import Section from 'shared/components/section/section';
 import PressVideos from './pressVideos/pressVideos';
 import PressPhotos from './pressPhotos/pressPhotos';
 import PressBranding from './pressBranding/pressBranding';
+import PressLinks from './pressLinks/pressLinks';
 import styles from './press.css';
 
 const Press = () => (
@@ -71,7 +72,11 @@ const Press = () => (
       <PressPhotos />
     </Section>
 
-    <Section title="Branding">
+    <Section title="Press Articles">
+      <PressLinks />
+    </Section>
+
+    <Section title="Branding" theme="white">
       <PressBranding />
     </Section>
   </div>
