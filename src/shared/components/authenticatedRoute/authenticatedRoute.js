@@ -5,7 +5,7 @@ import { Route, Redirect } from 'react-router-dom';
 
 const AuthenticatedRoute = (props) => {
   if (!props.isAuth) {
-    return <Redirect to="/login" />;
+    return <Redirect to={{ pathname: '/login', state: { referrer: props.location.pathname } }} />;
   }
   if (props.sendNotification && props.updateRootAuthState) {
     return (
@@ -47,11 +47,15 @@ AuthenticatedRoute.propTypes = {
   updateRootAuthState: PropTypes.func,
   isAuth: PropTypes.bool.isRequired,
   component: PropTypes.func.isRequired,
-  path: PropTypes.string.isRequired
+  path: PropTypes.string.isRequired,
+  location: PropTypes.shape({
+    pathname: PropTypes.string
+  })
 };
 
 AuthenticatedRoute.defaultProps = {
   history: null,
+  location: null,
   sendNotification: null,
   updateRootAuthState: () => {}
 };
