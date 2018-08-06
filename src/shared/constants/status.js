@@ -42,7 +42,7 @@ export const SCHOOLINFO = [
   },
   {
     value: 'online',
-    label: 'Self-Taught (MOOCS, Etc.)'
+    label: 'Self-Taught (MOOCs, Etc.)'
   },
   {
     value: 'bootcamp',
@@ -58,7 +58,7 @@ export const SCHOOLINFO = [
   },
   {
     value: 'postgrad',
-    label: 'Post Graduate Studies'
+    label: 'Post-Graduate Studies'
   }
 ];
 
@@ -73,7 +73,7 @@ export const MILSTATUS = [
   },
   {
     value: 'spouse',
-    label: 'Military Spouse / Dependent'
+    label: 'Spouse / Dependent'
   }
 ];
 
@@ -109,10 +109,9 @@ export const LANGUAGES = [
   'Ruby',
   'Java',
   'Python',
-  'C#',
+  'C# / .NET',
   'C',
   'Swift',
-  '.NET',
   'HTML / CSS'
 ];
 
