@@ -31,7 +31,6 @@ import LeadershipCircle from './leadershipCircle/leadershipCircle';
 import CodeSchools from './codeSchools/codeSchools';
 import About from './about/about';
 import Press from './press/press';
-import CivicXBadge from './press/civicXBadge/civicXBadge.js';
 import Branding from './branding/branding';
 import ResetPassword from './resetPassword/resetPassword';
 import Challenge from './challenge/challenge';
@@ -367,9 +366,6 @@ class Home extends Component {
           className="toast-top-right"
         />
         <Footer />
-        {this.props.location.pathname === '/press' ? (
-          <CivicXBadge />
-        ) : null}
       </div>
     );
   }

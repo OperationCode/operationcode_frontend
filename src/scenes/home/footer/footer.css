@@ -164,10 +164,18 @@
   .blockRow a {
     padding: 10px 10px;
   }
+
+  .footer {
+    height: 650px;
+  }
 }
 
 @media screen and (max-width: 480px) {
   .blockGroup a {
     padding-left: 3rem;
+  }
+
+  .footer {
+    padding-bottom: 50px;
   }
 }
