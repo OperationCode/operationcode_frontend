@@ -12,7 +12,7 @@ export const MENTOR_ANSWERS = [
 export const IDENTIFIERS = [
   {
     value: false,
-    label: 'Servicemember, Veteran, Military Spouse / Dependent'
+    label: 'Military / Veteran / Spouse'
   },
   {
     value: true,
@@ -118,10 +118,10 @@ export const LANGUAGES = [
 
 export const DISCIPLINES = [
   'Web Developer',
-  'UX/UI Designer',
-  'Frontend Developer',
-  'Backend Developer',
-  'Full-Stack Developer',
+  'Web Designer',
+  'Front-end Developer',
+  'Back-end Developer',
+  'Full-stack Developer',
   'Mobile / IOS',
   'Mobile / Android',
   'I.T. / Sysadmin',
