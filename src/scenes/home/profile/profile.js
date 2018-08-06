@@ -9,7 +9,6 @@ import styles from './profile.css';
 const Profile = ({ verified }) => (
   <Section title="My Profile" theme="gray">
     <div className={verified ? styles.profileContainer_verified : styles.profileContainer}>
-
       {verified && (
         <div
           className={
@@ -29,18 +28,13 @@ const Profile = ({ verified }) => (
           verified ? styles.profileContainer__cards_verified : styles.profileContainer__cards
         }
       >
-
         <IconCard
           title="Request a Mentor"
           fontAwesomeIcon="faLifeRing"
-          url="/mentor-request"
+          url="http://op.co.de/mentor-request"
         />
 
-        <IconCard
-          title="Check for Open Jobs"
-          fontAwesomeIcon="faBriefcase"
-          url="/jobs"
-        />
+        <IconCard title="Check for Open Jobs" fontAwesomeIcon="faBriefcase" url="/jobs" />
 
         <IconCard
           title="Enter our Slack Team"
@@ -49,11 +43,7 @@ const Profile = ({ verified }) => (
           url="https://operation-code.slack.com/"
         />
 
-        <IconCard
-          title="Update Info"
-          fontAwesomeIcon="faUser"
-          url="/signup-info"
-        />
+        <IconCard title="Update Info" fontAwesomeIcon="faUser" url="/signup-info" />
 
         <IconCard
           title="Our Programs"
@@ -72,12 +62,15 @@ const Profile = ({ verified }) => (
               Veterans, Servicemembers and Spouses!
             </span>
             <p>
-              To gain access to <Link to="/our_programs#mentorshipProgram" style={{ textDecoration: 'none' }}><span className={styles.profileContainer__verified__services}>Mentorship</span></Link> and <span className={styles.profileContainer__verified__services}>Scholarships</span>, please verify your military status.
+              To gain access to{' '}
+              <Link to="/our_programs#mentorshipProgram" style={{ textDecoration: 'none' }}>
+                <span className={styles.profileContainer__verified__services}>Mentorship</span>
+              </Link>{' '}
+              and <span className={styles.profileContainer__verified__services}>Scholarships</span>,
+              please verify your military status.
             </p>
 
-            <p>
-              Sign in below to get verified!
-            </p>
+            <p>Sign in below to get verified!</p>
             <Idme />
             <p className={styles.profileContainer__disclaimer}>
               We do not store or transfer any of your sensitive information
