@@ -5,6 +5,7 @@ import PressVideos from './pressVideos/pressVideos';
 import PressPhotos from './pressPhotos/pressPhotos';
 import PressBranding from './pressBranding/pressBranding';
 import styles from './press.css';
+import CivicXBadge from './civicXBadge/civicXBadge.js';
 
 const Press = () => (
   <div>
@@ -73,6 +74,13 @@ const Press = () => (
 
     <Section title="Branding">
       <PressBranding />
+    </Section>
+
+    <Section headingLines={false} theme="white">
+      <h6 className={styles.header}>
+        Operation Code is a graduate of the following startup accelerators:
+      </h6>
+      <CivicXBadge />
     </Section>
   </div>
 );
