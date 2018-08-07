@@ -352,17 +352,12 @@ class Home extends Component {
               updateRootAuthState={this.updateRootAuthState}
               {...authProps}
             />
-            <Route 
-              exact
-              path="/mentor-request"
-              component={() => (window.location = 'https://op.co.de/mentor-request')}
-            />
-            {/* <AuthenticatedRoute
+            <AuthenticatedRoute
               exact
               path="/mentor-request"
               isAuth={CookieHelpers.getUserStatus().signedIn}
               component={() => (<MentorRequest {...authProps} />)}
-            /> */}
+            />
             <Route exact path="/resetpassword" component={ResetPassword} />
             <Route exact path="/reset_password" component={ResetPassword} />
 
