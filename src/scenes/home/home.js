@@ -6,7 +6,6 @@ import classNames from 'classnames';
 import * as CookieHelpers from 'shared/utils/cookieHelper';
 import Login from 'shared/components/login/login';
 import SocialLogin from 'shared/components/socialLogin/socialLogin';
-import IdmeVerify from 'shared/components/idme/idmeverify/idmeverify';
 import AuthenticatedRoute from 'shared/components/authenticatedRoute/authenticatedRoute';
 import familyImage from 'images/Family-2.jpg';
 import lincolnImage from 'images/lincoln.jpg';
@@ -343,14 +342,6 @@ class Home extends Component {
               path="/profile"
               isAuth={CookieHelpers.getUserStatus().signedIn}
               component={() => (<Profile {...authProps} />)}
-            />
-            <AuthenticatedRoute
-              exact
-              path="/profile/verify"
-              isAuth={CookieHelpers.getUserStatus().signedIn}
-              component={IdmeVerify}
-              updateRootAuthState={this.updateRootAuthState}
-              {...authProps}
             />
             <AuthenticatedRoute
               exact

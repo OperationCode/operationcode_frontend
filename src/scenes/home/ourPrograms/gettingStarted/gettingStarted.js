@@ -14,8 +14,7 @@ const step1 = (
 
 const step2 = (
   <p>
-    Navigate over to your profile in Operation Code and get verified as a
-    Veteran using our ID.ME system. Once verified, click the &apos;Request a
+    Navigate over to your profile in Operation Code and click the &apos;Request a
     Mentor&apos; button. You&apos;ll be asked for a bit of information so we can
     best pair you up with the right mentor. Once your mentor contacts you, agree
     upon a time and method for a 30 minute meeting.
