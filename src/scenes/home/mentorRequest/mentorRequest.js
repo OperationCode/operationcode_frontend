@@ -83,11 +83,15 @@ class MentorRequest extends Component {
     .sort((a, b) => a.name.localeCompare(b.name)) // sort alphabetically
     .map(x => ({ value: x.id, label: x.name }))
 
-  handleOnClick = async (event) => {
+  handleOnClick = (event) => {
     event.preventDefault();
 
     if (!this.isValid()) return;
 
+    this.setState({ isLoading: true }, this.createRequest);
+  }
+
+  createRequest = async () => {
     try {
       await ApiHelpers.createMentorRequest({
         slackUser: this.state.slackUserName,
@@ -108,6 +112,8 @@ class MentorRequest extends Component {
       table, which contains exact matches for the predefined skillset options on the Airtable
       Mentor Request table. */
       this.setState({ submitError: 'There was an error requesting a mentor.' });
+    } finally {
+      this.setState({ isLoading: false });
     }
   }
 
