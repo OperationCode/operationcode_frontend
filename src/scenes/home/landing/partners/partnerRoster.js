@@ -1,47 +1,42 @@
-import apexLogo from 'images/partnerLogos/apex_systems_logo.png';
-import githubLogo from 'images/partnerLogos/github_logo.png';
-import dockerLogo from 'images/partnerLogos/docker_logo.png';
-import oracleLogo from 'images/partnerLogos/oracle_logo.png';
-import oreillyLogo from 'images/partnerLogos/oreilly_logo.png';
-import hackerrankLogo from 'images/partnerLogos/hackerrank_logo.png';
-import zapierLogo from 'images/partnerLogos/zapier_logo.png';
-
-const partners = [
+export default [
   {
     name: 'APEX Systems',
     link: 'https://apexsystems.com',
-    imgSource: apexLogo,
+    imgSource: 'https://s3.amazonaws.com/operationcode-assets/partnerLogos/apex_systems.png'
   },
   {
     name: 'GitHub',
     link: 'https://github.com',
-    imgSource: githubLogo,
+    imgSource: 'https://s3.amazonaws.com/operationcode-assets/partnerLogos/github.png'
+  },
+  {
+    name: '1Password',
+    link: 'https://1password.com/',
+    imgSource: 'https://s3.amazonaws.com/operationcode-assets/partnerLogos/1password.png'
   },
   {
     name: 'Docker',
     link: 'https://docker.com',
-    imgSource: dockerLogo,
+    imgSource: 'https://s3.amazonaws.com/operationcode-assets/partnerLogos/docker.png'
   },
   {
     name: 'Oracle',
     link: 'https://oracle.com',
-    imgSource: oracleLogo,
+    imgSource: 'https://s3.amazonaws.com/operationcode-assets/partnerLogos/oracle.png'
   },
   {
-    name: "O'reilly Media",
+    name: "O'Reilly Media",
     link: 'https://oreilly.com',
-    imgSource: oreillyLogo,
+    imgSource: 'https://s3.amazonaws.com/operationcode-assets/partnerLogos/oreilly.png'
   },
   {
     name: 'HackerRank',
     link: 'https://hackerrank.com',
-    imgSource: hackerrankLogo,
+    imgSource: 'https://s3.amazonaws.com/operationcode-assets/partnerLogos/hackerrank.png'
   },
   {
     name: 'Zapier',
     link: 'https://zapier.com',
-    imgSource: zapierLogo,
-  },
+    imgSource: 'https://s3.amazonaws.com/operationcode-assets/partnerLogos/zapier.png'
+  }
 ];
-
-export default partners;
