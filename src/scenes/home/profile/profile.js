@@ -31,7 +31,7 @@ const Profile = ({ verified }) => (
         <IconCard
           title="Request a Mentor"
           fontAwesomeIcon="faLifeRing"
-          url="http://op.co.de/mentor-request"
+          url="/mentor-request"
         />
 
         <IconCard title="Check for Open Jobs" fontAwesomeIcon="faBriefcase" url="/jobs" />
