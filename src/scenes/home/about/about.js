@@ -1,14 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import armySeal from 'images/serviceSeals/Army.png';
-import navySeal from 'images/serviceSeals/Navy.png';
-import marineSeal from 'images/serviceSeals/USMC.png';
-import marineReserveSeal from 'images/serviceSeals/USMCReserve.png';
-import coastGuardSeal from 'images/serviceSeals/USCG.png';
-import airForceSeal from 'images/serviceSeals/AirForce.png';
-import airForceReserveSeal from 'images/serviceSeals/AirForceReserve.png';
-import armyReserveSeal from 'images/serviceSeals/ArmyReserve.png';
-import navyReserveSeal from 'images/serviceSeals/NavyReserve.png';
 import Section from 'shared/components/section/section';
 import commonUrl from 'shared/constants/commonLinks';
 import WhatWeDo from './whatWeDo/whatWeDo';
@@ -88,46 +79,6 @@ const About = () => (
         apply to any of our programs. Through our online community, we work with
         2000+ members around the world.
       </p>
-      <br />
-      <div className={styles.serviceSealWrapper}>
-        <img className={styles.serviceSeal} src={armySeal} alt="Army Seal" />
-        <img className={styles.serviceSeal} src={navySeal} alt="Navy Seal" />
-        <img
-          className={styles.serviceSeal}
-          src={marineSeal}
-          alt="Marine Seal"
-        />
-        <img
-          className={styles.serviceSeal}
-          src={marineReserveSeal}
-          alt="Marine Reserve Seal"
-        />
-        <img
-          className={styles.serviceSeal}
-          src={coastGuardSeal}
-          alt="Coast Guard Seal"
-        />
-        <img
-          className={styles.serviceSeal}
-          src={airForceSeal}
-          alt="Air Force Seal"
-        />
-        <img
-          className={styles.serviceSeal}
-          src={airForceReserveSeal}
-          alt="Air Force Reserve Seal"
-        />
-        <img
-          className={styles.serviceSeal}
-          src={armyReserveSeal}
-          alt="Army Reserve Seal"
-        />
-        <img
-          className={styles.serviceSeal}
-          src={navyReserveSeal}
-          alt="Navy Reserve Seal"
-        />
-      </div>
     </Section>
 
     <Section title="Core Values">
