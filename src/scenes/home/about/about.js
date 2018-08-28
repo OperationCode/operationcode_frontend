@@ -72,16 +72,7 @@ const About = () => (
       </p>
     </Section>
 
-    <Section title="Who We Serve" theme="white">
-      <p className={styles.sectionParagraph}>
-        Past and present Army, Navy, Marines, Air Force, and Coast Guard service
-        members, veterans, military spouses, and family members are welcome to
-        apply to any of our programs. Through our online community, we work with
-        2000+ members around the world.
-      </p>
-    </Section>
-
-    <Section title="Core Values">
+    <Section title="Core Values" theme="white">
       <div className={styles.coreValues}>
         <ValueCard
           name="Integrity"
