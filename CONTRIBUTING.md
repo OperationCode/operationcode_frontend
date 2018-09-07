@@ -242,8 +242,6 @@ If your installation was successful you will get the versions of node and npm th
 ├── docker-compose.yml
 ├── index.html
 ├── jsconfig.json
-├── mockServices
-│   └── idme.js
 ├── node_modules
 │   └── DEPENDENCIES...
 ├── package.json
