@@ -5,14 +5,12 @@ process.env.BABEL_ENV = 'production';
 process.env.NODE_ENV = 'production';
 process.env.OC_BACKEND_HOST = 'https://api.operationcode.org/';
 process.env.OC_BACKEND_URL = 'https://api.operationcode.org/api/v1';
-process.env.OC_IDME_CLIENT_ID = '6d781bfd42506613a0fe4ad4123aaf6d';
 process.env.OC_HOST = 'https://operationcode.org';
-process.env.OC_IDME_AUTH_URL = 'https://api.id.me/oauth/authorize';
 
 // Makes the script crash on unhandled rejections instead of silently
 // ignoring them. In the future, promise rejections that are not handled will
 // terminate the Node.js process with a non-zero exit code.
-process.on('unhandledRejection', (err) => {
+process.on('unhandledRejection', err => {
   throw err;
 });
 
@@ -29,8 +27,7 @@ const checkRequiredFiles = require('react-dev-utils/checkRequiredFiles');
 const formatWebpackMessages = require('react-dev-utils/formatWebpackMessages');
 const FileSizeReporter = require('react-dev-utils/FileSizeReporter');
 
-const measureFileSizesBeforeBuild =
-  FileSizeReporter.measureFileSizesBeforeBuild;
+const measureFileSizesBeforeBuild = FileSizeReporter.measureFileSizesBeforeBuild;
 const printFileSizesAfterBuild = FileSizeReporter.printFileSizesAfterBuild;
 const useYarn = fs.existsSync(paths.yarnLockFile);
 
@@ -42,7 +39,7 @@ if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs])) {
 // First, read the current file sizes in build directory.
 // This lets us display how much they changed later.
 measureFileSizesBeforeBuild(paths.appBuild)
-  .then((previousFileSizes) => {
+  .then(previousFileSizes => {
     // Remove all content but keep the directory so that
     // if you're in it, you don't end up in Trash
     fs.emptyDirSync(paths.appBuild);
@@ -57,9 +54,9 @@ measureFileSizesBeforeBuild(paths.appBuild)
         console.log(chalk.yellow('Compiled with warnings.\n'));
         console.log(warnings.join('\n\n'));
         console.log(
-          `\nSearch for the ${
-            chalk.underline(chalk.yellow('keywords'))
-            } to learn more about each warning.`
+          `\nSearch for the ${chalk.underline(
+            chalk.yellow('keywords')
+          )} to learn more about each warning.`
         );
       } else {
         console.log(chalk.green('Compiled successfully.\n'));
@@ -67,9 +64,8 @@ measureFileSizesBeforeBuild(paths.appBuild)
 
       console.log('File sizes after gzip:\n');
       printFileSizesAfterBuild(stats, previousFileSizes, paths.appBuild);
-
     },
-    (err) => {
+    err => {
       console.log(chalk.red('Failed to compile.\n'));
       console.log(`${err.message || err}\n`);
       process.exit(1);
