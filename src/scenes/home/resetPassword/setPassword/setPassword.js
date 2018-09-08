@@ -34,19 +34,16 @@ class RequestToken extends Component {
   handleOnClick = (e) => {
     e.preventDefault();
     if (this.isFormValid()) {
-      axios
-        .patch(`${config.apiUrl}/users/password`, {
-          user: {
-            reset_password_token: this.props.resetPasswordToken,
-            password: this.state.password
-          }
-        })
-        .then(() => {
-          this.setState({ success: true, error: null });
-        })
-        .catch(() => {
-          this.setState({ error: 'We were unable to set the password for this email' });
-        });
+      axios.post(`${config.apiUrl}/users/password`, {
+        user: {
+          reset_password_token: this.props.resetPasswordToken,
+          password: this.state.password
+        }
+      }).then(() => {
+        this.setState({ success: true, error: null });
+      }).catch(() => {
+        this.setState({ error: 'We were unable to set the password for this email' });
+      });
     }
   };
 
