@@ -72,7 +72,9 @@ function getClientEnvironment(publicUrl) {
         // images into the `src` and `import` them in code to get their paths.
         PUBLIC_URL: publicUrl,
         // Note - fallback string values are for development, and are not prod secrets.
-        OC_API_URL: process.env.OC_API_URL || 'https://staging.api.operationcode.org/api/v1',
+        OC_BACKEND_HOST: process.env.OC_BACKEND_HOST || 'http://localhost:3000/',
+        OC_BACKEND_URL: process.env.OC_BACKEND_URL || 'http://localhost:3000/api/v1',
+        OC_HOST: process.env.OC_HOST || 'http://localhost:4000',
         OC_GOOGLE_KEY: process.env.OC_GOOGLE_KEY,
         OC_FACEBOOK_KEY: process.env.OC_FACEBOOK_KEY
       }

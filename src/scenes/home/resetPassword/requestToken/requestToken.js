@@ -15,31 +15,28 @@ class RequestToken extends Component {
       emailValid: true,
       error: false,
       isValid: true,
-      success: false
+      success: false,
     };
   }
 
   onEmailChange = (value, valid) => {
     this.setState({ email: value, emailValid: valid });
-  };
+  }
 
   handleOnClick = (e) => {
     e.preventDefault();
     if (this.isFormValid()) {
-      axios
-        .post(`${config.apiUrl}/users/passwords/reset`, {
-          email: this.state.email
-        })
-        .then(() => {
-          this.setState({ success: true, error: null });
-        })
-        .catch(() => {
-          this.setState({ error: 'We were unable to reset the password for this email' });
-        });
+      axios.post(`${config.backendUrl}/users/passwords/reset`, {
+        email: this.state.email
+      }).then(() => {
+        this.setState({ success: true, error: null });
+      }).catch(() => {
+        this.setState({ error: 'We were unable to reset the password for this email' });
+      });
     }
-  };
+  }
 
-  isFormValid = () => this.state.emailValid;
+  isFormValid = () => this.state.emailValid
 
   render() {
     return (
@@ -48,14 +45,9 @@ class RequestToken extends Component {
           {"Forgot your password? No problem! Enter your email below and we'll send you a new one."}
         </span>
         <FormEmail id="email" placeholder="Email" onChange={this.onEmailChange} />
-        {this.state.error ? <p className={styles.errorMessage}>{this.state.error}</p> : null}
+        {this.state.error ? <p className={styles.errorMessage}>{this.state.error}</p> : null }
         {this.state.success && <Redirect to="/login" />}
-        <FormButton
-          className={styles.joinButton}
-          text="Reset Password"
-          onClick={this.handleOnClick}
-          theme="red"
-        />
+        <FormButton className={styles.joinButton} text="Reset Password" onClick={this.handleOnClick} theme="red" />
       </Form>
     );
   }

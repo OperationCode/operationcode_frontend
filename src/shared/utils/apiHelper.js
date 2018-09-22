@@ -11,21 +11,19 @@ export const setAuthorizationHeader = () => {
 
 function makeGenericGet(endpoint) {
   const authHeader = setAuthorizationHeader();
-  return axios
-    .get(`${config.apiUrl}/${endpoint}`, {
-      headers: authHeader
-    })
-    .then(({ data }) => data);
+  return axios.get(`${config.backendUrl}/${endpoint}`, {
+    headers: authHeader
+  }).then(({ data }) => data);
 }
 
 export function postBackend(path, body) {
   const authHeader = setAuthorizationHeader();
-  return axios.post(`${config.apiUrl}/${path}`, body, { headers: authHeader });
+  return axios.post(`${config.backendUrl}/${path}`, body, { headers: authHeader });
 }
 
 export function patchBackend(path, body) {
   const authHeader = setAuthorizationHeader();
-  return axios.patch(`${config.apiUrl}/${path}`, body, { headers: authHeader });
+  return axios.patch(`${config.backendUrl}/${path}`, body, { headers: authHeader });
 }
 
 export const getMentorshipData = () => makeGenericGet('airtable/mentorships');
@@ -42,7 +40,7 @@ export function createMentorRequest({
 }) {
   const authHeader = setAuthorizationHeader();
 
-  return axios.post(`${config.apiUrl}/airtable/mentorships`, '', {
+  return axios.post(`${config.backendUrl}/airtable/mentorships`, '', {
     params: {
       slack_user: slackUser,
       email,
@@ -54,3 +52,4 @@ export function createMentorRequest({
     headers: authHeader
   });
 }
+

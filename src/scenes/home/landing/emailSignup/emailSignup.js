@@ -15,7 +15,7 @@ class EmailSignup extends Component {
       email: '',
       emailValid: false,
       success: false,
-      isLoading: false
+      isLoading: false,
     };
   }
 
@@ -31,11 +31,11 @@ class EmailSignup extends Component {
     if (this.isFormValid()) {
       const { email } = this.state;
       axios
-        .post(`${config.apiUrl}/email_list_recipients`, `email=${email}`)
+        .post(`${config.backendUrl}/email_list_recipients`, `email=${email}`)
         .then(() => {
           this.setState({
             isLoading: false,
-            success: true
+            success: true,
           });
           this.props.sendNotification('success', 'Success', 'Welcome to our E-mail list!');
         })
@@ -93,7 +93,7 @@ class EmailSignup extends Component {
 }
 
 EmailSignup.propTypes = {
-  sendNotification: PropTypes.func.isRequired
+  sendNotification: PropTypes.func.isRequired,
 };
 
 export default EmailSignup;

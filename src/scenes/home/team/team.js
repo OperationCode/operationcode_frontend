@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import config from 'config/environment';
 import Section from 'shared/components/section/section';
 import QuoteBanner from 'shared/components/quoteBanner/quoteBanner';
 import TeamCard from 'shared/components/teamCard/teamCard';
@@ -19,7 +18,7 @@ class Team extends Component {
 
   componentDidMount() {
     axios
-      .get(`${config.apiUrl}/team_members.json`)
+      .get('https://api.operationcode.org/api/v1/team_members.json')
       .then((response) => {
         const boardMembers = response.data.filter(x => x.group === 'board');
         const staffMembers = response.data.filter(x => x.group === 'team');
@@ -41,7 +40,7 @@ class Team extends Component {
     const leader = sortedMembers.filter(x => isLeader(x));
     const remainingMembers = sortedMembers.filter(x => !isLeader(x));
     return [...leader, ...remainingMembers];
-  };
+  }
 
   render() {
     return (
@@ -66,11 +65,12 @@ class Team extends Component {
           </div>
           <div className={styles.foundingMembers}>
             <p>
-              Operation Code deeply appreciates the time, energy, and hard work of our{' '}
-              <b>Founding Board Members</b>, including Mark Kerr (Chair), Laura Gomez (Vice Chair),
-              Dr. Tyrone Grandison (Vice Chair), Dr. Stacy Chin (Director of Fundraising Committee),
-              Liza Rodewald (Director of Military Families Committee), Pete Runyon (Secretary/
-              Treasurer), Josh Carter, Nick Frost, and Aimee Knight on their support, dedication and
+              Operation Code deeply appreciates the time, energy, and hard work
+              of our <b>Founding Board Members</b>, including Mark Kerr (Chair),
+              Laura Gomez (Vice Chair), Dr. Tyrone Grandison (Vice Chair), Dr. Stacy
+              Chin (Director of Fundraising Committee), Liza Rodewald (Director of
+              Military Families Committee), Pete Runyon (Secretary/ Treasurer), Josh
+              Carter, Nick Frost, and Aimee Knight on their support, dedication and
               commitment in the early days.
             </p>
 

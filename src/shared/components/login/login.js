@@ -127,11 +127,14 @@ class Login extends Component {
 
   ssoLoggedInRedirect = () => {
     axios
-      .get(`${config.apiUrl}/sessions/sso?sso=${encodeURI(this.state.sso)}&sig=${this.state.sig}`, {
-        headers: {
-          Authorization: `Bearer ${CookieHelpers.authToken()}`
+      .get(
+        `${config.backendUrl}/sessions/sso?sso=${encodeURI(this.state.sso)}&sig=${this.state.sig}`,
+        {
+          headers: {
+            Authorization: `Bearer ${CookieHelpers.authToken()}`
+          }
         }
-      })
+      )
       .then(({ data }) => {
         window.location = data.redirect_to;
       })
@@ -147,7 +150,7 @@ class Login extends Component {
 
     if (this.isFormValid()) {
       axios
-        .post(`${config.apiUrl}/sessions`, {
+        .post(`${config.backendUrl}/sessions`, {
           user: {
             email: this.state.email,
             password: this.state.password
@@ -201,11 +204,7 @@ class Login extends Component {
               onChange={this.onPasswordChange}
             />
             {errorFeedback && <h2 className={styles.loginError}>{errorFeedback}</h2>}
-            <FormButton
-              className={styles.loginBtn}
-              text="Login"
-              onClick={e => this.handleOnClick(e)}
-            />
+            <FormButton className={styles.loginBtn} text="Login" onClick={e => this.handleOnClick(e)} />
             <span className={styles.resetBtn}>
               Forgot your password? <Link to="/reset_password">Reset it.</Link>
             </span>
