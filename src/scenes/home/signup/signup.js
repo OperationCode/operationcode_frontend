@@ -97,7 +97,7 @@ class SignUp extends Component {
         email, zip, password, firstName, lastName, identifier
       } = this.state;
       axios
-        .post(`${config.backendUrl}/users`, {
+        .post(`${config.apiUrl}/users`, {
           user: {
             first_name: firstName,
             last_name: lastName,
