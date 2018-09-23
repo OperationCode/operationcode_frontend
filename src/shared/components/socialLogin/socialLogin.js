@@ -68,7 +68,7 @@ class SocialLogin extends Component {
 
   run = (First, Last, Email) => {
     axios
-      .get(`${config.backendUrl}/social_users`, {
+      .get(`${config.apiUrl}/social_users`, {
         params: {
           email: Email
         }
@@ -101,7 +101,7 @@ class SocialLogin extends Component {
 
   login = (Zip, Password) => {
     axios
-      .post(`${config.backendUrl}/social_users`, {
+      .post(`${config.apiUrl}/social_users`, {
         user: {
           email: localStorage.getItem('email'),
           first_name: localStorage.getItem('firstname'),
