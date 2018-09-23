@@ -1,6 +1,7 @@
 import omit from 'lodash/omit';
 import React, { Component } from 'react';
 import axios from 'axios';
+import config from 'config/environment';
 import LinkButton from 'shared/components/linkButton/linkButton';
 import OutboundLink from 'shared/components/outboundLink/outboundLink';
 import Section from 'shared/components/section/section';
@@ -23,7 +24,7 @@ class CodeSchools extends Component {
 
   componentDidMount() {
     axios
-      .get('https://api.operationcode.org/api/v1/code_schools.json')
+      .get(`${config.apiUrl}/code_schools.json`)
       .then((response) => {
         const schools = response.data.reduce((acc, school) => {
           school.locations.forEach((location) => {
