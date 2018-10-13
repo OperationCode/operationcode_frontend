@@ -161,7 +161,7 @@ const Timeline = () => (
         <TimelineEvent
           title="HackHands Co-Founders And The Logo"
           content={[
-            'HackHands co-founders, Forest Good and Geraldo Ramos, join Operation Code, designing our logo and providing veterans free access to ',
+            'HackHands co-founders, Forest Good, Geraldo Ramos, and Assis Antunes, join Operation Code, designing our logo and providing veterans free access to ',
             <a href="//hacksummit.org" target="_blank" rel="noopener noreferrer">
               hack.summit()
             </a>,
