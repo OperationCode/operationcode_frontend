@@ -7,5 +7,3 @@ jumboQuote.js#3
 faq.js#4
 whatWeDo.js#8
 successStories.js#7
-
-There's a partial ID Me URL in idme.js#8.

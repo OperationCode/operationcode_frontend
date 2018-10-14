@@ -211,6 +211,7 @@ yarn-error.log*
 # Visual Studio Code config
 .vscode
 
+# backend
 backend
 
 # precommit-hook package defaults

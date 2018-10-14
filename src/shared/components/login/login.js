@@ -1,22 +1,52 @@
 import React, { Component } from 'react';
-import _ from 'lodash';
+import getVal from 'lodash/get';
 import axios from 'axios';
-import PropTypes from 'prop-types';
 import config from 'config/environment';
+import PropTypes from 'prop-types';
+import queryString from 'query-string';
 import { Link } from 'react-router-dom';
+import Form from 'shared/components/form/form';
+import FormButton from 'shared/components/form/formButton/formButton';
+import FormEmail from 'shared/components/form/formEmail/formEmail';
+import FormInput from 'shared/components/form/formInput/formInput';
+import Section from 'shared/components/section/section';
+import SocialLoginsGrouping from 'shared/components/socialLogin/socialLoginsGrouping';
+import * as CookieHelpers from 'shared/utils/cookieHelper';
 import styles from './login.css';
-import Form from '../form/form';
-import Section from '../section/section';
-import * as CookieHelpers from '../../utils/cookieHelper';
-import FormEmail from '../form/formEmail/formEmail';
-import FormInput from '../form/formInput/formInput';
-import FormButton from '../form/formButton/formButton';
 import SignUpSection from './signUpSection';
 
-require('./login.css');
-const queryString = require('query-string');
-
 class Login extends Component {
+  static propTypes = {
+    history: PropTypes.shape({
+      action: PropTypes.string,
+      block: PropTypes.func,
+      createHref: PropTypes.func,
+      go: PropTypes.func,
+      goBack: PropTypes.func,
+      goForward: PropTypes.func,
+      length: PropTypes.number,
+      listen: PropTypes.func,
+      location: PropTypes.shape({
+        key: PropTypes.string,
+        pathname: PropTypes.string,
+        search: PropTypes.string,
+        state: PropTypes.shape({
+          referrer: PropTypes.string
+        })
+      }),
+      push: PropTypes.func,
+      replace: PropTypes.func
+    }).isRequired,
+    isAuth: PropTypes.bool,
+    sendNotification: PropTypes.func.isRequired,
+    updateRootAuthState: PropTypes.func
+  };
+
+  static defaultProps = {
+    updateRootAuthState: () => {},
+    isAuth: false
+  };
+
   state = {
     email: '',
     emailValid: false,
@@ -28,7 +58,8 @@ class Login extends Component {
     error: '',
     sso: null,
     sig: null,
-    ssoParamsPresent: false
+    ssoParamsPresent: false,
+    location: null
   };
 
   componentDidMount = () => {
@@ -44,8 +75,8 @@ class Login extends Component {
   };
 
   setErrorMessage = (error) => {
-    const errorStatus = _.get(error, ['response', 'status'], -1);
-    const errorMessage = _.get(error, 'message');
+    const errorStatus = getVal(error, ['response', 'status'], -1);
+    const errorMessage = getVal(error, 'message');
     this.setState({ errorStatus, errorMessage });
   };
 
@@ -89,21 +120,18 @@ class Login extends Component {
   };
 
   checkSsoLoggedIn = () => {
-    if (this.state.ssoParamsPresent && this.props.isLoggedIn) {
+    if (this.state.ssoParamsPresent && this.props.isAuth) {
       this.ssoLoggedInRedirect();
     }
   };
 
   ssoLoggedInRedirect = () => {
     axios
-      .get(
-        `${config.backendUrl}/sessions/sso?sso=${encodeURI(this.state.sso)}&sig=${this.state.sig}`,
-        {
-          headers: {
-            Authorization: `Bearer ${CookieHelpers.authToken()}`
-          }
+      .get(`${config.apiUrl}/sessions/sso?sso=${encodeURI(this.state.sso)}&sig=${this.state.sig}`, {
+        headers: {
+          Authorization: `Bearer ${CookieHelpers.authToken()}`
         }
-      )
+      })
       .then(({ data }) => {
         window.location = data.redirect_to;
       })
@@ -118,27 +146,31 @@ class Login extends Component {
     e.preventDefault();
 
     if (this.isFormValid()) {
-      axios.post(`${config.backendUrl}/sessions`, {
-        user: {
-          email: this.state.email,
-          password: this.state.password
-        },
-        sso: this.state.sso,
-        sig: this.state.sig
-      })
+      axios
+        .post(`${config.apiUrl}/sessions`, {
+          user: {
+            email: this.state.email,
+            password: this.state.password
+          },
+          sso: this.state.sso,
+          sig: this.state.sig
+        })
         .then(({ data }) => {
           CookieHelpers.setUserAuthCookie(data);
           this.setState({ authenticated: true });
           this.props.updateRootAuthState();
           this.props.sendNotification('success', 'Success', 'You have logged in!');
+          const redirect = this.props.history.location.state
+            ? this.props.history.location.state.referrer
+            : data.redirect_to;
           if (this.state.ssoParamsPresent) {
-            window.location = data.redirect_to;
+            window.location = redirect;
           } else {
-            this.props.history.push(data.redirect_to);
+            this.props.history.push(redirect);
           }
         })
         .catch((error) => {
-          if (_.get(error, ['response', 'status'], -1) !== 401) {
+          if (getVal(error, ['response', 'status'], -1) !== 401) {
             this.props.sendNotification('error', 'Error', 'We will investigate this issue!');
           }
 
@@ -169,46 +201,26 @@ class Login extends Component {
               onChange={this.onPasswordChange}
             />
             {errorFeedback && <h2 className={styles.loginError}>{errorFeedback}</h2>}
-            <FormButton className={styles.Button} text="Login" onClick={this.handleOnClick} />
-            <Link className={styles.resetBtn} to="/reset_password">
-              Reset Password
-            </Link>
+            <FormButton
+              className={styles.loginBtn}
+              text="Login"
+              onClick={e => this.handleOnClick(e)}
+            />
+            <span className={styles.resetBtn}>
+              Forgot your password? <Link to="/reset_password">Reset it.</Link>
+            </span>
           </Form>
-        </Section>
 
+          <SocialLoginsGrouping
+            history={this.props.history}
+            sendNotification={this.props.sendNotification}
+            updateRootAuthState={this.props.updateRootAuthState}
+          />
+        </Section>
         <SignUpSection />
       </div>
     );
   }
 }
-
-Login.propTypes = {
-  updateRootAuthState: PropTypes.func,
-  isLoggedIn: PropTypes.bool,
-  sendNotification: PropTypes.func.isRequired,
-
-  history: PropTypes.shape({
-    action: PropTypes.string,
-    block: PropTypes.func,
-    createHref: PropTypes.func,
-    go: PropTypes.func,
-    goBack: PropTypes.func,
-    goForward: PropTypes.func,
-    length: PropTypes.number,
-    listen: PropTypes.func,
-    location: PropTypes.shape({
-      key: PropTypes.string,
-      pathname: PropTypes.string,
-      search: PropTypes.string,
-    }),
-    push: PropTypes.func,
-    replace: PropTypes.func,
-  }).isRequired,
-};
-
-Login.defaultProps = {
-  updateRootAuthState: () => {},
-  isLoggedIn: false
-};
 
 export default Login;

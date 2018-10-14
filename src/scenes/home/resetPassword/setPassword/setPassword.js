@@ -17,25 +17,24 @@ class RequestToken extends Component {
       passwordConfirmValid: true,
       error: false,
       isValid: true,
-      success: false,
+      success: false
     };
   }
 
   onPasswordChange = (value, valid) => {
     this.setState({ password: value, passwordValid: valid });
-  }
+  };
 
   onConfirmPasswordChange = (value, valid) => {
     this.setState({ passwordConfirm: value, passwordConfirmValid: valid });
-  }
+  };
 
-  validatePasswordConfirm = value =>
-    value === '' || value === this.state.password;
+  validatePasswordConfirm = value => value === '' || value === this.state.password;
 
   handleOnClick = (e) => {
     e.preventDefault();
     if (this.isFormValid()) {
-      axios.patch(`${config.backendHost}/users/password`, {
+      axios.post(`${config.apiUrl}/users/password`, {
         user: {
           reset_password_token: this.props.resetPasswordToken,
           password: this.state.password
@@ -46,26 +45,35 @@ class RequestToken extends Component {
         this.setState({ error: 'We were unable to set the password for this email' });
       });
     }
-  }
+  };
 
-  isFormValid = () => this.state.passwordValid && this.state.passwordConfirmValid
+  isFormValid = () => this.state.passwordValid && this.state.passwordConfirmValid;
 
   render() {
     return (
       <Form className={styles.setPasswordForm}>
         <FormPassword
-          id="password" placeholder="Password"
-          onChange={this.onPasswordChange} validationRegex={/^(?=.*[A-Z]).{6,}$/}
+          id="password"
+          placeholder="Password"
+          onChange={this.onPasswordChange}
+          validationRegex={/^(?=.*[A-Z]).{6,}$/}
           validationErrorMessage="Must be 6 characters long and include a capitalized letter"
         />
         <FormPassword
-          id="passwordConfirm" placeholder="Confirm Password"
-          onChange={this.onConfirmPasswordChange} validateFunc={this.validatePasswordConfirm}
+          id="passwordConfirm"
+          placeholder="Confirm Password"
+          onChange={this.onConfirmPasswordChange}
+          validateFunc={this.validatePasswordConfirm}
           validationErrorMessage="Passwords must match"
         />
-        {this.state.error ? <p className={styles.errorMessage}>{this.state.error}</p> : null }
+        {this.state.error ? <p className={styles.errorMessage}>{this.state.error}</p> : null}
         {this.state.success && <Redirect to="/login" />}
-        <FormButton className={styles.joinButton} text="Set Password" onClick={this.handleOnClick} theme="red" />
+        <FormButton
+          className={styles.joinButton}
+          text="Set Password"
+          onClick={this.handleOnClick}
+          theme="red"
+        />
       </Form>
     );
   }

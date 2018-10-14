@@ -1,4 +1,3 @@
-
 .signup select {
   height: 4.2rem;
   width: 100%;
@@ -9,19 +8,18 @@
 }
 
 .signup {
-  width:100%;
+  width: 100%;
 }
 
 .signup span {
   padding: 10px 8px 30px 8px;
-  font-size:16px;
-
+  font-size: 16px;
 }
 
 .signupForm {
-  max-width:500px;
-  margin:auto;
-  border: 1px solid rgb(92,105,122);
+  max-width: 500px;
+  margin: auto;
+  border: 1px solid rgb(92, 105, 122);
   padding: 10px;
   width: 100%;
 }
@@ -34,7 +32,7 @@
 
 .errorList {
   align-self: center;
-  color: #ff665A;
+  color: #ff665a;
   font-size: 1.5rem;
   font-weight: 800;
   list-style-position: inside;
@@ -47,11 +45,19 @@
   padding-left: 20px;
 }
 
+.socialLogins {
+  margin: 1rem 0;
+}
+
+.socialLogins p {
+  text-align: center;
+}
+
 @media screen and (max-width: 599px) {
   .signupForm {
     max-width: 298px;
     margin: auto;
-    border: 1px solid rgb(92,105,122);
+    border: 1px solid rgb(92, 105, 122);
     padding: 10px;
   }
 

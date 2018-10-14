@@ -51,11 +51,11 @@ class Body extends Component {
     return (
       <div>
         <div className={styles.title}>
-          Reason for Attending<span className={styles.red}> *</span>
+          Reason for Applying<span className={styles.red}> *</span>
         </div>
         <FormTextArea
           onChange={this.onTextAreaChange}
-          placeHolder="Please write about why you want to attend this conference, and what you hope to get out of it."
+          placeHolder="Please write about why you are applying for this scholarship, and what you hope to get out of it."
         />
         <div className={styles.title}>
           Conditions for Acceptance<span className={styles.red}> *</span>

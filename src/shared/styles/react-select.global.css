@@ -19,6 +19,11 @@
   line-height: 50px;
 }
 
+.Select--single .Select-value {
+  display: flex;
+  align-items: center;
+}
+
 .Select--multi .Select-value {
   font-size: 1em;
   line-height: 2.0em;

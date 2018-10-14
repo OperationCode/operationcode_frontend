@@ -1,7 +1,6 @@
 .banner {
   display: flex;
   justify-content: center;
-  background-color: #f0f2f2;
   width: 100%;
 }
 
@@ -9,12 +8,12 @@
   font-size: 18px;
   margin-top: 1rem;
   max-width: 80%;
+  text-align: center;
 }
 
 @media screen and (max-width: 767px) {
   .bannerText {
     font-size: 14px;
-    max-width: none;
   }
 }
 

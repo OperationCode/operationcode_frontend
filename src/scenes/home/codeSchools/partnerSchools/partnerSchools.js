@@ -4,7 +4,7 @@ import SchoolCard from 'shared/components/schoolCard/schoolCard';
 import styles from './partnerSchools.css';
 
 const PartnerSchools = () => {
-  const codeSchoolImageUrl = 'https://raw.githubusercontent.com/OperationCode/operationcode_frontend/master/src/images/codeSchoolLogos/';
+  const codeSchoolImageUrl = 'https://s3.amazonaws.com/operationcode-assets/codeSchoolLogos/';
 
   return (
     <Section
@@ -52,7 +52,7 @@ const PartnerSchools = () => {
           link="https://www.codeplatoon.org/"
           schoolAddress="Online, Chicago"
           logo={`${codeSchoolImageUrl}code_platoon.jpg`}
-          GI="No"
+          GI="Yes"
           fullTime="Full-Time"
           hardware="No"
         />
@@ -83,7 +83,7 @@ const PartnerSchools = () => {
           schoolName="Launch School"
           link="https://launchschool.com/blog/operation-code-scholarship/"
           schoolAddress="Online"
-          logo={`${codeSchoolImageUrl}launch_code.jpg`}
+          logo={`${codeSchoolImageUrl}launch_school.jpg`}
           GI="No"
           fullTime="Self-Driven"
           hardware="No"

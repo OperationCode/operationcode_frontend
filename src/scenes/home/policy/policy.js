@@ -1,15 +1,15 @@
 import React from 'react';
-import OutboundLink from 'shared/components/outboundLink/outboundLink';
 import styles from './policy.css';
 
-const formLink = 'https://goo.gl/forms/kJUhtxHConEVKpy23';
+// replace commented out info div below with new event info content if
+// this component is needed for reuse in the future
 
 const Policy = () => (
   <div className={styles.content}>
     <h1 className={styles.header}>
       <div className={styles.title}>Modernize the GI Bill</div>
       <div className={styles.subtitle}>
-        We&apos;re heading to Washington, D.C. to demand that Congress develop
+        Demand that Congress develop
         policies to make veterans more competitive for careers in the tech
         sector.
       </div>
@@ -31,7 +31,7 @@ const Policy = () => (
       </figure>
     </div>
 
-    <div className={styles.info}>
+    {/* <div className={styles.info}>
       <h1 className={styles.infoSubtitle}>
         Join us on our mission to spread awareness, demand change, and seek
         solutions.
@@ -50,7 +50,7 @@ const Policy = () => (
           RSVP
         </OutboundLink>
       </div>
-    </div>
+    </div> */}
   </div>
 );
 

@@ -1,30 +1,3 @@
-const REQUEST_STATUSES = [
-  {
-    value: 'Unassigned',
-    label: 'Unassigned'
-  },
-  {
-    value: 'Assigned',
-    label: 'Assigned'
-  },
-  {
-    value: 'Contacted',
-    label: 'Contacted'
-  },
-  {
-    value: 'Awaiting Response',
-    label: 'Awaiting Response'
-  },
-  {
-    value: 'Scheduled',
-    label: 'Scheduled'
-  },
-  {
-    value: 'Completed',
-    label: 'Completed'
-  }
-];
-
 export const MENTOR_ANSWERS = [
   {
     value: true,
@@ -39,7 +12,7 @@ export const MENTOR_ANSWERS = [
 export const IDENTIFIERS = [
   {
     value: false,
-    label: 'Active Duty Veteran / Spouse'
+    label: 'Military / Veteran / Spouse'
   },
   {
     value: true,
@@ -58,7 +31,7 @@ export const WORKINFO = [
   },
   {
     value: 'unemployed',
-    label: 'Currently Un-Employed'
+    label: 'Currently Unemployed'
   }
 ];
 
@@ -69,7 +42,7 @@ export const SCHOOLINFO = [
   },
   {
     value: 'online',
-    label: 'Self-Taught (MOOCS, Etc.)'
+    label: 'Self-Taught (MOOCs, Etc.)'
   },
   {
     value: 'bootcamp',
@@ -85,7 +58,7 @@ export const SCHOOLINFO = [
   },
   {
     value: 'postgrad',
-    label: 'Post Graduate Studies'
+    label: 'Post-Graduate Studies'
   }
 ];
 
@@ -100,14 +73,14 @@ export const MILSTATUS = [
   },
   {
     value: 'spouse',
-    label: 'Spouse / Family Member of Service Member'
+    label: 'Spouse / Dependent'
   }
 ];
 
 export const BRANCH = [
   {
     value: 'army',
-    label: 'Army / Army Reserves'
+    label: 'Army / Army Reserves / Army National Guard'
   },
   {
     value: 'navy',
@@ -119,29 +92,38 @@ export const BRANCH = [
   },
   {
     value: 'airforce',
-    label: 'Air Force / Air Force Reserves'
+    label: 'Air Force / Air Force Reserves / Air National Guard'
   },
   {
     value: 'coastguard',
     label: 'Coast Guard / Coast Guard Reserves'
   },
   {
-    value: 'armyguard',
-    label: 'Army National Guard'
-  },
-  {
-    value: 'airguard',
-    label: 'Air National Guard'
-  },
+    value: 'other',
+    label: 'Just want to help out!'
+  }
 ];
 
-export const BRANCH_PROMPT = {
-  spouse: 'Your Partner\'s Branch of Service',
-  other: 'Your Branch of Service'
-};
+export const LANGUAGES = [
+  'Javascript',
+  'Ruby',
+  'Java',
+  'Python',
+  'C# / .NET',
+  'C',
+  'Swift',
+  'HTML / CSS'
+];
 
-export const LANGUAGES = ['Javascript', 'Ruby', 'Java', 'Python', 'C#', 'C', 'Swift', '.NET', 'HTML / CSS'];
-
-export const DISCIPLINES = ['Web Developer', 'Web Designer', 'Front-End Developer', 'Back-End Developer', 'Full-Stack Developer', 'Mobile / IOS', 'Mobile / Android', 'I.T / SysAdmin', 'Cyber Security', 'Data Science'];
-
-export default REQUEST_STATUSES;
+export const DISCIPLINES = [
+  'Web Developer',
+  'Web Designer',
+  'Front-end Developer',
+  'Back-end Developer',
+  'Full-stack Developer',
+  'Mobile / IOS',
+  'Mobile / Android',
+  'I.T. / Sysadmin',
+  'Cyber Security',
+  'Data Science'
+];

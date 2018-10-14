@@ -54,7 +54,8 @@ class Challenge extends Component {
               Take a moment to explore GitHub. You can see the code for this specific page via&nbsp;
               <a href={ChallengeLink} target="_blank" rel="noopener noreferrer">
                 this link
-              </a>.
+              </a>
+              .
             </li>
 
             <li>
@@ -77,8 +78,7 @@ class Challenge extends Component {
               file to add your name to the list below! Inside the <code>/src</code> folder , click
               on the <code>operationcode_challenge</code> directory and click on the file called{' '}
               <code>names.txt</code>. On the right-hand side, you should see
-              <img src={PencilIcon} alt="a pencil icon button" width="18px" />
-              - Click it.
+              <img src={PencilIcon} alt="a pencil icon button" width="18px" />- Click it.
             </li>
 
             <li>Add your name to the file.</li>
@@ -88,7 +88,7 @@ class Challenge extends Component {
               the input field with &quot;Update names.txt&quot;, type
               <code>Add &lt;YOUR NAME&gt; to challenge list</code>. You will leave the second, large
               input field blank. There are two &quot;radio&quot; buttons below the input fields.
-              Check the one that says &quot;Create a new branch&quot;. You screen should now have
+              Check the one that says &quot;Create a new branch&quot;. Your screen should now have
               something like this:
               <br />
               <br />
@@ -104,9 +104,10 @@ class Challenge extends Component {
             </li>
 
             <li>
-              You should now be at the &quot;<b>Open a pull request</b>&quot; screen. We do not wish
-              to ask ourselves for permission to merge our new branch into our own fork!
-              Instead,&nbsp; click{' '}
+              You should now be at the &quot;
+              <b>Open a pull request</b>
+              &quot; screen. We do not wish to ask ourselves for permission to merge our new branch
+              into our own fork! Instead,&nbsp; click{' '}
               <a href={`${RepoLink}compare`} target="_blank" rel="noopener noreferrer">
                 here
               </a>

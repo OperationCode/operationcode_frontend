@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import Section from 'shared/components/section/section';
+import OutboundLink from 'shared/components/outboundLink/outboundLink';
+import FeaturedJob from './featuredJob/featuredJob';
+import FeaturedJobsData from './featuredJobs.json';
+import styles from './jobs.css';
 
 const zipRecruiterScript = document.createElement('script');
 
@@ -29,11 +33,34 @@ class Jobs extends Component {
     };
     tryRunInit();
   }
+
   render() {
+    const featuredJobs = FeaturedJobsData
+      .filter(job => job.status === 'active')
+      .map(job => (
+        <FeaturedJob
+          key={`${Math.random()} + ${job.name} + ${job.sourceUrl}`}
+          {...job}
+        />
+      ));
+
     return (
-      <Section title="Open Positions" theme="white">
-        <div id="zipsearch_container" />
-      </Section>
+      <div>
+        <Section title="Featured Jobs" theme="whiteCondensed">
+          <div className={styles.featuredJobsContainer}>
+            <div className={styles.featuredJobs}>
+              {featuredJobs}
+            </div>
+          </div>
+          <p className={styles.contact}>
+            Are you hiring? <OutboundLink href="mailto:kelly@operationcode.org" analyticsEventLabel="User clicked on Job Posting contact">Contact</OutboundLink> us to post your job opening with Operation Code!
+          </p>
+        </Section>
+        <Section title="Search All Jobs" theme="white">
+          <div id="zipsearch_container" />
+        </Section>
+      </div>
+
     );
   }
 }
