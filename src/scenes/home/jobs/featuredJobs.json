@@ -1,17 +1,18 @@
 [
   {
-    "title": "Software Engineer",
-    "source": "Lockheed Martin",
-    "sourceUrl": "https://www.lockheedmartinjobs.com/job/boulder/software-engineer/694/8061488",
-    "city": "Boulder",
-    "state": "Colorado",
+    "title": "Associate Site Reliability Engineer",
+    "source": "Freedom of the Press Foundation",
+    "sourceUrl": "https://freedom.press/jobs/job-opening-associate-site-reliability-engineer/",
+    "city": "Multiple",
+    "state": "Multiple",
     "country": "United States",
-    "description": "We are seeking a Software Engineer to join our dynamic and growing team! The selected candidate will design, develop, and test software solutions across our contracted efforts, supporting multiple baselines in defect resolution as well as enhancements, special projects, new business initiatives, and modernization efforts. The successful candidate will be a passionate coder, someone who loves a challenge and always rises to the occasion to ensure success. They embrace modern development practices and insist that others do as well. Only a Secret Clearance is required to start, and there are multiple openings for each position.",
+    "description": "In this role, you will empower the whole FPF team by participating in the development of a robust continuous deployment pipeline, by performing routine maintenance tasks, and by automating operations work, e.g., by using cluster and configuration management tools. Open to remote work in time zones within the Americas. Deadline to apply: 4 November. It's open to recent college or university graduates, and to early-career and mid-career technologists whether or not they have a relevant degree. It is also open to candidates from non-technology career backgrounds with substantial applicable volunteer experience.",
     "status": "active",
-    "remote": false,
+    "remote": true,
     "tags": [
-      "Java",
-      "C++"
+      "Unix CLI",
+      "Python",
+      "Ruby"
     ]
   },
   {
@@ -52,5 +53,20 @@
       "Ruby",
       "JavaScript"
     ]
+  },
+  {
+    "title": "Software Engineer",
+    "source": "Lockheed Martin",
+    "sourceUrl": "https://www.lockheedmartinjobs.com/job/boulder/software-engineer/694/8061488",
+    "city": "Boulder",
+    "state": "Colorado",
+    "country": "United States",
+    "description": "We are seeking a Software Engineer to join our dynamic and growing team! The selected candidate will design, develop, and test software solutions across our contracted efforts, supporting multiple baselines in defect resolution as well as enhancements, special projects, new business initiatives, and modernization efforts. The successful candidate will be a passionate coder, someone who loves a challenge and always rises to the occasion to ensure success. They embrace modern development practices and insist that others do as well. Only a Secret Clearance is required to start, and there are multiple openings for each position.",
+    "status": "active",
+    "remote": false,
+    "tags": [
+      "Java",
+      "C++"
+    ]
   }
-]
+ ]
