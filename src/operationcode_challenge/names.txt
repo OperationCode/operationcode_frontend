@@ -33,7 +33,7 @@ Kevin Moon
 John Carlisle
 John Park
 Adam Abundis
-Aria Askari 
+Aria Askari
 Phillip Ngo
 Carl Rempel
 Tyler Sweeney
@@ -45,3 +45,4 @@ Jonathan Gallo
 Deitrich Smikle
 Christopher Torres
 Sepideh
+Seanrad
