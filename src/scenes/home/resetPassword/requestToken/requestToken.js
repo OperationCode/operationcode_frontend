@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Raven from 'raven-js';
 import { Redirect } from 'react-router-dom';
 import Form from 'shared/components/form/form';
 import FormEmail from 'shared/components/form/formEmail/formEmail';
 import FormButton from 'shared/components/form/formButton/formButton';
 import config from 'config/environment';
 import styles from './requestToken.css';
-import Raven from 'raven-js';
 
 class RequestToken extends Component {
   constructor(props) {
