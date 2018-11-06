@@ -17,7 +17,7 @@ class RequestToken extends Component {
       passwordConfirmValid: true,
       error: false,
       isValid: true,
-      success: false,
+      success: false
     };
   }
 
@@ -31,25 +31,22 @@ class RequestToken extends Component {
 
   validatePasswordConfirm = value => value === '' || value === this.state.password;
 
-  handleOnClick = e => {
+  handleOnClick = (e) => {
     e.preventDefault();
     if (this.isFormValid()) {
-      axios
-        .post(`${config.backendHostUrl}/users/password`, {
+      axios.post(`${config.backendHostUrl}/users/password`, {
           user: {
             reset_password_token: this.props.resetPasswordToken,
-            password: this.state.password,
-          },
-        })
-        .then(() => {
+            password: this.state.password
+          }
+        }).then(() => {
           this.setState({ success: true, error: null });
-        })
-        .catch(() => {
+        }).catch(() => {
           this.setState({ error: 'We were unable to set the password for this email' });
         });
     }
   };
-
+   
   isFormValid = () => this.state.passwordValid && this.state.passwordConfirmValid;
 
   render() {
@@ -83,7 +80,7 @@ class RequestToken extends Component {
 }
 
 RequestToken.propTypes = {
-  resetPasswordToken: PropTypes.string.isRequired,
+  resetPasswordToken: PropTypes.string.isRequired
 };
 
 export default RequestToken;
