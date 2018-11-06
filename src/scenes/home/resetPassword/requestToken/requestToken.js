@@ -27,13 +27,19 @@ class RequestToken extends Component {
     e.preventDefault();
     if (this.isFormValid()) {
       axios
-        .post(`${config.apiUrl}/users/passwords/reset`, {
+        .post(`${config.apiUrl}/users/passwords/forgot`, {
           email: this.state.email
         })
         .then(() => {
           this.setState({ success: true, error: null });
         })
-        .catch(() => {
+        .catch((err) => {
+          Raven.setUserContext({
+            email: this.state.email,
+            action: 'Attemped password reset'
+          });
+          Raven.captureException(err);
+          Raven.setUserContext();
           this.setState({ error: 'We were unable to reset the password for this email' });
         });
     }
