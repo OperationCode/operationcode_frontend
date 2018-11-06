@@ -73,7 +73,6 @@ function getClientEnvironment(publicUrl) {
         PUBLIC_URL: publicUrl,
         // Note - fallback string values are for development, and are not prod secrets.
         OC_API_URL: process.env.OC_API_URL || 'https://api.staging.operationcode.org/api/v1',
-        OC_BACKEND_HOST: process.env.OC_BACKEND_HOST || 'https://api.staging.operationcode.org/',
         OC_GOOGLE_KEY: process.env.OC_GOOGLE_KEY,
         OC_FACEBOOK_KEY: process.env.OC_FACEBOOK_KEY
       }
