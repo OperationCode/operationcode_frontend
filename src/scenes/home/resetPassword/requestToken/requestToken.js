@@ -6,6 +6,7 @@ import FormEmail from 'shared/components/form/formEmail/formEmail';
 import FormButton from 'shared/components/form/formButton/formButton';
 import config from 'config/environment';
 import styles from './requestToken.css';
+import Raven from 'raven-js';
 
 class RequestToken extends Component {
   constructor(props) {
