@@ -43,7 +43,7 @@ class RequestToken extends Component {
           this.setState({ success: true, error: null });
         })
         .catch(() => {
-          this.setState({ error: 'We were unable to set the password for this email' });
+          this.setState({ error: 'Error: please email staff@operationcode.org for help' });
         });
     }
   };
