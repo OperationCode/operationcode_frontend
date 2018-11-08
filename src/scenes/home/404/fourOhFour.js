@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex, nofollow" />
+
 import React from 'react';
 import styles from './fourOhFour.css';
 
