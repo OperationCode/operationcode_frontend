@@ -31,7 +31,9 @@ const Footer = () => (
           <Link to="/team">Team</Link>
         </div>
         <div className={styles.blockGroup}>
-          <a href="mailto:tech@operationcode.org?Subject=Bug%20Report">Report A Bug</a>
+          <a href="https://github.com/OperationCode/operationcode_frontend/issues/new">
+            Report A Bug
+          </a>
           <a
             href="https://smile.amazon.com/ch/47-4247572"
             target="_blank"
