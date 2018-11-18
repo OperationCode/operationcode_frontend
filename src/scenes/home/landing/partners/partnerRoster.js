@@ -15,14 +15,14 @@ export default [
     imgSource: 'https://s3.amazonaws.com/operationcode-assets/partnerLogos/1password.png'
   },
   {
-    name: 'Docker',
-    link: 'https://docker.com',
-    imgSource: 'https://s3.amazonaws.com/operationcode-assets/partnerLogos/docker.png'
+    name: 'US Bank',
+    link: 'https://www.usbank.com/index.html',
+    imgSource: 'https://s3.amazonaws.com/operationcode-assets/partnerLogos/usbank.png'
   },
   {
-    name: 'Oracle',
-    link: 'https://oracle.com',
-    imgSource: 'https://s3.amazonaws.com/operationcode-assets/partnerLogos/oracle.png'
+    name: 'Threat Stack',
+    link: 'https://threatstack.com',
+    imgSource: 'https://s3.amazonaws.com/operationcode-assets/partnerLogos/threat_stack.png'
   },
   {
     name: "O'Reilly Media",

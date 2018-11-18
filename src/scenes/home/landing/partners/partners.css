@@ -12,49 +12,45 @@
   justify-content: space-around;
 }
 
+.partnerLogos > div {
+  margin: 2rem;
+}
+
+.partnerLogos img {
+  height: 100px;
+  filter: grayscale(100%);
+  transition: 0.2s ease-in-out;
+}
+
+.partnerLogos img:hover {
+  filter: grayscale(0%);
+}
+
+@media screen and (max-width: 650px) {
+  .partners {
+    width: 90%;
+    text-align: center;
+  }
+
+  .partnerLogos {
+    width: 90%;
+    justify-content: space-between;
+  }
+
   .partnerLogos > div {
-    margin: 0 50px;
+    margin: 1rem 0;
+    width: 50%;
+    display: flex;
+    text-align: center;
   }
 
-    .partnerLogos img {
-      height: 100px;
-      filter: grayscale(100%);
-      transition: .2s ease-in-out;
-    }
-
-    .partnerLogos img:hover {
-      filter: grayscale(0%);
-    }
-
-
-  @media screen and (max-width: 650px) {
-   
-    .partners {
-      width: 90%;
-      text-align: center;
-    }
-
-    .partnerLogos{
-      width: 90%;
-      justify-content: space-between;
-    }
-
-      .partnerLogos > div {
-        margin: 0;
-        width: 50%;
-        display: flex;
-        text-align: center;
-
-      }
-
-      .partnerLogos img {
-        width: 70%;
-        height: auto;
-        filter: grayscale(0);
-        margin: 0 auto;
-      }
-
+  .partnerLogos img {
+    width: 70%;
+    height: auto;
+    filter: grayscale(0);
+    margin: 0 auto;
   }
+}
 
 .contactUs {
   text-align: center;
