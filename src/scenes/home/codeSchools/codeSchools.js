@@ -6,7 +6,6 @@ import LinkButton from 'shared/components/linkButton/linkButton';
 import OutboundLink from 'shared/components/outboundLink/outboundLink';
 import Section from 'shared/components/section/section';
 import ApprovedSchools from './approvedSchools/approvedSchools';
-import PartnerSchools from './partnerSchools/partnerSchools';
 import OnlineSchools from './onlineSchools/onlineSchools';
 import MoocSchools from './moocSchools/moocSchools';
 import StateSortedSchools from './stateSortedSchools/stateSortedSchools';
@@ -65,7 +64,6 @@ class CodeSchools extends Component {
 
           <div className={styles.filterButtonDiv}>
             <LinkButton link="approvedSchools" text="VA-Approved Schools" theme="blue" scrollLink />
-            <LinkButton link="partnerSchools" text="Partnered Schools" theme="blue" scrollLink />
             <LinkButton link="onlineSchools" text="Online Schools" theme="blue" scrollLink />
             <LinkButton link="schoolsByState" text="Search by State" theme="blue" scrollLink />
           </div>
@@ -81,7 +79,6 @@ class CodeSchools extends Component {
             schools={this.state.schools.filter(school => school.va_accepted === true)}
           />
         )}
-        <PartnerSchools />
         {this.state.schools && (
           <OnlineSchools
             schools={this.state.schools.filter(school => school.has_online === true)}
