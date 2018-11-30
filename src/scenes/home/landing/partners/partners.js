@@ -6,11 +6,11 @@ import partners from './partnerRoster';
 import styles from './partners.css';
 
 const Partners = () => (
-  <Section title="Partners" theme="gray">
+  <Section title="Sponsors" theme="gray">
     <div className={styles.partners}>
       <p>
         Operation Code and our all-volunteer team offers our programs and
-        services through the generous support of our partners. Their support,
+        services through the generous support of our sponsors. Their support,
         made via either financial contributions or in-kind donations,
         demonstrate their commitment to veterans, servicemembers, and military
         spouses. We are deeply grateful to the leadership of the organizations
