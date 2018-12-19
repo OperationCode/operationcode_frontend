@@ -10,7 +10,6 @@ import SuccessStories from './successStories/successStories';
 import Partners from './partners/partners';
 import Donate from '../../../shared/components/donate/donate';
 import Join from '../../../shared/components/join/join';
-import TopCode from './topcodeBanner/topcodeBanner';
 import EmailSignup from './emailSignup/emailSignup';
 
 import styles from './landing.css';
@@ -51,7 +50,6 @@ class Landing extends Component {
           </div>
         </ReactModal>
         <Hero />
-        <TopCode />
         <Membership />
         <MoreInformation />
         <SuccessStories />
