@@ -43,9 +43,9 @@ const Contact = () => (
           fontAwesomeIcon="faHome"
           iconSize="6x"
           subText="Operation Code<br/>
-            707 SW Washington St.<br/>
-            Suite 1100<br/>
-            Portland, OR 97205"
+            818 SW Third Avenue<br/>
+            #221-1090<br/>
+            Portland, OR 97204"
           usingHtml
         />
       </div>
