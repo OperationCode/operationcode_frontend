@@ -111,7 +111,7 @@ class MentorRequest extends Component {
       a user selects from to set this property are fetched via API from the Airtable Skillsets
       table, which contains exact matches for the predefined skillset options on the Airtable
       Mentor Request table. */
-      this.setState({ submitError: 'There was an error requesting a mentor.' });
+      this.setState({ submitError: 'There was an error requesting a mentor: please join operation code slack workspace for assistance.' });
     } finally {
       this.setState({ isLoading: false });
     }
