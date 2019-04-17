@@ -347,7 +347,7 @@ class Home extends Component {
               exact
               path="/mentor-request"
               isAuth={CookieHelpers.getUserStatus().signedIn}
-              component={<MentorRequest />}
+              component={() => (<MentorRequest {...authProps} />)}
             />
             <Route exact path="/resetpassword" component={ResetPassword} />
             <Route exact path="/reset_password" component={ResetPassword} />
