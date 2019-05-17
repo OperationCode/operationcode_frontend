@@ -4,6 +4,10 @@ import styles from './mentorRequest.css';
 export default function mentorRequest() {
   return (
     <div className={styles.MentorRequest}>
+      <aside>
+        Please only fill out requests on the Slack app on your desktop (or Android device). Thank
+        you.
+      </aside>
       <p>
         Please request for mentorship by joining Operation Code&apos;s Slack team. From there,
         typing and entering the following in any channel:
